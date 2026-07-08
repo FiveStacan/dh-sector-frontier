@@ -1,0 +1,56 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetPrisoner
+  name: гарнитура заключенного КТ # Frontier: prison<prisoner
+  description: Модифицированный модульный интерком, надеваемый на голову. Принимает ключи шифрования.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyPrisoners
+  - type: Sprite
+    sprite: _DV/Clothing/Ears/Headsets/prisoner.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Ears/Headsets/prisoner.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetPrison
+  name: гарнитура охраны КТ
+  description: Модифицированный модульный интерком, надеваемый на голову. Принимает ключи шифрования.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPrison
+      - EncryptionKeySecurity
+      - EncryptionKeyNfsd
+      - EncryptionKeyTraffic
+      - EncryptionKeyMedical
+      - EncryptionKeyEngineering
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetPrisonCommand
+  name: гарнитура командования КТ
+  description: Модифицированный модульный интерком, надеваемый на голову. Принимает ключи шифрования.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyPrisonCommand
+      - EncryptionKeyCommon
+      - EncryptionKeyLaw
+      - EncryptionKeyTraffic
+      - EncryptionKeyMedical
+      - EncryptionKeyEngineering
+      - EncryptionKeyScience
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/freelance.rsi

@@ -1,0 +1,49 @@
+﻿- type: loadout
+  id: PrisonGuardJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisonGuardSunrise
+
+- type: loadout
+  id: PrisonGuardJumpsuitOld
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisonGuard
+
+- type: loadout
+  id: PrisonGuardJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtGuard
+
+- type: loadout
+  id: ClothingHeadsetPrison
+  equipment:
+    Ears: ClothingHeadsetPrison
+
+- type: loadout
+  id: PrisonGuardBackpack
+  equipment:
+    back: ClothingBackpackPrisonGuard
+
+- type: loadout
+  id: PrisonGuardSatchel
+  equipment:
+    back: ClothingBackpackSatchelPrisonGuard
+
+- type: loadout
+  id: PrisonGuardDuffel
+  equipment:
+    back: ClothingBackpackDuffelPrisonGuard
+
+- type: loadout
+  id: HeadHatBeretPrisonGuard
+  equipment:
+    head: ClothingHeadHatBeretPrisonGuard
+
+- type: loadout
+  id: HeadPrisonGuard
+  equipment:
+    head: ClothingHeadPrisonGuard
+
+- type: loadout
+  id: HeadCapPrisonGuard
+  equipment:
+    head: ClothingHeadCapPrisonGuard

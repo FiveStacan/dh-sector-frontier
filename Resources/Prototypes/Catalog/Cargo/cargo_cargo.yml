@@ -25,13 +25,13 @@
     sprite: Clothing/Head/Hardsuits/luxury.rsi
     state: icon
   product: CrateCargoLuxuryHardsuit
-  cost: 15000
+  cost: 16000
   category: cargoproduct-category-name-cargo
   group: market
 
 - type: cargoProduct
   id: CargoParcelWrap
-  abstract: true # Frontier - Moved to mail vend
+  #abstract: true # Frontier - Moved to mail vend
   icon:
     sprite: Objects/Misc/ParcelWrap/parcel_wrap.rsi
     state: brown
@@ -39,14 +39,14 @@
   cost: 750
   category: cargoproduct-category-name-cargo
   group: market
-# frontier: Unused
-# - type: cargoProduct
-#   id: CargoCrusherDagger
-#   icon:
-#     sprite: Objects/Weapons/Melee/crusher_dagger.rsi
-#     state: icon
-#   product: CrateCrusherDagger
-#   cost: 2500
-#   category: cargoproduct-category-name-cargo
-#   group: market
-# End frontier
+
+- type: cargoProduct
+  id: CargoCrusherDagger
+  icon:
+    sprite: Objects/Weapons/Melee/crusher_dagger.rsi
+    state: icon
+  product: CrateCrusherDagger
+  cost: 3500
+  category: cargoproduct-category-name-cargo
+  group: market
+

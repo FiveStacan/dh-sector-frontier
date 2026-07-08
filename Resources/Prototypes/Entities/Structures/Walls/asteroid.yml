@@ -39,7 +39,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 120 # _Lua: 120>150
+        damage: 150 # Frontier: 120<150 # _Lua: 120>150
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]

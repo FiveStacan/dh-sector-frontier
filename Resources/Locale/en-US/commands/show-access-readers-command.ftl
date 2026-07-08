@@ -7,3 +7,6 @@ cmd-showaccessreaders-help =
     +Key [StationUid]: [StationRecordKeyId] | A StationRecordKey that is allowed
     -Tag [Tag Name] | A tag that is not allowed (takes priority over other allows)
 cmd-showaccessreaders-status = Set access reader debug overlay to {$status}.
+
+access-overlay-reader-disabled = Disabled
+access-overlay-reader-unrestricted = Unrestricted

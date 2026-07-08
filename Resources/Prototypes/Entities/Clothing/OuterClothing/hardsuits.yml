@@ -1,6 +1,36 @@
 #When adding new hardsuits, please try to keep the organization consistent with hardsuit-helmets.yml (if possible.)
 
-#CREW HARDSUITS
+#region CREW HARDSUITS
+#Basic Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitBasic
+  name: basic hardsuit
+  description: A basic, universal hardsuit that protects the wearer against the horrors of life in space. Beats not having a hardsuit, at least.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/basic.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Caustic: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitBasic
+  - type: StaticPrice # Frontier
+    price: 10 # Eclipse
+    vendPrice: 5000 # Eclipse
+
 #Atmospherics Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBase # Removed BaseEngineeringContraband
@@ -9,9 +39,9 @@
   description: A special suit that protects against hazardous, low pressure environments. Has thermal shielding.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/atmospherics.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/atmospherics.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/atmospherics.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/atmospherics.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -51,29 +81,29 @@
   suffix: Civil, Medium, Standart #Lua
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/engineering.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/engineering.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/engineering.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/engineering.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.04
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.54
   - type: Armor
     modifiers:
-      coefficients: # 30/30/30//20/80//20/20//50/10
-        Blunt: 0.7 #Lua 0.9<0.7
-        Slash: 0.7 #Lua 0.9<0.7
-        Piercing: 0.7 #Lua 0.9<0.7
-        Heat: 0.8 #Lua
-        Radiation: 0.2 #Rad resist is out of balance
-        Shock: 0.8 #Lua 0.8<0.8
-        Caustic: 0.8 #Lua 0.5<0.8
+      coefficients:
+        Blunt: 0.91
+        Slash: 0.91
+        Piercing: 0.9
+        Heat: 0.5 #Lua
+        Shock: 0.5 #Lua 0.8<0.5
+        Caustic: 0.5
+        Radiation: 0.2
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.76
   - type: ClothingSpeedModifier
-    walkModifier: 0.9 #Lua 0.7<0.9
-    sprintModifier: 0.9 #Lua 0.7<0.9
+    walkModifier: 0.90 #Lua 0.7<0.9
+    sprintModifier: 0.84 #Lua 0.7<0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineering
@@ -92,32 +122,29 @@
   suffix: Civil, Light, Standart #Lua
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/spatio.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/spatio.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/spatio.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/spatio.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.7
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
-      coefficients: # 30/30/20//30/30//20/20//30/0
-        #Mechanical
-        Blunt: 0.7 #Lua 0.9<0.7
-        Slash: 0.7 #Lua 0.9<0.7
-        Piercing: 0.8 #Lua 0.9<0.8
-        #Physical
+      coefficients:
+        Blunt: 0.68 #Lua 0.9<0.65
+        Slash: 0.68 #Lua 0.9<0.65
+        Piercing: 0.88
         Heat: 0.7 #Lua
-        Radiation: 0.7 #Lua 0.3<0.7
-        #Special
-        Shock: 0.8 #Lua
+        Radiation: 0.4 #salv is supposed to have radiation hazards in the future
+        Shock: 0.82
         Caustic: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.7
   - type: StaminaResistance #Lua
     damageCoefficient: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 1 #Lua 0.9<1
-    sprintModifier: 1 #Lua 0.8<1
+    walkModifier: 0.92
+    sprintModifier: 0.86 #Lua 0.8<0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSpatio
@@ -136,9 +163,9 @@
   description: A special suit that protects against hazardous, low pressure environments. Has reinforced plating for wildlife encounters.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/salvage.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/salvage.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -221,14 +248,15 @@
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
-  - type: ClothingSpeedModifier
-    walkModifier: 1.0
-    sprintModifier: 1.0
+  - type: ClothingSpeedModifier #DH
+    walkModifier: 0.99
+    sprintModifier: 0.99
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.6
         Slash: 0.6
+        Caustic: 0.45 #DH
         Piercing: 0.5
         Heat: 0.3
         Radiation: 0.1
@@ -264,7 +292,7 @@
         Piercing: 0.6
         Heat: 0.8
         Caustic: 0.7
-        Shock: 0.7
+        Shock: 0.72
   - type: ClothingSpeedModifier
     walkModifier: 0.75
     sprintModifier: 0.75
@@ -294,16 +322,16 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.6
+        Blunt: 0.74
+        Slash: 0.70
         Piercing: 0.7
-        Heat: 0.6
+        Heat: 0.58
         Caustic: 0.5
-        Radiation: 0.4
+        Radiation: 0.42
         Shock: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.8
-    sprintModifier: 0.75
+    sprintModifier: 0.78
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
@@ -348,29 +376,29 @@
   suffix: Civil, Heavy, Standart #Lua
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/capspace.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/capspace.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/capspace.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/capspace.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
-      coefficients: # 20/20/30//30/30//20/20//70/20
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.7
-        Heat: 0.7 #Lua 0.75<0.7
-        Radiation: 0.7 #Lua 0.5<0.7
-        Shock: 0.8 #Lua
-        Caustic: 0.8 #Lua 0.6<0.8
+      coefficients:
+        Blunt: 0.78 #Lua 0.8<0.75
+        Slash: 0.78 #Lua 0.8<0.75
+        Piercing: 0.68 #Lua 0.7<0.65
+        Heat: 0.72 #Lua 0.75<0.7
+        Radiation: 0.75 #Frontier 0.5<0.75
+        Shock: 0.8
+        Caustic: 0.85 #Frontier 0.6<0.85
   - type: ExplosionResistance
-    damageCoefficient: 0.3
+    damageCoefficient: 0.48
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.45
   - type: ClothingSpeedModifier
     walkModifier: 0.8
-    sprintModifier: 0.8
+    sprintModifier: 0.84 #Lua 0.8<0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCap
@@ -388,9 +416,9 @@
   description: A special hardsuit that protects against hazardous, low pressure environments, made for the chief engineer of the station.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/engineering-white.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/engineering-white.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -465,29 +493,29 @@
   suffix: Civil, Medium, Special #Lua
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/rd.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/rd.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/rd.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/rd.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: Armor
     modifiers:
-      coefficients: # 20/20/20//30/80//30/30//50/10
-        Blunt: 0.8 #Lua 0.6<0.8
+      coefficients:
+        Blunt: 0.65
         Slash: 0.8
-        Piercing: 0.8
-        Heat: 0.7
-        Radiation: 0.2 #Radiation resistance is out-of-balance because rd is special hardsuit for work with high radiation background
-        Shock: 0.7 #Lua
-        Caustic: 0.7 #Lua 0.2<0.7
-  - type: StaminaResistance #Lua
-    damageCoefficient: 0.5
+        Piercing: 0.84
+        Heat: 0.3
+        Radiation: 0.1
+        Shock: 0.7
+        Caustic: 0.2
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.25
   - type: ClothingSpeedModifier
-    walkModifier: 0.8 #Lua 0.75<0.8
-    sprintModifier: 0.8 #Lua 0.75<0.8
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: StaminaResistance #Lua
+    damageCoefficient: 0.65
   - type: HeldSpeedModifier
   - type: Item
     size: Huge
@@ -549,9 +577,9 @@
   categories: [ DoNotMap ]
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/luxury.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/luxury.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/luxury.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/luxury.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -573,7 +601,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLuxury
 
-#ANTAG HARDSUITS
+#region ANTAG HARDSUITS
 #Blood-red Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseC3SyndicateContrabandPremium, ContrabandClothing, HardsuitIdentify] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent # Lua added: HardsuitIdentify, BaseC3SyndicateContraband > BaseC3SyndicateContrabandPremium
@@ -592,22 +620,22 @@
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.7
+    damageCoefficient: 0.55
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.7
+    damageCoefficient: 0.75
   - type: Armor
     modifiers:
-      coefficients: #Lua; # 75/75/50//75/75//50/50//30/0
-        Blunt: 0.25
-        Slash: 0.25
-        Piercing: 0.5
-        Heat: 0.25
-        Radiation: 0.25
-        Shock: 0.5
-        Caustic: 0.5
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.45
+        Heat: 0.52
+        Radiation: 0.52
+        Shock: 0.52
+        Caustic: 0.52
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.9
+    sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndie
@@ -646,13 +674,13 @@
   - type: Armor
     modifiers:
       coefficients: #Lua; # 75/75/50//75/75//50/50//30/0
-        Blunt: 0.25
-        Slash: 0.25
-        Piercing: 0.5
+        Blunt: 0.27
+        Slash: 0.27
+        Piercing: 0.55
         Heat: 0.5
         Radiation: 0.5
-        Shock: 0.25
-        Caustic: 0.25
+        Shock: 0.32
+        Caustic: 0.32
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -680,16 +708,16 @@
   - type: FireProtection
     reduction: 0.8
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.3
+    damageCoefficient: 0.6
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5 #Lua 0.6<0.45
-        Slash: 0.5 #Lua 0.6<0.45
-        Piercing: 0.25 #Lua 0.6<0.45
-        Heat: 0.25
-        Radiation: 0.25
-        Shock: 0.5
+        Blunt: 0.45 #Lua 0.6<0.45
+        Slash: 0.45 #Lua 0.6<0.45
+        Piercing: 0.40 #Lua 0.6<0.45
+        Heat: 0.2
+        Radiation: 0.02
+        Shock: 0.55
         Caustic: 0.5
   - type: Item
     size: Huge
@@ -801,19 +829,17 @@
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.3
+    damageCoefficient: 0.4
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.25
-        Heat: 0.5
-        Radiation: 0.5
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.27 #Lua 0.4<0.25
+        Heat: 0.35 #Lua 0.25<0.3
+        Radiation: 0.25
         Shock: 0.25
-        Caustic: 0.25
-  - type: StaminaResistance
-    damageCoefficient: 0.3
+        Caustic: 0.75
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -822,7 +848,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitWizard
   - type: Tag
     tags:
-    - CorgiWearable
+    #- CorgiWearable
     - Hardsuit
     - WhitelistChameleon
 
@@ -855,6 +881,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLing
+
+#region PIRATE HARDSUITS
 
 #Pirate EVA Suit (Deep Space EVA Suit)
 #Despite visually appearing like a softsuit, it functions exactly like a hardsuit would (parents off of base hardsuit, has resistances and toggleable clothing, etc.) so it goes here.
@@ -925,7 +953,7 @@
   - type: StaticPrice
     price: 0
 
-#CENTCOMM / ERT HARDSUITS
+#region CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
 - type: entity
   parent: [BaseC3CentCommContraband, ClothingOuterHardsuitBase, HardsuitIdentify] # Lua: add HardsuitIdentify, BaseCentcommContraband > BaseC3CentCommContraband, deleted ClothingOuterHardsuitSyndieCommander, ClothingOuterHardsuitSyndieCommander > ClothingOuterHardsuitBase
@@ -1186,7 +1214,7 @@
   - type: DiseaseProtection #Backmen & Ataraxia anti viral
     protection: 1
 
-#MISC. HARDSUITS
+#region MISC. HARDSUITS
 #Clown Hardsuit
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -1195,9 +1223,9 @@
   description: A custom-made clown hardsuit.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/clown.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/clown.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/clown.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/clown.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000

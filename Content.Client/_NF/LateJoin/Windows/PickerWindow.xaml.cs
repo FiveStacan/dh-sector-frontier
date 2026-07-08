@@ -39,7 +39,7 @@ public sealed partial class PickerWindow : FancyWindow
         _gameTicker = _entitySystem.GetEntitySystem<ClientGameTicker>();
         _sawmill = Logger.GetSawmill("latejoin");
 
-        CrewTabButton.Visible = false; //Lua disable Crew
+        //CrewTabButton.Visible = false; //Lua disable Crew //DH
 
         CrewTabButton.OnPressed += _ =>
         {

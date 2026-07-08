@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+        {
+            "name": "prison_label"
+        },
+        {
+            "name": "prison_command_label"
+        },
+        {
+            "name": "prisoners_label"
+        },
+        {
+            "name": "crypt_gray"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+- type: latheRecipe
+  id: PyroBlock1
+  result: PyroBlock1
+  completetime: 4
+  materials:
+    RawPyro: 700
+    Coal: 150
+
+- type: latheRecipe
+  id: SheetBlueprintPaper
+  result: SheetBlueprintPaper1
+  completetime: 20
+  materials:
+    Paper: 500
+    Silver: 150

@@ -15,7 +15,7 @@ ent-VipIDCard = ID карта (Вип)
 job-name-vip = Акционер
 job-description-vip = Элитный пассажир-акционер, пользующийся особыми привилегиями на борту.
 
-job-description-outpost-syndicate-shareholder = Акционер Нордфолла, пользующийся особым расположением Синдиката.
+job-description-outpost-syndicate-shareholder = Акционер Тайпана, пользующийся особым расположением Синдиката.
 
 ent-ClothingNeckCloakNanotrasenVip = плащ випа
     .desc = Выдается лучшим из лучших
@@ -437,8 +437,8 @@ uplink-vip-LauncherCreamPie-desc = { ent-LauncherCreamPie.desc }
 uplink-vip-CoordinatesDiskFrontier-name = { ent-CoordinatesDiskFrontier }
 uplink-vip-CoordinatesDiskFrontier-desc = { ent-CoordinatesDiskFrontier.desc }
 
-uplink-vip-CoordinatesDiskNordfall-name = { ent-CoordinatesDiskNordfall }
-uplink-vip-CoordinatesDiskNordfall-desc = { ent-CoordinatesDiskNordfall.desc }
+uplink-vip-CoordinatesDiskTypan-name = { ent-CoordinatesDiskTypan }
+uplink-vip-CoordinatesDiskTypan-desc = { ent-CoordinatesDiskTypan.desc }
 
 uplink-vip-AnomalyScanner-name = { ent-AnomalyScanner }
 uplink-vip-AnomalyScanner-desc = { ent-AnomalyScanner.desc }

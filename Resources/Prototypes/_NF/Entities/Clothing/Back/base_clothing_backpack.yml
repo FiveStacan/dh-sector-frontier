@@ -7,6 +7,7 @@
     defaultStorageOrientation: Vertical
     grid:
     - 0,0,6,3
+    - 8,0,8,2 #DH
   - type: Item
     size: Huge
     shape:
@@ -31,14 +32,21 @@
   parent: NFClothingBackpack
   id: NFClothingMessenger
   components:
+  - type: Clothing #DH
+    equipDelay: 1.4
+    unequipDelay: 0.9
+    quickEquip: false
+    slots:
+    - back
+    # - suitstorage #DH need sprites
   ## One 4x4 pocket, four 2x2 pockets
   - type: Storage
     grid:
     - 0,0,1,1
     - 0,3,1,4
     - 3,0,6,3
-    - 8,0,9,1
-    - 8,3,9,4
+    - 8,0,8,1 #DH 2x2 > 1x2
+    - 8,3,8,4 #DH 2x2 > 1x2
 
   # Alternative layouts
   ## Two 2x1 pockets, one 2x3 pocket and one 6x3 pocket

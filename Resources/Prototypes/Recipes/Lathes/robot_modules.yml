@@ -13,6 +13,7 @@
   abstract: true
   parent: BaseBorgModuleRecipe
   id: BaseGoldBorgModuleRecipe
+  completetime: 4
   materials:
     Steel: 500
     Glass: 500

@@ -8,8 +8,8 @@
   id: Kestrel
   parent: BaseVessel
   name: Kestrel
-  description: A small jump-capable science vessel meant for long-term missions. Comes with a living suite and a decent defensive armament for its size, though it is without much maneuvering performance.
-  price: 54500
+  description: Небольшое научное судно, предназначенное для длительных миссий. Оснащено жилым модулем и внушительным для своих размеров оборонительным вооружением, однако не отличается высокой маневренностью.
+  price: 184500
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/kestrel.yml

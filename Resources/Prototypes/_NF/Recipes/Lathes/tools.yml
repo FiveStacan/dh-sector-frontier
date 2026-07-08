@@ -5,7 +5,7 @@
   id: NFBaseToolsRecipe
   categories:
   - Tools
-  completetime: 3.5
+  completetime: 4.5
 
 # Recipes
 
@@ -16,6 +16,7 @@
   materials:
     Steel: 600
     Glass: 400
+    Plastic: 100
 
 - type: latheRecipe
   id: WelderIndustrialAdvanced
@@ -26,6 +27,7 @@
     Steel: 600
     Glass: 200
     Plastic: 200
+    Silver: 100
 
 - type: latheRecipe
   id: ContrabandAppraisalTool
@@ -69,6 +71,24 @@
   materials:
     Steel: 500
     Cloth: 500
+    Glass: 100
+
+- type: latheRecipe
+  id: OldOreBag
+  parent: NFBaseToolsRecipe
+  result: OldOreBag
+  materials:
+    Steel: 500
+    Cloth: 500
+
+- type: latheRecipe
+  id: GemsBag
+  parent: NFBaseToolsRecipe
+  result: GemsBag
+  materials:
+    Steel: 500
+    Cloth: 500
+    Glass: 100
 
 - type: latheRecipe
   id: ConstructionBag
@@ -77,6 +97,7 @@
   materials:
     Steel: 500
     Cloth: 500
+    Glass: 100
 
 - type: latheRecipe
   id: PlantBag
@@ -85,30 +106,33 @@
   materials:
     Steel: 500
     Cloth: 500
+    Glass: 100
 
 - type: latheRecipe
   id: ShipyardRCD
   parent: NFBaseToolsRecipe
   result: ShipyardRCDEmpty
-  completetime: 4
+  completetime: 8
   materials:
     Steel: 1250
+    Silver: 500
     Plastic: 300
 
 - type: latheRecipe
   id: ShipyardRCDAmmo
   parent: NFBaseToolsRecipe
   result: ShipyardRCDAmmo
-  completetime: 2.4
+  completetime: 2.5
   materials:
     Steel: 500
     Plastic: 250
+    Silver: 50
 
 - type: latheRecipe
   parent: NFBaseToolsRecipe
   id: NFWeaponParticleDecelerator
   result: NFWeaponParticleDecelerator
-  completetime: 6
+  completetime: 7
   materials:
     Steel: 750
     Plasma: 150

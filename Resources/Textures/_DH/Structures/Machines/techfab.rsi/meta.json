@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "med"
+    },
+    {
+      "name": "sec"
+    },
+    {
+      "name": "sci"
+    },
+    {
+      "name": "eng"
+    },
+    {
+      "name": "engi"
+    },
+    {
+      "name": "service"
+    },
+    {
+      "name": "cargo"
+    },
+    {
+      "name": "ammo"
+    },
+    {
+      "name": "pirate"
+    },
+    {
+      "name": "panel"
+    },
+    {
+      "name": "unlit"
+    },
+    {
+      "name": "inserting",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

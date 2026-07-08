@@ -123,14 +123,14 @@
     - map: ["computerLayerBody"]
       state: computer_blackmarket
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
       state: blackmarket_key
   - type: ShipyardConsole
     shipyardChannel: Syndicate
-    #secretShipyardChannel: Nfsd #Find out via communicating with other players
+    secretShipyardChannel: Nfsd #Find out via communicating with other players #DH
     taxAccounts:
       Invalid: 0.30
     ignoreBaseSaleRate: true # Fixed 70% sale rate.
@@ -154,7 +154,7 @@
     - map: ["computerLayerBody"]
       state: computer_blackmarket
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
@@ -211,7 +211,7 @@
     - map: ["computerLayerBody"]
       state: computer_expedition
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard
     - map: ["computerLayerKeys"]
@@ -259,7 +259,7 @@
     - map: ["computerLayerBody"]
       state: computer_medical
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_medical
     - map: ["computerLayerKeys"]
@@ -283,7 +283,7 @@
     - map: ["computerLayerBody"]
       state: computer_sr
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_sr
     - map: ["computerLayerKeys"]

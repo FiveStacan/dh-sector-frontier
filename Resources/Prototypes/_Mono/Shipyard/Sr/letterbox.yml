@@ -13,8 +13,8 @@
   - Luna
   - Frontier
   class:
-  - Civilian
   - Cargo
+  - Civilian
   engine:
   - Plasma
 

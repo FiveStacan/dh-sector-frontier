@@ -121,8 +121,62 @@ public abstract class SharedResearchSystem : EntitySystem
 
     public IReadOnlyList<ProtoId<TechnologyPrototype>> GetTechnologyPrerequisites(ProtoId<RndFactionPrototype>? researchFaction, TechnologyPrototype tech)
     {
+        var visiblePrerequisites = GetVisibleTechnologyPrerequisites(researchFaction, tech);
+        var hiddenPrerequisites = GetHiddenTechnologyPrerequisites(researchFaction, tech);
+
+        if (hiddenPrerequisites.Count == 0)
+            return visiblePrerequisites;
+        if (visiblePrerequisites.Count == 0)
+            return hiddenPrerequisites;
+
+        return visiblePrerequisites.Concat(hiddenPrerequisites).Distinct().ToList();
+    }
+
+    public IReadOnlyList<ProtoId<TechnologyPrototype>> GetVisibleTechnologyPrerequisites(EntityUid uid, TechnologyPrototype tech)
+    {
+        return GetVisibleTechnologyPrerequisites(GetResearchFaction(uid), tech);
+    }
+
+    public IReadOnlyList<ProtoId<TechnologyPrototype>> GetVisibleTechnologyPrerequisites(ProtoId<RndFactionPrototype>? researchFaction, TechnologyPrototype tech)
+    {
         var factionOverride = GetTechnologyFactionOverride(researchFaction, tech);
         return factionOverride?.TechnologyPrerequisites ?? tech.TechnologyPrerequisites;
+    }
+
+    public IReadOnlyList<ProtoId<TechnologyPrototype>> GetHiddenTechnologyPrerequisites(EntityUid uid, TechnologyPrototype tech)
+    {
+        return GetHiddenTechnologyPrerequisites(GetResearchFaction(uid), tech);
+    }
+
+    public IReadOnlyList<ProtoId<TechnologyPrototype>> GetHiddenTechnologyPrerequisites(ProtoId<RndFactionPrototype>? researchFaction, TechnologyPrototype tech)
+    {
+        var factionOverride = GetTechnologyFactionOverride(researchFaction, tech);
+        if (factionOverride != null &&
+            (factionOverride.HiddenTechnologyPrerequisites != null ||
+             factionOverride.HiddenTechnologyPrerequisitesUpper != null))
+        {
+            return CombinePrerequisites(
+                factionOverride.HiddenTechnologyPrerequisites,
+                factionOverride.HiddenTechnologyPrerequisitesUpper);
+        }
+
+        return CombinePrerequisites(tech.HiddenTechnologyPrerequisites, tech.HiddenTechnologyPrerequisitesUpper);
+    }
+
+    private static IReadOnlyList<ProtoId<TechnologyPrototype>> CombinePrerequisites(
+        IReadOnlyList<ProtoId<TechnologyPrototype>>? first,
+        IReadOnlyList<ProtoId<TechnologyPrototype>>? second)
+    {
+        if (first is { Count: > 0 } && second is { Count: > 0 })
+            return first.Concat(second).Distinct().ToList();
+
+        if (first is { Count: > 0 })
+            return first;
+
+        if (second is { Count: > 0 })
+            return second;
+
+        return Array.Empty<ProtoId<TechnologyPrototype>>();
     }
 
     private TechnologyFactionOverride? GetTechnologyFactionOverride(EntityUid uid, TechnologyPrototype tech)
@@ -289,10 +343,11 @@ public abstract class SharedResearchSystem : EntitySystem
             description.PushNewline();
         }
 
-        if (includePrereqs && technology.TechnologyPrerequisites.Any())
+        var prerequisites = GetTechnologyPrerequisites((ProtoId<RndFactionPrototype>?) null, technology);
+        if (includePrereqs && prerequisites.Any())
         {
             description.AddMarkupOrThrow(Loc.GetString("research-console-prereqs-list-start"));
-            foreach (var recipe in technology.TechnologyPrerequisites)
+            foreach (var recipe in prerequisites)
             {
                 var techProto = PrototypeManager.Index(recipe);
                 description.PushNewline();

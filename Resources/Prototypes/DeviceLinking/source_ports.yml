@@ -75,6 +75,12 @@
   defaultLinks: [ ArtifactAnalyzerReceiver ]
 
 - type: sourcePort
+  id: ResearchServerSender
+  name: signal-port-name-research-server-sender
+  description: signal-port-description-research-server-sender
+  defaultLinks: [ ResearchConsoleReceiver ]
+
+- type: sourcePort
   id: Timer
   name: signal-port-name-timer-trigger
   description: signal-port-description-timer-trigger

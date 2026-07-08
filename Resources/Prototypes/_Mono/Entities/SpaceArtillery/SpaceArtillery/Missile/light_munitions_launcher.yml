@@ -17,7 +17,7 @@
   - type: GunSignalControl
   - type: Gun
     projectileSpeed: 10
-    fireRate: 0.8
+    fireRate: 0.62
     shootThermalSignature: 8000000 # ~2.8km
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
@@ -25,8 +25,8 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
     powerChargeRate: 50
-    powerUsePassive: 75
-    powerUseActive: 0
+    powerUsePassive: 1450
+    powerUseActive: 500
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -38,7 +38,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000
+        damage: 2200 #DH 20000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

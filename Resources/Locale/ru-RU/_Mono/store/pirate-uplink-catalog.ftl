@@ -146,7 +146,7 @@ uplink-pirate-anaconda-name = Анаконда
 uplink-pirate-anaconda-desc = Гордость инженеров Cybersun. Портативное, компактное, самоперезаряжающееся баллистическое огнестрельное оружие.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = Создано против Энни от СРБС. Использует те же 7.62x39mm дозвуковые боеприпасы.
+uplink-pirate-wspr-desc = Создано против Энни от ДСБФ. Использует те же 7.62x39mm дозвуковые боеприпасы.
 
 uplink-pirate-burner-name = Тяжелая винтовка Burner
 uplink-pirate-burner-desc = Разрушительная винтовка калибра 12.7x99mm. Поддерживает боеприпасы HE. Ужасно разрушительна.

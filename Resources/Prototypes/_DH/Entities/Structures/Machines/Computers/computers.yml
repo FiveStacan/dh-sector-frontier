@@ -1,0 +1,9 @@
+- type: entity
+  id: ComputerSalvageExpeditionLocked
+  parent: ComputerSalvageExpedition
+  name: expedition console
+  description: Used to go on expeditions, if you're tough enough.
+  suffix: Locked
+  components:
+  - type: ShuttleConsoleLock
+    locked: false

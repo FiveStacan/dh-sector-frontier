@@ -3,7 +3,7 @@
   name: department-CentCom
   description: department-CentCom-description
   color: "#13db0f"
-  weight: -5
+  weight: -80
   roles:
     - CentralCommandOperator
     - CentralCommandOfficial

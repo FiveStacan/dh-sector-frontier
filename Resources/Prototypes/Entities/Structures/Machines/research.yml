@@ -20,12 +20,19 @@
   - type: PointLight
     enabled: false
     castShadows: false
-    radius: 1.2
-    energy: 3.0
+    radius: 1.5
+    energy: 1.6
     color: "#b211b2"
   - type: LitOnPowered
   - type: ResearchServer
     faction: Nanotrasen # Lua: single family<multi-family research servers
+  - type: DeviceLinkSource
+    range: 250
+    ports:
+    - ResearchServerSender
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+  - type: DeviceNetworkRequiresPower
   - type: DiseaseServer # backmen: для сохранения болезней
   - type: TechnologyDatabase
     supportedDisciplines:
@@ -37,13 +44,13 @@
      - NFEngineering
      - NFMedical
      - NFArsenalMercenary
-     - NFArsenalNfsd
+     #- NFArsenalNfsd #DH
      - NFSalvage
      - NFScience
      - NFService
      # End Frontier: Tech Tree
      # Start Lua: Tech Tree
-     - Shiparmory
+     #- Shiparmory #DH
      # End Lua: Tech Tree
   - type: ApcPowerReceiver
     powerLoad: 200
@@ -124,6 +131,13 @@
   - type: LitOnPowered
   - type: ResearchServer
     faction: Syndicate
+  - type: DeviceLinkSource
+    range: 250
+    ports:
+    - ResearchServerSender
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+  - type: DeviceNetworkRequiresPower
   - type: DiseaseServer
   - type: TechnologyDatabase
     supportedDisciplines:
@@ -131,7 +145,7 @@
      - NFEngineering
      - NFMedical
      - NFArsenalMercenary
-     - NFArsenalNfsd
+     #- NFArsenalNfsd #DH
      - NFSalvage
      - NFScience
      - NFService

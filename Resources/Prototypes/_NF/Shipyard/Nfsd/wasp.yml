@@ -1,0 +1,43 @@
+- type: vessel
+  id: WaspNF
+  parent: BaseVessel
+  name: NSF Wasp-P
+  description: Большой экспедиционный корабль, предназначенный для содержания пленных и принуждения их к работе на планете.
+  price: 412200
+  limit: 1
+  category: Large
+  group: Security
+  access: Bailiff
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
+  guidebookPage: Null
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Capital
+  - Detainment
+  - Expedition
+  engine:
+  - AME
+  addComponents:
+    - type: IFF
+      color: "#009954"
+#    - type: NanotrasenFtl
+
+- type: gameMap
+  id: WaspNF
+  mapName: 'NSF Wasp'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
+  minPlayers: 0
+  stations:
+    Wasp:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Wasp-P {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Prisoner: [ 0, 0 ]

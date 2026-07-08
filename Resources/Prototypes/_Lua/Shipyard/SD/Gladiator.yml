@@ -9,7 +9,7 @@
   name: Гладиатор
   description: Тяжелобронированный шаттл с 2 артиллерийскими установками "CYREXA"
   limit: 4
-  price: 130000
+  price: 304500 #DH Shuttle price balance 130000
   category: Small
   group: Security
   whitelist:

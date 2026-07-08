@@ -53,7 +53,9 @@
     - WeaponCrusherGlaive
     - NFWeaponPka
     - NFWeaponPkaSawn
+    - OldOreBag
     - OreBag
+    - GemsBag
     - RadioHandheldNF
     - HandheldGPSBasic
     - Floodlight
@@ -211,6 +213,10 @@
         color: red
   - type: RandomSpawner
     prototypes:
+    - SalvageTechfabNF
+    - SalvageTechfabNF
+    - SalvageTechfabNF
+    - SalvageTechfabNF
     - OreProcessor
     - Autolathe
     chance: 1
@@ -271,6 +277,7 @@
     - ComputerIFFCircuitboard
     - ComputerStarmapDiskMergerCircuitboard
     # Lathes
+    - SalvageTechFabCircuitboardNF
     - AutolatheMachineCircuitboard
     - OreProcessorMachineCircuitboard
     # Machines
@@ -285,9 +292,9 @@
     offset: 0.0
     rarePrototypes:
     - OreProcessorIndustrialMachineCircuitboard
-#    - AmmoTechFabCircuitboard # comment from _Lua
-#    - ShuttleGunSvalinnMachineGunCircuitboard
-    #- SecurityTechFabCircuitboard
+    - AmmoTechFabCircuitboard
+    - ShuttleGunSvalinnMachineGunCircuitboard
+    - SecurityTechFabCircuitboard
     - ComputerIFFCircuitboard
     rareChance: 0.03
 
@@ -309,6 +316,7 @@
     prototypes:
     - TelecomServerFlatpack
     - OreProcessorFlatpack
+    - SalvageTechfabNFFlatpack
     - ProtolatheFlatpack
     - OreProcessorIndustrialFlatpack
     - MaterialReclaimerFlatpack
@@ -317,5 +325,5 @@
     offset: 0.0
     rarePrototypes:
     - ShuttleGunKineticFlatpack
-#    - AmmoTechFabFlatpack # comment from _Lua
+    - AmmoTechFabFlatpack
     rareChance: 0.01

@@ -547,7 +547,7 @@ WeaponRevolverMatebaAP: NFWeaponRevolverWard45
 WeaponRevolverPirate: NFWeaponRevolverPirate
 WeaponRevolverPython: NFWeaponRevolverRitland45
 WeaponRevolverPythonAP: NFWeaponRevolverRitland45
-WeaponRifleAk: NFWeaponRifleAssaultSm
+#WeaponRifleAk: NFWeaponRifleAssaultSm #DH
 WeaponRifleFoam: NFWeaponRifleFoam
 WeaponRifleGestio: NFWeaponRifleAssaultGestio
 WeaponRifleJackdaw: NFWeaponRifleAssaultJackdaw

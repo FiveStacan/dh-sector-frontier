@@ -119,11 +119,11 @@
             sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
   - type: LuaSprint # Lua
-    maxSprint: 94
-    drainPerSecond: 7.9
-    regenPerSecond: 8.9
+    maxSprint: 28
+    drainPerSecond: 8
+    regenPerSecond: 9
     regenDelay: 0.18
-    recoverThresholdFraction: 0.22
+    recoverThresholdFraction: 0.3
 
 - type: entity
   save: false

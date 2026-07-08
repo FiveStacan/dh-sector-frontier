@@ -9,4 +9,4 @@
 - type: soundCollection
   id: PowerOn
   files:
-  - /Audio/_Lua/Announcements/poweron1.ogg #Lua
+  - /Audio/_NF/Announcements/PocketSizedAndy/andy1_power_onnf.ogg #DH #/Audio/_Lua/Announcements/poweron1.ogg #Lua

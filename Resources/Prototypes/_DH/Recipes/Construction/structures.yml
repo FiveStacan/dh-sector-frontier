@@ -1,0 +1,55 @@
+- type: construction
+  id: WCatwalk
+  graph: WCatwalk
+  startNode: start
+  targetNode: WCatwalk
+  category: construction-category-structures
+  conditions:
+    - !type:TileNotBlocked
+      failIfSpace: false
+    - !type:TileType
+      targets:
+        - Lattice
+        - Plating
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+# - type: construction
+#   id: TightWoodWall
+#   graph: DHWalls
+#   startNode: start
+#   targetNode: tightwoodWall
+#   category: construction-category-structures
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canRotate: false
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+# - type: construction
+#   id: WoodGirder
+#   graph: DHwalls
+#   startNode: start
+#   targetNode: woodgirder
+#   category: construction-category-structures
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canRotate: false
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+- type: construction
+  id: BathroomWall
+  graph: Girder
+  startNode: start
+  targetNode: BathroomWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

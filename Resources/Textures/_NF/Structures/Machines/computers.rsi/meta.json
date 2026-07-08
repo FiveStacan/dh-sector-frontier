@@ -60,6 +60,10 @@
             "directions": 4
         },
         {
+            "name": "generic_keyboard_clean",
+            "directions": 4
+        },
+        {
             "name": "cargo_market",
             "directions": 4,
             "delays": [

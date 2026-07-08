@@ -24,8 +24,15 @@ public sealed partial class FancyTechnologyInfoPanel : Control
     private ISawmill _sawmill = default!;
     public TechnologyPrototype Prototype;
     public Action<TechnologyPrototype>? BuyAction;
+    public Action<TechnologyPrototype>? SelectTechnologyAction;
 
-    public FancyTechnologyInfoPanel(TechnologyPrototype proto, ProtoId<RndFactionPrototype>? researchFaction, bool hasAccess, ResearchAvailability availability, SpriteSystem sprite)
+    public FancyTechnologyInfoPanel(
+        TechnologyPrototype proto,
+        ProtoId<RndFactionPrototype>? researchFaction,
+        bool hasAccess,
+        ResearchAvailability availability,
+        SpriteSystem sprite,
+        Action<TechnologyPrototype>? selectTechnologyAction = null)
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
@@ -35,6 +42,7 @@ public sealed partial class FancyTechnologyInfoPanel : Control
         var lathe = _ent.System<LatheSystem>();
         var research = _ent.System<ResearchSystem>();
         Prototype = proto;
+        SelectTechnologyAction = selectTechnologyAction;
 
         TechnologyNameLabel.SetMessage(Loc.GetString(proto.Name));
         DisciplineTexture.Texture = sprite.Frame0(_proto.Index(proto.Discipline).Icon);
@@ -120,7 +128,7 @@ public sealed partial class FancyTechnologyInfoPanel : Control
         {
             var tech = _proto.Index(techId);
             var description = research.GetTechnologyDescription(tech, true, false, true);
-            RequiredTechContainer.AddChild(new MiniTechnologyCardControl(tech, _proto, sprite, description));
+            RequiredTechContainer.AddChild(new MiniTechnologyCardControl(tech, _proto, sprite, description, SelectTechnologyAction));
         }
     }
 

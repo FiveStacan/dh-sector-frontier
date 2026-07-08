@@ -5,9 +5,9 @@
   id: BaseJumpsuitRecipe
   categories:
   - Jumpsuits
-  completetime: 4
+  completetime: 5
   materials:
-    Cloth: 300
+    Cloth: 350
 
 - type: latheRecipe
   abstract: true

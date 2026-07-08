@@ -8,6 +8,11 @@
     # renderOver: East, SouthEast, South, SouthWest, West # Frontier
     renderOver: East, South, West # Frontier
     radarBlip: false # Frontier
+  - type: RadarBlip #DH
+    radarColor: "#8A2BE2"
+    scale: 0.6
+    visibleFromOtherGrids: true
+    requireNoGrid: false
   - type: Strap
     position: Stand
     unbuckleDistanceSquared: 0.09 # Frontier
@@ -61,6 +66,7 @@
     acceleration: 8
     friction: 5 # wheels dont stop instantly
     baseRunningSpeed: 6
+    baseSprintSpeed: 6 #DH
     baseWalkSpeed: 4.5 # default walking speed
   - type: ItemSlots
     slots:
@@ -81,6 +87,7 @@
     - DoorBumpOpener
     - DemagImmune # Frontier: no unicycle radar blips
   - type: RequireProjectileTarget
+  - type: GravityAffected #DH
 
 - type: entity
   id: VehicleSecway
@@ -242,6 +249,7 @@
     acceleration: 10
     friction: 10
     baseRunningSpeed: 3.5
+    baseSprintSpeed: 3.5 #DH
     baseWalkSpeed: 2.5
   - type: StaticPrice
     price: 75
@@ -285,6 +293,7 @@
     acceleration: 5 # Frontier: 10<5
     friction: 2.5 # Frontier: 0.5<2.5
     baseRunningSpeed: 3.5
+    baseSprintSpeed: 3.5 #DH
     baseWalkSpeed: 2.5
   - type: StaticPrice
     price: 175
@@ -294,3 +303,5 @@
       #Plastic: 125 # Frontier
   - type: ItemSlots # Frontier
     slots: {} # Frontier: no keys required
+  - type: GravityAffected #DH
+    enabled: false

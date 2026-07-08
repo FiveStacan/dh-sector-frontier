@@ -1,0 +1,15 @@
+- type: listing
+  id: UplinkClothing
+  name:  uplink-mercenary-hardsuit-name
+  description: uplink-mercenary-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMercenary
+#  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi, state: icon }
+  cost:
+    Speso: 7600
+  categories:
+    - UplinkClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ClothingUplink

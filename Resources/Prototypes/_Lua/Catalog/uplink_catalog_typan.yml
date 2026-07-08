@@ -475,10 +475,10 @@
       - TypanUplink
 
 - type: listing
-  id: UplinkCoordinatesDiskNordfall
-  name: uplink-coordinates-disk-nordfall-name
-  description: uplink-coordinates-disk-nordfall-desc
-  productEntity: CoordinatesDiskNordfall
+  id: UplinkCoordinatesDiskTypan
+  name: uplink-coordinates-disk-Typan-name
+  description: uplink-coordinates-disk-Typansc
+  productEntity: CoordinatesDiskTypan
   icon: { sprite: Objects/Misc/cd.rsi, state: icon }
   cost:
     Telecrystal: 1

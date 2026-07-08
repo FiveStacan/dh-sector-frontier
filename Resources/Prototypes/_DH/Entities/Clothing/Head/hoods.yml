@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingHeadHatHoodGoliathCloak
+  id: ClothingHeadHatHoodBlackCloak
+  categories: [ HideSpawnMenu ]
+  name: hood
+  description: Closes the back of head.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hoods/blackcloak.rsi
+    state: icon
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hoods/blackcloak.rsi

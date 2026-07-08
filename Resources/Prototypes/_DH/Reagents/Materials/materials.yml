@@ -1,0 +1,16 @@
+- type: material
+  id: Pyro
+  stackEntity: PyroBlock1
+  name: materials-pyro
+  unit: materials-unit-piece
+  icon: { sprite: _DH/Objects/Materials/pyroblock.rsi, state: pyroblock }
+  color: "#eb4200"
+  price: 14
+
+- type: material
+  id: BlueprintPaper
+  stackEntity: SheetBlueprintPaper1
+  name: materials-blueprintPaper
+  icon: { sprite: /Textures/_DH/Objects/Materials/Sheets/other.rsi, state: bp_paper }
+  color: "#8ebdd3"
+  price: 1

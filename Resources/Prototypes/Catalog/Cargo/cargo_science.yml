@@ -4,7 +4,7 @@
     sprite: Structures/Storage/Crates/artifact.rsi
     state: artifact_container_icon
   product: CrateArtifactContainer
-  cost: 500
+  cost: 4850
   category: cargoproduct-category-name-science
   group: market
 
@@ -14,39 +14,39 @@
     sprite: Objects/Storage/artifact_container.rsi
     state: icon
   product: HandheldArtifactContainer
-  cost: 500
+  cost: 2990
   category: cargoproduct-category-name-science
   group: market
 
 - type: cargoProduct
   id: RandomArtifact
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Specific/Xenoarchaeology/xeno_artifacts.rsi
     state: ano13
   product: RandomArtifactSpawner
-  cost: 2000
+  cost: 90000
   category: cargoproduct-category-name-science
   group: market
 
 - type: cargoProduct
   id: ScienceBiosuit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
     state: icon
   product: CrateScienceBiosuit
-  cost: 800
+  cost: 3800
   category: cargoproduct-category-name-science
   group: market
 
 - type: cargoProduct
   id: CrewMonitoring
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Machines/server.rsi
     state: server
   product: CrateCrewMonitoring
-  cost: 2000
+  cost: 20000
   category: cargoproduct-category-name-science
   group: market

@@ -48,9 +48,10 @@
     contents:
       - id: BoxHandcuff
       - id: BoxSechud
-#      - SecBelt
-#      - SecGasmask
-#      - SpacelawBook
+      - id: SecBelt
+      - id: SecGasmask
+      - id: SpacelawBook
+        amount: 2
 
 - type: entity
   id: CrateRestraints

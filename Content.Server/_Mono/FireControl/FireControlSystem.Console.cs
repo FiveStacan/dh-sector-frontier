@@ -8,7 +8,10 @@ using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.UserInterface;
+using Content.Shared.Weapons.Ranged.Components;
+using Content.Server.Power.Components;
 using Robust.Server.GameObjects;
+using System.Text;
 
 namespace Content.Server._Mono.FireControl;
 
@@ -18,6 +21,10 @@ public sealed partial class FireControlSystem : EntitySystem
     [Dependency] private readonly ShuttleConsoleSystem _shuttleConsoleSystem = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+
+    private const float AmmoStatusUpdateInterval = 1f;
+    private float _ammoStatusUpdateAccumulator;
+    private readonly Dictionary<EntityUid, string> _lastAmmoStatusSignatures = new();
 
     private bool _completedCheck = false;
 
@@ -60,6 +67,7 @@ public sealed partial class FireControlSystem : EntitySystem
 
     private void OnComponentShutdown(EntityUid uid, FireControlConsoleComponent component, ComponentShutdown args)
     {
+        _lastAmmoStatusSignatures.Remove(uid);
         UnregisterConsole(uid, component);
     }
 
@@ -118,6 +126,14 @@ public sealed partial class FireControlSystem : EntitySystem
 
         // Fire the actual weapons
         FireWeapons((EntityUid)component.ConnectedServer, args.Selected, args.Coordinates, server);
+        if (args.Selected.Count > 0)
+        {
+            foreach (var console in server.Consoles)
+            {
+                if (TryComp<FireControlConsoleComponent>(console, out var consoleComp))
+                    UpdateUi(console, consoleComp);
+            }
+        }
 
         // Raise an event to track the cursor position even when not firing
         var fireEvent = new FireControlConsoleFireEvent(args.Coordinates, args.Selected);
@@ -152,6 +168,7 @@ public sealed partial class FireControlSystem : EntitySystem
         }
 
         component.ConnectedServer = null;
+        _lastAmmoStatusSignatures.Remove(console);
         UpdateUi(console, component);
     }
 
@@ -217,6 +234,7 @@ public sealed partial class FireControlSystem : EntitySystem
                 controlled.NetEntity = EntityManager.GetNetEntity(controllable);
                 controlled.Coordinates = GetNetCoordinates(Transform(controllable).Coordinates);
                 controlled.Name = MetaData(controllable).EntityName;
+                (controlled.AmmoStatus, controlled.AmmoEmpty) = GetAmmoStatus(controllable);
 
                 controllables.Add(controlled);
             }
@@ -226,5 +244,113 @@ public sealed partial class FireControlSystem : EntitySystem
 
         var state = new FireControlConsoleBoundInterfaceState(component.ConnectedServer != null, array, navState);
         _ui.SetUiState(uid, FireControlConsoleUiKey.Key, state);
+        _lastAmmoStatusSignatures[uid] = GetAmmoStatusSignature(array);
+    }
+
+    private void UpdateOpenConsoleAmmoStatuses(float frameTime)
+    {
+        _ammoStatusUpdateAccumulator += frameTime;
+        if (_ammoStatusUpdateAccumulator < AmmoStatusUpdateInterval)
+            return;
+
+        _ammoStatusUpdateAccumulator -= AmmoStatusUpdateInterval;
+
+        var query = EntityQueryEnumerator<FireControlConsoleComponent>();
+        while (query.MoveNext(out var uid, out var console))
+        {
+            if (!_ui.IsUiOpen(uid, FireControlConsoleUiKey.Key))
+            {
+                _lastAmmoStatusSignatures.Remove(uid);
+                continue;
+            }
+
+            var signature = GetAmmoStatusSignature(uid, console);
+            if (_lastAmmoStatusSignatures.TryGetValue(uid, out var lastSignature) && lastSignature == signature)
+                continue;
+
+            UpdateUi(uid, console);
+        }
+    }
+
+    private string GetAmmoStatusSignature(EntityUid uid, FireControlConsoleComponent? component = null)
+    {
+        if (!Resolve(uid, ref component)
+            || component.ConnectedServer == null
+            || !TryComp<FireControlServerComponent>(component.ConnectedServer, out var server)
+            || !server.Consoles.Contains(uid))
+        {
+            return string.Empty;
+        }
+
+        var builder = new StringBuilder();
+        foreach (var controllable in server.Controlled)
+        {
+            var (display, empty) = GetAmmoStatus(controllable);
+            builder
+                .Append(EntityManager.GetNetEntity(controllable))
+                .Append(':')
+                .Append(display)
+                .Append(':')
+                .Append(empty)
+                .Append(';');
+        }
+
+        return builder.ToString();
+    }
+
+    private string GetAmmoStatusSignature(FireControllableEntry[] controllables)
+    {
+        var builder = new StringBuilder();
+        foreach (var controllable in controllables)
+        {
+            builder
+                .Append(controllable.NetEntity)
+                .Append(':')
+                .Append(controllable.AmmoStatus)
+                .Append(':')
+                .Append(controllable.AmmoEmpty)
+                .Append(';');
+        }
+
+        return builder.ToString();
+    }
+
+    private (string? Display, bool Empty) GetAmmoStatus(EntityUid uid)
+    {
+        if (TryComp<BatteryComponent>(uid, out var battery))
+        {
+            var percent = battery.MaxCharge > 0
+                ? Math.Clamp((int)Math.Round(battery.CurrentCharge / battery.MaxCharge * 100f), 0, 100)
+                : 0;
+
+            var empty = battery.CurrentCharge <= 0;
+            if (TryGetBatteryAmmoProvider(uid, out var provider))
+                empty = provider.Shots <= 0;
+
+            return ($"{percent}%", empty);
+        }
+
+        if (TryComp<BallisticAmmoProviderComponent>(uid, out var ballistic))
+            return ($"{ballistic.Count}/{ballistic.Capacity}", ballistic.Count <= 0);
+
+        return (null, false);
+    }
+
+    private bool TryGetBatteryAmmoProvider(EntityUid uid, out BatteryAmmoProviderComponent provider)
+    {
+        if (TryComp<ProjectileBatteryAmmoProviderComponent>(uid, out var projectile))
+        {
+            provider = projectile;
+            return true;
+        }
+
+        if (TryComp<HitscanBatteryAmmoProviderComponent>(uid, out var hitscan))
+        {
+            provider = hitscan;
+            return true;
+        }
+
+        provider = default!;
+        return false;
     }
 }

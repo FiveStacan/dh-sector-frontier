@@ -49,6 +49,7 @@
       - Burnt
       - Cigarette
       - Cigar
+      - Ash #DH
     hideStackVisualsWhenClosed: false
     maxItemSize: Tiny
     grid:

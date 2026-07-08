@@ -14,12 +14,16 @@
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
+      offset: "0.0,-0.12" #DH
     - state: food-0
       map: ["enum.StorageFillLayers.Fill"]
+      offset: "0.0,-0.12" #DH
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
+      offset: "0.0,-0.12" #DH
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
+      offset: "0.0,-0.12" #DH
       shader: unshaded
   - type: StorageFillVisualizer
     maxFillLevels: 10
@@ -60,14 +64,18 @@
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
+      offset: "0.0,-0.12" #DH
       color: "#909090"
     - state: food-0
       map: ["enum.StorageFillLayers.Fill"]
+      offset: "0.0,-0.12" #DH
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
+      offset: "0.0,-0.12" #DH
       color: "#909090"
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
+      offset: "0.0,-0.12" #DH
       shader: unshaded
   - type: Construction
     graph: WallFreezer

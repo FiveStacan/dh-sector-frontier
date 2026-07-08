@@ -1,4 +1,15 @@
 - type: entity
+  parent: WelderMini
+  id: WelderMiniEmpty
+  suffix: Empty
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents: []
+        maxVol: 50
+
+- type: entity
   parent: Welder
   id: WelderEmpty
   suffix: Empty

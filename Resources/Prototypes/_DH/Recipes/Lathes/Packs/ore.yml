@@ -1,0 +1,4 @@
+- type: latheRecipePack
+  id: OrePyro
+  recipes:
+  - PyroBlock1

@@ -180,10 +180,10 @@
     - Vip
 
 - type: listing
-  id: UplinkVipNocatCoordinatesDiskNordfall
-  name: uplink-vip-CoordinatesDiskNordfall-name
-  description: uplink-vip-CoordinatesDiskNordfall-desc
-  productEntity: CoordinatesDiskNordfall
+  id: UplinkVipNocatCoordinatesDiskTypan
+  name: uplink-vip-CoordinatesDiskTypanme
+  description: uplink-vip-CoordinatesDiskTypansc
+  productEntity: CoordinatesDiskTypan
   cost:
     Speso: 300
   categories:

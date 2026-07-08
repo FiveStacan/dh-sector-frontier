@@ -1,0 +1,10 @@
+- type: salvageDungeonMod
+  id: DHMurino
+  desc: salvage-dungeon-mod-murino
+  proto: DHMurino
+  biomes:
+    - Caves
+    #- Grasslands
+    - Shadow
+    - Snow
+    - Lava

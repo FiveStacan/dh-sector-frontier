@@ -209,14 +209,14 @@
 
 # EVA helmets
 
-# - type: latheRecipe # Probably should be available via T2-T3
-  # id: ClothingHeadHelmetAncient
-  # parent: NFBaseEVAHelmetRecipe
-  # result: ClothingHeadHelmetAncient
-  # materials:
-    # Glass: 500
-    # Plasteel: 500
-    # Durathread: 100
+- type: latheRecipe # Probably should be available via T2-T3
+  id: ClothingHeadHelmetAncient
+  parent: NFBaseEVAHelmetRecipe
+  result: ClothingHeadHelmetAncient
+  materials:
+    Glass: 500
+    Plasteel: 500
+    Durathread: 100
 
 - type: latheRecipe # idk EMAG
   id: ClothingHeadHelmetCosmonaut
@@ -224,6 +224,17 @@
   result: ClothingHeadHelmetCosmonaut
 
 # Basic hardsuits (T1 research)
+- type: latheRecipe
+  id: ClothingOuterHardsuitBasic
+  parent: NFBaseHardSuitRecipe
+  result: ClothingOuterHardsuitBasic
+  materials:
+    Glass: 300
+    Steel: 2000
+    Cloth: 300
+    Durathread: 1500
+    Silver: 1000
+
 - type: latheRecipe
   id: ClothingOuterHardsuitSpatio
   parent: NFBaseHardSuitRecipe

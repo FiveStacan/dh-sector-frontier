@@ -1,0 +1,9 @@
+- files: ["sand.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Space Station 14, recolored by TheShuEd"
+  source: "https://github.com/crystallpunk-14/crystall-punk-14/"
+
+- files: ["double_edge_E", "double_edge_N", "double_edge_S", "double_edge_W", "single_edge_NE", "single_edge_NW", "single_edge_SE", "single_edge_SW"]
+  license: "for imperial space only"
+  copyright: "Created by brotania"
+  source: "https://github.com/crystallpunk-14/crystall-punk-14/"

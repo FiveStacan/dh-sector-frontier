@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+	{
+    "name": "minitile_diagonal"
+  },
+  {
+    "name": "minitile_diagonal_90"
+  },
+  {
+    "name": "minitile_diagonal_180"
+  },
+  {
+    "name": "minitile_diagonal_270"
+  },
+  {
+    "name": "tilediagonal"
+  },
+  {
+    "name": "tilediagonal_flipped"
+  },
+  {
+    "name": "tilediagonal_corner"
+  },
+  {
+    "name": "tilediagonal_corner_90"
+  },
+  {
+    "name": "tilediagonal_corner_180"
+  },
+  {
+    "name": "tilediagonal_corner_270"
+  }
+  ]
+}

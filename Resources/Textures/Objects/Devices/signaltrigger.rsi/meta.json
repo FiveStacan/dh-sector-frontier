@@ -11,7 +11,14 @@
     "states": [
         {
             "name": "signaltrigger",
-            "directions": 1
-        }
-    ]
+        "delays": [
+          [
+            0.15,
+            0.15,
+            0.15,
+            0.15
+          ]
+        ]
+      }
+   ]
 }

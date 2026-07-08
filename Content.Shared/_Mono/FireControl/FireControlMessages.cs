@@ -89,10 +89,31 @@ public struct FireControllableEntry
     /// </summary>
     public string Name;
 
+    /// <summary>
+    /// Short ammo/charge status to show next to the weapon button.
+    /// </summary>
+    public string? AmmoStatus;
+
+    /// <summary>
+    /// Whether this weapon currently cannot fire due to missing ammo or charge.
+    /// </summary>
+    public bool AmmoEmpty;
+
     public FireControllableEntry(NetEntity entity, NetCoordinates coordinates, string name)
     {
         NetEntity = entity;
         Coordinates = coordinates;
         Name = name;
+        AmmoStatus = null;
+        AmmoEmpty = false;
+    }
+
+    public FireControllableEntry(NetEntity entity, NetCoordinates coordinates, string name, string? ammoStatus, bool ammoEmpty)
+    {
+        NetEntity = entity;
+        Coordinates = coordinates;
+        Name = name;
+        AmmoStatus = ammoStatus;
+        AmmoEmpty = ammoEmpty;
     }
 }

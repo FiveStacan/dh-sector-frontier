@@ -258,6 +258,9 @@
       - id: BlockGameArcadeComputerCircuitboard
       - id: MiniStationAnchorCircuitboard
       - id: CircuitImprinterMachineCircuitboard
+      - id: EngineeringTechFabCircuitboard
+      - id: SalvageTechFabCircuitboardNF
+      - id: ServiceTechFabCircuitboard
       - id: MaterialReclaimerMachineCircuitboard
       - id: SpaceHeaterMachineCircuitBoard
       - id: ReagentGrinderMachineCircuitboard
@@ -287,7 +290,7 @@
       - id: TurboItemRechargerCircuitboard
       - id: ShuttleGunKineticCircuitboard
       - id: OreProcessorIndustrialMachineCircuitboard
-#      - id: AmmoTechFabCircuitboard # comment from _Lua
+      - id: AmmoTechFabCircuitboard
       - id: PortablePumpMachineCircuitBoard
       - id: HotplateMachineCircuitboard
     # T4: core department tech boards
@@ -300,9 +303,11 @@
       - id: StasisBedMachineCircuitboard
       - id: ResearchComputerCircuitboard
       - id: MercenaryTechFabCircuitboardNF
+      - id: MercenaryTechFabCircuitboardHackedNF
       - id: PortableGeneratorDKMachineCircuitboard
       - id: MedicalTechFabCircuitboard
       - id: MedicalAssemblerMachineCircuitboard
+      - id: McServiceTechFabCircuitboard
 
 - type: entityTable
   id: TableScrapProcessorRandomToolsParts

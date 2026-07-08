@@ -6,6 +6,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/Angel.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -15,6 +17,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/BlackVampire.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -24,6 +28,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/Magic.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -33,6 +39,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/Pegas.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -42,6 +50,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/Skeleton.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -51,6 +61,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/SkeletonBlack.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -60,6 +72,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/SkeletonRed.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -69,6 +83,8 @@
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/Violet.rsi
+  - type: StaticPrice
+    price: 60
 
 - type: entity
   parent: ClothingNeckBase
@@ -81,3 +97,5 @@
   - type: Tag
     tags:
     - ClothMade
+  - type: StaticPrice
+    price: 60

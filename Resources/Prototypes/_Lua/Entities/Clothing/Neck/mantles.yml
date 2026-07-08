@@ -14,6 +14,8 @@
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -25,6 +27,8 @@
     sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
+  - type: StaticPrice
+    price: 40 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -36,6 +40,8 @@
     sprite: _Lua/Clothing/Neck/mantles/blue_mantle.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/mantles/blue_mantle.rsi
+  - type: StaticPrice
+    price: 34 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -47,6 +53,8 @@
     sprite: _Lua/Clothing/Neck/mantles/blueshieldmantle_shoulder.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/mantles/blueshieldmantle_shoulder.rsi
+  - type: StaticPrice
+    price: 35 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -58,6 +66,8 @@
     sprite: _Lua/Clothing/Neck/mantles/wardenmantle.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/mantles/wardenmantle.rsi
+  - type: StaticPrice
+    price: 35 #DH
 
 - type: entity
   parent: ClothingNeckBase

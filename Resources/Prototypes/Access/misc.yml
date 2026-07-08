@@ -41,6 +41,16 @@
   - Atmospherics
   - GenpopEnter
   - GenpopLeave
+  - HeadOfPrison #DH
+  - TelecomOfficer #DH
+  - ResearchDirectorTypan #DH
+  # LuaTech #DH
+  - LuaTechOps
+  - LuaTechScience
+  - LuaTechEngineer
+  - LuaTechMedic
+  - LuaTechService
+  - LuaTechCommand
 
 - type: accessGroup
   id: General

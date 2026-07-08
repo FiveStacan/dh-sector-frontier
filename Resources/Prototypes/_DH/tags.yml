@@ -1,0 +1,114 @@
+- type: Tag
+  id: BlueprintSyndicateProtolathe
+
+- type: Tag
+  id: DHMaterials
+
+- type: Tag
+  id: PrisonerIDCard
+
+- type: Tag
+  id: MagazineDeagle
+
+- type: Tag
+  id: MagazineGlock22
+
+- type: Tag
+  id: MagazineHIBrowning
+
+- type: Tag
+  id: MagazineACP14
+
+- type: Tag
+  id: MagazineScorpion
+
+- type: Tag
+  id: StationMercenaryUplink
+
+- type: Tag
+  id: SwordSquadRO
+
+- type: Tag
+  id: Wakizashi
+
+- type: Tag
+  id: Rapier
+
+- type: Tag
+  id: YamatoSabre
+
+- type: Tag
+  id: SyndicateRapier
+
+- type: Tag
+  id: SheetPaper
+
+- type: Tag
+  id: NAMEFuel
+
+#ADT
+- type: Tag
+  id: ADTCartridgeBibis # Обычне
+
+- type: Tag
+  id: ADTCartridgeBibisSoft # Мягкие
+
+- type: Tag
+  id: ADTCartridgeBibisReinforced # Твёрдые
+
+- type: Tag
+  id: ADTMagazineRifleBibis # Магазин обычный
+
+- type: Tag
+  id: ADTMagazineRifleBibisSoft # Магазин мягкий
+
+- type: Tag
+  id: ADTMagazineRifleBibisSoftBig # Магазин пулемёта
+
+- type: Tag
+  id: MagazineFamas
+
+- type: Tag
+  id: MagazineP90
+
+- type: Tag
+  id: MagazineM16A4
+
+- type: Tag
+  id: MagazineSTG44
+
+- type: Tag
+  id: DHMaintInterior
+
+- type: Tag
+  id: SheetBlueprintPaper
+
+- type: Tag
+  id: ADTMinerArmor
+
+- type: Tag
+  id: ADTPatch
+
+# - type: Tag
+#   id: ADTBadge
+
+# - type: Tag
+#   id: ADTBadgeBronze
+
+# - type: Tag
+#   id: ADTBadgeSilver
+
+# - type: Tag
+#   id: ADTBadgeGolden
+
+- type: Tag
+  id: AIWearable
+
+- type: Tag
+  id: DHMurino
+
+- type: Tag
+  id: Vial
+
+- type: Tag
+  id: ChargedBluespaceFuel

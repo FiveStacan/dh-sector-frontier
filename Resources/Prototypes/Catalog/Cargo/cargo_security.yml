@@ -22,67 +22,67 @@
 
 - type: cargoProduct
   id: SecurityNonLethal
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Weapons/Guns/Battery/disabler.rsi
     state: base
   product: CrateSecurityNonlethal
-  cost: 4000
+  cost: 12000
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: SecuritySupplies
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Storage/boxes.rsi
     state: box_security
   product: CrateSecuritySupplies
-  cost: 500
+  cost: 4500
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: SecurityRestraints
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Misc/handcuffs.rsi
     state: handcuff
   product: CrateRestraints
-  cost: 1000
+  cost: 2850
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: SecurityBiosuit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Clothing/Head/Hoods/Bio/security.rsi
     state: icon
   product: CrateSecurityBiosuit
-  cost: 800
+  cost: 3800
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: SecurityBarrier
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Specific/Security/barrier.rsi
     state: idle
   product: DeployableBarrier
-  cost: 1000
+  cost: 8900
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
   id: SecurityNonlethalThrowables
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Weapons/Grenades/stingergrenade.rsi
     state: icon
   product: CrateSecNonlethalThrowables
-  cost: 2500
+  cost: 7000
   category: cargoproduct-category-name-security
   group: market
 

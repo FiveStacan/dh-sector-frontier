@@ -11,8 +11,8 @@
   - Multitool
   # - NetworkConfigurator # Frontier: downgrade vs. multitool
   - Signaller
-  - SprayPainter
-  - SprayPainterAmmo
+  #- SprayPainter
+  #- SprayPainterAmmo
   - FlashlightLantern
   # - HandheldGPSBasic # Frontier: little value
   - TRayScanner
@@ -43,7 +43,8 @@
   - SMESMachineCircuitboard
   - SubstationMachineCircuitboard
   - WallmountSubstationElectronics
-  # - CellRechargerCircuitboard # Frontier: use WeaponCapacitorRecharger* instead
+  - CellRechargerCircuitboard #DH
+  - PortableSMESMachineCircuitboard #DH
   - WeaponCapacitorRechargerCircuitboard
   - FreezerElectronics
   - PortableSMESMachineCircuitboard # Frontier
@@ -58,11 +59,25 @@
 - type: latheRecipePack
   id: AdvancedTools
   recipes:
-  - PowerDrill
+  - Welder #DH
+  - WelderIndustrial #DH
+  - WelderIndustrialAdvanced #DH
   - WelderExperimental
+  - PowerDrill
   - JawsOfLife
-  # - Fulton # Frontier
-  # - FultonBeacon # Frontier
+  - Fulton # Frontier
+  - FultonBeacon # Frontier
+  - Binoculars #DH
+  - BinocularsMagmite #DH
+  - PinpointerUniversalNF #DH
+  - NFDartTracking #DH
+  - HolofanProjector
+  #DH Bags
+  - OreBag
+  - GemsBag
+  - ConstructionBag
+  - MedicalBag
+  - ChemBag
 
 - type: latheRecipePack
   id: AtmosTools
@@ -93,4 +108,6 @@
   - EmitterCircuitboard
   - TelecomServerCircuitboard
   - SMESAdvancedMachineCircuitboard
+  - EngineeringTechFabCircuitboard #DH
+  - CondenserMachineCircuitBoard #DH
   # - HolopadMachineCircuitboard # Frontier: use NF variant

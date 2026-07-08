@@ -95,13 +95,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 9000 #1000 - Lua
+        damage: 4500 #1000 - Lua
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 6000 #500 - Lua
+        damage: 3500 #500 - Lua #DH
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -133,6 +133,8 @@
   - type: Construction # Frontier - Harder to break into
     graph: Plastitanium # Frontier - Harder to break into
     node: plastitaniumWindow # Frontier - Harder to break into
+  - type: ExplosionResistance
+    damageCoefficient: 0.9 #DH
 
 - type: entity
   id: PlastitaniumWindowDiagonalBase
@@ -199,13 +201,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 9000 #1000 - Lua
+        damage: 2300 #1000 - Lua
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 6000 #500 - Lua
+        damage: 2000 #500 - Lua
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -232,3 +234,5 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
+  - type: ExplosionResistance
+    damageCoefficient: 0.92 #DH

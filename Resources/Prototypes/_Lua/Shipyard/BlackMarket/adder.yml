@@ -8,7 +8,7 @@
   id: BMAdder
   name: BM-Adder
   description: "Маленький, дешевый шахтерский шаттл. Когда-то был любимцем всех первопроходцев."
-  price: 36000
+  price: 87990 #DH Shuttle price balance 36000
   category: Small
   group: ASBlackMarket
   whitelist:

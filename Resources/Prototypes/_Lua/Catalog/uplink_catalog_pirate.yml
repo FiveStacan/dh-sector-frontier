@@ -159,7 +159,7 @@
           - PirateUplink
     - !type:BuyerJobCondition
       whitelist:
-        - StormCreedCaptain #Lua NFPirateCaptain<StormCreedCaptain
+        - NFPirateCaptain
   categories:
   - UplinkPirateUtility
 
@@ -1064,21 +1064,21 @@
 
 #region medicine
 
-#- type: listing
-#  id: UplinkPirateHypopen
-#  name: uplink-pirate-hypopen-name
-#  description: uplink-pirate-hypopen-desc
-#  productEntity: HypopenBox
-#  icon: { sprite: Objects/Misc/pens.rsi, state: pen }
-#  cost:
-#    Doubloon: 4
-#  categories:
-#  - UplinkPirateMedical
-#  conditions:
-#  - !type:StoreWhitelistCondition
-#    whitelist:
-#      tags:
-#      - PirateUplink
+- type: listing
+  id: UplinkPirateHypopen
+  name: uplink-pirate-hypopen-name
+  description: uplink-pirate-hypopen-desc
+  productEntity: HypopenBox
+  icon: { sprite: Objects/Misc/pens.rsi, state: pen }
+  cost:
+    Doubloon: 5
+  categories:
+  - UplinkPirateMedical
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 - type: listing
   id: UplinkPirateMedicalBundle
@@ -1428,21 +1428,21 @@
       tags:
       - PirateUplink
 
-#- type: listing
-#  id: UplinkPirateSecurityCyborgModule
-#  name: uplink-pirate-security-cyborg-module-name
-#  description: uplink-pirate-security-cyborg-module-desc
-#  icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
-#  productEntity: BorgModuleSecurity
-#  cost:
-#    Doubloon: 10
-#  categories:
-#  - UplinkPirateUtility
-#  conditions:
-#  - !type:StoreWhitelistCondition
-#    whitelist:
-#      tags:
-#      - PirateUplink
+- type: listing
+  id: UplinkPirateSecurityCyborgModule
+  name: uplink-pirate-security-cyborg-module-name
+  description: uplink-pirate-security-cyborg-module-desc
+  icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+  productEntity: BorgModuleSecurity
+  cost:
+    Doubloon: 10
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 #- type: listing
 #  id: UplinkPirateCash2500

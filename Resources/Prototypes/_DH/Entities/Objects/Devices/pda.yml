@@ -1,0 +1,95 @@
+- type: entity
+  parent: BasePDA
+  id: PrisonerPDA
+  name: prisoner PDA
+  description: Clear, so you can make sure there's nothing being smuggled inside.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Devices/pda.rsi
+  - type: Pda
+    id: NFPrisonerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-prisoner
+  - type: PdaBorderColor
+    borderColor: "#e8872e"
+  - type: Icon
+    sprite: _DH/Objects/Devices/pda.rsi
+    state: pda-prisoner
+
+- type: entity
+  parent: BasePDA
+  id: PermaPrisonerPDA
+  name: perma prisoner PDA
+  description: Clear, so you can make sure there's nothing being smuggled inside.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Devices/pda.rsi
+  - type: Pda
+    id: PermaPrisonerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-space-prison-prisoner
+  - type: PdaBorderColor
+    borderColor: "#595c63"
+  - type: Icon
+    sprite: _DH/Objects/Devices/pda.rsi
+    state: pda-space-prison-prisoner
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      #- CrewManifestCartridge
+      - NotekeeperCartridge
+      #- YupiTransferCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      #- BountyContractsCartridge
+      #- AstroNavCartridge
+
+- type: entity
+  parent: BasePDA
+  id: PrisonGuardPDA
+  name: prison guard PDA
+  description: Red to hide the stains of prisoner blood.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Devices/pda.rsi
+  - type: Pda
+    id: PrisonGuardIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-space-prison-guardian
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentVColor: "#DFDFDF"
+  - type: Icon
+    sprite: _DH/Objects/Devices/pda.rsi
+    state: pda-space-prison-guardian
+
+- type: entity
+  parent: BasePDA
+  id: HeadOfPrisonPDA
+  name: Prison governor's PDA
+  description: Has the look of a prestigious instrument of power, but a little scratched from constant emergency calls.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Devices/pda.rsi
+  - type: Pda
+    id: HeadOfPrisonIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-space-prison-boss
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentHColor: "#447987"
+  - type: Icon
+    sprite: _DH/Objects/Devices/pda.rsi
+    state: pda-space-prison-boss

@@ -53024,7 +53024,7 @@ entities:
     - type: Transform
       pos: 48.314304,20.618896
       parent: 2
-- proto: ClothingUniformJumpskirtJanimaidmini
+- proto: ClothingUniformJumpskirtJanichambermaidmini
   entities:
   - uid: 13755
     components:

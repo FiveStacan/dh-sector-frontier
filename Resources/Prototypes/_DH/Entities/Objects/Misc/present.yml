@@ -1,0 +1,16 @@
+- type: entity
+  id: PresentResearch
+  parent: [PresentBase, BaseStorageItem]
+  suffix: Empty
+  components:
+  - type: Item
+    size: Normal
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,2,2
+  - type: StorageFill
+    contents:
+    - id: ClothingHandsGlovesRobohands
+    - id: ResearchDisk10000Present
+    - id: PowerCellHyper

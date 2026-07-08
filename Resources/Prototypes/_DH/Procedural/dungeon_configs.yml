@@ -1,0 +1,169 @@
+- type: entityTable
+  id: DHBaseAirlockGrille
+  table: !type:AllSelector
+    children:
+    - id: CableApcExtension
+    - id: MedievalAirlockGrille
+
+- type: dungeonConfig
+  id: DHMurino
+  layers:
+  - !type:PrefabDunGen
+    roomWhitelist:
+      tags:
+      - DHMurino
+    presets:
+    - Bucket
+    - Wow
+    - SpaceShip
+    - Tall
+  - !type:CorridorDunGen
+    width: 3
+    tile: FloorGrayConcreteSmooth
+
+  - !type:DungeonEntranceDunGen
+    count: 2
+    tile: FloorGrayConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:RoomEntranceDunGen
+    tile: FloorGrayConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:EntranceFlankDunGen
+    tile: FloorGrayConcrete
+    contents: NFBaseWindow
+
+  - !type:ExternalWindowDunGen
+    tile: FloorGrayConcrete
+    contents: NFBaseWindow
+
+  - !type:WallMountDunGen
+    contents: DHMurinoWallMounts
+    tile: FloorGrayConcrete
+
+  - !type:BoundaryWallDunGen
+    wall: WallSolidRust
+    cornerWall: WallReinforcedRust
+    tile: FloorGrayConcrete
+
+  - !type:JunctionDunGen
+    width: 1
+    tile: FloorGrayConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:JunctionDunGen
+    width: 3
+    tile: FloorGrayConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:AutoCablingDunGen
+    entity: CableApcExtension
+
+  - !type:CornerClutterDunGen
+    contents: NFBaseClutter
+
+  - !type:CorridorDecalSkirtingDunGen
+    cardinalDecals:
+      South: BrickTileWhiteLineS
+      East: BrickTileWhiteLineE
+      North: BrickTileWhiteLineN
+      West: BrickTileWhiteLineW
+    cornerDecals:
+      SouthEast: BrickTileWhiteCornerSe
+      SouthWest: BrickTileWhiteCornerSw
+      NorthEast: BrickTileWhiteCornerNe
+      NorthWest: BrickTileWhiteCornerNw
+    pocketDecals:
+      SouthWest: BrickTileWhiteInnerSw
+      SouthEast: BrickTileWhiteInnerSe
+      NorthWest: BrickTileWhiteInnerNw
+      NorthEast: BrickTileWhiteInnerNe
+    color: "#645f57"
+
+- type: entityTable
+  id: DHMurinoWallMounts
+  table: !type:GroupSelector
+    children:
+      # Posters
+      - id: RandomPosterLegit
+      - id: ExtinguisherCabinetFilled
+        prob: 0.2
+      - id: RandomPainting
+        prob: 0.05
+
+- type: dungeonConfig
+  id: DHMurinoDorms
+  layers:
+  - !type:PrefabDunGen
+    roomWhitelist:
+      tags:
+      - DHMurino
+    presets:
+    - Bucket
+    - Wow
+    - SpaceShip
+    - Tall
+  - !type:CorridorDunGen
+    width: 3
+    tile: FloorOldConcrete
+
+  - !type:DungeonEntranceDunGen
+    count: 2
+    tile: FloorOldConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:RoomEntranceDunGen
+    tile: FloorOldConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:EntranceFlankDunGen
+    tile: FloorOldConcrete
+    contents: NFBaseWindow
+
+  - !type:ExternalWindowDunGen
+    tile: FloorOldConcrete
+    contents: NFBaseWindow
+
+  - !type:WallMountDunGen
+    contents: NFBaseWallMounts
+    tile: FloorOldConcrete
+
+  - !type:BoundaryWallDunGen
+    wall: WallSolid
+    cornerWall: WallReinforcedRust
+    tile: FloorOldConcrete
+
+  - !type:JunctionDunGen
+    width: 1
+    tile: FloorOldConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:JunctionDunGen
+    width: 3
+    tile: FloorOldConcrete
+    contents: DHBaseAirlockGrille
+
+  - !type:AutoCablingDunGen
+    entity: CableApcExtension
+
+  - !type:CornerClutterDunGen
+    contents: NFBaseClutter
+
+  - !type:CorridorDecalSkirtingDunGen
+    cardinalDecals:
+      South: BrickTileWhiteLineS
+      East: BrickTileWhiteLineE
+      North: BrickTileWhiteLineN
+      West: BrickTileWhiteLineW
+    cornerDecals:
+      SouthEast: BrickTileWhiteCornerSe
+      SouthWest: BrickTileWhiteCornerSw
+      NorthEast: BrickTileWhiteCornerNe
+      NorthWest: BrickTileWhiteCornerNw
+    pocketDecals:
+      SouthWest: BrickTileWhiteInnerSw
+      SouthEast: BrickTileWhiteInnerSe
+      NorthWest: BrickTileWhiteInnerNw
+      NorthEast: BrickTileWhiteInnerNe
+    color: "#645f57"

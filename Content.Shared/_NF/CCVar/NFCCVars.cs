@@ -48,6 +48,15 @@ public sealed class NFCCVars
         CVarDef.Create("nf14.game.showobjectives", false, CVar.ARCHIVE | CVar.SERVERONLY);
 
     /*
+     *  Public Transit
+     */
+    /// <summary>
+    /// Whether public transit is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> PublicTransit =
+        CVarDef.Create("nf14.publictransit.enabled", true, CVar.SERVERONLY);
+
+    /*
      *  World Gen
      */
     /// <summary>
@@ -94,7 +103,7 @@ public sealed class NFCCVars
     /// </summary>
     public static readonly CVarDef<float> ShipyardSellRate =
 
-        CVarDef.Create("shuttle.shipyard_base_sell_rate", 0.70f, CVar.SERVERONLY); // Lua 95%<70%
+        CVarDef.Create("shuttle.shipyard_base_sell_rate", 0.75f, CVar.SERVERONLY); // Lua 95%<70%<75% //DH
 
     /*
      * Salvage

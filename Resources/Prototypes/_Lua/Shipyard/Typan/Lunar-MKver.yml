@@ -7,7 +7,7 @@
   parent: BaseVesselAntag
   name: Lunar
   description: Небольшой штурмовик обладающий отличной мобильностью.
-  price: 70000
+  price: 189950 #DH Shuttle price balance #70000
   category: Small
   group: Typan
   access: SyndicateAgent

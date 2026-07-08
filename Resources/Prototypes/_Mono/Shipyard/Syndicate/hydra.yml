@@ -4,7 +4,7 @@
   name: Hydra
   description: A syndicate missile corvette meant for stealthy hit and runs and harassment.
   limit: 3
-  price: 143428
+  price: 287140 #DH Shuttle price balance #143428
   category: Medium
   group: Typan
   access: SyndicateAgent

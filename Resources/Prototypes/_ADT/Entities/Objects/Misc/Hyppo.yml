@@ -9,20 +9,20 @@
     state: hypo
   - type: Item
     sprite: ADT/Objects/Misc/Hyppo.rsi
-  - type: SolutionContainerManager
-    solutions:
-      hypospray:
-        maxVol: 50
-  - type: RefillableSolution
-    solution: hypospray
-  - type: ExaminableSolution
-    solution: hypospray
-  - type: Injector
-    solutionName: hypospray
-    activeModeProtoId: HyposprayDynamicMode
-    allowedModes:
-    - HyposprayDynamicMode
-    - HyposprayInjectMode
+  # - type: SolutionContainerManager
+  #   solutions:
+  #     hypospray:
+  #       maxVol: 50
+  # - type: RefillableSolution
+  #   solution: hypospray
+  # - type: ExaminableSolution
+  #   solution: hypospray
+  # - type: Injector
+  #   solutionName: hypospray
+  #   activeModeProtoId: HyposprayDynamicMode
+  #   allowedModes:
+  #   - HyposprayDynamicMode
+  #   - HyposprayInjectMode
   - type: UseDelay
     delay: 0
   - type: StaticPrice

@@ -78,10 +78,15 @@
     layers:
     - state: alarmp
       map: ["airAlarmBase"]
+      offset: "0.0,-0.2" #DH
     - state: alarm0
       map: ["airAlarmState"] # TODO: fire alarm enum
+      offset: "0.0,-0.2"
     - state: alarmx
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      offset: "0.0,-0.2"
+  - type: Transform
+    anchored: true
   - type: Construction
     graph: AirAlarm
     node: air_alarm
@@ -123,6 +128,7 @@
     layers:
     - state: alarm_b1
       map: [ "enum.ConstructionVisuals.Layer" ]
+      offset: "0.0,-0.2" #DH
   - type: Appearance
   - type: GenericVisualizer
     visuals:

@@ -1,0 +1,42 @@
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateWeaponAirsoftSecure
+  name: secure weapon crate
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/weapon.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/weapon.rsi
+
+- type: entity
+  parent: CrateSecgear
+  id: CrateSecurityGrenadeBarrier
+  name: grenade barrier crate
+  description: Contains four barrier grenades. Requires Security access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: GrenadeBarrier
+        amount: 4
+
+- type: entity
+  id: CrateArmoryIK30
+  parent: [ CrateWeaponSecure, BaseRestrictedContraband ]
+  name: IK-30 crate
+  description: Contains three IK-30 semi laser battery gun. Requires Armory access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponGunLaserCarbineSemi
+        amount: 3
+
+- type: entity
+  id: CrateSuitCargo
+  parent: CrateGenericSteel
+  name: cargo suit crate
+  description: cargo suit crate
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterSuitCargo
+        amount: 2

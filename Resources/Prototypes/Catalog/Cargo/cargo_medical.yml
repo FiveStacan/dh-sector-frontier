@@ -1,11 +1,11 @@
 - type: cargoProduct
   id: MedicalSupplies
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: firstaid
   product: CrateMedicalSupplies
-  cost: 2400
+  cost: 8270
   category: cargoproduct-category-name-medical
   group: market
 
@@ -15,7 +15,7 @@
     sprite: Objects/Specific/Chemistry/beaker.rsi
     state: beaker
   product: CrateChemistrySupplies
-  cost: 750
+  cost: 1250
   category: cargoproduct-category-name-medical
   group: market
 
@@ -31,89 +31,89 @@
 
 - type: cargoProduct
   id: EmergencyBurnKit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: burnkit
   product: CrateEmergencyBurnKit
-  cost: 700
+  cost: 4150
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: EmergencyToxinKit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: toxinkit
   product: CrateEmergencyToxinKit
-  cost: 600
+  cost: 3450
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: EmergencyO2Kit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: o2kit
   product: CrateEmergencyO2Kit
-  cost: 600
+  cost: 3450
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: EmergencyBruteKit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: brutekit
   product: CrateEmergencyBruteKit
-  cost: 600
+  cost: 3450
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: EmergencyAdvancedKit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: advkit
   product: CrateEmergencyAdvancedKit
-  cost: 1200
+  cost: 5600
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: EmergencyRadiationKit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi # Frontier: _NF prefix
     state: radkit
   product: CrateEmergencyRadiationKit
-  cost: 600
+  cost: 3650
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: MedicalBodybags
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Specific/Medical/Morgue/bodybags.rsi
     state: bag_folded
   product: CrateBodyBags
-  cost: 700
+  cost: 1000
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: MedicalBiosuit
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Clothing/Head/Hoods/Bio/bio.rsi
     state: icon
   product: CrateVirologyBiosuit
-  cost: 800
+  cost: 3800
   category: cargoproduct-category-name-medical
   group: market
 
@@ -130,33 +130,33 @@
 
 - type: cargoProduct
   id: ChemistryP
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryP
-  cost: 850
+  cost: 29500
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: ChemistryS
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryS
-  cost: 750
+  cost: 27500
   category: cargoproduct-category-name-medical
   group: market
 
 - type: cargoProduct
   id: CrateChemistryD
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Storage/Crates/chemcrate_secure.rsi
     state: icon
   product: CrateChemistryD
-  cost: 750
+  cost: 27500
   category: cargoproduct-category-name-medical
   group: market

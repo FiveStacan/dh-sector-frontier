@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesWelding
+  name: Welding glasses
+  description: That's a welding goggles. It is a small item. Protects the eyes from welders.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Eyes/Glasses/weldglasses.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Eyes/Glasses/weldglasses.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: FlashImmunity
+  - type: EyeProtection
+#  - type: VisionDarkener
+#    strength: 3
+  - type: StaticPrice
+    price: 8
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesStuttering
+  name: stuttering glasses
+  description: Glasses that give the owner knowledge...or stuttering
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Eyes/Glasses/stuttering_glasses.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Eyes/Glasses/stuttering_glasses.rsi
+  - type: AddAccentClothing
+    accent: StutteringAccent
+    matchRandomProb: 0.1
+    fourRandomProb: 0
+    threeRandomProb: 0
+    cutRandomProb: 0

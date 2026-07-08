@@ -16,11 +16,11 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 12000 #DH 40000
+    startingCharge: 12000 #DH 40000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
-    range: 500
+    range: 600 #DH 500
   - type: Gun
     fireRate: 0.05
     projectileSpeed: 900
@@ -31,15 +31,17 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 20 #DH 350
+    autoRechargePause: true
+    autoRechargePauseTime: 10
   - type: SpaceArtillery
-    powerChargeRate: 350
-    powerUsePassive: 1000
+    powerChargeRate: 20 #DH 350
+    powerUsePassive: 4000
     powerUseActive: 7500
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRailgunProjectile
-    fireCost: 1500
+    fireCost: 12000 #DH 1500
   - type: Fixtures
     fixtures:
       fix1:
@@ -55,7 +57,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 35000
+        damage: 10000 #DH 35000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -90,8 +92,8 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.05
-    projectileSpeed: 1250
+    fireRate: 0.032 #0.05
+    projectileSpeed: 1200 #1250
     shootThermalSignature: 18000000 # ~8.5m after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
@@ -99,8 +101,8 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
     powerChargeRate: 350
-    powerUsePassive: 1000
-    powerUseActive: 7500
+    powerUsePassive: 1400 #1000
+    powerUseActive: 7650
   - type: Actions
   - type: BallisticAmmoProvider
     whitelist:
@@ -124,7 +126,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 35000
+        damage: 10000 #DH 35000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

@@ -15,8 +15,28 @@
     - Multitool
     - PowerDrill
     - JawsOfLife
+    - UniversalIDCard
+    - UniversalIDCard
     - WelderIndustrialAdvanced
-    - TrafficManagerTablet 
+    - TrafficManagerTablet
+    - AtmosAlertsMonitorUnpowered
+    - EngiAlertsMonitorUnpowered
+    - PortableSurveillanceCameraMonitorUnpowered
+    - HandheldCriminalRecordsMonitor
+    - HandheldCrewMonitor
+    - HandheldHealthAnalyzerUnpowered
+    - AdvancedMineralScannerUnpowered
+    - Screwdriver
+    - MeleeDebug100
+    - MeleeDebug200
+    - MeleeDebugGib
+    - ChameleonProjector
+    - HandTeleporterAdmin
+    - WeaponTetherGunAdmin
+    - WeaponForceGunAdmin
+    - ResearchDiskDebug
+    - CoordinatesDiskDEBUG
+    - ShipVoucherDebug
 
 - type: startingGear
   id: MobClippyGear

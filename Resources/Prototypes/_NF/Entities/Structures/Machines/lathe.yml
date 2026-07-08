@@ -17,6 +17,154 @@
     - blueprint
 
 - type: entity
+  parent: [ NFBlueprintReceiverBase, BaseLatheLube ]
+  id: ServiceTechFab
+  name: service techfab
+  description: Prints equipment for service staff.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: service
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ServiceTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - NFServiceTechfabDeprecatedStatic
+    - NFPaperAndPaperAccessories
+    - ReportingStatic # DeltaV
+    dynamicPacks:
+    - DHTools #DH
+    - DHServiceTechfabDeprecatedDynamic #DH
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFServiceTechfabDeprecatedEmagStatic
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintServiceTechfab
+  - type: OreSiloClient
+
+- type: entity
+  parent: ServiceTechFab
+  id: McServiceTechFab
+  name: mcservice techfab
+  description: Prints equipment for mcservice staff.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: mcservice
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: McServiceTechFabCircuitboard
+  - type: Lathe
+    staticPacks:
+    - NFServiceTechfabDeprecatedStatic
+    - NFPaperAndPaperAccessories
+    - ReportingStatic # DeltaV
+    - NFMcServiceTechfabStatic
+
+- type: entity
+  parent: [ NFBlueprintReceiverBase, BaseLatheLube ]
+  id: EngineeringTechFab
+  name: engineering techfab
+  description: Prints equipment for engineers.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: engi
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: EngineeringTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - NFEngineeringTechfabDeprecatedStatic
+    - NFInflatablesStatic
+    dynamicPacks: #DH
+    - DHEngineering
+    - AdvancedTools
+    - EngineeringBoards
+    - NFEngineeringBoardsStatic
+    - NFEngineeringTechfabDeprecatedDynamic
+    - DHEngineeringMech
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintEngineeringTechfab
+  - type: OreSiloClient
+
+- type: entity
+  parent: [ NFBlueprintReceiverBase, BaseLatheLube ]
+  id: SalvageTechfabNF
+  name: salvage techfab
+  description: Prints equipment for salvagers.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: salvage
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SalvageTechFabCircuitboardNF
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    - NFSalvageTechfabDeprecatedStatic
+    dynamicPacks:
+    - NFSalvageTechfabDeprecatedDynamic
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFSalvageTechfabDeprecatedEmag
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintSalvageTechfab
+  - type: OreSiloClient
+
+- type: entity
   id: NfsdTechFab
   parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
   name: NFSD techfab
@@ -54,10 +202,16 @@
     - NFMaterialElectronicsStatic
     - ReportingStatic # DeltaV
     - NfsdWeaponsStatic
+    - NfsdPracticeStatic
+    - NfsdAmmoStatic
+    - NFMercenaryMagazineStatic
     - NFMercenaryStorageStatic
     - NfsdToolsStatic
     - NfsdTargetsStatic
     - NfsdBoardsStatic
+    dynamicPacks:
+    - NfsdDynamic
+    - DHBaseArmor #DH
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -106,14 +260,67 @@
     - NFMercenaryClothesStatic
     - NFMercenaryStorageStatic
     - NFMercenaryWeaponsStatic
+    - NFMercenaryAmmoBoxesStatic
+    - NfsdPracticeStatic
+    - NFMercenaryMagazineStatic
     - NFTopicalsStatic
     - NFMercenaryArchetypeStatic
     - LuaMercenaryClothesStatic # Lua
+    dynamicPacks:
+    - NFMercenaryTechfabDynamicDeprecated
   - type: BlueprintReceiver
     whitelist:
       tags:
       - NFBlueprintMercenaryTechfab
       - NFBlueprintAdvanced
+  - type: OreSiloClient
+
+- type: entity #DH
+  id: MercenaryTechFabHacked
+  parent:
+  - BaseC3Contraband
+  - MercenaryTechFab
+  - BaseHyperlathe
+  - PunkHoloGraffitiOverlay # Prototype can be located at /Resources/Prototypes/_NF/Entities/Structures/Holographic/graffiti.yml
+  name: hacked mercenary techfab
+  description: Prints the bare minimum of tools of the trade that any budget mercenary or private security could need. Nothing fancy.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: mercenary-hacked
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit-hacked
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - sprite: _NF/Structures/Holo/graffiti/simple.rsi
+      state: holograffiti01
+      map: [ "graffiti" ]
+      shader: unshaded
+      scale: 0.7, 0.7
+  - type: Machine
+    board: MercenaryTechFabCircuitboardHackedNF
+  - type: PointLight
+    radius: 1.5
+    energy: 2
+    color: "#85daeb"
+  - type: RgbLightController
+    layers: [ 0 ]
+  - type: Lathe
+    idleState: mercenary-hacked
+    runningState: mercenary-hacked
+    staticPacks:
+    - NFHackedMercenaryTechfabDeprecatedStatic
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintMercenaryTechfab
+      - NFBlueprintNfsdTechfab
   - type: OreSiloClient
 
 - type: entity
@@ -248,7 +455,9 @@
   - type: BlueprintLathe
     blueprintPrintMaterials:
       Paper: 300
-    blueprintPrintTime: 5
+      #BlueprintPaper: 100 #DH
+      #MaterialDurathread: 100 #DH
+    blueprintPrintTime: 12 #DH
   - type: BlueprintLatheClientState # persistent, per-client UI state
   - type: MaterialStorage
     whitelist:
@@ -281,7 +490,7 @@
     anchored: true
   - type: Pullable
   - type: StaticPrice
-    price: 800
+    price: 850 #DH
   - type: ResearchClient
   - type: TechnologyDatabase
   - type: MaterialStorageMagnetPickup

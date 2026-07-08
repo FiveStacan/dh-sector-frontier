@@ -96,7 +96,7 @@
     energy: 1.6
     color: "#4b93ad"
   - type: MarketModifier
-    mod: 25
+    mod: 28
 
 - type: entity
   parent: [BaseStructureDisableAnchoring, VendingMachineFlatpackVend]
@@ -110,7 +110,7 @@
     sprite: _NF/Structures/Machines/VendingMachines/expeditionaryflatpackvend.rsi
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine, BaseC3SyndicateContrabandPremium] # Lua-changes: added 
+  parent: [BaseStructureDisableAnchoring, StorePresetUplink, VendingMachine, BaseC3SyndicateContrabandPremium] # Lua-changes: added
   id: VendingMachineSyndieContraband
   name: ContraVend
   description: Wanted across multiple sectors!
@@ -585,6 +585,8 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: MarketModifier
+    mod: 12
 
 - type: entity
   id: BaseCiviMedVend
@@ -607,7 +609,7 @@
     energy: 1.6
     color: "#4b93ad"
   - type: MarketModifier
-    mod: 30 # damn
+    mod: 35 # damn
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/civimed.rsi
     layers:

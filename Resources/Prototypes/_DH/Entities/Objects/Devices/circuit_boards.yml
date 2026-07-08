@@ -1,0 +1,369 @@
+- type: entity
+  id: ExperimentalAmmoTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: экспериментальный ТехФаб патронов (машинная плата)
+  description: Печатная плата экспериментального ТехФаба патронов.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: ExperimentalAmmoTechFab
+      requirements:
+        Capacitor: 2
+        Manipulator: 1
+      stackRequirements:
+        Glass: 10
+        Steel: 10
+
+- type: entity
+  id: PirateTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: пиратский ТехФаб (машинная плата)
+  description: Печатная плата пиратского ТехФаба.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: PirateTechFab
+      requirements:
+        Capacitor: 1
+        Manipulator: 1
+      stackRequirements:
+        Glass: 10
+        Steel: 10
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ProtolatheHyperSpeedMachineCircuitboard
+  name: гиперскоростной протолат (машинная плата)
+  description: Печатная плата гиперскоростного протолата.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: ProtolatheHyperSpeed
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+    stackRequirements:
+      Glass: 2
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: AutolatheHyperSpeedMachineCircuitboard
+  name: гиперскоростной автолат (машинная плата)
+  description: Печатная плата гиперскоростного автолата.
+  components:
+  - type: MachineBoard
+    prototype: AutolatheHyperSpeed
+    requirements: # Frontier
+      MatterBin: 3 # Frontier stackRequirements<requirements
+    stackRequirements:
+      Glass: 2
+    tagRequirements:
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: CircuitImprinterHyperSpeedMachineCircuitboard
+  name: гиперскоростной принтер схем (машинная плата)
+  description: Печатная плата гиперскоростного принтера схем.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: CircuitImprinterHyperSpeed
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ExosuitFabricatorHyperSpeedMachineCircuitboard
+  name: гиперскоростной фабрикатор экзокостюмов (машинная плата)
+  description: Печатная плата гиперскоростного фабрикатора экзокостюмов.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: ExosuitFabricatorHyperSpeed
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: UniformPrinterHyperSpeedMachineCircuitboard
+  name: гиперскоростной принтер униформы (машинная плата)
+  description: Печатная плата гиперскоростного принтера униформы.
+  components:
+  - type: Sprite
+    state: generic
+  - type: MachineBoard
+    prototype: UniformPrinterHyperSpeed
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+    stackRequirements:
+      Glass: 2
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ExosuitFabricatorHyperConvectionMachineCircuitboard
+  name: гиперконвекционный фабрикатор экзокостюмов (машинная плата)
+  description: Печатная плата гиперконвекционного фабрикатора экзокостюмов.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: ExosuitFabricatorHyperConvection
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+    stackRequirements:
+      Glass: 2
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: UniformPrinterHyperConvectionMachineCircuitboard
+  name: гиперконвекционный принтер униформы (машинная плата)
+  description: Печатная плата гиперконвекционного принтера униформы.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: UniformPrinterHyperConvection
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+    stackRequirements:
+      Glass: 2
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ProtolatheSyndicateCircuitboard
+  name: кроваво-красный протолат (машинная плата)
+  description: Печатная плата кроваво-красного протолата.
+  components:
+  - type: Sprite
+    state: cpu_syndicate
+  - type: MachineBoard
+    prototype: ProtolatheSyndicate
+    requirements: # Frontier
+      MatterBin: 2 # Frontier stackRequirements<requirements
+    tagRequirements:
+      GlassBeaker:
+        amount: 2
+        defaultPrototype: Beaker
+      Igniter:
+        amount: 1
+        defaultPrototype: Igniter
+    stackRequirements:
+      Glass: 6
+
+- type: entity
+  id: WallmountMaterialReclaimerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: насенный переработчик материалов (машинная плата)
+  description: Печатная плата насенного переработчика материалов.
+  components:
+    - type: Sprite
+      state: supply
+    - type: MachineBoard
+      prototype: WallmountMaterialReclaimer
+      requirements:
+        Manipulator: 1
+      stackRequirements:
+        Steel: 3
+        Plastic: 4
+
+- type: entity
+  id: WallmountIDReclaimerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: насенный переработчик ID карт (машинная плата)
+  description: Печатная плата насенного переработчика ID карт.
+  components:
+    - type: Sprite
+      state: supply
+    - type: MachineBoard
+      prototype: WallmountIDReclaimer
+      requirements:
+        Manipulator: 1
+      stackRequirements:
+        Steel: 3
+        Plastic: 4
+
+- type: entity
+  id: ProtolatheCashMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: принтер фальшивых кредитов (машинная плата)
+  description: машина печатающая фальнишые кредиты.
+  components:
+    - type: MachineBoard
+      prototype: ProtolatheCash
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
+- type: entity
+  id: ProtolatheCashMachineCircuitboardCentComm
+  parent: BaseMachineCircuitboard
+  name: принтер кредитов ЦК (машинная плата)
+  description: машина печатающая кредиты.
+  components:
+    - type: MachineBoard
+      prototype: ProtolatheCashCentComm
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 1
+      tagRequirements:
+        GlassBeaker:
+          amount: 3
+          defaultPrototype: Beaker
+
+- type: entity
+  id: ProtolatheCashMachineCircuitboardHack
+  parent: BaseMachineCircuitboard
+  name: хакерский принтер кредитов (машинная плата)
+  description: машина печатающая кредиты.
+  components:
+    - type: MachineBoard
+      prototype: ProtolatheCashHack
+      stackRequirements:
+        MatterBin: 4
+        Manipulator: 1
+      tagRequirements:
+        GlassBeaker:
+          amount: 3
+          defaultPrototype: Beaker
+
+- type: entity
+  id: MiniChemDispenserMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: мини раздатчик химикатов (машинная плата)
+  description: Печатная плата мини раздатчика химикатов.
+  components:
+    - type: Sprite
+      state: medical
+    - type: MachineBoard
+      prototype: MiniChemDispenser
+      requirements: # Frontier
+        # Capacitor: 1 # Frontier stackRequirements<requirements
+        MatterBin: 1 # Frontier: upgrades number of stored jugs
+      stackRequirements:
+        # Manipulator: 1 # Frontier
+        Glass: 1
+        Steel: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 1
+          defaultPrototype: Beaker
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ReflectorMachineCircuitboard
+  name: reflector machine board
+  components:
+  - type: MachineBoard
+    prototype: Reflector
+    stackRequirements:
+      Manipulator: 2
+      MatterBin: 1
+      Steel: 1
+
+- type: entity
+  id: ADTUniversalPipeDispenserCircuitboard
+  parent: BaseMachineCircuitboard
+  name: universal pipe dispenser board
+  description: A machine circuit board for a universal pipe dispenser. Exists in a single copy.
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: ADTUniversalPipeDispenser
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
+- type: entity
+  id: ADTHydroponicsTrayAdvancedMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: advanced hydroponics tray machine board
+  description: A machine printed circuit board for a advanced hydroponics tray.
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: ADTHydroponicsTrayAdvanced
+      stackRequirements:
+        Glass: 5
+        Cable: 4
+        Plasma: 5
+      tagRequirements:
+        GlassBeaker:
+          amount: 3
+          defaultPrototype: Beaker
+
+- type: entity
+  id: ADTAdvancedReagentGrinderMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: advanced reagent grinder machine board
+  description: A machine printed circuit board for a reagent grinder.
+  components:
+    - type: MachineBoard
+      prototype: ADTAdvancedKitchenReagentGrinder
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 4
+        Plasma: 5
+      tagRequirements:
+        GlassBeaker:
+          amount: 1
+          defaultPrototype: Beaker

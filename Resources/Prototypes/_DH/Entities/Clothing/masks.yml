@@ -1,0 +1,145 @@
+- type: entity
+  parent: ClothingMaskGasAtmos
+  id: ClothingMaskGasCE
+  name: chef engineer's gas mask
+  description: Very durable and stylish white gas mask with a green stripe on the frontal area. Will allow you to correct the consequences of atmospheric technicians with bought diplomas.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Mask/cemask.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Mask/cemask.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+
+- type: entity
+  parent: ClothingMaskGasAtmos
+  id: ClothingBreathMaskCMO
+  name: medical respirator
+  description: Quality respirator.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Mask/cmomask.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Mask/cmomask.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+
+- type: entity
+  parent: ClothingMaskGasExplorer
+  id: ClothingBreathMaskQM
+  name: handler's gas mask
+  description: While others are working, you watch them and enjoy life. Made specifically for apartment dwellers, allowing for a more convenient way to pass the time without having to pay attention to how something is eating your employee.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Mask/qmmask.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Mask/qmmask.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+
+- type: entity
+  parent: ClothingMaskGasAtmos
+  id: ClothingMaskIAA
+  name: elite gas mask
+  description: Black gas mask with gold-plated element above the visor made of durable glass. You do not have to breathe the same air as the defendants. Protects against flares.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Mask/iaamask.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Mask/iaamask.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: FlashImmunity
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingDallasMask
+  name: Маска Далласа
+  description: Традиционная маска грабителя из банды PayDay
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Masks/dallasmaskbel.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Masks/dallasmaskbel.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingWolfMask
+  name: Маска Вулфа
+  description: Традиционная маска грабителя из банды PayDay
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Masks/wolfmaskbel.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Masks/wolfmaskbel.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingChainsMask
+  name: Маска Чейнса
+  description: Традиционная маска грабителя из банды PayDay
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Masks/chainsmaskbel.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Masks/chainsmaskbel.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingHoxtonMask
+  name: Маска Хокстона
+  description: Традиционная маска грабителя из банды PayDay
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Masks/hoxtonmaskbel
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Masks/hoxtonmaskbel
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingJokermask
+  name: Маска Джокера
+  description: Страшная маска джокера, больного психопата которая неизвестно как попала на станцию
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Masks/jokermaskbel.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Masks/jokermaskbel.rsi
+  - type: BreathMask
+  - type: IdentityBlocker
+  - type: StaticPrice
+    price: 145
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingAnonMask
+  name: Маска Анонимуса
+  description: Анон!
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/anon.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/anon.rsi
+  - type: StaticPrice
+    price: 200

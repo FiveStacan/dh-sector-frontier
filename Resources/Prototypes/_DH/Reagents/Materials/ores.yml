@@ -1,0 +1,8 @@
+- type: material
+  id: RawPyro
+  stackEntity: PyroOre1
+  name: materials-raw-pyro
+  unit: materials-unit-piece
+  icon: { sprite: _DH/Objects/Materials/ore.rsi, state: pyro }
+  color: "#b62b08"
+  price: 0.6

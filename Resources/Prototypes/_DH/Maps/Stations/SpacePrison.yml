@@ -1,0 +1,29 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: gameMap
+  id: SpacePrison
+  mapName: 'SpacePrison'
+  mapPath: /Maps/_DH/Stations/SpacePrison.yml
+  isGrid: true
+  minPlayers: 0
+  stations:
+    SpacePrison:
+      stationProto: StandardTypanVessel
+      components:
+      - type: MailStationDisabled
+      - type: StationNameSetup
+        mapNameTemplate: 'Космическая Тюрьма'
+      - type: ExtraStationInformation
+        iconPath: /Textures/_DH/Structures/Wallmounts/posters.rsi/poster2.png
+        stationSubtext: 'SpacePrison'
+        stationDescription: 'SpacePrison'
+      - type: StationJobs
+        availableJobs:
+          HeadOfPrison: [ 0, 1 ]
+          DHPrisonGuard: [ 0, 6 ]
+          PermaPrisoner: [ 0, 6 ]
+          PrisonDoctor: [ 0, 3 ]
+
+

@@ -7,8 +7,8 @@
   id: Runo
   name: NT Runo
   description: маленький добывающий шаттл для материнского корабля Sauron
-  price: 26000 #14000
-  category: Micro
+  price: 58900 #26000 #DH Shuttle price balance #14000
+  category: Small
   group: Custom
   whitelist:
   - Luna
@@ -18,6 +18,9 @@
   engine:
   - Singularity
   shuttlePath: /Maps/_Lua/Shuttles/Civilian/runo.yml
+  addComponents:
+    - type: IFF
+      color: "#ffffff"
 
 - type: gameMap
   id: Runo

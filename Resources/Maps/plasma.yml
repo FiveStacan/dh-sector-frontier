@@ -65324,7 +65324,7 @@ entities:
     - type: Transform
       pos: -115.44157,-60.670666
       parent: 2
-- proto: ClothingUniformJumpskirtJanimaidmini
+- proto: ClothingUniformJumpskirtJanichambermaidmini
   entities:
   - uid: 9655
     components:

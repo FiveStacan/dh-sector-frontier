@@ -1,6 +1,9 @@
 using System.Linq;
 using Content.Server.Power.EntitySystems;
+using Content.Shared.DeviceLinking;
 using Content.Shared.Research.Components;
+using Content.Shared.Verbs;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Research.Systems;
 
@@ -11,6 +14,7 @@ public sealed partial class ResearchSystem
         SubscribeLocalEvent<ResearchServerComponent, ComponentStartup>(OnServerStartup);
         SubscribeLocalEvent<ResearchServerComponent, ComponentShutdown>(OnServerShutdown);
         SubscribeLocalEvent<ResearchServerComponent, TechnologyDatabaseModifiedEvent>(OnServerDatabaseModified);
+        SubscribeLocalEvent<ResearchServerComponent, GetVerbsEvent<AlternativeVerb>>(OnServerGetVerbs);
         SubscribeLocalEvent<ResearchServerComponent, AnchorStateChangedEvent>(OnServerAnchorChanged); // Frontier
         SubscribeLocalEvent<ResearchServerComponent, EntParentChangedMessage>(OnServerParentChanged); // Frontier
     }
@@ -39,6 +43,61 @@ public sealed partial class ResearchSystem
         }
     }
 
+    private void OnServerGetVerbs(Entity<ResearchServerComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract)
+            return;
+
+        args.Verbs.Add(new AlternativeVerb
+        {
+            Text = Loc.GetString(ent.Comp.GridLocked
+                ? "research-server-verb-unlock-grid"
+                : "research-server-verb-lock-grid"),
+            Icon = new SpriteSpecifier.Texture(new ResPath(ent.Comp.GridLocked
+                ? "/Textures/Interface/VerbIcons/unlock.svg.192dpi.png"
+                : "/Textures/Interface/VerbIcons/lock.svg.192dpi.png")),
+            Priority = 1,
+            Act = () => ToggleServerGridLock(ent)
+        });
+
+        if (TryComp<DeviceLinkSourceComponent>(ent, out var source) && source.LinkedPorts.Count > 0)
+        {
+            args.Verbs.Add(new AlternativeVerb
+            {
+                Text = Loc.GetString("research-server-verb-reset-console-links"),
+                Icon = new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/VerbIcons/refresh.svg.192dpi.png")),
+                Priority = 0,
+                Act = () => ResetServerConsoleLinks(ent, source)
+            });
+        }
+    }
+
+    private void ToggleServerGridLock(Entity<ResearchServerComponent> ent)
+    {
+        ent.Comp.GridLocked = !ent.Comp.GridLocked;
+        Dirty(ent);
+
+        ValidateServerClients(ent, ent.Comp);
+        _popup.PopupEntity(Loc.GetString(ent.Comp.GridLocked
+            ? "research-server-grid-locked"
+            : "research-server-grid-unlocked"), ent);
+    }
+
+    private void ResetServerConsoleLinks(Entity<ResearchServerComponent> ent, DeviceLinkSourceComponent? source = null)
+    {
+        if (!Resolve(ent, ref source, false))
+            return;
+
+        foreach (var sink in source.LinkedPorts.Keys.ToArray())
+        {
+            _deviceLink.RemoveSinkFromSource(ent, sink, source);
+        }
+
+        ValidateServerClients(ent, ent.Comp);
+        Dirty(ent, source);
+        _popup.PopupEntity(Loc.GetString("research-server-console-links-reset"), ent);
+    }
+
     private bool CanRun(EntityUid uid)
     {
         return this.IsPowered(uid, EntityManager);
@@ -52,6 +111,32 @@ public sealed partial class ResearchSystem
         if (!CanRun(uid))
             return;
         ModifyServerPoints(uid, GetPointsPerSecond(uid, component) * time, component);
+    }
+
+    private void ValidateServerClients(EntityUid uid, ResearchServerComponent? component = null)
+    {
+        if (!Resolve(uid, ref component, false))
+            return;
+
+        var clientsRemoved = false;
+        foreach (var client in component.Clients.ToArray())
+        {
+            if (!TryComp(client, out ResearchClientComponent? clientComponent))
+            {
+                component.Clients.Remove(client);
+                clientsRemoved = true;
+                continue;
+            }
+
+            if (!CanClientAccessServer(client, uid, clientComponent, component))
+            {
+                UnregisterClient(client, uid, clientComponent, component, dirtyServer: false);
+                clientsRemoved = true;
+            }
+        }
+
+        if (clientsRemoved && !TerminatingOrDeleted(uid))
+            Dirty(uid, component);
     }
 
     /// <summary>
@@ -70,14 +155,8 @@ public sealed partial class ResearchSystem
 
         if (serverComponent.Clients.Contains(client))
             return;
-        if (!IsClientServerTypeCompatible(clientComponent, serverComponent))
-            return;
-
-        // Frontier: check grids
-        if (!TryComp(client, out TransformComponent? clientXform)
-            || !TryComp(server, out TransformComponent? serverXform)
-            || clientXform.GridUid == null
-            || clientXform.GridUid != serverXform.GridUid) // server null check implicit
+        // Frontier: check grids or explicit device links
+        if (!CanClientAccessServer(client, server, clientComponent, serverComponent))
             return;
         // End Frontier
 
@@ -206,26 +285,7 @@ public sealed partial class ResearchSystem
         if (TerminatingOrDeleted(ent))
             return;
 
-        EntityUid? serverGrid = null;
-        if (TryComp(ent, out TransformComponent? xform))
-            serverGrid = xform.GridUid;
-
-        // Server yanked, unregister the clients.
-        var clientList = new List<EntityUid>(ent.Comp.Clients);
-        bool clientsRemoved = false;
-        foreach (var client in clientList)
-        {
-            if (serverGrid == null
-                || !TryComp(client, out TransformComponent? clientXform)
-                || clientXform.GridUid != serverGrid)
-            {
-                UnregisterClient(client, ent, serverComponent: ent.Comp, dirtyServer: false);
-                clientsRemoved = true;
-            }
-        }
-
-        if (clientsRemoved)
-            Dirty(ent);
+        ValidateServerClients(ent, ent.Comp);
     }
     // End Frontier
 }

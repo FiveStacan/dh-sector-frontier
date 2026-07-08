@@ -529,6 +529,16 @@
   materials:
     Steel: 1725
 
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: BaseAmmoExplosiveFullyPoweredAmmoBoxRecipe
+  categories:
+  - Explosiveammo
+  - Ammo
+  abstract: true
+  materials:
+    Steel: 1825
+
 - type: latheRecipe #Lua
   parent: BaseAmmoRecipe
   id: BaseAmmoEMPFullyPoweredAmmoBoxRecipe

@@ -8,6 +8,7 @@
     Plastic: 1000
     Plasma: 750
     Glass: 500
+    Silver: 150
 
 - type: latheRecipe
   id: WeaponMechCombatSolarisLaser
@@ -17,7 +18,8 @@
     Steel: 1650
     Plastic: 300
     Plasma: 250
-    Glass: 200
+    Glass: 400
+    Silver: 150
 
 - type: latheRecipe
   id: WeaponMechCombatFiredartLaser
@@ -27,7 +29,8 @@
     Steel: 1200
     Plastic: 200
     Plasma: 150
-    Glass: 50
+    Glass: 250
+    Silver: 100
 
 - type: latheRecipe
   id: WeaponMechCombatUltraRifle
@@ -35,7 +38,9 @@
   completetime: 10
   materials:
     Steel: 1000
+    Plasteel: 250
     Plastic: 200
+    Silver: 100
 
 - type: latheRecipe
   id: WeaponMechCombatShotgun
@@ -43,7 +48,9 @@
   completetime: 10
   materials:
     Steel: 1600
+    Plasteel: 200
     Plastic: 550
+    Silver: 100
 
 - type: latheRecipe
   id: WeaponMechCombatShotgunIncendiary
@@ -51,8 +58,10 @@
   completetime: 10
   materials:
     Steel: 1500
-    Plastic: 800
+    Plasteel: 200
+    Plastic: 700
     Plasma: 300
+    Silver: 100
 
 - type: latheRecipe
   id: WeaponMechCombatDisabler
@@ -60,8 +69,10 @@
   completetime: 10
   materials:
     Steel: 750
+    Plasteel: 100
     Glass: 250
     Plastic: 300
+    Silver: 50
 
 - type: latheRecipe
   id: WeaponMechCombatFlashbangLauncher
@@ -69,17 +80,31 @@
   completetime: 10
   materials:
     Steel: 1200
+    Plasteel: 100
     Glass: 300
     Plastic: 450
+    Silver: 100
 
 - type: latheRecipe
-  id: WeaponMechCombatMissileRack8
-  result: WeaponMechCombatMissileRack8
+  id: WeaponMechCombatMissileRack6
+  result: WeaponMechCombatMissileRack6
   completetime: 10
   materials:
     Steel: 2500
     Glass: 1500
-    Plastic: 750
+    Plastic: 700
+    Silver: 100
+
+- type: latheRecipe
+  id: WeaponMechCombatMissileRack8
+  result: WeaponMechCombatMissileRack8
+  completetime: 11
+  materials:
+    Steel: 2250
+    Plasteel: 450
+    Glass: 1500
+    Plastic: 500
+    Silver: 150
 
 - type: latheRecipe
   id: MechEquipmentKineticAccelerator
@@ -87,5 +112,16 @@
   completetime: 10
   materials:
     Steel: 1500
+    Plasteel: 100
     Glass: 750
     Silver: 150
+
+- type: latheRecipe
+  id: MechEquipmentChainSword
+  result: WeaponMechChainSword
+  completetime: 15
+  materials:
+    Steel: 1200
+    Plasteel: 750
+    Silver: 600
+    Diamond: 50

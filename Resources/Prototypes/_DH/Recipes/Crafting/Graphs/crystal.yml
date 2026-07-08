@@ -1,0 +1,18 @@
+- type: constructionGraph
+  id: ChargedBluecrystal
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: icon
+          steps:
+            - tag: Crystallite
+              name: Crystallite
+              icon:
+                sprite: _DH/Objects/Specific/crystallite.rsi
+                state: crystallite
+            - material: Bluespace
+              amount: 2
+              doAfter: 1
+    - node: icon
+      entity: ChargedBluecrystal

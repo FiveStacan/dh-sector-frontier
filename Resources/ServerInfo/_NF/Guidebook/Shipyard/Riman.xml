@@ -1,0 +1,48 @@
+<Document>
+  # RIMAN - Исследовательско-Шахтерский Шаттл
+  <Box>
+  <GuideEntityEmbed Entity="ScrapProcessor"/>
+  <GuideEntityEmbed Entity="MachineMaterialSilo"/>
+  <GuideEntityEmbed Entity="CrateArtifactContainer"/>
+  <GuideEntityEmbed Entity="ResearchAndDevelopmentServer"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="ShuttleMapRiman" Caption=""/>
+  </Box>
+  [color=#a4885c]Размер судна:[/color] Средний
+
+  [color=#a4885c]Рекомендованный экипаж:[/color] 2-4
+
+  [color=#a4885c]Тип генератора энергии:[/color] Уран
+
+  # Краткий обзор шаттла
+
+  "Старинный шаттл некогда крупной судоверфи Гефест. Обладает всем необходимым для научных исследований и утилизации обломков."
+
+  # Функции шаттла
+
+    # Научные исследования
+  <Box>
+  <GuideEntityEmbed Entity="MachineAnomalyGenerator"/>
+  </Box>
+    [textlink="Наука" link="Science"/]
+    - [textlink="Исследование аномалий" link="AnomalousResearch"/]
+    - [textlink="Ксленоархеология" link="Xenoarchaeology"/]
+
+    # Пилотирование
+
+    [textlink="Пилотирование" link="Piloting"/]
+
+    [textlink="Топология сектора" link="SectorTopology"/]
+
+    # Найм экипажа
+
+    [textlink="Найм экипажа" link="Hiring"/]
+
+    Будучи капитаном судна корпорации Nanotrasen, вы вправе по своему усмотрению нанимать и увольнять членов экипажа, а также понижать их в должности или повышать.
+
+    # Предполетный чеклист
+
+    [textlink="Предполетный чеклист" link="PreflightChecklist"/]
+
+</Document>

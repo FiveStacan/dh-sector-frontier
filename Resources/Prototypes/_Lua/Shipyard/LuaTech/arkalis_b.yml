@@ -7,7 +7,7 @@
   parent: BaseVessel
   name: Кхасарах
   description: Крупный военный корабль для экипажа от 6 человек.
-  price: 455043
+  price: 2155043 #DH Shuttle price balance # 455043
   category: Large
   marker: LuaTech
   group: LuaTech

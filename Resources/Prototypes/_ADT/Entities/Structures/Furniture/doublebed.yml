@@ -20,7 +20,7 @@
     unbuckleDistanceSquared: 1.0
   - type: DoubleStrap
     slots:
-    - "0,0.25"
+    - "0.25,0.25" #DH
     - "0,-0.05"
     slotsCameraNorth:
     - "0,0.75"

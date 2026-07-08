@@ -96,6 +96,7 @@
   id: Magazine9x19mmSubMachineGunCaustic
   result: Magazine9x19mmSubMachineGunCaustic
 
+#TopMounted
 - type: latheRecipe
   parent: BaseAmmoFMJPistolCaliberSubMachineGunMagazineRecipe
   id: Magazine9x19mmSubMachineGunTopMountedFMJ
@@ -105,6 +106,16 @@
   parent: BaseAmmoEmptyPistolCaliberSubMachineGunMagazineRecipe
   id: Magazine9x19mmSubMachineGunTopMountedEmpty
   result: Magazine9x19mmSubMachineGunTopMountedEmpty
+
+- type: latheRecipe
+  parent: BaseAmmoIncendiaryPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine9x19mmSubMachineGunTopMountedIncendiary
+  result: Magazine9x19mmSubMachineGunTopMountedIncendiary
+
+- type: latheRecipe
+  parent: BaseAmmoUraniumPistolCaliberSubMachineGunMagazineRecipe
+  id: Magazine9x19mmSubMachineGunTopMountedUranium
+  result: Magazine9x19mmSubMachineGunTopMountedUranium
 
 - type: latheRecipe
   parent: BaseAmmoHPPistolCaliberSubMachineGunMagazineRecipe

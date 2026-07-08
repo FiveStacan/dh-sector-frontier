@@ -1,0 +1,44 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+#Mercenary
+- type: storeCategory
+  id: UplinkStationMercenaryHardsuits
+  name: store-merc-category-hardsuit
+
+- type: storeCategory
+  id: UplinkStationMercenaryClothing
+  name: store-merc-category-clothing
+
+- type: storeCategory
+  id: UplinkStationMercenaryGun
+  name: store-merc-category-gun
+
+- type: storeCategory
+  id: UplinkStationMercenaryAmmo
+  name: store-merc-category-ammo
+
+- type: storeCategory
+  id: UplinkStationMercenaryShipWeapons
+  name: Корабельное вооружение
+
+- type: storeCategory
+  id: UplinkStationMercenaryShipAmmo
+  name: Корабельные боеприпасы
+
+- type: storeCategory
+  id: UplinkStationMercenaryMedical
+  name: Медикаменты
+
+- type: storeCategory
+  id: UplinkStationMercenaryFood
+  name: Провизия
+
+- type: storeCategory
+  id: UplinkStationMercenaryNocat
+  name: store-merc-category-nocat
+
+- type: storeCategory
+  id: UplinkStationMercenaryFuel
+  name: Топливо

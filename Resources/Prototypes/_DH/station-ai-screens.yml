@@ -1,0 +1,379 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: BaseAiHat
+  name: Ai Hat
+  description: Looks strange but cool
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Head/Hats/johan_cap.rsi
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai
+    shader: unshaded
+  - type: Tag
+    tags:
+    - AIWearable
+
+- type: inventoryTemplate
+  id: AiHat
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 0,1
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0, 0
+    whitelist:
+      tags:
+        - AIWearable
+
+- type: entity
+  id: AiHatDefault
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai
+  priority: -1
+
+- type: entity
+  id: AiHatRed
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-red
+
+- type: entity
+  id: AiHatU
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-u
+
+- type: entity
+  id: AiHatMono
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-mono
+
+- type: entity
+  id: AiHatStatic
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-static
+
+- type: entity
+  id: AiHatCheerful
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-cheerful
+
+- type: entity
+  id: AiHatStern
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-stern
+
+- type: entity
+  id: AiHatWierd
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-wierd
+
+- type: entity
+  id: AiHatGentoo
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-gentoo
+
+- type: entity
+  id: AiHatNanotrasen
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatDatabase
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatGoon
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatHeartline
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatPresident
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatClown
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatClown2
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatSerithi
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatAlien
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatSheltered
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatFabulous
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatWasp
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatEager
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatEagerOld
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatRoyal
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatRavensdale
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatBored
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatMagma
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatTriumvirate
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatAhasuerus
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatGodfrey
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatSmiley
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatAngryface
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatSoviet
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatMatrix
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+
+- type: entity
+  id: AiHatBliss
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/AiScreen/bliss.rsi
+
+- type: entity
+  id: AiHatGlitchman
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-glitchman
+
+- type: entity
+  id: AiHatLonestar
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-lonestar
+
+- type: entity
+  id: AiHatAngel
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-angel
+
+- type: entity
+  id: AiHatHourglass
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-hourglass
+
+- type: entity
+  id: AiHatHelios
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-helios
+
+- type: entity
+  id: AiHatRainbow
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-rainbow
+
+- type: entity
+  id: AiHatThinking
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-thinking
+
+- type: entity
+  id: AiHatJackfrost
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-jackfrost
+
+- type: entity
+  id: AiHatMoth
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-mothman
+
+- type: entity
+  id: AiHat4Chan
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/AiScreen/4chan.rsi
+
+- type: entity
+  id: AiHatTerminal
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-terminal
+
+- type: entity
+  id: AiHatHoney
+  parent: BaseAiHat
+  components:
+  - type: Clothing
+    sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
+    state: ai-honeycomb

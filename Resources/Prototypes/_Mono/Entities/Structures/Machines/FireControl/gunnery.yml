@@ -226,6 +226,8 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: ShuttleConsoleLock #DH
+    locked: false
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver

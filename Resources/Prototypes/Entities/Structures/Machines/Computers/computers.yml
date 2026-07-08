@@ -452,6 +452,8 @@
   name: station records computer
   description: This can be used to check station records.
   components:
+  - type: ShuttleConsoleLock #DH
+    locked: false
   - type: GeneralStationRecordConsole
     captainIdSlot:
       name: ship-crew-console-captain-id
@@ -542,6 +544,8 @@
   name: R&D computer
   description: A computer used to interface with R&D tools.
   components:
+  - type: ShuttleConsoleLock #DH
+    locked: false
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
@@ -556,6 +560,11 @@
       state: generic_panel_open
   - type: ResearchClient
     allowedFactions: [Nanotrasen] # Lua: one family<multi-family research clients
+  - type: DeviceLinkSink
+    ports:
+    - ResearchConsoleReceiver
+  - type: DeviceNetwork
+    deviceNetId: Wireless
   - type: ResearchConsole
   - type: ActiveRadio
     channels:
@@ -605,6 +614,11 @@
       state: generic_panel_open
   - type: ResearchClient
     allowedFactions: [Syndicate]
+  - type: DeviceLinkSink
+    ports:
+    - ResearchConsoleReceiver
+  - type: DeviceNetwork
+    deviceNetId: Wireless
   - type: ResearchConsole
   - type: ActiveRadio
     channels:
@@ -689,6 +703,48 @@
   description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
   components:
   - type: IdCardConsole
+    accessLevels: #DH
+    - Captain
+    - Command
+    - Pilot
+    # Engineering
+    - ChiefEngineer
+    - Atmospherics
+    - Engineering
+    - External
+    - Maintenance
+    # Frontier
+    - Frontier
+    - HeadOfPersonnel
+    - StationTrafficController
+    - Mail
+    # Service
+    - Service
+    - Theatre
+    - Chapel
+    - Hydroponics
+    - Janitor
+    - Kitchen
+    - Lawyer
+    # Medical
+    - ChiefMedicalOfficer
+    - Medical
+    - Chemistry
+    - Cryogenics
+    # Mercenary
+    - Mercenary
+    # Cargo
+    - Cargo
+    - Salvage
+    # Security
+    - Security
+    - HeadOfSecurity
+    - Armory
+    - Bailiff
+    - Sergeant
+    - Detective
+    - Brigmedic
+    - Brig
     privilegedIdSlot:
       name: id-card-console-privileged-id
       ejectSound: /Audio/Machines/id_swipe.ogg
@@ -747,6 +803,66 @@
       board: !type:Container
       IdCardConsole-privilegedId: !type:ContainerSlot
       IdCardConsole-targetId: !type:ContainerSlot
+
+- type: entity
+  parent: ComputerId
+  id: ComputerIdNFSD
+  name: NFSD ID card computer
+  description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
+  components:
+  - type: IdCardConsole
+    accessLevels:
+    - Captain
+    - Command
+    # Security
+    - HeadOfSecurity
+    - Security
+    - Armory
+    - Bailiff
+    - Sergeant
+    - Detective
+    - Brigmedic
+    - Brig
+    # Engineering
+    - Atmospherics
+    - Engineering
+    - External
+    - Maintenance
+    # Service
+    - Service
+    - Hydroponics
+    - Janitor
+    - Kitchen
+    - Lawyer
+    # Medical
+    - Medical
+    - Chemistry
+    # Mercenary
+    - Mercenary
+
+- type: entity
+  parent: ComputerIdNFSD
+  id: ComputerIdPrison
+  name: Prison ID card computer
+  description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
+  components:
+  - type: IdCardConsole
+    accessLevels:
+    - Security
+    - Brig
+    - GenpopEnter
+    - GenpopLeave
+    # Service
+    - Service
+    - Hydroponics
+    - Janitor
+    - Kitchen
+    # Engineering
+    - Engineering
+    - External
+    - Maintenance
+    # Medical
+    - Medical
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1382,6 +1498,8 @@
   name: expedition console # Frontier: salvage expeditions computer<expedition console
   description: Used to go on expeditions, if you're tough enough. # Frontier: "accept salvage missions"<"go on expeditions"
   components:
+    - type: ShuttleConsoleLock #DH
+      locked: false
     - type: Sprite
       layers:
         - map: ["computerLayerBody"]

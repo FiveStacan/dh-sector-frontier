@@ -3098,7 +3098,7 @@ entities:
     - type: Transform
       pos: -5.5,-15.5
       parent: 1
-- proto: ComputerTabletopShuttleWithNordfallDisk
+- proto: ComputerTabletopShuttleWithTypanDisk
   entities:
   - uid: 299
     components:

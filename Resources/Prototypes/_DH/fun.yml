@@ -1,0 +1,11 @@
+- type: entity
+  parent: MobHuman
+  id: MobDebug4x3
+  name: 4x3 мужичек
+  description: Видит мир по особому
+  suffix: FUN, DEBUG
+  components:
+    - type: ContentEye
+      maxZoom: 0.9, 1.25
+      targetZoom: 0.9, 1.25
+

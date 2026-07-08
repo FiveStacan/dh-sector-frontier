@@ -179,6 +179,9 @@
     - id: ClothingOuterHardsuitCBURN
       prob: 0.001
       orGroup: Clothes
+    - id: ClothingOuterHardsuitBasic
+      prob: 0.001
+      orGroup: Clothes
     - id: ClothingOuterHardsuitSanta
       prob: 0.001
       orGroup: Clothes

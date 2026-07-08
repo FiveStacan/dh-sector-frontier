@@ -9,7 +9,7 @@
   name: Shukra-2
   description: Штурмовая версия корабля поддержки "Шукра". Этот шаттл схож по форме со своим предком, однако имеет более крепкую броню.
   limit: 2
-  price: 175000
+  price: 392400 #DH Shuttle price balance #175000
   category: Medium
   group: Typan
   whitelist:
@@ -17,9 +17,9 @@
   - Luna
   class:
   - Syndicate
+  - Pursuit # Lua
   - Medical # Lua
   - Chemistry # Lua
-  - Pursuit # Lua
   engine:
   - AME # Lua
   shuttlePath: /Maps/_Lua/Shuttles/Typan/shukra-f.yml

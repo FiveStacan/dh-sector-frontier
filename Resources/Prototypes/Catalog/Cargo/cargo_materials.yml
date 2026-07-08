@@ -22,12 +22,12 @@
 
 - type: cargoProduct
   id: MaterialPlastic
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Materials/Sheets/other.rsi
     state: plastic_3
   product: CrateMaterialPlastic
-  cost: 5000 # Frontier: 2000<5000
+  cost: 27000 # Frontier: 2000<5000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -38,7 +38,7 @@
     sprite: Objects/Materials/Sheets/metal.rsi
     state: brass_3
   product: CrateMaterialBrass
-  cost: 5000 # Frontier: 3000<5000
+  cost: 5200 # Frontier: 3000<5000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -99,12 +99,12 @@
 
 - type: cargoProduct
   id: CardboardMaterial
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Objects/Materials/materials.rsi
     state: cardboard_3
   product: CrateMaterialCardboard
-  cost: 330
+  cost: 18000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -114,7 +114,7 @@
     sprite: Objects/Materials/Sheets/other.rsi
     state: paper_3
   product: CrateMaterialPaper
-  cost: 185
+  cost: 580
   category: cargoproduct-category-name-materials
   group: market
 
@@ -131,34 +131,45 @@
 
 - type: cargoProduct
   id: MaterialSilo
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Machines/silo.rsi
     state: silo
   product: CrateMaterialSilo
-  cost: 5000
+  cost: 14900
   category: cargoproduct-category-name-materials
   group: market
 
 - type: cargoProduct
   id: MaterialFuelTank
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Storage/tanks.rsi
     state: fueltank
   product: WeldingFuelTankFull
-  cost: 1500
+  cost: 4500
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: MaterialFuelTankHighCapacity
+  #abstract: true # Frontier
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: highfueltank-2
+  product: WeldingFuelTankHighCapacity
+  cost: 15750
   category: cargoproduct-category-name-materials
   group: market
 
 - type: cargoProduct
   id: MaterialWaterTank
-  abstract: true # Frontier
+  #abstract: true # Frontier
   icon:
     sprite: Structures/Storage/tanks.rsi
     state: watertank
   product: WaterTankFull
-  cost: 1000
+  cost: 3000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -168,6 +179,6 @@
     sprite: Objects/Weapons/Grenades/airboom.rsi
     state: icon
   product: CrateAirGrenade
-  cost: 2500
+  cost: 2900
   category: cargoproduct-category-name-atmospherics
   group: market

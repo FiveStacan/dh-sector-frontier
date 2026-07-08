@@ -9,7 +9,7 @@
   name: Dagger
   description: Проверенный временем шаттл поддержки. Лучший для ведения боя на больших дистанциях.
   limit: 4
-  price: 150000
+  price: 336000 #DH Shuttle price balance 150000
   category: Medium
   group: Security
   whitelist:

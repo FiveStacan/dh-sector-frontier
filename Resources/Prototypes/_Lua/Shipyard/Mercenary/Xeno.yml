@@ -1,0 +1,34 @@
+- type: vessel
+  parent: BaseVessel
+  id: MercXeno
+  name: MC Xeno
+  description: "Шаттл с тяжелыми артиллерийскими пушками и радаром. Для большой охоты."
+  price: 429600 #255000 #339550 #DH Shuttle price balance
+  category: Large
+  group: Mercenary
+  access: Mercenary
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Mercenary
+  engine:
+  - AME
+  shuttlePath: /Maps/_Lua/Shuttles/Mercenary/Xeno.yml
+  addComponents:
+    - type: IFF
+      color: "#182faf"
+- type: gameMap
+  id: MercXeno
+  mapName: 'NMXeno'
+  mapPath: /Maps/_Lua/Shuttles/Mercenary/Xeno.yml
+  minPlayers: 0
+  stations:
+    MercXeno:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'MC Xeno {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

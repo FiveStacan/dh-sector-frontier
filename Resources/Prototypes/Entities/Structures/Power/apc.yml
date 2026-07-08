@@ -16,7 +16,7 @@
       path: /Audio/Ambience/Objects/hdd_buzz.ogg
   - type: PointLight
     radius: 1.5
-    energy: 3.0
+    energy: 2
     color: "#3db83b"
     castShadows: false
     netsync: false
@@ -31,32 +31,40 @@
     sprite: Structures/Power/apc.rsi
     layers:
     - state: base
+      offset: "0.0,-0.2" #DH
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
       visible: false
+      offset: "0.0,-0.2"
     - state: display-charging
       shader: unshaded
       map: ["enum.ApcVisualLayers.ChargeState"]
+      offset: "0.0,-0.2"
     - state: lock0-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.InterfaceLock"]
       visible: false
+      offset: "0.0,-0.2"
     - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.PanelLock"]
       visible: false
+      offset: "0.0,-0.2"
     - state: lock1-locked #when these are implemented get actual sprites.
       shader: unshaded
       map: ["enum.ApcVisualLayers.Equipment"]
       visible: false
+      offset: "0.0,-0.2"
     - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.Lighting"]
       visible: false
+      offset: "0.0,-0.2"
     - state: lock1-locked
       shader: unshaded
       map: ["enum.ApcVisualLayers.Environment"]
       visible: false
+      offset: "0.0,-0.2"
   - type: Appearance
   - type: ApcVisuals
   - type: Battery
@@ -168,9 +176,7 @@
   - type: Sprite
     sprite: Structures/Power/apc.rsi
     state: frame
-  - type: Tag
-    tags:
-    - Unstackable
+    offset: "0.0,-0.2" #DH
   - type: Construction
     graph: APC
     node: apcFrame

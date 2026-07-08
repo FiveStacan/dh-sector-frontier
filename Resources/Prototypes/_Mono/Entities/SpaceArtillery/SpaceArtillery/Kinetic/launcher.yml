@@ -1,4 +1,20 @@
+# SPDX-FileCopyrightText: 2025 Ark
+# SPDX-FileCopyrightText: 2025 Avalon
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BlueHNT
+# SPDX-FileCopyrightText: 2025 Disguised Bear
+# SPDX-FileCopyrightText: 2025 Ilya246
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 RikuTheKiller
+# SPDX-FileCopyrightText: 2025 core-mene
+# SPDX-FileCopyrightText: 2025 grandalff
+# SPDX-FileCopyrightText: 2025 kyres1
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # L85 20mm
+
 - type: entity
   id: WeaponTurretL85Autocannon
   name: L85 20mm autocannon
@@ -6,14 +22,14 @@
   description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
-    price: 250
+    price: 2500
   - type: Sprite
     sprite: _Mono/Objects/ShuttleWeapons/50cal.rsi
     layers:
     - state: space_artillery
   - type: Battery
-    maxCharge: 20000
-    startingCharge: 20000
+    maxCharge: 800
+    startingCharge: 800
   - type: ExaminableBattery
   - type: Appearance
   - type: FireControlRotate
@@ -22,26 +38,29 @@
   - type: WirelessNetworkConnection
     range: 700
   - type: Gun
-    fireRate: 12
-    projectileSpeed: 90
-    shootThermalSignature: 10000 # relatively low for a shipgun, ~693m signature if firing continuously
+    fireRate: 11
+    projectileSpeed: 85
+    shootThermalSignature: 9000 # relatively low for a shipgun, ~693m signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/slammer.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 550
+    autoRechargeRate: 25
+    autoRechargePause: true
+    autoRechargePauseTime: 3
   - type: SpaceArtillery
-    powerChargeRate: 100
-    powerUsePassive: 100
+    powerChargeRate: 25
+    powerUsePassive: 450
+    powerUseActive: 20
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
   - type: Airtight
   - type: ProjectileBatteryAmmoProvider
     proto: 20mmBulletArmorPiercing
-    fireCost: 15
+    fireCost: 20 #DH
   - type: Destructible
     thresholds:
     - trigger:
@@ -68,8 +87,9 @@
 - type: entity
   id: WeaponTurretRAC30
   name: RAC-30 Draupnir Autocannon
-  parent: BallisticArtilleryUnanchorable #Lua BallisticArtillery<BallisticArtilleryUnanchorable
+  parent: BallisticArtillery
   description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
+  suffix: Need Fix
   components:
   - type: StaticPrice
     price: 1000
@@ -78,8 +98,8 @@
     layers:
     - state: space_artillery
   - type: Battery
-    maxCharge: 45000
-    startingCharge: 45000
+    maxCharge: 7000
+    startingCharge: 7000
   - type: ExaminableBattery
   - type: Appearance
   - type: FireControlRotate
@@ -87,8 +107,11 @@
   - type: GunSignalControl
   - type: WirelessNetworkConnection
     range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
   - type: Gun
-    fireRate: 50
+    fireRate: 40
     projectileSpeed: 120
     shootThermalSignature: 100000 # ~4.5km if firing continuously
     soundGunshot:
@@ -97,22 +120,24 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 600
+    autoRechargeRate: 25
+    #autoRechargePause: true
+    #autoRechargePauseTime: 5
   - type: SpaceArtillery
-    powerChargeRate: 100
-    powerUsePassive: 100
+    powerChargeRate: 500
+    powerUsePassive: 1250
   - type: Actions
   - type: CombatMode
     isInCombatMode: true
   - type: Airtight
   - type: ProjectileBatteryAmmoProvider
     proto: 30mmBullet
-    fireCost: 7.5
+    fireCost: 10
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 10000
+        damage: 4000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -134,7 +159,7 @@
 - type: entity
   id: WeaponTurretDravon
   name: ADBP-7 DRAVON 57mm Autocannon
-  parent: BallisticArtilleryUnanchorable #Lua BallisticArtillery<BallisticArtilleryUnanchorable
+  parent: BallisticArtillery
   description: A single-barrel autocannon made by Aetherion Dynamics. Medium artillery piece with high fire rate but relatively low impact, firing HEAT shells to damage ship armor and systems. Can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -147,14 +172,14 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 30000
-    startingCharge: 30000
+    maxCharge: 2000
+    startingCharge: 2000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 1.5
-    projectileSpeed: 180
+    fireRate: 1.4
+    projectileSpeed: 175
     shootThermalSignature: 2000000 # ~3.5km signature if firing continuously
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/mortar.ogg
@@ -162,7 +187,9 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 220
+    autoRechargeRate: 70
+    autoRechargePause: true
+    autoRechargePauseTime: 5
   - type: SpaceArtillery
     powerChargeRate: 220
     powerUsePassive: 750
@@ -170,12 +197,12 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDravonProjectile
-    fireCost: 250
+    fireCost: 200 #DH
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 9000
+        damage: 3000 #DH 9000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -208,16 +235,16 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 1600
+    startingCharge: 1600
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 2.5
-    projectileSpeed: 120
-    burstCooldown: 0.5
-    burstFireRate: 10
+    fireRate: 2.3
+    projectileSpeed: 110
+    burstCooldown: 0.55
+    burstFireRate: 9
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
@@ -228,15 +255,17 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 125
+    autoRechargePause: true
+    autoRechargeRate: 14
+    autoRechargePauseTime: 2
   - type: SpaceArtillery
-    powerChargeRate: 125
-    powerUsePassive: 600
+    powerChargeRate: 15
+    powerUsePassive: 700
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: 90mmBulletArmorPiercing
-    fireCost: 50
+    fireCost: 100 #DH
   - type: Destructible
     thresholds:
     - trigger:
@@ -342,8 +371,8 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 12000
-    startingCharge: 12000
+    maxCharge: 16000
+    startingCharge: 16000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -359,9 +388,9 @@
         layer:
         - MachineLayer
   - type: Gun
-    projectileSpeed: 155
+    projectileSpeed: 150 #DH 155<150
     fireRate: 0.2
-    burstCooldown: 10
+    burstCooldown: 20 #DH 10<12
     burstFireRate: 2
     shotsPerBurst: 2
     selectedMode: Burst
@@ -373,15 +402,17 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12000
+    autoRechargePause: true
+    autoRechargeRate: 500 #970 12000
+    autoRechargePauseTime: 6
   - type: SpaceArtillery
-    powerChargeRate: 12000
-    powerUsePassive: 1500
+    powerChargeRate: 500
+    powerUsePassive: 1550
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipCyrexaProjectile
-    fireCost: 6000
+    fireCost: 8000
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2
@@ -389,7 +420,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000
+        damage: 6200 #20000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -499,11 +530,11 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 12000
-    startingCharge: 12000
+    maxCharge: 14000
+    startingCharge: 14000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
-    range: 500
+    range: 600
   - type: Fixtures
     fixtures:
       fix1:
@@ -530,15 +561,17 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12000
+    autoRechargePause: true
+    autoRechargeRate: 900
+    autoRechargePauseTime: 3
   - type: SpaceArtillery
     powerChargeRate: 12000
-    powerUsePassive: 1500
+    powerUsePassive: 1700
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipHadesProjectile
-    fireCost: 6000
+    fireCost: 6200
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2.5
@@ -576,8 +609,8 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 20000
-    startingCharge: 20000
+    maxCharge: 1000
+    startingCharge: 1000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -591,7 +624,9 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 150
+    autoRechargePause: true
+    autoRechargeRate: 45
+    autoRechargePauseTime: 4
   - type: SpaceArtillery
     powerChargeRate: 150
     powerUsePassive: 600
@@ -615,7 +650,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 25000
+        damage: 9000 #DH 25000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -649,8 +684,8 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 20800 #DH 40000
+    startingCharge: 20800 #DH 40000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
@@ -666,8 +701,8 @@
         layer:
         - MachineLayer
   - type: Gun
-    projectileSpeed: 155
-    fireRate: 0.1
+    projectileSpeed: 150 #155
+    fireRate: 0.075
     shootThermalSignature: 80000000 # ~9km after firing
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/cannon.ogg
@@ -675,21 +710,21 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 12000
+    autoRechargeRate: 85
     autoRechargePause: true
   - type: SpaceArtillery
-    powerChargeRate: 12000
-    powerUsePassive: 2000
-    powerUseActive: 0
+    powerChargeRate: 150
+    powerUsePassive: 2200
+    powerUseActive: 400
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipBoforsProjectile
-    fireCost: 8000
+    fireCost: 10000
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 25000
+        damage: 8000 #DH #25000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

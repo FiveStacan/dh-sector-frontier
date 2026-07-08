@@ -1,0 +1,9 @@
+- type: gamePreset
+  id: DHTest
+  alias:
+    - nftest
+    - test
+  name: For Mapping
+  showInVote: false
+  description: без любых событий
+  supportedMaps: Dev

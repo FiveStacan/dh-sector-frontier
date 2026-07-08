@@ -45,6 +45,7 @@
   - AirTank
 # Mercenary techfab
 ## Clothing / Armor
+  - NFRiotShield
   - ClothingNeckIFFNeutral
   - ClothingNeckIFFGreen
   - ClothingNeckIFFRed
@@ -157,10 +158,14 @@
   recipes:
 # Shared lathe recipes
 ## Advanced tools
+  - Welder #DH
+  - WelderIndustrial #DH
+  - WelderIndustrialAdvanced #DH
   - WelderExperimental
   - JawsOfLife
   - PowerDrill
   - JetpackVoid
+  - PowerCellMedium
   - PowerCellHigh
   # - PowerCellHyperNF
   - PowerCellMicroreactor
@@ -223,3 +228,29 @@
   - NFAmmunitionBoxPistol45Overpressure
   - NFAmmunitionBoxRifle20Overpressure
   - NFAmmunitionBoxRifle30Overpressure
+  # Magazines
+ # - NFMagazineClipRifle20Empty
+ # - MagazineLightRifleLowCapacityEmpty
+ # - NFMagazinePistol35Empty
+ # - NFMagazineRifle20Empty
+ # - NFMagazineRifle30Empty
+ # - NFMagazinePistol45Empty
+ # - NFMagazineHighCapacityPistol35Empty
+ # - NFMagazineSubMachineGun35Empty
+ # - NFMagazineSubMachineGunTopMounted35Empty
+ # - NFMagazineDrumRifle20Empty
+ # - MagazineAsmgtUniversalEmpty
+  #DH
+  - ClothingHeadHelmetJustice
+  - ClothingShoesBootsMagArmy
+  - ClothingOuterSuitBomb
+
+  - ClothingOuterArmorUSSPjuggernaut
+  - ClothingOuterArmorSWAT
+  - ClothingHeadHelmetSwat
+  - ClothingOuterArmorHeavy
+  - ClothingOuterArmorHeavyGreen
+  - ClothingOuterArmorHeavyRed
+  - ADTClothingOuterArmorCrusader
+
+ # - NFMagazineExtendedRifle30Empty

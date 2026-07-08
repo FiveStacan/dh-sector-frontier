@@ -60,7 +60,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Аванпост СРБС
+      name: Аванпост ДСБФ
     - type: Transform
       pos: -0.8515625,-0.88671875
       parent: invalid
@@ -6693,7 +6693,7 @@ entities:
       pos: -50.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 1
+      name: ДСБФ 1
   - uid: 259
     components:
     - type: Transform
@@ -6707,7 +6707,7 @@ entities:
       pos: -69.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 2
+      name: ДСБФ 2
   - uid: 261
     components:
     - type: Transform
@@ -6733,7 +6733,7 @@ entities:
       pos: -74.5,5.5
       parent: 1
     - type: Docking
-      name: СРБС 3
+      name: ДСБФ 3
   - uid: 265
     components:
     - type: Transform
@@ -6747,7 +6747,7 @@ entities:
       pos: -74.5,-11.5
       parent: 1
     - type: Docking
-      name: СРБС 4
+      name: ДСБФ 4
   - uid: 267
     components:
     - type: Transform
@@ -6765,7 +6765,7 @@ entities:
       pos: 26.5,-16.5
       parent: 1
     - type: Docking
-      name: СРБС 5
+      name: ДСБФ 5
   - uid: 270
     components:
     - type: Transform
@@ -6782,7 +6782,7 @@ entities:
       pos: 45.5,-16.5
       parent: 1
     - type: Docking
-      name: СРБС 6
+      name: ДСБФ 6
   - uid: 273
     components:
     - type: Transform
@@ -6796,7 +6796,7 @@ entities:
       pos: 50.5,5.5
       parent: 1
     - type: Docking
-      name: СРБС 8
+      name: ДСБФ 8
   - uid: 275
     components:
     - type: Transform
@@ -6810,7 +6810,7 @@ entities:
       pos: 50.5,-11.5
       parent: 1
     - type: Docking
-      name: СРБС 7
+      name: ДСБФ 7
   - uid: 277
     components:
     - type: Transform
@@ -6842,7 +6842,7 @@ entities:
       pos: 45.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 9
+      name: ДСБФ 9
   - uid: 282
     components:
     - type: Transform
@@ -6856,7 +6856,7 @@ entities:
       pos: 26.5,10.5
       parent: 1
     - type: Docking
-      name: СРБС 10
+      name: ДСБФ 10
   - uid: 284
     components:
     - type: Transform
@@ -42480,22 +42480,22 @@ entities:
       pos: -24.5,7.5
       parent: 1
     - type: FaxMachine
-      name: Офис Полковника
+      name: Офис Шерифа
   - uid: 7002
     components:
     - type: Transform
       pos: -13.5,6.5
       parent: 1
     - type: FaxMachine
-      name: Аванпост СРБС - кабинет Смотрителя
-      destinationAddress: Аванпост СРБС - кабинет Смотрителя
+      name: Аванпост ДСБФ - кабинет Смотрителя
+      destinationAddress: Аванпост ДСБФ - кабинет Смотрителя
   - uid: 7003
     components:
     - type: Transform
       pos: -11.5,-49.5
       parent: 1
     - type: FaxMachine
-      name: Общий факс СРБС
+      name: Общий факс ДСБФ
 - proto: filingCabinet
   entities:
   - uid: 7004
@@ -58750,7 +58750,7 @@ entities:
   - uid: 9294
     components:
     - type: MetaData
-      name: Аванпост СРБС
+      name: Аванпост ДСБФ
     - type: Transform
       pos: -17.5,4.5
       parent: 1

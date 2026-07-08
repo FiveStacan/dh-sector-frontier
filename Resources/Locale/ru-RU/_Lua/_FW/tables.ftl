@@ -16,7 +16,7 @@ ent-CoffeeTableReinforcedGlass = укреплённый стеклянный к�
 ent-CoffeeTablePlasma = плазменный кофейный столик
     .desc = Вы ощущаете злую ауру от этого столика.
 
-ent-CoffeeTableReinforcedPlasma = укреплённый плазменный столик
+ent-CoffeeTableReinforcedPlasma = укреплённый плазменный кофейный столик
     .desc = Кофейный столик для неожиданных гостей...                                 Синдикат находится у вас прямо за спиной. Ваши действия?
 
 ent-CoffeeTableUranium = урановый кофейный столик

@@ -3,35 +3,35 @@
 # # See AGPLv3.txt for details.
 # # Author discord - germanreutt
 
-# - type: vessel
-#   parent: BaseVessel
-#   id: GFAsket
-#   name: Asket
-#   description: Большой корабль для исследования глубокого космоса и экспедиций.
-#   price: 150000
-#   category: Large
-#   group: Expedition
-#   shuttlePath: /Maps/_Lua/Shuttles/Expedition/asket.yml
-#   whitelist:
-#   - Luna
-#   - Frontier
-#   class:
-#   - Expedition
-#   - Civilian
-#   engine:
-#   - AME
+- type: vessel
+  parent: BaseVessel
+  id: GFAsket
+  name: Asket
+  description: Большой корабль для исследования глубокого космоса и экспедиций.
+  price: 565000 #DH Shuttle price balance #150000
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_Lua/Shuttles/Expedition/asket.yml
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Expedition
+  - Civilian
+  engine:
+  - AME
 
-# - type: gameMap
-#   id: GFAsket
-#   mapName: 'Asket'
-#   mapPath: /Maps/_Lua/Shuttles/Expedition/asket.yml
-#   minPlayers: 0
-#   stations:
-#     GFAsket:
-#       stationProto: StandardFrontierExpeditionVessel
-#       components:
-#         - type: StationNameSetup
-#           mapNameTemplate: 'Asket {1}'
-#           nameGenerator:
-#             !type:NanotrasenNameGenerator
-#             prefixCreator: '14'
+- type: gameMap
+  id: GFAsket
+  mapName: 'Asket'
+  mapPath: /Maps/_Lua/Shuttles/Expedition/asket.yml
+  minPlayers: 0
+  stations:
+    GFAsket:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Asket {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

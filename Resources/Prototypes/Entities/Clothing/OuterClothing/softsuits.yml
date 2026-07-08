@@ -27,9 +27,9 @@
   description: "Has a tag on the back that reads: 'Totally not property of an enemy corporation, honest!'"
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi
+    sprite: _DH/Clothing/OuterClothing/Suits/eva_syndicate.rsi #DH
   - type: Clothing
-    sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi
+    sprite: _DH/Clothing/OuterClothing/Suits/eva_syndicate.rsi #DH
   - type: Tag
     tags:
     - SuitEVA
@@ -87,6 +87,9 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.75
 
 #NTSRA Voidsuit / Ancient Voidsuit
 - type: entity
@@ -112,34 +115,34 @@
   description: A void suit made for paramedics.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/paramed.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
     layers:
     - state: icon
   - type: Appearance
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/paramed.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ClothingSpeedModifier
-    walkModifier: 1 #Lua 0.9<1
-    sprintModifier: 1 #Lua 0.95<1
+    walkModifier: 0.9
+    sprintModifier: 0.96 #Lua
   - type: HeldSpeedModifier
   - type: TemperatureProtection
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1
   - type: Armor
     modifiers:
-      coefficients: # Damage values from Spatio hardsuit 30/30/20//30/30//20/20//30/0
+      coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.8 #Lua 0.9<0.8
-        Heat: 0.7 #Lua 0.5<0.7
-        Radiation: 0.7
-        Shock: 0.8 #Lua
-        Caustic: 0.8 #Lua 0.5<0.8
+        Piercing: 0.86
+        Heat: 0.6
+        Radiation: 0.75
+        Shock: 0.85 #Lua
+        Caustic: 0.55
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.7
+    damageCoefficient: 0.72
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed

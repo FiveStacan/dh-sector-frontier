@@ -166,6 +166,32 @@
   #  node: finish
 
 - type: entity
+  parent: WeaponEnergyTurretStationControlPanelBase #DH
+  id: WeaponEnergyTurretStationControlPanel
+  name: turret control panel
+  description: A wall-mounted interface that allows a local artifical intelligence to adjust the operational parameters of linked sentry turrets.
+
+- type: entity #DH
+  parent: WeaponEnergyTurretStationControlPanelBase
+  id: WeaponEnergyTurretStationFrontierControlPanel
+  name: Frontier sentry turret control panel
+  description: A wall-mounted interface that allows a local artifical intelligence to adjust the operational parameters of linked sentry turrets.
+  components:
+  - type: AccessReader
+    access: [["HeadOfSecurity"], ["HeadOfPersonnel"]]
+  # - type: DeviceNetwork
+  #   receiveFrequencyId: TurretFrontier
+  #   transmitFrequencyId: TurretControlFrontier
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - Command
+    #- BasicSilicon
+    #- Borg
+  - type: DeviceNetwork
+    receiveFrequencyId: TurretFrontier
+    transmitFrequencyId: TurretControlFrontier
+
+- type: entity
   parent: WeaponEnergyTurretStationControlPanelBase
   id: WeaponEnergyTurretAIControlPanel
   suffix: AI, Silicon

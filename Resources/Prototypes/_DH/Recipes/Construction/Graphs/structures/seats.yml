@@ -1,0 +1,44 @@
+- type: constructionGraph
+  id: DHSeat
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: ChairOfficeGrey
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+        - to: ComfyBrownChair
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+
+
+    - node: ChairOfficeGrey
+      entity: ChairOfficeGrey
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
+    - node: ComfyBrownChair
+      entity: ComfyBrownChair
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 1

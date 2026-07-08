@@ -3,18 +3,18 @@
   result: MonkeyCube
   categories:
   - Food
-  completetime: 3
+  completetime: 8
   materials:
-    Biomass: 70
+    Biomass: 90
 
 - type: latheRecipe
   id: BioGenKoboldCube
   result: KoboldCube
   categories:
   - Food
-  completetime: 3
+  completetime: 8
   materials:
-    Biomass: 70
+    Biomass: 90
 
 - type: latheRecipe
   id: BioGenMaterialCloth1
@@ -24,9 +24,9 @@
   icon:
     sprite: Objects/Materials/materials.rsi
     state: cloth
-  completetime: 1
+  completetime: 2
   materials:
-    Biomass: 10
+    Biomass: 14
 
 - type: latheRecipe
   id: BioGenMaterialCardboard1
@@ -36,9 +36,9 @@
   icon:
     sprite: Objects/Materials/materials.rsi
     state: cardboard
-  completetime: 1
+  completetime: 2
   materials:
-    Biomass: 5
+    Biomass: 8
 
 - type: latheRecipe
   id: BioGenPaper
@@ -47,16 +47,16 @@
   - Materials
   completetime: 1
   materials:
-    Biomass: 2
+    Biomass: 4
 
 - type: latheRecipe
   id: BioGenPaperRolling1
   result: PaperRolling1
   categories:
   - Materials
-  completetime: 1
+  completetime: 2
   materials:
-    Biomass: 1
+    Biomass: 2
 
 - type: latheRecipe
   id: BioGenCandle
@@ -65,7 +65,7 @@
   - Materials
   completetime: 3
   materials:
-    Biomass: 3
+    Biomass: 4
 
 - type: latheRecipe
   id: BioGenPlantBGone
@@ -76,9 +76,9 @@
   icon:
     sprite: Objects/Tools/Hydroponics/sprays.rsi
     state: plantbgone
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 12
+    Biomass: 14
 
 - type: latheRecipe
   id: BioGenWeedKiller
@@ -89,9 +89,9 @@
   icon:
     sprite: Objects/Tools/Hydroponics/sprays.rsi
     state: weedspray
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 8
+    Biomass: 10
 
 - type: latheRecipe
   id: BioGenPestKiller
@@ -102,9 +102,9 @@
   icon:
     sprite: Objects/Tools/Hydroponics/sprays.rsi
     state: weedspray
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 12
+    Biomass: 16
 
 - type: latheRecipe
   id: BioGenLeft4Zed
@@ -115,9 +115,9 @@
   icon:
     sprite: Objects/Specific/Chemistry/bottle.rsi
     state: bottle-1
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 12
+    Biomass: 18
 
 - type: latheRecipe
   id: BioGenEZNutrient
@@ -128,9 +128,9 @@
   icon:
     sprite: Objects/Specific/Chemistry/bottle.rsi
     state: bottle-1
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 15
+    Biomass: 22
 
 - type: latheRecipe
   id: BioGenRobustHarvest
@@ -141,9 +141,9 @@
   icon:
     sprite: Objects/Specific/Chemistry/bottle.rsi
     state: bottle-1
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 15
+    Biomass: 24
 
 - type: latheRecipe
   id: BioGenMilk
@@ -154,9 +154,9 @@
   icon:
     sprite: Objects/Consumable/Drinks/milk.rsi
     state: icon
-  completetime: 1
+  completetime: 3
   materials:
-    Biomass: 12
+    Biomass: 16
 
 - type: latheRecipe
   id: BioGenMilkSoy
@@ -167,9 +167,9 @@
   icon:
     sprite: Objects/Consumable/Drinks/soymilk.rsi
     state: icon
-  completetime: 1
+  completetime: 3
   materials:
-    Biomass: 12
+    Biomass: 15
 
 - type: latheRecipe
   id: BioGenEthanol
@@ -180,9 +180,9 @@
   icon:
     sprite: Objects/Consumable/Drinks/glass_clear.rsi
     state: icon
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 18
+    Biomass: 26
 
 - type: latheRecipe
   id: BioGenCream
@@ -193,9 +193,9 @@
   icon:
     sprite: Objects/Consumable/Drinks/cream.rsi
     state: icon
-  completetime: 1
+  completetime: 2
   materials:
-    Biomass: 18
+    Biomass: 26
 
 - type: latheRecipe
   id: BioGenBlackpepper
@@ -206,9 +206,9 @@
   icon:
     sprite: Objects/Consumable/Food/condiments.rsi
     state: packet-pepper
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 18
+    Biomass: 26
 
 - type: latheRecipe
   id: BioGenEnzyme
@@ -219,9 +219,9 @@
   icon:
     sprite: Objects/Consumable/Food/condiments.rsi
     state: bottle-empty
-  completetime: 1
+  completetime: 4
   materials:
-    Biomass: 18
+    Biomass: 26
 
 - type: latheRecipe
   id: BioGenFlour
@@ -232,9 +232,9 @@
   icon:
     sprite: Objects/Consumable/Food/ingredients.rsi
     state: flour-big
-  completetime: 1
+  completetime: 3
   materials:
-    Biomass: 18
+    Biomass: 25
 
 - type: latheRecipe
   id: BioGenSugar
@@ -245,9 +245,9 @@
   icon:
     sprite: Objects/Consumable/Food/ingredients.rsi
     state: sugar-big
-  completetime: 1
+  completetime: 3
   materials:
-    Biomass: 18
+    Biomass: 25
 
 
 

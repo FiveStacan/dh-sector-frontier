@@ -814,7 +814,9 @@ public abstract class SharedActionsSystem : EntitySystem
 
         if (ent.Comp.AttachedEntity != performer.Owner)
         {
-            DebugTools.Assert(!Resolve(performer, ref performer.Comp, false)
+            DebugTools.Assert(performer == null
+                              || TerminatingOrDeleted(performer)
+                              || !Resolve(performer, ref performer.Comp, false)
                               || performer.Comp.LifeStage >= ComponentLifeStage.Stopping
                               || !performer.Comp.Actions.Contains(ent.Owner));
 

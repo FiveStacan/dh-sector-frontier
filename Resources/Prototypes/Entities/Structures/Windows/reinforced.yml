@@ -22,7 +22,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300 #excess damage (nuke?). avoid computational cost of spawning entities.
+        damage: 360 #150 - Lua buff #excess damage (nuke?). avoid computational cost of spawning entities. #DH
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -31,7 +31,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 150 # Mono 75->150
+        damage: 200 #75 - Lua buff #DH
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -92,7 +92,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150 # Mono
+        damage: 200 #Lua #DH
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -101,7 +101,7 @@
           collection: WindowShatter
     - trigger:
         !type:DamageTrigger
-        damage: 75 # Mono 37->75
+        damage: 150 #Lua #DH
       behaviors:
       - !type:PlaySoundBehavior
         sound:

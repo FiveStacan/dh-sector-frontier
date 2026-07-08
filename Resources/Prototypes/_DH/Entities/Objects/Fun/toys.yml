@@ -1,0 +1,221 @@
+- type: entity
+  parent: [BaseItem, BaseStash]
+  id: BasePlushieDH
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Payload
+      - ClothMade
+  - type: EmitSoundOnUse
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnActivate
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnCollide
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnLand
+    sound:
+      collection: ToyFall
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: ToySqueak
+  - type: UseDelay
+    delay: 1.0
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: ToySqueak
+    damage:
+      types:
+        Blunt: 0
+    hidden: true
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+  - type: StaticPrice
+    price: 5
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      collection: ToySqueak
+    delay: 2
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6 # Frontier: 10<5
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5 # Frontier: 10<5
+  - type: MothFood # Frontier
+
+- type: entity
+  parent: BasePlushieDH
+  id: PlushieSpamton
+  name: spamton plushie
+  description: An adorable stuffed toy that resembles a snake.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Fun/toys.rsi
+    state: spamton
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_DH/Jukebox/Toby_Fox_Spamton.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/Toys/rattle.ogg
+  - type: Clothing
+    quickEquip: false
+    equippedPrefix: spamton
+    slots:
+    - NECK
+  - type: Speech
+    speechVerb: Reptilian # for pais (In the secret stash)
+  - type: UseDelay
+    delay: 45.0
+
+- type: entity
+  id: PlushieThirty
+  parent:
+  - BasePlushie
+  name: Nanati
+  description: Naaa, a fluffy and delicious smelling toy.
+  components:
+  - type: UseDelay
+    delay: 2.0
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: Nanati
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_DH/Nanati/Nanati10.ogg
+      params:
+        volume: 100
+  - type: EmitSoundOnActivate
+    sound:
+      collection: Nanati
+      params:
+        maxDistance: 10
+  - type: Sprite
+    sprite: _DH/Objects/Fun/toys.rsi
+    state: nanati
+  - type: EmitSoundOnUse
+    sound:
+      collection: Nanati
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/Nanati/Nanati10.ogg
+  - type: StaticPrice
+    price: 660
+
+
+- type: entity
+  id: GoldenWeh
+  abstract: true
+  components:
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_DH/bye.ogg
+      params:
+        volume: 100
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: GWA
+  - type: EmitSoundOnUse
+    sound:
+      collection: GWA
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/not_for_long_weh.ogg
+  - type: UseDelay
+    delay: 2.0
+  - type: EmitSoundOnActivate
+    sound:
+      collection: GWA
+      params:
+        maxDistance: 10
+
+- type: entity
+  parent:
+  - GoldenWeh
+  - BasePlushie
+  id: LegendaryGoldenWeh
+  name: Legendary golden Weh
+  description: Do you remember how you made your way through the dangers, how you left a fake instead, accidentally activated a trap and started running away from a huge ball! But wait, it was a dream, then where did you get it?
+  components:
+  - type: Sprite
+    state: legendary-golden-weh
+    sprite: _DH/Objects/Fun/toys.rsi
+  - type: Item
+    heldPrefix: goldenw
+  - type: Clothing
+    quickEquip: false
+    sprite: _DH/Objects/Fun/toys.rsi
+    equippedPrefix: goldenweh
+    slots:
+    - HEAD
+  - type: Speech
+    speechVerb: Reptilian
+  - type: StaticPrice
+    price: 350
+
+- type: entity
+  id: PlushieThirtyFour
+  parent: BasePlushie
+  name: Spiffo
+  description: This little raccoon will do anything to make you DIE from zombies!
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Fun/toys.rsi
+    state: spiffo
+
+- type: entity
+  id: PlushieSix
+  parent: BasePlushie
+  name: Anatoly Bobrov
+  description: A plush disposer with a hole in his spacesuit.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Fun/toys.rsi
+    state: plushie-util
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieVyacheslav
+  name: Plushy Vyacheslav Nekrasov
+  description: A popular personality in relevant circles.
+  components:
+  - type: Sprite
+    state: plushie-vyacheslav
+    sprite: _DH/Objects/Fun/toys.rsi
+
+- type: entity
+  id: PlushieExperiencedSalvageSpecialist
+  parent: BasePlushie
+  name: Experienced Salvage Specialist
+  description: A toy of a Salvage Specialist in a spacesuit that was reinforced with shields and goliath flesh. The tag has the signature snkrs. The toy looks pretty scary...
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Fun/toys.rsi
+    state: salvage-specialist
+  - type: StaticPrice
+    price: 25

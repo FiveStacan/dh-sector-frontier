@@ -8,7 +8,7 @@
   parent: BaseVessel
   name: Avorion
   description: Медицинский шаттл, предназначенный для изготовления лекарств. Оснащён лабораторией и Гидропоникой.
-  price: 63000
+  price: 63000 #DH need balance
   category: Medium
   group: Medical
   shuttlePath: /Maps/_Lua/Shuttles/Civilian/Avorion.yml

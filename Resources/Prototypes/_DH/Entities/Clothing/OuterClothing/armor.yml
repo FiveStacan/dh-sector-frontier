@@ -1,0 +1,357 @@
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  id: ClothingOuterArmorSWAT
+  name: SWAT armor
+  description: NT's unsuccessful attempt to create universal and inexpensive protection. It provides excellent protection against many types of damage, but it also slows down extremely much.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Armor/heavy.rsi
+    color: "#c0c0e2"
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Armor/heavy.rsi
+    color: "#c0c0e2"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.58
+        Heat: 0.6
+        Radiation: 0.6
+        Caustic: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 0.25
+  - type: TemperatureProtection
+    heatingCoefficient: 0.5
+    coolingCoefficient: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.82
+    sprintModifier: 0.82
+  - type: GroupExamine
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: StaticPrice
+    price: 890
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  id: ClothingOuterArmorAirsoftBlue
+  name: airsoft suit
+  description: Semi-flexible polycarbonate armor suit with weakened protection. Airsoft armor
+  suffix: airsoft
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/airsoft_blue_armor.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/airsoft_blue_armor.rsi
+  - type: GroupExamine
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  id: ClothingOuterArmorAirsoftRed
+  name: airsoft suit
+  description: Semi-flexible polycarbonate armor suit with weakened protection. Airsoft armor
+  suffix: airsoft
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/airsoft_red_armor.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/airsoft_red_armor.rsi
+  - type: GroupExamine
+
+# - type: entity
+#   abstract: true
+#   id: BadgeOnClothing
+#   components:
+#   - type: Badgeable
+#   - type: ContainerContainer
+#     containers:
+#       badge: !type:ContainerSlot
+#         showEnts: False
+#         occludes: True
+#         ent: null
+#   - type: ItemSlots
+#     slots:
+#       badge:
+#         name: Badge
+#         insertVerbText: attach-to-armor
+#         ejectVerbText: unattach-to-armor
+#         whitelist:
+#           tags:
+#           - ADTBadge
+#   - type: ItemMapper
+#     sprite: _DH/Clothing/OuterClothing/Armor/armor_overlay.rsi
+#     mapLayers:
+#       badgebronze:
+#         whitelist:
+#           tags:
+#           - ADTBadgeBronze
+#       badgesilver:
+#         whitelist:
+#           tags:
+#           - ADTBadgeSilver
+#       badgegolden:
+#         whitelist:
+#           tags:
+#           - ADTBadgeGolden
+#   - type: Appearance
+
+# - type: entity
+#   abstract: true
+#   id: BadgeOnClothingWithContainer
+#   components:
+#   - type: Badgeable
+#   - type: ContainerContainer
+#     containers:
+#       storagebase: !type:Container
+#         showEnts: False
+#         occludes: True
+#         ents: []
+#       badge: !type:ContainerSlot
+#         showEnts: False
+#         occludes: True
+#         ent: null
+#   - type: ItemSlots
+#     slots:
+#       badge:
+#         name: Badge
+#         insertVerbText: attach-to-armor
+#         ejectVerbText: unattach-to-armor
+#         whitelist:
+#           tags:
+#           - ADTBadge
+#   - type: ItemMapper
+#     sprite: _DH/Clothing/OuterClothing/Armor/armor_overlay.rsi
+#     mapLayers:
+#       badgebronze:
+#         whitelist:
+#           tags:
+#           - ADTBadgeBronze
+#       badgesilver:
+#         whitelist:
+#           tags:
+#           - ADTBadgeSilver
+#           - ADTBadge
+#       badgegolden:
+#         whitelist:
+#           tags:
+#           - ADTBadgeGolden
+#   - type: Appearance
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ADTClothingOuterArmorMiner
+  name: miner armor
+  description: Will not protect you from pressure, but will help you well in the battle with space fauna.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/mining.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/mining.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.95
+        Heat: 0.8
+        Caustic: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: ToggleableClothing
+    clothingPrototype: ADTClothingHeadHelmetMiner
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Tag
+    tags:
+    - ADTMinerArmor
+
+- type: entity
+  parent: ADTClothingOuterArmorMiner
+  id: ADTClothingOuterArmorMinerHeavy
+  name: heavy miner armor
+  description: Improved version of miner's armor. With this xeno scale, you sacrifice speed, but have more protection.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-xeno
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-xeno
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.7
+        Heat: 0.65
+        Caustic: 0.60
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.75
+
+- type: entity
+  parent: ADTClothingOuterArmorMiner
+  id: ADTClothingOuterArmorMinerLight
+  name: light miner armor
+  description: A lightweight version of miner's armor, made from dragon sinew. Thanks to ichor, you don't feel your weight.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-unshaded-layer
+      shader: unshaded
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 1.2
+    sprintModifier: 1.2
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ADTClothingOuterArmorMinerReinforcedOne
+  name: reinforced explorer suit
+  description: This explorer suit is reinforced with goliath hides.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_one.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_one.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.95
+        Heat: 0.75
+        Caustic: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: ToggleableClothing
+    clothingPrototype: ADTClothingHeadHelmetMinerReinforcedOne
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Construction
+    graph: ADTReinforcedMinerArmorOne
+    node: ADTReinforcedMinerArmorOne
+  - type: Tag
+    tags:
+    - ADTMinerArmorOne
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ADTClothingOuterArmorMinerReinforcedTwo
+  name: partially reinforced explorer suit
+  description: This explorer suit is reinforced with goliath hides.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_two.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_two.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.5
+        Piercing: 0.95
+        Heat: 0.7
+        Caustic: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.80
+  - type: ToggleableClothing
+    clothingPrototype: ADTClothingHeadHelmetMinerReinforcedTwo
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Construction
+    graph: ADTReinforcedMinerArmorTwo
+    node: ADTReinforcedMinerArmorTwo
+  - type: Tag
+    tags:
+    - ADTMinerArmorTwo
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ADTClothingOuterArmorMinerReinforcedFull
+  name: plated explorer suit
+  description: This explorer suit is reinforced with goliath hides. The pinnacle of mining ingenuity and Lavaland's own madness in the field of defense.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_full.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/mining_reinforced_full.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.4
+        Piercing: 0.95
+        Heat: 0.6
+        Caustic: 0.4
+  - type: ExplosionResistance
+    damageCoefficient: 0.70
+  - type: ToggleableClothing
+    clothingPrototype: ADTClothingHeadHelmetMinerReinforcedFull
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Construction
+    graph: ADTReinforcedMinerArmorFull
+    node: ADTReinforcedMinerArmorFull
+
+- type: entity
+  parent: [ ClothingOuterBaseLarge, AllowSuitStorageClothing ]
+  id: ADTClothingOuterArmorCrusader
+  name: crusaders armor
+  description: TIME TO CAPTURE JERUSALEM, BROTHER!!
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Armor/crusader_armor.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Armor/crusader_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.55
+        Piercing: 0.65
+        Heat: 0.9
+  - type: GroupExamine
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75

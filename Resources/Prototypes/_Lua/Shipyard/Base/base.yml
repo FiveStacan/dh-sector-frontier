@@ -7,6 +7,8 @@
   price: 50000
   category: Medium
   group: Shipyard
+  whitelist: #DH
+  - Frontier
   addComponents:
   - type: IFF
     color: "#ffffff"
@@ -18,6 +20,8 @@
   abstract: true
   parent: BaseVessel
   group: BlackMarket
+  whitelist: #DH
+  - Frontier
   addComponents:
   - type: IFF
     flags: [IsPlayerShuttle]
@@ -28,6 +32,8 @@
   abstract: true
   parent: BaseVessel
   group: Custom # Should not be available in any shipyard
+  whitelist: #DH
+  - Frontier
 
 - type: vessel
   id: BaseVesselBus
@@ -44,3 +50,5 @@
     preventRCDUse: true
     killHostileMobs: true
   - type: LinkedLifecycleGridParent
+  whitelist: #DH
+  - Frontier

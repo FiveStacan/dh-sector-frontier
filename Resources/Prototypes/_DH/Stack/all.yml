@@ -1,0 +1,27 @@
+- type: stack
+  id: PyroOre
+  name: stack-rough-pyro
+  icon: { sprite: /Textures/_DH/Objects/Materials/ore.rsi, state: pyro }
+  spawn: PyroOre1
+  maxCount: 40
+
+- type: stack
+  id: Pyro
+  name: stack-pyro
+  icon: { sprite: /Textures/_DH/Objects/Materials/pyroblock.rsi, state: pyro }
+  spawn: PyroBlock1
+  maxCount: 40
+
+- type: stack
+  id: BlueprintPaper
+  name: stack-bp_paper
+  icon: { sprite: /Textures/_DH/Objects/Materials/Sheets/other.rsi, state: bp_paper }
+  spawn: SheetBlueprintPaper1
+  maxCount: 30
+
+- type: stack
+  id: ChargedBluecrystal
+  name: materials-charged-bluecrystal
+  icon: { sprite: _DH/Objects/Specific/bluecrystal.rsi, state: bluespace }
+  spawn: ChargedBluecrystal
+  maxCount: 1

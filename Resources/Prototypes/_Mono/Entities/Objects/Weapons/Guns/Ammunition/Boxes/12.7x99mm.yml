@@ -44,6 +44,23 @@
   id: AmmoBox127x99mm
 
 # Mechanical
+
+- type: entity
+  parent: BaseAmmoBox127x99mm
+  id: AmmoBox127x99mmExplosive
+  name: ammunition box (12.7x99mm Explosive)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge127x99mmExplosive
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+
 - type: entity
   parent: BaseAmmoBox127x99mm
   id: AmmoBox127x99mmHP

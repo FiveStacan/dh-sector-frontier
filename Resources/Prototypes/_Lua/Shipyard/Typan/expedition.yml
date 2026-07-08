@@ -6,7 +6,7 @@
   parent: BaseVessel
   id: Expedition
   name: Expedition
-  price: 65000
+  price: 112450 #DH Shuttle price balance #65000
   category: Small
   group: Typan
   access: SyndicateAgent

@@ -1,12 +1,22 @@
 - type: entity
   name: gems bag
   id: GemsBag
-  parent: BaseStorageItem
+  parent: NFBaseClothingBeltStorageBag #BaseStorageItem
   description: A bag made of polyester, covered with a layer of ash, for storing gems.
   components:
+  - type: MagnetPickup
+    magnetEnabled: false # Frontier
+    magnetCanBeEnabled: false # Frontier
+    range: 1.25
   - type: Sprite
     sprite: Corvax/Objects/Specific/Mining/gems_sbag.rsi
-    state: icon
+    # Frontier: layered sprite
+    layers:
+    - state: icon
+    - state: icon-on
+      visible: False
+      map: [ "enum.ToggleableVisuals.Layer" ]
+    # End Frontier
   - type: Clothing
     sprite: Corvax/Objects/Specific/Mining/gems_sbag.rsi
     quickEquip: false
@@ -17,7 +27,8 @@
   - type: Storage
     maxItemSize: Normal
     grid:
-    - 0,0,9,3
+    - 0,0,10,1
+    - 0,3,10,4
     quickInsert: true
     areaInsert: true
     whitelist:
@@ -26,3 +37,24 @@
   - type: Dumpable
   - type: StaticPrice
     price: 100
+  # Begin DeltaV Additions: toggle magnet from White Dream
+  - type: ItemToggle
+    soundActivate: &soundActivate
+      collection: sparks
+      params:
+        variation: 0.25
+    soundDeactivate: *soundActivate
+    onUse: false
+    onAltUse: true
+    onActivate: false
+  - type: ItemToggleExamine
+    on: item-toggle-examine-magnet-on
+    off: item-toggle-examine-magnet-off
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled: # Frontier: Enum changes from Wizden#35341
+        enum.ToggleableVisuals.Layer: # Frontier: Enum changes from Wizden#35341
+          True: { visible: True }
+          False: { visible: False }
+  # End DeltaV Additions

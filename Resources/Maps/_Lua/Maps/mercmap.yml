@@ -9748,7 +9748,7 @@ entities:
     - type: Transform
       pos: -29.793825,15.677559
       parent: 1
-- proto: MercyShipComputer
+- proto: ComputerShipyardMercenary
   entities:
   - uid: 2139
     components:

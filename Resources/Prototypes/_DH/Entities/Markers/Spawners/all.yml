@@ -1,0 +1,73 @@
+- type: entity
+  name: Sec Pod Spawner
+  suffix: Filled
+  id: SpawnMechSecPodFilled
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _DH/Objects/Specific/Mech/sec_pod.rsi
+        state: sec_pod
+  - type: ConditionalSpawner
+    prototypes:
+      - MechSecPod
+
+- type: entity
+  id: DHSpawnPointJobBase
+  parent: MarkerBase
+  abstract: true
+  suffix: Job Spawn
+  components:
+  - type: SpawnPoint
+    spawn_type: Job
+  - type: Sprite
+    sprite: _DH/Markers/jobs.rsi
+
+- type: entity
+  id: SpawnPointHeadOfPrison
+  parent: DHSpawnPointJobBase
+  name: Начальник Тюрьмы / Глава КТ
+  components:
+  - type: SpawnPoint
+    job_id: HeadOfPrison
+  - type: Sprite
+    layers:
+    - state: green
+    - state: hos
+
+- type: entity
+  id: SpawnPointPermaPrisoner
+  parent: DHSpawnPointJobBase
+  name: Заключенный КТ
+  components:
+  - type: SpawnPoint
+    job_id: PermaPrisoner
+  - type: Sprite
+    layers:
+    - state: green
+    - state: prisoner
+
+- type: entity
+  id: DHSpawnPointPrisonGuard
+  parent: DHSpawnPointJobBase
+  name: тюремный охранник КТ
+  components:
+  - type: SpawnPoint
+    job_id: DHPrisonGuard
+  - type: Sprite
+    layers:
+    - state: green
+    - state: guard
+
+- type: entity
+  id: SpawnPointPrisonDoctor
+  parent: DHSpawnPointJobBase
+  name: тюремный врач КТ
+  components:
+  - type: SpawnPoint
+    job_id: PrisonDoctor
+  - type: Sprite
+    layers:
+    - state: green
+    - state: medical

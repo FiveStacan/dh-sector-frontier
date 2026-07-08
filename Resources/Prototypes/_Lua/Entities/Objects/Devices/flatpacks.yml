@@ -56,4 +56,4 @@
   - type: Flatpack
     entity: WeaponShuttleGrapplingTurret
   - type: StaticPrice
-    price: 150
+    price: 350 #DH

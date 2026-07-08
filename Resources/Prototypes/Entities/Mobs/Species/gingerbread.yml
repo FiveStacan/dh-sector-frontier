@@ -59,10 +59,10 @@
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
   - type: LuaSprint # Lua
-    maxSprint: 89
-    drainPerSecond: 8.4
-    regenPerSecond: 9.1
-    regenDelay: 0.16
+    maxSprint: 20
+    drainPerSecond: 7.8
+    regenPerSecond: 9
+    regenDelay: 0.15
     recoverThresholdFraction: 0.20
 
 

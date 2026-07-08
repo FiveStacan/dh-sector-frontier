@@ -1,0 +1,23 @@
+- type: stack
+  id: FloorTileWoodHerringbone
+  name: stack-wood-floor-herringbone
+  spawn: FloorTileItemWoodHerringbone
+  maxCount: 30
+
+- type: stack
+  id: FloorTileWoodHerringboneAlt
+  name: stack-wood-floor-herringbonealt
+  spawn: FloorTileItemWoodHerringboneAlt
+  maxCount: 30
+
+- type: stack
+  id: FloorTileWoodDiagonal
+  name: stack-wood-floor-diagonal
+  spawn: FloorTileItemWoodDiagonal
+  maxCount: 30
+
+- type: stack
+  id: FloorTileWoodDiagonalMini
+  name: stack-wood-floor-diagonalmini
+  spawn: FloorTileItemWoodDiagonalMini
+  maxCount: 30

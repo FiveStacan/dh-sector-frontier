@@ -19,8 +19,8 @@ public sealed partial class ShuttleConsoleSystem
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
-    public const float ShuttleFTLRange = 1500f;
-    private const float ShuttleFTLMassThreshold = 50f;
+    public const float ShuttleFTLRange = 1000f; //DH 1000<1500
+    private const float ShuttleFTLMassThreshold = 70f; //DH 70<50
 
     private bool IsGcAbleGrid(EntityUid gridUid) // Lua start создание проблемы и её героическое решение
     {

@@ -6,12 +6,13 @@
   parent: BaseVessel
   id: Draupnir
   name: Draupnir
-  description: Медицинский корабль СРБС
+  description: Медицинский корабль ДСБФ
   limit: 2
-  price: 173000 #100000
+  price: 295000 #DH Shuttle price balance 173000 #100000
   category: Medium
   group: Security
   whitelist:
+  - Frontier #DH
   - Luna
   class:
   - Nfsd

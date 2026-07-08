@@ -41,18 +41,31 @@
   name: antique laser pistol
   description: |-
     This is an antique laser pistol with two settings: disable and kill. All craftsmanship is of the highest quality. It is decorated with a mahogany grip and chrome filigree. The object menaces with spikes of energy. On the item is an image of a captain and a clown. The clown is dead. The captain is striking a heroic pose.
-  suffix: Need balance test
+  #suffix: Need balance test
   components:
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi #DH
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi #DH
   - type: Battery # 26 shots
     maxCharge: 1560
     startingCharge: 1560
   - type: BatterySelfRecharger # Recharges 1 shot per 2 seconds
     autoRecharge: true
     autoRechargeRate: 30
+  - type: ProjectileBatteryAmmoProvider
+    proto: NFLaserAntique
+    fireCost: 60
+  - type: EnergyGun
+    fireModes:
+    - proto: NFLaserDisablerAntique
+      fireCost: 50
+      name: disable
+      state: disabler
+    - proto: NFLaserAntique
+      fireCost: 60
+      name: kill
+      state: lethal
   - type: Tag
     tags:
     - Sidearm

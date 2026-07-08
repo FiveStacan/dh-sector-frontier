@@ -1,0 +1,58 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPrison
+  name: Prison control encryption key
+  description: An encryption key for Prison.
+  components:
+  - type: EncryptionKey
+    channels:
+    - SpacePrison
+    defaultChannel: SpacePrison
+  - type: Item
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    size: Tiny
+  - type: Sprite
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: prison_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPrisoners
+  name: Prison control encryption key
+  description: An encryption key for Prison.
+  components:
+  - type: EncryptionKey
+    channels:
+    - SpacePrisoners
+    defaultChannel: SpacePrisoners
+  - type: Item
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    size: Tiny
+  - type: Sprite
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: prisoners_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPrisonCommand
+  name: Prison control encryption key
+  description: An encryption key for Prison.
+  components:
+  - type: EncryptionKey
+    channels:
+    - SpacePrison
+    - Nfsd
+    - Security
+    defaultChannel: SpacePrison
+  - type: Item
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    size: Tiny
+  - type: Sprite
+    sprite: _DH/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: prison_command_label

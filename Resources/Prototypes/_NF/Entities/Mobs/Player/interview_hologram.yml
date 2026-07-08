@@ -93,13 +93,21 @@
   - type: InterviewHologram
     job: Mercenary
 
+- type: entity
+  id: InterviewHologramChef
+  parent: InterviewHologram
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: InterviewHologram
+    job: Chef
+
 # region Actions
 
 - type: entity
   id: ActionInterviewToggleApproval
   parent: BaseAction
-  name: Toggle Approval
-  description: Toggles whether or not you approve to work with this crew.
+  name: action-toggle-approval
+  description: action-toggle-approval-description
   components:
   - type: Action
     icon: _NF/Interface/Actions/acceptOff.png
@@ -113,8 +121,8 @@
 - type: entity
   id: ActionInterviewCancel
   parent: BaseAction
-  name: Cancel Application
-  description: Cancel your application and return to the lobby.
+  name: action-cancel-application
+  description: action-cancel-application-description
   components:
   - type: Action
     icon: _NF/Interface/Actions/paperFire.png

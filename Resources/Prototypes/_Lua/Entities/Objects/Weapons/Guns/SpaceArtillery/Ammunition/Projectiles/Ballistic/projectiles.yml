@@ -115,17 +115,17 @@
     - type: ExplodeOnTrigger
     - type: Explosive
       explosionType: MicroBomb
-      totalIntensity: 300.0
-      intensitySlope: 5
-      maxIntensity: 35
-      maxTileBreak: 1
+      totalIntensity: 280.0
+      intensitySlope: 8
+      maxIntensity: 36
+      maxTileBreak: 2
     - type: Projectile
       damage:
        types:
-        Structural: 100
-        Blunt: 50
+        Structural: 90
+        Blunt: 55
     - type: RadarBlip
-      scale: 0.55
+      scale: 0.65
       requireNoGrid: true
       shape: triangle
     - type: TimedDespawn

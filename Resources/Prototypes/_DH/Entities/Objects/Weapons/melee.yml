@@ -1,0 +1,417 @@
+
+
+- type: entity
+  name: сабля высшего главнокомандующего
+  parent: BaseItem
+  id: SupremeCommanderSabre
+  description: От нее чуствуется легкий ветерок, похоже, она поглащает материю.
+  components:
+  - type: Tag
+    tags:
+      - SupremeCommanderSabre
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/SupremeCommander_sabre.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 100
+        Piercing: 120
+        Radiation: 80
+        Structural: 40
+  - type: Item
+    size: Small
+    sprite: _DH/Objects/Weapons/Melee/SupremeCommander_sabre.rsi
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+  - type: Reflect
+    reflectProb: .1
+    spread: 90
+
+- type: entity
+  name: Saber of the Leader of the Red Orden
+  parent: BaseItem
+  id: OrdenSabre
+  description: Unusual saber. Instead of a blade, this weapon uses the teeth of a space dragon, which cut and cling to the victim's flesh, tearing open wounds. Nightmare weapon.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/orden_sabre.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+        Slash: 17
+  - type: Item
+    size: Normal
+    sprite:
+  - type: Tag
+    tags:
+    - SwordSquadRO
+  - type: DisarmMalus
+
+- type: entity
+  name: wakizashi
+  parent: BaseItem
+  id: Wakizashi
+  description: A short, multi-purpose sword of plasteel construction.
+  components:
+  - type: Tag
+    tags:
+    - Katana
+  - type: Sharp
+  - type: Utensil
+    types:
+      - Knife
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/wakizashi.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+        Slash: 12
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: Normal
+    sprite: _DH/Objects/Weapons/Melee/wakizashi.rsi
+  - type: Tool
+    qualities:
+      - Slicing
+    useSound:
+      path: /Audio/Items/Culinary/chop.ogg
+  - type: DisarmMalus
+
+- type: entity
+  name: Рапира Мифистофеля
+  parent: [BaseItem, BaseSword]
+  id: MythistophelRapier
+  description: Рапира выкована стариком Мифистофелем, чувствуется запах напалма
+  components:
+  - type: IgniteOnMeleeHit
+    fireStacks: 1
+  - type: Sharp
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/Rapier_cvasoc.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1.6
+    damage:
+      types:
+        Slash: 12 #cmon, is an ELITE rapier
+        Piercing: 5
+        Holy: 10
+    soundHit:
+        path: /Audio/Weapons/Rapier.ogg
+  - type: Reflect
+#    enabled: true
+    reflectProb: .7
+    spread: 90
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 15
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnEmbed
+    solution: ammo
+    transferAmount: 5
+    blockSlots: NONE
+  - type: SolutionTransfer
+    maxTransferAmount: 5
+  - type: Item
+    size: Normal
+    sprite: _DH/Objects/Weapons/Melee/Rapier_cvasoc.rsi
+  - type: Tag
+    tags:
+    - Rapier
+  - type: DisarmMalus
+
+- type: entity # Backmen
+  name: Ямато
+  parent: BaseItem
+  id: YamatoSabre
+  description: Личное оружие Вергилия, выкованное из тёмного сплава. Найдено в секторе "Бекман"
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/yamato.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 20
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .1
+    spread: 90
+  - type: Item
+    sprite: _DH/Objects/Weapons/Melee/yamato.rsi
+  - type: DisarmMalus
+  - type: Tag
+    tags:
+    - YamatoSabre
+
+- type: entity
+  name: syndicate rapier
+  parent: [ BaseSword, BaseSyndicateContraband ]
+  id: SyndicateRapier
+  description: A thin blade made of plastitanium with a diamond tip.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/syndicate_rapier.rsi
+  - type: DisarmMalus
+    malus: 0.6
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1.2
+    damage:
+      types:
+        Piercing: 17
+    resistanceBypass: true
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 2
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 2
+  - type: Reflect
+    reflects:
+    - NonEnergy
+    reflectProb: 0.20
+    spread: 90
+  - type: Item
+    sprite: _DH/Objects/Weapons/Melee/syndicate_rapier.rsi
+  - type: Tag
+    tags:
+    - SyndicateRapier
+
+- type: entity
+  name: энергетический меч спецназа
+  parent: EnergySword
+  id: EnergySwordDedSad
+  description: Энергетический меч спецвойск NanoTrasen, используеться для веселой нарезки экипажа.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/e_sword.rsi
+    layers:
+      - state: e_sword
+      - state: e_sword_blade
+        color: "#00FFFFFF"
+        visible: false
+        shader: unshaded
+        map: [ "blade" ]
+  - type: PointLight
+    netsync: false
+    enabled: false
+    radius: 2
+    energy: 2
+    color: cyan
+  - type: StaminaDamageOnCollide
+    damage: 20
+  - type: DisarmMalus
+  - type: EnergySword
+#    litDamageBonus:
+#        types:
+#            Slash: 15
+#            Heat: 30
+#            Blunt: -4.5
+#    litDisarmMalus: 0.6
+
+- type: entity
+  name: дубинка-шокер спецсил
+  parent: Stunbaton
+  id: StunbatonSuper
+  description: Электрошоковая дубинка для обездвиживания людей. Слишком усердное причинение вреда с помощью этого предмета считается дурным тоном.
+  components:
+    - type: Stunbaton
+      energyPerUse: 10
+
+- type: entity
+  id: Telebaton
+  name: telebaton
+  parent: BaseItem
+  description: A compact yet robust personal defense weapon.
+  components:
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/telescopicon.ogg
+      params:
+        volume: -5
+    soundDeactivate:
+      path: /Audio/Weapons/telescopicoff.ogg
+      params:
+        volume: -5
+  - type: ItemToggleSize
+    activatedSize: Normal
+    activatedShape:
+    - 0,0,0,2
+  - type: DisarmMalus
+    malus: 0.225
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/telebaton.rsi
+    layers:
+    - state: telebaton_off
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 3
+    deactivatedSecret: true
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 0
+  #- type: Telescopicbaton
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: UseDelay
+    delay: 0.4
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DH/Items/Handling/Telebatons/pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DH/Items/Handling/Telebatons/drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/Items/Handling/Telebatons/drop.ogg
+  - type: Item
+    sprite: _DH/Objects/Weapons/Melee/telebaton.rsi
+    size: Small
+    shape:
+    - 0,0,0,0
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: telebaton_on}
+          False: {state: telebaton_off}
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  name: Булава
+  parent: [BaseC2ContrabandUnredeemable, BaseItem]
+  id: mace
+  description: Большой и мощный молот с длинной ручкой. Точечные удары значительно сильнее.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Melee/mace.rsi
+    state: icon
+  - type: Item
+    size: Huge
+  - type: MeleeWeapon
+    range: 1.35
+    autoAttack: true
+    wideAnimation: WeaponArcMaceSlash
+    angle: 145
+    wideAnimationRotation: 220
+    bluntStaminaDamageFactor: 1.45
+    clickDamageModifier: 1.72
+    attackRate: 0.72
+    damage:
+      types:
+        Blunt: 6
+        Piercing: 2
+        Structural: 4
+    soundHit:
+      collection: mace
+      volume: 30
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 18
+        Piercing: 4
+        Structural: 16
+  - type: Tool
+    qualities:
+      - Prying
+    speedModifier: 0.3
+  - type: Prying
+    speedModifier: 0.3
+    pryPowered: !type:Bool
+      false
+    force: !type:Bool
+      true
+  - type: Clothing
+    sprite: Nyanotrasen/Objects/Weapons/Melee/breaching_hammer.rsi
+    quickEquip: false
+    equipDelay: 1.6
+    unequipDelay: 0.5
+    slots:
+    - back
+    - suitStorage # Frontier - Same as axe
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 30
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.91
+  - type: HeldSpeedModifier
+    sprintModifier: 0.85
+    mirrorClothingModifier: false
+
+- type: entity
+  id: WeaponArcMaceSmash
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: WeaponArcVisuals
+      fadeOut: false
+    - type: Sprite
+      state: smash
+      scale: 1.6, 1.6
+      color: "#fff4cf"
+    - type: TimedDespawn
+      lifetime: 0.3
+    - type: StaminaDamageOnCollide
+      damage: 50
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 3
+
+- type: entity
+  id: WeaponArcMaceSlash
+  parent: WeaponArcStatic
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: WeaponArcVisuals
+      animation: Slash
+    - type: Sprite
+      state: smash
+      scale: 1.6, 1.6
+      color: "#fff4cf"
+    - type: StaminaDamageOnCollide
+      damage: 50
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 3

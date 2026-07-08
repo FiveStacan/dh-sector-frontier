@@ -1,0 +1,39 @@
+- type: vessel
+  id: Caolition
+  parent: BaseVessel
+  name: Caolition
+  description: Caolition.
+  price: 962000
+  marker: LuaTech
+  group: LuaTech
+  shuttlePath: /Maps/_DH/Shuttles/Caolition.yml
+  guidebookPage: null
+  class:
+  - Scrapyard
+  - Civilian
+  - Science
+  engine:
+  - Bananium
+  - Solar
+  addComponents:
+    - type: IFF
+      color: "#ffffff"
+- type: gameMap
+  id: Caolition
+  mapName: 'Caolition'
+  mapPath: /Maps/_DH/Shuttles/Caolition.yml
+  minPlayers: 0
+  stations:
+    Caolition:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Caolition {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

@@ -23,7 +23,7 @@
 
 - type: guideEntry
   id: DSJobRulesSD
-  name: Служба Разведки и Безопасности Сектора
+  name: Депортамент Службы Безопасности Фронтира
   priority: 2
   text: "/ServerInfo/_Lua/Guidebook/ServerRules/DSRulesIC/DSJobRulesSD.xml"
 

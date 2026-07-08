@@ -1,0 +1,94 @@
+- type: soundCollection
+  id: GWA
+  files:
+  - /Audio/_DH/GW/goldenweh1.ogg
+  - /Audio/_DH/GW/goldenweh2.ogg
+  - /Audio/_DH/GW/goldenweh3.ogg
+  - /Audio/_DH/GW/goldenweh4.ogg
+  - /Audio/_DH/GW/goldenweh5.ogg
+
+- type: soundCollection
+  id: Nanati
+  files:
+  - /Audio/_DH/Nanati/Nanati1.ogg
+  - /Audio/_DH/Nanati/Nanati2.ogg
+  - /Audio/_DH/Nanati/Nanati3.ogg
+  - /Audio/_DH/Nanati/Nanati4.ogg
+  - /Audio/_DH/Nanati/Nanati5.ogg
+#  - /Audio/_DH/Nanati/Nanati6.ogg #не оч
+  - /Audio/_DH/Nanati/Nanati7.ogg
+  - /Audio/_DH/Nanati/Nanati8.ogg
+  - /Audio/_DH/Nanati/Nanati9.ogg
+  - /Audio/_DH/Nanati/Nanati10.ogg
+
+- type: soundCollection
+  id: deagle
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/deagle-1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/deagle-2.ogg
+
+- type: soundCollection
+  id: glock22
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/glock22_shot_1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/glock22_shot_2.ogg
+
+- type: entity
+  id: BaseGunPulseSound
+  abstract: true
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      collection: PulsePickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: PulseDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: PulseDrop
+
+- type: soundCollection
+  id: PulsePickUp
+  files:
+  - /Audio/_DH/Weapons/Guns/Lasers/Pulse/pickup1.ogg
+
+- type: soundCollection
+  id: PulseDrop
+  files:
+  - /Audio/_DH/Weapons/Guns/Lasers/Pulse/drop1.ogg
+
+- type: soundCollection
+  id: RevolversCollide
+  files:
+  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/collide1.ogg
+
+- type: soundCollection
+  id: RevolversPutIn
+  files:
+  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/putin1.ogg
+
+- type: soundCollection
+  id: ak47
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/ak47-1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/ak47-2.ogg
+
+- type: soundCollection
+  id: famas
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/famas-1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/famas-2.ogg
+
+- type: soundCollection
+  id: mace
+  files:
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air1.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air2.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air3.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air4.ogg
+
+- type: soundCollection
+  id: EearthGovernmentMachineGunShot
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/EG_MG_1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/EG_MG_2.ogg

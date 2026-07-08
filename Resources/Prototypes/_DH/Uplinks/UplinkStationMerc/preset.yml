@@ -1,0 +1,23 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: StorePresetStationMercenaryUplink
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-mercenary-uplink
+    categories:
+    - UplinkStationMercenaryHardsuits
+    - UplinkStationMercenaryClothing
+    - UplinkStationMercenaryShipWeapons
+    - UplinkStationMercenaryGun
+    - UplinkStationMercenaryAmmo
+    - UplinkStationMercenaryShipAmmo
+    - UplinkStationMercenaryMedical
+    - UplinkStationMercenaryFuel
+    - UplinkStationMercenaryFood
+    - UplinkStationMercenaryNocat
+    currencyWhitelist:
+    - Speso

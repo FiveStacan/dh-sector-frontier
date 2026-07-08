@@ -7,7 +7,7 @@
   - NFAmmunitionBoxRifle30Practice
   - NFAmmunitionBoxShellShotgunPractice
   - NFWeaponEnergyPistolDisablerPractice
-  #- NFWeaponEnergyRifleCarbinePractice
+  - NFWeaponEnergyRifleCarbinePractice
 
 - type: latheRecipePack
   id: NfsdAmmoStatic
@@ -38,6 +38,9 @@
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - MagazineAsmgtUniversalEmpty
+  # GoobWeaponAmmo
+  #- MagazineBoxLightRifleSubsonic
+  #- MagazineLightRifleSubsonic
 
 - type: latheRecipePack
   id: NfsdToolsStatic
@@ -87,3 +90,18 @@
   recipes:
   - GyroscopeNfsdMachineCircuitboard
   - ThrusterNfsdMachineCircuitboard
+
+#DH
+- type: latheRecipePack
+  id: NfsdDynamic
+  recipes:
+  - BorgModulEnergySecurity
+  - BorgModuleSecurity
+  - Binoculars
+  - BinocularsMagmite
+  - PinpointerUniversalNF
+  - NFDartTracking
+  - BorgModuleArrestSecurity
+
+  - NFMagazineExtendedRifle30Empty
+

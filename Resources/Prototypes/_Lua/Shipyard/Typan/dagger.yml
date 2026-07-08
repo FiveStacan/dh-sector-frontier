@@ -8,7 +8,7 @@
   name: Dagger
   description: Старый боевой корабль, найденный в ангарах Синдиката. Имеет три стороны
     стрельбы.
-  price: 151943
+  price: 324700 #DH Shuttle price balance #151943
   category: Medium
   group: Typan
   access: SyndicateAgent
@@ -17,8 +17,8 @@
   - Frontier
   class:
   - Syndicate
-  - Medical # Lua
   - Pursuit # Lua
+  - Medical # Lua
   engine:
   - AME # Lua
   shuttlePath: /Maps/_Lua/Shuttles/Typan/dagger.yml

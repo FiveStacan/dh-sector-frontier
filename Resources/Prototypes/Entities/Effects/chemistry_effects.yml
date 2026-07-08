@@ -205,7 +205,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 12
+        damage: 16
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -260,7 +260,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1 # Intentionally very weak to encourage speedy repair, think of it as thin webbing
+        damage: 12 # Intentionally very weak to encourage speedy repair, think of it as thin webbing
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

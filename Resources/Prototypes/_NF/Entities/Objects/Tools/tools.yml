@@ -64,6 +64,8 @@
   - type: ToolTileCompatible
   - type: UseDelay
     delay: 1
+  - type: StaticPrice
+    price: 80
 
 - type: entity
   name: pirate repair kit

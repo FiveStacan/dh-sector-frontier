@@ -12,7 +12,7 @@
 - type: pointOfInterest
   id: McHobo
   parent: BasePOI
-  name: Derelict McCargo
+  name: "Шаттл-обломок МакХобольдс"
   minimumDistance: 3250
   maximumDistance: 5600
   spawnGroup: Scrapyard
@@ -22,10 +22,13 @@
     icon: /Textures/_Lua/Interface/Radar/space-outpost.png
     scale: 1.2
     allowWhenHidden: true
+  - type: StationTransit
+    routes:
+      SpawnPoints: 50
 
 - type: gameMap
   id: McHobo
-  mapName: "Derelict McCargo"
+  mapName: "Шаттл-обломок МакХобольдс"
   mapPath: /Maps/_NF/POI/mchobo.yml
   minPlayers: 0
   stations:
@@ -33,5 +36,5 @@
       stationProto: DeadDropRecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Derelict McCargo"
+          mapNameTemplate: "Шаттл-обломок МакХобольдс"
         - type: BindToStationVariationPassExemption

@@ -96,6 +96,9 @@
                     <OptionButton Name="Engines"
                                   Prefix="{Loc 'shipyard-console-menu-engine-label'}"
                                   HorizontalExpand="True"/>
+                    <OptionButton Name="Sorting"
+                                 Prefix="{Loc 'shipyard-console-menu-sorting-label'}"
+                                 HorizontalExpand="True" />
                 </BoxContainer>
                 <ScrollContainer HorizontalExpand="True"
                                  VerticalExpand="True"

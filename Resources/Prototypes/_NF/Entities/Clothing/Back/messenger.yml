@@ -656,6 +656,13 @@
       - state: inhand-right
       - state: inhand-right-unlit
         shader: unshaded
+  - type: Storage #DH
+    grid:
+    - 0,0,1,1
+    - 0,3,1,4
+    - 3,0,7,3
+    - 9,0,10,1
+    - 9,3,10,4
 
 ## Antagonists / Contraband
 - type: entity

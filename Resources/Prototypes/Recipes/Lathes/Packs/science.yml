@@ -28,9 +28,12 @@
   - AnomalyLocatorWide
   - HoloprojectorField
   - SignallerAdvanced
-  # - DeviceQuantumSpinInverter # Frontier
+  - DeviceQuantumSpinInverter # Frontier
   - DeviceDesynchronizer
   - NFClothingBackpackHarmpack # Frontier: use NF variant
+  - Welder #DH
+  - WelderIndustrial #DH
+  - WelderIndustrialAdvanced #DH
 
 - type: latheRecipePack
   id: ScienceClothing
@@ -38,6 +41,7 @@
   - ClothingShoesBootsMagSci
   - NFClothingShoesBootsMoon # Frontier: use NF variant
   - ClothingShoesBootsSpeed
+  - ClothingShoesBootsJump #DH
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
@@ -46,6 +50,7 @@
   id: PowerCells
   recipes:
   - PowerCellMicroreactor
+  - PowerCellMedium #DH
   - PowerCellHigh
   - PowerCellHyper
 
@@ -53,13 +58,13 @@
   id: ScienceWeapons
   recipes:
   - NFWeaponPistolCHIMP # Frontier: add NF prefix
-  # - WeaponForceGun # Frontier
+  - WeaponForceGun #DH
   - NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
   - NFWeaponPkaCannon # Frontier
-  # - PKAUpgradeDamage # Frontier
-  # - PKAUpgradeRange # Frontier
-  # - PKAUpgradeFireRate # Frontier
-  # - WeaponTetherGun # Frontier
+  - PKAUpgradeDamage # Frontier
+  - PKAUpgradeRange # Frontier
+  - PKAUpgradeFireRate # Frontier
+  - WeaponTetherGun #DH
   - WeaponGauntletGorilla
 
 - type: latheRecipePack
@@ -71,6 +76,8 @@
   - FauxTileAstroIce
   - FauxTileAstroSnow
   - FauxTileAstroAsteroidSand
+  - FloorTileItemBluespace #DH
+  - FloorTileItemSepia #DH
 
 - type: latheRecipePack
   id: ScienceExplosives
@@ -89,14 +96,22 @@
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
   - CircuitImprinterHyperConvectionMachineCircuitboard
-  # - TechDiskComputerCircuitboard # Frontier: no tech disks
+  - ExosuitFabricatorHyperConvectionMachineCircuitboard #DH
+  - UniformPrinterHyperConvectionMachineCircuitboard #DH
+
+  - AutolatheHyperSpeedMachineCircuitboard #DH
+  - UniformPrinterHyperSpeedMachineCircuitboard #DH
+  - CircuitImprinterHyperSpeedMachineCircuitboard #DH
+  - ProtolatheHyperSpeedMachineCircuitboard #DH
+  - ExosuitFabricatorHyperSpeedMachineCircuitboard #DH
+  - TechDiskComputerCircuitboard # Frontier: no tech disks
   - FlatpackerMachineCircuitboard
   - SheetifierMachineCircuitboard
   - PowerCageRechargerCircuitboard
   - AnalysisComputerCircuitboard
   - AnomalyVesselCircuitboard
   - AnomalyVesselExperimentalCircuitboard
-  # - AnomalySynchronizerCircuitboard # Frontier: no synchronizer
+  - AnomalySynchronizerCircuitboard # Frontier: no synchronizer
   - APECircuitboard
   - ArtifactAnalyzerMachineCircuitboard
   - ArtifactCrusherMachineCircuitboard

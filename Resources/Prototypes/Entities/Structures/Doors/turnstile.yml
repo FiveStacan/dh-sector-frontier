@@ -5,7 +5,7 @@
   description: A mechanical door that permits one-way access and prevents tailgating.
   components:
   - type: Sprite
-    sprite: Structures/Doors/turnstile.rsi
+    sprite: _DH/Structures/Doors/turnstile.rsi #DH
     snapCardinals: true
     drawdepth: Doors
     layers:
@@ -36,7 +36,7 @@
     soundGroups:
       Brute:
         path:
-          "/Audio/Weapons/smash.ogg"
+          "/Audio/Weapons/grille_hit.ogg"
   - type: InteractionOutline
   - type: Turnstile
     processWhitelist:
@@ -51,10 +51,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 550
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
   - type: AccessReader
   - type: Construction
     graph: Turnstile
@@ -77,6 +80,20 @@
     tags:
     - HideContextMenu
 
+- type: entity
+  id: TurnstileSec
+  parent: Turnstile
+  suffix: Security
+  components:
+  - type: Sprite
+    layers:
+    - state: turnstile
+      map: [ "enum.TurnstileVisualLayers.Base" ]
+    - state: marker_sec
+      map: [ "enum.TurnstileVisualLayers.Marker" ]
+  - type: AccessReader
+    access: [["Security"]]
+
 # Genpop
 
 - type: entity
@@ -84,6 +101,12 @@
   parent: Turnstile
   suffix: Genpop Enter
   components:
+  - type: Sprite
+    layers:
+    - state: turnstile
+      map: [ "enum.TurnstileVisualLayers.Base" ]
+    - state: marker_sec
+      map: [ "enum.TurnstileVisualLayers.Marker" ]
   - type: AccessReader
     access: [["GenpopEnter"], ["Security"]]
 
@@ -92,5 +115,47 @@
   parent: Turnstile
   suffix: Genpop Leave
   components:
+  - type: Sprite
+    layers:
+    - state: turnstile
+      map: [ "enum.TurnstileVisualLayers.Base" ]
+    - state: marker_sec
+      map: [ "enum.TurnstileVisualLayers.Marker" ]
   - type: AccessReader
     access: [["GenpopLeave"], ["Security"]]
+
+- type: entity
+  id: TurnstileGenpopKarcer
+  parent: Turnstile
+  suffix: Karcer, Enter
+  components:
+  - type: Sprite
+    layers:
+    - state: turnstile
+      map: [ "enum.TurnstileVisualLayers.Base" ]
+    - state: marker_karcer
+      map: [ "enum.TurnstileVisualLayers.Marker" ]
+  - type: AccessReader
+    access: [["Armory"], ["GenpopEnter"]]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: TurnstileGenpopKarcerLeave
+  parent: TurnstileGenpopKarcer
+  suffix: Karcer, Leave
+  components:
+  - type: Sprite
+    layers:
+    - state: turnstile
+      map: [ "enum.TurnstileVisualLayers.Base" ]
+    - state: marker_karcer
+      map: [ "enum.TurnstileVisualLayers.Marker" ]
+  - type: AccessReader
+    access: [["Armory"], ["GenpopLeave"]]

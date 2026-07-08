@@ -1,0 +1,88 @@
+- type: entity
+  parent: CryogenicSleepUnit
+  id: CentralCommandTeleporter
+  suffix: cryogenic sleep unit
+  name: centcomm teleporter
+  description: Tired of the shift? Thats reason to teleport out of here and forget about all the problems.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _DH/Structures/Machines/centcommteleporter.rsi
+    layers:
+    - state: teleport
+      map: ["base"]
+  - type: PointLight
+    color: Lime
+    radius: 1.5
+    energy: 0.5
+    castShadows: false
+  - type: GenericVisualizer
+    visuals:
+      enum.CryostorageVisuals.Full:
+        base:
+          True: { state: teleport_on }
+          False: { state: teleport }
+
+- type: entity
+  parent: ChemDispenser
+  id: MiniChemDispenser
+  suffix: Filled
+  name: mini chemical dispenser
+  components:
+  - type: Machine
+    board: MiniChemDispenserMachineCircuitboard
+  - type: Sprite
+    sprite: _DH/Structures/Machines/mini_dispensers.rsi
+    state: industrial-working
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Storage
+    openOnActivate: false
+    whitelist:
+      tags:
+      - ChemDispensable
+    maxItemSize: Large
+    grid:
+    - 0,0,11,5
+  - type: StorageFill
+    contents:
+      - id: JugAluminium
+      - id: JugCarbon # Frontier
+      - id: JugChlorine # Frontier
+      - id: JugCopper
+      - id: JugEthanol # Frontier
+#      - id: JugFluorine
+      - id: JugSugar # Frontier
+      - id: JugHydrogen # Frontier
+      - id: JugIodine
+      - id: JugIron
+      - id: JugLithium # Frontier
+      - id: JugMercury
+      - id: JugNitrogen # Frontier
+      - id: JugOxygen # Frontier
+      - id: JugPhosphorus # Frontie
+      - id: JugPotassium # Frontier
+#      - id: JugRadium
+      - id: JugSilicon # Frontier
+      - id: JugSodium
+      - id: JugSulfur
+
+- type: entity
+  parent: MiniChemDispenser
+  id: MiniChemDispenserEmpty
+  suffix: Empty
+  name: mini chemical dispenser
+  components:
+  - type: ReagentDispenser
+    pack: EmptyInventory

@@ -9,11 +9,12 @@
   description: Более укреплённый шаттл, в отличии от предшественника Граббера. Обладает
     импульсными пушками и медицинским отсеком.
   limit: 2
-  price: 176000 #89000
+  price: 377000 #DH Shuttle price balance 176000 #89000
   category: Medium
   group: Security
   whitelist:
   - Luna
+  - Frontier #DH
   class:
   - Nfsd
   engine:

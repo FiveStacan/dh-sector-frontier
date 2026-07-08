@@ -22,7 +22,19 @@
   # Goobstation edit end
   - type: Sprite
     state: icon
+  - type: StaticPrice #DH
+    price: 36
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.99
   - type: Clothing
+    equipDelay: 1.4 #DH
+    unequipDelay: 1
     slots: [innerclothing]
     equipSound:
       path: /Audio/Items/jumpsuit_equip.ogg

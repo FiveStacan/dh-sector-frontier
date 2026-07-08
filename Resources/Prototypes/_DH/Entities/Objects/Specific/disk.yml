@@ -1,0 +1,13 @@
+- type: entity
+  parent: ResearchDisk
+  id: ResearchDisk10000Present
+  name: research point disk (10000)
+  description: A disk for the R&D server containing 50000 points.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Specific/Research/researchdisk.rsi
+    state: icon_present
+  - type: StaticPrice
+    price: 2000
+  - type: ResearchDisk
+    points: 10000

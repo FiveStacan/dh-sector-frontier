@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Tinnia
   parent: BasePOI
-  name: "Tinnia's Rest"
+  name: "Ресторан Триннька"
   minimumDistance: 1200
   maximumDistance: 2900
   spawnGroup: RestStop
@@ -21,13 +21,16 @@
     icon: /Textures/_Lua/Interface/Radar/space-outpost.png
     scale: 1.2
     allowWhenHidden: true
+  - type: StationTransit
+    routes:
+      MinorPointsOfInterest: 10
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
 
 - type: gameMap
   id: Tinnia
-  mapName: "Tinnia's Rest"
+  mapName: "Ресторан Триннька"
   mapPath: /Maps/_NF/POI/tinnia.yml
   minPlayers: 0
   stations:
@@ -35,4 +38,4 @@
       stationProto: DeadDropFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Tinnia's Rest"
+          mapNameTemplate: "Ресторан Тринньки"

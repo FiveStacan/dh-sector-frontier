@@ -18,7 +18,7 @@
     Glass: 1000
     Gold: 300
     Silver: 600
-    Magmite: 2000 
+    Magmite: 2000
 
 - type: latheRecipe
   id: WeaponMagmiteAccelerator
@@ -47,5 +47,15 @@
   materials:
     Steel: 4000
     Gold: 1000
-    Silver: 2000
+    Silver: 2300
+    Uranium: 1000
+
+- type: latheRecipe
+  id: ClothingShoesBootsMagArmy
+  result: ClothingShoesBootsMagArmy
+  completetime: 21
+  materials:
+    Steel: 4300
+    Gold: 1100
+    Silver: 2350
     Uranium: 1000

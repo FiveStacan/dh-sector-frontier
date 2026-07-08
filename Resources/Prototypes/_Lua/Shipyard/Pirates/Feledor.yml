@@ -9,7 +9,7 @@
   name: Feledor
   description: Нет документации
   limit: 1
-  price: 530000
+  price: 1059990 #DH Shuttle price balance #530000
   category: Large
   group: BlackMarket
   whitelist:

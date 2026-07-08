@@ -37,10 +37,10 @@
     - Intergalactic
     # Lua end
   - type: LuaSprint # Lua
-    maxSprint: 100
+    maxSprint: 30
     drainPerSecond: 6.0
     regenPerSecond: 7.0
-    regenDelay: 0.30
+    regenDelay: 0.32
     recoverThresholdFraction: 0.30
 
 - type: entity

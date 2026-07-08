@@ -1,0 +1,136 @@
+- type: entity
+  name: магмитовый бинокль
+  parent: Binoculars
+  id: BinocularsMagmite
+  description: Used for long-distance surveillance.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Tools/magmitbinoculars.rsi
+  - type: Clothing
+    sprite: _DH/Objects/Tools/magmitbinoculars.rsi
+    quickEquip: false
+    slots:
+    - Neck
+  - type: UseDelay
+    delay: 4.0
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 12
+    pvsIncrease: 1
+  - type: StaticPrice
+    price: 670
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Magmite: 40
+
+#region RPD
+
+# - type: entity
+#   id: ADTRPD
+#   parent: BaseItem
+#   name: RPD
+#   description: The rapid pipe dispenser is used to quickly build structures for atmosphere operation and disposal.
+#   components:
+#   - type: RPD
+#     availablePrototypes:
+#     - ADTFireAlarm
+#     - ADTGasPipeBend
+#     - ADTGasPipeStraight
+#     - ADTGasPipeHalf
+#     - ADTGasPipeFourway
+#     - ADTGasPipeTJunction
+#     - ADTGasPressurePump
+#     - ADTGasMixer
+#     - ADTGasMixerFlipped
+#     - ADTGasFilter
+#     - ADTGasFilterFlipped
+#     - ADTGasVolumePump
+#     - ADTGasPassiveVent
+#     - ADTGasOutletInjector
+#     - ADTRadiator
+#     - ADTGasVentPump
+#     - ADTGasValve
+#     - ADTGasVentScrubber
+#     # - ADTAtmosDeviceFanTiny Удалено в целях баланса
+#     - ADTGasPassiveGate
+#     - ADTGasDualPortVentPump
+#     - ADTSignalControlledValve
+#     - ADTPressureControlledValve
+#     - ADTDisposalUnit
+#     - ADTMailingUnit
+#     - ADTGasPort
+#     - ADTDisposalJunctionFlipped
+#     - ADTDisposalJunction
+#     - ADTDisposalRouterFlipped
+#     - ADTDisposalRouter
+#     - ADTDisposalTagger
+#     - ADTDisposalBend
+#     - ADTDisposalYJunction
+#     - ADTDisposalSignalRouter
+#     - ADTDisposalSignalRouterFlipped
+#     - ADTDisposalTrunk
+#     - ADTDisposalPipe
+#     - ADTAirSensor
+#     - ADTFloorDrain
+#     - ADTAirAlarm
+#     - ADTDeconstruct
+#   - type: LimitedCharges
+#     maxCharges: 130
+#     lastCharges: 130
+#   - type: UseDelay
+#   - type: Sprite
+#     sprite: _DH/Objects/Tools/rpd.rsi
+#     state: icon
+#   - type: Item
+#     size: Normal
+#   - type: Clothing
+#     sprite: _DH/Objects/Tools/rpd.rsi
+#     quickEquip: false
+#     slots:
+#     - Belt
+#   - type: PhysicalComposition
+#     materialComposition:
+#       Steel: 500
+#       Plastic: 100
+#   - type: StaticPrice
+#     price: 150
+#   - type: UserInterface
+#     interfaces:
+#       enum.RpdUiKey.Key:
+#         type: RPDMenuBoundUserInterface
+#   - type: ActivatableUI
+#     key: enum.RpdUiKey.Key
+
+
+# - type: entity
+#   id: ADTRPDEmpty
+#   parent: ADTRPD
+#   suffix: Empty
+#   components:
+#   - type: LimitedCharges
+#     lastCharges: 0
+
+# - type: entity
+#   id: ADTRPDRecharging
+#   parent: ADTRPD
+#   name: experimental RPD
+#   description: A bluespace-enhanced rapid pipe dispenser that passively generates its own compressed matter.
+#   suffix: Recharging
+#   components:
+#   - type: LimitedCharges
+#     maxCharges: 20
+#     lastCharges: 20
+#   - type: AutoRecharge
+#     rechargeDuration: 10
+#   - type: Sprite
+#     sprite: _DH/Objects/Tools/rpd.rsi
+#     state: icon
+#     color: "#347534"
+#   - type: Item
+#     size: Normal
+#   - type: Clothing
+#     sprite: _DH/Objects/Tools/rpd.rsi
+#     quickEquip: false
+#     slots:
+#     - Belt

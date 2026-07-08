@@ -48,7 +48,9 @@ ent-FloorTileItemGreySteelCommercial = серый офисный пол
 ent-FloorTileItemSteelGreyMonoCommercial = серые офисные моно плиты
 
 ent-FloorTileItemRedWood = пол из красной древесины
-ent-FloorTileItemDarkWood = пол из тёмной древесины
+ent-FloorTileItemWoodRedOLD = пол из старой красной древесины
+ent-FloorTileItemWoodDark = пол из тёмной древесины
+ent-FloorTileItemWoodDarkOLD = пол из тёмной древесины
 ent-FloorTileItemSoft = мягкий пол
 
 V-half-lattice = вертикальная половинка решётки

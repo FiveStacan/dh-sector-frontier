@@ -7,7 +7,7 @@
   id: Yunk_P
   name: SFC Yunk-P #Strenght.Firmness.Confidence.
   description: Некогда культовый шаттл флота Нанотрейзен. Ныне является абсолютной переделкой под гражданские нужды.Имеет гидропоннику, кухню, хим. уголок.
-  price: 109563
+  price: 412000 #121300 #123000 #DH Shuttle price balance
   category: Large
   group: Shipyard
   whitelist:
@@ -38,7 +38,8 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Contractor: [ 0, 0 ]
-            Pilot: [ 0, 0 ]
-            Mercenary: [ 0, 0 ]
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]
+            ChefInterview: [ 0, 0 ] #DH
 

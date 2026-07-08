@@ -49,6 +49,13 @@ public sealed partial class ResearchServerComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public List<EntityUid> Clients = new();
 
+    [AutoNetworkedField]
+    [DataField("gridLocked"), ViewVariables(VVAccess.ReadWrite)]
+    public bool GridLocked;
+
+    [DataField("networkLinkRange"), ViewVariables(VVAccess.ReadWrite)]
+    public float NetworkLinkRange = 250f;
+
     [DataField("nextUpdateTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
     public TimeSpan NextUpdateTime = TimeSpan.Zero;
 

@@ -10,7 +10,7 @@
   description: Средне-малый корабль для патруля космоса. Имеет Торпедное вооружение малых размеров.
    Также имеет посредственное бронирование.
   limit: 5
-  price: 118141
+  price: 328141 #DH Shuttle price balance 118141
   category: Medium
   group: Security
   whitelist:

@@ -51,6 +51,7 @@
   - MechEquipmentKineticAccelerator
   - MechEquipmentHonkerBananaMortar
   - MechEquipmentHonkerMousetrapMortar
+  - MechEquipmentChainSword #DH
 
 - type: latheRecipePack
   id: MechMiscStatic

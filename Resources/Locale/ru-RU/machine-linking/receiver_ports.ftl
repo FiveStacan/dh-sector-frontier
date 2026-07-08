@@ -54,3 +54,5 @@ signal-port-name-logic-input-b = Порт В
 signal-port-description-logic-input-b = Второй порт логического элемента.
 signal-port-name-logic-input = Вход
 signal-port-description-logic-input = Входной порт, который принимает только уровни сигнала, высокий или низкий.
+signal-port-name-research-console-receiver = Консоль РнД
+signal-port-description-research-console-receiver = Приёмник подключения консоли РнД к серверу.

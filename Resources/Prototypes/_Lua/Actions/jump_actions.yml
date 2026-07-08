@@ -7,7 +7,37 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    useDelay: 8
+    useDelay: 6
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:LuaDirectionalJumpEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: ActionLuaFastDirectionalJump
+  name: Jump
+  description: Activate the propulsion system and propel yourself in the direction you are looking.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 3
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:LuaDirectionalJumpEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: ActionLuaLongDirectionalJump
+  name: Jump
+  description: Activate the propulsion system and propel yourself in the direction you are looking.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 9
     icon:
       sprite: Interface/Actions/jump.rsi
       state: icon

@@ -141,6 +141,7 @@
   - type: BankAccount # Frontier
   - type: MovementSpeedModifier
     baseWalkSpeed: 30
+    baseSprintSpeed: 40
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: hugging-success-generic

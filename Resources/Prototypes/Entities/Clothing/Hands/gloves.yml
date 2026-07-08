@@ -100,9 +100,9 @@
   description: Regal blue gloves, with a nice gold trim. Swanky.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Hands/Gloves/captain.rsi # Lua
+    sprite: Clothing/Hands/Gloves/captain.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Hands/Gloves/captain.rsi # Lua
+    sprite: Clothing/Hands/Gloves/captain.rsi
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-durathread
@@ -110,6 +110,14 @@
   - type: FingerprintMask
   - type: PirateBountyItem # Frontier
     id: ClothingHandsGlovesCaptain # Frontier
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+        Piercing: 0.99
+  - type: StaticPrice
+    price: 55 #DH
 
 - type: entity
   parent: ClothingHandsBase
@@ -277,6 +285,13 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Slash: 0.99
+        Piercing: 0.99
+  - type: StaticPrice
+    price: 50 #DH
 
 # can't parent combat gloves since they are butcherable
 - type: entity

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by erhardsteinhauer (discord/github)",
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "fog",
+      "directions": 4
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

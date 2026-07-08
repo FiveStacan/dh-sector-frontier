@@ -101,3 +101,192 @@
         - WallRockSandDiamond
         - WallRockSnowDiamond
       superRareChance: 0.1
+
+#DH
+- type: entity
+  name: периодический спавнер камней тюрьмы
+  id: RockWallTimedSpawnerPrisonWallRock
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: blue
+        - sprite: Objects/Weapons/Melee/pickaxe.rsi
+          state: pickaxe
+        - state: timed
+    #- type: Timer
+    - type: TimedSpawner
+      prototypes:
+        - RandomScrapSalvage
+        - RandomScrapSalvage
+        - RandomScrapSalvage
+        - RandomScrapSalvage
+
+        - RandomSpawner
+        - RandomSpawner
+        - RandomSpawner
+
+        - WallCobblebrick
+
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+        - WallRock
+
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+        - WallRockCoal
+
+        - WallRockQuartz
+        - WallRockQuartz
+        - WallRockQuartz
+        - WallRockQuartz
+
+        - WallRockTin
+        - WallRockTin
+        - WallRockTin
+        - WallRockTin
+        - WallRockTin
+        - WallRockTin
+        - WallRockTin
+
+        - WallRockSalt
+        - WallRockSalt
+        - WallRockSalt
+
+        - WallRockGold
+        - WallRockGold
+
+        - WallRockSilver
+        - WallRockSilver
+
+        - WallRockPlasma
+        - WallRockPlasma
+
+        - WallRockUranium
+        - WallRockUranium
+
+        - WallRockBananium
+
+        - WallRockArtifactFragment
+        - WallRockArtifactFragment
+
+        - WallRockDiamond
+
+#        - WallRockGems
+
+#        - WallRockMagmite
+      chance: 0.65
+      intervalSeconds: 720
+      minimumEntitiesSpawned: 1
+      maximumEntitiesSpawned: 1
+
+- type: entity
+  id: RockMineralSpawnerPrison
+  parent: MarkerBase
+  name: Спавнер камней тюрьмы
+  suffix: одноразовый, крабы
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Structures/Walls/rock.rsi
+      state: rock
+    - sprite: Objects/Weapons/Melee/pickaxe.rsi
+      state: pickaxe
+  - type: EntityTableSpawner
+    offset: 0
+    table: !type:NestedSelector
+      tableId: PrisonRockMineralSoft
+      prob: 0.91
+
+- type: entityTable
+  id: PrisonRockMineralSoft
+  table: !type:GroupSelector
+    children:
+    - id: RandomScrapSalvage
+      weight: 0.025
+    - id: NFWallCobblebrick
+      weight: 0.002
+    - id: WallRock
+      weight: 0.52
+    - id: WallRockCoal
+      weight: 0.14
+    - id: WallRockTin
+      weight: 0.12
+    - id: WallRockQuartz
+      weight: 0.075
+    - id: WallRockSalt
+      weight: 0.075
+    - id: WallRockGold
+      weight: 0.025
+    - id: WallRockSilver
+      weight: 0.02
+    - id: WallRockPlasma
+      weight: 0.04
+    - id: WallRockUranium
+      weight: 0.02
+    - id: WallRockBananium
+      weight: 0.01
+    - id: WallRockArtifactFragment
+      weight: 0.01
+    - id: WallRockDiamond
+      weight: 0.002
+    - id: NFWallRockBluespace
+      weight: 0.002
+    - id: NFRockElementalSpawner
+      weight: 0.02

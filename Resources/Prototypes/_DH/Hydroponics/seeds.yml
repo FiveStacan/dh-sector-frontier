@@ -1,0 +1,30 @@
+- type: seed
+  id: redApple
+  name: seeds-redapple-name
+  noun: seeds-noun-seeds
+  displayName: seeds-redapple-display-name
+  plantRsi: _DH/Objects/Specific/Hydroponics/red_apple.rsi
+  packetPrototype: RedAppleSeeds
+  productPrototypes:
+    - FoodRedApple
+  harvestRepeat: Repeat
+  lifespan: 60
+  maturation: 7
+  production: 7
+  yield: 2
+  potency: 12
+  waterConsumption: 1.1
+  nutrientConsumption: 0.9
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+    Sugar:
+      Min: 2
+      Max: 10
+      PotencyDivisor: 10

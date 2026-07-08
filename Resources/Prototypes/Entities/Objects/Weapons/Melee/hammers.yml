@@ -48,8 +48,9 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 5
-        Structural: 5
+        Shock: 4
+        Blunt: 4
+        Structural: 4
     soundHit:
       path: /Audio/Effects/tesla_consume.ogg
       params:
@@ -57,13 +58,14 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 20
-        Structural: 25
+        Shock: 17
+        Blunt: 12
+        Structural: 16
   - type: DamageOtherOnHit
     damage:
       types:
-        Blunt: 15
-        Structural: 15
+        Blunt: 10
+        Structural: 14
   - type: Item
     size: Ginormous
 

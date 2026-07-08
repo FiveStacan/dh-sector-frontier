@@ -3,7 +3,7 @@
   parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
   name: Космический Кит
   description: Любимый питомец богов
-  categories: [ HideSpawnMenu ]
+  #categories: [ HideSpawnMenu ]
   components:
   - type: SpaceWhale
   - type: TailedEntity

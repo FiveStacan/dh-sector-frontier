@@ -1,0 +1,43 @@
+- type: entity
+  parent: OreBase
+  id: PyroOre
+  name: Pyro ore
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: PyroOre
+    count: 40
+  - type: Sprite
+    sprite: _DH/Objects/Materials/ore.rsi
+    state: pyro
+  - type: Item
+    sprite: _DH/Objects/Materials/ore.rsi
+    heldPrefix: pyro
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawPyro: 100
+  - type: Extractable
+    grindableSolutionName: pyro
+  - type: SolutionContainerManager
+    solutions:
+      pyro:
+        reagents:
+        - ReagentId: Sulfur
+          Quantity: 12
+
+- type: entity
+  parent: PyroOre
+  id: PyroOre1
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: PyroOre
+  id: PyroOre10
+  suffix: 10
+  components:
+  - type: Stack
+    count: 10

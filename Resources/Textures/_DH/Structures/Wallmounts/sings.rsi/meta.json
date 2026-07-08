@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
+  "states": [
+    {
+      "name": "direction_bar",
+      "directions": 4
+    },
+    {
+      "name": "one"
+    },
+	{
+      "name": "two"
+    },
+    {
+      "name": "three"
+    },
+    {
+      "name": "four"
+    },
+    {
+      "name": "five"
+    },
+    {
+      "name": "six"
+    },
+    {
+      "name": "seven"
+    },
+    {
+      "name": "eight"
+    },
+    {
+      "name": "nine"
+    },
+    {
+      "name": "zero"
+    }
+  ]
+}

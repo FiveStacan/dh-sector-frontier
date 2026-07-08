@@ -20,16 +20,16 @@
   category: cargoproduct-category-name-materials
   group: market
 
-- type: cargoProduct
-  id: MaterialFuelTankHighCapacity
-  abstract: true
-  icon:
-    sprite: Structures/Storage/tanks.rsi
-    state: highfueltank
-  product: WeldingFuelTankHighCapacity
-  cost: 5000
-  category: cargoproduct-category-name-materials
-  group: market
+# - type: cargoProduct
+#   id: MaterialFuelTankHighCapacity
+#   abstract: true
+#   icon:
+#     sprite: Structures/Storage/tanks.rsi
+#     state: highfueltank
+#   product: WeldingFuelTankHighCapacity
+#   cost: 15750
+#   category: cargoproduct-category-name-materials
+#   group: market
 
 - type: cargoProduct
   id: MaterialWaterTankHighCapacity
@@ -38,7 +38,7 @@
     sprite: Structures/Storage/tanks.rsi
     state: highwatertank-2
   product: WaterTankHighCapacity
-  cost: 3300
+  cost: 8200
   category: cargoproduct-category-name-materials
   group: market
 
@@ -48,7 +48,7 @@
     sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
     state: constructionbox
   product: NFMagnetBoxConstruction
-  cost: 1000
+  cost: 2300
   category: cargoproduct-category-name-materials
   group: market
 
@@ -58,7 +58,7 @@
     sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
     state: rubbishbox
   product: NFMagnetBoxRubbish
-  cost: 1000
+  cost: 2000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -68,6 +68,6 @@
     sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
     state: treasurebox-closed
   product: NFMagnetBoxTreasure
-  cost: 1000
+  cost: 10000
   category: cargoproduct-category-name-materials
   group: market

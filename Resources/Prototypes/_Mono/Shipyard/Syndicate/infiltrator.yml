@@ -2,8 +2,8 @@
   id: MonoInfiltrator
   parent: BaseVesselAntag
   name: Infiltrator
-  description: A light syndicate frigate meant for raiding enemy stations. Armed to the teeth in missiles and CYREXAs.
-  price: 241999
+  description: Лёгкий фрегат Синдиката, предназначенный для налётов на вражеские станции. Вооружён до зубов ракетами и установками CYREXA.
+  price: 504999 #DH Shuttle price balance #241999
   category: Medium
   group: Typan
   access: SyndicateAgent

@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license":"CC-BY-SA-4.0",
+    "copyright":"Make for Dark Haven, by discord: FiveStacan",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "perma_prisoner"
+        },
+        {
+            "name": "PrisonPilot"
+        },
+        {
+            "name": "PrisonGuard"
+        },
+        {
+            "name": "HeadOfPrison"
+        },
+        {
+            "name": "PrisonDoctor"
+        },
+        {
+            "name": "PrisonWorker"
+        },
+        {
+            "name": "PrisonChef"
+        }
+    ]
+}

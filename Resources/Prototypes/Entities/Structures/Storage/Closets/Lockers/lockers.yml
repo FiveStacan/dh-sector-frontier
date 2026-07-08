@@ -510,6 +510,22 @@
   - type: EntityStorageVisuals
     stateDoorClosed: genpop_door_8
 
+- type: entity #DH
+  id: LockerPrisoner9
+  parent: LockerPrisoner
+  suffix: 9
+  components:
+  - type: EntityStorageVisuals
+    stateDoorClosed: genpop_door_9
+
+- type: entity #DH
+  id: LockerPrisoner0
+  parent: LockerPrisoner
+  suffix: 0
+  components:
+  - type: EntityStorageVisuals
+    stateDoorClosed: genpop_door_nt
+
 # Detective
 - type: entity
   id: LockerDetective

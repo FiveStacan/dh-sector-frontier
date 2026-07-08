@@ -32,6 +32,6 @@
 - type: latheRecipePack
   id: LuaWorldFloorTilesStatic # to avoid conflicts not named - Lua
   recipes:
-  - FloorTileItemRedWood
-  - FloorTileItemDarkWood
+  - FloorTileItemWoodRedOLD
+  - FloorTileItemWoodDarkOLD
   - FloorTileItemSoft

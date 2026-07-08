@@ -22,6 +22,9 @@
     doNotCull: true
   - type: IFF
     color: "#00b7eb"
+  - type: StationTransit
+    routes:
+      SpawnPoints: 30
 
 - type: gameMap
   id: Medical
@@ -45,6 +48,8 @@
             Paramedic: [ 5, 5 ] #Lua 2<5
             MedicalDoctor: [ 3, 3 ] #Lua
             Chemist: [ 1, 1 ] #Lua
+            Pilot: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity

@@ -1,4 +1,5 @@
 using Content.Shared._Lua.StationRecords;
+using Content.Shared._NF.StationRecords;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.StationRecords;
 using Robust.Client.UserInterface;
@@ -23,6 +24,12 @@ public sealed class GeneralStationRecordConsoleBoundUserInterface : BoundUserInt
             SendMessage(new SelectStationRecord(key));
         _window.OnFiltersChanged += (type, filterValue) =>
             SendMessage(new SetStationRecordFilter(type, filterValue));
+        _window.OnJobAdd += job =>
+            SendMessage(new AdjustStationJobMsg(job.Id, 1));
+        _window.OnJobSubtract += job =>
+            SendMessage(new AdjustStationJobMsg(job.Id, -1));
+        _window.OnAdvertisementChanged += advertisement =>
+            SendMessage(new SetStationAdvertisementMsg(advertisement));
         _window.OnCaptainIdPressed += () => SendMessage(new ItemSlotButtonPressedEvent(ShipCrewManagement.CaptainIdSlotId));
         _window.OnTargetIdPressed += () => SendMessage(new ItemSlotButtonPressedEvent(ShipCrewManagement.TargetIdSlotId));
         _window.OnAssignShipRole += role => SendMessage(new AssignShipCrewRoleMsg(role));

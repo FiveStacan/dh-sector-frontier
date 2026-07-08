@@ -28,6 +28,9 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: StationTransit #DH
+    routes:
+      SpawnPoints: 50
 
 - type: gameMap
   id: GriftyLua

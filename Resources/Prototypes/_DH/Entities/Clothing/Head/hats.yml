@@ -1,0 +1,82 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapSupremeCommander
+  name: фуражка высшего главнокомандующего
+  description: Трудно осознать что она сейчас перед вами.
+  components:
+    - type: Sprite
+      sprite: _DH/Clothing/Head/Misc/purple_naval_cap.rsi
+    - type: Clothing
+      sprite: _DH/Clothing/Head/Misc/purple_naval_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretPrisonGuard
+  name: prison guard's beret
+  description: Why isn't it red?
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/prisonguard_beret.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/prisonguard_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapPrisonGuard
+  name: prison guard's cap
+  description: Why isn't it red?
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/cap.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCaptainWhite
+  name: white captain beret
+  description: A white captain beret, an icon of style.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/white_beret.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/white_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretSheriff
+  name: sheriff beret
+  description: Beret, a favorite among local sheriffs.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/sheriff_beret.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/sheriff_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapcapWhite
+  name: white cap cap
+  description: Stylish white cap cap.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/white_capcap.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/white_capcap.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapcapSheriff
+  name: sheriff cap
+  description: Stylish sheriff cap.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/sheriff_capcap.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/sheriff_capcap.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable

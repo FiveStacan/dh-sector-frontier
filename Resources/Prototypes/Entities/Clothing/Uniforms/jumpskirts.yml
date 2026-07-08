@@ -488,6 +488,8 @@
     sprite: _ADT/Clothing/Uniforms/Jumpskirt/capformaldress.rsi # Lua
   - type: Clothing
     sprite: _ADT/Clothing/Uniforms/Jumpskirt/capformaldress.rsi # Lua
+  - type: StaticPrice #DH
+    price: 40
 
 - type: entity
   parent: ClothingUniformSkirtBase

@@ -56,7 +56,7 @@
     Silver: 750
     Plasma: 1250 #Higher Plasma due to it needing less bluespace
     Uranium: 150
-    Bluespace: 300 #DeltaV: Bluespace Exists
+    Bluespace: 350 #DH #DeltaV: Bluespace Exists
 
 - type: latheRecipe
   id: ConstructionBagOfHolding
@@ -66,7 +66,7 @@
     Steel: 2000
     Silver: 750
     Plasma: 1000 #DeltaV: Bluespace Exists so less plasma used, no uranium
-    Bluespace: 200 #DeltaV: Bluespace Exists
+    Bluespace: 300 #DH #DeltaV: Bluespace Exists
 
 - type: latheRecipe
   id: SolarAssemblyFlatpack

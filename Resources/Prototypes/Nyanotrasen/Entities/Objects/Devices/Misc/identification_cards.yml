@@ -38,15 +38,15 @@
   - type: PresetIdCard
     job: Valet
 
-- type: entity
-  parent: IDCardStandard
-  id: PrisonGuardIDCard
-  name: prison guard ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - sprite: _DV/Objects/Misc/id_cards.rsi
-      state: nyanoprisonguard
-  - type: PresetIdCard
-    job: PrisonGuard
+# - type: entity
+#   parent: IDCardStandard
+#   id: PrisonGuardIDCard
+#   name: prison guard ID card
+#   components:
+#   - type: Sprite
+#     layers:
+#     - state: default
+#     - sprite: _DV/Objects/Misc/id_cards.rsi
+#       state: nyanoprisonguard
+#   - type: PresetIdCard
+#     job: PrisonGuard

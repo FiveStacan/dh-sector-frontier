@@ -631,9 +631,9 @@ CigaretteMilk: CigaretteHaloperidol
 CigaretteBread: CigaretteBbqSauce
 
 # 2025-05-09
-ClothingOuterHardsuitBasic: ClothingOuterHardsuitEVA
-ClothingHeadHelmetHardsuitBasic: null
-SuitStorageBasic: SuitStorageEVA
+#ClothingOuterHardsuitBasic: ClothingOuterHardsuitEVA
+#ClothingHeadHelmetHardsuitBasic: null
+#SuitStorageBasic: SuitStorageEVA
 
 # 2025-05-18
 # ClothingNeckCloakMiner: null # Frontier

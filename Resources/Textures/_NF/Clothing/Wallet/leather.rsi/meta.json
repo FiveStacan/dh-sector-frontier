@@ -23,6 +23,9 @@
             "name": "closed-prisoner"
         },
         {
+            "name": "closed-green"
+        },
+        {
             "name": "closed-cash"
         },
         {
@@ -47,6 +50,9 @@
             "name": "open-prisoner"
         },
         {
+            "name": "open-green"
+        },
+        {
             "name": "open-cash"
         },
         {
@@ -54,6 +60,30 @@
         },
         {
             "name": "open-paper"
+        },
+        {
+            "name": "closed-fs"
+        },
+        {
+            "name": "open-fs"
+        },
+        {
+            "name": "closed-purple"
+        },
+        {
+            "name": "open-purple"
+        },
+        {
+            "name": "closed-white"
+        },
+        {
+            "name": "open-white"
+        },
+        {
+            "name": "closed-pink"
+        },
+        {
+            "name": "open-pink"
         }
     ]
 }

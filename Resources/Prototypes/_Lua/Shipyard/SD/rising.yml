@@ -9,7 +9,7 @@
   name: Восход
   description: Тяжелая артиллерия с радаром. Обладает неплохой защитой
   limit: 1
-  price: 346452
+  price: 675200 #DH Shuttle price balance 346452
   category: Large
   group: Security
   whitelist:

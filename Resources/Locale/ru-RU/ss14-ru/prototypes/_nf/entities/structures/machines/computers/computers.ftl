@@ -1,6 +1,9 @@
 ent-ComputerPalletConsoleNFNormalMarket = консоль продажи товаров
     .desc = Используется для продажи товаров, размещенных на грузовых поддонах.
     .suffix = 1.0х Обычный
+ent-ComputerPalletConsoleNFLowNormalMarket = { ent-ComputerPalletConsoleNFNormalMarket }
+  .suffix = 0.85x Пониженный, Настольный
+  .desc = { ent-ComputerPalletConsoleNFNormalMarket.desc }
 ent-ComputerPalletConsoleNFHighMarket = { ent-ComputerPalletConsoleNFNormalMarket }
     .desc = Используется для продажи товаров, размещенных на грузовых поддонах.
     .suffix = 1.25х Высокий

@@ -41,11 +41,11 @@
     newJobTitle: null
     shipyardChannel: Nfsd
     newAccessLevels: [Captain, Security, Brig]
-  # - type: ShipyardListing
-  #   shuttles:
-  #   - Fighter
-  #   - Cleric
-  #   - Rogue
+  - type: ShipyardListing
+    shuttles:
+    - Fighter
+    - Cleric
+    - Rogue
 
 # The mccargo console
 - type: entity
@@ -55,7 +55,7 @@
   components:
   - type: ShipyardListing
     shuttles:
-    # - McDelivery
+    - McDelivery
     - Rhea
 
 # The caladrius console
@@ -75,39 +75,39 @@
       state: shipyard_medical
     - map: ["computerLayerKeys"]
       state: telesci_key
-  # - type: ShipyardListing
-  #   shuttles:
-  #   - Spirit
-  #   - Tyne
+  - type: ShipyardListing
+    shuttles:
+    - Spirit
+    - Tyne
 
 # The GASBENDA-A-A-AH (sick metal guitar riff) console
 - type: entity
   id: GasbenderMothershipComputer
   parent: BaseMothershipComputer
   name: gasbender shipyard console
-  # components:
-  # - type: ShipyardListing
-  #   shuttles:
-  #   - Adder
-  #   - Prospector
-  #   - Chisel
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Adder
+    - Prospector
+    - Chisel
 
 # The crescent console
 - type: entity
   id: CrescentMothershipComputer
   parent: BaseMothershipComputer
   name: crescent shipyard console
-  # components:
-  # - type: ShipyardListing
-  #   shuttles:
-  #   - Bocadillo
-  #   - PTS
-  #   - Construct
-  #   - Adder
-  #   - Loader
-  #   - Stringer
-  #   - Liquidator
-  #   - Honker
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Bocadillo
+    - PTS
+    - Construct
+    - Adder
+    - Loader
+    - Stringer
+    - Liquidator
+    - Honker
 
 # The Edison Console
 
@@ -115,12 +115,12 @@
   id: EdisonMothershipComputer
   parent: BaseMothershipComputer
   name: edison shipyard console
-  # components:
-  # - type: ShipyardListing
-  #   shuttles:
-  #   - Construct
-  #   - Retort
-  #   - Gasbender
-  #   - Ambition
-  #   - Hammer
-  #   - Gaslight
+  components:
+  - type: ShipyardListing
+    shuttles:
+    - Construct
+    - Retort
+    - Gasbender
+    - Ambition
+    - Hammer
+    - Gaslight

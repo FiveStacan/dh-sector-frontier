@@ -1,5 +1,5 @@
 - type: latheRecipePack
-  id: NFEngineeringToolsStatic
+  id: NFEngineeringToolsStatic # not use
   recipes:
   - WelderIndustrial
   - WelderIndustrialAdvanced
@@ -51,6 +51,24 @@
   - CondenserMachineCircuitBoard
 
 - type: latheRecipePack
+  id: NFEngineeringStructureBoardsStaticAutolathe
+  recipes:
+  - AirAlarmElectronics
+  - APCElectronics
+  - DoorElectronics
+  - FireAlarmElectronics
+  - FirelockElectronics
+  - FreezerElectronics
+  - MailingUnitElectronics
+  - StationMapElectronics
+  - SubstationMachineCircuitboard
+  - SMESMachineCircuitboard
+  #- PortableSMESMachineCircuitboard
+  #- StationMapElectronics
+  - WallmountSubstationElectronics
+  #- SMESAdvancedMachineCircuitboard
+
+- type: latheRecipePack
   id: NFEngineeringMaterialsStatic
   recipes:
   #- NFSheetRGlassProcessed
@@ -71,8 +89,8 @@
   - NanoManipulatorStockPart
   - PowerDrill
   - JawsOfLife
-  - BorgModuleRCD
-  - BorgModuleAdvancedTool
+  - WelderIndustrial #DH
+  - WelderIndustrialAdvanced #DH
 
 - type: latheRecipePack
   id: NFEngineeringBoards
@@ -85,8 +103,12 @@
   - ShipyardRCD
   - ShipyardRCDAmmo
   - PlanetaryRCD
+  - RCD #DH
+  - RCDAmmo #DH
+  - HandheldRoboAnalyzer #DH
   - ConstructionBagOfHolding
   - ClothingBeltChiefEngineer
+  - ClothingMaskGasCE
   - ClothingShoesBootsMag
   # - FireExtinguisherBluespace # Delta-V
   - RPED

@@ -6,7 +6,7 @@
   parent: BaseVessel
   id: Explorer
   name: Explorer
-  price: 28930
+  price: 74590 #DH Shuttle price balance #28930
   category: Micro
   group: Typan
   access: SyndicateAgent

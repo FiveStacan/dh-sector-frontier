@@ -74,14 +74,14 @@
     factions:
     - AllHostile
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletEnergyTurretDisabler # Frontier
+    proto: BulletEnergyTurretDisabler # Frontier
     fireCost: 100
   - type: BatteryWeaponFireModes
-    fireModes: [] # Frontier: add empty list
-    # - proto: BulletEnergyTurretDisabler # Frontier
-    #   fireCost: 100 # Frontier
-    # - proto: BulletEnergyTurretLaser # Frontier
-    #   fireCost: 100 # Frontier
+    fireModes:
+    - proto: BulletEnergyTurretDisabler # Frontier
+      fireCost: 100 # Frontier
+    - proto: BulletEnergyTurretLaser # Frontier
+      fireCost: 100 # Frontier
   - type: DeployableTurret
     retractedDamageModifierSetId: Metallic
     deployedDamageModifierSetId: FlimsyMetallic
@@ -189,3 +189,21 @@
   - type: DeviceNetwork
     receiveFrequencyId: TurretControl
     transmitFrequencyId: Turret
+
+- type: entity
+  parent: WeaponEnergyTurretStationBase
+  id: WeaponEnergyTurretFrontier
+  suffix: Command, Frontier
+  components:
+  - type: AccessReader
+    access: [["HeadOfSecurity"], ["HeadOfPersonnel"]]
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - Command
+    - Borg
+    - BasicSilicon
+  - type: Machine
+    board: WeaponEnergyTurretSecurityMachineCircuitboard
+  - type: DeviceNetwork
+    receiveFrequencyId: TurretControlFrontier
+    transmitFrequencyId: TurretFrontier

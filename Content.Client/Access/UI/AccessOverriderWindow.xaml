@@ -16,8 +16,8 @@
 
         </GridContainer>
         <Control MinSize="0 8"/>
-        <Label Name="MissingPrivilegesLabel" />
+        <RichTextLabel Name="MissingPrivilegesLabel" />
         <Control MinSize="0 4"/>
-        <Label Name="MissingPrivilegesText" />
+        <RichTextLabel Name="MissingPrivilegesText" />
     </BoxContainer>
 </DefaultWindow>

@@ -56,6 +56,16 @@
     Bluespace: 100 #DeltaV: Bluespace
 
 - type: latheRecipe
+  id: BluespacePillCanister
+  result: BluespacePillCanister
+  completetime: 4
+  materials:
+    Plastic: 150
+    Plasma: 50
+    Silver: 50
+    Bluespace: 60
+
+- type: latheRecipe
   id: SyringeBluespace
   result: SyringeBluespace
   completetime: 2
@@ -65,7 +75,7 @@
 #    Glass: 200 # Frontier
     Plasma: 30 # Frontier 50<30
     Silver: 30 # Frontier 50<30
-    Bluespace: 60 #DeltaV: Bluespace   
+    Bluespace: 60 #DeltaV: Bluespace
 
 - type: latheRecipe
   id: PillCanister

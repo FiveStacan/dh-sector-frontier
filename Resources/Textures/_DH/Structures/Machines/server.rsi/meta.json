@@ -1,0 +1,56 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license":"CC-BY-SA-4.0",
+    "copyright":"Make for Dark Haven, by discord: FiveStacan",
+    "states": [
+        {
+            "name": "server"
+        },
+        {
+            "name": "server-nopower"
+        },
+        {
+            "name": "server-off"
+        },
+        {
+            "name": "server-on"
+        },
+        {
+            "name": "server_o"
+        },
+        {
+            "name": "variant-crew"
+        },
+        {
+            "name": "variant-shiparmory"
+        },
+        {
+            "name": "variant-research"
+        },
+        {
+            "name": "variant-mercenary"
+        },
+        {
+            "name": "variant-nfsd"
+        },
+        {
+            "name": "variant-eng"
+        },
+        {
+            "name": "variant-debug"
+        },
+        {
+            "name": "variant-prison"
+        },
+        {
+            "name": "variant-syndicate"
+        },
+        {
+            "name": "variant-pirate"
+        }
+    ]
+}

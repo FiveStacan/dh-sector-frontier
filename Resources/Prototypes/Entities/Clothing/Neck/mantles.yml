@@ -8,6 +8,8 @@
     sprite: Clothing/Neck/mantles/capmantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/capmantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -16,9 +18,11 @@
   description: High visibility, check. RIG system, check. High capacity cell, check. Everything a chief engineer could need in a stylish mantle.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/mantles/cemantle.rsi # Lua
+    sprite: Clothing/Neck/mantles/cemantle.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/mantles/cemantle.rsi # Lua
+    sprite: Clothing/Neck/mantles/cemantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -30,6 +34,8 @@
     sprite: Clothing/Neck/mantles/cmomantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/cmomantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -41,6 +47,8 @@
     sprite: Clothing/Neck/mantles/hopmantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/hopmantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: [ClothingNeckBase, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
@@ -52,6 +60,8 @@
     sprite: Clothing/Neck/mantles/hosmantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/hosmantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -60,9 +70,11 @@
   description: For when long days in the office consist of explosives, poisonous gas, murder robots, and a fresh pizza from cargo; this mantle will keep you comfy.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/mantles/rdmantle.rsi # Lua
+    sprite: Clothing/Neck/mantles/rdmantle.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/mantles/rdmantle.rsi # Lua
+    sprite: Clothing/Neck/mantles/rdmantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -74,6 +86,8 @@
     sprite: Clothing/Neck/mantles/qmmantle.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/qmmantle.rsi
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   parent: ClothingNeckBase

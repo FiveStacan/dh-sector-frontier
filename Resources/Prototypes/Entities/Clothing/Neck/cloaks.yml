@@ -8,6 +8,8 @@
     sprite: Clothing/Neck/Cloaks/centcomcloakformal.rsi
   - type: StealTarget
     stealGroup: HeadCloak # leaving this here because I suppose it might be interesting?
+  - type: StaticPrice
+    price: 48 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -16,9 +18,11 @@
   description: A pompous and comfy blue cloak with a nice gold trim, while not particularly valuable as your other possessions, it sure is fancy.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Neck/Cloaks/cap.rsi # Lua
+    sprite: Clothing/Neck/Cloaks/cap.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: [ClothingNeckBase, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
@@ -30,6 +34,8 @@
     sprite: Clothing/Neck/Cloaks/hos.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -41,6 +47,8 @@
     sprite: Clothing/Neck/Cloaks/ce.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -52,6 +60,8 @@
     sprite: Clothing/Neck/Cloaks/cmo.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -63,6 +73,8 @@
     sprite: Clothing/Neck/Cloaks/rd.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -74,6 +86,8 @@
     sprite: Clothing/Neck/Cloaks/qm.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -85,6 +99,8 @@
     sprite: Clothing/Neck/Cloaks/hop.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -94,6 +110,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/herald.rsi
+  - type: StaticPrice
+    price: 40 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -103,6 +121,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/nanotrasen.rsi
+  - type: StaticPrice
+    price: 44 #DH
 
 - type: entity
   parent: ClothingNeckBase # Frontier: removed BaseCommandContraband
@@ -111,9 +131,11 @@
   description: A lavish and decorated cloak for special occasions.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Neck/Cloaks/capcloakformal.rsi # Lua
+    sprite: Clothing/Neck/Cloaks/capcloakformal.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 44 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -125,16 +147,20 @@
     sprite: Clothing/Neck/Cloaks/admin.rsi
   - type: StealTarget
     stealGroup: HeadCloak
+  - type: StaticPrice
+    price: 30
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakSalvagerSupreme
   name: supereme salvager's cloak
   description: Worn by the most skilled salvagers, for one who has mastered space and made the mining asteroid his domain. They don't just hand these things out, y'know?
-  categories: [HideSpawnMenu] # Frontier
+  #categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/miner.rsi
+  - type: StaticPrice
+    price: 40 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -164,6 +190,8 @@
   - type: Construction #Lua
     graph: GoliathCloack
     node: GoliathCloack
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: [ClothingNeckBase, BaseC1PirateContrabandNoValue] # Lua-changes: added BaseC1PirateContrabandNoValue
@@ -173,6 +201,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/piratecap.rsi
+  - type: StaticPrice
+    price: 44 #DH
 
 - type: entity
   parent: ClothingNeckBase

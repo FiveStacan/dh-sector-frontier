@@ -8,3 +8,5 @@
     sprite: _Lua/Clothing/Neck/Misc/cap_coat_neck.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Misc/cap_coat_neck.rsi
+  - type: StaticPrice
+    price: 44 #DH

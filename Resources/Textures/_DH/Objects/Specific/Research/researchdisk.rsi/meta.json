@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon_present"
+    },
+    {
+      "name": "icon_arsenal"
+    },
+    {
+      "name": "icon_engineering"
+    },
+    {
+      "name": "icon_medical"
+    },
+    {
+      "name": "icon_salvage"
+    },
+    {
+      "name": "icon_science"
+    },
+    {
+      "name": "icon_service"
+    },
+    {
+      "name": "icons_shiparmory"
+    }
+  ]
+}

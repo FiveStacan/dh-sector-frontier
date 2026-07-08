@@ -371,7 +371,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 30000 # Lua
+            damage: 15000 #DH 30000 # Lua
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -414,7 +414,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 30000 # Lua
+        damage: 7500 #DH 30000 # Lua
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -443,7 +443,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000 #500 - Lua
+        damage: 10000 #DH 20000 #500 - Lua
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -482,7 +482,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 10000 #500 - Lua
+        damage: 5000 #DH 10000 #500 - Lua
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -579,7 +579,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2500 # Lua 1200<2000<2500
+        damage: 2400 # Lua 1200<2000<2500
       behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
@@ -598,6 +598,8 @@
     damageModifierSet: StructuralMetallicStrongUltra
   - type: StaticPrice
     price: 250
+  - type: Reflect #DH
+    reflectProb: 0.05
 
 #Стены для монастыря Фауста
 - type: entity
@@ -618,7 +620,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 6000 # Lua 1200<7500<6000
+            damage: 5000 #DH # Lua 1200<7500<6000
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -651,7 +653,7 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 3500 # Lua 600<3500
+          damage: 3000 #DH # Lua 600<3500
         behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]
@@ -741,7 +743,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 1500
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -795,7 +797,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 14000
+            damage: 9000 #DH #14000
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -839,7 +841,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 8500
+        damage: 4500 #DH #8500
       behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
@@ -922,7 +924,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 14000
+        damage: 8500 #DH #14000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -1004,7 +1006,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 7000
+        damage: 4250 #DH #7000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

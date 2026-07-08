@@ -28,7 +28,7 @@
   - AberrantFleshExpeditionNF
   - ContrabandClothing
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -89,7 +89,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -125,7 +125,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -161,7 +161,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -197,7 +197,7 @@
   # - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -233,7 +233,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -269,7 +269,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -305,7 +305,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -341,7 +341,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -377,7 +377,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -413,7 +413,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -449,7 +449,7 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -485,7 +485,7 @@
   #- ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech
 
 - type: npcFaction
@@ -530,5 +530,5 @@
   - ContrabandClothing
   - ContrabandDetection
   ## Lua
-  - LuaNordFoll
+  - LuaTypan
   - LuaTech

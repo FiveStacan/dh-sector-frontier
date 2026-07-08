@@ -1,13 +1,15 @@
 using Content.Server._Lua.StationRecords.Systems;
 using Content.Server._NF.Station.Components;
+using Content.Server.Station.Components;
 using Content.Server.Administration.Logs;
-using Content.Server.GameTicking;
+using Content.Shared.Access.Systems;
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords.Components;
 using Content.Server.Popups;
 using Content.Shared._Lua.StationRecords;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.StationRecords;
+using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Database;
 using Content.Shared.Roles;
@@ -26,6 +28,8 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
     [Dependency] private readonly StationRecordsSystem _stationRecords = default!;
     [Dependency] private readonly StationJobsSystem _stationJobsSystem = default!; // Frontier
     [Dependency] private readonly IAdminLogManager _adminLog = default!; // Frontier
+    [Dependency] private readonly AccessReaderSystem _access = default!; // Frontier
+    [Dependency] private readonly IPrototypeManager _proto = default!; // Frontier
     [Dependency] private readonly ShipCrewAssignmentSystem _shipCrew = default!;// Lua
     [Dependency] private readonly PopupSystem _popup = default!; // Lua
 
@@ -80,25 +84,46 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
     // Frontier: job counts, advertisements
     private void OnAdjustJob(Entity<GeneralStationRecordConsoleComponent> ent, ref AdjustStationJobMsg msg)
     {
-        if (!IsAdminObserver(msg.Actor))
-        {
-            UpdateUserInterface(ent);
-            return;
-        }
-
         var stationUid = _station.GetOwningStation(ent);
         if (stationUid is EntityUid station)
         {
+            if (!CanAdjustJobs(station, msg.Actor))
+            {
+                UpdateUserInterface(ent);
+                return;
+            }
+
             _stationJobsSystem.TryAdjustJobSlot(station, msg.JobProto, msg.Amount, false, true);
             UpdateUserInterface(ent);
         }
     }
 
-    private bool IsAdminObserver(EntityUid uid)
+    private bool CanAdjustJobs(EntityUid stationUid, EntityUid actor)
     {
-        var proto = MetaData(uid).EntityPrototype;
-        return proto != null && proto.ID == GameTicker.AdminObserverPrototypeName;
+        if (!TryComp(stationUid, out StationJobsComponent? stationJobs) ||
+            stationJobs.Groups.Count == 0 && stationJobs.Tags.Count == 0)
+        {
+            return true;
+        }
+
+        var accessSources = _access.FindPotentialAccessItems(actor);
+        var access = _access.FindAccessTags(actor, accessSources);
+
+        if (stationJobs.Tags.Any(access.Contains))
+            return true;
+
+        foreach (var group in stationJobs.Groups)
+        {
+            if (!_proto.TryIndex(group, out var accessGroup))
+                continue;
+
+            if (accessGroup.Tags.Any(access.Contains))
+                return true;
+        }
+
+        return false;
     }
+
     private void OnFiltersChanged(Entity<GeneralStationRecordConsoleComponent> ent, ref SetStationRecordFilter msg)
     {
         if (ent.Comp.Filter == null ||

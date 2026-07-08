@@ -1,0 +1,33 @@
+- type: latheRecipePack
+  id: BackmenCash
+  recipes:
+  - SpaceCash
+  - SpaceCash10
+
+- type: latheRecipePack
+  id: BackmenCashEmag
+  recipes:
+  - SpaceCashemag
+
+- type: latheRecipePack
+  id: BackmenCashCentComm
+  recipes:
+  - SpaceCashCentComm
+
+- type: latheRecipePack
+  id: BackmenCashHack
+  recipes:
+  - SpaceCashHack100
+  - SpaceCashHack1000
+
+- type: latheRecipePack
+  id: ResearchDisks
+  recipes:
+  - ResearchDisk1000
+  - ResearchDisk5000
+
+- type: latheRecipePack
+  id: ResearchDisksAdw
+  recipes:
+  - ResearchDisk10000
+  - ResearchDisk25000

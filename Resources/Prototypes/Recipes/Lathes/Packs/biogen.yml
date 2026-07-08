@@ -11,8 +11,8 @@
   - BioGenEnzyme
   - BioGenFlour
   - BioGenSugar
- # - BioGenMonkeyCube # Frontier: use FriendlyCubesStatic pack instead
- # - BioGenKoboldCube # Frontier: use FriendlyCubesStatic pack instead
+  - BioGenMonkeyCube #DH # Frontier: use FriendlyCubesStatic pack instead
+  - BioGenKoboldCube #DH # Frontier: use FriendlyCubesStatic pack instead
   - BioGenCandle
   - BioGenPlantBGone
   - BioGenWeedKiller

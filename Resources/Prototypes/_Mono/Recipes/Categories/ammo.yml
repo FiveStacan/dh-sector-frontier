@@ -41,3 +41,7 @@
 - type: latheCategory #Lua
   id: CausticAmmo
   name: lathe-category-caustic-ammo
+
+- type: latheCategory #Lua
+  id: ExplosiveAmmo
+  name: lathe-category-explosive-ammo

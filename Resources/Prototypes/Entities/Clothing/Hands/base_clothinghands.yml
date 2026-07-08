@@ -9,9 +9,10 @@
     slots: [gloves]
   # Goobstation edit start
     equipSound:
-      path: /Audio/_Goobstation/Items/handling/generic_equip2.ogg
+      path: /Audio/_DH/Items/Equip/Gloves/sound1.ogg #DH
       params:
         volume: -4
+        maxDistance: 3
   # Goobstation edit end
   - type: Food
     requiresSpecialDigestion: true
@@ -35,6 +36,8 @@
         Heat: 5 # the average lightbulb only does around four damage!
   - type: DiseaseProtection #Backmen & Ataraxia anti viral
     protection: 0.1
+  - type: StaticPrice
+    price: 38 #DH
 
 - type: entity
   abstract: true

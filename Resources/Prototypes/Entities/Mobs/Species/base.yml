@@ -302,7 +302,7 @@
   - type: LayingDown # WD EDIT
   - type: StunVisuals
   - type: LuaJumpAbility # Lua
-    jumpDistance: 4
+    jumpDistance: 3 #DH 3<4
     directionalAction: ActionLuaDirectionalJump
     pointAction: null
 

@@ -9,7 +9,7 @@
   name: Пурга
   description: Хорошо бронированный штурмовик первой линии с 8 орудиями типа Marauder
   limit: 2
-  price: 165000
+  price: 359500 #DH Shuttle price balance 165000
   category: Medium
   group: Security
   whitelist:

@@ -57,6 +57,14 @@
     sprite: Clothing/Shoes/Boots/combatboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/combatboots.rsi
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.97
+        Slash: 0.98
+        Piercing: 0.98
+  - type: StaticPrice
+    price: 65 #DH
 
 - type: entity
   parent: ClothingShoesMilitaryBase

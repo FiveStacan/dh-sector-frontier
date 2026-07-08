@@ -7,7 +7,7 @@
   id: Hunter
   name: Hunter
   description: Небольшой бронированный штурмовой шаттл синдиката, идеально подходящий для коварных операций!
-  price: 70341
+  price: 168770 #DH Shuttle price balance #70341
   category: Small
   group: Typan
   access: SyndicateAgent

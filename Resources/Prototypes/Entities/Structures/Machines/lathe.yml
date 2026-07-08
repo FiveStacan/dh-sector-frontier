@@ -139,7 +139,7 @@
     - NFBasicEvaStatic # Frontier
     - NFBasicEVAToolsStatic # Frontier
     - NFMaterialElectronicsStatic # Frontier
-    - NFEngineeringStructureBoardsStatic # Frontier
+    - NFEngineeringStructureBoardsStaticAutolathe # Frontier #DH
     - NFServiceToolsStatic # Frontier
     - NFServiceStatic # Frontier
     - ReportingStatic # DeltaV
@@ -151,6 +151,10 @@
 #  - type: EmagLatheRecipes # comment from _Lua
 #    emagStaticPacks:
 #    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -229,7 +233,7 @@
     - Mining
     - AtmosTools
     # - EngineeringWeapons # Frontier
-    - Chemistry
+    - ChemistryDynamic #DH
     - Janitor
     - Instruments
     - Equipment
@@ -239,10 +243,15 @@
     - NFHardsuits # Frontier
     - NFService # Frontier
     - NFScience # Frontier
-    - NFPouches # Frontier
+    #- NFPouches # Frontier
     # WD EDIT START
     - VisionGoggles
     # WD EDIT END
+    #DH
+    - DHEngineering
+    - DHTools
+    - NFEngineeringBoardsStatic
+    - DHBaseOuterClothing
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
@@ -307,11 +316,12 @@
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
     - CircuitFloorsStatic
-    - NFScienceBoardsStatic # Frontier
+    #- NFScienceBoardsStatic # Frontier
     - NFServiceBoardsStatic # Frontier
     - NFSalvageBoardsStatic # Frontier
     - LuaCircuitBoardsStatic # Lua
     dynamicPacks:
+    - NFScienceBoardsStatic #DH
     - EngineeringBoards
     - CargoBoards
     - MedicalBoards
@@ -393,7 +403,7 @@
     - WeaponMechCombatShotgunIncendiary
     - WeaponMechCombatDisabler
     - WeaponMechCombatFlashbangLauncher
-    - WeaponMechCombatMissileRack8
+    - WeaponMechCombatMissileRack6 #WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
@@ -447,10 +457,9 @@
 
 - type: entity
   id: SecurityTechFab
-  parent: [BaseLatheLube, BaseC3CentCommContraband] # Lua-changes : added BaseC3CentCommContraband
+  parent: BaseLatheLube
   name: security techfab
   description: Prints equipment for use by security crew.
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
@@ -476,14 +485,14 @@
     - NfsdPracticeStatic # Frontier: SecurityPracticeStatic<NfsdPracticeStatic
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
     - SecurityWeaponsStatic
-    # dynamicPacks:
-    # - SalvageSecurityBoards # Frontier
-    # - SalvageSecurityWeapons # Frontier
-    # - SecurityEquipment # Frontier
-    # - SecurityBoards # Frontier
-    #- SecurityExplosives
+    dynamicPacks:
+    #- SalvageSecurityBoards # Frontier
+    - SalvageSecurityWeapons # Frontier
+    - SecurityEquipment # Frontier
+    - SecurityBoards #DH
+    - SecurityExplosives #DH
     #- SecurityAmmo # Frontier
-    #- SecurityWeapons # Frontier
+    - SecurityWeapons # Frontier
     #- SecurityDisablers # Frontier
     # Mono - Mech parts
     - WeaponMechCombatImmolationGun
@@ -495,6 +504,9 @@
     - WeaponMechCombatDisabler
     - WeaponMechCombatFlashbangLauncher
     - WeaponMechCombatMissileRack8
+    - WeaponMechCombatMissileRack6
+    #DH
+    - DHBaseArmor
   - type: MaterialStorage
     whitelist:
       tags:
@@ -510,7 +522,6 @@
   parent: [NFBlueprintReceiverBase, BaseLatheLube] # Frontier: added NFBlueprintReceiverBase
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
-  suffix: Need balance test
   components:
     - type: Sprite
       sprite: Structures/Machines/techfab.rsi
@@ -577,6 +588,7 @@
     - TopicalsStatic
     - ChemistryStatic
     - MedicalStatic
+    - MedicalBoardsStatic
     - RollerBedsStatic
     - MedicalClothingStatic
     - EmptyMedkitsStatic
@@ -601,8 +613,10 @@
     # - NFSurgeryMedicalToolsStatic #Frontier
     # - NFTopicalsStatic # Frontier
     # - NFMedicalArchetypeStatic # Frontier
-    # dynamicPacks: # Frontier
-    # - Chemistry # Frontier
+    dynamicPacks: # Frontier
+    - ChemistryDynamic #DH
+    - MedicalBoards #DH
+    - MedicalDynamic #DH
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

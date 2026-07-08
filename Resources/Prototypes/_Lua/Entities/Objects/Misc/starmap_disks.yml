@@ -21,8 +21,8 @@
 
 - type: entity
   parent: [CoordinatesDisk, BaseC3SyndicateContraband]
-  id: CoordinatesDiskNordfall
-  name: coordinates disk (Nordfall)
+  id: CoordinatesDiskTypan
+  name: coordinates disk (Typan)
   components:
   - type: StarMapCoordinatesDisk
     allowedSectors:

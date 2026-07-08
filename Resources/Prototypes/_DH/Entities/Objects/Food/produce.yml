@@ -1,0 +1,40 @@
+- type: entity
+  name: сладкое яблоко
+  parent: FoodProduceBase
+  id: FoodRedApple
+  description: Яблоки с повышенным содержанием сахара.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - apple
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7
+        - ReagentId: Vitamin
+          Quantity: 4
+        - ReagentId: Sugar
+          Quantity: 4
+  - type: Sprite
+    sprite: _DH/Objects/Specific/Hydroponics/red_apple.rsi
+  - type: Produce
+    seedId: redApple
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceApple
+        Quantity: 6
+      - ReagentId: Sugar
+        Quantity: 4
+  - type: Tag
+    tags:
+    - Fruit
+  - type: FoodSequenceElement
+    entries:
+      Burger: Apple
+      Taco: Apple
+  - type: StaticPrice
+    price: 8

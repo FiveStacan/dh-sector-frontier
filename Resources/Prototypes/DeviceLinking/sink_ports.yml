@@ -84,6 +84,11 @@
   description: signal-port-description-artifact-analyzer-receiver
 
 - type: sinkPort
+  id: ResearchConsoleReceiver
+  name: signal-port-name-research-console-receiver
+  description: signal-port-description-research-console-receiver
+
+- type: sinkPort
   id: InputA
   name: signal-port-name-logic-input-a
   description: signal-port-description-logic-input-a

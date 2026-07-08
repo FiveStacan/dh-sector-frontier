@@ -13,7 +13,14 @@
             - material: Steel
               amount: 20
               doAfter: 15
-        - to: woodDoor
+        - to: woodDoor #DH
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 25
+              doAfter: 15
+        - to: woodDoorDark
           completed:
             - !type:SnapToGrid { }
           steps:
@@ -74,6 +81,17 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 20
+          steps:
+            - tool: Anchoring
+              doAfter: 15
+    - node: woodDoorDark #DH
+      entity: WoodDoorDark
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 24
           steps:
             - tool: Anchoring
               doAfter: 15

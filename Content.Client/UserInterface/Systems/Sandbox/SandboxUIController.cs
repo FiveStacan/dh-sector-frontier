@@ -2,6 +2,8 @@
 using Content.Client.Administration.Managers;
 using Content.Client.Gameplay;
 using Content.Client.Markers;
+using Content.Client.Sandbox.DeviceLink;
+using Content.Client.Sandbox.MappingTransparency;
 using Content.Client.Sandbox;
 using Content.Client.SubFloor;
 using Content.Client.UserInterface.Controls;
@@ -37,6 +39,8 @@ public sealed class SandboxUIController : UIController, IOnStateChanged<Gameplay
     [Dependency] private readonly IPlayerManager _player = default!;
 
     [UISystemDependency] private readonly DebugPhysicsSystem _debugPhysics = default!;
+    [UISystemDependency] private readonly DeviceLinkOverlaySystem _deviceLinkOverlay = default!;
+    [UISystemDependency] private readonly MappingTransparencySystem _mappingTransparency = default!;
     [UISystemDependency] private readonly MarkerSystem _marker = default!;
     [UISystemDependency] private readonly SandboxSystem _sandbox = default!;
 
@@ -123,6 +127,10 @@ public sealed class SandboxUIController : UIController, IOnStateChanged<Gameplay
         _window.ToggleShadowsButton.Pressed = !_light.DrawShadows;
         _window.ShowMarkersButton.Pressed = _marker.MarkersVisible;
         _window.ShowBbButton.Pressed = (_debugPhysics.Flags & PhysicsDebugFlags.Shapes) != 0x0;
+        _window.ToggleMappingTransparencyButton.Pressed = _mappingTransparency.Enabled;
+        _window.ToggleMappingTransparencyButton.Visible = _mappingTransparency.CanEnable;
+        _window.ToggleDeviceLinkButton.Pressed = _deviceLinkOverlay.Enabled;
+        _window.ToggleDeviceLinkButton.Visible = _deviceLinkOverlay.CanEnable;
 
         _window.AiOverlayButton.OnPressed += args =>
         {
@@ -150,6 +158,17 @@ public sealed class SandboxUIController : UIController, IOnStateChanged<Gameplay
         _window.ToggleShadowsButton.OnToggled += _ => _sandbox.ToggleShadows();
         _window.SuicideButton.OnPressed += _ => _sandbox.Suicide();
         _window.ToggleSubfloorButton.OnPressed += _ => _sandbox.ToggleSubFloor();
+        _window.ToggleMappingAccessButton.OnPressed += _ => _console.ExecuteCommand("showaccessreaders");
+        _window.ToggleMappingTransparencyButton.OnPressed += _ =>
+        {
+            if (!_mappingTransparency.TrySetEnabled(!_mappingTransparency.Enabled))
+                SetToggleMappingTransparency(_mappingTransparency.Enabled);
+        };
+        _window.ToggleDeviceLinkButton.OnPressed += _ =>
+        {
+            if (!_deviceLinkOverlay.TrySetEnabled(!_deviceLinkOverlay.Enabled))
+                SetToggleDeviceLink(_deviceLinkOverlay.Enabled);
+        };
         _window.ShowMarkersButton.OnPressed += _ => _sandbox.ShowMarkers();
         _window.ShowBbButton.OnPressed += _ => _sandbox.ShowBb();
     }
@@ -228,6 +247,38 @@ public sealed class SandboxUIController : UIController, IOnStateChanged<Gameplay
             return;
 
         _window.ToggleSubfloorButton.Pressed = value;
+    }
+
+    public void SetToggleMappingTransparency(bool value)
+    {
+        if (_window == null)
+            return;
+
+        _window.ToggleMappingTransparencyButton.Pressed = value;
+    }
+
+    public void SetMappingTransparencyVisible(bool value)
+    {
+        if (_window == null)
+            return;
+
+        _window.ToggleMappingTransparencyButton.Visible = value;
+    }
+
+    public void SetToggleDeviceLink(bool value)
+    {
+        if (_window == null)
+            return;
+
+        _window.ToggleDeviceLinkButton.Pressed = value;
+    }
+
+    public void SetDeviceLinkVisible(bool value)
+    {
+        if (_window == null)
+            return;
+
+        _window.ToggleDeviceLinkButton.Visible = value;
     }
 
     #endregion

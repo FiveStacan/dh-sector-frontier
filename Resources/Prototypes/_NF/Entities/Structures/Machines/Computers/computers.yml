@@ -88,6 +88,14 @@
 
 - type: entity
   parent: ComputerPalletConsoleNFMarket
+  id: ComputerPalletConsoleNFLowNormalMarket
+  suffix: LowNormal
+  components:
+  - type: MarketModifier
+    mod: 0.85
+
+- type: entity
+  parent: ComputerPalletConsoleNFMarket
   id: ComputerPalletConsoleNFLowMarket
   suffix: Low
   components:

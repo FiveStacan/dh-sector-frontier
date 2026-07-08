@@ -243,7 +243,7 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_missilerack
   - type: Gun
-    fireRate: 1
+    fireRate: 1.1
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
@@ -251,7 +251,7 @@
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: NFBulletWeakRocket
-    fireCost: 25
+    fireCost: 30
   - type: Appearance
   - type: AmmoCounter
 
@@ -266,15 +266,15 @@
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_missilerack_six
   - type: Gun
-    fireRate: 1
+    fireRate: 1.15
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: NFBulletRocketMini #NFGrenadeBlast - Lua
-    fireCost: 100
+    proto: NFBulletRocketMiniMech #NFBulletRocketMini #NFGrenadeBlast - Lua
+    fireCost: 25
   - type: Appearance
   - type: AmmoCounter
 

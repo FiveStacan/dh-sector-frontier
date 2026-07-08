@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "taken from Cataclysm BN / Undeadpeople normal_terrain",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+        {
+            "name": "water0"
+
+        },
+        {
+            "name": "water1"
+
+        },
+        {
+            "name": "water2"
+
+        },
+        {
+            "name": "water3"
+
+        },
+        {
+            "name": "water4"
+
+        },
+        {
+            "name": "water5"
+
+        },
+        {
+            "name": "water6"
+
+        },
+        {
+            "name": "water7"
+
+        },
+        {
+            "name": "water8"
+
+        },
+        {
+            "name": "water9"
+
+        },
+        {
+            "name": "water10"
+
+        },
+        {
+            "name": "water11"
+
+        },
+        {
+            "name": "water12"
+
+        },
+        {
+            "name": "water13"
+
+        },
+        {
+            "name": "water14"
+
+        },
+        {
+            "name": "water15"
+
+        }
+    ]
+}

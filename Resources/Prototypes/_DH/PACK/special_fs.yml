@@ -1,0 +1,1110 @@
+- type: sponsorLoadout
+  id: FiveStakan
+  #sponsorOnly: true
+  ownerLogin: FiveStakan
+  tier: god
+  entities:
+    - ClothingBackpackFS
+#region
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackFS
+  name: рюкзак "FS"
+  description: Компактный и износостойкий рюкзак. Создовался вместе со специальной серией вещей "FS", которая, по какой то причине больше не выпускается.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/backpack.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/backpack.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,14,9
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+      toggleable-clothing: !type:ContainerSlot
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterHardsuitOmniFS
+    requiredSlot: BACK
+    slot: outerClothing
+
+
+- type: entity
+  parent: ClothingBackpackFS
+  id: ClothingBackpackFSFilled
+  name: рюкзак "FS"
+  description: Компактный и износостойкий рюкзак. Создовался вместе со специальной серией вещей "FS", которая, по какой то причине больше не выпускается.
+  suffix: sponsor, FS, Заполненный #DH
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingNeckFS
+      - id: ClothingBeltFSFilled
+      - id: ClothingShoesBootsMagFS
+      - id: ClothingHandsGlovesCombatFS
+      - id: ClothingUniformJumpsuitFS
+      - id: ClothingMaskGasFS
+      - id: ClothingEyesGlassesFS
+      - id: MedkitFilled
+      - id: AccordionInstrument
+      - id: PDAFS
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: SprayPainterAmmoFS
+      - id: RCDAmmoFS
+      - id: HypoFS
+      - id: DrinkMugFS
+      - id: PlushieThirty
+      - id: HandheldHealthAnalyzerUnpowered
+      - id: PlantAnalyzer
+      - id: PortableRechargerFS
+      - id: CaneFS
+      - id: ADTWeaponPistolX01FS
+      - id: ClothingHeadsetFS
+      - id: EncryptionKeyVip
+      - id: ClothingWalletLeatherFS
+
+- type: entity
+  parent: NFClothingBeltStorageBase
+  id: ClothingBeltFS
+  name: пояс «META-2»
+  description: Держит инструменты, выглядит стильно. Имеется надпись на внутренней стороне, "FS collection".
+  suffix: sponsor, FS #DH
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,10,1
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/belt.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/belt.rsi
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: ClothingBeltFS
+  id: ClothingBeltFSFilled
+  name: пояс «META-2»
+  description: Держит инструменты, выглядит стильно. Имеется надпись на внутренней стороне, "FS collection".
+  suffix: sponsor, FS, Заполненный #DH
+  components:
+  - type: StorageFill
+    contents:
+      - id: JawsOfLifeFS
+      - id: PowerDrillFS
+      - id: WelderFS
+      - id: MultitoolFS
+      - id: RCDFS
+      - id: SprayPainterFS
+      - id: ProjectorFieldFS
+      - id: HandHeldMassScannerFS
+      - id: HandheldCrewMonitorFS
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetFS
+  name: гарнитура "FS"
+  description: Гарнитура, обеспечивающая связь и возможность получения критической информации в полевых условиях.
+  suffix: sponsor #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/headset.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/headset.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyTraffic
+      - EncryptionKeyTrade
+      - EncryptionKeyMercenary
+      - EncryptionKeyMedical
+
+- type: entity
+  parent: NFBaseWallet
+  id: ClothingWalletLeatherFS
+  name: кошелёк "FS"
+  description: Стильный кошелёк для хранения налички. Имеются все основания считать что он из комплекта "FS".
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,4,1
+    whitelist:
+      components:
+      - Cash
+      - Paper
+      - NFCoin
+      - NFShipyardVoucher
+      - Card # single cards
+      - NFEmagPass
+  - type: Sprite
+    sprite: _NF/Clothing/Wallet/leather.rsi
+    layers:
+    - state: closed-fs
+      map: ["closeLayer"]
+    - state: open-fs
+      map: ["openLayer"]
+      visible: false
+    - state: closed-paper
+      map: ["closed-paper"] # scuffed values to deal with ItemMapper complaining
+      visible: false
+    - state: closed-cash
+      map: ["closed-cash"]
+      visible: false
+    - state: closed-coin
+      map: ["closed-coin"]
+      visible: false
+  - type: Item
+    sprite: _NF/Clothing/Wallet/leather.rsi
+  - type: Appearance
+  - type: ItemMapper
+    sprite: _NF/Clothing/Wallet/leather.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckFS
+  name: накидка "FS"
+  description: Немного потрепанная, неброская накидка на скафандр, на небольшом ярлыке написано, "FS collection".
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/cloak.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingOuterHardsuitAtmos
+  id: ClothingOuterHardsuitOmniFS
+  name: скафандр "OMNI-FS"
+  description: Отдельная вариация сверхпрочного скафандра "Omni", которая выпускалась в "FS" комплектации.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/hardsuit.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitOmniFS
+  - type: Item
+    size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.85
+  - type: StaminaResistance
+    damageCoefficient: 0.35
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.50
+        Slash: 0.65
+        Piercing: 0.48
+        Heat: 0.7
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: HideLayerClothing
+    slots:
+    - Tail
+    hideOnToggle: true
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitOmniFS
+  suffix: sponsor, FS #DH
+  name: шлем "OMNI-FS"
+  description: Отдельная вариация сверхпрочного шлема скафандра "Omni", которая выпускалась в "FS" комплектации.
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/helmet.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/helmet.rsi
+  - type: PointLight
+    color: "#20bfe7"
+    radius: 7
+    energy: 8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.95
+        Piercing: 0.92
+        Heat: 0.86
+        Radiation: 0.9
+        Caustic: 0.95
+  - type: StaminaResistance
+    damageCoefficient: 0.96
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ThermalVision
+    flashDurationMultiplier: 2
+    pulseTime: 2
+    isEquipment: true
+    toggleAction: PulseThermalVisionLong
+    color: "#5c52f1"
+
+- type: entity
+  parent: ClothingHandsGlovesCombatLua
+  id: ClothingHandsGlovesCombatFS
+  name: боевые перчатки "FS"
+  description: Боевые перчатки из высокопрочных материалов, обеспечивающие защиту в работе с опасными объектами.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.96
+        Piercing: 0.99
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/gloves.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/gloves.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True:
+            sprite: _DH/special/FS/Clothing/gloves.rsi
+            state: icon_active
+          False:
+            sprite: _DH/special/FS/Clothing/gloves.rsi
+            state: icon
+  - type: PointLight
+    color: "#3af5f5"
+    radius: 2.5
+    energy: 1
+  - type: StaminaDamageOnHit
+    damage: 28
+    sound: /Audio/Weapons/egloves.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.7
+    autoAttack: true
+    angle: 100
+    damage:
+        types:
+          Slash: 8
+          Heat: 6
+          Structural: 10
+    mustBeEquippedToUse: true
+    animation: WeaponArcClaw
+    wideAnimation: WeaponArcClaw
+    soundSwing:
+      path: /Audio/Weapons/eblademiss.ogg
+      params:
+        volume: 3
+        variation: 0.025
+    soundHit:
+      path: /Audio/Weapons/eblade1.ogg
+      params:
+        volume: 3
+        variation: 0.025
+  - type: ToggleClothing
+    action: ActionToggleBladeFS
+    disableOnUnequip: true
+  # - type: HardsuitAcidifier
+
+- type: entity
+  id: ActionToggleBladeFS
+  name: Активировать скрытые клинки
+  description: Активировать скрытые клинки в перчатках.
+  components:
+  - type: Action
+    useDelay: 1.0
+    icon:
+      sprite: _DH/special/FS/Clothing/gloves.rsi
+      state: icon_active
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:ToggleActionEvent
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack]
+  id: ClothingShoesBootsMagFS
+  name: магнитные сапоги "FS"
+  description: Сапоги с мощным реактивным модулем, позволяющим удобно перемещаться в космосе. На подошве штамп "FS".
+  suffix: sponsor #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/magboots.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.95
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 2 minutes of thrust
+      volume: 5
+      temperature: 293.15
+      moles:
+        - 2.051379050 # oxygen
+
+- type: entity
+  parent: [ClothingEyesGlassesMeson, ShowSecurityIcons]
+  id: ClothingEyesGlassesFS
+  name: визор "FS-I4"
+  description: Очень прочный визор, совмещающий в себе приемущества многих аналогов. Защищает от сварки, распозноет за вас химикаты и отценивает состояние живых существ.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/hud.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/hud.rsi
+  - type: FlashImmunity
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - Inorganic
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFS
+  name: чёрный комбинезон "FS"
+  description: Очень удобный комбинезон, хорошо сочетающийся с остальным комплектом вещей из серии "FS". Немного потертый, но качество материалов не ухудшилось.
+  suffix: sponsor, FS #DH
+  components:
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.02
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/jumpsuit.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/jumpsuit.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasFS
+  name: противогаз "FS"
+  description: Выглядит довольно новым, но на самом деле его использовали еще лет 5 назад. Прочность стекла внушает доверие.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/gasmask.rsi
+  - type: Clothing
+    sprite: _DH/special/FS/Clothing/gasmask.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: BaseMedicalPDA
+  id: PDAFS
+  name: КПК FS
+  description: КПК в цветах комплекта FS, выделяется усиленным корпусом и улучшенным теплоотводом.
+  suffix: sponsor #DH
+  components:
+  - type: Pda
+    penSlot:
+      startingItem: PenFS
+      whitelist:
+        tags:
+        - Write
+    paiSlot:
+      startingItem: PersonalAIFS
+      priority: -3
+      whitelist:
+        components:
+        - PAI
+  - type: Icon
+    sprite: _DH/special/FS/Clothing/pda.rsi
+  - type: Sprite
+    sprite: _DH/special/FS/Clothing/pda.rsi
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - MedTekCartridge
+      - NewsReaderCartridge
+      - AstroNavCartridge
+      - BountyContractsCartridge
+      - AppraisalCartridge
+      - NanoTaskCartridge
+  - type: PdaBorderColor
+    borderColor: "#202325"
+    accentVColor: "#2bd0e6"
+
+#region Tools
+
+- type: entity
+  parent: Multitool
+  id: MultitoolFS
+  name: мультитул "FS"
+  description: Мультитул из комплекта "FS".
+  suffix: sponsor, FS
+  components:
+  - type: TrayScanner
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/multitool.rsi
+    layers:
+    - state: icon
+    - state: green-unlit
+      shader: unshaded
+  - type: Clothing
+    sprite: _DH/special/FS/Tools/multitool.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: entity
+  parent: JawsOfLife
+  id: JawsOfLifeFS
+  name: челюсти жизни "FS"
+  description: Изготовлено для комплекта "FS".
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/jaws.rsi
+    state: syn_jaws_pry
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: syn_inhand-left
+      right:
+      - state: syn_inhand-right
+    size: Normal
+  - type: MultipleTool
+    entries:
+    - behavior: Prying
+      sprite:
+        sprite: _DH/special/FS/Tools/jaws.rsi
+        state: syn_jaws_pry
+      useSound: /Audio/Items/jaws_pry.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
+    - behavior: Cutting
+      sprite:
+        sprite: _DH/special/FS/Tools/jaws.rsi
+        state: syn_jaws_cutter
+      useSound: /Audio/Items/jaws_cut.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+  - type: Clothing
+    sprite: _DH/special/FS/Tools/jaws.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: entity
+  parent: PowerDrill
+  id: PowerDrillFS
+  name: электродрель "LuaTech"
+  description: Изготовлено на заказ организацией LuaTech.
+  suffix: sponsor, FS #DH
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/powerdrill.rsi
+    state: drill_screw
+  - type: Item
+    sprite: _DH/special/FS/Tools/powerdrill.rsi
+    size: Small
+  - type: Clothing
+    sprite: _DH/special/FS/Tools/powerdrill.rsi
+    quickEquip: false
+    slots:
+      - Belt
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _DH/special/FS/Tools/powerdrill.rsi
+          state: drill_screw
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: _DH/special/FS/Tools/powerdrill.rsi
+          state: drill_bolt
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+
+- type: entity
+  id: RCDFS
+  parent: RCD
+  name: РСУ "FS"
+  description: Улучшенный РСУ из комплекта "FS".
+  suffix: sponsor, FS
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _DH/special/FS/Tools/rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: LimitedCharges
+    maxCharges: 40
+
+- type: entity
+  name: картридж РСУ-FS
+  parent: RCDAmmo
+  id: RCDAmmoFS
+  suffix: sponsor, FS
+  description: Сверхсжатый картридж для позарядки РСУ, вмещающий в себя в 4 раза больше зарядов. В цветах комплекта "FS".
+  components:
+  - type: RCDAmmo
+    charges: 120
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/rcd.rsi
+    state: ammo
+  - type: Item
+    sprite: _DH/special/FS/Tools/rcd.rsi
+    heldPrefix: ammo
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 600
+      Plastic: 300
+  - type: StaticPrice
+    price: 40
+
+- type: entity
+  parent: [ WelderIndustrialAdvanced, Welder ]
+  id: WelderFS
+  name: сварочный аппарат "FS"
+  description: Продвинутый промышленный аппарат из комплекта "FS". Имеет увеличенный топливный резервуар и усиленный поток пламени, позволяющий работать быстрее.
+  suffix: sponsor, FS
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/welder.rsi
+    layers:
+    - state: icon
+    - state: welder_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: Item
+    size: Small
+    sprite: _DH/special/FS/Tools/welder.rsi
+  - type: Tool
+    speedModifier: 1.6
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1250
+        maxVol: 1250
+  - type: StaticPrice
+    price: 70
+
+#region Devices
+
+- type: entity
+  name: ручной сканер массы "FS"
+  parent: HandHeldMassScanner
+  id: HandHeldMassScannerFS
+  description: Ручной сканер массы из комплекта "FS".
+  suffix: sponsor, FS #DH
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/massscanner.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: scanner
+        shader: unshaded
+        visible: true
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+
+- type: entity
+  id: HypoFS
+  name: гипоспрей "FS"
+  parent: BaseItem
+  description: Гипоспрей из комплекта "FS".
+  suffix: sponsor, FS
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/hypo.rsi
+    layers:
+    - state: hypo
+      map: ["enum.SolutionContainerLayers.Base"]
+    - state: hypo_fill1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    sprite: _DH/special/FS/Tools/hypo.rsi
+  #- type: SolutionContainerManager
+  #  solutions:
+  #    hypospray:
+  #      maxVol: 9
+  #- type: RefillableSolution
+  #  solution: hypospray
+  #- type: ExaminableSolution
+  #  solution: hypospray
+  #- type: Hypospray
+  #  onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 2.4
+  - type: StaticPrice
+    price: 550
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: hypo_fill
+    solutionName: hypospray
+  - type: PirateBountyItem
+    id: HypoMini
+  - type: Clothing
+    sprite: _DH/special/FS/Tools/hypo.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: entity
+  name: портативный монитор экипажа "FS"
+  parent: [ HandheldCrewMonitor, BaseItem ]
+  id: HandheldCrewMonitorFS
+  description: Портативный монитор экипажа, все еще подключается к сети станции, даже после прекращения системных обновлений от разработчиков комплекта "FS".
+  suffix: sponsor, FS
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/crewmonitor.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: scanner
+        shader: unshaded
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot { }
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+
+- type: entity
+  parent: [BaseItem, RecyclableItemDeviceSmall]
+  id: SprayPainterFS
+  suffix: sponsor, FS
+  name: краскопульт "FS-2000"
+  description: Улучшенный краскопульт с автоперезарядкой из комплекта "FS".
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/spray_painter.rsi
+    state: spray_painter
+  - type: Item
+    sprite: _DH/special/FS/Tools/spray_painter.rsi
+  - type: ActivatableUI
+    key: enum.SprayPainterUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SprayPainterUiKey.Key:
+        type: SprayPainterBoundUserInterface
+  - type: SprayPainter
+    colorPalette:
+      red: '#FF1212FF'
+      yellow: '#B3A234FF'
+      brown: '#947507FF'
+      green: '#3AB334FF'
+      cyan: '#03FCD3FF'
+      blue: '#0335FCFF'
+      white: '#FFFFFFFF'
+      black: '#333333FF'
+      # standard atmos pipes
+      waste: '#990000'
+      distro: '#0055cc'
+      air: '#03fcd3'
+      mix: '#947507'
+      external: '#9955cc' # Frontier
+  - type: StaticPrice
+    price: 90
+  - type: LimitedCharges
+    maxCharges: 20
+    lastCharges: 0
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: AutoRecharge
+    rechargeDuration: 8
+
+- type: entity
+  parent: BaseItem
+  suffix: sponsor, FS
+  id: SprayPainterAmmoFS
+  name: сжатая краска "FS"
+  description: Картридж сжатой краски для пополнения зарядов краскопульта. В цветах комплекта "FS".
+  components:
+  - type: SprayPainterAmmo
+    charges: 30
+  - type: Sprite
+    sprite: _DH/special/FS/Tools/spray_painter.rsi
+    state: ammo
+  - type: Item
+    sprite: _DH/special/FS/Tools/spray_painter.rsi
+    heldPrefix: ammo
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+      Plastic: 30
+  - type: StaticPrice
+    price: 45
+
+- type: entity
+  parent: [ HoloprojectorField, Holoprojector ]
+  suffix: sponsor, FS
+  id: ProjectorFieldFS
+  name: голопроектор "FS"
+  description: Обычный голопроектор, но в цветах комплекта "FS", и парой дополнительных зарядов.
+  components:
+    - type: HolosignProjector
+      signProto: ForcefieldFS
+      chargeUse: 30
+    - type: Sprite
+      sprite: _DH/special/FS/Tools/holofanprojector.rsi
+      state: icon
+
+- type: entity
+  id: ForcefieldFS
+  suffix: sponsor, FS
+  parent: [HolosignForcefield, HolosignWetFloor,]
+  name: силовое поле
+  description: Сдерживающее силовое поле. Довольно плотное.
+  components:
+  - type: TimedDespawn
+    lifetime: 400
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: Sprite
+    sprite: _DH/special/FS/Structures/holo.rsi
+    state: icon
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: "#1b86ff"
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 85
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+#region Misc
+
+- type: entity
+  parent: DrinkBaseMug
+  id: DrinkMugFS
+  suffix: sponsor, FS
+  name: кружка "FS"
+  description: Кружка из комплекта "FS". Довольно крупная и хорошо сидит в руке.
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Misc/mug.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 25
+
+- type: entity
+  name: ручка "FS"
+  parent: Pen
+  suffix: sponsor, FS
+  id: PenFS
+  description: Дорогая и модная ручка из комплекта "FS".
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Misc/pen.rsi
+    state: pen
+  - type: Item
+    heldPrefix: pen
+
+- type: entity
+  parent: PersonalAI
+  id: PersonalAIFS
+  suffix: sponsor, FS
+  name: персональный ИИ "FS"
+  description: Ваш электронный друг, с которым весело! Теперь в цветах комплекта "FS"!
+  components:
+  - type: Sprite
+    sprite: _DH/special/FS/Misc/pai.rsi
+    layers:
+    - state: pai-base
+    - state: pai-off-overlay
+      shader: unshaded
+      map: ["screen"]
+  - type: ToggleableGhostRole
+    examineTextMindPresent: pai-system-pai-installed
+    examineTextMindSearching: pai-system-still-searching
+    examineTextNoMind: pai-system-off
+    beginSearchingText: pai-system-searching
+    roleName: pai-system-role-name
+    roleDescription: pai-system-role-description
+    roleRules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+    wipeVerbText: pai-system-wipe-device-verb-text
+    wipeVerbPopup: pai-system-wiped-device
+    stopSearchVerbText: pai-system-stop-searching-verb-text
+    stopSearchVerbPopup: pai-system-stopped-searching
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+  - type: ActiveRadio
+    channels:
+    - Common
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableGhostRoleVisuals.Status:
+        screen:
+          Off: { state: pai-off-overlay }
+          Searching: { state: pai-searching-overlay }
+          On: { state: pai-on-overlay }
+  - type: Store
+    categories:
+    - PAIAbilities
+    currencyWhitelist:
+    - SiliconMemory
+    balance:
+      SiliconMemory: 35
+  - type: HandheldGPS
+
+- type: entity
+  parent: PortableRecharger
+  suffix: sponsor, FS
+  id: PortableRechargerFS
+  name: портативный зарядник "FS"
+  description: Менее эффективный зарядник, но более компактный. Имеется штамп "FS Collection"
+  components:
+  - type: Item
+    size: Huge
+    grid:
+    - 0,0,4,3
+  - type: Sprite
+    sprite: _DH/special/FS/Misc/portable_recharger.rsi
+    state: charging
+  - type: Clothing
+    equippedPrefix: charging
+    quickEquip: false
+    slots:
+    - back
+  - type: Charger
+    chargeRate: 25
+    slotId: charger_slot
+    portable: true
+  - type: PowerChargerVisuals
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 1
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: ContainerContainer
+    containers:
+      charger_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      charger_slot:
+        ejectOnInteract: true
+        whitelist:
+          components:
+          - Battery
+          - HitscanBatteryAmmoProvider
+          - ProjectileBatteryAmmoProvider
+        blacklist:
+          tags:
+          - PlasmaCutter
+
+- type: entity
+  parent: [EmagUnlimited, RecyclableItemPlasticSmall, BaseC2ExpeditionContraband]
+  id: EmagPassFS
+  name: самодельный криптографический секвенсор
+  description: Самодельное взламывающее устройство, созданное по прототипу EMAG'а. Отмычка для мыслящего человека.
+  suffix: Limited, 3 Uses
+  components:
+  - type: NFEmagPass
+  - type: LimitedCharges
+  - type: Sprite
+    sprite: _NF/Objects/Tools/emagpass.rsi
+  - type: Item
+    sprite: _NF/Objects/Tools/emagpass.rsi
+    storedRotation: -90
+    size: Tiny
+
+
+#region Weapons
+
+- type: entity
+  name: трость
+  suffix: sponsor, FS
+  parent: [BaseItem, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  id: CaneFS
+  description: Эксклюзивная деревянная трость со скрытой энерго-дубинкой внутри.
+  components:
+  - type: Sprite
+    sprite: _DH/Special/Fs/Weapons/cane.rsi
+    layers:
+    - state: cane-nt
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Stunbaton
+    energyPerUse: 50
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundDeactivate:
+      collection: sparks
+      params:
+        variation: 0.250
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 6
+    bluntStaminaDamageFactor: 2.0
+    angle: 60
+    animation: WeaponArcThrust
+  - type: StaminaDamageOnHit
+    damage: 44
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 50
+    sound: /Audio/Weapons/egloves.ogg
+  - type: LandAtCursor # it deals stamina damage when thrown
+  - type: Battery
+    maxCharge: 800
+    startingCharge: 800
+  - type: UseDelay
+  - type: Item
+    heldPrefix: off
+    size: Normal
+  - type: Clothing
+    sprite: _DH/Special/Fs/Weapons/cane.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: DisarmMalus
+    malus: 0.225
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: cane-nt-active}
+          False: {state: cane-nt}
+  - type: StaticPrice
+    price: 280
+  - type: Riggable
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1.5
+    maxIntensity: 200
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Plastic: 100
+  - type: GuideHelp
+    guides:
+    - Security
+    # - Antagonists # Frontier: guidebook entry removed
+
+- type: entity
+  parent: [BaseWeaponBatterySmall, BaseC1Contraband]
+  id: ADTWeaponPistolX01FS
+  name: XFS-01 мультифазовый энергетический пистолет
+  description: Это дорогая, современная версия антикварного лазерного пистолета. У этого оружия есть несколько уникальных режимов огня, но нет возможности самостоятельно перезаряжаться с течением времени. Специальная версия XFS, созданная для комплекта "FS".
+  suffix: Пистолет, НЕ МАППИТЬ
+  components:
+  - type: Sprite
+    sprite: _DH/Special/Fs/Weapons/xfs01.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Appearance
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Clothing
+    sprite: _DH/Special/Fs/Weapons/xfs01.rsi
+  - type: Gun
+    fireRate: 1.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: NFBulletDisabler
+    fireCost: 90
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: NFBulletDisabler
+      fireCost: 90
+    - proto: BulletTaser
+      fireCost: 450
+    - proto: ADTBulletLaser
+      fireCost: 200
+  - type: Battery
+    maxCharge: 2600
+    startingCharge: 2600
+  - type: Tag
+    tags:
+    - HighRiskItem
+    - BatteryWeaponFireModesSprites
+  - type: StaticPrice
+    price: 7500

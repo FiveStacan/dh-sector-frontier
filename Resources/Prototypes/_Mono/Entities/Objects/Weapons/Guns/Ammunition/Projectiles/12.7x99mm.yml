@@ -12,8 +12,11 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 100
-        Structural: 400 # if you were a wall would you like having a .50 cal anti materiel round go through you (this breaks a normal wall in 3 shots, one mag goes through four normal walls, 10 rounds to take down a reinforced wall)
+        Piercing: 50
+        Structural: 200
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
@@ -28,14 +31,14 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
+        Piercing: 12
         Heat: 8
-        Structural: 20
+        Structural: 25
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
     maxIntensity: 2
-    intensitySlope: 2
+    intensitySlope: 2.5
     totalIntensity: 18 # 30 damage per tile
     maxTileBreak: 0
   - type: PointLight
@@ -62,8 +65,8 @@
     damage:
       types:
         Blunt: 30
-        Piercing: 70
-        Structural: 400
+        Piercing: 50
+        Structural: 150
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
@@ -78,9 +81,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 70
+        Piercing: 50
         Heat: 30
-        Structural: 400
+        Structural: 150
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
@@ -94,9 +97,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 70
+        Piercing: 50
         Radiation: 30
-        Structural: 400
+        Structural: 150
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
@@ -111,9 +114,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 70
-        Shock: 30
-        Structural: 400
+        Piercing: 50
+        Shock: 60
+        Structural: 150
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3
@@ -129,7 +132,7 @@
       types:
         Piercing: 50
         Caustic: 25
-        Structural: 400
+        Structural: 150
   - type: Tracer
     color: "#FFFFFFFF"
     length: 3

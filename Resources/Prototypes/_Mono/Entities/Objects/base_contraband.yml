@@ -33,28 +33,28 @@
 # They simply map to the appropriate NF/Mono contraband equivalents
 
 # non-stealth syndicate stuff
-- type: entity
-  id: BaseSyndicateContraband
-  parent: BaseC3SyndicateContraband
-  abstract: true
+# - type: entity
+#   id: BaseSyndicateContraband
+#   parent: BaseC3SyndicateContraband
+#   abstract: true
 
 # base department restricted contraband
-- type: entity
-  id: BaseRestrictedContraband
-  parent: BaseC2ContrabandUnredeemable
-  abstract: true
+# - type: entity
+#   id: BaseRestrictedContraband
+#   parent: BaseC2ContrabandUnredeemable
+#   abstract: true
 
 # civilian department contraband
-- type: entity
-  id: BaseCivilianContraband
-  parent: BaseC1Contraband
-  abstract: true
+# - type: entity
+#   id: BaseCivilianContraband
+#   parent: BaseC1Contraband
+#   abstract: true
 
 # cargo department contraband
-- type: entity
-  id: BaseCargoContraband
-  parent: BaseC1Contraband
-  abstract: true
+# - type: entity
+#   id: BaseCargoContraband
+#   parent: BaseC1Contraband
+#   abstract: true
 
 #region non-faction
 

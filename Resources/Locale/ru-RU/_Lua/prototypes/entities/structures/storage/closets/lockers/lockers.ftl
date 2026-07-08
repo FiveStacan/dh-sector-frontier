@@ -1,4 +1,4 @@
-ent-LockerSyndicateNordfall = шкаф Синдиката
+ent-LockerSyndicateTypan = шкаф Синдиката
     .desc = { ent-LockerBaseSecure.desc }
 
 ent-LockerWallMaterialsFuelBluespaceFilled = шкаф блюспейс топлива

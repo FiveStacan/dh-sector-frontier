@@ -1,0 +1,83 @@
+# - type: construction
+#   id: TableCounterRed
+#   graph: Table
+#   startNode: start
+#   targetNode: CounterRed
+#   category: construction-category-furniture
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+# - type: construction
+#   id: TableReinforcedPlasmaGlass
+#   graph: Table
+#   startNode: start
+#   targetNode: TableReinforcedPlasmaGlass
+#   category: construction-category-furniture
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+- type: construction
+  id: DoorConnector
+  graph: ConnectorGraph
+  startNode: start
+  targetNode: DoorConnector
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: BannerWhite
+  graph: DHBannersGraph
+  startNode: start
+  targetNode: BannerWhiteNode
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: BannerDH
+  graph: DHBannersGraph
+  startNode: start
+  targetNode: BannerDHNode
+  category: construction-category-flags
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ComfyBrownChair
+  graph: DHSeat
+  startNode: start
+  targetNode: ComfyBrownChair
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: ChairOfficeGrey
+  graph: DHSeat
+  startNode: start
+  targetNode: ChairOfficeGrey
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

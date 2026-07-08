@@ -1,0 +1,42 @@
+- type: latheRecipePack
+  id: DHPrisonClothing
+  recipes:
+  - ClothingShoesBootsPrisonerGrey
+  - ClothingWalletLeatherPrisoner
+  - ClothingHeadPrisonGuard
+  - ClothingUniformJumpsuitPrisonGuardSunrise
+  - ClothingUniformJumpskirtGuard
+  - ClothingUniformJumpsuitPrisonGuard
+  - ClothingUniformJumpskirtPrisonerGrey
+  - ClothingUniformJumpsuitPrisonerGrey
+
+- type: latheRecipePack
+  id: DHBaseOuterClothing
+  recipes:
+  - ClothingOuterSuitRad
+  - ClothingOuterSuitFire
+  - ClothingHeadHelmetFire
+  - ClothingOuterSuitBomb
+  - ClothingHeadHelmetBombSuit
+  - ClothingOuterSuitCargo
+  - ClothingOuterBioScientist
+  - ClothingHeadHatHoodBioScientist
+  - ClothingHeadHatHardhatArmored
+
+- type: latheRecipePack
+  id: DHBaseArmor
+  recipes:
+  - ClothingOuterArmorBasicSlim
+  - ClothingHeadHelmetRiot
+  - ClothingOuterArmorRiot
+  - ClothingOuterArmorBasic
+  - ClothingHeadHelmetBasic
+  - ClothingHeadHelmetJustice
+
+  - ClothingOuterArmorUSSPjuggernaut
+  - ClothingOuterArmorSWAT
+  - ClothingHeadHelmetSwat
+  - ClothingOuterArmorHeavy
+  - ClothingOuterArmorHeavyGreen
+  - ClothingOuterArmorHeavyRed
+  - ADTClothingOuterArmorCrusader
