@@ -95,7 +95,7 @@
     thermalVisibility: true
   - type: NpcFactionMember
     factions:
-    - LuaNordFoll
+    - LuaTypan
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       tags:
@@ -551,7 +551,7 @@
     spawnFriendsSearchRadius: 20
   - type: NpcFactionMember
     factions:
-    - LuaNordFoll
+    - LuaTypan
   - type: InteractionPopup
     interactSuccessString: petting-success-medibot
     interactFailureString: petting-failure-medibot

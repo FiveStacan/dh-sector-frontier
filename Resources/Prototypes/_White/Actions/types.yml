@@ -38,4 +38,15 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    useDelay: 4
+    useDelay: 5 #DH
+
+#DH
+- type: entity
+  id: PulseThermalVisionLong
+  parent: PulseThermalVision
+  name: Pulse Thermal Vision
+  description: Activate thermal vision temporarily.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 10

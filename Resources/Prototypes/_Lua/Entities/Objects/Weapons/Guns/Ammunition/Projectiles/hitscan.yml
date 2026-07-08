@@ -53,8 +53,6 @@
       types:
         Shock: 1
         Heat: 1
-    soundHit:
-      collection: WeakHit
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi

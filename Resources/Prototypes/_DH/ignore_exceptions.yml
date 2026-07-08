@@ -175,7 +175,7 @@
           tags:
             - NFMagazineRifle30
             - NFMagazineLowCapacityRifle30
-            - NFMagazineExtendedCapacityRifle30
+            #- NFMagazineExtendedCapacityRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber: &chamber30Standard
         name: Chamber

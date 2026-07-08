@@ -73,7 +73,6 @@
     activateSound: null
     deactivateSound: null
   - type: NPCMeleeCombat
-    MissChance: 10
   - type: MeleeWeapon
     altDisarm: false
     hidden: true

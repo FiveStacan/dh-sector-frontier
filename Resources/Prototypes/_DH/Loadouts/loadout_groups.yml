@@ -101,3 +101,9 @@
   - NfsdClothingHandsGlovesCombatNfsdCream
   fallbacks:
   - DHClothingHandsGlovesCombat
+
+- type: loadoutGroup
+  id: PrisonGuardPDA
+  name: loadout-group-prison-guard-pda
+  loadouts:
+  - PrisonGuardPDA

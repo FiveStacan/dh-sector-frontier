@@ -5,10 +5,10 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: Kestrel
+  id: MonoKestrel
   parent: BaseVessel
-  name: Kestrel
-  description: Небольшое научное судно, предназначенное для длительных миссий. Оснащено жилым модулем и внушительным для своих размеров оборонительным вооружением, однако не отличается высокой маневренностью.
+  name: SKR Kestrel
+  description: Небольшой научно-исследовательский корабль с возможностью прыжков, предназначенный для длительных миссий. Оснащён жилым модулем и неплохим для своих размеров оборонительным вооружением, хотя и не отличается высокой маневренностью.
   price: 184500
   category: Small
   group: Shipyard
@@ -18,18 +18,18 @@
   - Luna
   - Frontier
   class:
-  - Civilian
   - Science # Lua
+  - Civilian
   engine:
   - Uranium
 
 - type: gameMap
-  id: Kestrel
+  id: MonoKestrel
   mapName: 'Kestrel'
   mapPath: /Maps/_Mono/Shuttles/kestrel.yml
   minPlayers: 0
   stations:
-    Kestrel:
+    MonoKestrel:
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup

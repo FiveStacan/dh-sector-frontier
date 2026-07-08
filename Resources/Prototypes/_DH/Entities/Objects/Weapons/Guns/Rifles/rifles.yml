@@ -43,7 +43,7 @@
           tags:
             - MagazineLightRifle
             - NFMagazineRifle30
-            - NFMagazineExtendedCapacityRifle30
+            #- NFMagazineExtendedCapacityRifle30
       gun_chamber:
         name: Chamber
         startingItem: NFCartridgeRifle30
@@ -111,7 +111,7 @@
           tags:
           - NFMagazineRifle30
           - MagazineLightRifle
-          - NFMagazineExtendedCapacityRifle30
+          #- NFMagazineExtendedCapacityRifle30
       gun_chamber:
         name: Chamber
         startingItem: NFCartridgeRifle30  # 762x39

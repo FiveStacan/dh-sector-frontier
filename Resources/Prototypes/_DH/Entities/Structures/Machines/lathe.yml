@@ -492,5 +492,5 @@
     - type: MaterialStorage
       whitelist:
         tags:
-          - Steel
+          #- Steel
           - Sheet

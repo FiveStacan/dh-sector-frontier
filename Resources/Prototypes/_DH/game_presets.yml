@@ -6,4 +6,9 @@
   name: For Mapping
   showInVote: false
   description: без любых событий
-  supportedMaps: Dev
+  supportedMaps: DHDev
+
+- type: gameMapPool
+  id: DHDev
+  maps:
+  - DHDev

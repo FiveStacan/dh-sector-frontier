@@ -49,7 +49,7 @@
       map: ["enum.TriggerVisualLayers.Base"]
   - type: ScatteringGrenade
     capacity: 20
-    fillPrototype: SyndyFlashGrenade
+    fillPrototype: ExGrenade #SyndyFlashGrenade
     distance: 4
   - type: OnUseTimerTrigger
     initialBeepDelay: 0

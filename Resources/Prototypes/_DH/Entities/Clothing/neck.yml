@@ -132,11 +132,8 @@
     sprite: _DH/Clothing/Neck/Misc/atmos_cross.rsi
   - type: Item
     sprite: _DH/Clothing/Neck/Misc/atmos_cross.rsi
-  - type: Construction
-    graph: AtmosCrossCraft
-    node: cross
   - type: Reflect
-    reflectProb: .01
+    reflectProb: 0.01
     spread: 30
 
 - type: entity

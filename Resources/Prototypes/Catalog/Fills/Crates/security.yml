@@ -48,9 +48,9 @@
     contents:
       - id: BoxHandcuff
       - id: BoxSechud
-      - id: SecBelt
-      - id: SecGasmask
-      - id: SpacelawBook
+      - id: ClothingBeltSecurity #DH
+      - id: ClothingMaskGasSecurity #DH
+      - id: NFHyperlinkBookSpaceLaw #DH
         amount: 2
 
 - type: entity

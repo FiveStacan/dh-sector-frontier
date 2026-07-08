@@ -112,3 +112,36 @@
 
 - type: Tag
   id: ChargedBluespaceFuel
+
+- type: Tag
+  id: ADTMinerArmorOne
+
+- type: Tag
+  id: ADTMinerArmorTwo
+
+- type: Tag
+  id: BluespaceBox
+
+- type: Tag
+  id: Crystallite
+
+- type: Tag
+  id: SpacePrisonerGreyUniform
+
+- type: Tag
+  id: Cartridge9x19mmIncendiary
+
+- type: Tag
+  id: Cartridge9x19mmUranium
+
+- type: Tag
+  id: NFBlueprintServiceTechfab
+
+- type: Tag
+  id: NFBlueprintEngineeringTechfab
+
+- type: Tag
+  id: ClothingUplink
+
+- type: Tag
+  id: Lamian

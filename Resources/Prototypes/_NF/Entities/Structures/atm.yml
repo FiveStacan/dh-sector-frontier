@@ -68,7 +68,7 @@
   - type: Sprite
     netsync: false
     noRot: true
-    sprite: _Lua/Structures/Machines/atm/atm_outdoor.rsi
+    sprite: _NF/Structures/Machines/atm/atm.rsi
     layers:
     - map: ["computerLayerBody"]
       state: icon
@@ -82,7 +82,7 @@
   - type: Sprite
     netsync: false
     noRot: true
-    sprite: _Lua/Structures/Machines/atm/atm_outdoor.rsi
+    sprite: _NF/Structures/Machines/atm/atm.rsi
     layers:
     - map: ["computerLayerBody"]
       state: icon
@@ -98,7 +98,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: _Lua/Structures/Machines/atm/atm.rsi
+    sprite: _NF/Structures/Machines/atm/wall_atm.rsi
     layers:
       - map: ["computerLayerBody"]
         state: icon
@@ -112,7 +112,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: _Lua/Structures/Machines/atm/atm.rsi
+    sprite: _NF/Structures/Machines/atm/wall_atm.rsi
     layers:
       - map: ["computerLayerBody"]
         state: icon
@@ -130,7 +130,7 @@
   - type: Sprite
     netsync: false
     noRot: true
-    sprite: _Lua/Structures/Machines/atm/bm_atm_outdoor.rsi
+    sprite: _NF/Structures/Machines/atm/illegal_atm.rsi
     layers:
     - map: ["computerLayerBody"]
       state: icon
@@ -155,7 +155,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: _Lua/Structures/Machines/atm/bm_atm.rsi
+    sprite: _NF/Structures/Machines/atm/wall_illegal_atm.rsi
     layers:
     - map: ["computerLayerBody"]
       state: icon
@@ -171,6 +171,102 @@
     corrupted: true # Lua
     taxAccounts:
       Frontier: 0.3 # The scandal!
+
+#region holo atm
+
+- type: entity
+  parent: ComputerBankATM
+  id: ComputerBankATMHolo
+  suffix: Holo
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    sprite: _Lua/Structures/Machines/atm/atm_outdoor.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+
+- type: entity
+  parent: ComputerWithdrawBankATM
+  id: ComputerWithdrawBankATMHolo
+  suffix: Holo
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    sprite: _Lua/Structures/Machines/atm/atm_outdoor.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+  - type: Computer
+    board: ComputerWithdrawBankATMComputerCircuitboard
+
+- type: entity
+  suffix: Wallmount, Holo
+  parent: ComputerWallmountBankATM
+  id: ComputerWallmountBankATMHolo
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Structures/Machines/atm/atm.rsi
+    layers:
+      - map: ["computerLayerBody"]
+        state: icon
+      - map: ["computerLayerScreen"]
+        state: unshaded
+
+- type: entity
+  suffix: Wallmount, Holo
+  parent: ComputerWallmountWithdrawBankATM
+  id: ComputerWallmountWithdrawBankATMHolo
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Structures/Machines/atm/atm.rsi
+    layers:
+      - map: ["computerLayerBody"]
+        state: icon
+      - map: ["computerLayerScreen"]
+        state: unshaded
+  - type: Computer
+    board: ComputerWithdrawBankATMComputerCircuitboard
+
+- type: entity
+  suffix: BlackMarket, Holo
+  parent: ComputerBlackMarketBankATM
+  id: ComputerBlackMarketBankATMHolo
+  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 30%
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    sprite: _Lua/Structures/Machines/atm/bm_atm.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+
+- type: entity
+  suffix: Wallmount, BlackMarket, Holo
+  parent: ComputerWallmountBlackMarketBankATM
+  id: ComputerWallmountBlackMarketBankATMHolo
+  description: Has some sketchy looking modifications and a sticker that says DEPOSIT FEE 30%
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Structures/Machines/atm/bm_atm_outdoor.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+#region end
 
 - type: entity
   name: station administration console

@@ -3,8 +3,6 @@
   name: roles-antag-survivor-name
   antagonist: true
   objective: roles-antag-survivor-objective
-  playTimeTracker: AntagSurvivor # Sunrise-Edit
-  storytellerStress: 1.0 # Sunrise-Edit
   # guides: [  ]
 
 - type: antag
@@ -16,8 +14,6 @@
   requirements: # I hate time locked roles but this should be enough time for someone to be acclimated
   - !type:OverallPlaytimeRequirement
     time: 5h
-  playTimeTracker: AntagWizard # Sunrise-Edit
   guides: [ Wizard ]
-  storytellerStress: 5.0 # Sunrise-Edit
 
 # See wizard_startinggear for wiz start gear options

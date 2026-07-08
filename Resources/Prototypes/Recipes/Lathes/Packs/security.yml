@@ -134,11 +134,11 @@
   id: SecurityWeapons
   recipes:
   - Truncheon
-  - WeaponAdvancedLaser
-  - WeaponLaserCannon
-  - WeaponLaserCarbine
-  - WeaponXrayCannon
-  - WeaponTemperatureGun
+  - NFWeaponEnergyPistolLaserAdvanced #WeaponAdvancedLaser
+  - NFWeaponEnergyRifleSniperCannon #WeaponLaserCannon
+  - NFWeaponEnergyRifleCarbine #WeaponLaserCarbine
+  - NFWeaponEnergyRifleSniperXrayCannon #WeaponXrayCannon
+  - NFWeaponEnergyRifleTemperature #WeaponTemperatureGun
   #Borg
   - BorgModulEnergySecurity
   - BorgModuleArrestSecurity

@@ -543,7 +543,6 @@
     passengerEastOffset: 0, 0.3
     passengerWestOffset: 0, 0.3
   - type: GravityAffected #DH
-    enabled: false
 
 - type: entity
   parent: VehicleHoverbikeMailcarrier

@@ -8,8 +8,7 @@
     sprite: ADT/Clothing/Head/Hats/johan_cap.rsi
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai
-    shader: unshaded
+    equippedState: ai
   - type: Tag
     tags:
     - AIWearable
@@ -34,8 +33,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai
-  priority: -1
+    equippedState: ai
 
 - type: entity
   id: AiHatRed
@@ -43,7 +41,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-red
+    equippedState: ai-red
 
 - type: entity
   id: AiHatU
@@ -51,7 +49,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-u
+    equippedState: ai-u
 
 - type: entity
   id: AiHatMono
@@ -59,7 +57,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-mono
+    equippedState: ai-mono
 
 - type: entity
   id: AiHatStatic
@@ -67,7 +65,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-static
+    equippedState: ai-static
 
 - type: entity
   id: AiHatCheerful
@@ -75,7 +73,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-cheerful
+    equippedState: ai-cheerful
 
 - type: entity
   id: AiHatStern
@@ -83,7 +81,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-stern
+    equippedState: ai-stern
 
 - type: entity
   id: AiHatWierd
@@ -91,7 +89,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-wierd
+    equippedState: ai-wierd
 
 - type: entity
   id: AiHatGentoo
@@ -99,7 +97,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-gentoo
+    equippedState: ai-gentoo
 
 - type: entity
   id: AiHatNanotrasen
@@ -289,7 +287,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-glitchman
+    equippedState: ai-glitchman
 
 - type: entity
   id: AiHatLonestar
@@ -297,7 +295,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-lonestar
+    equippedState: ai-lonestar
 
 - type: entity
   id: AiHatAngel
@@ -305,7 +303,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-angel
+    equippedState: ai-angel
 
 - type: entity
   id: AiHatHourglass
@@ -313,7 +311,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-hourglass
+    equippedState: ai-hourglass
 
 - type: entity
   id: AiHatHelios
@@ -321,7 +319,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-helios
+    equippedState: ai-helios
 
 - type: entity
   id: AiHatRainbow
@@ -329,7 +327,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-rainbow
+    equippedState: ai-rainbow
 
 - type: entity
   id: AiHatThinking
@@ -337,7 +335,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-thinking
+    equippedState: ai-thinking
 
 - type: entity
   id: AiHatJackfrost
@@ -345,7 +343,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-jackfrost
+    equippedState: ai-jackfrost
 
 - type: entity
   id: AiHatMoth
@@ -353,7 +351,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-mothman
+    equippedState: ai-mothman
 
 - type: entity
   id: AiHat4Chan
@@ -368,7 +366,7 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-terminal
+    equippedState: ai-terminal
 
 - type: entity
   id: AiHatHoney
@@ -376,4 +374,4 @@
   components:
   - type: Clothing
     sprite: /Textures/_DH/Mobs/Silicon/ai-screen.rsi
-    state: ai-honeycomb
+    equippedState: ai-honeycomb

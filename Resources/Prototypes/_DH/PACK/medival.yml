@@ -624,15 +624,12 @@
 
 - type: construction
   id: MedievalStockade
-  name: деревянный частокол
-  description: На случай, если на стену из дерева не хватает.
+  name: construction-medieval-stockade
+  description: construction-medieval-stockade-desc
   graph: MedievalStockade
   startNode: start
   targetNode: medievalstockade
   category: construction-category-furniture
-  icon:
-    sprite: _DH/Structures/Walls/Medieval/wood_wall_light.rsi
-    state: wall0
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -705,15 +702,12 @@
 
 - type: construction
   id: MedievalStockadeHigh
-  name: деревянная стена
-  description: Прочная стена из дерева.
+  name: construction-medieval-stockade-high
+  description: construction-medieval-stockade-high-desc
   graph: MedievalStockadeHigh
   startNode: start
   targetNode: medievalstockadeHigh
   category: construction-category-furniture
-  icon:
-    sprite: _DH/Structures/Walls/Medieval/wood_wall_new.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -870,15 +864,12 @@
 
 - type: construction
   id: WallTentCloth
-  name: стена палатки
-  description: Дешевое укрытие
+  name: construction-wall-tent-cloth
+  description: construction-wall-tent-cloth-desc
   graph: WallTentCloth
   startNode: start
   targetNode: WallTentCloth
   category: construction-category-furniture
-  icon:
-    sprite: _DH/Structures/Walls/Medieval/cloth_tent.rsi
-    state: p0
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1058,15 +1049,12 @@
 
 - type: construction
   id: DoorTentCloth
-  name: дверь палатки
-  description: Простая тканевая шторка для палатки
+  name: construction-door-tent-cloth
+  description: construction-door-tent-cloth-desc
   graph: DoorTentCloth
   startNode: start
   targetNode: DoorTentCloth
   category: construction-category-furniture
-  icon:
-    sprite: _DH/Structures/Walls/Medieval/cloth_tent.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1180,15 +1168,12 @@
 
 - type: construction
   id: MedievalAirlock
-  name: деревянная дверь
-  description: Простая деревянная дверь.
+  name: construction-medieval-airlock
+  description: construction-medieval-airlock-desc
   graph: MedievalAirlock
   startNode: start
   targetNode: medievalairlock
   category: construction-category-furniture
-  icon:
-    sprite: _DH/Structures/Walls/Medieval/medieval_door.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1230,10 +1215,10 @@
   components:
   - type: DoorBolt
     #boltsDown: True
-    boltUpSound:
-      path: /Audio/_DH/Medieval/metal_door_lock2.ogg
-    boltDownSound:
-      path: /Audio/_DH/Medieval/metal_door_lock1.ogg
+    # boltUpSound:
+    #   path: /Audio/_DH/Medieval/metal_door_lock2.ogg
+    # boltDownSound:
+    #   path: /Audio/_DH/Medieval/metal_door_lock1.ogg
   - type: InteractionOutline
   - type: Sprite
     netsync: false
@@ -1401,7 +1386,6 @@
   - type: SpawnAfterInteract
     prototype: MedievalPrisonGrille
     doAfter: 5
-    deleteOnInteract: true
   - type: Sprite
     sprite: _DH/Structures/Walls/Medieval/stone_wall.rsi
     state: icon
@@ -1436,11 +1420,9 @@
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 99910000
-  badSmellMod: 1.5
 
 
 - type: tile
-  editorHidden: false
   id: FloorPlanetDirtMedieval
   name: грязь (переход)
   sprite: /Textures/_DH/Tiles/Planet/DirtCP/cavedrought.png
@@ -1479,10 +1461,8 @@
     collection: FootstepAsteroid
   heatCapacity: 999100000
   weather: true
-  badSmellMod: 2
 
 - type: tile
-  editorHidden: false
   id: FloorDirtMedieval
   name: грязь (переход)
   sprite: /Textures/_DH/Tiles/Planet/Dirt/dirt.png
@@ -1509,10 +1489,8 @@
     collection: FootstepAsteroid
   heatCapacity: 999100000
   weather: true
-  badSmellMod: 2
 
 - type: tile
-  editorHidden: false
   id: FloorDesertMedieval
   name: песок (переход)
   sprite: /Textures/_DH/Tiles/Planet/Sand/sand.png
@@ -1540,11 +1518,9 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.5
 
 - type: tile
   id: FloorAstroGrassMedieval
-  editorHidden: false
   name: трава (переход)
   sprite: /Textures/_DH/Tiles/Planet/GrassCP/grass.png
   variants: 6
@@ -1572,11 +1548,9 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass2
-  editorHidden: false
   name: трава светлая (переход)
   sprite: /Textures/_DH/Tiles/Planet/GrassLightCP/grass.png
   variants: 6
@@ -1604,11 +1578,9 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass1
-  editorHidden: false
   name: трава кислотная (переход)
   sprite: /Textures/_DH/Tiles/Planet/GrassTallCP/grass.png
   variants: 6
@@ -1636,11 +1608,9 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 0
 
 - type: tile
   id: FloorPlanetGrassAutumn
-  editorHidden: false
   name: трава (переход) осень
   sprite: /Textures/_DH/Tiles/Planet/GrassCPAutumn/grass.png
   variants: 6
@@ -1668,11 +1638,9 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass2Autumn
-  editorHidden: false
   name: трава светлая (переход) осень
   sprite: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/grass.png
   variants: 6
@@ -1700,11 +1668,9 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass1Autumn
-  editorHidden: false
   name: трава кислотная (переход) осень
   sprite: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/grass.png
   variants: 6
@@ -1732,7 +1698,6 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass3
@@ -1758,14 +1723,12 @@
   deconstructTools: [ Digging ]
   #baseTurf: FloorPlanetDirt
   isSubfloor: true
-  canCrowbar: false
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 99910000
   weather: true
   indestructible: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass4
@@ -1790,14 +1753,12 @@
   baseTurf: FloorDirt
   deconstructTools: [ Digging ]
   isSubfloor: true
-  canCrowbar: false
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 99910000
   weather: true
   indestructible: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass5
@@ -1822,14 +1783,12 @@
   baseTurf: FloorDirt
   deconstructTools: [ Digging ]
   isSubfloor: true
-  canCrowbar: false
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 99910000
   weather: true
   indestructible: true
-  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass6
@@ -1854,14 +1813,12 @@
   baseTurf: FloorDirt
   deconstructTools: [ Digging ]
   isSubfloor: true
-  canCrowbar: false
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemGrass
   heatCapacity: 99910000
   weather: true
   indestructible: true
-  badSmellMod: 1.25
 
 #Water
 
@@ -1956,7 +1913,7 @@
   - type: Sprite
     sprite: _DH/Tiles/Planet/water_new.rsi
     drawdepth: Overdoors
-  - type: MovementSpeedModifier
+  - type: SpeedModifierContacts
     walkSpeedModifier: 0.25
     sprintSpeedModifier: 0.25
     ignoreWhitelist:

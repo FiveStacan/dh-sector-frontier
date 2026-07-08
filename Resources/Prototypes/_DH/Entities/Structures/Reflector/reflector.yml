@@ -36,7 +36,6 @@
         - MachineLayer
   - type: Reflect
     reflectProb: 1.0
-    overrideAngle: 270
     reflects:
       - Energy
   - type: RCDDeconstructable

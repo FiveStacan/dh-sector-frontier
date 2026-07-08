@@ -7,7 +7,7 @@
         - to: PrisonerArmored
           steps:
             - tag: SpacePrisonerGreyUniform
-              name: комбинезон заключённого
+              name: construction-step-prisoner-grey-uniform
               icon:
                 sprite: _DH/Clothing/Uniforms/Jumpsuit/prisoner.rsi
                 state: icon

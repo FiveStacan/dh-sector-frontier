@@ -5,7 +5,7 @@
   - StationEngineerJumpsuit
   - StationEngineerBackpack
   - StationEngineerOuterClothing
-  - TrinketsEngineering
+  #- TrinketsEngineering
   - Trinkets
   - SurvivalExtended
   - GroupSpeciesBreathTool
@@ -50,7 +50,7 @@
    - PrisonGuardJumpsuit
    - NfsdGlovesBrown #
    - NfsdBackpackBrown
-   - PrisonGuardOuterClothing
+   #- PrisonGuardOuterClothing
    - NfsdForcedOuterClothing
    - NfsdShoesBrown
    - NfsdFace

@@ -28,10 +28,9 @@
   - type: Strap
     position: Down
     rotation: -90
-    # Sunrise-Edit
-    buckleOffsets:
-      - "0,-0.14"
-      - "0,0.29"
+    # buckleOffsets:
+    #   - "0,-0.14"
+    #   - "0,0.29"
     size: 200
   # Construction has to be before PlaceableSurface or you'll place things onto the entity instead of deconstructing it.
   - type: Construction

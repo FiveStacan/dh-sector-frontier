@@ -44,12 +44,15 @@
   cost: 10000
   recipeUnlocks:
   - ClothingOuterHardsuitBotanist
-  position: -8.002, 6.116
+  position: 0, 26
   technologyPrerequisites:
-  - NFAdvancedHydroponicsEquipment
-  factionOverrides:
-    Syndicate:
-      position: -8.02, 6.08
-      technologyPrerequisites:
-      - NFAdvancedHydroponicsEquipment
+  - NFHydroponics #DH
+  #- NFAdvancedHydroponicsEquipment
+  hiddenTechnologyPrerequisites: #DH
+  - DHHardsuitsBasic #DH
+  # factionOverrides:
+  #   Syndicate:
+  #     position: 0, 26
+  #     technologyPrerequisites:
+  #     - NFAdvancedHydroponicsEquipment
 ...

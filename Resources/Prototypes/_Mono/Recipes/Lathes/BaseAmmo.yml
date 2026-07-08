@@ -533,7 +533,7 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoExplosiveFullyPoweredAmmoBoxRecipe
   categories:
-  - Explosiveammo
+  - ExplosiveAmmo
   - Ammo
   abstract: true
   materials:

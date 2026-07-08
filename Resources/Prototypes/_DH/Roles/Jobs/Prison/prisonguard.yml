@@ -1,0 +1,68 @@
+- type: job
+  id: DHPrisonGuard
+  name: job-name-prison-guard
+  description: job-description-prison-guard
+  playTimeTracker: JobPrisonGuardDH
+  setPreference: false # Frontier - Restore this ones we have a jail
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 # 3 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # Frontier - 10 hrs
+  startingGear: DHPrisonGuardGear
+  icon: "JobIconPrisonGuardDH"
+  supervisors: job-supervisors-headofprison # Frontier
+  canBeAntag: false
+  access:
+  - Chemistry
+  - Medical
+  - Security
+  - Brig
+  - Maintenance
+  - Service # Frontier
+  - External # Frontier
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - Kitchen
+  - Chapel
+  - Janitor
+  - Theatre
+  - Bar
+  - GenpopEnter
+  - GenpopLeave
+  - Engineering
+  - Salvage
+  - Cargo
+  - Research
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Security
+
+- type: startingGear
+  id: DHPrisonGuardGear
+  equipment:
+#    jumpsuit: ClothingUniformJumpsuitPrisonGuardSunrise
+#    back: ClothingBackpackPrisonGuard
+#    shoes: ClothingShoesBootsCombatFilled
+#    eyes: ClothingEyesGlassesSecurity
+#    head: ClothingHeadPrisonGuard
+#    outerClothing: ClothingOuterArmorBasic # Frontier
+    id: PrisonGuardPDA
+#    ears: ClothingHeadsetPrison
+#    belt: ClothingBeltPrisonGuardianFilled
+    pocket1: WeaponSubMachineGunSkorpion #WeaponPistolMk58Nonlethal
+#    gloves: ClothingHandsGlovesCombat # Frontier
+#    innerClothingSkirt: ClothingUniformJumpskirtGuard
+#    satchel: ClothingBackpackSatchelPrisonGuard
+#    duffelbag: ClothingBackpackDuffelPrisonGuard
+#    messenger: ClothingBackpackSecurityFilled
+
+# - type: chameleonOutfit
+#   id: DHPrisonGuardChameleonOutfit
+#   job: DHPrisonGuard
+#   hasMindShield: true

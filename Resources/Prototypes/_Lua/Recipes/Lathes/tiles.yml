@@ -85,7 +85,7 @@
   result: FloorTileItemBluespace
   materials:
     Steel: 20
-    bluespace: 10
+    Bluespace: 10
 
 - type: latheRecipe
   parent: BaseCarpetRecipe

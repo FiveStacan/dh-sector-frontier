@@ -766,6 +766,48 @@
   position: 3, 11
 
 - type: technology
+  id: DHEVAHardsuitsBasic
+  name: dh-research-technology-evahardsuits-basic
+  entityIcon: ClothingOuterHardsuitEVA
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6800
+  recipeUnlocks:
+  - ClothingOuterHardsuitEVA
+  - ClothingOuterSuitEmergency
+  - ClothingHeadHelmetEVALarge
+  - ClothingHeadHelmetEVA
+  - ClothingOuterHardsuitAncientEVA
+  - ClothingHeadHelmetAncient
+  - ClothingHeadHelmetCosmonaut
+  technologyPrerequisites:
+  - DHOuterClothingBasic
+  position: 1, 8
+
+- type: technology
+  id: DHHardsuitsBasic
+  name: dh-research-technology-evahardsuits
+  entityIcon: ClothingOuterHardsuitPilot
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 9750
+  recipeUnlocks:
+  - ClothingOuterHardsuitPilot
+  - ClothingOuterEVASuitScientist
+  - ClothingOuterEVASuitMailman
+  - ClothingOuterEVASuitStc
+  - ClothingOuterEVASuitCaptain
+  technologyPrerequisites:
+  - DHEVAHardsuitsBasic
+  position: 2, 8
+
+- type: technology
   id: NFHardsuitsEntertainment
   name: nf-research-technology-hardsuits-entertainment
   entityIcon: ClothingOuterHardsuitClown
@@ -2834,7 +2876,7 @@
 
 - type: technology #DH
   id: DHSecurityBorgModules
-  name: Security Borg Modules
+  name: research-technology-security-borg-modules
   entityIcon: BorgModuleSecurity
   discipline: NFArsenalNfsd
   factions:

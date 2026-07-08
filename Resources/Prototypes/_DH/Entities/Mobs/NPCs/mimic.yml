@@ -51,6 +51,6 @@
     intensity: 5
     slope: 0.4
   - type: Reflect
-    rreflectProb: 1
+    reflectProb: 1
     spread: 10
   - type: RadiationProtection

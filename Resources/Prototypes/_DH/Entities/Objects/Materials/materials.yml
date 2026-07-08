@@ -1,76 +1,76 @@
-- type: entity
-  parent: IngotBase
-  id: PyroBlock
-  name: pyroblock
-  suffix: Full
-  components:
-  - type: Tag
-    tags:
-    - DHMaterials
-  - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      Pyro: 100
-  - type: Stack
-    count: 40
-    stackType: Pyro
-    baseLayer: base
-    layerStates:
-    - pyroblock
-    - pyroblock_2
-    - pyroblock_3
-    - pyroblock_4
-  - type: Sprite
-    sprite: _DH/Objects/Materials/pyroblock.rsi
-    state: pyroblock_3
-    layers:
-    - state: pyroblock_3
-      map: ["base"]
-  - type: Item
-    sprite: _DH/Objects/Materials/pyroblock.rsi
-    heldPrefix: pyroblock
-  - type: Appearance
-  - type: Extractable
-    grindableSolutionName: pyro
-  - type: SolutionContainerManager
-    solutions:
-      Pyro:
-        reagents:
-        - ReagentId: Pyro
-          Quantity: 10
+# - type: entity
+#   parent: IngotBase
+#   id: PyroBlock
+#   name: pyroblock
+#   suffix: Full
+#   components:
+#   - type: Tag
+#     tags:
+#     - DHMaterials
+#   - type: Material
+#   - type: PhysicalComposition
+#     materialComposition:
+#       Pyro: 100
+#   - type: Stack
+#     count: 40
+#     stackType: Pyro
+#     baseLayer: base
+#     layerStates:
+#     - pyroblock
+#     - pyroblock_2
+#     - pyroblock_3
+#     - pyroblock_4
+#   - type: Sprite
+#     sprite: _DH/Objects/Materials/pyroblock.rsi
+#     state: pyroblock_3
+#     layers:
+#     - state: pyroblock_3
+#       map: ["base"]
+#   - type: Item
+#     sprite: _DH/Objects/Materials/pyroblock.rsi
+#     heldPrefix: pyroblock
+#   - type: Appearance
+#   - type: Extractable
+#     grindableSolutionName: pyro
+#   - type: SolutionContainerManager
+#     solutions:
+#       Pyro:
+#         reagents:
+#         - ReagentId: Pyro
+#           Quantity: 10
 
-- type: entity
-  parent: PyroBlock
-  id: PyroBlock1
-  name: pyroblock
-  suffix: Single
-  components:
-  - type: Sprite
-    state: pyroblock
-  - type: Stack
-    count: 1
+# - type: entity
+#   parent: PyroBlock
+#   id: PyroBlock1
+#   name: pyroblock
+#   suffix: Single
+#   components:
+#   - type: Sprite
+#     state: pyroblock
+#   - type: Stack
+#     count: 1
 
-- type: entity
-  parent: PyroBlock
-  id: PyroBlock10
-  name: pyroblock
-  suffix: 10
-  components:
-  - type: Sprite
-    state: pyroblock
-  - type: Stack
-    count: 10
+# - type: entity
+#   parent: PyroBlock
+#   id: PyroBlock10
+#   name: pyroblock
+#   suffix: 10
+#   components:
+#   - type: Sprite
+#     state: pyroblock
+#   - type: Stack
+#     count: 10
 
-- type: entity
-  parent: PyroBlock
-  id: PyroBlock20
-  name: pyroblock
-  suffix: 20
-  components:
-  - type: Sprite
-    state: pyroblock
-  - type: Stack
-    count: 20
+# - type: entity
+#   parent: PyroBlock
+#   id: PyroBlock20
+#   name: pyroblock
+#   suffix: 20
+#   components:
+#   - type: Sprite
+#     state: pyroblock
+#   - type: Stack
+#     count: 20
 
 - type: entity
   parent: SheetOtherBase

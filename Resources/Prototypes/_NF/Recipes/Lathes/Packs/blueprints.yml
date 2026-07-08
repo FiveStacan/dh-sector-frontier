@@ -144,7 +144,7 @@
   #DH
   - BaseAmeJar
   - AmeJar
-  - ExpandetAmeJar
+  - ExtendedAmeJar
   - BluespaceAmeJar
   - BorgModuleJetpack
   - BorgModuleConstruction
@@ -514,7 +514,7 @@
   - NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineExtendedRifle30Empty #DH
+  #- NFMagazineExtendedRifle30Empty
   - NFMagazineDrumRifle556x45Empty #Lua 20 -> 556x45
   - MagazineAsmgtUniversalEmpty
   # BulkRifleAmmo

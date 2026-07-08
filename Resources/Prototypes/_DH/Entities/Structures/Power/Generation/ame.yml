@@ -481,11 +481,11 @@
   - type: Item
     size: Normal
     sprite: Objects/Power/AME/ame_jar.rsi
-    color: "#835ee7"
+    #color: "#835ee7"
   - type: Sprite
     sprite: Objects/Power/AME/ame_jar.rsi
     state: jar
-    color: "#835ee7"
+    #color: "#835ee7"
   - type: AmeFuelContainer
     fuelAmount: 195
     fuelCapacity: 195

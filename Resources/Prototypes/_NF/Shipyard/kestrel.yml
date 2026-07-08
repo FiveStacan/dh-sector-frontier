@@ -9,7 +9,7 @@
 # Shuttle Notes:
 #
 - type: vessel
-  id: KestrelNF
+  id: Kestrel
   parent: BaseVessel
   name: NC Kestrel
   description: Этот судно, ранее использовавшееся в качестве грузового судна на местных судоходных маршрутах, было переоборудовано для использования в работах по добыче обломков и спасательных операциях.
@@ -31,7 +31,7 @@
 #    - type: NanotrasenFtl
 
 - type: gameMap
-  id: KestrelNF
+  id: Kestrel
   mapName: 'NC Kestrel'
   mapPath: /Maps/_NF/Shuttles/kestrel.yml
   minPlayers: 0

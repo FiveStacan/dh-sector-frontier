@@ -6,12 +6,12 @@
   children:
   - Traitors
   - Thieves
-  - Revolutionaries
-  - NuclearOperatives
-  - SpaceNinja
+  #- Revolutionaries
+  #- NuclearOperatives
+  #- SpaceNinja
   - Wizard
-  - Zombies
-  - MinorAntagonists
+  #- Zombies
+  #- MinorAntagonists
 
 - type: guideEntry
   id: Traitors

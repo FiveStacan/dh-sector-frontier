@@ -47,3 +47,9 @@
   id: HeadCapPrisonGuard
   equipment:
     head: ClothingHeadCapPrisonGuard
+
+- type: loadout
+  id: PrisonGuardPDA
+  price: 0
+  equipment:
+    eyes: PrisonGuardPDA

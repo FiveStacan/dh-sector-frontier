@@ -7,7 +7,7 @@
         - to: icon
           steps:
             - tag: Crystallite
-              name: Crystallite
+              name: construction-step-crystallite
               icon:
                 sprite: _DH/Objects/Specific/crystallite.rsi
                 state: crystallite

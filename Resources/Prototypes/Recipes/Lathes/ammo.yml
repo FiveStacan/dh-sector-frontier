@@ -182,12 +182,12 @@
     Steel: 25
     Plastic: 275
 
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistolSubMachineGunPractice
-  result: MagazinePistolSubMachineGunPractice
-  materials:
-    Steel: 150
+# - type: latheRecipe
+#   parent: BaseAmmoRecipe
+#   id: MagazinePistolSubMachineGunPractice
+#   result: MagazinePistolSubMachineGunPractice
+#   materials:
+#     Steel: 150
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -219,12 +219,12 @@
   materials:
     Steel: 600
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxPistolIncendiary
-  result: MagazineBoxPistolIncendiary
-  materials:
-    Plastic: 600
+# - type: latheRecipe
+#   parent: BaseAmmoBoxRecipe
+#   id: MagazineBoxPistolIncendiary
+#   result: MagazineBoxPistolIncendiary
+#   materials:
+#     Plastic: 600
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -233,13 +233,13 @@
   materials:
     Steel: 300
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxPistolUranium
-  result: MagazineBoxPistolUranium
-  materials:
-    Plastic: 300
-    Uranium: 600
+# - type: latheRecipe
+#   parent: BaseAmmoBoxRecipe
+#   id: MagazineBoxPistolUranium
+#   result: MagazineBoxPistolUranium
+#   materials:
+#     Plastic: 300
+#     Uranium: 600
 
 # .45 Magnum
 - type: latheRecipe

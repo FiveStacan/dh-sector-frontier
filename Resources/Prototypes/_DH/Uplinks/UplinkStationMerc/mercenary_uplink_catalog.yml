@@ -1,4 +1,4 @@
-# LuaWorld - This file is licensed under AGPLv3
+﻿# LuaWorld - This file is licensed under AGPLv3
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
@@ -311,7 +311,7 @@
   name:  uplink-merc-lightrifle-name
   description: uplink-merc-lightrifle-desc
   productEntity: NFMagazineRifle30
-  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi, state: red }
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi, state: base }
   cost:
     Speso: 1000
   categories:
@@ -329,7 +329,7 @@
   id: UplinkStationMercenaryAmmoMagazinePistol
   name:  uplink-merc-magazineoistol-name
   description: uplink-merc-magazineoistol-desc
-  productEntity: .35 пистолетные
+  productEntity: Magazine9x19mmPistolFMJ
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
   cost:
     Speso: 150
@@ -617,7 +617,7 @@
   id: UplinkStationMercenaryNocatMercenaryPDA
   name:  КПК наёмника (Пустой)
   description: uplink-merc-mercpda-desc
-  productEntity: MercenaryPDAEmpty
+  productEntity: MercenaryPDA
   icon: { sprite: _NF/Objects/Devices/pda.rsi, state: pda-mercenary }
   cost:
     Speso: 150
@@ -1012,7 +1012,7 @@
   id: UplinkStationMercenaryMagazineLightRifleBox
   name:  короб патронов L6 SAW (.30 винтовочные)
   description: короб патронов L6 SAW (.30 винтовочные)
-  productEntity: NFMagazineBoxRifle20
+  productEntity: NFMagazineBoxRifle556x45 #NFMagazineBoxRifle20
   cost:
     Speso: 3000
   categories:
@@ -1468,77 +1468,77 @@
       whitelist:
         - MercenaryBase
 
-- type: listing
-  id: UplinkStationMercenaryMachineFTLDrive600Flatpack
-  name: упакованный FSS-600 блюспейс двигатель
-  description: Упакованный FSS-600 блюспейс двигатель который увеличивает дальность сверхсветового перемещения корабля до 600 метров
-  productEntity: MachineFTLDrive600Flatpack
-  cost:
-    Speso: 19800
-  categories:
-    - UplinkStationMercenaryShipWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - StationMercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive600Flatpack
+#   name: упакованный FSS-600 блюспейс двигатель
+#   description: Упакованный FSS-600 блюспейс двигатель который увеличивает дальность сверхсветового перемещения корабля до 600 метров
+#   productEntity: MachineFTLDrive600Flatpack
+#   cost:
+#     Speso: 19800
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
 
-- type: listing
-  id: UplinkStationMercenaryMachineFTLDriveFSS35Flatpack
-  name: упакованный FSS-3.5 блюспейс двигатель
-  description: Упакованный FTL-двигатель FSS-3.5, который увеличивает дальность сверхсветового перемещения корабля до ~3.5 километров. Этот FTL двигатель хорошо экономит энергию.
-  productEntity: MachineFTLDriveFSS35Flatpack
-  cost:
-    Speso: 41850
-  categories:
-    - UplinkStationMercenaryShipWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - StationMercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive
+#   name: упакованный блюспейс двигатель
+#   description: Упакованный FTL-двигатель, который увеличивает дальность сверхсветового перемещения корабля до ~5 километров. Этот FTL двигатель хорошо экономит энергию.
+#   productEntity: MachineFTLDrive
+#   cost:
+#     Speso: 41850
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
 
-- type: listing
-  id: UplinkStationMercenaryMachineFTLDriveFSS2Flatpack
-  name: упакованный FSS-2.0 блюспейс двигатель
-  description: Упакованный FTL-двигатель FSS-2.0, который увеличивает дальность сверхсветового перемещения корабля до ~2 километров. Дешёвый FTL двигатель.
-  productEntity: MachineFTLDriveFSS2Flatpack
-  cost:
-    Speso: 28500
-  categories:
-    - UplinkStationMercenaryShipWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - StationMercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive600Flatpack
+#   name: упакованный FSS-600 блюспейс двигатель
+#   description: Упакованный FTL-двигатель, который увеличивает дальность сверхсветового перемещения корабля до ~600 метров. Дешёвый FTL двигатель.
+#   productEntity: MachineFTLDrive600Flatpack
+#   cost:
+#     Speso: 24500
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
 
-- type: listing
-  id: UplinkStationMercenaryMachineFTLDriveMXSS44Flatpack
-  name: упакованный MXSS-4.4 блюспейс двигатель
-  description: Упакованный FTL-двигатель MXSS-4.4, который увеличивает дальность сверхсветового перемещения корабля до ~4.4 километров. Прожорливый и дорогой FTL двигатель.
-  productEntity: MachineFTLDriveMXSS44Flatpack
-  cost:
-    Speso: 67900
-  categories:
-    - UplinkStationMercenaryShipWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - StationMercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDriveMXSS44Flatpack
+#   name: упакованный MXSS-4.4 блюспейс двигатель
+#   description: Упакованный FTL-двигатель MXSS-4.4, который увеличивает дальность сверхсветового перемещения корабля до ~4.4 километров. Прожорливый и дорогой FTL двигатель.
+#   productEntity: MachineFTLDriveMXSS44Flatpack
+#   cost:
+#     Speso: 67900
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
 
 - type: listing
   id: UplinkStationMercenaryComputerGunneryConsoleFlatpack

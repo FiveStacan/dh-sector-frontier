@@ -1,0 +1,35 @@
+- type: job
+  id: PermaPrisoner
+  name: job-name-perma-prisoner
+  description: job-description-perma-prisoner
+  playTimeTracker: JobPermaPrisoner
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 # 3 hrs
+  whitelisted: false
+  startingGear: PermaPrisonerGear
+  alwaysUseSpawner: true
+  canBeAntag: false
+  icon: "JobIconPermaPrisoner"
+  supervisors: job-supervisors-prisoner
+  displayWeight: 10 # Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplant ] # Frontier
+  - !type:GiveItemOnHolidaySpecial # Frontier: even prisoners get a piece of cake (with no file inside).
+    holiday: FrontierBirthday # Frontier
+    prototype: PresentRandomCoal #DH
+
+- type: startingGear
+  id: PermaPrisonerGear
+  equipment:
+    id: PermaPrisonerPDA
+    shoes: ClothingShoesBootsPrisonerGrey
+    ears: ClothingHeadsetPrisoner
+
+- type: chameleonOutfit
+  id: PermaPrisonerChameleonOutfit
+  job: PermaPrisoner

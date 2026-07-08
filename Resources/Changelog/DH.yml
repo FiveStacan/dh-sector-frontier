@@ -1,0 +1,183 @@
+Entries:
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: DH content
+    - type: Add
+      message: Перевод сумок и мелочей.
+    - type: Tweak
+      message: Возвращены все старые шатты Фронтира и Луа.
+    - type: Tweak
+      message: ребаланс цен на все шаттлы (повышены).
+    - type: Tweak
+      message: Респрайт сумок шахтера, ботаника, химика, библиотекаря.
+  id: 1
+  time: '2025-10-15T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: перевод мелочей.
+    - type: Add
+      message: шезлонг.
+    - type: Add
+      message: Принтер книг, упаковки бумаги.
+    - type: Add
+      message: Множество новых полов (деревянные, угловая решетка, цифровой).
+    - type: Tweak
+      message: Перевод всех знаков с текстурами фронтира и некоторых обычных.
+    - type: Tweak
+      message: Респрайт некоторых настенных шкафов и настенного холодильника.
+    - type: Tweak
+      message: Респрайт некоторых ящиков и шкафов фронтир сборки.
+    - type: Tweak
+      message: Респрайт большенства гранат.
+    - type: Tweak
+      message: Респрайт настенных раздатчиков жидкостей.
+  id: 2
+  time: '2025-10-25T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Upstream to Lua
+    - type: Fix
+      message: Перевод и фикс мелочекй
+    - type: Tweak
+      message: Возвращена возможность гибать уроном!
+  id: 3
+  time: '2025-10-29T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Fix
+      message: Перевод и фикс мелочекй
+    - type: Fix
+      message: Исправлены спрайты некоторых консолей верфи (их клавиатуры)
+    - type: Add
+      message: РСУ атмоса и раздатчик труб
+    - type: Add
+      message: 3 новые ажигалки
+    - type: Add
+      message: Деревянный мостик
+    - type: Add
+      message: Хонк-Верфи для клоунских шаттлов на 1 апреля
+    - type: Add
+      message: Новые протокенетические ускорители и возвращение улучшений для них.
+    - type: Add
+      message: Полный набор страйкбольного снаряжения и возможность купить его на ТА.
+    - type: Add
+      message: Пластыри и пара реагентов к ним.
+    - type: Tweak
+      message: Возвращены и переведены многие товары консоли заказа грузов на ТА.
+    - type: Tweak
+      message: Эмбиент генераторов щитов и их звуки включения/выключения теперь тише и их слышно на меньшем расстоянии.
+  id: 4
+  time: '2025-10-30T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Апстрим
+    - type: Add
+      message: Страйкбольный набор покупаемый на ТА из 3 ящиков.
+    - type: Fix
+      message: Мелкие ошибки
+  id: 5
+  time: '2025-11-15T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Расширенный и блюспейс топливные баки ДАМ
+    - type: Add
+      message: Сектор космической тюрьмы
+    - type: Add
+      message: M16A4, Famas, AKMS, AKM-U, STG 44
+  id: 6
+  time: '2025-11-17T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Теперь можно задавать списки карт в sectorSystemPrototype для основной станции сектора которая будет выбираться случайно.
+  id: 7
+  time: '2025-11-21T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Респрайт и перевод настенных тюремных шкафов.
+  id: 8
+  time: '2025-11-24T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Новое оружие - Булава.
+  id: 9
+  time: '2025-11-30T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Баланс цен
+    - type: Tweak
+      message: Возвращена возможность присоеденяться на шаттлы игроков.
+    - type: Tweak
+      message: Перевод
+    - type: Add
+      message: 4 новых кошелька.
+    - type: Remove
+      message: Удалены ЛГБТ флаги.
+  id: 10
+  time: '2025-12-21T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Мелкие исправления
+    - type: Tweak
+      message: Изменено количество звезд в секторе - от 7 до 14
+    - type: Tweak
+      message: Перевод
+    - type: Tweak
+      message: Баланс цен
+    - type: Tweak
+      message: Несколько новых технологий и изменения баланса цен технологий.
+    - type: Add
+      message: Новый шаттл для Lua верфи - Caolition.
+    - type: Add
+      message: Новые тайлы.
+    - type: Remove
+      message: Временно убрана космическая тюрьма
+  id: 11
+  time: '2025-12-24T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Новая косметическая одежда.
+    - type: Add
+      message: Оружие землян.
+    - type: Add
+      message: Поношенное оружие. Теперь на экспедициях чаще будут встречаться поношенное оружие.
+    - type: Add
+      message: БронеВенд.
+    - type: Add
+      message: Пиратский сервер рнд и пиратский техфаб.
+    - type: Add
+      message: Барьерная граната.
+    - type: Add
+      message: Карго костюм.
+    - type: Add
+      message: Костюмы исследователя.
+    - type: Add
+      message: 5 новых протокенетических ускорителя.
+    - type: Add
+      message: Бейджики. Возможность одевать значки на одежду.
+    - type: Add
+      message: Перевод (еще около 700 предметов/текстов)
+    - type: Add
+      message: Сортировка в консолях верфи
+    - type: Add
+      message: Плотная деревянная стена
+    #- type: Add
+    #  message: Бумага для чертежей.
+    - type: Tweak
+      message: Расположение, стоимости и разблокировки некоторых технологий.
+    - type: Tweak
+      message: Теперь борги при выборе класса получают только 2 базовых модуля, остальные можно изучить и создать.
+    - type: Tweak
+      message: Баланс характеристик некоторых предметов. Баланс цен артефактов.
+  id: 12
+  time: '2026-01-18T12:00:00.0000000+00:00'

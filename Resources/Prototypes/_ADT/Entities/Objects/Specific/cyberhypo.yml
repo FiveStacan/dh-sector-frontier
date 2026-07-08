@@ -20,8 +20,5 @@
   #- type: Injector
   #  solutionName: hypospray
   #  activeModeProtoId: HyposprayDynamicMode
-    allowedModes:
-    - HyposprayDynamicMode
-    - HyposprayInjectMode
   - type: UseDelay
     delay: 0.5

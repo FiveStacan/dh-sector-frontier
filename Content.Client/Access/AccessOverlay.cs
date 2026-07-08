@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Client.Resources;
 using Content.Shared.Access;
 using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Enums;
@@ -32,6 +33,7 @@ public sealed class AccessOverlay : Overlay
     private static readonly Color FallbackAccessColor = Color.Gold;
 
     private readonly IEntityManager _entityManager;
+    private readonly AccessReaderSystem _accessReaderSystem;
     private readonly IPrototypeManager _prototype;
     private readonly SharedTransformSystem _transformSystem;
     private readonly Font _font;
@@ -47,9 +49,11 @@ public sealed class AccessOverlay : Overlay
         IEntityManager entityManager,
         IResourceCache resourceCache,
         SharedTransformSystem transformSystem,
+        AccessReaderSystem accessReaderSystem,
         IPrototypeManager prototype)
     {
         _entityManager = entityManager;
+        _accessReaderSystem = accessReaderSystem;
         _prototype = prototype;
         _transformSystem = transformSystem;
         _font = resourceCache.GetFont(TextFontPath, TextFontSize);
@@ -67,7 +71,14 @@ public sealed class AccessOverlay : Overlay
         var query = _entityManager.EntityQueryEnumerator<AccessReaderComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var accessReader, out var transform))
         {
-            BuildAccessTokens(accessReader);
+            if (IsContainedAccessReaderShownByParent(uid, transform))
+                continue;
+
+            var displayReader = accessReader;
+            if (_accessReaderSystem.GetMainAccessReader(uid, out var mainReader))
+                displayReader = mainReader.Value.Comp;
+
+            BuildAccessTokens(displayReader);
             if (_tokens.Count == 0)
                 continue;
 
@@ -107,6 +118,28 @@ public sealed class AccessOverlay : Overlay
                 drawPos.Y += lineHeight;
             }
         }
+    }
+
+    private bool IsContainedAccessReaderShownByParent(EntityUid uid, TransformComponent transform)
+    {
+        var parent = transform.ParentUid;
+        while (parent.IsValid())
+        {
+            if (_entityManager.TryGetComponent(parent, out AccessReaderComponent? parentReader) &&
+                parentReader.ContainerAccessProvider != null &&
+                _accessReaderSystem.GetMainAccessReader(parent, out var parentMainReader) &&
+                parentMainReader.Value.Owner == uid)
+            {
+                return true;
+            }
+
+            if (!_entityManager.TryGetComponent(parent, out TransformComponent? parentTransform))
+                break;
+
+            parent = parentTransform.ParentUid;
+        }
+
+        return false;
     }
 
     private void BuildAccessTokens(AccessReaderComponent accessReader)

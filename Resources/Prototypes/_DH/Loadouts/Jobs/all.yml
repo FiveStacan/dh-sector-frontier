@@ -76,6 +76,12 @@
     eyes: ClothingEyesGlassesSecurity
 
 - type: loadout
+  id: ClothingEyesGlassesNfsd
+  price: 0
+  equipment:
+    eyes: ClothingEyesGlassesNfsd
+
+- type: loadout
   id: ClothingEyesHudSecurity
   price: 0
   equipment:

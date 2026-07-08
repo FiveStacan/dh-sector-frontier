@@ -1,0 +1,11 @@
+- type: department
+  id: SpacePrison
+  name: department-prison
+  description: department-prison-description
+  color: "#9f4000"
+#  weight: -5
+  roles:
+  - HeadOfPrison
+  - DHPrisonGuard
+  - PermaPrisoner
+  - PrisonDoctor

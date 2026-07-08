@@ -1,16 +1,16 @@
-- type: stack
-  id: PyroOre
-  name: stack-rough-pyro
-  icon: { sprite: /Textures/_DH/Objects/Materials/ore.rsi, state: pyro }
-  spawn: PyroOre1
-  maxCount: 40
+# - type: stack
+#   id: PyroOre
+#   name: stack-rough-pyro
+#   icon: { sprite: /Textures/_DH/Objects/Materials/ore.rsi, state: pyro }
+#   spawn: PyroOre1
+#   maxCount: 40
 
-- type: stack
-  id: Pyro
-  name: stack-pyro
-  icon: { sprite: /Textures/_DH/Objects/Materials/pyroblock.rsi, state: pyro }
-  spawn: PyroBlock1
-  maxCount: 40
+# - type: stack
+#   id: Pyro
+#   name: stack-pyro
+#   icon: { sprite: /Textures/_DH/Objects/Materials/pyroblock.rsi, state: pyro }
+#   spawn: PyroBlock1
+#   maxCount: 40
 
 - type: stack
   id: BlueprintPaper
@@ -22,6 +22,110 @@
 - type: stack
   id: ChargedBluecrystal
   name: materials-charged-bluecrystal
-  icon: { sprite: _DH/Objects/Specific/bluecrystal.rsi, state: bluespace }
+  icon: { sprite: _DH/Objects/Specific/bluecrystal.rsi, state: bluecrystal }
   spawn: ChargedBluecrystal
   maxCount: 1
+
+#region Tiles
+
+- type: stack
+  id: FloorTileItemWoodBlack
+  name: tiles-wood-black
+  spawn: FloorTileItemWoodBlack
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodDark
+  name: tiles-wood-dark
+  spawn: FloorTileItemWoodDark
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodLight
+  name: tiles-wood-light
+  spawn: FloorTileItemWoodLight
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodRed
+  name: tiles-wood-red
+  spawn: FloorTileItemWoodRed
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodLargeBlack
+  name: tiles-wood-large-black
+  spawn: FloorTileItemWoodLargeBlack
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodLargeDark
+  name: tiles-wood-large-dark
+  spawn: FloorTileItemWoodLargeDark
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodLargeLight
+  name: tiles-wood-large-light
+  spawn: FloorTileItemWoodLargeLight
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodLargeRed
+  name: tiles-wood-large-red
+  spawn: FloorTileItemWoodLargeRed
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodParquetBlack
+  name: tiles-wood-parquet-black
+  spawn: FloorTileItemWoodParquetBlack
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodParquetDark
+  name: tiles-wood-parquet-dark
+  spawn: FloorTileItemWoodParquetDark
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodParquetLight
+  name: tiles-wood-parquet-light
+  spawn: FloorTileItemWoodParquetLight
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodParquetRed
+  name: tiles-wood-parquet-red
+  spawn: FloorTileItemWoodParquetRed
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodChess
+  name: tiles-wood-chess
+  spawn: FloorTileItemWoodChess
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodChessBlack
+  name: tiles-wood-chess-black
+  spawn: FloorTileItemWoodChessBlack
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodChessDark
+  name: tiles-wood-chess-dark
+  spawn: FloorTileItemWoodChessDark
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodChessLight
+  name: tiles-wood-chess-light
+  spawn: FloorTileItemWoodChessLight
+  maxCount: 30
+
+- type: stack
+  id: FloorTileItemWoodChessRed
+  name: tiles-wood-chess-red
+  spawn: FloorTileItemWoodChessRed
+  maxCount: 30

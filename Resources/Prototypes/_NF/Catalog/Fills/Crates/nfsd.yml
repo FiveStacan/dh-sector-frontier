@@ -69,8 +69,8 @@
       - id: BoxHandcuff
       - id: BoxSechud
 #      - SecBelt
-#      - SecGasmask
-#      - SpacelawBook
+      -  id: ClothingMaskGasSecurity #DH
+      - id: NFHyperlinkBookSpaceLaw #DH
 
 - type: entity
   id: CrateNfsdRestraints

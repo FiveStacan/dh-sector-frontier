@@ -1,3 +1,4 @@
+using Content.Shared.Access.Systems;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Console;
@@ -7,6 +8,7 @@ namespace Content.Client.Access.Commands;
 
 public sealed class ShowAccessReadersCommand : LocalizedEntityCommands
 {
+    [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
     [Dependency] private readonly IOverlayManager _overlay = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IResourceCache _cache = default!;
@@ -18,7 +20,7 @@ public sealed class ShowAccessReadersCommand : LocalizedEntityCommands
     {
         var existing = _overlay.RemoveOverlay<AccessOverlay>();
         if (!existing)
-            _overlay.AddOverlay(new AccessOverlay(EntityManager, _cache, _xform, _prototype));
+            _overlay.AddOverlay(new AccessOverlay(EntityManager, _cache, _xform, _accessReaderSystem, _prototype));
 
         shell.WriteLine(Loc.GetString($"cmd-showaccessreaders-status", ("status", !existing)));
     }

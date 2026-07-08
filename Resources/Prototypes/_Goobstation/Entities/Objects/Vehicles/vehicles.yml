@@ -304,4 +304,3 @@
   - type: ItemSlots # Frontier
     slots: {} # Frontier: no keys required
   - type: GravityAffected #DH
-    enabled: false

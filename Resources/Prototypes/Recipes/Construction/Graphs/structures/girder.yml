@@ -328,7 +328,7 @@
           conditions:
             - !type:EntityAnchored { }
           steps:
-            - material: steel
+            - material: Steel
               amount: 6
               doAfter: 2
 #DH -

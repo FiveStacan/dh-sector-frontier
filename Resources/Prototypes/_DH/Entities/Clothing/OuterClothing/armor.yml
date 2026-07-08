@@ -6,10 +6,10 @@
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
-    color: "#c0c0e2"
+    #color: "#c0c0e2"
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
-    color: "#c0c0e2"
+    #color: "#c0c0e2"
   - type: Armor
     modifiers:
       coefficients:

@@ -4,8 +4,8 @@
   suffix: SAI
   components:
   - type: NpcFactionMember
-    factions:
-    - AiTurret
+    #factions:
+    #- AiTurret
 
 - type: entity
   parent: BaseStructure

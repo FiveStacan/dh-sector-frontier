@@ -16,7 +16,7 @@
 #  - NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+  #- NFMagazineDrumRifle20Empty
   - MagazineAsmgtUniversalEmpty #скебоб
   - NFAmmunitionBoxBigRifle20
   - NFAmmunitionBoxBigRifle20Overpressure
@@ -46,7 +46,7 @@
   - NFMagazineSubMachineGunTopMounted35Incendiary
   - MagazineLightRifleIncendiary # Frontier
   - SpeedLoaderMagnumIncendiary # Frontier
-  - MagazineShotgunIncendiary # Frontier
+  - NFMagazineShotgunDrumIncendiary # Frontier
 ##  - MagazineBoxPistolIncendiary # Frontier
   - MagazineBoxMagnumIncendiary # Frontier
   - NFAmmunitionBoxRifle30Incendiary # Frontier

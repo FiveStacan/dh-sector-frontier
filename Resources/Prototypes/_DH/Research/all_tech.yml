@@ -2,7 +2,7 @@
 
 - type: technology
   id: tracking
-  name: Слежка
+  name: dh-research-technology-tracking
   entityIcon: Binoculars
   discipline: NFArsenalMercenary
   factions:
@@ -23,7 +23,7 @@
 
 - type: technology
   id: painting
-  name: Покраска
+  name: dh-research-technology-painting
   entityIcon: SprayPainter
   discipline: NFService
   factions:
@@ -43,7 +43,7 @@
 
 - type: technology
   id: AdvancedPainting
-  name: Улучшенная покраска
+  name: dh-research-technology-advanced-painting
   entityIcon: SprayPainterAdvanced
   discipline: NFService
   factions:
@@ -60,7 +60,7 @@
 
 - type: technology
   id: ExperementalPainting
-  name: Эксперементальная покраска
+  name: dh-research-technology-experimental-painting
   entityIcon: SprayPainterExperemental
   discipline: NFService
   factions:
@@ -73,6 +73,8 @@
   technologyPrerequisites:
   - AdvancedPainting
   position: 4, 20
+
+#region Hardsuit
 
 - type: technology
   id: DHArmorSalvage
@@ -93,48 +95,6 @@
   - DHArmor
   - NFHardsuitsField
   position: 3, 10
-
-- type: technology
-  id: DHEVAHardsuitsBasic
-  name: dh-research-technology-evahardsuits-basic
-  entityIcon: ClothingOuterHardsuitEVA
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 6800
-  recipeUnlocks:
-  - ClothingOuterHardsuitEVA
-  - ClothingOuterSuitEmergency
-  - ClothingHeadHelmetEVALarge
-  - ClothingHeadHelmetEVA
-  - ClothingOuterHardsuitAncientEVA
-  - ClothingHeadHelmetAncient
-  - ClothingHeadHelmetCosmonaut
-  technologyPrerequisites:
-  - DHOuterClothingBasic
-  position: 1, 8
-
-- type: technology
-  id: DHHardsuitsBasic
-  name: dh-research-technology-evahardsuits
-  entityIcon: ClothingOuterHardsuitPilot
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 9750
-  recipeUnlocks:
-  - ClothingOuterHardsuitPilot
-  - ClothingOuterEVASuitScientist
-  - ClothingOuterEVASuitMailman
-  - ClothingOuterEVASuitStc
-  - ClothingOuterEVASuitCaptain
-  technologyPrerequisites:
-  - DHEVAHardsuitsBasic
-  position: 2, 8
 
 - type: technology
   id: DHHardsuitsSalvage

@@ -1312,16 +1312,9 @@ tiles-old-concrete-outside = наружный старый бетонный по
 tiles-old-concrete-outside-slab = наружная старая бетонная плита
 tiles-old-concrete-outside-smooth = наружный старый гладкий бетонный пол
 
-ent-ADTBoxFolderDV = чёрно-оранжевая папка
-    .desc = Папка выполненый под стиль Dar-Vaxed.
-    .suffix = ДВ
-
 ent-ADTBoxFolderClipboardDV = планшет Dar-Vaxed
     .desc = Стильный планшет, обитый чёрной кожей. Сотрудники Dar-Vaxed часто носят, но редко используют.
     .suffix = ДВ
-
-ent-ADTPaperPack = упаковка бумаги
-    .desc = Упаковка бумаги, содержащая десять листов формата А4. Радость бюрократа.
 
 book-printer-window-book-label = Носитель:
 book-printer-window-clear-button = Очистить
@@ -1343,11 +1336,6 @@ book-printer-book-name-blank = книга
 book-printer-book-description-blank = Простой бумажный носитель. Так и ждёт, чтобы его страницы наполнились смыслом.
 book-printer-unknown-name-blank = текстовый носитель
 book-printer-unknown-description-blank = Когда-то здесь был осмысленный текст. Теперь же, здесь лишь напоминание о нём.
-
-ent-ADTPaperCrane = бумажный журавлик
-    .desc = Аккуратная поделка в виде журавлика, сделанная из бумаги.
-ent-ADTPaperShip = бумажный кораблик
-    .desc = Незамысловатый бумажный кораблик. Не мочить!
 
 ent-ADTClothingHandsRabbitGloves = кроличьи перчатки
     .desc = Ох. Фурри.
@@ -1784,11 +1772,6 @@ ent-ADTClothingHeadTetoWig = парик Тето
 ent-ADTClothingUniformJumpsuitHawaiiShirt = гавайская рубашка
     .desc = Идеальный вариант для тех, кто должен выглядеть серьезно, но при этом не хочет скрывать свою жизнерадостную натуру. Производство компании "Modeling Agency Dar-Vaxed".
     .suffix = { "" }
-
-reagent-name-styptic-powder = Кровоостанавливающая пудра
-reagent-desc-styptic-powder = При нанесении на кожу заживляет травмы.
-reagent-name-silver-sulfadiazine = Сульфадиазин серебра
-reagent-desc-silver-sulfadiazine = При нанесении на кожу заживляет ожоги.
 
 ent-NFWeaponRifleSniperHristov = { ent-WeaponSniperHristov }
     .desc = { ent-WeaponSniperHristov.desc }
@@ -2757,6 +2740,54 @@ ent-RailingRoundOld = старомодные перила
 
 materials-charged-bluecrystal = заряженный блюспейс кристалл
 
+construction-medieval-stockade = деревянный частокол
+construction-medieval-stockade-desc = На случай, если на стену из дерева не хватает.
+construction-medieval-stockade-high = деревянная стена
+construction-medieval-stockade-high-desc = Прочная стена из дерева.
+construction-wall-tent-cloth = стена палатки
+construction-wall-tent-cloth-desc = Дешевое укрытие
+construction-door-tent-cloth = дверь палатки
+construction-door-tent-cloth-desc = Простая тканевая шторка для палатки
+construction-medieval-airlock = деревянная дверь
+construction-medieval-airlock-desc = Простая деревянная дверь.
+construction-double-bed = двуспальная кровать
+construction-double-bed-desc = Используется, чтобы лежать, спать или пристегивать. Отдых здесь обеспечивает крайне медленное лечение.
+
+construction-step-crystallite = кристаллит
+construction-step-prisoner-grey-uniform = комбинезон заключённого
+
+reagent-name-nanite-fuel = нанитовое топливо
+reagent-desc-nanite-fuel = Суспензия активных нанитов в плотной несущей жидкости.
+
+stack-rough-pyro = необработанный пиро
+stack-pyro = пиро
+stack-bp_paper = чертёжная бумага
+stack-wood-floor-herringbone = деревянный пол ёлочкой
+stack-wood-floor-herringbonealt = альтернативный деревянный пол ёлочкой
+stack-wood-floor-diagonal = диагональный деревянный пол
+stack-wood-floor-diagonalmini = малый диагональный деревянный пол
+
+tool-quality-medieval-blacksmithing-name = Кузнечное дело
+tool-quality-medieval-blacksmithing-tool-name = кузнечный инструмент
+
+dh-research-technology-tracking = Слежка
+dh-research-technology-painting = Покраска
+dh-research-technology-advanced-painting = Улучшенная покраска
+dh-research-technology-experimental-painting = Экспериментальная покраска
+department-prison = Тюрьма
+department-prison-description = Персонал тюрьмы и заключённые.
+salvage-dungeon-mod-murino = Мурино
+speso = Спесо
+SpacePrison = Космическая тюрьма
+loadout-group-security-trinkets = Безделушки службы безопасности
+loadout-group-prison-guard-Ears = Уши тюремного охранника
+loadout-group-prison-guard-pda = ПДА тТюремщика
+chat-radio-pirate = Пиратский
+nf-research-technology-industrial-sheetifier = Промышленный листоформирователь
+research-technology-security-borg-modules = Модули боргов службы безопасности
+research-technology-shields = Щиты
+store-category-clothing = Одежда
+
 gunnery-Ballistics = Балистические
 gunnery-Energy = Энергетические
 gunnery-Missiles = Ракетные
@@ -2801,3 +2832,35 @@ job-name-Chef-interview = Кандидат в Шеф-Повара
 job-name-mercenary-interview = Кандидат в Наемники
 job-name-contractor-interview = Кандидат в Авантюристы
 job-name-pilot-interview = Кандидат в Пилоты
+
+
+ent-ComputerBankATMHolo = банкомат
+    .desc = Используется для ввода и вывода средств с личного банковского счета. Имеет голографическую надпись.
+    .suffix = Голографический
+ent-ComputerWallmountBankATMHolo = { ent-ComputerBankATMDeposit }
+    .suffix = Настенный, Голографический
+    .desc = { ent-ComputerBankATMDeposit.desc }
+
+ent-ComputerWithdrawBankATMHolo = банкомат для снятия
+    .desc = Используется для вывода средств с личного банковского счета. Имеет голографическую надпись.
+    .suffix = Голографический
+ent-ComputerWallmountWithdrawBankATMHolo = банкомат для снятия
+    .suffix = Настенный, Голографический
+    .desc = Используется для вывода средств с личного банковского счета. Имеет голографическую надпись.
+
+ent-ComputerBlackMarketBankATMHolo = { ent-ComputerBankATMDeposit }
+    .desc = Явно модифицированный банкомат, на котором краской криво написано "НАЛОГ С ПРОДАЖ 30%". Имеет голографическую надпись.
+    .suffix = Чёрный рынок, Голографический
+ent-ComputerWallmountBlackMarketBankATMHolo = { ent-ComputerBankATMDeposit }
+    .desc = Явно модифицированный банкомат, на котором краской криво написано "НАЛОГ С ПРОДАЖ 30%". Имеет голографическую надпись.
+    .suffix = Настенный, Чёрный рынок, Голографический
+
+ent-ComputerBankATMTypan = { ent-ComputerBankATMDeposit }
+    .desc = Огромный, брутальный банкомат. Выглядит круто и одновременно внушительно.
+    .suffix = Тайпан
+ent-ComputerBankATMHoloTypan = { ent-ComputerBankATMDeposit }
+    .desc = Огромный, брутальный банкомат. Выглядит круто и одновременно внушительно. Имеет голографическую надпись.
+    .suffix = Тайпан, Голографический
+ent-ComputerWallmountBankATMTypan = { ent-ComputerBankATMDeposit }
+    .desc = Брутальный банкомат на стене. Выглядит круто и одновременно угрожающе. Имеет голографическую надпись.
+    .suffix = Настенный, Тайпан, Голографический
