@@ -319,6 +319,7 @@
   name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
+  - ContractorClothingOuterHardsuitBasic #DH
   - ContractorClothingOuterHardsuitVoidParamed
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard

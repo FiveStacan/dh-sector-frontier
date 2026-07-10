@@ -1,0 +1,32 @@
+- type: entity
+  parent: HighSecDoor
+  id: HighSecArmoryLockedFR
+  suffix: Frontier, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsFrontierDH ]
+  - type: Sprite
+    sprite: _DH/Structures/Doors/Airlocks/highsec/frontier_highsec.rsi
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecNFSDLocked
+  suffix: NFSD Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNFSDCommand ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/highsec/nfsd_highsec.rsi
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecNFSDArmLocked
+  suffix: NFSD Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNFSDArmory ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/highsec/nfsd_highsec.rsi

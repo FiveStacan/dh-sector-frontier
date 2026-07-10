@@ -36,8 +36,8 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: Weldable
-    enabled: false
+  # - type: Weldable
+  #   enabled: false
   - type: RadiationBlocker
     enabled: false
   - type: InteractionPopup

@@ -6,10 +6,8 @@
   - BlankMediPen
   - MedicalAppraisalTool
   - HandheldCrewMonitor
-  - CraftChemBag
   - BeltMedicalEMT
   - BeltMedical
-  - CraftMedicalBag
   - CraftClothingEyesHudMedical
   - CraftClothingEyesEyepatchHudMedical
 
@@ -23,7 +21,7 @@
 
 - type: latheRecipePack
   id: NFMedicalClothingStatic
-  recipes: 
+  recipes:
   - UniformScrubsColorBlue
   - UniformScrubsColorGreen
   - UniformScrubsColorPurple
@@ -35,7 +33,7 @@
 
 - type: latheRecipePack
   id: NFChemistryBasicStatic
-  recipes: 
+  recipes:
   - Jug
   - ChemistryEmptyBottle01
   - ClothingEyesGlassesChemical
@@ -101,6 +99,8 @@
   - JugBluespace
   - VialBluespace
   - ClothingOuterHardsuitMedical
+  - MedicalBag #DH
+  - ChemBag #DH
 
 - type: latheRecipePack
   id: NFMedicalBoards

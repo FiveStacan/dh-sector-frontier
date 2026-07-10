@@ -1,0 +1,26 @@
+
+- type: entity
+  id: BannerWhite
+  parent: BannerBase
+  name: белое знамя
+  description: Знамя в белых цветах. Цвет настоящей свободы и простора.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Decoration/banner.rsi
+    state: banner-white
+  - type: Construction
+    graph: DHBannersGraph
+    node: BannerWhiteNode
+
+- type: entity
+  id: BannerDH
+  parent: BannerBase
+  name: знамя убежища
+  description: Знамя далёкого убежища от которого исходит тьма.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Decoration/banner.rsi
+    state: banner-DH
+  - type: Construction
+    graph: DHBannersGraph
+    node: BannerDHNode

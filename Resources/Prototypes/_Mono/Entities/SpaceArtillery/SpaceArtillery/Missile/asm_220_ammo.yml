@@ -43,8 +43,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 6500
-        Blunt: 10000
+        Structural: 600 #DH 6500
+        Blunt: 1000 #DH 10000
         Heat: 500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
@@ -68,9 +68,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    maxIntensity: 2000
-    intensitySlope: 30
-    totalIntensity: 7000
+    maxIntensity: 1400 # DH 2000
+    intensitySlope: 32
+    totalIntensity: 4000 # 7000
   - type: TargetSeeking
     acceleration: 20
     detectionRange: 750
@@ -90,7 +90,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2500
+        damage: 1800
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -133,8 +133,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 25000
-        Blunt: 5000
+        Structural: 4200 #DH 25000
+        Blunt: 2000 #DH 5000
     deleteOnCollide: false
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
@@ -164,9 +164,9 @@
     trackDelay: 1
   - type: Explosive
     explosionType: HardBombShipGun
-    maxIntensity: 300
+    maxIntensity: 200
     intensitySlope: 90
-    totalIntensity: 500
+    totalIntensity: 400
   # destructible components below
   - type: Fixtures
     fixtures:
@@ -192,7 +192,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 85000
+        damage: 8000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -235,10 +235,10 @@
   - type: Projectile
     damage:
       types:
-        Structural: 350
+        Structural: 250
         Blunt: 200
         Heat: 50
-        Ion: 1000
+        Ion: 900
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/mini_rocket.rsi
     layers:
@@ -261,9 +261,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBombShipGun
-    maxIntensity: 300
-    intensitySlope: 4
-    totalIntensity: 1000
+    maxIntensity: 250
+    intensitySlope: 6
+    totalIntensity: 700
   - type: TargetSeeking
     acceleration: 20
     detectionRange: 750

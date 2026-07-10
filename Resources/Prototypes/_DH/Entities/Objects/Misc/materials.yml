@@ -1,0 +1,11 @@
+- type: entity
+  id: BSsinkmodule
+  name: Bluespace sink module
+  description: Bluespace sink module
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: _DH/Objects/Misc/bs_sink_module.rsi
+    state: icon

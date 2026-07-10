@@ -27,6 +27,9 @@
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
+  - type: StationTransit
+    routes:
+      MinorPointsOfInterest: 60
 
 - type: gameMap
   id: Edison

@@ -68,11 +68,13 @@
     - EnergyShield
     - TelecomServerCircuitboard
     - ComputerIFFCircuitboard
+    - EngineeringTechFabCircuitboard
     - MedicalTechFabCircuitboard
     - MedipenTechFabCircuitboard
+    - ServiceTechFabCircuitboard
     - ClothingOuterArmorReflective
     - ShuttleGunSvalinnMachineGunCircuitboard
-#    - AmmoTechFabCircuitboard # comment from _Lua
+    - AmmoTechFabCircuitboard
     - ResearchAndDevelopmentServerMachineCircuitboard
     - PowerCellAntiqueProto
     - ClothingOuterArmorRiot

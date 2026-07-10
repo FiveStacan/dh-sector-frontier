@@ -1,0 +1,67 @@
+- type: entity
+  name: wood floor herringbone
+  parent: FloorTileItemBase
+  id: FloorTileItemWoodHerringbone
+  components:
+  - type: Sprite
+    state: woodpatternfloor
+  - type: Item
+    heldPrefix: wood
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorWoodHerringbone
+  - type: Stack
+    stackType: FloorTileWoodHerringbone
+
+- type: entity
+  name: wood floor herringbone alt
+  parent: FloorTileItemBase
+  id: FloorTileItemWoodHerringboneAlt
+  components:
+  - type: Sprite
+    state: woodpatternfloor
+  - type: Item
+    heldPrefix: wood
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorWoodHerringboneAlt
+  - type: Stack
+    stackType: FloorTileWoodHerringboneAlt
+
+- type: entity
+  name: wood floor diagonal
+  parent: FloorTileItemBase
+  id: FloorTileItemWoodDiagonal
+  components:
+  - type: Sprite
+    sprite: /Textures/_DH/Objects/tiles.rsi
+    state: wood-diagonal
+  - type: Item
+    sprite: /Textures/_DH/Objects/tiles.rsi
+    heldPrefix: wood
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorWoodDiagonal
+  - type: Stack
+    stackType: FloorTileWoodDiagonal
+
+- type: entity
+  name: wood floor diagonal mini
+  parent: FloorTileItemBase
+  id: FloorTileItemWoodDiagonalMini
+  components:
+  - type: Sprite
+    sprite: /Textures/_DH/Objects/tiles.rsi
+    state: wood-diagonal-mini
+  - type: Item
+    sprite: /Textures/_DH/Objects/tiles.rsi
+    heldPrefix: wood
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorWoodDiagonalMini
+  - type: Stack
+    stackType: FloorTileWoodDiagonalMini

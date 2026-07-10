@@ -1,0 +1,39 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: Fish
+  name: Fish
+  description: Гордость старого флота Синдиката. Предназначен для перехвата шаттлов
+    и экспедиций.
+  price: 231000 #DH Shuttle price balance #105270
+  category: Small
+  group: Typan
+  access: SyndicateAgent
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Syndicate
+  - Expedition # Lua
+  - Chemistry # Lua
+  engine:
+  - Uranium # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/fish.yml
+
+- type: gameMap
+  id: Fish
+  mapName: 'Fish'
+  mapPath: /Maps/_Lua/Shuttles/Typan/fish.yml
+  minPlayers: 0
+  stations:
+    Fish:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Fish {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

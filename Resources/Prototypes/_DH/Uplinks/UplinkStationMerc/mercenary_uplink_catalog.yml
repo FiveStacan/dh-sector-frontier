@@ -1,0 +1,2160 @@
+﻿# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: listing
+  id: UplinkStationMercenaryHardsuit
+  name:  uplink-mercenary-hardsuit-name
+  description: uplink-mercenary-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMercenary
+  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi, state: icon }
+  cost:
+    Speso: 7600
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingBand
+  name:  uplink-merc-band-name
+  description: uplink-merc-band-desc
+  productEntity: ClothingHeadBandMercenary
+  icon: { sprite: Clothing/Head/Bandanas/merc.rsi, state: icon }
+  cost:
+    Speso: 190
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingBeret
+  name:  uplink-merc-beret-name
+  description: uplink-merc-beret-desc
+  productEntity: ClothingHeadHatBeretMercenary
+  icon: { sprite: Clothing/Head/Hats/beret_merc.rsi, state: icon }
+  cost:
+    Speso: 190
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingWebb
+  name:  uplink-merc-webbing-name
+  description: uplink-merc-webbing-desc
+  productEntity: ClothingBeltMercenaryWebbing
+  icon: { sprite: Clothing/Belt/mercwebbing.rsi, state: icon }
+  cost:
+    Speso: 850
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingGlovesCombat
+  name:  uplink-merc-glovesc-name
+  description: uplink-merc-glovesc-desc
+  productEntity: ClothingHandsMercenaryGlovesCombat
+  icon: { sprite: Clothing/Hands/Gloves/mercbattle.rsi, state: icon }
+  cost:
+    Speso: 2300
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingBoots
+  name:  uplink-merc-bootsm-name
+  description: uplink-merc-bootsm-desc
+  productEntity: ClothingShoesBootsMercenary
+  icon: { sprite: Clothing/Shoes/Boots/mercboots.rsi, state: icon }
+  cost:
+    Speso: 360
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingWeb
+  name:  uplink-merc-web-name
+  description: uplink-merc-web-desc
+  productEntity: ClothingOuterVestWebMercenary
+  icon: { sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi, state: icon }
+  cost:
+    Speso: 2000
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingHelmet
+  name:  uplink-merc-helmet-name
+  description: uplink-merc-helmet-desc
+  productEntity: ClothingHeadHelmetMercenary
+  icon: { sprite: Clothing/Head/Helmets/merc_helmet.rsi, state: icon }
+  cost:
+    Speso: 600
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingJumpskirt
+  name:  uplink-merc-jumpskirt-name
+  description: uplink-merc-jumpskirt-desc
+  productEntity: ClothingUniformJumpskirtMercenary
+  icon: { sprite: _NF/Clothing/Uniforms/Jumpskirt/mercenary.rsi, state: icon }
+  cost:
+    Speso: 200
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingJumpsuit
+  name:  uplink-merc-jumpskirt-name
+  description: uplink-merc-jumpskirt-desc
+  productEntity: ClothingUniformJumpsuitMercenary
+  icon: { sprite: Clothing/Uniforms/Jumpsuit/mercenary.rsi, state: icon }
+  cost:
+    Speso: 200
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingGasMask
+  name:  uplink-merc-gas-name
+  description: uplink-merc-gas-desc
+  productEntity: ClothingMaskGasMercenary
+  icon: { sprite: Clothing/Mask/merc.rsi, state: icon }
+  cost:
+    Speso: 600
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingBootsMag
+  name:  uplink-merc-magboots-name
+  description: uplink-merc-magboots-desc
+  productEntity: ClothingShoesBootsMagMercenary
+  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-mercenary.rsi, state: icon }
+  cost:
+    Speso: 900
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingGlasses
+  name:  uplink-merc-glasses-name
+  description: uplink-merc-glasses-desc
+  productEntity: ClothingEyesGlassesMercenary
+  icon: { sprite: Clothing/Eyes/Glasses/mercglasses.rsi, state: icon }
+  cost:
+    Speso: 600
+  categories:
+    - UplinkStationMercenaryClothing
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryGunMk58
+  name:  uplink-merc-mk58-name
+  description: uplink-merc-mk58-desc
+  productEntity: NFWeaponPistolMk58
+  icon: { sprite: Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
+  cost:
+    Speso: 1900
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryGunEnergyGun
+  name:  uplink-merc-energygun-name
+  description: uplink-merc-energygun-desc
+  productEntity: NFWeaponEnergySubMachineGunDeltaV
+  icon: { sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi, state: icon }
+  cost:
+    Speso: 3400
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryGunRifleAk
+  name:  uplink-merc-rifleak-name
+  description: uplink-merc-rifleak-desc
+  productEntity: NFWeaponRifleAssaultSm
+  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
+  cost:
+    Speso: 19400
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryAmmoLightRifle
+  name:  uplink-merc-lightrifle-name
+  description: uplink-merc-lightrifle-desc
+  productEntity: NFMagazineRifle30
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi, state: base }
+  cost:
+    Speso: 1000
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryAmmoMagazinePistol
+  name:  uplink-merc-magazineoistol-name
+  description: uplink-merc-magazineoistol-desc
+  productEntity: Magazine9x19mmPistolFMJ
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
+  cost:
+    Speso: 150
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+
+#region Medical
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitCombat
+  name:  uplink-merc-medkit-name
+  description: uplink-merc-medkit-desc
+  productEntity: MedkitCombatFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
+  cost:
+    Speso: 4800
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitAdvanced
+  name: продвинутая аптечка первой помощи
+  description: Продвинутый набор для оказания помощи при продвинутых ранах.
+  productEntity: MedkitAdvancedFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: advkit }
+  cost:
+    Speso: 3600
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkit
+  name: аптечка первой помощи
+  description: Это стандартная аптечка.
+  productEntity: MedkitFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: firstaid }
+  cost:
+    Speso: 2600
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitOxygen
+  name: набор для лечения кислородного голодания
+  description: Коробка, полная кислородных лакомств.
+  productEntity: MedkitOxygenFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: o2kit }
+  cost:
+    Speso: 2600
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitBrute
+  name: набор для лечения механических травм
+  description: Аптечка для оказания первой помощи избитым ящиком с инструментами.
+  productEntity: MedkitBruteFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: brutekit }
+  cost:
+    Speso: 2800
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitBurn
+  name: набор для лечения физических травм
+  description: Специализированная аптечка на случай, если лаборатория с токсинами *внезапно* сгорит.
+  productEntity: MedkitBurnFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: burnkit }
+  cost:
+    Speso: 2800
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalMedkitToxin
+  name: набор для лечения токсинов
+  description: Используется для лечения токсинов в крови.
+  productEntity: MedkitToxinFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: toxinkit }
+  cost:
+    Speso: 2900
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalRadiation
+  name: набор для выведения радиации
+  description: Если бы вы приняли свой Рад-X, вам бы это не понадобилось.
+  productEntity: MedkitRadiationFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: radkit }
+  cost:
+    Speso: 2900
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalAnalyzer
+  name: анализатор здоровья
+  description: Ручной сканер тела, способный определять жизненные показатели пациента.
+  productEntity: HandheldHealthAnalyzerEmpty
+  icon: { sprite: Objects/Specific/Medical/healthanalyzer.rsi, state: icon }
+  cost:
+    Speso: 4000
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalTrackingImplanter
+  name: имплантер трекер
+  description: Одноразовый шприц, с имплантом медицинского отслеживания.
+  productEntity: TrackingImplanter
+  icon: { sprite: Objects/Specific/Medical/implanter.rsi, state: implanter0 }
+  cost:
+    Speso: 1200
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalSyringeCase
+  name: кейс для медипенов
+  description: Кейс с восмью различными медипенами.
+  productEntity: SyringeCaseAltFilled
+  icon: { sprite: _Mono/Objects/Misc/syringecase_alt.rsi, state: closed }
+  cost:
+    Speso: 4700
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalHypoMini
+  name: гипоспрей NTCS-101
+  description: Коммерческая версия стандартного гипоспрея NT, разработанная для внешнего рынка. В отличии от стандартного гипоспрея, оснащен системой задержки ввода лекарств.
+  productEntity: HypoMini
+  icon: { sprite: _NF/Objects/Specific/Medical/hypomini.rsi, state: hypo }
+  cost:
+    Speso: 8500
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalADTCombatHypo
+  name: боевой гипоспрей
+  description: Модель гипоспрея, разработанная NT для использования в боевых ситуациях - с повышенным объемом в ущерб скорости применения.
+  productEntity: ADTCombatHypo
+  icon: { sprite: ADT/Objects/Specific/Medical/adt_combathypo.rsi, state: icon }
+  cost:
+    Speso: 21000
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMedicalRestockMedical
+  name: набор пополнения НаноМед
+  description: Поместите в НаноМед или НаноМед Плюс вашего отдела для пополнения. Не кантовать.
+  productEntity: VendingMachineRestockMedical
+  icon: { sprite: Objects/Specific/Service/vending_machine_restock.rsi, state: base }
+  cost:
+    Speso: 3000
+  categories:
+    - UplinkStationMercenaryMedical
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#другое
+- type: listing
+  id: UplinkStationMercenaryNocatMercenaryPDA
+  name:  КПК наёмника (Пустой)
+  description: uplink-merc-mercpda-desc
+  productEntity: MercenaryPDA
+  icon: { sprite: _NF/Objects/Devices/pda.rsi, state: pda-mercenary }
+  cost:
+    Speso: 150
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatMercenaryID
+  name: ID карта наёмника
+  description: Запасная ID карта наёмника. При жилании, можно использовать для покупки дополнительного шаттла.
+  productEntity: MercenaryIDCard
+  icon: { sprite: _NF/Objects/Devices/pda.rsi, state: pda-mercenary }
+  cost:
+    Speso: 5000
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatJawsOfLife
+  name:  uplink-merc-jawsoflife-name
+  description: uplink-merc-jawsoflife-desc
+  productEntity: JawsOfLife
+  icon: { sprite: Objects/Tools/jaws_of_life.rsi, state: jaws_pry }
+  cost:
+    Speso: 7200
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatPowerDrill
+  name: электродрель
+  description: Простая дрель с электроприводом.
+  productEntity: PowerDrill
+  icon: { sprite: Objects/Tools/drill.rsi, state: drill_screw }
+  cost:
+    Speso: 5200
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatMultitool
+  name: мультитул
+  description: Современный инструмент для копирования, хранения и передачи электрических импульсов и сигналов по проводам и машинам.
+  productEntity: Multitool
+  cost:
+    Speso: 1200
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatGrappling
+  name:  uplink-merc-grappling-name
+  description: uplink-merc-grappling-desc
+  productEntity: WeaponGrapplingGun
+  icon: { sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi, state: base }
+  cost:
+    Speso: 900
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatJetpack
+  name: мини джетпак
+  description: uplink-merc-jetpack-desc
+  productEntity: JetpackMiniFilled
+  icon: { sprite: Objects/Tanks/Jetpacks/mini.rsi, state: icon }
+  cost:
+    Speso: 1300
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatJetpackBlack
+  name:  uplink-merc-jetpack-name
+  description: uplink-merc-jetpack-desc
+  productEntity: JetpackBlackFilled
+  icon: { sprite: _DV/Objects/Tanks/Jetpacks/black.rsi, state: icon }
+  cost:
+    Speso: 2400
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatHeadset
+  name:  uplink-merc-headset-name
+  description: uplink-merc-headset-desc
+  productEntity: ClothingHeadsetAltMercenary
+  icon: { sprite: _NF/Clothing/Ears/Headsets/mercenary.rsi, state: icon_alt }
+  cost:
+    Speso: 300
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNocatKey
+  name:  uplink-merc-key-name
+  description: uplink-merc-key-desc
+  productEntity: EncryptionKeyMercenary
+  icon: { sprite: _Lua/encryption_keys.rsi, state: crypt_gray_uplink }
+  cost:
+    Speso: 300
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Upd
+
+#C20r
+- type: listing
+  id: UplinkStationMercenaryWeaponSubMachineGunC20r
+  name:  C-20r
+  description: Нелегальное оружие используемое агентами синдиката. Оружие, часто используемое печально известными ядерными оперативниками. Использует патроны калибра .35 авто.
+  productEntity: NFWeaponSubMachineGunC20r
+  cost:
+    Speso: 28500
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazinePistolSubMachineGun
+  name:  магазин ПП (.35 авто)
+  description: магазин ПП (.35 авто)
+  productEntity: NFMagazineSubMachineGun35
+  cost:
+    Speso: 1200
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#AR10
+- type: listing
+  id: UplinkStationMercenaryWeaponRifleAk
+  name: АКМС
+  description: Нелегальное оружие используемое агентами синдиката. Культовое оружие всех войн. Использует патроны калибра .30 винтовочный.
+  productEntity: WeaponRifleAk
+  cost:
+    Speso: 49500
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNFMagazineRifle30
+  name:  магазин (.30 винтовочные)
+  description: магазин (.30 винтовочные)
+  productEntity: NFMagazineRifle30
+  cost:
+    Speso: 1300
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#AR10
+- type: listing
+  id: UplinkStationMercenaryWeaponRifleAR10
+  name: AR10
+  description: Ранняя версия более распространенной винтовки M16. Считается прародителем винтовки XX века. Как одна из них оказалась здесь — отдельная загадка. Использует патрон 7,62×51 мм.
+  productEntity: WeaponRifleAR10
+  cost:
+    Speso: 16500
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryRMCMagazineRifleAR10
+  name:  AR10 магазин (7.62x51mm)
+  description: AR10 магазин (7.62x51mm)
+  productEntity: RMCMagazineRifleAR10
+  cost:
+    Speso: 900
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#CAWS-25
+- type: listing
+  id: UplinkStationMercenaryWeaponRifleJackdaw
+  name: CAWS-25 "Галка"
+  description: Начало конца возвещается песней галки. Использует безгильзовые патроны .25.
+  productEntity: NFWeaponRifleAssaultJackdaw
+  cost:
+    Speso: 14800
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazineCaselessRifle
+  name:  магазин (.25 безгильзовые)
+  description: магазин (.25 безгильзовые)
+  productEntity: LuaMagazineCaselessRifle
+  cost:
+    Speso: 1200
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#M16
+- type: listing
+  id: UplinkStationMercenaryWeaponRifleM16
+  name: M16
+  description: Старая, проверенная конструкция, впервые принятая на вооружение в США в 1960-х. Такой экземпляр скорее принадлежит музею военной истории. Использует патрон 5,56×45 мм.
+  productEntity: WeaponRifleM16
+  cost:
+    Speso: 14700
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryRMCMagazineRifleM16
+  name:  M16 магазин (5.56x45mm)
+  description: M16 магазин (5.56x45mm)
+  productEntity: RMCMagazineRifleM16
+  cost:
+    Speso: 1200
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#L6 SAW
+- type: listing
+  id: UplinkStationMercenaryWeaponLightMachineGunL6
+  name: L6 SAW
+  description: Нелегальное оружие используемое агентами синдиката. Весьма традиционный лёгкий пулемёт с удобной лакированной деревянной пистолетной рукоятью. Использует патроны калибра .30 винтовочный.
+  productEntity: NFWeaponLightMachineGunL6
+  cost:
+    Speso: 49000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazineLightRifleBox
+  name:  короб патронов L6 SAW (.30 винтовочные)
+  description: короб патронов L6 SAW (.30 винтовочные)
+  productEntity: NFMagazineBoxRifle556x45 #NFMagazineBoxRifle20
+  cost:
+    Speso: 3000
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#MP5
+- type: listing
+  id: UplinkStationMercenaryWeaponSMGMP5
+  name: MP5
+  description: Немецкая разработка — один из самых массовых пистолетов-пулемётов в мире. До сих пор можно встретить этот образец у коллекционеров или фанатов огнестрельного оружия.
+  productEntity: WeaponSMGMP5
+  cost:
+    Speso: 10000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryCMMagazineSMGMP5
+  name:  MP5 магазин (9mm)
+  description: MP5 магазин (9mm)
+  productEntity: CMMagazineSMGMP5
+  cost:
+    Speso: 700
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Wt550
+- type: listing
+  id: UplinkStationMercenaryWeaponSubMachineGunWt550
+  name: WT550
+  description: Отличный пистолет-пулемёт, производства NanoTrasen's Small Arms Division. Использует патроны калибра .35 авто. Запрещено к использованию гражданскими.
+  productEntity: NFWeaponSubMachineGunWt550
+  cost:
+    Speso: 9500
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazinePistolSubMachineGunTopMounted
+  name: магазин WT550 (.35 авто, надствольный)
+  description: магазин WT550 (.35 авто, надствольный)
+  productEntity: NFMagazineSubMachineGunTopMounted35
+  cost:
+    Speso: 600
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Bulldog
+- type: listing
+  id: UplinkStationMercenaryWeaponShotgunBulldog
+  name: Бульдог
+  description: Нелегальное оружие используемое агентами синдиката. Магазинный дробовик, предназначенный для ведения ближнего боя. Использует патроны калибра .50 ружейный.
+  productEntity: NFWeaponShotgunBulldog
+  cost:
+    Speso: 30000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazineShotgun
+  name: барабан (.50 дробь)
+  description: барабан (.50 дробь)
+  productEntity: NFMagazineShotgunDrum
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#X-01
+- type: listing
+  id: UplinkStationMercenaryADTWeaponPistolX01
+  name: X-01 мультифазовый энергетический пистолет
+  description: Это дорогая, современная версия антикварного лазерного пистолета. У этого оружия есть несколько уникальных режимов огня, но нет возможности самостоятельно перезаряжаться с течением времени.
+  productEntity: ADTWeaponPistolX01
+  cost:
+    Speso: 62000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Disabler
+- type: listing
+  id: UplinkStationMercenaryNFWeaponEnergyPistolDisabler
+  name: станнер
+  description: Оружие для самозащиты, которое изнуряет органические цели, пока они не свалятся с ног.
+  productEntity: NFWeaponEnergyPistolDisabler
+  cost:
+    Speso: 2000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#glock22
+- type: listing
+  id: UplinkStationMercenaryWeaponPistolG22
+  name: Glock-22
+  description: Популярное полицейское огнестрельное оружие в наши дни. Использует патрон калибра .35 авто.
+  productEntity: WeaponPistolG22
+  cost:
+    Speso: 3650
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazineGlock22
+  name: магазин Glock22 (.35 пистолетные)
+  description: магазин Glock22 (.35 пистолетные)
+  productEntity: MagazineGlock22
+  cost:
+    Speso: 450
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#glock22
+- type: listing
+  id: UplinkStationMercenaryWeaponPistolHIB88M4
+  name: HIBrowning-88 М4
+  description: Необычный пистолет, используемый для самообороны, но он часто используется террористическими организациями. Использует патрон калибра  .35 авто.
+  productEntity: WeaponPistolHIB88M4
+  cost:
+    Speso: 4950
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryMagazineHIBrowning88M4
+  name: магазин HIBrowning-88 М4
+  description: Использует патроны калибра .35 мм
+  productEntity: MagazineHIBrowning
+  cost:
+    Speso: 420
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#AntiMateriel
+- type: listing
+  id: UplinkStationMercenaryN14WeaponAntiMateriel
+  name: Анти-Материальная винтовка
+  description: С одного взгляда внушает страх. Она может уничтожить все, что попадется на ее пути.
+  productEntity: N14WeaponAntiMateriel
+  cost:
+    Speso: 35000
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryN14Magazine50AMR
+  name: магазин (.50 BMG)
+  description: магазин (.50 BMG)
+  productEntity: N14Magazine50AMR
+  cost:
+    Speso: 1300
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Скуфандры
+- type: listing
+  id: UplinkStationMercenaryClothingOuterHardsuitMaxim
+  name:  максимальный скафандр утилизатора
+  description: Пламя. Жар. Эти элементы куют великое оружие, они же куют великих утилизаторов.
+  productEntity: ClothingOuterHardsuitMaxim
+  cost:
+    Speso: 54000
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingOuterHardsuitPirateElite
+  name: элитный пиратский скафандр
+  description: Древний бронированный скафандр элитного класса. Сконструирован неким бородатым умельцем и крепок, как чугунный утюг.
+  productEntity: ClothingOuterHardsuitPirateElite
+  cost:
+    Speso: 37000
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingOuterHardsuitLuxury
+  name: элитный шахтёрский скафандр
+  description: Отремонтированный шахтёрский скафандр, выполненный в цветах квартирмейстера. Графеновая подкладка обеспечивает меньшую защиту, но с ней гораздо легче передвигаться.
+  productEntity: ClothingOuterHardsuitLuxury
+  cost:
+    Speso: 24500
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingOuterHardsuitSecurity
+  name: скафандр службы безопасности
+  description: Специальный костюм, защищающий от опасной среды с низким давлением. Имеет дополнительный слой брони.
+  productEntity: ClothingOuterHardsuitSecurity
+  cost:
+    Speso: 32000
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryClothingOuterHardsuitGoliath
+  name: скафандр голиафа
+  description: Легковесный скафандр, украшенный лоскутами толстой, хитиновой шкуры голиафа.
+  productEntity: ClothingOuterHardsuitGoliath
+  cost:
+    Speso: 36750
+  categories:
+    - UplinkStationMercenaryHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#корабельное вооружение
+- type: listing
+  id: UplinkStationMercenaryGunneryServerFlatpack
+  name: упакованный сервер управления огнём
+  description: Упакованный сервер управления огнём для наведения и управления огнём оружия установленного на шаттле.
+  productEntity: GunneryServerFlatpack
+  cost:
+    Speso: 12000
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryComputerIFFFlatpack
+  name: упакованная консоль системы опознавания
+  description: Упаковка, при помощи которой можно создать консоль системы опознавания.
+  productEntity: ComputerIFFFlatpack
+  cost:
+    Speso: 20000
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryWeaponTurretTovekFlatPack
+  name: ADMX-23 TOVEK Hybrid EMP Pod
+  description: A hybrid EMP missile pod manufactured by Aetherion Dynamics. Deals both physical and EMP damage. Can be remotely activated, or linked up to a GCS.
+  productEntity: WeaponTurretTovekFlatPack
+  cost:
+    Speso: 23800
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryWeapon20mmBaseFlatpack
+  name: упакованный лёгкий пулемёт
+  description: Упакованный Лёгкий Пулемёт (.20мм)
+  productEntity: Weapon20mmBaseFlatpack
+  cost:
+    Speso: 18900
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryWeapon53mmBaseFlatpack
+  name: упакованный средний пулемёт
+  description: Упакованный Средний Пулемёт (.53мм)
+  productEntity: Weapon53mmBaseFlatpack
+  cost:
+    Speso: 33000
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive600Flatpack
+#   name: упакованный FSS-600 блюспейс двигатель
+#   description: Упакованный FSS-600 блюспейс двигатель который увеличивает дальность сверхсветового перемещения корабля до 600 метров
+#   productEntity: MachineFTLDrive600Flatpack
+#   cost:
+#     Speso: 19800
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
+
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive
+#   name: упакованный блюспейс двигатель
+#   description: Упакованный FTL-двигатель, который увеличивает дальность сверхсветового перемещения корабля до ~5 километров. Этот FTL двигатель хорошо экономит энергию.
+#   productEntity: MachineFTLDrive
+#   cost:
+#     Speso: 41850
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
+
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDrive600Flatpack
+#   name: упакованный FSS-600 блюспейс двигатель
+#   description: Упакованный FTL-двигатель, который увеличивает дальность сверхсветового перемещения корабля до ~600 метров. Дешёвый FTL двигатель.
+#   productEntity: MachineFTLDrive600Flatpack
+#   cost:
+#     Speso: 24500
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
+
+# - type: listing
+#   id: UplinkStationMercenaryMachineFTLDriveMXSS44Flatpack
+#   name: упакованный MXSS-4.4 блюспейс двигатель
+#   description: Упакованный FTL-двигатель MXSS-4.4, который увеличивает дальность сверхсветового перемещения корабля до ~4.4 километров. Прожорливый и дорогой FTL двигатель.
+#   productEntity: MachineFTLDriveMXSS44Flatpack
+#   cost:
+#     Speso: 67900
+#   categories:
+#     - UplinkStationMercenaryShipWeapons
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - StationMercenaryUplink
+#     - !type:BuyerJobCondition
+#       whitelist:
+#         - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryComputerGunneryConsoleFlatpack
+  name: упакованная консоль управления огнём
+  description: Упакованная консоль управления огнём для наведения и управления огнём оружия, обеспечивающий точное прицеливание и стрельбу.
+  productEntity: ComputerGunneryConsoleFlatpack
+  cost:
+    Speso: 8600
+  categories:
+    - UplinkStationMercenaryShipWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#Ховербайк
+- type: listing
+  id: UplinkStationMercenaryHoverbikeFlatpack
+  name: упакованный ховербайк
+  description: Упаковка, содержащая ховербайк. Ключи в комплекте.
+  productEntity: HoverbikeFlatpack
+  cost:
+    Speso: 12000
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryHoverbikeSyndicateFlatpack
+  name: упакованный ховербайк синдиката
+  description: Упаковка, содержащая ховербайк. Ключи в комплекте.
+  productEntity: HoverbikeSyndicateFlatpack
+  cost:
+    Speso: 18000
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFaxMachineFlatpack
+  name: упаковка факса
+  description: Универсально-сборная упаковка, используемая для сборки факса.
+  productEntity: FaxMachineFlatpack
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryNFHolopadShipFlatpack
+  name: упакованный блюспейс голопад
+  description: Упаковка, при помощи которой можно создать блюспейс голопад.
+  productEntity: NFHolopadShipFlatpack
+  cost:
+    Speso: 4500
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryWeaponCapacitorRechargerFlatpack
+  name: упакованный зарядник энергооружия
+  description: Упаковка, при помощи которой можно зарядник энергооружия.
+  productEntity: WeaponCapacitorRechargerFlatpack
+  cost:
+    Speso: 2600
+  categories:
+    - UplinkStationMercenaryNocat
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#region Fuel
+
+- type: listing
+  id: UplinkStationMercenaryFuelAmeJar
+  name: топливный бак ДАМ
+  description: Герметичный сосуд с антивеществом использующийся в реакторе антиматерии.
+  productEntity: AmeJar
+  cost:
+    Speso: 5000
+  categories:
+    - UplinkStationMercenaryFuel
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFuelFuelPlasma
+  name: топливная плазма
+  description: Стержень из ненасыщенной плазмы, пригодный в качестве топлива.
+  productEntity: FuelPlasma
+  cost:
+    Speso: 2200
+  categories:
+    - UplinkStationMercenaryFuel
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFuelFuelUranium
+  name: топливный уран
+  description: Стержень из полуобработанного урана, пригодный в качестве топлива.
+  productEntity: FuelUranium
+  cost:
+    Speso: 3600
+  categories:
+    - UplinkStationMercenaryFuel
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFuelFuelBananium
+  name: топливный бананиум
+  description: Стержень, изготовленный из прессованной кожуры бананиума, пригодной в качестве топлива.
+  productEntity: FuelBananium
+  cost:
+    Speso: 8700
+  categories:
+    - UplinkStationMercenaryFuel
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFuelJerryCanWeldingFuel
+  name: топливная канистра (сварочное топливо)
+  description: Топливная канистра со специальным анти-проливным клапаном.
+  productEntity: JerryCanWeldingFuel
+  cost:
+    Speso: 1000
+  categories:
+    - UplinkStationMercenaryFuel
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#region Ammo
+
+- type: listing
+  id: UplinkStationMercenaryAmmoAmmoTechFabFlatpack
+  name: упакованный ТехФаб патронов
+  description: Упаковка, при помощи которой можно создать ТехФаб патронов.
+  productEntity: AmmoTechFabFlatpack
+  cost:
+    Speso: 4500
+  categories:
+    - UplinkStationMercenaryAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+#region Ship Ammo
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoGrenadeFrag
+  name: осколочная граната
+  description: Осколочная граната заряжаемая в картриджы.
+  productEntity: NFGrenadeFrag
+  cost:
+    Speso: 400
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeEmpty
+  name: картридж для гранат
+  description: Пустой картридж для гранат.
+  productEntity: NFMagazineGrenadeEmpty
+  cost:
+    Speso: 500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeEMP
+  name: картридж ЭМИ гранат
+  description: Полный картридж для гранат.
+  productEntity: NFMagazineGrenadeEMP
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeFrag
+  name: картридж осколочных гранат
+  description: Полный картридж для гранат.
+  productEntity: NFMagazineGrenadeFrag
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeFlash
+  name: картридж светошумовых гранат
+  description: Полный картридж для гранат.
+  productEntity: NFMagazineGrenadeFlash
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeBlast
+  name: картридж фугасных гранат
+  description: Полный картридж для гранат.
+  productEntity: NFMagazineGrenadeBlast
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoMagazineGrenadeBaton
+  name: картридж шоковых гранат
+  description: Полный картридж для гранат.
+  productEntity: NFMagazineGrenadeBaton
+  cost:
+    Speso: 2500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoPowerCageMediumEmpty
+  name: энергоячейка средней ёмкости
+  description: Перезаряжаемая энергетическая ячейка для больших устройств. Золотой стандарт ёмкости и стоимости.
+  productEntity: PowerCageMediumEmpty
+  cost:
+    Speso: 3000
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoPowerCageSmallEmpty
+  name: энергоячейка малой ёмкости
+  description: Перезаряжаемая энергетическая ячейка для больших устройств. Это самая дешёвая разновидность, которую вы можете найти.
+  productEntity: PowerCageSmallEmpty
+  cost:
+    Speso: 1900
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoCannonBallGrapeshot
+  name: картечь
+  description: Заряд картечи для ваших пушек.
+  productEntity: NFCannonBallGrapeshot
+  cost:
+    Speso: 3200
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoCannonBallGlassshot
+  name: стеклянная картечь
+  description: Заряд стеклянной картечи для ваших пушек.
+  productEntity: NFCannonBallGlassshot
+  cost:
+    Speso: 3200
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoCannonBall
+  name: пушечное ядро
+  description: Пушечное ядро для ваших пушек.
+  productEntity: NFCannonBall
+  cost:
+    Speso: 3800
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoCannonBallEmp
+  name: шоковое ядро
+  description: Шоковое ядро для ваших пушек.
+  productEntity: NFCannonBallEmp
+  cost:
+    Speso: 4300
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoCharonSlugAmmo
+  name: M381 CHARON 280mm 26.5kg slug cartridge
+  description: M381 CHARON 280mm 26.5kg slug cartridge
+  productEntity: CharonSlugAmmo
+  cost:
+    Speso: 3500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmo150mmApShell
+  name: 150mm AP shell
+  description: A chemically-propelled AP shell for 150mm cannons. Its not very good, as most 150mm cannons are optimized for EMP shells. Its a crude method, and it certainly wouldn't pass a TSFN inspection.
+  productEntity: 150mmApShell
+  cost:
+    Speso: 4000
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmo150mmEmpShell
+  name: 150mm EMP shell
+  description: A chemically-propelled EMP shell, used in 150mm cannons such as the TARNYX. Nothing fancy.
+  productEntity: 150mmEmpShell
+  cost:
+    Speso: 4300
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoLightFighterOrdinanceGPOItem
+  name: GPO-L 50kg Unguided Bomb
+  description: A fairly durable and relatively high yield explosive payload. Rarely seen in conventional space combat and a remnant of ground-based warfare, bombs can deal devastating damage... if they manage to hit their target. It can fit in a light GPOL housing.
+  productEntity: LightFighterOrdinanceGPOItem
+  cost:
+    Speso: 5600
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoLightFighterOrdinanceZenithItem
+  name: ASM(LF)5 "Zenith" Anti-Ship Warhead
+  description: A military-grade guided missile usually deployed by light spacecraft. Capable of significant damage and more easy to hit targets with than a bomb, the Zenith is accurate and fast, but not durable. It can fit in a light GPOL housing.
+  productEntity: LightFighterOrdinanceZenithItem
+  cost:
+    Speso: 6200
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryShipAmmoLightFighterOrdinanceQuasarItem
+  name: AD-901 "QUASAR" disposable hyperpenetrator
+  description: A costly and experimental foray into the minification of hyperaccelerator technologies for use on smaller spaceframes, the QUASAR hyperpenetrator is a relatively weak, but fast-moving munition impervious to most anti-munition weapons. It can fit in a light GPOL housing.
+  cost:
+    Speso: 8500
+  categories:
+    - UplinkStationMercenaryShipAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+#region Food
+
+- type: listing
+  id: UplinkStationMercenaryFoodHappyHonk
+  name: большой обед Хэппи Хонк
+  description: Большой набор Хэппи Хонк с игрушкой.
+  productEntity: FoodMealHappyHonkBigBite
+  cost:
+    Speso: 3799
+  categories:
+    - UplinkStationMercenaryFood
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFoodBoxMRE
+  name: сухой паёк
+  description: Коробка старых военных ИРП. Они, на удивление, не испортились.
+  productEntity: BoxMRE
+  cost:
+    Speso: 1250
+  categories:
+    - UplinkStationMercenaryFood
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
+  id: UplinkStationMercenaryFoodDrinkColaBottleFull
+  name: большая кола
+  description: Большая бутылка космической колы. Напиток настоящих наёмников!
+  productEntity: DrinkColaBottleFull
+  cost:
+    Speso: 1000
+  categories:
+    - UplinkStationMercenaryFood
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase

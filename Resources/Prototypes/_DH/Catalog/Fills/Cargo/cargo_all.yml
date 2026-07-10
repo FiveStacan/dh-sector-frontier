@@ -1,10 +1,49 @@
 - type: cargoProduct
   id: CrateDisabilitiesPeopleCrate
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
-    state: dase
+    sprite: Objects/Weapons/Melee/white_cane.rsi
+    state: icon
   product: DisabilitiesPeopleCrate
-  cost: 3000
+  cost: 3450
   category: cargoproduct-category-name-fun
   group: market
-  
+
+- type: cargoProduct
+  id: ShiparmoryResearchAndDevelopmentServerFlatpack
+  icon:
+    sprite: _DH/Structures/Machines/server.rsi
+    state: server
+  product: ShiparmoryResearchAndDevelopmentServerFlatpack
+  cost: 16450
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: SecurityGrenadeBarrier
+  icon:
+    sprite: _DH/Objects/Weapons/Grenades/barrier.rsi
+    state: icon
+  product: CrateSecurityGrenadeBarrier
+  cost: 4700
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: ArmoryLaserik30
+  icon:
+    sprite: _DH/Objects/Weapons/Guns/Battery/batterylaser_carbine.rsi
+    state: icon
+  product: CrateArmoryIK30
+  cost: 15100
+  category: cargoproduct-category-name-armory
+  group: market
+
+- type: cargoProduct
+  id: CargoSuitCargo
+  icon:
+    sprite: _DH/Clothing/OuterClothing/Suits/cargo-suit.rsi
+    state: icon
+  product: CrateSuitCargo
+  cost: 14000
+  category: cargoproduct-category-name-cargo
+  group: market

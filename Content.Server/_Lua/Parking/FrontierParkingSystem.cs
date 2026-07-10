@@ -77,6 +77,7 @@ public sealed class FrontierParkingSystem : EntitySystem
     private static readonly TimeSpan ScanInterval = TimeSpan.FromSeconds(1);
     private static readonly TimeSpan FineInterval = TimeSpan.FromMinutes(10);
     private const int FineAmount = 10_000;
+    private const int ConsoleMaxExtraMinutes = 30;
     private readonly Dictionary<EntityUid, ParkingState> _tracked = new();
     private readonly Dictionary<EntityUid, Task> _pendingOfflineFines = new();
     private readonly HashSet<EntityUid> _inZoneBuffer = new();
@@ -127,6 +128,44 @@ public sealed class FrontierParkingSystem : EntitySystem
             return false;
 
         s.ExtraMinutes = Math.Min(50, s.ExtraMinutes + 10);
+        return true;
+    }
+
+    public bool AddFiveMinutesFromConsole(EntityUid shuttleUid)
+    {
+        if (!_tracked.TryGetValue(shuttleUid, out var s))
+            return false;
+
+        if (s.ExtraMinutes >= ConsoleMaxExtraMinutes)
+            return false;
+
+        s.ExtraMinutes = Math.Min(ConsoleMaxExtraMinutes, s.ExtraMinutes + 5);
+        return true;
+    }
+
+    public void StartTrackingFromConsoleRecall(EntityUid shuttleUid, ShuttleDeedComponent deed)
+    {
+        if (!_enabled)
+            return;
+
+        var state = new ParkingState(_timing.CurTime);
+        _tracked[shuttleUid] = state;
+        SendOwnerNotice(shuttleUid, deed, Loc.GetString("frontier-parking-popup-enter"), PopupInfoType);
+    }
+
+    public bool TryGetRemainingTime(EntityUid shuttleUid, out TimeSpan remaining, out bool canExtend)
+    {
+        remaining = TimeSpan.Zero;
+        canExtend = false;
+
+        if (!_tracked.TryGetValue(shuttleUid, out var state))
+            return false;
+
+        remaining = GetAllowedInterval(state) - (_timing.CurTime - state.CycleStart);
+        if (remaining < TimeSpan.Zero)
+            remaining = TimeSpan.Zero;
+
+        canExtend = state.ExtraMinutes < ConsoleMaxExtraMinutes;
         return true;
     }
 

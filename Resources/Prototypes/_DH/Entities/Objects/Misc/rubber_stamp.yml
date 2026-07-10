@@ -1,0 +1,12 @@
+- type: entity
+  name: печать ЦинтКом
+  parent: RubberStampBase
+  id: RubberStampCentcomFake
+  components:
+  - type: Stamp
+    stampedName: ЦинтКОМ
+    stampedColor: "#11b311"
+    stampState: "paper_stamp-ok"
+    protected: False
+  - type: Sprite
+    state: stamp-centcom

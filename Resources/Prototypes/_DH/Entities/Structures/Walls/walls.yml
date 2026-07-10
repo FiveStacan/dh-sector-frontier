@@ -1,0 +1,561 @@
+- type: entity
+  id: WoodGirder
+  parent: Girder
+  name: wood girder
+  components:
+  #- type: Construction
+  #  graph: Dhwalls
+  #  node: woodgirder
+  - type: Sprite
+    sprite: Structures/Walls/solid.rsi
+    state: wall_girder
+    color: "#c97e41"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+  - type: StaticPrice
+    price: 13
+
+- type: entity
+  parent: BaseWall
+  id: WallDrywall
+  name: drywall
+  description: It looks sturdy enough.
+  components:
+    - type: Sprite
+      sprite: _DH/Structures/Walls/drywall.rsi
+    - type: Icon
+      sprite: _DH/Structures/Walls/drywall.rsi
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+        - trigger:
+            !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: IconSmooth
+      key: walls
+      base: drywall
+    - type: Tag
+      tags:
+        - Wall
+    - type: RCDDeconstructable
+      cost: 6
+      delay: 8
+
+- type: entity
+  parent: BaseWall
+  id: WallPaper
+  name: paper wall
+  description: Helps to contain the repeated screams of martial artists.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/paper.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/paper.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: IconSmooth
+    key: walls
+    base: paperwall
+
+- type: entity
+  parent: BaseWall
+  id: WallWoodTight
+  name: tight wood wall
+  description: The traditional greytide defense.
+  components:
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/wood.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/wood.rsi
+  #- type: Construction
+  #  graph: DHWalls
+  #  node: tightwoodWall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+      - !type:ChangeConstructionNodeBehavior
+        node: WoodGirder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: wood
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: StaticPrice
+    price: 31
+
+- type: entity
+  parent: [ WallWood, BaseWallDiagonal ]
+  id: WallWoodTightDiagonal
+  name: wood wall
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _DH/Structures/Walls/wood_diagonal.rsi
+    state: state0
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls
+    base: state
+  - type: Icon
+    sprite: _DH/Structures/Walls/wood_diagonal.rsi
+    state: state0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Occluder
+    enabled: false
+
+- type: entity
+  parent: BaseWall
+  id: WallBathroom
+  name: стена ванной
+  suffix: Мытищи
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/bathroom.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/bathroom.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: BathroomWall
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: state
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ReinforcedWallVisuals.DeconstructionStage:
+        ReinforcedWallVisualLayers.Deconstruction:
+          -1: { visible: false }
+          0: { state: bathroom_construct-0, visible: true}
+          1: { state: bathroom_construct-1, visible: true}
+          2: { state: bathroom_construct-2, visible: true}
+          3: { state: bathroom_construct-3, visible: true}
+          4: { state: bathroom_construct-4, visible: true}
+          5: { state: bathroom_construct-5, visible: true}
+  - type: ReinforcedWallReplacementMarker
+  - type: StaticPrice
+    price: 25
+  - type: RadiationBlocker
+    resistance: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: RCDDeconstructable
+    cost: 4
+    delay: 20
+    fx: EffectRCDDeconstruct8
+
+# region Solid Dark
+
+- type: entity
+  parent: BaseWall
+  id: WallSolidDark
+  name: dark solid wall
+  components:
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/solid_dark.rsi
+  - type: WallReplacementMarker
+  - type: Construction
+    graph: Girder
+    node: wall
+  - type: Icon
+    sprite: _DH/Structures/Walls/solid_dark.rsi
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000 # Lua 400<1600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 600 # Lua 200<800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: solid
+  - type: ExplosionResistance
+    damageCoefficient: 0.95 #DH
+
+- type: entity
+  parent: WallDiagonalBase
+  id: WallSolidDarkDiagonal
+  name: dark solid wall
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _DH/Structures/Walls/solid_dark_diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite: _DH/Structures/Walls/solid_dark_diagonal.rsi
+    state: state0
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 650 #DH
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 450 #DH
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction # Lua
+    graph: DiagonalGirder
+    node: diagonalWall
+  - type: RCDDeconstructable # Lua
+    cost: 6 # Lua
+    delay: 8 # Lua
+
+- type: entity
+  parent: WallSolid
+  id: WallSolidDarkRust
+  suffix: rusted
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/solid_dark_rust.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/solid_dark_rust.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: wallrust
+  - type: IconSmooth
+    key: walls
+    base: solid
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 850 # Lua 300<1200 #DH
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 450 # Lua 150<600 #DH
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+# region shuttle walls
+- type: entity
+  parent: WallDiagonalBase
+  id: WallSpaceSecDiagonal
+  name: shuttle wall
+  components:
+  - type: Tag
+    tags:
+    - Wall
+    - Diagonal
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _DH/Structures/Walls/space_sec_diagonal.rsi
+    state: state0
+  - type: Icon
+    sprite:  _DH/Structures/Walls/space_sec_diagonal.rsi
+    state: state0
+  - type: Reflect
+    reflectProb: 0.006
+  - type: Pullable
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PolygonShape
+            vertices:
+            - "-0.5,-0.5"
+            - "0.5,0.5"
+            - "0.5,-0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1900 # Lua 600<3600 #DH
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200 # Lua 300<1800 #DH
+      behaviors:
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: Girder
+    node: diagonalshuttleWall
+  - type: RadiationBlocker
+    resistance: 5
+  - type: StaticPrice
+    price: 105
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ExplosionResistance
+    damageCoefficient: 0.84
+
+- type: entity
+  parent: BaseWall
+  id: WallSpaceSec
+  name: shuttle wall
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 1700
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: StaticPrice
+    price: 165
+  - type: RadiationBlocker
+    resistance: 5
+  - type: Sprite
+    sprite: _DH/Structures/Walls/space_sec_wall.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/space_sec_wall.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: shuttleWall
+  - type: IconSmooth
+    key: walls
+    base: state
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ShuttleWallVisuals.DeconstructionStage:
+        ShuttleWallVisualLayers.Deconstruction:
+          -1: { visible: false }
+          0: { state: shuttle_construct-0, visible: true}
+          1: { state: shuttle_construct-1, visible: true}
+          2: { state: shuttle_construct-2, visible: true}
+          3: { state: shuttle_construct-3, visible: true}
+          4: { state: shuttle_construct-4, visible: true}
+          5: { state: shuttle_construct-5, visible: true}
+  - type: Reflect
+    reflectProb: 0.004
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ExplosionResistance
+    damageCoefficient: 0.84

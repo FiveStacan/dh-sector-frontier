@@ -3720,7 +3720,7 @@ entities:
     - type: ApcPowerReceiver
       powerLoad: 5
     - type: Battery
-- proto: ComputerTabletopShuttleWithNordfallDisk
+- proto: ComputerTabletopShuttleWithTypanDisk
   entities:
   - uid: 537
     components:

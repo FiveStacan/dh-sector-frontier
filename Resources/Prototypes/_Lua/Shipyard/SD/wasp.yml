@@ -1,0 +1,38 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: Wasp
+  name: Wasp
+  description: Крупный корабль для патруля космоса. Имеет вооружение и медицинский
+    отсек.
+  limit: 1
+  price: 429500 #DH Shuttle price balance #193000 #133000
+  category: Large
+  group: Security
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Nfsd
+  engine:
+  - AME
+  #- Singularity
+  shuttlePath: /Maps/_Lua/Shuttles/SD/wasp.yml
+
+- type: gameMap
+  id: Wasp
+  mapName: 'Wasp'
+  mapPath: /Maps/_Lua/Shuttles/SD/wasp.yml
+  minPlayers: 0
+  stations:
+    Wasp:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Wasp {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

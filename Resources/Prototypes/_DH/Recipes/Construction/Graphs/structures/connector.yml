@@ -1,0 +1,28 @@
+- type: constructionGraph
+  id: ConnectorGraph
+  start: DoorConnector
+  graph:
+    - node: DoorConnector
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: Stair
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Steel
+              amount: 6
+              doAfter: 8
+
+
+    - node: DoorConnector
+      entity: DoorConnector
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+          steps:
+            - tool: Anchoring
+              doAfter: 7

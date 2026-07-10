@@ -1,0 +1,4 @@
+- type: flavor
+  id: redApple
+  flavorType: Complex
+  description: как сладкие яблоки

@@ -770,6 +770,19 @@
   conditions:
   - !type:TileNotBlocked
 
+#DH
+- type: construction
+  id: RailingOld
+  graph: RailingOld
+  startNode: start
+  targetNode: railing
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
 - type: construction
   id: RailingCorner
   name: construction-recipe-railing-corner
@@ -1225,17 +1238,17 @@
     - !type:TileNotBlocked
 
 #conveyor
-# - type: construction
-#   id: ConveyorBelt
-#   graph: ConveyorGraph
-#   startNode: start
-#   targetNode: entity
-#   category: construction-category-structures
-#   objectType: Structure
-#   placementMode: SnapgridCenter
-#   canBuildInImpassable: false
-#   conditions:
-#     - !type:TileNotBlocked
+- type: construction
+  id: ConveyorBelt
+  graph: ConveyorGraph
+  startNode: start
+  targetNode: entity
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
 
 - type: construction
   id: MetalDoor

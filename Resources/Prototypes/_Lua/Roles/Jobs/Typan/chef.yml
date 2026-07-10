@@ -54,9 +54,9 @@
       - type: MailDisabled
       - type: NpcFactionMember
         factions:
-        - LuaNordFoll
+        - LuaTypan
   - !type:AddImplantSpecial
-    implants: [ TrackingImplantNordfoll ]
+    implants: [ TrackingImplantTypan ]
 
 - type: startingGear
   id: SyndicateChef

@@ -12,8 +12,8 @@
   id: Harbormaster
   parent: BaseVessel
   name: LVHI Harbormaster
-  description: A small tugboat. Manufactured by Langstad-Voigt Heavy Industries.
-  price: 28000 # 25391 0.05 26660.55
+  description: Небольшой буксир. Производитель - Langstad-Voigt Heavy Industries.
+  price: 127000 # 25391 0.05 26660.55
   category: Small
   group: Sr
   access: StationTrafficController
@@ -42,4 +42,3 @@
           availableJobs:
             ContractorInterview: [ 0, 0 ]
             PilotInterview: [ 0, 0 ]
-            MercenaryInterview: [ 0, 0 ]

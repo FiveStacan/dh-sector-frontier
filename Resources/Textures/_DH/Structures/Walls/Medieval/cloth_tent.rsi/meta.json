@@ -1,0 +1,84 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+	"license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+	"copyright": "Taken from UndeapDeople https://github.com/Theawesomeboophis/UndeadPeopleTileset",
+    "states": [
+
+        {
+            "name": "closed"
+
+        },
+        {
+            "name": "open"
+
+        },
+        {
+            "name": "p0"
+
+        },
+        {
+            "name": "p1"
+
+        },
+        {
+            "name": "p2"
+
+        },
+        {
+            "name": "p3"
+
+        },
+        {
+            "name": "p4"
+
+        },
+        {
+            "name": "p5"
+
+        },
+        {
+            "name": "p6"
+
+        },
+        {
+            "name": "p7"
+
+        },
+        {
+            "name": "p8"
+
+        },
+        {
+            "name": "p9"
+
+        },
+        {
+            "name": "p10"
+
+        },
+        {
+            "name": "p11"
+
+        },
+        {
+            "name": "p12"
+
+        },
+        {
+            "name": "p13"
+
+        },
+        {
+            "name": "p14"
+
+        },
+        {
+            "name": "p15"
+
+        }
+    ]
+}

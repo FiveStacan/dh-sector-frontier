@@ -13,7 +13,14 @@
             - material: Steel
               amount: 20
               doAfter: 15
-        - to: woodDoor
+        - to: woodDoor #DH
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 25
+              doAfter: 15
+        - to: woodDoorDark
           completed:
             - !type:SnapToGrid { }
           steps:

@@ -1,0 +1,105 @@
+- type: tile
+  id: FloorWoodHerringbone
+  name: tiles-floor-wood-herringbone
+  sprite: /Textures/_DH/Tiles/wood_herringbone.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodHerringbone
+  heatCapacity: 9000
+
+- type: tile
+  id: FloorWoodHerringboneAlt
+  name: tiles-floor-wood-herringbone-alt
+  sprite: /Textures/_DH/Tiles/wood_herringbone_alt.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodHerringboneAlt
+  heatCapacity: 9000
+
+
+- type: tile
+  id: FloorWoodDiagonal
+  name: tiles-floor-wood-diagonal
+  sprite: /Textures/_DH/Tiles/wood_diagonal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodDiagonal
+  heatCapacity: 9000
+
+- type: tile
+  id: FloorWoodDiagonalMini
+  name: tiles-floor-wood-diagonal-mini
+  sprite: /Textures/_DH/Tiles/wood_diagonal_mini.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodDiagonalMini
+  heatCapacity: 9000
+
+- type: tile
+  id: FloorFakeMineSteal
+  name: tiles-floor-fakemine-steal
+  sprite: /Textures/Tiles/steel.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodDiagonalMini
+  heatCapacity: 8000
+
+- type: tile
+  id: Floorinvisible
+  name: невидимый пол
+  sprite: /Textures/_DH/Tiles/invisible.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: SheetGlass1
+  heatCapacity: 7000

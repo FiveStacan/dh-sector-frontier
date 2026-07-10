@@ -28,6 +28,8 @@
     slots: [belt]
     equipSound:
       path: /Audio/Items/belt_equip.ogg
+    equipDelay: 0.6 #DH
+    unequipDelay: 0.4 #DH
     quickEquip: false
   - type: PhysicalComposition
     materialComposition:
@@ -37,7 +39,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingBeltBase]
+  parent: ClothingBeltBase
   id: ClothingBeltStorageBase
   components:
   - type: Storage

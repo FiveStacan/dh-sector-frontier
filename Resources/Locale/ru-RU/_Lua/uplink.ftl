@@ -53,5 +53,5 @@ uplink-syndicate-sector-banner-desc = Позволяет захватить зв
 uplink-mercenary-coordinates-disk-mercenary-name = Диск координат Наёмников
 uplink-mercenary-coordinates-disk-mercenary-desc = Защищённый диск с навигационными координатами сектора Наёмников.
 
-uplink-coordinates-disk-nordfall-name = Диск координат Нордфалла
-uplink-coordinates-disk-nordfall-desc = Защищённый диск с навигационными координатами сектора Нордфалл.
+uplink-coordinates-disk-Typan-name = Диск координат Нордфалла
+uplink-coordinates-disk-Typan-desc = Защищённый диск с навигационными координатами сектора Нордфалл.

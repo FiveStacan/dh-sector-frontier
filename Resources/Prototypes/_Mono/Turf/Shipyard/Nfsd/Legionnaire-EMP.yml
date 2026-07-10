@@ -8,8 +8,8 @@
   parent: BaseVesselAntag
   name: Legionnaire
   description: слабо бронированный Корабль поддержки, предназначенный для радиоэлектронного подавления вражеских суден.
-  limit: 2
-  price: 341500 #123000 x 1.15 # DH-Tweak
+  limit: 3
+  price: 482350 #DH Shuttle price balance #155000 #135000 x 1.15
   category: Medium
   group: Security
   access: Security

@@ -1,0 +1,62 @@
+# хз как это работает
+- type: entity
+  id: DoorConnector
+  name: коннектор шлюзов
+  description: размещается под крупногобаритными шлюзами для лучшей устойчивости и соеденения со стенами.
+  suffix: Door Fix, DH
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Tag
+    tags:
+    - Wall
+    - Diagonal
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _DH/Structures/connector.rsi
+    state: state0
+  - type: IconSmooth
+    mode: Diagonal
+    key: walls
+    base: state
+  - type: Icon
+    sprite: _DH/Structures/connector.rsi
+    state: state0
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Physics
+    bodyType: Static
+#  - type: Reflect # Frontier
+#    reflectProb: 1 # Frontier
+  - type: Pullable
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+    - East
+  - type: Fixtures
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalSlam
+  - type: RCDDeconstructable #Frontier
+    cost: 6 #Frontier
+    delay: 8 #Frontier
+    fx: EffectRCDDeconstruct8 #Frontier
+  - type: Construction
+    graph: ConnectorGraph
+    node: DoorConnector
+

@@ -138,6 +138,19 @@
   - type: Appearance
 
 - type: entity
+  id: MagazineGlock22Empty
+  name: Glock22 magazine
+  parent: MagazineGlock22
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: NFCartridgePistol35
+    whitelist:
+      tags:
+      - NFCartridgePistol35
+    capacity: 0
+
+- type: entity
   id: MagazineScorpion
   name: Scorpion magazine
   parent: BaseItem
@@ -291,10 +304,42 @@
   components:
   - type: BallisticAmmoProvider
     capacity: 34
-  
 - type: entity
   parent: MagazineM16A4
   id: MagazineM16A4Extended
   components:
   - type: BallisticAmmoProvider
     capacity: 34
+
+- type: entity
+  id: MagazineP90
+  name: P90 magazine
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+    - MagazineP90
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: NFCartridgePistol35
+    whitelist:
+      tags:
+      - NFCartridgePistol35
+    capacity: 50
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Guns/Ammunition/Magazines/p90.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance

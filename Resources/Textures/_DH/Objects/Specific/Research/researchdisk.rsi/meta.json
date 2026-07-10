@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/f8f4aeda930fcd0805ca4cc76d9bc9412a5b3428",
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
   "size": {
     "x": 32,
     "y": 32
@@ -12,6 +12,27 @@
     },
     {
       "name": "icon_present"
+    },
+    {
+      "name": "icon_arsenal"
+    },
+    {
+      "name": "icon_engineering"
+    },
+    {
+      "name": "icon_medical"
+    },
+    {
+      "name": "icon_salvage"
+    },
+    {
+      "name": "icon_science"
+    },
+    {
+      "name": "icon_service"
+    },
+    {
+      "name": "icons_shiparmory"
     }
   ]
 }

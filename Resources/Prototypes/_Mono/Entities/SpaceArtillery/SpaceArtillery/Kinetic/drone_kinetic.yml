@@ -17,18 +17,18 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.4
+    fireRate: 0.6
     recoil: 10 # 2/5x
     projectileSpeed: 350
     minAngle: 0
-    maxAngle: 0
+    maxAngle: 1
     shootThermalSignature: 300000
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
     soundEmpty:
       path: /Audio/Weapons/click.ogg
   - type: SpaceArtillery
-    powerChargeRate: 1500
+    powerChargeRate: 200
     powerUsePassive: 1500
     powerUseActive: 0
   - type: Battery
@@ -39,7 +39,7 @@
     fireCost: 1500
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 3000
+    autoRechargeRate: 200
   - type: ExtensionCableReceiver
   - type: ApcPowerReceiver
     powerLoad: 1500

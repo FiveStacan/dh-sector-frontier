@@ -1,0 +1,335 @@
+- type: entity
+  parent: NFClothingBeltStorageBase
+  id: ClothingBeltOmni
+  name: assault belt
+  description: A tactical assault belt.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/omni.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/omni.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.2
+    sprintModifier: 1.2
+  - type: UseDelay
+    delay: 4
+  - type: ItemMapper
+    mapLayers:
+      flashbang:
+        whitelist:
+          components:
+          - FlashOnTrigger
+      stunbaton:
+        whitelist:
+          components:
+          - Stunbaton
+      tear_gas_grenade:
+        whitelist:
+          components:
+          - SmokeOnTrigger
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltOmni
+  id: ClothingBeltOmniUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+
+- type: entity
+  id: ClothingBeltPrisonGuardian
+  parent: ClothingBeltSecurity
+  suffix: Filled
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/prison_guardian.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/prison_guardian.rsi
+
+- type: entity
+  id: ClothingBeltPrisonGuardianFilled
+  parent: ClothingBeltPrisonGuardian
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: GrenadeFlashBang
+    - id: TearGasGrenade
+    - id: Stunbaton
+    - id: Handcuffs
+    - id: Handcuffs
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMilitaryWebbingCMO
+  name: chief medical officer's chest rig
+  description: A medical chest rig with deep pockets, for use by paramedics and health professionals.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/cmowebbing.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/cmowebbing.rsi
+  - type: Item
+    size: Large
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+      - 0,0,6,2
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingCMO
+  id: ClothingBeltMilitaryWebbingCMOFilled
+  name: chief medical officer's chest rig
+  description: "A medical chest rig with deep pockets, for use by paramedics and health professionals."
+  components:
+  - type: StorageFill
+    contents:
+      #- id: EnergyCautery
+      #- id: EnergyScalpel
+      #- id: AdvancedRetractor
+      #- id: BoneGel
+      - id: Brutepack
+      - id: Ointment
+      - id: Bloodpack
+      - id: Gauze
+      - id: EmergencyMedipen
+        amount: 3
+
+- type: entity
+  parent: ClothingBeltSheath
+  id: ClothingBeltWhiteSheath
+  name: white sabre sheath
+  description: Style, shine, everything for the best sabers in the universe.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/white_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/white_sheath.rsi
+
+- type: entity
+  parent: ClothingBeltSheath
+  id: ClothingBeltSheriffSheath
+  name: sheriff sabre sheath
+  description: Practicality, durability, the saber will definitely not end up in your leg.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/sheriff_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/sheriff_sheath.rsi
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltRapier
+  name: Ножны рапиры
+  description: Ножны для рапиры
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/rapier.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/rapier.rsi
+  - type: Storage
+    grid:
+    - 0,0,2,2
+    whitelist:
+      tags:
+        - Rapier
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Rapier
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltSheath
+  id: ClothingBeltMythistophelRapier
+  name: Ножны рапиры Мифистофеля
+  description: Ножны для рапиры Мифистофеля
+  components:
+    - type: Sprite
+      sprite: _DH/Clothing/Belt/rapier.rsi
+      state: sheath
+    - type: Clothing
+      sprite: _DH/Clothing/Belt/rapier.rsi
+    - type: Storage
+      whitelist:
+        tags:
+          - Rapier
+    - type: ItemMapper
+      mapLayers:
+        sheath-sabre:
+          whitelist:
+            tags:
+              - Rapier
+    - type: Appearance
+
+- type: entity
+  id: ClothingBeltSheathFilledRapier
+  parent: ClothingBeltRapier
+  suffix: Filled
+  components:
+    - type: StorageFill
+      contents:
+        - id: MythistophelRapier
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltKatanaSheath
+  name: katana sheaths
+  description: An ornate belt designed to hold a pair of samurai's blades, or daisho.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/katanasheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/katanasheath.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,4,1
+    whitelist:
+      tags:
+        - Katana
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Katana
+  - type: Appearance
+
+- type: entity
+  id: ClothingBeltKatanaSheathFilled
+  parent: ClothingBeltKatanaSheath
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Wakizashi
+      - id: Katana
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltOrden
+  name: Scabbard of the red order
+  description: A special scabbard created exclusively for the sabers of the Red Order.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/orden_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/orden_sheath.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,3
+    whitelist:
+      tags:
+        - SwordSquadRO
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - SwordSquadRO
+  - type: Appearance
+
+- type: entity
+  id: ClothingBeltSheathFilledOrd
+  parent: ClothingBeltOrden
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: OrdenSabre
+
+- type: entity # backmen
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltYamato
+  name: Ножны Ямато
+  description: Ножны для Ямато. Найдено в секторе "Бекман"
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/yamato.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/yamato.rsi
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      item:
+        name: Sabre
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - YamatoSabre
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - YamatoSabre
+  - type: Appearance
+
+- type: entity # backmen
+  id: ClothingBeltYamatoFilled
+  parent: ClothingBeltYamato
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - YamatoSabre
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase, BaseSyndicateContraband]
+  id: ClothingBeltSheathSyndicate
+  name: rapier sheath
+  description: A sinister, thin sheath, suitable for a rapier.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Belt/syndie_sheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DH/Clothing/Belt/syndie_sheath.rsi
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      item:
+        name: rapier
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - SyndicateRapier
+  - type: ItemMapper
+    mapLayers:
+      sheath-rapier:
+        whitelist:
+          tags:
+          - SyndicateRapier
+  - type: Appearance
+  - type: Storage # Sunrise
+    storageInsertSound: /Audio/_DH/Items/Equip/sabre_equip.ogg
+    storageRemoveSound: /Audio/_DH/Items/Equip/sabre_hide.ogg
+
+- type: entity
+  id: ClothingBeltSheathSyndicateFilled
+  parent: ClothingBeltSheathSyndicate
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - SyndicateRapier

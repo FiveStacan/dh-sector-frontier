@@ -39,6 +39,11 @@
   - WeaponMechCombatFlashbangLauncher
 
 - type: latheRecipePack
+  id: WeaponMechCombatMissileRack6
+  recipes:
+  - WeaponMechCombatMissileRack6
+
+- type: latheRecipePack
   id: WeaponMechCombatMissileRack8
   recipes:
   - WeaponMechCombatMissileRack8

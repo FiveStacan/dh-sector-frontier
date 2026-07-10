@@ -1,0 +1,38 @@
+- type: vessel
+  id: Inveboxator
+  parent: BaseVessel
+  name: HM Inveboxator
+  description: HONK HONK HONK HONK HONK HONK
+  price: 47770 #overpriced but ignoring for now. Dusto
+  category: Small
+  group: Honk
+  shuttlePath: /Maps/_DH/Shuttles/Clown/Inveboxator.yml
+  guidebookPage: null
+  class:
+  - Science
+  engine:
+  - Solar
+  - Uranium
+  - Singularity
+  addComponents:
+    - type: IFF
+      color: "#ffffff"
+- type: gameMap
+  id: Inveboxator
+  mapName: 'HM Inveboxator'
+  mapPath: /Maps/_DH/Shuttles/Clown/Inveboxator.yml
+  minPlayers: 0
+  stations:
+    Inveboxator:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Inveboxator {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

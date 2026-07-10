@@ -124,11 +124,11 @@
   id: ContractorClothingShoesBootsMag
   effects:
   - !type:GroupLoadoutEffect
-    proto: ContractorT1
+    proto: ContractorT2 #ContractorT2ENG
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
-  price: 2000
+  price: 2400 #DH 2000
   equipment:
     shoes: ClothingShoesBootsMag
 
@@ -616,7 +616,7 @@
   price: 7500
   equipment:
     shoes: ClothingShoesClownLarge
-    
+
 - type: loadout
   id: ContractorClothingShoesBling
   effects:

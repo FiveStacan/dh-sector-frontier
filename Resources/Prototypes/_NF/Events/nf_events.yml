@@ -52,7 +52,9 @@
   - type: StationEvent
     startAnnouncement: bluespace-syndicate-crate-event-announcement
     startAudio:
-      path: /Audio/_Lua/Announcements/attention.ogg # Lua
+      params:
+        volume: -4
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_syndie_crate.ogg #DH #/Audio/_Lua/Announcements/attention.ogg # Lua
     weight: 1
     duration: 35
     earliestStart: 90

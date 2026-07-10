@@ -4,8 +4,8 @@
     "x": 32,
     "y": 32
   },
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Dark Haven",
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
   "states": [
     {
       "name": "direction_bar",

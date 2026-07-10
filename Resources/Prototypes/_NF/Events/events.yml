@@ -37,13 +37,13 @@
     endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
     startAudio:
       params:
-        volume: -0
-      path: /Audio/_Lua/Announcements/poweroff2.ogg # Lua
+        volume: -4
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy1_power_offnf.ogg #DH #/Audio/_Lua/Announcements/poweroff2.ogg # Lua
   #  endAudio:
   #    path: /Audio/_NF/Announcements/PocketSizedAndy/andy1_power_onnf.ogg  ##PowerGridCheckRule handles end audio, leaving this incase that breaks
   #    params:
   #     volume: -4
-    weight: 5
+    weight: 4
     duration: 60
     maxDuration: 120
   - type: PowerGridCheckRule
@@ -54,7 +54,13 @@
   components:
   - type: StationEvent
     startAudio:
-      path: /Audio/_Lua/Announcements/attention.ogg # Lua
+      params:
+        volume: -4
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_solar_flare_start.ogg #DH #/Audio/_Lua/Announcements/attention.ogg # Lua
+    endAudio:
+      params:
+        volume: -4
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_solar_flare_end.ogg
     weight: 4
     earliestStart: 15
     reoccurrenceDelay: 45
@@ -74,7 +80,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/_Lua/Announcements/attention.ogg # Lua
+      params:
+        volume: -4
+      path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_vent_clog.ogg #DH #/Audio/_Lua/Announcements/attention.ogg # Lua
     earliestStart: 15
     minimumPlayers: 15
     weight: 5

@@ -1,0 +1,58 @@
+- type: job
+  id: PrisonDoctor
+  name: job-name-prison-doctor
+  description: job-description-prison-doctor
+  playTimeTracker: JobPrisonDoctor
+  setPreference: false # Frontier - Restore this ones we have a jail
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 # 3 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # Frontier - 10 hrs
+  startingGear: PrisonDoctorGear
+  icon: "JobIconPrisonDoctor"
+  supervisors: job-supervisors-bailiff # Frontier
+  canBeAntag: false
+  access:
+  - Chemistry
+  - Medical
+  - Maintenance
+  - Service # Frontier
+  - External # Frontier
+  - Mercenary # Frontier
+  - Captain # Frontier
+  - GenpopEnter
+  - GenpopLeave
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Security
+
+- type: startingGear
+  id: PrisonDoctorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+#    back: ClothingBackpackMedical
+#    shoes: ClothingShoesColorWhite
+#    eyes: ClothingEyesHudMedical
+#    head: ClothingHeadPrisonGuard
+#    mask: ClothingMaskBreathMedicalSecurity
+#    outerClothing: ClothingOuterArmorBasic
+    id: PrisonDoctorIDCard
+#    ears: ClothingHeadsetBrigmedic
+    belt: ClothingBeltMedicalFilled
+#    gloves: ClothingHandsGlovesLatex
+#    innerClothingSkirt: ClothingUniformJumpskirtMedicalDoctor
+#    satchel: ClothingBackpackSatchelMedical
+#    duffelbag: ClothingBackpackDuffelMedical
+#    messenger: ClothingBackpackMessengerMedical
+
+#- type: chameleonOutfit
+#  id: PrisonDoctorChameleonOutfit
+#  job: PrisonDoctor
+#  hasMindShield: true
+

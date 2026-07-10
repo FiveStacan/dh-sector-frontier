@@ -9,11 +9,11 @@
       time: 43200 # 12 hours
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 21600 # 6 hours
+      time: 36000 # 10 hours
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
-      time: 360000 # 100 hours
+      time: 300000 # 83 hours
   startingGear: PublicAffairGear
   icon: "JobIconPublicAffairsLiaison"
   supervisors: job-supervisors-cadet

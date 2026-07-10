@@ -31,3 +31,5 @@
     color: "#101c88"
 #  - type: AccessReader
 #    access: [["Captain"]] нужно
+  - type: MarketModifier
+    mod: 16

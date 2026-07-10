@@ -3,6 +3,11 @@
   parent: VehicleATV
   id: NFVehicleATV
   components:
+  - type: RadarBlip
+    radarColor: "#8A2BE2"
+    scale: 0.6
+    visibleFromOtherGrids: true
+    requireNoGrid: false
   - type: Sprite
     sprite: _NF/Objects/Vehicles/atv.rsi
     layers:
@@ -537,6 +542,7 @@
     passengerNorthOffset: 0, 0.3
     passengerEastOffset: 0, 0.3
     passengerWestOffset: 0, 0.3
+  - type: GravityAffected #DH
 
 - type: entity
   parent: VehicleHoverbikeMailcarrier

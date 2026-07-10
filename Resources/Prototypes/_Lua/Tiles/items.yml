@@ -5,7 +5,7 @@
 - type: entity
   name: Red wood floor
   parent: FloorTileItemBase
-  id: FloorTileItemRedWood
+  id: FloorTileItemWoodRedOLD #DH
   components:
   - type: Sprite
     state: wood
@@ -24,7 +24,7 @@
 - type: entity
   name: Dark wood floor
   parent: FloorTileItemBase
-  id: FloorTileItemDarkWood
+  id: FloorTileItemWoodDarkOLD
   components:
   - type: Sprite
     state: wood

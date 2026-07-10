@@ -378,7 +378,7 @@
 - type: entity
   id: PlayerStationAiNFSD
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, СРБС
+  suffix: Job spawn, ДСБФ
   components:
   - type: ContainerComp
     proto: AiHeldNFSD

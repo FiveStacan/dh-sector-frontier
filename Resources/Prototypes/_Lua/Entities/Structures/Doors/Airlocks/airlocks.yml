@@ -573,6 +573,14 @@
   - type: Sprite
     sprite: _Lua/Structures/Doors/Airlocks/Glass/medium_medical_glass_lua.rsi
 
+- type: entity #DH
+  id: MediumAirlockGlass
+  parent: [MediumGlassAirlockBase, AirlockGlass]
+  name: средний стеклянный шлюз
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/medium_glass_lua.rsi
+
 - type: entity
   id: HoloAirlockBase
   name: holodoor

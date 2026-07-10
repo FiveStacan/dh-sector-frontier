@@ -56,6 +56,7 @@
   - ShipyardProspector
   - ShipyardPulsar
   - ShipyardRetort
+  - ShipyardRiman #DH
   - ShipyardSearchlight
   - ShipyardSkipper
   - ShipyardSpirit
@@ -382,3 +383,8 @@
   id: ShipyardOrionP
   name: Grand Orion-P
   text: "/ServerInfo/_Lua/Guidebook/Shipyard/OrionP.xml"
+
+- type: guideEntry
+  id: ShipyardRiman
+  name: guide-entry-shipyard-riman
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Riman.xml"

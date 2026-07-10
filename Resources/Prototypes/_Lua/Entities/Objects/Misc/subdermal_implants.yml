@@ -25,9 +25,9 @@
 
 - type: entity
   parent: BaseSubdermalImplant
-  id: TrackingImplantNordfoll
-  name: Трекер Нордфолла
-  description: This implant has a condition monitor for the Nordfoll radio channel. # Frontier: NFSD mentioned, no tracking
+  id: TrackingImplantTypan
+  name: Трекер Тайпана
+  description: This implant has a condition monitor for the Typan radio channel. # Frontier: NFSD mentioned, no tracking
   categories: [ HideSpawnMenu ]
   components:
     - type: SubdermalImplant
@@ -43,10 +43,10 @@
 
 # Имплантер трекера
 - type: entity
-  id: TrackingImplanterNordfoll
+  id: TrackingImplanterTypan
   description: Имплант постоянно мониторит состояние здоровья отправляя изменения тела по частоте Синдиката.
-  name: Трекер Нордфолла
+  name: Трекер Тайпана
   parent: BaseImplantOnlyImplanterSyndi
   components:
     - type: Implanter
-      implant: TrackingImplantNordfoll
+      implant: TrackingImplantTypan

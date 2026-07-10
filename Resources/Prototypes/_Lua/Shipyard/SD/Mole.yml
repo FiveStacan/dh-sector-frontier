@@ -1,0 +1,37 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: Mole
+  name: Mole
+  description: Более укреплённый шаттл, в отличии от предшественника Граббера. Обладает
+    импульсными пушками и медицинским отсеком.
+  limit: 2
+  price: 676000 #89000 # DH-Tweak
+  category: Large
+  group: Security
+  whitelist:
+  - Luna
+  - Frontier #DH
+  class:
+  - Nfsd
+  engine:
+  - Singularity
+  shuttlePath: /Maps/_Lua/Shuttles/SD/Mole.yml
+
+- type: gameMap
+  id: Mole
+  mapName: 'Mole'
+  mapPath: /Maps/_Lua/Shuttles/SD/Mole.yml
+  minPlayers: 0
+  stations:
+    Mole:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Mole {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

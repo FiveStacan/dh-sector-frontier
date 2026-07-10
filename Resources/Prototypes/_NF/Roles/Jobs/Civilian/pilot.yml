@@ -4,9 +4,9 @@
   description: job-description-pilot
   playTimeTracker: JobPilot
   salary: 15000 #Lua 7100<15000
-#  requirements: # comment from _Lua
-#    - !type:OverallPlaytimeRequirement
-#      time: 43200
+  requirements: # comment from _Lua
+    - !type:OverallPlaytimeRequirement
+      time: 21600 #DH 43200<21600
   icon: "JobIconPilot"
   supervisors: job-supervisors-hire
   weight: 2 # Prioritize station & department jobs

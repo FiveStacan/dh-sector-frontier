@@ -1,0 +1,24 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+#z
+- type: storeCategory
+  id: UplinkClothingUniform
+  name: Униформы
+
+- type: storeCategory
+  id: UplinkClothingShoes
+  name: Обувь
+
+- type: storeCategory
+  id: UplinkClothingNeck
+  name: Шарфы
+
+- type: storeCategory
+  id: UplinkClothingHead
+  name: Шляпы
+
+- type: storeCategory
+  id: UplinkClothingMisc
+  name: Разное

@@ -7,10 +7,10 @@
   name: department-Outpost-Typan
   description: department-Outpost-Typan-description
   color: "#D381C9"
-  weight: -9
+  weight: 0
   roles:
 #  - OutpostTypanAtmosTech
-#  - OutpostTypanBotanist
+  - OutpostTypanBotanist
   - OutpostTypanCargotech
 #  - OutpostTypanChef
 #  - OutpostTypanMedic
@@ -25,18 +25,18 @@
   name: department-LuaTech
   description: department-LuaTech-description
   color: "#407DC4"
-  weight: -9
+  weight: -90
   roles:
   - OpsLuaTech
 
-- type: department
-#  id: StormCreed
-  id: Antag
-  name: department-stormcreed
-  description: department-stormcreed-description
-  color: "#948471"
-  weight: 60
-  roles:
-  - StormCreedCaptain
-  - StormCreedFirstmate
-  - StormCreedSoldier
+# - type: department
+# #  id: StormCreed
+#   id: Antag
+#   name: department-stormcreed
+#   description: department-stormcreed-description
+#   color: "#948471"
+#   weight: 60
+#   roles:
+#   - StormCreedCaptain
+#   - StormCreedFirstmate
+#   - StormCreedSoldier

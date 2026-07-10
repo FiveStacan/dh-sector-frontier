@@ -8,7 +8,7 @@
   - type: Projectile
     damage:
       types:
-        Structural: 450
+        Structural: 350
         Blunt: 65
         Heat: 10
   - type: Sprite
@@ -32,9 +32,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 75
+    totalIntensity: 78
     intensitySlope: 8
-    maxIntensity: 25
+    maxIntensity: 26
   - type: GatheringProjectile
   - type: TargetSeeking
     acceleration: 300
@@ -55,8 +55,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1000
-        Blunt: 175
+        Structural: 600 #DH 1000
+        Blunt: 170
         Heat: 50
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -79,9 +79,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 150
-    intensitySlope: 10
-    maxIntensity: 55
+    totalIntensity: 125
+    intensitySlope: 11
+    maxIntensity: 50
   - type: GatheringProjectile
   - type: TargetSeeking
     acceleration: 200
@@ -102,8 +102,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 15000
-        Blunt: 2000
+        Structural: 3000 #DH 15000
+        Blunt: 1460
         Heat: 500
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -126,9 +126,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    maxIntensity: 6000
-    intensitySlope: 30
-    totalIntensity: 6000
+    maxIntensity: 4000
+    intensitySlope: 40
+    totalIntensity: 5900
   - type: GatheringProjectile
   - type: TargetSeeking
     acceleration: 50
@@ -149,9 +149,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 7500
+        Structural: 1800 #DH 7500
         Heat: 30
-        Ion: 2500
+        Ion: 900 #DH 2500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/hybrid_missile.rsi
     layers:
@@ -177,7 +177,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DefaultShipGun
-    totalIntensity: 100
+    totalIntensity: 110
     intensitySlope: 10
     maxIntensity: 50
     maxTileBreak: 1

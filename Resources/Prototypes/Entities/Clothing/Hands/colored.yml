@@ -318,6 +318,8 @@
     - id: ClothingHandsGlovesFingerless
   - type: Fiber
     fiberColor: fibers-black
+  - type: StaticPrice
+    price: 45 #DH
 
 # Insulated Gloves (Yellow Gloves)
 # Currently can not be greyscaled without looking like shit.

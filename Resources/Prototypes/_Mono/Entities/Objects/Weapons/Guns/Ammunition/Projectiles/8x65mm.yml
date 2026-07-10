@@ -13,7 +13,7 @@
     damage:
       types:
         Piercing: 30
-        Structural: 51.5
+        Structural: 44.5
 
 # Mechanical
 - type: entity
@@ -36,9 +36,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 9      
+        Blunt: 9
         Piercing: 21
-        Structural: 51.5
+        Structural: 40.5
 
 # Physical
 - type: entity
@@ -52,7 +52,7 @@
       types:
         Piercing: 21
         Heat: 9
-        Structural: 51.5
+        Structural: 40.5
 
 - type: entity
   id: Bullet8x65mmSKRUranium
@@ -65,7 +65,7 @@
       types:
         Piercing: 21
         Radiation: 9
-        Structural: 51.5
+        Structural: 40.5
 
 # Special
 - type: entity
@@ -79,7 +79,7 @@
       types:
         Piercing: 21
         Shock: 9
-        Structural: 51.5
+        Structural: 40.5
 
 - type: entity
   id: Bullet8x65mmSKRCaustic
@@ -92,4 +92,4 @@
       types:
         Piercing: 18
         Caustic: 7.7
-        Structural: 51.5
+        Structural: 44.5

@@ -33,8 +33,6 @@ Entries:
       message: Респрайт большенства гранат.
     - type: Tweak
       message: Респрайт настенных раздатчиков жидкостей.
-    - type: Remove
-      message: Удалены ЛГБТ флаги.
   id: 2
   time: '2025-10-25T12:00:00.0000000+00:00'
 - author: FiveStacan
@@ -93,57 +91,181 @@ Entries:
       message: M16A4, Famas, AKMS, AKM-U, STG 44
   id: 6
   time: '2025-11-17T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Теперь можно задавать списки карт в sectorSystemPrototype для основной станции сектора которая будет выбираться случайно.
+  id: 7
+  time: '2025-11-21T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Респрайт и перевод настенных тюремных шкафов.
+  id: 8
+  time: '2025-11-24T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Новое оружие - Булава.
+  id: 9
+  time: '2025-11-30T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Баланс цен
+    - type: Tweak
+      message: Возвращена возможность присоеденяться на шаттлы игроков.
+    - type: Tweak
+      message: Перевод
+    - type: Add
+      message: 4 новых кошелька.
+    - type: Remove
+      message: Удалены ЛГБТ флаги.
+  id: 10
+  time: '2025-12-21T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Мелкие исправления
+    - type: Tweak
+      message: Изменено количество звезд в секторе - от 7 до 14
+    - type: Tweak
+      message: Перевод
+    - type: Tweak
+      message: Баланс цен
+    - type: Tweak
+      message: Несколько новых технологий и изменения баланса цен технологий.
+    - type: Add
+      message: Новый шаттл для Lua верфи - Caolition.
+    - type: Add
+      message: Новые тайлы.
+    - type: Remove
+      message: Временно убрана космическая тюрьма
+  id: 11
+  time: '2025-12-24T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Add
+      message: Новая косметическая одежда.
+    - type: Add
+      message: Оружие землян.
+    - type: Add
+      message: Поношенное оружие. Теперь на экспедициях чаще будут встречаться поношенное оружие.
+    - type: Add
+      message: БронеВенд.
+    - type: Add
+      message: Пиратский сервер рнд и пиратский техфаб.
+    - type: Add
+      message: Барьерная граната.
+    - type: Add
+      message: Карго костюм.
+    - type: Add
+      message: Костюмы исследователя.
+    - type: Add
+      message: 5 новых протокенетических ускорителя.
+    - type: Add
+      message: Бейджики. Возможность одевать значки на одежду.
+    - type: Add
+      message: Перевод (еще около 700 предметов/текстов)
+    - type: Add
+      message: Сортировка в консолях верфи
+    - type: Add
+      message: Плотная деревянная стена
+    #- type: Add
+    #  message: Бумага для чертежей.
+    - type: Tweak
+      message: Расположение, стоимости и разблокировки некоторых технологий.
+    - type: Tweak
+      message: Теперь борги при выборе класса получают только 2 базовых модуля, остальные можно изучить и создать.
+    - type: Tweak
+      message: Баланс характеристик некоторых предметов. Баланс цен артефактов.
+  id: 12
+  time: '2026-01-18T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Add
       message: персистентность
-  id: 7
+  id: 13
   time: '2026-06-17T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Fix
       message: фиксы
-  id: 8
+  id: 14
   time: '2026-06-18T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Fix
       message: автопилот
-  id: 9
+  id: 15
   time: '2026-06-18T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Fix
       message: фиксы
-  id: 10
+  id: 16
   time: '2026-06-18T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: add
       message: чето там
-  id: 11
+  id: 17
   time: '2026-06-19T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: add
       message: система сна и туалета, дальний автопилот
-  id: 12
+  id: 18
   time: '2026-06-21T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: tweak
       message: фиксы
-  id: 13
+  id: 19
   time: '2026-06-21T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Fix
       message: фиксы персистентности
-  id: 14
+  id: 20
   time: '2026-06-21T12:00:00.0000000+00:00'
 - author: chvl
   changes:
     - type: Add
       message: шаттлы
-  id: 15
+  id: 21
   time: '2026-06-22T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Апстрим до Lua
+  id: 22
+  time: '2026-07-08T12:00:00.0000000+00:00'
+- author: FiveStacan
+  changes:
+    - type: Tweak
+      message: Нерф корабельных орудий
+    - type: Tweak
+      message: Нерф ХП стен
+    - type: Tweak
+      message: Изменение некоторых спрайтов
+    - type: Tweak
+      message: Изменения древа технологий. Увиличение цен на технологии
+    - type: Tweak
+      message: Возвращение общественного транспорта
+    - type: Tweak
+      message: Музыка лобби замененеа
+    - type: Add
+      message: Оверлей для маппинга (Переключение прозрачности, показ доступов, показ связей)
+    - type: Add
+      message: Добавлена плата в консоли парковки вычисляемая по размеру корабля
+    - type: Add
+      message: В консолях верфи теперь отображаются все классы и элементы питания корабля. Добавлена сортировка
+    - type: Add
+      message: Отображение боезопаса в консоли вооружения. Пресеты в консоли вооружения
+    - type: Add
+      message: Возможность выбирать предыдущую технологию из списка зависимостей в исследовательской консоли
+    - type: Add
+      message: Возможность заблокировать сервер РНД от подключений по гридуи подключить его напрямую мультитулом
+  id: 23
+  time: '2026-07-09T12:00:00.0000000+00:00'

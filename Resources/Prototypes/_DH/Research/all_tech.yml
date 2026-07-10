@@ -1,0 +1,285 @@
+- type: technology
+  id: tracking
+  name: dh-research-technology-tracking
+  entityIcon: Binoculars
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 8800
+  recipeUnlocks:
+  - Binoculars
+  - BinocularsMagmite
+  #- PinpointerUniversal
+  - PinpointerUniversalNF
+  - NFDartTracking
+  #- QuantumLeaping
+  technologyPrerequisites:
+  - NFBountyHunting
+  position: 1, 41
+
+- type: technology
+  id: painting
+  name: dh-research-technology-painting
+  entityIcon: SprayPainter
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6000
+  prerequisiteLineType: Diagonal
+  #prerequisiteLineType: Tree
+  recipeUnlocks:
+  - SprayPainter
+  - SprayPainterAmmo
+  technologyPrerequisites:
+  - NFPushHorn
+  - NFBasicSpray
+  position: 2, 20
+
+- type: technology
+  id: AdvancedPainting
+  name: dh-research-technology-advanced-painting
+  entityIcon: SprayPainterAdvanced
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 9500
+  recipeUnlocks:
+  - SprayPainterAdvanced
+  - SprayPainterAdvancedAmmo
+  technologyPrerequisites:
+  - painting
+  position: 3, 20
+
+- type: technology
+  id: ExperementalPainting
+  name: dh-research-technology-experimental-painting
+  entityIcon: SprayPainterExperemental
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 18400
+  recipeUnlocks:
+  - SprayPainterExperemental
+  technologyPrerequisites:
+  - AdvancedPainting
+  position: 4, 20
+
+#region Hardsuit
+
+- type: technology
+  id: DHArmorSalvage
+  name: dh-research-technology-Armor-salvage
+  entityIcon: ADTClothingOuterArmorMiner
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 17500
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ADTClothingOuterArmorMinerLight
+  - ADTClothingOuterArmorMiner
+  - ADTClothingOuterArmorMinerHeavy
+  technologyPrerequisites:
+  - DHArmor
+  - NFHardsuitsField
+  position: 3, 10
+
+- type: technology
+  id: DHHardsuitsSalvage
+  name: dh-research-technology-hardsuits-salvage
+  entityIcon: ClothingOuterHardsuitSalvage
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 11200
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ClothingOuterHardsuitSalvage
+  technologyPrerequisites:
+  - NFHardsuitsField
+  position: 4, 10
+
+- type: technology
+  id: DHHardsuitsLuxury
+  name: dh-research-technology-hardsuits-luxury
+  entityIcon: ClothingOuterHardsuitLuxury
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 16800
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ClothingOuterHardsuitLuxury
+  technologyPrerequisites:
+  - DHHardsuitsSalvage
+  position: 5, 11
+
+#region Engineering
+- type: technology
+  id: DHBaseAmeJarTechnology
+  name: dh-research-technology-BaseAmeJar
+  entityIcon: BaseAmeJar
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - BaseAmeJar
+  technologyPrerequisites:
+  - NFAdvancedCyborgToolsTechnology
+  position: 4, 4
+
+- type: technology
+  id: DHAmeJarTechnology
+  name: dh-research-technology-amejar
+  entityIcon: AmeJar
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 22000
+  recipeUnlocks:
+  - AmeJar
+  technologyPrerequisites:
+  - DHBaseAmeJarTechnology
+  position: 5, 4
+
+- type: technology
+  id: DHExtendedAmeJarTechnology
+  name: dh-research-technology-extendedamejar
+  entityIcon: ExtendedAmeJar
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 31000
+  recipeUnlocks:
+  - ExtendedAmeJar
+  technologyPrerequisites:
+  - DHAmeJarTechnology
+  position: 6, 4
+
+
+- type: technology
+  id: DHBluespaceAmeJarTechnology
+  name: dh-research-technology-bluespaceamejar
+  entityIcon: BluespaceAmeJar
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 59000
+  recipeUnlocks:
+  - BluespaceAmeJar
+  technologyPrerequisites:
+  - DHExtendedAmeJarTechnology
+  - NFBluespaceStorage
+  position: 6, 3
+
+- type: technology
+  id: DHPowerCellHyper
+  name: dh-research-technology-hyper-powercells
+  entityIcon: PowerCellMicroreactor
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 15900
+  recipeUnlocks:
+  - PowerCellHyper
+  technologyPrerequisites:
+  - NFAdvancedSMES
+  position: 2, 26
+
+#region Science
+
+- type: technology #DH
+  id: DHResearchBorgModules
+  name: dh-research-technology-basic-research-borg-modules
+  entityIcon: BorgModuleAnomaly
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - BorgModuleAnomaly
+  - BorgModuleArtifact
+  technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  position: 1, 7
+
+- type: technology #DH
+  id: DHResearchBlueprintLithograph
+  name: dh-research-technology-basic-research-blueprints
+  entityIcon: BlueprintLithograph
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 14000
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - BlueprintLithographMachineCircuitboard
+  #- SheetBlueprintPaper
+  technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  - NFSuperParts
+  position: 2, 7
+
+- type: technology
+  id: DHIndustrialSpeedEngineering
+  name: dh-research-technology-industrial-speed-engineering
+  entityIcon: ProtolatheHyperSpeed
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 28700
+  recipeUnlocks:
+  - AutolatheHyperSpeedMachineCircuitboard
+  - UniformPrinterHyperSpeedMachineCircuitboard
+  - CircuitImprinterHyperSpeedMachineCircuitboard
+  - ProtolatheHyperSpeedMachineCircuitboard
+  - ExosuitFabricatorHyperSpeedMachineCircuitboard
+  technologyPrerequisites:
+  - NFRapidPartExchange
+  position: 3, 2
+
+# - type: technology
+#   id: DHResearchDisks
+#   name: dh-research-technology-research-disks
+#   entityIcon: ResearchDisk
+#   discipline: NFScience
+#   tier: 1
+#   cost: 40000
+#   recipeUnlocks:
+#   - ResearchDisk10000
+#   - ResearchDisk25000
+#   technologyPrerequisites:
+#   - NFSuperParts
+#   position: 5, 7
+

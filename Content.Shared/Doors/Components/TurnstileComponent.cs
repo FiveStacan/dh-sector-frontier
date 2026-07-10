@@ -73,5 +73,6 @@ public sealed partial class TurnstileComponent : Component
 [Serializable, NetSerializable]
 public enum TurnstileVisualLayers : byte
 {
-    Base
+    Base,
+    Marker
 }

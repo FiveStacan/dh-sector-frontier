@@ -113,7 +113,7 @@ store-category-bmmedicine = Медицина
 
 lathe-category-emp-ammo = ЭМИ патроны
 lathe-category-caustic-ammo = Кислотные патроны
-
+lathe-category-explosive-ammo = Взрывные патроны
 
 
 uplink-pirate-RatelBundle-name = VFD PSW "Ratel" (8x65 SKR)

@@ -1,0 +1,183 @@
+- type: dungeonRoom
+  id: DHMaintInterior3x3a
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 0,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3b
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 4,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3c
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 8,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3d
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 12,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3e
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 16,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+    - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3f
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 20,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3g
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 0,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3h
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 4,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3i
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 8,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3j
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 12,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3k
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 16,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x3l
+  size: 3,3
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 20,4
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior4x4a
+  size: 4,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 0,8
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior4x4b
+  size: 4,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 5,8
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior4x4c
+  size: 4,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 10,8
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior4x4d
+  size: 4,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 15,8
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior3x4d
+  size: 3,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 20,8
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: dungeonRoom
+  id: DHMaintInterior4x4e
+  size: 4,4
+  atlas: /Maps/_DH/Dungeon/DHmaintinterior.yml
+  offset: 0,13
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - DHMaintInterior
+
+- type: entity
+  id: NDHMaintInteriorRoomMarker3x3
+  parent: BaseRoomMarker
+  name: DH maint interior marker 3x3
+  components:
+  - type: RoomFill
+    maxSize: 3, 3
+    roomWhitelist:
+      tags:
+      - DHMaintInterior
+
+- type: entity
+  id: NDHMaintInteriorRoomMarker
+  parent: BaseRoomMarker
+  name: DH maint interior marker
+  components:
+  - type: RoomFill
+    maxSize: 6, 6
+    roomWhitelist:
+      tags:
+      - DHMaintInterior

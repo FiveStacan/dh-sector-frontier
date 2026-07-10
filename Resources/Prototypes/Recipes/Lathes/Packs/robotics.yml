@@ -40,7 +40,27 @@
   - BorgModuleAdvancedChemical
   - BorgModuleAdvancedMining
   - BorgModuleAdvancedParamedic # Frontier
+  - BorgModuleDiagnosis #DH
   - BorgModuleRCD # Frontier
+  - BorgModuleChemical #DH
+  - BorgModuleClowning #DH
+  - BorgModuleMusique #DH
+  - BorgModuleCleaning #DH
+  - BorgModuleBureaucracy #DH
+  - BorgModuleChef #DH
+  - BorgModuleNFService #DH
+  - BorgModuleCustodial #DH
+  - BorgModuleGardening #DH
+  - BorgModuleHarvesting #DH
+  - BorgModuleAnomaly #DH
+  - BorgModuleArtifact #DH
+  - BorgModuleJetpack #DH
+  - BorgModuleAdvancedMining #DH
+  - BorgModuleMining #DH
+  - BorgModuleAppraisal #DH
+  - BorgModuleTraversal #DH
+  - BorgModuleRCDShipyard #DH
+  - BorgModuleConstruction #DH
 
 - type: latheRecipePack
   id: MechParts

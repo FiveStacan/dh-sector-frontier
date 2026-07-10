@@ -158,7 +158,7 @@
 - type: entity #from _Lua
   parent: CadetIDCard
   id: SDEngineerIDCard
-  name: ID-карта Инженера СРБС
+  name: ID-карта Инженера ДСБФ
   components:
   - type: PresetIdCard
     job: SDEngineer

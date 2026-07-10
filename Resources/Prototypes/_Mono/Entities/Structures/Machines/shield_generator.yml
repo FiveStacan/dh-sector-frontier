@@ -77,8 +77,8 @@
   components:
   - type: AmbientOnPowered
   - type: AmbientSound
-    volume: -5
-    range: 30
+    volume: -7 #DH -5<-7
+    range: 15 #DH 30<15
     enabled: false
     sound:
       path: /Audio/Ambience/Objects/anomaly_generator.ogg
@@ -98,7 +98,7 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
-    
+
   - type: Physics
     bodyType: Static
   - type: Transform
@@ -140,11 +140,11 @@
     powerUpSound: !type:SoundPathSpecifier
         path: "/Audio/Effects/teleport_arrival.ogg"
         params:
-          pitch: 0.5
+          pitch: 0.9 #DH 0.5<0.9
     powerDownSound: !type:SoundPathSpecifier
         path: "/Audio/Effects/teleport_departure.ogg"
         params:
-          pitch: 0.5
+          pitch: 0.9 #DH 0.5<0.9
   - type: Machine
     board: MachineShieldMS500Circuitboard
   - type: Construction

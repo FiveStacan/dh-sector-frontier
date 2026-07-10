@@ -15,7 +15,6 @@
   - /Audio/_DH/Nanati/Nanati3.ogg
   - /Audio/_DH/Nanati/Nanati4.ogg
   - /Audio/_DH/Nanati/Nanati5.ogg
-#  - /Audio/_DH/Nanati/Nanati6.ogg #не оч
   - /Audio/_DH/Nanati/Nanati7.ogg
   - /Audio/_DH/Nanati/Nanati8.ogg
   - /Audio/_DH/Nanati/Nanati9.ogg
@@ -33,58 +32,19 @@
   - /Audio/_DH/Weapons/Guns/Gunshots/glock22_shot_1.ogg
   - /Audio/_DH/Weapons/Guns/Gunshots/glock22_shot_2.ogg
 
-- type: soundCollection
-  id: DHLasersPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Lasers/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Lasers/pickup2.ogg
-
-- type: soundCollection
-  id: DHLasersDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Lasers/drop1.ogg
-
-- type: soundCollection
-  id: DHRiflesPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Rifles/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Rifles/pickup2.ogg
-  - /Audio/_DH/Weapons/Guns/Rifles/pickup3.ogg
-
-- type: soundCollection
-  id: DHRiflesDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Rifles/drop1.ogg
-  - /Audio/_DH/Weapons/Guns/Rifles/drop1.ogg
-
-- type: soundCollection
-  id: DHPistolsPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Pistols/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/pickup2.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/pickup3.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/pickup4.ogg
-
-- type: soundCollection
-  id: DHPistolsDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Pistols/drop1.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/drop2.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/drop3.ogg
-
 - type: entity
   id: DHBaseGunPulseSound
   abstract: true
   components:
   - type: EmitSoundOnPickup
     sound:
-      collection: PulsePickUp
+      collection: DHPulsePickUp
   - type: EmitSoundOnDrop
     sound:
-      collection: PulseDrop
+      collection: DHPulseDrop
   - type: EmitSoundOnLand
     sound:
-      collection: PulseDrop
+      collection: DHPulseDrop
 
 - type: soundCollection
   id: DHPulsePickUp
@@ -95,44 +55,6 @@
   id: DHPulseDrop
   files:
   - /Audio/_DH/Weapons/Guns/Lasers/Pulse/drop1.ogg
-
-- type: soundCollection
-  id: DHSnipersPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Snipers/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Snipers/pickup2.ogg
-
-- type: soundCollection
-  id: DHSnipersDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Snipers/drop1.ogg
-  - /Audio/_DH/Weapons/Guns/Snipers/drop2.ogg
-  - /Audio/_DH/Weapons/Guns/Snipers/drop3.ogg
-
-- type: soundCollection
-  id: DHShotgunsPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Shotguns/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Shotguns/pickup2.ogg
-  - /Audio/_DH/Weapons/Guns/Shotguns/pickup3.ogg
-
-- type: soundCollection
-  id: DHShotgunsDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Shotguns/drop1.ogg
-  - /Audio/_DH/Weapons/Guns/Shotguns/drop2.ogg
-
-- type: soundCollection
-  id: DHRevolversPickUp
-  files:
-  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/pickup1.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/pickup2.ogg
-
-- type: soundCollection
-  id: DHRevolversDrop
-  files:
-  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/drop1.ogg
-  - /Audio/_DH/Weapons/Guns/Pistols/Revolvers/drop2.ogg
 
 - type: soundCollection
   id: DHRevolversCollide
@@ -155,3 +77,17 @@
   files:
   - /Audio/_DH/Weapons/Guns/Gunshots/famas-1.ogg
   - /Audio/_DH/Weapons/Guns/Gunshots/famas-2.ogg
+
+- type: soundCollection
+  id: DHmace
+  files:
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air1.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air2.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air3.ogg
+  - /Audio/_DH/Weapons/Melee/Mace/Mace_smash_air4.ogg
+
+- type: soundCollection
+  id: DHEearthGovernmentMachineGunShot
+  files:
+  - /Audio/_DH/Weapons/Guns/Gunshots/EG_MG_1.ogg
+  - /Audio/_DH/Weapons/Guns/Gunshots/EG_MG_2.ogg

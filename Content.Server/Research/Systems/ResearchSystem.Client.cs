@@ -152,11 +152,8 @@ public sealed partial class ResearchSystem
         if (TerminatingOrDeleted(ent) || ent.Comp.Server == null)
             return;
 
-        // If the client and the server are no longer on the same grid, disconnect them.
-        if (!TryComp(ent, out TransformComponent? clientXform)
-            || clientXform.GridUid == null
-            || !TryComp(ent.Comp.Server, out TransformComponent? serverXform)
-            || clientXform.GridUid != serverXform.GridUid)
+        if (!TryComp(ent.Comp.Server, out ResearchServerComponent? serverComponent)
+            || !CanClientAccessServer(ent, ent.Comp.Server.Value, ent.Comp, serverComponent))
         {
             UnregisterClient(ent, ent.Comp);
         }

@@ -1,25 +1,44 @@
+# Sunrise edit start
 - type: entity
   abstract: true
-  parent: [ Clothing, AllowSuitStorageClothing, RecyclableItemClothDurable ] # Frontier: added AllowSuitStorageClothing and RecyclableItemClothDurable
+  id: BaseClothingOuterSounds
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_drop.ogg
+# Sunrise edit end
+
+- type: entity
+  abstract: true
+  parent: [ Clothing, AllowSuitStorageClothing, RecyclableItemClothDurable, ] #DH # Frontier: added AllowSuitStorageClothing and RecyclableItemClothDurable
   id: ClothingOuterBase
   components:
   # Goobstation edit start
-  - type: EmitSoundOnPickup
-    sound:
-      collection: GenericPickup
-      params:
-        volume: -9
-  - type: EmitSoundOnDrop
-    sound:
-      collection: GenericDrop
-      params:
-        volume: -9
-  - type: EmitSoundOnLand
-    sound:
-      collection: GenericDrop
-      params:
-        volume: -9
+  # - type: EmitSoundOnPickup
+  #   sound:
+  #     collection: GenericPickup
+  #     params:
+  #       volume: -9
+  # - type: EmitSoundOnDrop
+  #   sound:
+  #     collection: GenericDrop
+  #     params:
+  #       volume: -9
+  # - type: EmitSoundOnLand
+  #   sound:
+  #     collection: GenericDrop
+  #     params:
+  #       volume: -9
   - type: Clothing
+    equipDelay: 4.4 #DH
+    unequipDelay: 3.8 #DH
+    stripDelay: 4 #DH
     slots:
     - outerClothing
     equipSound:
@@ -29,6 +48,8 @@
     state: icon
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
     price: 30 # Frontier
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.98
 
 # База только для космических скафандров (EVA, хардсьют, софтсьют)
 - type: entity
@@ -41,7 +62,7 @@
 
 - type: entity
   abstract: true
-  parent: ClothingOuterBase
+  parent: [ClothingOuterBase, BaseClothingOuterSounds] #DH
   id: ClothingOuterBaseLarge
   components:
   - type: Item
@@ -56,7 +77,7 @@
 
 - type: entity
   abstract: true
-  parent: ClothingOuterBase
+  parent: [ClothingOuterBase, BaseClothingOuterSounds] #DH
   id: ClothingOuterStorageBase
   components:
   - type: Storage
@@ -71,7 +92,7 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: StaticPrice
-    price: 35 # Frontier 70<35
+    price: 45 # Frontier 70<35
 
 - type: entity
   abstract: true
@@ -128,6 +149,8 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.98
 
 - type: entity
   abstract: true
@@ -138,6 +161,26 @@
 # SlotBlocker blocked until UI change
 #  - type: SlotBlock
 #    slots: [innerclothing, feet]
+  # Sunrise added start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_drop.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/Items/Handling/cloth_drop.ogg
+      params:
+        volume: -2
+  # Sunrise added end
+  - type: Clothing #DH
+    equipDelay: 4
+    unequipDelay: 3
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
@@ -180,21 +223,21 @@
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
   # Goobstation edit start
-  - type: EmitSoundOnPickup
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_pickup.ogg
-      params:
-        volume: -4
-  - type: EmitSoundOnDrop
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
-      params:
-        volume: -4
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
-      params:
-        volume: -4
+  # - type: EmitSoundOnPickup
+  #   sound:
+  #     path: /Audio/_Goobstation/Items/handling/backpack_pickup.ogg
+  #     params:
+  #       volume: -4
+  # - type: EmitSoundOnDrop
+  #   sound:
+  #     path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
+  #     params:
+  #       volume: -4
+  # - type: EmitSoundOnLand
+  #   sound:
+  #     path: /Audio/_Goobstation/Items/handling/backpack_drop.ogg
+  #     params:
+  #       volume: -4
   # Goobstation edit end
   - type: DiseaseProtection #Backmen & Ataraxia anti viral
     protection: 0.4
@@ -237,6 +280,14 @@
 #    materialComposition: # Frontier
 #      Durathread: 100 # Frontier
 #      Cloth: 50 # Frontier
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.92
+        Slash: 0.92
+        Piercing: 0.95
+        Heat: 0.90
+        Radiation: 0.40
 
 - type: entity
   parent: ClothingOuterBase
@@ -252,6 +303,8 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.97
 
 - type: entity
   abstract: true
@@ -260,3 +313,5 @@
   components:
   - type: Item
     size: Huge
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.96

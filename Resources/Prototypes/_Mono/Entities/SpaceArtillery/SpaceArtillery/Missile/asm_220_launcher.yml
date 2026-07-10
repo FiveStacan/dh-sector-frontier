@@ -15,16 +15,16 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.1
+    fireRate: 0.04
     shootThermalSignature: 16000000 # 4000m after firing
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
-    powerChargeRate: 500
-    powerUsePassive: 2500
-    powerUseActive: 0
+    powerChargeRate: 10
+    powerUsePassive: 2900
+    powerUseActive: 1000
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -36,7 +36,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 25000
+        damage: 5000 #DH 25000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

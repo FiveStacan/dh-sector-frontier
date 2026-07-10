@@ -7,12 +7,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 2400
   recipeUnlocks:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
   - NanoManipulatorStockPart
-  position: 0, 0
+  position: -2, 15
+
+# region Engineering
+
 - type: technology
   id: NFIndustrialCutter
   name: nf-research-technology-industrial-cutter
@@ -22,78 +25,29 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 4000
   recipeUnlocks:
   - CutterMachineCircuitboard
   technologyPrerequisites:
-  - NFAdvancedParts
-  position: -0.659, -1.816
+  - DHBaseToolsTechnology
+  position: 1, 0
+
 - type: technology
-  id: NFIndustrialSilo
-  name: nf-research-technology-industrial-silo
-  entityIcon: MachineMaterialSilo
+  id: NFRapidPartExchange
+  name: nf-research-technology-rped
+  entityIcon: RPED
   discipline: NFEngineering
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 5500
   recipeUnlocks:
-  - MaterialSiloMachineCircuitboard
-  prerequisiteLineType: Diagonal
+  - RPED
   technologyPrerequisites:
-  - NFAdvancedParts
-  position: 1.152, -1.646
-- type: technology
-  id: NFIndustrialEngineering
-  name: nf-research-technology-industrial-engineering
-  entityIcon: ProtolatheHyperConvection
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - AutolatheHyperConvectionMachineCircuitboard
-  - ProtolatheHyperConvectionMachineCircuitboard
-  - CircuitImprinterHyperConvectionMachineCircuitboard
-  technologyPrerequisites:
-  - NFAdvancedParts
-  position: 0.774, -3.079
-- type: technology
-  id: NFAdvancedBeltTechnology
-  name: nf-research-technology-advanced-belt
-  entityIcon: ClothingBeltChiefEngineer
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - ClothingBeltChiefEngineer
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAdvancedParts
-  position: 2.415, -1.076
-- type: technology
-  id: NFAdvancedWelderTechnology
-  name: nf-research-technology-advanced-welder
-  entityIcon: WelderExperimental
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - WelderExperimental
-  - ClothingMaskWeldingGas
-  - ClothingEyesGlassesMeson # Lua
-  technologyPrerequisites:
-  - NFAdvancedParts
-  position: -2.021, 1.789
+  - NFIndustrialEngineering
+  position: 2, 2
+
 - type: technology
   id: NFFauxAstroTiles
   name: nf-research-technology-faux-astro-tiles
@@ -104,7 +58,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 1500
   recipeUnlocks:
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -114,7 +68,67 @@
   - FauxTileAstroAsteroidSand
   technologyPrerequisites:
   - NFIndustrialCutter
-  position: -1.332, -5.466
+  position: 2, 0
+
+- type: technology
+  id: NFIndustrialEngineering
+  name: nf-research-technology-industrial-engineering
+  entityIcon: ProtolatheHyperConvection
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 24000
+  recipeUnlocks:
+  - AutolatheHyperConvectionMachineCircuitboard
+  - ProtolatheHyperConvectionMachineCircuitboard
+  - CircuitImprinterHyperConvectionMachineCircuitboard
+  - ExosuitFabricatorHyperConvectionMachineCircuitboard #DH
+  - UniformPrinterHyperConvectionMachineCircuitboard #DH
+  - EngineeringTechFabCircuitboard #DH
+  technologyPrerequisites:
+  - DHBaseToolsTechnology
+  # Lua current prerequisites:
+  # - NFRapidPartExchange
+  position: 1, 2
+
+- type: technology
+  id: NFIndustrialSilo
+  name: nf-research-technology-industrial-silo
+  entityIcon: MachineMaterialSilo
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 12000
+  recipeUnlocks:
+  - MaterialSiloMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - DHBaseToolsTechnology
+  position: 1, 1
+
+- type: technology
+  id: NFIndustrialSheetifier
+  name: nf-research-technology-industrial-sheetifier
+  entityIcon: Sheetifier
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - SheetifierMachineCircuitboard
+  technologyPrerequisites:
+  - NFIndustrialEngineering
+  position: 3, 2
+
+# region RCD, BS Bags
+# note: depends on Engineering cluster
+
 - type: technology
   id: NFMechanicalCompression
   name: nf-research-technology-mechanical-compression
@@ -124,27 +138,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 20000
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFIndustrialSilo
-  position: 1.951, -3.327
-- type: technology
-  id: NFRapidPartExchange
-  name: nf-research-technology-rped
-  entityIcon: RPED
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - RPED
-  technologyPrerequisites:
   - NFIndustrialEngineering
-  position: 1.301, -6.042
+  position: 2, 1
+
 - type: technology
   id: NFMiscellaneousItemsOrganization
   name: nf-research-technology-personal-storage-solutions
@@ -155,7 +157,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 3500
   recipeUnlocks:
   - NFPouchUtility
   - NFPouchEngineering
@@ -178,24 +180,29 @@
   - MedicalPouch
   technologyPrerequisites:
   - NFAdvancedBeltTechnology
-  position: 3.086, -2.572
+  # Lua current prerequisites:
+  # - NFMechanicalCompression
+  position: 2, 3
+
 - type: technology
-  id: NFAdvancedToolsTechnology
-  name: nf-research-technology-advanced-tools
-  entityIcon: PowerDrill
+  id: DHWelderExperimentalTechnology
+  name: dh-research-technology-experimental-wender
+  entityIcon: WelderExperimental
   discipline: NFEngineering
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 19200
+  prerequisiteLineType: Diagonal
   recipeUnlocks:
-  - PowerDrill
-  - JawsOfLife
-  - SignallerAdvanced
+  - WelderExperimental
   technologyPrerequisites:
-  - NFAdvancedWelderTechnology
-  position: -4.164, 1.669
+  - NFAdvancedToolsTechnology
+  - NFAdvancedAnomalyResearch #DH
+  #- NFSuperParts
+  position: 2, 5
+
 - type: technology
   id: NFRapidConstruction
   name: nf-research-technology-rapid-construction
@@ -205,14 +212,33 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 28000
   recipeUnlocks:
   - ShipyardRCD
   - ShipyardRCDAmmo
+  - BorgModuleRCDShipyard
   - PlanetaryRCD
   technologyPrerequisites:
   - NFMechanicalCompression
-  position: 3.043, -5.248
+  position: 3, 1
+
+- type: technology
+  id: NFConstructionBags
+  name: research-technology-construction-bags
+  entityIcon: ConstructionBagOfHolding
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - ConstructionBagOfHolding
+  technologyPrerequisites:
+  - NFRapidConstruction
+  - NFBluespaceStorage
+  position: 4, 1
+
 - type: technology
   id: NFBluespaceStorage
   name: nf-research-technology-bluespace-storage
@@ -221,17 +247,17 @@
   factions:
   - Nanotrasen
   - Syndicate
-  tier: 1
-  cost: 20000
+  tier: 2
+  cost: 88000
   recipeUnlocks:
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
   - ClothingBackpackMessengerHolding
-  - ConstructionBagOfHolding
   technologyPrerequisites:
   - NFMiscellaneousItemsOrganization
-  position: 4.001, -4.604
+  position: 3, 3
+
 - type: technology
   id: NFAdvancedCyborgToolsTechnology
   name: nf-research-technology-advanced-cyborg-tools
@@ -246,7 +272,27 @@
   - BorgModuleAdvancedTool
   technologyPrerequisites:
   - NFAdvancedToolsTechnology
-  position: -6.495, 1.692
+  position: 3, 4
+
+- type: technology
+  id: DHRapidConstruction
+  name: dh-research-technology-rapid-construction
+  entityIcon: RCD
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 83750
+  #prerequisiteLineType: Tree
+  recipeUnlocks:
+  - RCD
+  - RCDAmmo
+  technologyPrerequisites:
+  - NFMatterEnergyConversion
+  - NFBluespaceStorage
+  position: 4, 3
+
 - type: technology
   id: NFMatterEnergyConversion
   name: nf-research-technology-matter-energy-conversion
@@ -256,29 +302,186 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 15000
+  cost: 15200
   recipeUnlocks:
   - BorgModuleRCD
-  prerequisiteLineType: Tree
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFRapidConstruction
-  - NFBluespaceStorage
-  position: 4.37, -6.638
+  - NFAdvancedCyborgToolsTechnology
+  position: 4, 2
+
+# region Atmospherics
+# note: depends on Engineering cluster
+
 - type: technology
-  id: NFAbnormalArtifactManipulation
-  name: nf-research-technology-abnormal-artifact-manipulation
-  entityIcon: MachineArtifactCrusher
-  discipline: NFScience
+  id: NFAtmosphericTech
+  name: nf-research-technology-atmospheric-tech
+  entityIcon: GasThermoMachineFreezer
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 9000
+  recipeUnlocks:
+  - ThermomachineFreezerMachineCircuitBoard
+  - GasRecyclerMachineCircuitboard
+  hiddenTechnologyPrerequisites: #DH
+  - NFIndustrialEngineering
+  position: 0, 34
+
+- type: technology
+  id: NFAdvancedAtmosphericsTools
+  name: nf-research-technology-advanced-atmospherics-tools
+  entityIcon: HolofanProjector
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 11500
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - HolofanProjector
+  - FireExtinguisherBluespace # DeltaV
+  technologyPrerequisites:
+  - NFAdvancedAtmospherics
+  # Lua current prerequisites:
+  # - NFAdvancedAtmospherics
+  position: 1, 33
+
+- type: technology
+  id: NFAdvancedAtmospherics
+  name: nf-research-technology-advanced-atmospherics
+  entityIcon: GasThermoMachineHellfireFreezer
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 14800
+  recipeUnlocks:
+  - HellfireFreezerMachineCircuitBoard
+  technologyPrerequisites:
+  - NFAtmosphericTech
+  position: 0, 33
+
+- type: technology
+  id: NFAdvancedAtmosphericsPortable
+  name: nf-research-technology-advanced-atmospherics-portable
+  entityIcon: PortableScrubber
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6200
+  recipeUnlocks:
+  - PortableScrubberMachineCircuitBoard
+  - CondenserMachineCircuitBoard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAtmosphericTech
+  position: 1, 34
+
+- type: technology
+  id: NFAtmosphericDrilling
+  name: nf-research-technology-atmospheric-drilling
+  entityIcon: GasMiningDrill
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 9000
+  recipeUnlocks:
+  - GasMiningDrillMachineCircuitboard
+  - GaslockFrameMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAtmosphericTech
+  position: 1, 35
+
+# region Advanced Tools
+# note: depends on Engineering cluster
+
+- type: technology
+  id: DHBaseToolsTechnology
+  name: nf-research-technology-tools-base
+  entityIcon: Welder
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 1000
+  recipeUnlocks:
+  - Welder
+  - ConstructionBag
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: 0, 3
+
+- type: technology
+  id: NFAdvancedWelderTechnology
+  name: nf-research-technology-advanced-welder
+  entityIcon: WelderIndustrial
+  discipline: NFEngineering
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - ArtifactCrusherMachineCircuitboard
+  - WelderIndustrial
+  - ClothingMaskWeldingGas
+  # Lua current recipe unlocks kept:
+  - ClothingEyesGlassesMeson
   technologyPrerequisites:
-  - NFBasicXenoArcheology
-  position: -4.894, 4.131
+  - DHBaseToolsTechnology
+  position: 1, 4
+
+- type: technology
+  id: NFAdvancedToolsTechnology
+  name: nf-research-technology-advanced-tools
+  entityIcon: PowerDrill
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 18900
+  recipeUnlocks:
+  - PowerDrill
+  - JawsOfLife
+  - SignallerAdvanced
+  - WelderIndustrialAdvanced #DH
+  - BorgModuleConstruction #DH
+  technologyPrerequisites:
+  - NFAdvancedWelderTechnology
+  position: 2, 4
+
+- type: technology
+  id: NFAdvancedBeltTechnology
+  name: nf-research-technology-advanced-belt
+  entityIcon: ClothingBeltChiefEngineer
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6500
+  recipeUnlocks:
+  - ClothingBeltChiefEngineer
+  - ClothingMaskGasCE #DH
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - DHBaseToolsTechnology
+  position: 1, 3
+
+# region Xenoarch
+
 - type: technology
   id: NFBasicXenoArcheology
   name: nf-research-technology-basic-xenoarcheology
@@ -288,30 +491,33 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 9500
   recipeUnlocks:
   - NodeScanner
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
   - ResearchComputerCircuitboard
-  position: -3.523, 3.539
   technologyPrerequisites:
-  - NFSuperParts
+  - NFAdvancedParts
+  # - NFSuperParts
+  position: 0, 6
+
 - type: technology
-  id: NFAnomalyCoreHarnessing
-  name: nf-research-technology-anomaly-harnessing
-  entityIcon: WeaponGauntletGorilla
+  id: NFAbnormalArtifactManipulation
+  name: nf-research-technology-abnormal-artifact-manipulation
+  entityIcon: MachineArtifactCrusher
   discipline: NFScience
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 14000
   recipeUnlocks:
-  - WeaponGauntletGorilla
+  - ArtifactCrusherMachineCircuitboard
   technologyPrerequisites:
-  - NFBasicAnomalousResearch
-  position: -7.731, 5.09
+  - NFBasicXenoArcheology
+  position: 0, 5
+
 - type: technology
   id: NFBasicAnomalousResearch
   name: nf-research-technology-basic-anomalous-research
@@ -321,7 +527,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 12000
   recipeUnlocks:
   - AnomalyScanner
   - AnomalyLocator
@@ -329,8 +535,27 @@
   - APECircuitboard
   - AnomalyVesselCircuitboard
   technologyPrerequisites:
-  - NFAbnormalArtifactManipulation
-  position: -6.142, 4.869
+  - NFBasicXenoArcheology
+  # Lua current prerequisites:
+  # - NFAbnormalArtifactManipulation
+  position: 1, 6
+
+- type: technology
+  id: NFAnomalyCoreHarnessing
+  name: nf-research-technology-anomaly-harnessing
+  entityIcon: WeaponGauntletGorilla
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 12700
+  recipeUnlocks:
+  - WeaponGauntletGorilla
+  technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  position: 1, 5
+
 - type: technology
   id: NFAdvancedAnomalyResearch
   name: nf-research-technology-advanced-anomaly-research
@@ -343,10 +568,14 @@
   cost: 10000
   recipeUnlocks:
   - NFWeaponPistolCHIMP
+  - AnomalySynchronizerCircuitboard # Eclipse
   - AnomalyVesselExperimentalCircuitboard
   technologyPrerequisites:
+  - NFBasicAnomalousResearch
+  # Lua current prerequisites:
   - NFAnomalyCoreHarnessing
-  position: -9.767, 4.886
+  position: 2, 6
+
 - type: technology
   id: NFBluespaceTimeManipulation
   name: nf-research-technology-bluespace-time-manipulation
@@ -356,14 +585,69 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 48500
   recipeUnlocks:
   - DeviceDesynchronizer
-  prerequisiteLineType: Tree
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedToolsTechnology
-  - NFAbnormalArtifactManipulation
-  position: -6.535, 3.259
+  - NFAdvancedAnomalyResearch
+  # Lua current prerequisites:
+  # - NFAbnormalArtifactManipulation
+  position: 3, 5
+
+- type: technology
+  id: GravityManipulationTether
+  name: research-technology-gravity-manipulation
+  entityIcon: WeaponTetherGun
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 300000
+  technologyPrerequisites:
+  - QuantumLeaping
+  - NFBluespaceStorage
+  recipeUnlocks:
+  - WeaponTetherGun
+  position: 5, 5
+
+- type: technology
+  id: GravityManipulationForce
+  name: research-technology-gravity-manipulation
+  entityIcon: WeaponForceGun
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 400000
+  technologyPrerequisites:
+  - GravityManipulationTether
+  recipeUnlocks:
+  - WeaponForceGun
+  position: 6, 5
+
+
+- type: technology
+  id: QuantumLeaping
+  name: research-technology-quantum-leaping
+  entityIcon: DeviceQuantumSpinInverter
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 185000
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - DeviceQuantumSpinInverter
+  technologyPrerequisites:
+  - NFBluespaceTimeManipulation
+  - NFSuperParts
+  position: 4, 5
+
 - type: technology
   id: NFSuperParts
   name: nf-research-technology-super-parts
@@ -374,14 +658,155 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 15000
+  cost: 27600
   recipeUnlocks:
   - SuperCapacitorStockPart
   - SuperMatterBinStockPart
   - PicoManipulatorStockPart
   technologyPrerequisites:
+  - NFAdvancedAnomalyResearch
+  - NFAdvancedToolsTechnology
+  # Lua current prerequisites:
+  # - NFAdvancedParts
+  position: 3, 6
+
+- type: technology
+  id: AlternativeResearch
+  name: research-technology-alternative-research
+  entityIcon: ComputerTechnologyDiskTerminal
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6400
+  recipeUnlocks:
+   - TechDiskComputerCircuitboard
+  technologyPrerequisites:
+  - NFSuperParts
+  position: 5, 6
+
+# region Hardsuits Armor
+
+- type: technology
+  id: DHOuterClothingBasic
+  name: dh-research-technology-outercloth-basic
+  entityIcon: ClothingOuterSuitFire
+  discipline: NFScience
+  secondaryDiscipline: NFEngineering
+  tier: 1
+  cost: 3200
+  recipeUnlocks:
+  - ClothingOuterSuitRad
+  - ClothingOuterSuitFire
+  - ClothingHeadHelmetFire
+  - ClothingOuterSuitAtmosFire
+  - ClothingHeadHelmetAtmosFire
+  - ClothingOuterSuitBomb
+  - ClothingHeadHelmetBombSuit
+  - ClothingOuterSuitCargo
+  - ClothingOuterBioScientist
+  - ClothingHeadHatHoodBioScientist
+  - ClothingHeadHatHardhatArmored
+  technologyPrerequisites:
   - NFAdvancedParts
-  position: -1.002, 3.17
+  position: 0, 8
+
+- type: technology
+  id: DHArmorBasic
+  name: dh-research-technology-Armor-basic
+  entityIcon: ClothingOuterArmorBasicSlim
+  discipline: NFArsenal
+  secondaryDiscipline: NFScience
+  tier: 1
+  cost: 3000
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ClothingOuterArmorBasicSlim
+  - ClothingHeadHelmetRiot
+  technologyPrerequisites:
+  - DHOuterClothingBasic
+  position: 1, 9
+
+- type: technology
+  id: DHArmor
+  name: dh-research-technology-Armor
+  entityIcon: ClothingOuterArmorRiot
+  discipline: NFArsenal
+  secondaryDiscipline: NFScience
+  tier: 1
+  cost: 5500
+  recipeUnlocks:
+  - ClothingOuterArmorRiot
+  - ClothingOuterArmorBasic
+  - ClothingHeadHelmetBasic
+  - ClothingHeadHelmetJustice
+  technologyPrerequisites:
+  - DHArmorBasic
+  position: 2, 9
+
+- type: technology
+  id: DHArmorAdw
+  name: dh-research-technology-Armor-adw
+  entityIcon: ClothingOuterArmorSWAT
+  discipline: NFArsenal
+  tier: 1
+  cost: 16500
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ClothingOuterArmorUSSPjuggernaut
+  - ClothingOuterArmorSWAT
+  - ClothingHeadHelmetSwat
+  - ClothingOuterArmorHeavy
+  - ClothingOuterArmorHeavyGreen
+  - ClothingOuterArmorHeavyRed
+  - ADTClothingOuterArmorCrusader
+  technologyPrerequisites:
+  - DHArmor
+  position: 3, 11
+
+- type: technology
+  id: DHEVAHardsuitsBasic
+  name: dh-research-technology-evahardsuits-basic
+  entityIcon: ClothingOuterHardsuitEVA
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 6800
+  recipeUnlocks:
+  - ClothingOuterHardsuitEVA
+  - ClothingOuterSuitEmergency
+  - ClothingHeadHelmetEVALarge
+  - ClothingHeadHelmetEVA
+  - ClothingOuterHardsuitAncientEVA
+  - ClothingHeadHelmetAncient
+  - ClothingHeadHelmetCosmonaut
+  technologyPrerequisites:
+  - DHOuterClothingBasic
+  position: 1, 8
+
+- type: technology
+  id: DHHardsuitsBasic
+  name: dh-research-technology-evahardsuits
+  entityIcon: ClothingOuterHardsuitPilot
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 9750
+  recipeUnlocks:
+  - ClothingOuterHardsuitPilot
+  - ClothingOuterEVASuitScientist
+  - ClothingOuterEVASuitMailman
+  - ClothingOuterEVASuitStc
+  - ClothingOuterEVASuitCaptain
+  technologyPrerequisites:
+  - DHEVAHardsuitsBasic
+  position: 2, 8
+
 - type: technology
   id: NFHardsuitsEntertainment
   name: nf-research-technology-hardsuits-entertainment
@@ -391,44 +816,41 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 3500
   recipeUnlocks:
   - ClothingOuterHardsuitClown
   - ClothingOuterHardsuitMime
+  - ClothingOuterHardsuitSanta #DH
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFHardsuitsBasic
-  position: -1.648, 12.018
-- type: technology
-  id: NFHardsuitsBasic
-  name: nf-research-technology-hardsuits-basic
-  entityIcon: ClothingOuterHardsuitSpatio
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - ClothingOuterHardsuitSpatio
-  - ClothingOuterHardsuitPilot
-  position: -1.149, 8.556
-  technologyPrerequisites:
-  - NFHardsuitsEngineering
+  - DHHardsuitsBasic
+  # Lua current prerequisites:
+  # - NFHardsuitsBasic
+  position: 0, 7
+
 - type: technology
   id: NFHardsuitsField
   name: nf-research-technology-hardsuits-field
-  entityIcon: ClothingOuterHardsuitSalvage
+  entityIcon: ClothingOuterHardsuitSpatio
   discipline: NFSalvage
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 16200
   recipeUnlocks:
-  - ClothingOuterHardsuitSalvage
+  #- ClothingOuterHardsuitSalvage
+  - ClothingOuterHardsuitSpatio
+  - ClothingOuterHardsuitAtmos
+  - ClothingOuterHardsuitEngineering
+  #- ClothingOuterHardsuitPilot
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFHardsuitsBasic
-  position: -1.977, 10.783
+  - DHHardsuitsBasic
+  # Lua current prerequisites:
+  # - NFHardsuitsBasic
+  position: 3, 9
+
 - type: technology
   id: NFHardsuitsMedical
   name: nf-research-technology-hardsuits-medical
@@ -438,29 +860,17 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 4900
   recipeUnlocks:
   - ClothingOuterHardsuitMedical
-  prerequisiteLineType: Tree
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFHardsuitsBasic
-  position: -0.71, 11.979
-- type: technology
-  id: NFHardsuitsEngineering
-  name: nf-research-technology-hardsuits-engineering
-  entityIcon: ClothingOuterHardsuitEngineering
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - ClothingOuterHardsuitAtmos
-  - ClothingOuterHardsuitEngineering
-  technologyPrerequisites:
-  - NFHardsuitsExperimentalProtection
-  position: -1.12, 6.213
+  - DHHardsuitsBasic
+  - NFBiochemicalStasis
+  # Lua current prerequisites:
+  # - NFHardsuitsBasic
+  position: 0, 9
+
 - type: technology
   id: NFHardsuitsAdvanced
   name: nf-research-technology-hardsuits-advanced
@@ -470,14 +880,17 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 18000
   recipeUnlocks:
   - ClothingOuterHardsuitCap
-  - ClothingOuterHardsuitEngineeringWhite
-  - ClothingOuterHardsuitLuxury
+  - ClothingOuterHardsuitEngineeringWhite # CE
+  #- ClothingOuterHardsuitLuxury
   technologyPrerequisites:
-  - NFHardsuitsEngineering
-  position: -2.237, 6.906
+  - NFHardsuitsField
+  # Lua current prerequisites:
+  # - NFHardsuitsEngineering
+  position: 3, 8
+
 - type: technology
   id: NFHardsuitsExperimentalProtection
   name: nf-research-technology-hardsuits-experimental-protection
@@ -487,13 +900,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 19000
   recipeUnlocks:
   - ClothingOuterHardsuitRd
   - ClothingOuterHardsuitHostileEnvironment
+  prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFSuperParts
-  position: -0.315, 5.013
+  - NFHardsuitsAdvanced
+  position: 4, 7
+
 - type: technology
   id: NFHardsuitsArmored
   name: nf-research-technology-hardsuits-armored
@@ -503,14 +919,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 15000
+  cost: 25000
   recipeUnlocks:
   - ClothingOuterHardsuitMercenary
   - ClothingOuterHardsuitPrivateSecurity
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFHardsuitsAdvanced
-  position: -3.617, 8.178
+  position: 4, 9
+
 - type: technology
   id: NFHardsuitsOldWar
   name: nf-research-technology-hardsuits-old-war
@@ -520,13 +937,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 16500
   recipeUnlocks:
   - ClothingOuterHardsuitSurplus
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFHardsuitsArmored
-  position: -4.889, 7.599
+  position: 5, 10
+
 - type: technology
   id: NFHardsuitsExperimentalIndustrial
   name: nf-research-technology-hardsuits-experimental-industrial
@@ -537,13 +955,17 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 15000
+  cost: 27000
   recipeUnlocks:
   - ClothingOuterHardsuitMaximPrototype
+  prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFHardsuitsExperimentalProtection
   - NFHardsuitsArmored
-  position: -3.341, 6.582
+  # Lua current prerequisites:
+  # - NFHardsuitsExperimentalRD
+  position: 5, 8
+
 - type: technology
   id: NFHardsuitsArmoredAdvanced
   name: nf-research-technology-hardsuits-armored-advanced
@@ -553,30 +975,50 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 20000
-  prerequisiteLineType: Diagonal
+  cost: 36700
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
   - ClothingOuterHardsuitNoble
   technologyPrerequisites:
   - NFHardsuitsArmored
-  position: -5.088, 8.718
+  position: 5, 9
+
 - type: technology
-  id: NFBiochemicalStasis
-  name: nf-research-technology-biochemical-stasis
-  entityIcon: CryostasisBeaker
-  discipline: NFMedical
+  id: NightVisionTech
+  name: research-technology-night-vision
+  entityIcon: ClothingEyesNightVisionGoggles
+  discipline: NFScience
   factions:
   - Nanotrasen
   - Syndicate
-  tier: 1
-  cost: 5000
+  tier: 2
+  cost: 28000
   recipeUnlocks:
-  - CryostasisBeaker
-  - SyringeCryostasis
+  - ClothingEyesNightVisionGoggles
   technologyPrerequisites:
-  - NFHardsuitsMedical
-  position: 0.586, 14.484
+  - NFHardsuitsArmoredAdvanced
+  position: 6, 9
+
+- type: technology
+  id: ThermalVisionTech
+  name: research-technology-thermal-vision
+  entityIcon: ClothingEyesThermalVisionGoggles
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 30000
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - ClothingEyesThermalVisionGoggles
+  technologyPrerequisites:
+  - NightVisionTech
+  - NFHardsuitsExperimentalIndustrial
+  position: 6, 8
+
+# region Medical
+
 - type: technology
   id: NFReinforcedJug
   name: nf-research-technology-reinforced-jug
@@ -586,31 +1028,38 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 2250
   recipeUnlocks:
   - ReinforcedJug
-  position: 1.46, 15.891
+  - MedicalBag
+  - ChemBag
+  position: 0, 11
   technologyPrerequisites:
-  - NFBiochemicalStasis
+  - NFAdvancedParts
+
 - type: technology
-  id: NFBluespaceChemistry
-  name: nf-research-technology-bluespace-chemistry
-  entityIcon: BluespaceBeaker
+  id: NFBiochemicalStasis
+  name: nf-research-technology-biochemical-stasis
+  entityIcon: CryostasisBeaker
   discipline: NFMedical
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 5200
   recipeUnlocks:
-  - BluespaceBeaker
-  - SyringeBluespace
-  - JugBluespace
-  - VialBluespace
-  prerequisiteLineType: Diagonal
+  - CryostasisBeaker
+  - SyringeCryostasis
+  - BorgModuleDiagnosis #DH
+  - NTBodyBag #DH
+  - PrisonerBodyBag #DH
+  - RadiationBodyBag #DH
   technologyPrerequisites:
   - NFReinforcedJug
-  position: 3.653, 16.479
+  # Lua current prerequisites:
+  # - NFHardsuitsMedical
+  position: 0, 10
+
 - type: technology
   id: NFBasicMedicine
   name: nf-research-technology-basic-medicine
@@ -620,46 +1069,17 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 17500
   recipeUnlocks:
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
+  - BorgModuleChemical #DH
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFReinforcedJug
-  position: 2.792, 17.759
-- type: technology
-  id: NFMechanizedTreatment
-  name: nf-research-technology-mechanized-treatment
-  entityIcon: BorgModuleAdvancedParamedic
-  discipline: NFMedical
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - BorgModuleAdvancedParamedic
-  - BorgModuleAdvancedChemical
-  technologyPrerequisites:
-  - NFBluespaceChemistry
-  position: 5.731, 17.646
-- type: technology
-  id: NFEngineeringMedicine
-  name: nf-research-technology-industrial-medicine
-  entityIcon: MedicalAssembler
-  discipline: NFMedical
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 15000
-  recipeUnlocks:
-  - MedicalAssemblerMachineCircuitboard
-  - HotplateMachineCircuitboard
-  - DefibrillatorCompact
-  technologyPrerequisites:
-  - NFBasicMedicine
-  position: 4.428, 18.811
+  position: 1, 12
+
+
 - type: technology
   id: NFSyringeGun
   name: nf-research-technology-syringe-gun
@@ -669,14 +1089,94 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 17600
   recipeUnlocks:
+  - Implanter
   - LauncherSyringe
   - MiniSyringe
-  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicMedicine
-  position: 2.498, 19.683
+  # Lua current prerequisites:
+  # - NFEngineeringMedicine2
+  position: 2, 12
+
+- type: technology
+  id: NFBluespaceChemistry
+  name: nf-research-technology-bluespace-chemistry
+  entityIcon: BluespaceBeaker
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 27900
+  recipeUnlocks:
+  - BluespacePillCanister #DH
+  - BluespaceBeaker
+  - SyringeBluespace
+  - JugBluespace
+  - VialBluespace
+  - BluespaceBodyBag #DH
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFReinforcedJug
+  - NFBasicMedicine
+  position: 1, 10
+
+- type: technology
+  id: NFEngineeringMedicine
+  name: nf-research-technology-industrial-medicine
+  entityIcon: MedicalAssembler
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 22000
+  recipeUnlocks:
+  - MedicalAssemblerMachineCircuitboard
+  - HotplateMachineCircuitboard
+  - DefibrillatorCompact
+  technologyPrerequisites:
+  - NFBasicMedicine
+  position: 1, 11
+
+- type: technology
+  id: NFMechanizedTreatment
+  name: nf-research-technology-mechanized-treatment
+  entityIcon: BorgModuleAdvancedParamedic
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 15200
+  recipeUnlocks:
+  - BorgModuleAdvancedParamedic
+  - BorgModuleAdvancedChemical
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBluespaceChemistry
+  - NFEngineeringMedicine
+  position: 2, 10
+
+- type: technology #DH
+  id: NFEngineeringMedicine2
+  name: nf-research-technology-industrial-medicine-2
+  entityIcon: MedipenTechfab
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 16000
+  recipeUnlocks:
+  - MedipenTechFabCircuitboard
+  - MedicalTechFabCircuitboard
+  technologyPrerequisites:
+  - NFEngineeringMedicine
+  position: 3, 12
+
 - type: technology
   id: NFAppliedBiochemicalStasis
   name: nf-research-technology-applied-biochemical-stasis
@@ -686,28 +1186,67 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 9500
   recipeUnlocks:
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
   technologyPrerequisites:
   - NFEngineeringMedicine
-  position: 6.245, 19.63
+  position: 2, 11
+
+- type: technology
+  id: LuaVirology
+  name: lua-research-technology-virology
+  entityIcon: DiseaseDiagnoser
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 12500
+  recipeUnlocks:
+  - VaccinatorMachineCircuitboard
+  - DiagnoserMachineCircuitboard
+  technologyPrerequisites:
+  - NFBasicMedicine
+  position: 0, 12
+
+- type: technology
+  id: LuaSmartFridge
+  name: lua-research-technology-smart-fridge
+  entityIcon: SmartFridge
+  discipline: NFMedical
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - SmartFridgeCircuitboard
+  technologyPrerequisites:
+  - NFEngineeringMedicine
+  position: 4, 12
+
+# region Magboots
+
 - type: technology
   id: NFBasicMagnetsTech
   name: nf-research-technology-basic-magnets-tech
   entityIcon: ClothingShoesBootsMagSci
   discipline: NFScience
+  secondaryDiscipline: NFEngineering
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 3400
   recipeUnlocks:
   - ClothingShoesBootsMagSci
-  position: -3.104, 10.486
   technologyPrerequisites:
-  - NFMagnetsTech
+  - NFAdvancedParts
+  # - NFMagnetsTech
+  position: 0, 13
+
 - type: technology
   id: NFGravityResistantTech
   name: nf-research-technology-anti-gravitational-fields
@@ -717,12 +1256,30 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 7000
   recipeUnlocks:
   - NFClothingShoesBootsMoon
   technologyPrerequisites:
   - NFBasicMagnetsTech
-  position: -2.831, 12.154
+  position: 0, 14
+
+- type: technology
+  id: NFQuantumFiberWeaving
+  name: nf-research-technology-quantum-fiber-weaving
+  entityIcon: ClothingShoesBootsSpeed
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 30000
+  recipeUnlocks:
+  - ClothingShoesBootsSpeed
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicMagnetsTech
+  position: 1, 14
+
 - type: technology
   id: NFMagnetsTech
   name: nf-research-technology-magnets-tech
@@ -732,29 +1289,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 8500
   recipeUnlocks:
   - ClothingShoesBootsMag
   technologyPrerequisites:
-  - NFHardsuitsBasic
-  position: -2.729, 9.2
-- type: technology
-  id: NFQuantumFiberWeaving
-  name: nf-research-technology-quantum-fiber-weaving
-  entityIcon: ClothingShoesBootsSpeed
-  discipline: NFScience
-  secondaryDiscipline: NFService
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 15000
-  recipeUnlocks:
-  - ClothingShoesBootsSpeed
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
   - NFBasicMagnetsTech
-  position: -3.997, 11.889
+  position: 1, 13
+
 - type: technology
   id: NFMagnetsTechCombat
   name: nf-research-technology-magnets-tech-combat
@@ -764,32 +1305,89 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
-  prerequisiteLineType: Diagonal
+  cost: 15600
   recipeUnlocks:
   - ClothingShoesBootsMagSecurity
   - ClothingShoesBootsMagMercenary
   technologyPrerequisites:
   - NFMagnetsTech
-  - NFHardsuitsArmored
-  position: -4.181, 9.646
+  position: 2, 13
+
 - type: technology
   id: NFMagnetsTechAdvanced
   name: nf-research-technology-magnets-tech-advanced
   entityIcon: ClothingShoesBootsMagAdv
   discipline: NFScience
-  secondaryDiscipline: NFService
+  secondaryDiscipline: NFEngineering
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 12500
   recipeUnlocks:
   - ClothingShoesBootsMagAdv
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFHardsuitsAdvanced
-  position: -2.394, 8.257
+  - NFMagnetsTech
+  position: 2, 14
+
+- type: technology
+  # MellstationDH: added from newer old techtree.yml.
+  id: DHMagnetsTechJumpBoots
+  name: dh-research-technology-magnets-tech-jump
+  entityIcon: ClothingShoesBootsJump
+  discipline: NFSalvage
+  secondaryDiscipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 8000
+  recipeUnlocks:
+  - ClothingShoesBootsJump
+  technologyPrerequisites:
+  - NFMagnetsTechAdvanced
+  position: 3, 14
+
+- type: technology
+  id: DHMagnetsTechJetBoots
+  name: nf-research-technology-magnets-tech-jet
+  entityIcon: ClothingShoesBootsJetBoots
+  discipline: NFArsenalMercenary
+  secondaryDiscipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 15800
+  recipeUnlocks:
+  - ClothingShoesBootsMagArmy
+  - ClothingShoesBootsJetBoots
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - DHMagnetsTechJumpBoots
+  position: 3, 13
+
+# region Robotics & Mechs
+
+- type: technology
+  id: NFBasicRobotics
+  name: nf-research-technology-basic-robotics
+  entityIcon: ExosuitFabricator
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 3800
+  recipeUnlocks:
+  - ProximitySensor
+  - MechAirTank #DH
+  - MechThruster #DH
+  technologyPrerequisites:
+  - NFAdvancedParts
+  position: 0, 16
+
 - type: technology
   id: NFBasicRoboticsEquipment
   name: nf-research-technology-basic-robotics-equipment
@@ -804,22 +1402,8 @@
   - MechEquipmentFork
   technologyPrerequisites:
   - NFBasicRobotics
-  position: 5.757, 1.42
-- type: technology
-  id: NFBasicRobotics
-  name: nf-research-technology-basic-robotics
-  entityIcon: ExosuitFabricator
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - ProximitySensor
-  position: 2.868, 0.69
-  technologyPrerequisites:
-  - NFAdvancedParts
+  position: 0, 15
+
 - type: technology
   id: NFVim
   name: nf-research-technology-vim
@@ -834,7 +1418,8 @@
   - VimHarness
   technologyPrerequisites:
   - NFBasicRobotics
-  position: 5.752, 2.164
+  position: 0, 17
+
 - type: technology
   id: NFRoboticsEquipment
   name: nf-research-technology-robotics-equipment
@@ -844,13 +1429,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 5500
   recipeUnlocks:
   - MechEquipmentGrabberSmall
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFBasicRoboticsEquipment
-  position: 6.862, 1.439
+  - NFBasicRobotics
+  # Lua current prerequisites:
+  # - NFBasicRoboticsEquipment
+  position: 1, 15
+
 - type: technology
   id: NFRipleyAPLU
   name: nf-research-technology-ripley-aplu
@@ -860,7 +1448,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 10500
   recipeUnlocks:
   - RipleyHarness
   - RipleyLArm
@@ -871,7 +1459,48 @@
   - RipleyPeripheralsElectronics
   technologyPrerequisites:
   - NFBasicRobotics
-  position: 5.74, 2.909
+  position: 1, 16
+
+- type: technology
+  id: Ripley2
+  name: research-technology-ripley-mkii
+  entityIcon: MechRipley2
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 17000
+  recipeUnlocks:
+  - RipleyMKIIHarness
+  - RipleyUpgradeKit
+  technologyPrerequisites:
+  - NFRipleyAPLU
+  position: 3, 16
+
+- type: technology
+  id: Clarke
+  name: research-technology-clarke
+  entityIcon: MechClarke
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 16500
+  recipeUnlocks:
+  - ClarkeHarness
+  - ClarkeHead
+  - ClarkeLArm
+  - ClarkeRArm
+  - ClarkeTreads
+  - ClarkeCentralElectronics
+  - ClarkePeripheralsElectronics
+  - MechEquipmentChainSword #DH
+  technologyPrerequisites:
+  - Ripley2
+  position: 4, 17
+
 - type: technology
   id: NFCritterMechs
   name: nf-research-technology-critter-mechs
@@ -881,7 +1510,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 6000
   recipeUnlocks:
   - HamtrHarness
   - HamtrLArm
@@ -892,8 +1521,9 @@
   - HamtrPeripheralsElectronics
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFVim
-  position: 6.873, 2.181
+  - NFBasicRobotics
+  position: 1, 17
+
 - type: technology
   id: NFAdvancedRoboticsEquipment
   name: nf-research-technology-advanced-robotics-equipment
@@ -903,12 +1533,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 8000
   recipeUnlocks:
   - MechEquipmentGrabber
   technologyPrerequisites:
   - NFRoboticsEquipment
-  position: 7.936, 1.45
+  position: 2, 15
+
 - type: technology
   id: NFHONKMech
   name: nf-research-technology-honk-mech
@@ -918,7 +1549,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 15500
   recipeUnlocks:
   - HonkerHarness
   - HonkerLArm
@@ -930,7 +1561,8 @@
   - HonkerTargetingElectronics
   technologyPrerequisites:
   - NFRipleyAPLU
-  position: 6.868, 2.927
+  position: 2, 16
+
 - type: technology
   id: NFHornRoboticsEquipment
   name: nf-research-technology-horn-robotics-equipment
@@ -940,27 +1572,105 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 4000
   recipeUnlocks:
   - MechEquipmentHorn
+  - MechEquipmentHonkerBananaMortar
   technologyPrerequisites:
   - NFHONKMech
-  position: 7.93, 2.945
+  position: 2, 17
+
+# Goobstation Mechs
+
 - type: technology
-  id: NFWirelessAudioVisualCommunication
-  name: nf-research-technology-wireless-audio-visual-communication
-  entityIcon: TelecomServer
-  discipline: NFService
+  id: Gygax
+  name: research-technology-gygax
+  entityIcon: MechGygax
+  discipline: NFArsenalNfsd
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 31000
   recipeUnlocks:
-  - TelecomServerCircuitboard
+  - GygaxHarness
+  - GygaxArmor
+  - GygaxHead
+  - GygaxLArm
+  - GygaxLLeg
+  - GygaxRArm
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - GygaxTargetingElectronics
+  - WeaponMechCombatUltraRifle
   technologyPrerequisites:
-  - NFAudioVisualCommunication
-  position: -10.97, -1.959
+  - Ripley2
+  position: 4, 16
+
+- type: technology
+  id: ExplosiveMechAmmunition
+  name: research-technology-explosive-mech-ammunition
+  entityIcon: WeaponMechCombatMissileRack6
+  discipline: NFArsenalNfsd
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 23000
+  recipeUnlocks:
+  - WeaponMechCombatMissileRack6
+  hiddenTechnologyPrerequisites: #DH
+  - NFExplosiveTechnology
+  technologyPrerequisites:
+  - Gygax
+  position: 4, 15
+
+- type: technology
+  id: ExplosiveMechAmmunition2
+  name: research-technology-explosive-mech-ammunition-2
+  entityIcon: WeaponMechCombatMissileRack8
+  discipline: NFArsenalNfsd
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 23000
+  recipeUnlocks:
+  - WeaponMechCombatMissileRack8
+  technologyPrerequisites:
+  - ExplosiveMechAmmunition
+  position: 5, 15
+
+- type: technology
+  id: Durand
+  name: research-technology-durand
+  entityIcon: MechDurand
+  discipline: NFArsenalNfsd
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 37000
+  recipeUnlocks:
+  - DurandHarness
+  - DurandArmor
+  - DurandHead
+  - DurandLArm
+  - DurandLLeg
+  - DurandRArm
+  - DurandRLeg
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - DurandTargetingElectronics
+  - WeaponMechCombatShotgun
+  - WeaponMechCombatShotgunIncendiary
+  technologyPrerequisites:
+  - Gygax
+  position: 5, 16
+
+# region Entertainment & Comms
+
 - type: technology
   id: NFAudioVisualCommunication
   name: nf-research-technology-audio-visual-communication
@@ -970,13 +1680,31 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 5000
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
-  position: -9.179, -0.045
   technologyPrerequisites:
+  - NFAdvancedParts
   - NFAdvancedEntertainment
+  position: 0, 19
+
+- type: technology
+  id: NFWirelessAudioVisualCommunication
+  name: nf-research-technology-wireless-audio-visual-communication
+  entityIcon: TelecomServer
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 4300
+  recipeUnlocks:
+  - TelecomServerCircuitboard
+  technologyPrerequisites:
+  - NFAudioVisualCommunication
+  position: 0, 18
+
 - type: technology
   id: NFHologramCommunication
   name: nf-research-technology-hologram-communication
@@ -986,12 +1714,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 5000
   recipeUnlocks:
   - NFHolopadShipMachineCircuitboard
   technologyPrerequisites:
   - NFAudioVisualCommunication
-  position: -11.562, -0.269
+  position: 0, 20
+
 - type: technology
   id: NFAdvancedInstruments
   name: nf-research-technology-advanced-instruments
@@ -1001,14 +1730,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 9600
   recipeUnlocks:
+  - BorgModuleMusique #DH
   - SynthesizerInstrument
   - DawInstrumentMachineCircuitboard
   - JukeboxCircuitBoard
   technologyPrerequisites:
   - NFAdvancedEntertainment
-  position: -8.379, -2.207
+  position: 1, 18
+
 - type: technology
   id: NFAdvancedEntertainment
   name: nf-research-technology-advanced-entertainment
@@ -1018,14 +1749,33 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 7500
   recipeUnlocks:
   - ComputerTelevisionCircuitboard
   - SurveillanceWirelessCameraMovableCircuitboard
   - SurveillanceWirelessCameraAnchoredCircuitboard
   technologyPrerequisites:
-  - NFAdvancedParts
-  position: -5.029, 0.271
+  - NFAudioVisualCommunication
+  position: 1, 19
+
+- type: technology
+  id: LuaBluespaceArt
+  name: lua-research-technology-bluespace-art
+  entityIcon: SprayPainterMagic
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - SprayPainterMagic
+  - CrayonMagic
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ExperementalPainting
+  position: 4, 21
+
 - type: technology
   id: NFJournalism
   name: nf-research-technology-journalism
@@ -1035,12 +1785,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 15100
   recipeUnlocks:
   - MassMediaCircuitboard
+  - BorgModuleBureaucracy #DH
   technologyPrerequisites:
   - NFAdvancedEntertainment
-  position: -8.773, -1.182
+  position: 1, 20
+
 - type: technology
   id: NFPushHorn
   name: nf-research-technology-clowning-utilities
@@ -1053,9 +1805,13 @@
   cost: 5000
   recipeUnlocks:
   - PushHorn
+  - BorgModuleClowning #DH
   technologyPrerequisites:
   - NFAdvancedEntertainment
-  position: -6.593, -4.585
+  position: 2, 19
+
+# region Janitorial
+
 - type: technology
   id: NFBasicSpray
   name: nf-research-technology-basic-spray
@@ -1065,13 +1821,17 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 3000
   recipeUnlocks:
   - MegaSprayBottle
-  position: 1.308, 19.021
   technologyPrerequisites:
-  - NFBasicMedicine
-  - NFReinforcedJug
+  - NFAdvancedParts
+  # Lua current prerequisites:
+  # - NFSelectiveDropper
+  # - NFBasicMedicine
+  # - NFReinforcedJug
+  position: 0, 21
+
 - type: technology
   id: NFJanicart
   name: nf-research-technology-janicart
@@ -1081,12 +1841,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 8000
   recipeUnlocks:
   - JanicartFlatpack
+  - BorgModuleCleaning #DH
+  - MechEquipmentHonkerMousetrapMortar #DH
   technologyPrerequisites:
   - NFBasicSpray
-  position: -0.345, 21.732
+  position: 0, 22
+
 - type: technology
   id: NFAdvancedSpray
   name: nf-research-technology-advanced-spray
@@ -1102,7 +1865,8 @@
   - ClothingBackpackWaterTank
   technologyPrerequisites:
   - NFBasicSpray
-  position: 2.078, 21.018
+  position: 1, 21
+
 - type: technology
   id: NFPortablePump
   name: nf-research-technology-portable-cleaning
@@ -1112,13 +1876,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
   - PortablePumpMachineCircuitBoard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicSpray
-  position: 0.833, 21.279
+  position: 1, 22
+
 - type: technology
   id: NFAdvancedCleaning
   name: nf-research-technology-advanced-cleaning
@@ -1128,12 +1893,29 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 14500
   recipeUnlocks:
   - AdvMopItem
   technologyPrerequisites:
   - NFAdvancedSpray
-  position: 3.125, 22.118
+  position: 2, 21
+
+- type: technology
+  id: LuaWaterRegenerator
+  name: lua-research-technology-water-regenerator
+  entityIcon: WaterRegenerator
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - WaterRegenerator
+  technologyPrerequisites:
+  - NFAdvancedCleaning
+  position: 3, 22
+
 - type: technology
   id: NFAdvancedCleaningCyborg
   name: nf-research-technology-advanced-cleaning-cyborg
@@ -1143,12 +1925,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 8600
   recipeUnlocks:
   - BorgModuleAdvancedCleaning
+  - BorgModuleCustodial
   technologyPrerequisites:
   - NFAdvancedCleaning
-  position: 4.458, 23.813
+  position: 3, 21
+
+# region Kitchen
+
 - type: technology
   id: NFSelectiveDropper
   name: nf-research-technology-food-filtration
@@ -1158,12 +1944,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 4400
   recipeUnlocks:
   - ServiceSelectiveDropper
+  - BorgModuleChef #DH
   technologyPrerequisites:
-  - NFAdvancedHydroponicsEquipment
-  position: -8.961, 9.491
+  - NFAdvancedParts
+  position: 0, 23
+
 - type: technology
   id: NFAdvancedHydroponicsEquipment
   name: nf-research-technology-advanced-botanical-equipment
@@ -1173,48 +1961,20 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 3500
   recipeUnlocks:
   - PlantAnalyzer
-  position: -6.002, 7.116
+  - BorgModuleGardening #DH
+  - BorgModuleHarvesting #DH
+  position: 0, 24
+  # factionOverrides:
+  #   Syndicate:
+  #     position: -6.02, 7.08
+  #     technologyPrerequisites:
+  #     - NFSuperParts
   technologyPrerequisites:
-  - NFSuperParts
-  factionOverrides:
-    Syndicate:
-      position: -6.02, 7.08
-      technologyPrerequisites:
-      - NFSuperParts
-- type: technology
-  id: NFHydroponics
-  name: nf-research-technology-basic-hydroponics
-  entityIcon: hydroponicsTray
-  discipline: NFService
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 10000
-  recipeUnlocks:
-  - HydroponicsTrayMachineCircuitboard
-  technologyPrerequisites:
-  - NFAdvancedHydroponicsEquipment
-  position: -10.764, 6.402
-- type: technology
-  id: NFAdvancedHydroponicsStorge
-  name: nf-research-technology-advanced-botanical-storage
-  entityIcon: PlantBagOfHolding
-  discipline: NFService
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - PlantBagOfHolding
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAdvancedHydroponicsEquipment
-  position: -7.719, 9.231
+  - NFSelectiveDropper
+
 - type: technology
   id: NFFoodService
   name: nf-research-technology-food-service
@@ -1232,25 +1992,30 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - ImpCoffeeMachineCircuitboard
+  - ServiceTechFabCircuitboard #DH
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFAdvancedHydroponicsEquipment
-  position: -10.306, 8.98
+  - NFSelectiveDropper
+  # Lua current prerequisites:
+  # - NFAdvancedParts
+  position: 1, 24
+
 - type: technology
-  id: NFSeedExtractor
-  name: nf-research-technology-seed-extractor
-  entityIcon: SeedExtractor
+  id: NFHydroponics
+  name: nf-research-technology-basic-hydroponics
+  entityIcon: hydroponicsTray
   discipline: NFService
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 15000
   recipeUnlocks:
-  - SeedExtractorMachineCircuitboard
-  prerequisiteLineType: Diagonal
+  - HydroponicsTrayMachineCircuitboard
   technologyPrerequisites:
   - NFAdvancedHydroponicsEquipment
-  position: -10.856, 7.511
+  position: 0, 25
+
 - type: technology
   id: NFDeepFryer
   name: nf-research-technology-deep-fryer
@@ -1260,13 +2025,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 8800
   recipeUnlocks:
   - DeepFryerMachineCircuitboard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFFoodService
-  position: -12.01, 8.432
+  position: 2, 23
+
 - type: technology
   id: NFAdvancedFoodService
   name: nf-research-technology-advanced-food-service
@@ -1276,30 +2042,54 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 12500
   recipeUnlocks:
   - ElectricRangeMachineCircuitboard
   - KitchenAssemblerMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   technologyPrerequisites:
   - NFFoodService
-  position: -13.411, 11.053
+  position: 2, 24
+
 - type: technology
-  id: NFBiogenerator
-  name: nf-research-technology-biogenerator
-  entityIcon: Biogenerator
+  id: NFSeedExtractor
+  name: nf-research-technology-seed-extractor
+  entityIcon: SeedExtractor
   discipline: NFService
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 16500
   recipeUnlocks:
-  - BiogeneratorMachineCircuitboard
+  - SeedExtractorMachineCircuitboard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFFoodService
-  position: -11.005, 11.699
+  - NFAdvancedHydroponicsEquipment
+  # Lua current prerequisites:
+  # - NFHydroponics
+  position: 1, 25
+
+- type: technology
+  id: NFAdvancedHydroponicsStorge
+  name: nf-research-technology-advanced-botanical-storage
+  entityIcon: PlantBagOfHolding
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 20000
+  recipeUnlocks:
+  - PlantBagOfHolding
+  - BotanistBagOfHolding
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFAdvancedHydroponicsEquipment
+  hiddenTechnologyPrerequisites: #DH
+  - NFBluespaceStorage
+  position: 1, 23
+
 - type: technology
   id: NFMeatManipulation
   name: nf-research-technology-meat-manipulation
@@ -1309,12 +2099,32 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 9500
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
   technologyPrerequisites:
   - NFDeepFryer
-  position: -14.172, 7.81
+  # Lua current prerequisites:
+  # - NFBiogenerator
+  position: 3, 23
+
+- type: technology
+  id: NFBiogenerator
+  name: nf-research-technology-biogenerator
+  entityIcon: Biogenerator
+  discipline: NFService
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - BiogeneratorMachineCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFFoodService
+  position: 2, 25
+
 - type: technology
   id: NFBiomass
   name: nf-research-technology-biomass
@@ -1324,12 +2134,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 10000
   recipeUnlocks:
   - BiomassReclaimerMachineCircuitboard
   technologyPrerequisites:
   - NFBiogenerator
-  position: -12.424, 13.232
+  position: 3, 25
+
+# region Power / Shuttle
+
 - type: technology
   id: NFAdvancedPowercells
   name: nf-research-technology-advanced-powercells
@@ -1339,12 +2152,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 8500
   recipeUnlocks:
+  - PowerCellMedium #DH
   - PowerCellHigh
-  position: 2.875, -0.127
+  - SMESMachineCircuitboard #DH
   technologyPrerequisites:
   - NFAdvancedParts
+  position: 0, 28
+
 - type: technology
   id: NFAdvancedSMES
   name: nf-research-technology-advanced-smes
@@ -1354,12 +2170,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 13000
   recipeUnlocks:
   - SMESAdvancedMachineCircuitboard
   technologyPrerequisites:
   - NFAdvancedPowercells
-  position: 4.435, -1.481
+  position: 1, 26
+
 - type: technology
   id: NFAdvancedCharging
   name: nf-research-technology-advanced-charging
@@ -1369,13 +2186,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 18500
   recipeUnlocks:
   - TurboItemRechargerCircuitboard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedPowercells
-  position: 6.621, -2.009
+  position: 1, 27
+
 - type: technology
   id: NFTrashPowerGeneration
   name: nf-research-technology-trash-power-generators
@@ -1385,12 +2203,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 4500
   recipeUnlocks:
   - PortableGeneratorJrPacmanMachineCircuitboard
   technologyPrerequisites:
   - NFAdvancedPowercells
-  position: 6.181, -0.457
+  position: 1, 28
+
 - type: technology
   id: NFPowerSolar
   name: nf-research-technology-power-solar
@@ -1400,15 +2219,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 12500
   recipeUnlocks:
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
-  - SolarAssemblyFlatpack
+  - SolarAssemblyFlatpack # Lua
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedPowercells
-  position: 8.218, 0.602
+  position: 1, 29
+
 - type: technology
   id: NFEmitter
   name: nf-research-technology-particle-emission
@@ -1418,12 +2238,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 9000
   recipeUnlocks:
   - EmitterCircuitboard
   technologyPrerequisites:
   - NFAdvancedPowercells
-  position: 9.887, -0.444
+  position: 1, 30
+
 - type: technology
   id: NFFission
   name: nf-research-technology-fission-powercells
@@ -1433,12 +2254,31 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 16500
   recipeUnlocks:
   - PowerCellMicroreactor
   technologyPrerequisites:
+  - DHPowerCellHyper
+  position: 3, 26
+
+- type: technology
+  id: NFPortableSMES
+  name: nf-research-technology-portable-smes
+  entityIcon: PortableSMES
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 10000
+  prerequisiteLineType: Tree
+  recipeUnlocks:
+  - PortableSMESMachineCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedCharging
   - NFAdvancedSMES
-  position: 6.283, -4.455
+  position: 2, 27
+
 - type: technology
   id: NFPortableFission
   name: nf-research-technology-portable-fission
@@ -1448,12 +2288,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 28200
   recipeUnlocks:
   - NFPortableRecharger
   technologyPrerequisites:
-  - NFAdvancedCharging
-  position: 9.497, -5.39
+  - NFPortableSMES
+  position: 3, 27
+
 - type: technology
   id: NFBasicPowerGeneration
   name: nf-research-technology-basic-power-generators
@@ -1463,12 +2304,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 7900
   recipeUnlocks:
   - PortableGeneratorPacmanMachineCircuitboard
   technologyPrerequisites:
   - NFTrashPowerGeneration
-  position: 7.738, -0.953
+  position: 2, 28
+
+# Placeholder for Edison
 - type: technology
   id: NFParticleDecelerator
   name: nf-research-technology-portable-particle-emission
@@ -1478,12 +2321,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 20000
   recipeUnlocks:
   - NFWeaponParticleDecelerator
   technologyPrerequisites:
   - NFEmitter
-  position: 12.421, -1.711
+  position: 2, 30
+
 - type: technology
   id: NFPowerGeneration
   name: nf-research-technology-power-generators
@@ -1493,12 +2337,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 17000
   recipeUnlocks:
   - PortableGeneratorSuperPacmanMachineCircuitboard
   technologyPrerequisites:
   - NFBasicPowerGeneration
-  position: 9.103, -1.775
+  position: 3, 28
+
 - type: technology
   id: NFAdvancedPowerGeneration
   name: nf-research-technology-fission-generators
@@ -1508,12 +2353,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 23000
   recipeUnlocks:
   - PortableGeneratorDKJrMachineCircuitboard
   technologyPrerequisites:
   - NFPowerGeneration
-  position: 10.691, -3.364
+  position: 4, 28
+
+# region Space
+
 - type: technology
   id: NFSpaceScanning
   name: nf-research-technology-space-scanning
@@ -1523,12 +2371,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 9500
   recipeUnlocks:
   - RadarConsoleCircuitboard
-  position: -9.286, 1.075
   technologyPrerequisites:
-  - NFAdvancedEntertainment
+  - NFAdvancedParts
+  position: 0, 31
+
 - type: technology
   id: NFSpaceHandHeldScanning
   name: nf-research-technology-space-handheld-scanning
@@ -1538,12 +2387,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 10800
   recipeUnlocks:
   - HandHeldMassScanner
   technologyPrerequisites:
   - NFSpaceScanning
-  position: -12.229, 1.888
+  position: 0, 32
+
 - type: technology
   id: NFShuttlecraft
   name: nf-research-technology-shuttlecraft
@@ -1553,14 +2403,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 14500
   recipeUnlocks:
   - ShuttleConsoleCircuitboard
   - MiniGravityGeneratorCircuitboard
   - MiniStationAnchorCircuitboard
   technologyPrerequisites:
   - NFSpaceScanning
-  position: -12.672, 0.999
+  position: 1, 31
+
 - type: technology
   id: NFShuttlecraftThrust
   name: nf-research-technology-shuttlecraft-thrust
@@ -1570,14 +2421,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 13800
   recipeUnlocks:
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFSpaceScanning
-  position: -11.147, 2.545
+  - NFShuttlecraftThrustSmall
+  position: 2, 32
+
 - type: technology
   id: NFShuttlecraftThrustSmall
   name: nf-research-technology-shuttlecraft-thrust-small
@@ -1587,93 +2439,18 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 4000
   recipeUnlocks:
   - SmallThrusterMachineCircuitboard
   - SmallGyroscopeMachineCircuitboard
   technologyPrerequisites:
-  - NFShuttlecraftThrust
-  position: -13.517, 3.603
+  - NFSpaceScanning
+  position: 1, 32
+
+# region Jetpack
+
 - type: technology
-  id: NFAdvancedAtmosphericsTools
-  name: nf-research-technology-advanced-atmospherics-tools
-  entityIcon: HolofanProjector
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - HolofanProjector
-  technologyPrerequisites:
-  - NFAtmosphericTech
-  position: 1.588, 12.732
-- type: technology
-  id: NFAtmosphericTech
-  name: nf-research-technology-atmospheric-tech
-  entityIcon: GasThermoMachineFreezer
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - ThermomachineFreezerMachineCircuitBoard
-  - GasRecyclerMachineCircuitboard
-  position: -0.111, 8.389
-  technologyPrerequisites:
-  - NFHardsuitsEngineering
-- type: technology
-  id: NFAtmosphericDrilling
-  name: nf-research-technology-atmospheric-drilling
-  entityIcon: GasMiningDrill
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - GasMiningDrillMachineCircuitboard
-  - GaslockFrameMachineCircuitboard
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAtmosphericTech
-  position: 0.6, 11.944
-- type: technology
-  id: NFAdvancedAtmosphericsPortable
-  name: nf-research-technology-advanced-atmospherics-portable
-  entityIcon: PortableScrubber
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - PortableScrubberMachineCircuitBoard
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
-  - NFAtmosphericTech
-  position: 1.84, 11.546
-- type: technology
-  id: NFAdvancedAtmospherics
-  name: nf-research-technology-advanced-atmospherics
-  entityIcon: GasThermoMachineHellfireFreezer
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - HellfireFreezerMachineCircuitBoard
-  technologyPrerequisites:
-  - NFAtmosphericTech
-  position: -0.262, 10.643
-- type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: NFBasicPersonalPropulsion
   name: nf-research-technology-basic-personal-propulsion
   entityIcon: JetpackBlue
@@ -1683,12 +2460,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 5700
   recipeUnlocks:
   - JetpackBlue
-  position: -0.026, 6.441
+  - JetpackMining
   technologyPrerequisites:
-  - NFHardsuitsExperimentalProtection
+  - NFAdvancedParts
+  # Lua current prerequisites:
+  # - NFHardsuitsExperimentalProtection
+  position: 0, 36
+
 - type: technology
   id: NFArsenalMercenaryPropulsion
   name: nf-research-technology-combat-propulsion
@@ -1698,12 +2479,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 6000
   recipeUnlocks:
   - JetpackSecurity
+  - BorgModuleJetpack
   technologyPrerequisites:
   - NFBasicPersonalPropulsion
-  position: 1.006, 8.368
+  position: 0, 37
+
 - type: technology
   id: NFPersonalPropulsion
   name: nf-research-technology-personal-propulsion
@@ -1714,12 +2497,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 7000
   recipeUnlocks:
   - JetpackCaptain
+  - JetpackMini
   technologyPrerequisites:
   - NFBasicPersonalPropulsion
-  position: 1.004, 7.173
+  position: 1, 36
+
 - type: technology
   id: NFArsenalNfsdPropulsion
   name: nf-research-technology-security-personal-propulsion
@@ -1729,12 +2514,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 2000
   recipeUnlocks:
   - JetpackNfsd
   technologyPrerequisites:
   - NFArsenalMercenaryPropulsion
-  position: 2.162, 10.042
+  position: 1, 37
+
 - type: technology
   id: NFAdvancedPersonalPropulsion
   name: nf-research-technology-advanced-personal-propulsion
@@ -1745,27 +2531,15 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 10000
   recipeUnlocks:
   - JetpackVoid
   technologyPrerequisites:
   - NFPersonalPropulsion
-  position: 2.131, 8.815
-- type: technology
-  id: NFSalvageGrapplingEquipment
-  name: nf-research-technology-salvage-grappling-equipment
-  entityIcon: WeaponGrapplingGun
-  discipline: NFSalvage
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - WeaponGrapplingGun
-  position: 1.352, 4.712
-  technologyPrerequisites:
-  - NFSuperParts
+  position: 2, 36
+
+# region Salvage
+
 - type: technology
   id: NFExcavation
   name: nf-research-technology-excavation
@@ -1775,13 +2549,20 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 7500
   recipeUnlocks:
   - MiningDrill
+  - WeaponBasePlasmaCutter
   - MineralScannerEmpty
+  - BorgModuleMining #DH
+  - SalvageTechFabCircuitboardNF #DH
+  - MechEquipmentDrill # Goobstation
+  - OreBag
   technologyPrerequisites:
-  - NFSalvageGrapplingEquipment
-  position: 3.025, 5.262
+  - NFAdvancedParts
+  # - NFSalvageGrapplingEquipment
+  position: -1, 38
+
 - type: technology
   id: NFOreProcessor
   name: nf-research-technology-ore-processing
@@ -1797,7 +2578,8 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFExcavation
-  position: 4.689, 6.404
+  position: 0, 38
+
 - type: technology
   id: NFIndustrialOreProcessor
   name: nf-research-technology-industrial-ore-processing
@@ -1807,12 +2589,33 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 4000
   recipeUnlocks:
   - OreProcessorIndustrialMachineCircuitboard
+  - BorgModuleAppraisal
   technologyPrerequisites:
   - NFOreProcessor
-  position: 5.896, 7.385
+  position: 1, 38
+
+- type: technology
+  id: NFSalvageGrapplingEquipment
+  name: nf-research-technology-salvage-grappling-equipment
+  entityIcon: WeaponGrapplingGun
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 2500
+  recipeUnlocks:
+  - WeaponGrapplingGun
+  - BorgModuleTraversal
+  position: 0, 39
+  technologyPrerequisites:
+  - NFExcavation
+  # Lua current prerequisites:
+  # - NFSuperParts
+
 - type: technology
   id: NFSalvageWeapons
   name: nf-research-technology-salvage-weapons
@@ -1822,15 +2625,38 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 6700
   recipeUnlocks:
   - NFWeaponPka
+  - ShuttleGunKineticCircuitboard
   - WeaponCrusher
   - WeaponCrusherDagger
+  - MechEquipmentKineticAccelerator # Goobstation
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
-  - NFSalvageGrapplingEquipment
-  position: 2.029, 6.548
+  - NFIndustrialOreProcessor
+  position: 1, 39
+
+- type: technology
+  id: KineticModifications
+  name: research-technology-kinetic-modifications
+  entityIcon: NFWeaponPkaSawn
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 7500
+  prerequisiteLineType: Diagonal
+  recipeUnlocks:
+  - NFWeaponPkaSawn
+  - PKAUpgradeDamage
+  - PKAUpgradeRange
+  - PKAUpgradeFireRate
+  technologyPrerequisites:
+  - NFSalvageWeapons
+  position: 2, 40
+
 - type: technology
   id: NFMassExcavation
   name: nf-research-technology-mass-excavation
@@ -1840,13 +2666,37 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 28900
   recipeUnlocks:
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
+  - MechEquipmentDrillDiamond #DH
+  - WeaponPlasmaCutter #DH
+  - GemsBag
   technologyPrerequisites:
-  - NFExcavation
-  position: 3.998, 7.122
+  - NFIndustrialOreProcessor
+  # Lua current prerequisites:
+  # - NFExcavation
+  position: 2, 38
+
+- type: technology
+  id: NFFulton
+  name: nf-research-technology-advanced-tools
+  entityIcon: FultonBeacon
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 5600
+  recipeUnlocks:
+  - Fulton # Frontier
+  - FultonBeacon # Frontier
+  technologyPrerequisites:
+  - NFMassExcavation
+  - NFAdvancedSalvageWeapons
+  position: 3, 40
+
 - type: technology
   id: NFAdvancedSalvageWeapons
   name: nf-research-technology-advanced-salvage-weapons
@@ -1856,27 +2706,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 6500
   recipeUnlocks:
   - WeaponCrusherGlaive
   technologyPrerequisites:
   - NFSalvageWeapons
-  position: 3.294, 7.857
-- type: technology
-  id: NFBluespaceOreStorage
-  name: nf-research-technology-excavation-storage
-  entityIcon: OreBagOfHolding
-  discipline: NFSalvage
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-  - OreBagOfHolding
-  technologyPrerequisites:
-  - NFMassExcavation
-  position: 5.231, 8.103
+  position: 2, 39
+
 - type: technology
   id: NFImprovedSalvageWeapons
   name: nf-research-technology-salvage-weapons-improved
@@ -1886,12 +2722,31 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 15500
   recipeUnlocks:
   - NFWeaponPkaCannon
   technologyPrerequisites:
   - NFAdvancedSalvageWeapons
-  position: 4.528, 8.822
+  position: 3, 39
+
+- type: technology
+  id: NFBluespaceOreStorage
+  name: nf-research-technology-excavation-storage
+  entityIcon: OreBagOfHolding
+  discipline: NFSalvage
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 30000
+  recipeUnlocks:
+  - OreBagOfHolding
+  technologyPrerequisites:
+  - NFMassExcavation
+  hiddenTechnologyPrerequisites: #DH
+  - NFBluespaceStorage
+  position: 3, 38
+
 - type: technology
   id: NFAdvancedSalvageCyborg
   name: nf-research-technology-advanced-salvage-cyborg
@@ -1901,28 +2756,53 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 11500
   recipeUnlocks:
   - BorgModuleAdvancedMining
   technologyPrerequisites:
   - NFBluespaceOreStorage
-  position: 6.519, 9.16
+  position: 4, 38
+
 - type: technology
-  id: NFBluespaceGasTanks
-  name: nf-research-technology-bluespace-gas-tanks
-  entityIcon: BluespaceAirTank
-  discipline: NFSalvage
+  id: LuaAdvancedSalvage
+  name: research-technology-advanced-salvage
+  entityIcon: WeaponMagmiteAccelerator
+  discipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 32000
+  recipeUnlocks:
+  - WeaponMagmiteCrusher
+  - WeaponMagmiteCrusherGlaive
+  - WeaponMagmiteAccelerator
+  technologyPrerequisites:
+  - NFImprovedSalvageWeapons #DH
+  - NFAdvancedSalvageCyborg #DH
+  position: 4, 35
+
+- type: technology
+  id: NFBluespaceGasTanks
+  name: nf-research-technology-bluespace-gas-tanks
+  entityIcon: BluespaceAirTank
+  discipline: NFScience
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 19200
   recipeUnlocks:
   - BluespaceAirTank
   - SmallBluespaceAirTank
   technologyPrerequisites:
   - NFAdvancedPersonalPropulsion
-  position: 3.176, 10.355
+  hiddenTechnologyPrerequisites: #DH
+  - NFBluespaceStorage
+  position: 3, 36
+
+# region Munitions
+
 - type: technology
   id: NFBasicAmmunitionProduction
   name: nf-research-technology-basic-ammunition
@@ -1932,22 +2812,25 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 1000
+  cost: 5700
   recipeUnlocks:
   - NFAmmunitionBoxShellShotgunBuckshot
   - NFAmmunitionBoxShellShotgunSlug
-  - NFAmmunitionBoxRifle20
-  - NFAmmunitionBoxRifle30
-  - NFAmmunitionBoxPistol35
-  - NFAmmunitionBoxPistol45
-  - NFSpeedLoaderPistol35Empty
-  - NFSpeedLoaderPistol45Empty
-  - NFMagazineClipRifle556x45Empty
-  - MagazineLightRifleLowCapacityEmpty
-  - NFMagazinePistol35Empty
-  position: 8.063, 17.966
+  - AmmoBox556x45mmFMJ #NFAmmunitionBoxRifle20
+  - AmmoBox762x39mmFMJ #NFAmmunitionBoxRifle30
+  - AmmoBox9x19mmFMJ #NFAmmunitionBoxPistol35
+  - AmmoBox45_magnumFMJ #NFAmmunitionBoxPistol45
+  - SpeedLoader9x19mmEmpty #NFSpeedLoaderPistol35Empty
+  - SpeedLoader45_magnumEmpty #NFSpeedLoaderPistol45Empty
+  - NFMagazineClipRifle556x45Empty #NFMagazineClipRifle20Empty
+  - Magazine762x39mmLowCapacityEmpty #MagazineLightRifleLowCapacityEmpty
+  - Magazine9x19mmPistolEmpty #NFMagazinePistol35Empty
+  # Lua current prerequisites:
+  # - NFBountyHunting
   technologyPrerequisites:
-  - NFBountyHunting
+  - NFAdvancedParts
+  position: 0, 43
+
 - type: technology
   id: NFBountyHunting
   name: nf-research-technology-bounty-hunting
@@ -1957,7 +2840,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 5600
   recipeUnlocks:
   - BolaNF
   - NFHandcuffs
@@ -1968,49 +2851,9 @@
   - NFForensicPad
   - FlashlightSecliteNF
   technologyPrerequisites:
-  - NFAdvancedRiotControl
-  position: 6.911, 15.915
-- type: technology
-  id: NFImprovedPistolAmmo
-  name: nf-research-technology-pistol-ammo-improved
-  entityIcon: NFAmmunitionBoxPistol35Overpressure
-  discipline: NFArsenalMercenary
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - NFAmmunitionBoxPistol35Overpressure
-  - NFAmmunitionBoxPistol45Overpressure
-  - NFMagazineHighCapacityPistol35Empty
-  - NFMagazineSubMachineGun35Empty
-  - NFMagazineSubMachineGunTopMounted35Empty
-  - NFMagazinePistol45Empty
-  prerequisiteLineType: Diagonal
-  technologyPrerequisites:
   - NFBasicAmmunitionProduction
-  position: 9.359, 19.154
-- type: technology
-  id: NFNonlethalAmmunition
-  name: nf-research-technology-nonlethal-ammunition
-  entityIcon: NFAmmunitionBoxShellShotgunBeanbag
-  discipline: NFArsenalMercenary
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 2500
-  recipeUnlocks:
-  - NFAmmunitionBoxShellShotgunBeanbag
-  - NFAmmunitionBoxRifle20Rubber
-  - NFAmmunitionBoxRifle30Rubber
-  - NFAmmunitionBoxPistol35Rubber
-  - NFAmmunitionBoxPistol45Rubber
-  - NFAmmunitionBoxShellShotgunTranquilizer
-  technologyPrerequisites:
-  - NFBasicAmmunitionProduction
-  position: 8.644, 19.943
+  position: 1, 42
+
 - type: technology
   id: NFAdvancedRiotControl
   name: nf-research-technology-advanced-riot-control
@@ -2023,9 +2866,33 @@
   cost: 8000
   recipeUnlocks:
   - NFTelescopicShield
+  - NFTruncheon # Frontier
+  - HoloprojectorSecurity # Frontier
+  - NFWeaponEnergySubMachineGunDisabler # Frontier
+  - WeaponMechCombatDisabler # Goobstation
   technologyPrerequisites:
-  - NFExplosiveTechnology
-  position: 5.5, 13.085
+  - NFBountyHunting
+  position: 2, 42
+
+- type: technology #DH
+  id: DHSecurityBorgModules
+  name: research-technology-security-borg-modules
+  entityIcon: BorgModuleSecurity
+  discipline: NFArsenalNfsd
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 12000
+  recipeUnlocks:
+  - BorgModulEnergySecurity
+  - BorgModuleArrestSecurity
+  - BorgModuleSecurity
+  - BorgModuleMercenary
+  technologyPrerequisites:
+  - NFBountyHunting
+  position: 1, 43
+
 - type: technology
   id: NFArsenalStyle
   name: nf-research-technology-arsenal-style
@@ -2035,7 +2902,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 2500
+  cost: 3500
   recipeUnlocks:
   - ClothingEyesPunkInfoShades
   - ClothingOuterArmorPunkRandomized
@@ -2057,7 +2924,51 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBountyHunting
-  position: 8.833, 17.249
+  position: 2, 43
+
+- type: technology
+  id: NFImprovedPistolAmmo
+  name: nf-research-technology-pistol-ammo-improved
+  entityIcon: NFAmmunitionBoxPistol35Overpressure
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 5800
+  recipeUnlocks:
+  - NFAmmunitionBoxPistol35Overpressure
+  - NFAmmunitionBoxPistol45Overpressure
+  - NFMagazineHighCapacityPistol35Empty
+  - NFMagazineSubMachineGun35Empty
+  - NFMagazineSubMachineGunTopMounted35Empty
+  - NFMagazinePistol45Empty
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFBasicAmmunitionProduction
+  position: 1, 44
+
+- type: technology
+  id: NFNonlethalAmmunition
+  name: nf-research-technology-nonlethal-ammunition
+  entityIcon: NFAmmunitionBoxShellShotgunBeanbag
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 3400
+  recipeUnlocks:
+  - NFAmmunitionBoxShellShotgunBeanbag
+  - NFAmmunitionBoxRifle20Rubber
+  - NFAmmunitionBoxRifle30Rubber
+  - NFAmmunitionBoxPistol35Rubber
+  - NFAmmunitionBoxPistol45Rubber
+  - NFAmmunitionBoxShellShotgunTranquilizer
+  technologyPrerequisites:
+  - NFBasicAmmunitionProduction
+  position: 1, 45
+
 - type: technology
   id: NFImprovedRifleAmmo
   name: nf-research-technology-rifle-ammo-improved
@@ -2067,18 +2978,23 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 9700
   recipeUnlocks:
   - NFAmmunitionBoxRifle20Overpressure
   - NFAmmunitionBoxRifle30Overpressure
+  - Magazine556x45mmEmpty #- NFMagazineRifle20Empty
+  - Magazine762x39mmEmpty #- NFMagazineRifle30Empty
+  - NFMagazineDrumRifle556x45Empty #- NFMagazineDrumRifle20Empty
+  # Lua current recipe unlocks kept:
   - NFAmmunitionBoxShellShotgunOverpressure
-  - NFMagazineRifle20Empty
-  - NFMagazineRifle30Empty
+  #- NFMagazineRifle20Empty
+  #- NFMagazineRifle30Empty
   - NFMagazineDrumRifle556x45Empty
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo
-  position: 10.623, 20.377
+  position: 2, 44
+
 - type: technology
   id: NFExplosiveTechnology
   name: nf-research-technology-explosive-technology
@@ -2088,7 +3004,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 17200
   recipeUnlocks:
   - SignalTrigger
   - VoiceTrigger
@@ -2097,8 +3013,9 @@
   - ChemicalPayload
   - ExplosivePayload
   technologyPrerequisites:
-  - NFBasicShuttleArmament
-  position: 6.49, 11.996
+  - NFAdvancedRiotControl
+  position: 3, 41
+
 - type: technology
   id: NFDeterrenceTechnologies
   name: nf-research-technology-deterrence
@@ -2108,12 +3025,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 7500
+  cost: 8500
   recipeUnlocks:
   - HoloprojectorField
   technologyPrerequisites:
   - NFAdvancedRiotControl
-  position: 6.783, 14.246
+  position: 3, 42
+
 - type: technology
   id: NFSpecialMeans
   name: nf-research-technology-special-means
@@ -2123,13 +3041,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 5000
+  cost: 8500
   recipeUnlocks:
   - NFClothingBackpackElectropack
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedRiotControl
-  position: 5.688, 15.164
+  position: 3, 43
+
 - type: technology
   id: NFBulkRifleAmmo
   name: nf-research-technology-rifle-ammo-bulk
@@ -2139,37 +3058,185 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10000
+  cost: 21000
   recipeUnlocks:
-  - NFAmmunitionBoxBigRifle20
-  - NFAmmunitionBoxBigRifle20Overpressure
+  - AmmoBox556x45mmBigFMJ #NFAmmunitionBoxBigRifle20
+  - AmmoBox556x45mmBigHP #NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
   technologyPrerequisites:
   - NFImprovedRifleAmmo
-  position: 11.856, 21.596
+  position: 3, 44
+
 - type: technology
-  id: NFBasicShuttleArmament
-  name: nf-research-technology-basic-shuttle-armament
-  entityIcon: PowerCageRecharger
-  discipline: NFArsenalNfsd
+  id: DraconicMunitions
+  name: research-technology-draconic-munitions
+  entityIcon: AmmoBox762x39mmIncendiary
+  discipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
   tier: 1
+  cost: 28000
+  recipeUnlocks:
+   - NFAmmunitionBoxShellShotgunIncendiary # Frontier
+   - Magazine556x45mmIncendiary #MagazineRifleIncendiary # Frontier
+   - Magazine9x19mmPistolIncendiary #MagazinePistolIncendiary # Frontier
+   - Magazine9x19mmSubMachineGunIncendiary #NFMagazineSubMachineGun35Incendiary # Frontier
+   - Magazine9x19mmSubMachineGunTopMountedIncendiary #NFMagazineSubMachineGunTopMounted35Incendiary
+   - Magazine762x39mmIncendiary #MagazineLightRifleIncendiary # Frontier
+   - Magazine762x39mmLowCapacityIncendiary #DH
+   - SpeedLoader45_magnumIncendiary #SpeedLoaderMagnumIncendiary # Frontier
+   - NFMagazineShotgunDrumIncendiary #MagazineShotgunIncendiary # Frontier
+   - AmmoBox9x19mmIncendiary #MagazineBoxPistolIncendiary # Frontier
+   - AmmoBox45_magnumIncendiary #- MagazineBoxMagnumIncendiary # Frontier
+   - AmmoBox762x39mmIncendiary #NFAmmunitionBoxRifle30Incendiary # Frontier
+   - AmmoBox556x45mmIncendiary #NFAmmunitionBoxRifle20Incendiary # Frontier
+  technologyPrerequisites:
+  - NFBulkRifleAmmo
+  position: 4, 43
+
+- type: technology
+  # DH: added from techtree_dh.txt; factions defaulted from current techtree style.
+  #DH Codex Do not touch
+  id: MaterialUranium
+  name: research-technology-uranium-munitions
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  entityIcon: NFMagazineRifle20Uranium
+  tier: 1
+  cost: 22500
+  recipeUnlocks:
+  - Magazine556x45mmUranium #MagazineRifleUranium # Frontier
+  - Magazine9x19mmPistolUranium #MagazinePistolUranium # Frontier
+  - Magazine9x19mmSubMachineGunUranium #MagazinePistolSubMachineGunUranium # Frontier
+  - Magazine9x19mmSubMachineGunTopMountedUranium
+  - Magazine762x39mmUranium #MagazineLightRifleUranium # Frontier
+  - Magazine762x39mmLowCapacityUranium #DH
+  - SpeedLoader45_magnumUranium #SpeedLoaderMagnumUranium # Frontier
+  - AmmoBox9x19mmUranium #MagazineBoxPistolUranium # Frontier
+  - AmmoBox45_magnumUranium #NFAmmunitionBoxPistol45Uranium # Frontier
+  - AmmoBox762x39mmUranium #NFAmmunitionBoxRifle30Uranium # Frontier
+  - AmmoBox556x45mmUranium #NFAmmunitionBoxRifle20Uranium # Frontier
+  - NFAmmunitionBoxShellShotgunUranium # Frontier
+  technologyPrerequisites:
+  - NFBulkRifleAmmo
+  position: 4, 45
+
+- type: technology
+  id: WeaponizedLaserManipulation
+  name: research-technology-weaponized-laser-manipulation
+  entityIcon: NFWeaponEnergyRifleCarbine
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - NFWeaponEnergyRifleCarbinePractice
+  - NFWeaponEnergyRifleCarbine # Frontier
+  - WeaponMechCombatFiredartLaser # Goobstation
+  technologyPrerequisites:
+  - NFBulkRifleAmmo
+  position: 5, 44
+
+- type: technology
+  id: ConcentratedLaserWeaponry
+  name: research-technology-concentrated-laser-weaponry
+  entityIcon: NFWeaponEnergyRifleSniperCannon
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
   cost: 10000
   recipeUnlocks:
-  - PowerCageRechargerCircuitboard
-  - PowerCageSmall
-  - PowerCageMedium
-  - PowerCageHigh
-  - NFMagazineGrenadeEmpty
-  - NFGrenadeFlash
-  - NFGrenadeEMP
-  prerequisiteLineType: Tree
+  - NFWeaponEnergyRifleSniperCannon # Frontier
+  - WeaponMechCombatSolarisLaser # Goobstation
+  position: 6, 44
   technologyPrerequisites:
-  - NFImprovedSalvageWeapons
-  position: 5.149, 10.589
+  - WeaponizedLaserManipulation
+
+- type: technology
+  id: ThermalWeaponry
+  name: research-technology-thermal-weaponry
+  entityIcon: NFWeaponEnergyRifleTemperature
+  discipline: NFArsenalMercenary
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 3
+  cost: 16500
+  recipeUnlocks:
+  - NFWeaponEnergyRifleTemperature # Frontier
+  - WeaponMechCombatImmolationGun # Goobstation
+  position: 6, 45
+  technologyPrerequisites:
+  - ConcentratedLaserWeaponry
+
+- type: technology
+  id: WaveParticleHarnessing
+  name: research-technology-wave-particle-harnessing
+  entityIcon: NFWeaponEnergyRifleSniperXrayCannon
+  discipline: NFArsenalNfsd
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+   - NFWeaponEnergyRifleSniperXrayCannon # Frontier
+  technologyPrerequisites:
+  - ConcentratedLaserWeaponry
+  position: 6, 44
+
+# - type: technology
+#   id: NFBasicShuttleArmament
+#   name: nf-research-technology-basic-shuttle-armament
+#   entityIcon: PowerCageRecharger
+#   discipline: NFArsenalNfsd
+#   factions:
+#   - Nanotrasen
+#   - Syndicate
+#   tier: 1
+#   cost: 10000
+#   recipeUnlocks:
+#   - PowerCageRechargerCircuitboard
+#   - PowerCageSmall
+#   - PowerCageMedium
+#   - PowerCageHigh
+#   - NFMagazineGrenadeEmpty
+#   - NFGrenadeFlash
+#   - NFGrenadeEMP
+#   prerequisiteLineType: Tree
+#   technologyPrerequisites:
+#   - NFImprovedSalvageWeapons
+#   - NFExplosiveTechnology
+#   Lua current prerequisites:
+#   - NFSalvageWeapons
+#   position: 4, 40
+
+- type: technology
+  id: ShuttleShields
+  name: research-technology-shields
+  entityIcon: ShieldGeneratorSmall
+  discipline: Shiparmory
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 3
+  cost: 23000
+  recipeUnlocks:
+  - MachineShieldMS100Circuitboard
+  technologyPrerequisites:
+  - ShuttleGunDuster
+  position: 4, 45
+
+# region Lua current-only technologies
+
 - type: technology
   id: ShiparmoryBallisticBases
   name: research-technology-shiparmory-ballistic-bases
@@ -2187,7 +3254,9 @@
   technologyPrerequisites:
   - MachineGCSMediumCircuitboardTech
   position: 15.548, 13.433
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryHeavyBallisticBases
   name: research-technology-shiparmory-heavy-ballistic-bases
   entityIcon: Weapon140mm
@@ -2204,7 +3273,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 18.001, 16.232
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryTeslaTurretBase
   name: research-technology-shiparmory-tesla-base
   entityIcon: TeslaTurretBase
@@ -2219,7 +3290,9 @@
   technologyPrerequisites:
   - ShiparmoryHeavyBallisticBases
   position: 18.829, 18.975
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryShieldSystems
   name: research-technology-shiparmory-shield-systems
   entityIcon: ShieldGeneratorMedium
@@ -2235,7 +3308,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 17.204, 16.227
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryCapitalShields
   name: research-technology-shiparmory-capital-shields
   entityIcon: ShieldGeneratorTSFCapital
@@ -2250,7 +3325,9 @@
   technologyPrerequisites:
   - ShiparmoryShieldSystems
   position: 18.028, 18.974
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryKineticTurrets
   name: research-technology-shiparmory-kinetic-turrets
   entityIcon: WeaponTurretAK570
@@ -2268,7 +3345,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 15.557, 16.243
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryAdvancedKineticTurrets
   name: research-technology-shiparmory-advanced-kinetic-turrets
   entityIcon: WeaponTurretCharonReload
@@ -2284,7 +3363,9 @@
   technologyPrerequisites:
   - ShiparmoryKineticTurrets
   position: 16.365, 19.006
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryEnergyTurrets
   name: research-technology-shiparmory-energy-turrets
   entityIcon: WeaponTurretType35
@@ -2300,7 +3381,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 18.854, 16.226
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryAdvancedEnergyTurrets
   name: research-technology-shiparmory-advanced-energy-turrets
   entityIcon: WeaponLaserTurretApollo
@@ -2316,7 +3399,9 @@
   technologyPrerequisites:
   - MachineGCSHighCircuitboardTech
   position: 19.629, 20.848
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryCapitalEnergyTurrets
   name: research-technology-shiparmory-capital-energy-turrets
   entityIcon: WeaponTurretType241
@@ -2331,7 +3416,9 @@
   technologyPrerequisites:
   - ShiparmoryAdvancedEnergyTurrets
   position: 19.637, 22.794
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryMissileTurrets
   name: research-technology-shiparmory-missile-turrets
   entityIcon: WeaponTurretVanyk
@@ -2347,7 +3434,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 14.739, 16.244
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryAdvancedMissileTurrets
   name: research-technology-shiparmory-advanced-missile-turrets
   entityIcon: WeaponTurretASM220
@@ -2363,7 +3452,9 @@
   technologyPrerequisites:
   - ShiparmoryMissileTurrets
   position: 15.55, 19.022
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryPlastitaniumStructures
   name: research-technology-shiparmory-plastitanium-structures
   entityIcon: WallPlastitanium
@@ -2379,7 +3470,9 @@
   technologyPrerequisites:
   - ShiparmoryBallisticBases
   position: 16.394, 16.221
+
 - type: technology
+  # Lua: current-only technology; not present in techtree_dh.txt, position kept unchanged.
   id: ShiparmoryStationPlastitanium
   name: research-technology-shiparmory-station-plastitanium
   entityIcon: WallPlastitaniumStation
@@ -2395,6 +3488,7 @@
   technologyPrerequisites:
   - ShiparmoryPlastitaniumStructures
   position: 17.205, 18.974
+
 - type: technology
   id: LuaStarGateShuttleBeacon
   name: lua-research-technology-stargate-beacon
@@ -2404,18 +3498,19 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 3000
+  cost: 3500
   recipeUnlocks:
   - StarGateShuttleLandingBeaconCircuitboard
   factionOverrides:
     Syndicate:
-      position: -14.255, 1
+      position: 2, 31
       technologyPrerequisites:
       - NFShuttlecraft
     Nanotrasen:
-      position: -14.152, 1.013
+      position: 2, 31
       technologyPrerequisites:
       - NFShuttlecraft
+
 - type: technology
   id: LuaBluespaceTiles
   name: lua-research-technology-bluespace-tiles
@@ -2432,4 +3527,4 @@
   - FloorTileItemSepia
   technologyPrerequisites:
   - NFFauxAstroTiles
-  position: -1.332, -7.466
+  position: 3, 0

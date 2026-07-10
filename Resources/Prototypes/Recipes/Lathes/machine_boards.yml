@@ -62,11 +62,10 @@
 # Autolathe
 
 # Frontier: use WeaponCapacitorRecharger* instead
-# - type: latheRecipe
-#   parent: [ BaseCheapElectronicsRecipe, BaseMachineRecipeCategory ]
-#   id: CellRechargerCircuitboard
-#   result: CellRechargerCircuitboard
-# End Frontier: use WeaponCapacitorRecharger* instead
+- type: latheRecipe
+  parent: [ BaseCheapElectronicsRecipe, BaseMachineRecipeCategory ]
+  id: CellRechargerCircuitboard
+  result: CellRechargerCircuitboard
 
 - type: latheRecipe
   parent: [ BaseCheapElectronicsRecipe, BaseMachineRecipeCategory ]

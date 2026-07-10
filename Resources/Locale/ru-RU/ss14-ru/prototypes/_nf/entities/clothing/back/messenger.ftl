@@ -1,4 +1,4 @@
-ent-ClothingBackpackMessengerContractor = сумка Гражданского
+ent-ClothingBackpackMessengerContractor = мессенджер авантюриста
     .desc = Модная сумка-мессенджер в стильной цветовой гамме.
 ent-ClothingBackpackMessenger = мессенджер
     .desc = Модный мессенджер.
@@ -54,9 +54,9 @@ ent-ClothingBackpackMessengerBloodCult = мессенджер культиста
     .desc = Водонепроницаемая сумка для преданных последователей Нар’Сие.
 ent-ClothingBackpackMessengerArcadia = мессенджер Аркадии
     .desc = Модная сумка-мессенджер в стильной цветовой гамме.
-ent-ClothingBackpackMessengerNfsdBrown = мессенджер СРБС
+ent-ClothingBackpackMessengerNfsdBrown = мессенджер ДСБФ
     .desc = Модная сумка-мессенджер в стильной цветовой гамме.
-ent-ClothingBackpackMessengerNfsdCream = мессенджер СРБС
+ent-ClothingBackpackMessengerNfsdCream = мессенджер ДСБФ
     .desc = Модная сумка-мессенджер в стильной цветовой гамме.
 ent-ClothingBackpackMessengerSecurity = мессенджер охраны
     .desc = Модная сумка-мессенджер в стильной цветовой гамме.

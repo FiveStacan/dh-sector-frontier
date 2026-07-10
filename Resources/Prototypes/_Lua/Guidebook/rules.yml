@@ -120,7 +120,7 @@
 
 - type: guideEntry
   id: LuaWorldFrontierRule13
-  name: Правило 13 - Нордфолл
+  name: Правило 13 - Тайпан
   priority: 14
   ruleEntry: true
   text: "/ServerInfo/_Lua/Guidebook/ServerRules/LuaWorldFrontierRule13.xml"

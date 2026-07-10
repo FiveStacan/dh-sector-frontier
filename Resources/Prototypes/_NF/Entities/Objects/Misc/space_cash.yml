@@ -1,7 +1,7 @@
 - type: entity
   parent: SpaceCash
   id: SpaceCash15000
-  suffix: 15000
+  suffix: 15.000
   components:
   - type: Icon
     sprite: Objects/Economy/cash.rsi
@@ -12,7 +12,7 @@
 - type: entity
   parent: SpaceCash
   id: SpaceCash25000
-  suffix: 25000
+  suffix: 25.000
   components:
   - type: Icon
     sprite: Objects/Economy/cash.rsi
@@ -23,7 +23,7 @@
 - type: entity
   parent: SpaceCash
   id: SpaceCash100000
-  suffix: 100000
+  suffix: 100.000
   components:
   - type: Icon
     sprite: Objects/Economy/cash.rsi
@@ -112,14 +112,14 @@
 - type: currency
   id: Spesso
   displayName: bank-currency-display-spesos-fake
-  cash: 
+  cash:
     1: SpaceCashCounterfeit
   canWithdraw: true # I guess?
 
 - type: entity
   parent: SpaceCashCounterfeit
   id: SpaceCashCounterfeit200000
-  suffix: 200000
+  suffix: 200.000
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon

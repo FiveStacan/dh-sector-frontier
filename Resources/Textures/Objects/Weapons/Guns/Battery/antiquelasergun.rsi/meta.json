@@ -79,6 +79,12 @@
 			"name": "equipped-BELT",
 			"directions": 4
 		},
+        {
+            "name": "mode-lethal"
+        },
+        {
+            "name": "mode-disabler"
+        },
 		{
 			"name": "equipped-SUITSTORAGE",
 			"directions": 4

@@ -338,7 +338,7 @@
       tags:
       - ShellShotgun
     capacity: 7
-    proto: ShellShotgun
+    proto: NFShellShotgunBuckshot #ShellShotgun
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: ContainerContainer

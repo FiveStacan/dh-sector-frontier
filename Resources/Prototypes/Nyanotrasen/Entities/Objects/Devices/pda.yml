@@ -33,21 +33,22 @@
   - type: Icon
     state: pda-valet
 
-- type: entity
-  parent: BaseSecurityPDA
-  id: PrisonGuardPDA
-  name: prison guard PDA
-  description: Red to hide the stains of prisoner blood.
-  components:
-  - type: Pda
-    id: PrisonGuardIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-security
-  - type: PdaBorderColor
-    borderColor: "#A32D26"
-    accentVColor: "#DFDFDF"
+#DH
+# - type: entity
+#   parent: BaseSecurityPDA
+#   id: PrisonGuardPDA
+#   name: prison guard PDA
+#   description: Red to hide the stains of prisoner blood.
+#   components:
+#   - type: Pda
+#     id: PrisonGuardIDCard
+#   - type: Appearance
+#     appearanceDataInit:
+#       enum.PdaVisuals.PdaType:
+#         !type:String
+#         pda-security
+#   - type: PdaBorderColor
+#     borderColor: "#A32D26"
+#     accentVColor: "#DFDFDF"
 #  - type: Icon
 #    state: pda-guard

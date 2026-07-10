@@ -9,7 +9,7 @@
   name: Legionnaire
   description: Слабо бронированный корабль поддержки, с совмещённым типом орудий.
   limit: 2
-  price: 326500 #110000 x 1.15 # DH-Tweak
+  price: 470200 #DH Shuttle price balance #126500 #110000 x 1.15
   category: Medium
   group: Security
   access: Security
@@ -25,21 +25,21 @@
   engine:
   - Uranium
 
-# - type: gameMap
-#   id: Legionnaire-DRV
-#   mapName: 'Legionnaire'
-#   mapPath: /Maps/_Mono/Shuttles/Nfsd/Legionnaire-DRV.yml
-#   minPlayers: 0
-#   stations:
-#     Legionnaire-DRV:
-#       stationProto: StandardFrontierSecurityVessel
-#       components:
-#       - type: StationNameSetup
-#         mapNameTemplate: 'Legionnaire {1}'
-#         nameGenerator:
-#           !type:NanotrasenNameGenerator
-#           prefixCreator: '14'
-#       - type: StationJobs
-#         availableJobs:
-#           Deputy: [ 0, 0 ]
+- type: gameMap
+  id: Legionnaire-DRV
+  mapName: 'Legionnaire'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/Legionnaire-DRV.yml
+  minPlayers: 0
+  stations:
+    Legionnaire-DRV:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Legionnaire {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Deputy: [ 0, 0 ]
 

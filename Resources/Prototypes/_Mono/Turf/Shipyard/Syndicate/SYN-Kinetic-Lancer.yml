@@ -4,7 +4,7 @@
   name: Kinetic-Lancer
   description: A light syndicate frigate meant for raiding enemy stations. Armed to the teeth in missiles and CYREXAs.
   limit: 1
-  price: 604535 # 2000 below max # DH-Tweak
+  price: 648800 #DH Shuttle price balance #304535 # 2000 below max
   category: Large
   group: Typan
   access: SyndicateAgent
@@ -15,8 +15,8 @@
   - Frontier
   class:
   - Syndicate
-  - Medical # Lua
   - Capital # Lua
+  - Medical # Lua
   engine:
   - AME
 

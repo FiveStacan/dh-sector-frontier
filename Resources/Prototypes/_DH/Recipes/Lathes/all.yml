@@ -3,7 +3,7 @@
   result: Binoculars
   completetime: 4
   materials:
-    Steel: 150
+    Steel: 250
     Glass: 200
 
 - type: latheRecipe
@@ -11,8 +11,9 @@
   result: BinocularsMagmite
   completetime: 8
   materials:
-    Steel: 200
+    Steel: 300
     Magmite: 250
+    Glass: 150
 
 - type: latheRecipe
   id: PinpointerUniversal
@@ -41,13 +42,33 @@
     Glass: 500
     Gold: 100
 
+- type: latheRecipe #DH
+  id: ServiceTechFabCircuitboard
+  parent: [BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory]
+  result: ServiceTechFabCircuitboard
+  materials:
+    Steel: 800
+    Glass: 950
+    Plastic: 150
+
+- type: latheRecipe #DH
+  id: EngineeringTechFabCircuitboard
+  parent: [BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory]
+  result: EngineeringTechFabCircuitboard
+  materials:
+    Steel: 800
+    Glass: 900
+    Plastic: 150
+    Gold: 100
+
 - type: latheRecipe
   id: MedicalTechFabCircuitboard
   parent: [BaseCircuitboardRecipe, BaseMedicalMachineRecipeCategory]
   result: MedicalTechFabCircuitboard
   materials:
-    Steel: 750
-    Glass: 900
+    Steel: 800
+    Glass: 950
+    Plastic: 450
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -142,7 +163,7 @@
 - type: latheRecipe
   id: WeaponPlasmaCutter
   result: WeaponPlasmaCutter
-  completetime: 8
+  completetime: 16
   materials:
     Steel: 1500
     Glass: 600
@@ -258,3 +279,431 @@
   completetime: 12
   materials:
     Steel: 650
+
+- type: latheRecipe
+  id: ExtendedAmeJar
+  result: ExtendedAmeJar
+  categories:
+  - Engineering
+  completetime: 14
+  materials:
+    Plasma: 950
+    Uranium: 650
+    Magmite: 490
+    Plastic: 400
+    Steel: 400
+
+- type: latheRecipe
+  id: AmeJar
+  result: AmeJar
+  categories:
+  - Engineering
+  completetime: 16
+  materials:
+    Steel: 600
+    Plasma: 350
+    Uranium: 590
+    Plastic: 400
+
+- type: latheRecipe
+  id: BaseAmeJar
+  result: BaseAmeJar
+  categories:
+  - Engineering
+  completetime: 12
+  materials:
+    Steel: 600
+    Plasma: 250
+    Uranium: 150
+    Plastic: 300
+
+- type: latheRecipe
+  id: BluespaceAmeJar
+  result: BluespaceAmeJar
+  categories:
+  - Engineering
+  completetime: 20
+  materials:
+    Plasma: 1250
+    Uranium: 1750
+    Magmite: 800
+    Plastic: 500
+    Steel: 800
+    Bluespace: 820
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ResearchDisk1000
+  result: ResearchDisk
+  completetime: 30
+  materials:
+    Plasma: 600
+    Bluespace: 150
+    Anomalite: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ResearchDisk5000
+  result: ResearchDisk5000
+  completetime: 30
+  materials:
+    Plasma: 3000
+    Bluespace: 750
+    Anomalite: 250
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ResearchDisk10000
+  result: ResearchDisk10000
+  completetime: 30
+  materials:
+    Plasma: 6000
+    Bluespace: 1500
+    Anomalite: 500
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: ResearchDisk25000
+  result: ResearchDisk25000
+  completetime: 30
+  materials:
+    Plasma: 15000
+    Bluespace: 3750
+    Anomalite: 1250
+
+- type: latheRecipe
+  id: WeaponBasePlasmaCutter
+  result: WeaponBasePlasmaCutter
+  categories:
+  - Weapons
+  completetime: 16
+  materials:
+    Steel: 1400
+    Plasma: 800
+    Glass: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponGunLaserCarbineSemi
+  result: WeaponGunLaserCarbineSemi
+  materials:
+    Steel: 2000
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  id: UniformPrinterHyperConvectionMachineCircuitboard
+  result: UniformPrinterHyperConvectionMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
+  id: ExosuitFabricatorHyperConvectionMachineCircuitboard
+  result: ExosuitFabricatorHyperConvectionMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  abstract: true
+  id: BaseElectronicsRecipeSpeed
+  completetime: 6
+  materials:
+    Steel: 150
+    Glass: 500
+    Gold: 150
+    Silver: 150
+
+- type: latheRecipe
+  parent: [ BaseElectronicsRecipeSpeed, BaseGeneralMachineRecipeCategory ]
+  id: AutolatheHyperSpeedMachineCircuitboard
+  result: AutolatheHyperSpeedMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseElectronicsRecipeSpeed, BaseServiceMachineRecipeCategory ]
+  id: UniformPrinterHyperSpeedMachineCircuitboard
+  result: UniformPrinterHyperSpeedMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseElectronicsRecipeSpeed, BaseResearchMachineRecipeCategory ]
+  id: CircuitImprinterHyperSpeedMachineCircuitboard
+  result: CircuitImprinterHyperSpeedMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseElectronicsRecipeSpeed, BaseResearchMachineRecipeCategory ]
+  id: ProtolatheHyperSpeedMachineCircuitboard
+  result: ProtolatheHyperSpeedMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseElectronicsRecipeSpeed, BaseResearchMachineRecipeCategory ]
+  id: ExosuitFabricatorHyperSpeedMachineCircuitboard
+  result: ExosuitFabricatorHyperSpeedMachineCircuitboard
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitSanta
+  parent: NFBaseHardSuitRecipe
+  result: ClothingOuterHardsuitSanta
+
+- type: latheRecipe
+  id: ClothingMaskGasCE
+  parent: NFBaseMaskArmoredRecipe
+  result: ClothingMaskGasCE
+
+- type: latheRecipe
+  #parent: BaseOuterClothRecipe
+  abstract: true
+  id: DHBaseOuterClothRecipe
+  categories:
+  - ArmorNF
+  completetime: 12
+  materials:
+    Steel: 250
+    Glass: 100
+    Durathread: 600
+
+- type: latheRecipe
+  parent: DHBaseOuterClothRecipe
+  abstract: true
+  id: DHBaseOuterClothHatRecipe
+  completetime: 6
+  materials:
+    Steel: 250
+    Glass: 150
+    Durathread: 200
+
+- type: latheRecipe
+  id: ClothingOuterSuitRad
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterSuitRad
+
+- type: latheRecipe
+  id: ClothingOuterSuitFire
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterSuitFire
+- type: latheRecipe
+
+  id: ClothingOuterSuitAtmosFire
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterSuitAtmosFire
+  completetime: 13
+  materials:
+    Steel: 300
+    Glass: 200
+    Durathread: 750
+
+- type: latheRecipe
+  id: ClothingOuterSuitBomb
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterSuitBomb
+  completetime: 13
+  materials:
+    Steel: 600
+    Glass: 100
+    Durathread: 350
+
+- type: latheRecipe
+  id: ClothingHeadHelmetBombSuit
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHelmetBombSuit
+
+- type: latheRecipe
+  id: ClothingHeadHelmetFire
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHelmetFire
+
+- type: latheRecipe
+  id: ClothingHeadHelmetAtmosFire
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHelmetAtmosFire
+  completetime: 7
+  materials:
+    Steel: 350
+    Glass: 200
+    Durathread: 250
+
+- type: latheRecipe
+  id: ClothingOuterSuitCargo
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterSuitCargo
+  completetime: 15
+  materials:
+    Steel: 500
+    Plastic: 400
+    Durathread: 700
+
+- type: latheRecipe
+  id: ClothingOuterBioScientist
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterBioScientist
+
+- type: latheRecipe
+  id: ClothingHeadHatHoodBioScientist
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHatHoodBioScientist
+
+- type: latheRecipe
+  id: ClothingHeadHatHardhatArmored
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHatHardhatArmored
+  materials:
+    Steel: 350
+    Glass: 100
+    Durathread: 200
+
+- type: latheRecipe
+  id: ClothingOuterArmorBasicSlim
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterArmorBasicSlim
+  materials:
+    Steel: 200
+    Plastic: 100
+    Cloth: 100
+
+- type: latheRecipe
+  id: ADTClothingOuterArmorCrusader
+  parent: DHBaseOuterClothRecipe
+  result: ADTClothingOuterArmorCrusader
+  completetime: 17
+  materials:
+    Silver: 1900
+    Cloth: 850
+    Steel: 500
+
+- type: latheRecipe
+  id: ClothingOuterArmorSWAT
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterArmorSWAT
+  completetime: 14
+  materials:
+    Steel: 1250
+    Plasteel: 650
+    Plastic: 500
+    Cloth: 400
+    Durathread: 200
+    Silver: 300
+
+- type: latheRecipe
+  id: ClothingOuterArmorHeavy
+  parent: ClothingOuterArmorSWAT
+  result: ClothingOuterArmorHeavy
+  completetime: 14
+  materials:
+    Steel: 1000
+    Plasteel: 600
+    Plastic: 200
+    Cloth: 400
+    Durathread: 200
+    Silver: 100
+
+- type: latheRecipe
+  id: ClothingOuterArmorHeavyRed
+  parent: ClothingOuterArmorHeavy
+  result: ClothingOuterArmorHeavyRed
+
+- type: latheRecipe
+  id: ClothingOuterArmorHeavyGreen
+  parent: ClothingOuterArmorHeavy
+  result: ClothingOuterArmorHeavyGreen
+
+- type: latheRecipe
+  id: ClothingOuterArmorUSSPjuggernaut
+  parent: DHBaseOuterClothRecipe
+  result: ClothingOuterArmorUSSPjuggernaut
+  completetime: 15
+  materials:
+    Steel: 1550
+    Plasteel: 950
+    Plastic: 750
+    Cloth: 700
+    Silver: 250
+
+- type: latheRecipe
+  id: ClothingHeadHelmetJustice
+  parent: NFBaseHelmetRecipe
+  result: ClothingHeadHelmetJustice
+  completetime: 3
+  materials:
+    Cloth: 100
+    Durathread: 100
+    Steel: 500
+    Plasteel: 500
+    Glass: 100
+
+- type: latheRecipe
+  id: ClothingHeadHelmetSwat
+  parent: NFBaseHelmetRecipe
+  result: ClothingHeadHelmetSwat
+  completetime: 3
+  materials:
+    Plasteel: 600
+    Steel: 200
+    Glass: 150
+    Durathread: 150
+    Cloth: 100
+
+- type: latheRecipe
+  id: ADTClothingOuterArmorMiner
+  parent: NFBaseEVASuitRecipe
+  result: ADTClothingOuterArmorMiner
+  completetime: 9
+  materials:
+    Durathread: 2200
+    Plastic: 1500
+    Steel: 1450
+    Silver: 1400
+    Gold: 1000
+    Glass: 250
+
+- type: latheRecipe
+  id: ADTClothingOuterArmorMinerLight
+  parent: NFBaseEVASuitRecipe
+  result: ADTClothingOuterArmorMinerLight
+  completetime: 9
+  materials:
+    Durathread: 2500
+    Plastic: 1850
+    Steel: 1000
+    Silver: 1200
+    Gold: 1500
+    Glass: 900
+
+- type: latheRecipe
+  id: ADTClothingOuterArmorMinerHeavy
+  parent: NFBaseEVASuitRecipe
+  result: ADTClothingOuterArmorMinerHeavy
+  completetime: 9
+  materials:
+    Durathread: 1800
+    Plastic: 1400
+    Steel: 2300
+    Silver: 1600
+    Gold: 900
+    Glass: 250
+
+- type: latheRecipe
+  id: ClothingOuterHardsuitEVA
+  parent: NFBaseEVASuitRecipe
+  result: ClothingOuterHardsuitEVA
+
+- type: latheRecipe
+  id: ClothingOuterSuitEmergency
+  parent: NFBaseEVASuitRecipe
+  result: ClothingOuterSuitEmergency
+
+- type: latheRecipe
+  id: ClothingHeadHelmetEVALarge
+  parent: DHBaseOuterClothHatRecipe
+  result: ClothingHeadHelmetEVALarge
+  completetime: 4
+  materials:
+    Steel: 200
+    Cloth: 200
+    Glass: 200
+
+- type: latheRecipe
+  id: ClothingHeadHelmetEVA
+  parent: ClothingHeadHelmetEVALarge
+  result: ClothingHeadHelmetEVA
+
+- type: latheRecipe
+  id: ClothingOuterEVASuitStc
+  parent: NFBaseEVASuitRecipe
+  result: ClothingOuterEVASuitStc

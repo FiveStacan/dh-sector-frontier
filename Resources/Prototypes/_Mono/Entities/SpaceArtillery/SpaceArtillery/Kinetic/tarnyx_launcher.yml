@@ -16,14 +16,14 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 1000
+    startingCharge: 1000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.1
-    projectileSpeed: 200
+    fireRate: 0.25
+    projectileSpeed: 180
     shootThermalSignature: 8000000 # ~2.8km after firing - relatively low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
@@ -31,15 +31,15 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 214
+    autoRechargeRate: 35
   - type: SpaceArtillery
-    powerChargeRate: 214
+    powerChargeRate: 35
     powerUsePassive: 3500
-    powerUseActive: 0
+    powerUseActive: 10
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipTarnyxProjectile
-    fireCost: 15000 # low shot weapon moved back to the original spot
+    fireCost: 1000 # low shot weapon moved back to the original spot
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 2.5
@@ -79,7 +79,7 @@
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
     powerChargeRate: 200
-    powerUsePassive: 3500
+    powerUsePassive: 3200
     powerUseActive: 0
   - type: Actions
   - type: RadarBlip

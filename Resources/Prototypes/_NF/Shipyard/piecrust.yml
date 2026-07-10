@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Piecrust
   description: A combination animal ranch and pie bakery
-  price: 33500 # 30500 0.05 32025
+  price: 158600 # 30500 0.05 32025
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/piecrust.yml
@@ -45,3 +45,4 @@
             ContractorInterview: [ 0, 0 ]
             PilotInterview: [ 0, 0 ]
             MercenaryInterview: [ 0, 0 ]
+            ChefInterview: [ 0, 0 ] #DH

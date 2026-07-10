@@ -47,6 +47,7 @@
             NFJanitor: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
             FrontierEngineer: [ 1, 1 ]
+            Lawyer: [ 2, 2 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity

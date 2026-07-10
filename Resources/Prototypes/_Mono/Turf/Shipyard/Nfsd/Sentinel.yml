@@ -1,10 +1,10 @@
 - type: vessel
   id: Sentinel
   parent: BaseVesselAntag
-  name: Dagger
-  description: Straight from the shipyards of Sol, this ship is equipped with a mass driver as its main armament for long-range fire support.
-  limit: 2
-  price: 316768 # 2000 above min # DH-Tweak
+  name: Sentinel
+  description: Крупный, защищенный фрегат, предназначенный для фронтального боя
+  limit: 1
+  price: 611000 #DH Shuttle price balance #253060
   category: Large
   group: Security
   access: Armory

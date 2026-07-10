@@ -75,6 +75,8 @@
         - Trash
       components:
         - GoblinMade
+    grid:
+    - 0,0,6,3 #DH
   - type: Construction
     graph: NFGoblinMadeClothingBackpackTrashBlue
     node: NFGoblinMadeClothingBackpackTrashBlue

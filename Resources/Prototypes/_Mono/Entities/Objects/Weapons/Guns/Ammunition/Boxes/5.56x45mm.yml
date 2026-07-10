@@ -37,7 +37,7 @@
     sound:
       path: /Audio/_Goobstation/Items/handling/ammobox_drop.ogg
 
-#small ammo boxes
+#region small ammo boxes
 # Standart
 - type: entity
   parent: BaseAmmoBox556x45mm
@@ -168,3 +168,166 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     - state: caustic
+
+#region big ammo boxes
+
+- type: entity
+  abstract: true
+  parent: BaseAmmoBox556x45mm
+  id: BaseAmmoBox556x45mmBig
+  name: big ammunition box (5.56x45mm FMJ)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - Cartridge556x45mmFMJ
+    proto: Cartridge556x45mmFMJ
+    capacity: 200
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle_big.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+
+# Standart
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigFMJ
+  name: big ammunition box (5.56x45mm FMJ)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmFMJ
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigPractice
+  name: big ammunition box (5.56x45mm practice)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmPractice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#dddddd"
+
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigRubber
+  name: big ammunition box (5.56x45mm rubber)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmRubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#00b0ff"
+
+# Mechanical
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigHP
+  name: big ammunition box (5.56x45mm hollow-point)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmHP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#ff0000"
+
+# Physical
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigIncendiary
+  name: big ammunition box (5.56x45mm incendiary)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#e3b900"
+
+- type: entity
+  id: AmmoBox556x45mmBigUranium
+  parent: BaseAmmoBox556x45mmBig
+  name: big ammunition box (5.56x45mm uranium)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmUranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#00ff00"
+
+# Special
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigEMP
+  name: big ammunition box (5.56x45mm EMP)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmEMP
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#00b0ff"
+
+- type: entity
+  parent: BaseAmmoBox556x45mmBig
+  id: AmmoBox556x45mmBigCaustic
+  name: big ammunition box (5.56x45mm Caustic)
+  suffix: Need balance test #Lua
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge556x45mmCaustic
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: decal-01
+      color: "#8fca4b"

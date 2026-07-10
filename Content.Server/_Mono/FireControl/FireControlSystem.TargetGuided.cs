@@ -196,6 +196,7 @@ public sealed partial class FireControlSystem
 
         // Clean up any console positions for consoles that no longer exist or have no active missiles
         CleanupConsolePositions();
+        UpdateOpenConsoleAmmoStatuses(frameTime);
     }
 
     /// <summary>

@@ -1,0 +1,69 @@
+- type: entity
+  parent: IDCardStandard
+  id: PermaPrisonerIDCard
+  name: perma prisoner ID card
+  description: A generically printed ID card for scummy prisoners.
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: prisoner-space-prison
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: idprisoner-space-prison
+  - type: Item
+    heldPrefix: default
+  - type: Access
+    tags:
+    - GenpopEnter
+  - type: GenpopIdCard
+  - type: IdCard
+    jobTitle: job-name-perma-prisoner
+    jobIcon: JobIconPermaPrisoner
+    canMicrowave: false
+  - type: Speech
+    speechVerb: Robotic
+  - type: StaticPrice
+    price: 3
+  - type: PresetIdCard
+    job: PermaPrisoner
+
+- type: entity
+  parent: IDCardStandard
+  id: PrisonGuardIDCard
+  name: prison guard ID card
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: orange-space-prison
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: idguardian-space-prison
+  - type: PresetIdCard
+    job: DHPrisonGuard
+
+- type: entity
+  parent: IDCardStandard
+  id: HeadOfPrisonIDCard
+  name: ID карта Главы КТ
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: orange-space-prison
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: idheadofprison-space-prison
+  - type: PresetIdCard
+    job: HeadOfPrison
+
+- type: entity
+  parent: IDCardStandard
+  id: PrisonDoctorIDCard
+  name: prison doctor ID card
+  components:
+  - type: Sprite
+    layers:
+    - sprite: _DH/Objects/Misc/id_cards.rsi
+      state: orange-space-prison
+    - state: idmedicaldoctor
+  - type: PresetIdCard
+    job: PrisonDoctor

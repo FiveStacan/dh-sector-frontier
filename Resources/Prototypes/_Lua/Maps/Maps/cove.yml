@@ -2,34 +2,34 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-#- type: gameMap
-#  id: Cove
-#  mapName: 'Аванпост Пиратов'
-#  mapPath: /Maps/_Lua/Maps/tortuga.yml
-#  isGrid: true
-#  minPlayers: 0
-#  stations:
-#    Cove:
-#      stationProto: StandardPiratesVessel
-#      components:
-#        - type: RadarBlipIcon
-#          icon: /Textures/_Lua/Interface/Radar/space-station.png
-#          scale: 1.2
-#          allowWhenHidden: true
-#        - type: MailStationDisabled
-#        - type: StationNameSetup
-#          mapNameTemplate: 'Аванпост Пиратов'
-#        - type: ExtraStationInformation
-#          iconPath: /Textures/Structures/Wallmounts/flags.rsi/pirate_flag.png # used the biggest one, looks better when downscaling than upscaling
-#          stationSubtext: 'pirate-lobby-outpost-subtext'
-#          stationDescription: 'pirate-lobby-outpost-description'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirateCaptain: [ 1, 1 ]
-#            NFPirateFirstMate: [ 1, 1 ]
-#            NFPirate: [ 6, 6 ]
+- type: gameMap
+  id: Cove
+  mapName: 'Аванпост Пиратов'
+  mapPath: /Maps/_Lua/Maps/tortuga.yml
+  isGrid: true
+  minPlayers: 0
+  stations:
+    Cove:
+      stationProto: StandardPiratesVessel
+      components:
+        - type: RadarBlipIcon
+          icon: /Textures/_Lua/Interface/Radar/space-station.png
+          scale: 1.2
+          allowWhenHidden: true
+        - type: MailStationDisabled
+        - type: StationNameSetup
+          mapNameTemplate: 'Аванпост Пиратов'
+        - type: ExtraStationInformation
+          iconPath: /Textures/Structures/Wallmounts/flags.rsi/pirate_flag.png # used the biggest one, looks better when downscaling than upscaling
+          stationSubtext: 'pirate-lobby-outpost-subtext'
+          stationDescription: 'pirate-lobby-outpost-description'
+        - type: StationJobs
+          availableJobs:
+            NFPirateCaptain: [ 1, 1 ]
+            NFPirateFirstMate: [ 1, 1 ]
+            NFPirate: [ 6, 6 ]
 
-# for StormCreed
+# StormCreed map is kept, but starmap now points pirates back to Cove/CoveLua.
 - type: gameMap
   id: Murena
   mapName: 'SC-RUST/MUR3NA-5.5'

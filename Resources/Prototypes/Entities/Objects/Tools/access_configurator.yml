@@ -20,15 +20,15 @@
     - type: AccessOverrider
       accessLevels:
       - Armory
-      # - Atmospherics # Frontier
-      # - Bar # Frontier
+      - Atmospherics # Frontier
+      - Bar # Frontier
       - Bailiff # Frontier
       - Brig
       - Brigmedic # Frontier
       - Captain
-      # - Cargo # Frontier
-      # - Chapel # Frontier
-      # - Chemistry # Frontier
+      - Cargo # Frontier
+      - Chapel # Frontier
+      - Chemistry # Frontier
       # - ChiefMedicalOfficer # Frontier
       - Command
       - Detective # Frontier - moved down
@@ -37,24 +37,24 @@
       - Frontier # Frontier
       # - Hydroponics # Frontier
       - Janitor
-      # - Kitchen # Frontier
-      # - Lawyer # Frontier
+      - Kitchen # Frontier
+      - Lawyer # Frontier
       - Mail # Frontier
       - Maintenance
       - Medical
       - Mercenary # Frontier
       - ChiefEngineer # Frontier: reordered for "Plant Manager"
       # - Quartermaster # Frontier
-      # - Research # Frontier
+      - Research # Frontier
       # - ResearchDirector # Frontier
-      # - Salvage # Frontier
+      - Salvage # Frontier
       - Security
       - Sergeant # Frontier
       - Service
       - HeadOfSecurity # Frontier: reordered for "Sheriff"
       - HeadOfPersonnel # Frontier: reordered for "Station Representative"
       - StationTrafficController # Frontier
-      # - Theatre # Frontier
+      - Theatre # Frontier
       - GenpopEnter
       - GenpopLeave
       privilegedIdSlot:
@@ -144,6 +144,16 @@
     - Xenoborg
     - GenpopEnter
     - GenpopLeave
+    - HeadOfPrison #DH
+    - TelecomOfficer #DH
+    - ResearchDirectorTypan #DH
+    # LuaTech #DH
+    - LuaTechOps
+    - LuaTechScience
+    - LuaTechEngineer
+    - LuaTechMedic
+    - LuaTechService
+    - LuaTechCommand
     privilegedIdSlot:
       name: id-card-console-privileged-id
       startingItem: UniversalIDCard

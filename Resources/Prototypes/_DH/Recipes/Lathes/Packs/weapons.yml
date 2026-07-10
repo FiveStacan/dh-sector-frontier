@@ -1,0 +1,61 @@
+- type: latheRecipePack
+  id: DHReseachedWeapons
+  recipes:
+  - NFWeaponEnergyRifleCarbine
+  - NFWeaponEnergyRifleCarbinePractice
+  - NFWeaponEnergyRifleSniperCannon
+  - NFWeaponEnergyRifleTemperature
+  - NFWeaponEnergyRifleSniperXrayCannon
+  - WeaponMechCombatDisabler # Goobstation
+
+- type: latheRecipePack
+  id: DHReseachedAmmo
+  recipes:
+  - NFAmmunitionBoxRifle20Overpressure
+  - NFAmmunitionBoxRifle30Overpressure
+#  - NFAmmunitionBoxShellShotgunOverpressure
+  - NFMagazineRifle20Empty
+  - NFMagazineRifle30Empty
+  #- NFMagazineDrumRifle20Empty
+  - MagazineAsmgtUniversalEmpty #скебоб
+  - NFAmmunitionBoxBigRifle20
+  - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxBigRifle30
+  - NFAmmunitionBoxBigRifle30Overpressure
+
+- type: latheRecipePack
+  id: DHIncendiaryUraniumAmmo
+  recipes:
+  - NFAmmunitionBoxShellShotgunIncendiary
+  - MagazineRifleUranium # Frontier
+  - MagazinePistolUranium # Frontier
+  - MagazinePistolSubMachineGunUranium # Frontier
+  - MagazineLightRifleUranium # Frontier
+  - SpeedLoaderMagnumUranium # Frontier
+##  - MagazineBoxPistolUranium # Frontier
+  - NFAmmunitionBoxPistol45Uranium # Frontier
+  - NFAmmunitionBoxRifle30Uranium # Frontier
+  - NFAmmunitionBoxRifle20Uranium # Frontier
+  - NFAmmunitionBoxShellShotgunUranium # Frontier
+
+
+  - BoxShotgunIncendiary # Frontier
+  - MagazineRifleIncendiary # Frontier
+  - MagazinePistolIncendiary # Frontier
+  - NFMagazineSubMachineGun35Incendiary # Frontier
+  - NFMagazineSubMachineGunTopMounted35Incendiary
+  - MagazineLightRifleIncendiary # Frontier
+  - SpeedLoaderMagnumIncendiary # Frontier
+  - NFMagazineShotgunDrumIncendiary # Frontier
+##  - MagazineBoxPistolIncendiary # Frontier
+  - MagazineBoxMagnumIncendiary # Frontier
+  - NFAmmunitionBoxRifle30Incendiary # Frontier
+  - NFAmmunitionBoxRifle20Incendiary # Frontier
+
+- type: latheRecipePack
+  id: DHIncendiaryUraniumAmmoBig
+  recipes:
+  - NFAmmunitionBoxBigRifle20Incendiary
+  - NFAmmunitionBoxBigRifle25Incendiary
+  - NFAmmunitionBoxBigRifle30Incendiary
+  - MagazineBoxCMCartridgeSniper10x28mmIncendiary

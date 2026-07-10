@@ -1,0 +1,40 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+# Author: germanreutt (discord)
+
+- type: vessel
+  parent: BaseVessel
+  id: GFShukraF
+  name: Shukra-2
+  description: Штурмовая версия корабля поддержки "Шукра". Этот шаттл схож по форме со своим предком, однако имеет более крепкую броню.
+  limit: 2
+  price: 575000 # DH-Tweak
+  category: Large
+  group: Typan
+  whitelist:
+  - Frontier
+  - Luna
+  class:
+  - Syndicate
+  - Pursuit # Lua
+  - Medical # Lua
+  - Chemistry # Lua
+  engine:
+  - AME # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/shukra-f.yml
+
+- type: gameMap
+  id: GFShukraF
+  mapName: 'Shukra-2'
+  mapPath: /Maps/_Lua/Shuttles/Typan/shukra-f.yml
+  minPlayers: 0
+  stations:
+    GFShukraF:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Shukra-2 {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

@@ -37,6 +37,8 @@
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Gun
+      minAngle: 2
+      maxAngle: 16
       fireRate: 2
       projectileSpeed: 80
       selectedMode: FullAuto
@@ -44,8 +46,8 @@
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
     - type: Battery
-      maxCharge: 300
-      startingCharge: 300
+      maxCharge: 500
+      startingCharge: 500
     - type: ExaminableBattery
     - type: AutoShootGun
     - type: GunSignalControl
@@ -53,17 +55,17 @@
       range: 700
     - type: FireControllable
     - type: SpaceArtillery
-      powerChargeRate: 50
-      powerUseActive: 1200
-      powerUsePassive: 2500
+      powerChargeRate: 40
+      powerUseActive: 1250
+      powerUsePassive: 2400
     - type: ShipGunClass
       shipClass: Medium
     - type: BatterySelfRecharger
       autoRecharge: true
-      autoRechargeRate: 50
+      autoRechargeRate: 40
     - type: ProjectileBatteryAmmoProvider
       proto: Bullet120mm
-      fireCost: 150
+      fireCost: 500
 
 - type: entity
   parent: BaseNFFlatpack

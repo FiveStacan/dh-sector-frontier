@@ -173,7 +173,7 @@ namespace Content.Client.LateJoin
 
                 foreach (var department in departments)
                 {
-                    var departmentName = Loc.GetString(department.Name);
+                    var departmentName = FormattedMessage.RemoveMarkupPermissive(Loc.GetString(department.Name));
                     _jobCategories[id] = new Dictionary<string, BoxContainer>();
                     var stationAvailable = _gameTicker.StationJobInformationList[id];
                     var jobsAvailable = new List<JobPrototype>();

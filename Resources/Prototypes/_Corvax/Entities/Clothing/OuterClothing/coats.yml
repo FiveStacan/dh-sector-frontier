@@ -101,17 +101,19 @@
   - type: Armor #Lua; # 30/30/45//45/45//30/30//70
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.55
-        Heat: 0.55
-        Radiation: 0.55
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.76
+        Slash: 0.76
+        Piercing: 0.66
+        Heat: 0.65
+        Radiation: 0.9
+        Shock: 0.85
+        Caustic: 0.88
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.55
   - type: ExplosionResistance
-    damageCoefficient: 0.3 #Lua
+    damageCoefficient: 0.70 #Lua
+  - type: StaticPrice #DH
+    price: 135
 
 - type: entity
   parent: ClothingOuterStorageBase

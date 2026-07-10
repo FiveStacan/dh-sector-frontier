@@ -1,0 +1,79 @@
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockPrisonDrobe
+  name: набор пополнения ТюремШкаф
+  description: z
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - PrisonDrobeInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_sec
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockPrison
+  name: набор пополнения ТюрьмаТех
+  description: z
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - PrisonTechInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_sec
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockPrisonersClothing
+  name: набор пополнения ЗекШкаф
+  description: z
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - prisonersclothingInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_sec
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockPrisonSustenance
+  name: набор пополнения тюремного торгомата
+  description: z
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - DHSustenanceInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_sec
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockTroll
+  name: набор пополнения ТролльВенд
+  description: z
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - TrollInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_donksoft

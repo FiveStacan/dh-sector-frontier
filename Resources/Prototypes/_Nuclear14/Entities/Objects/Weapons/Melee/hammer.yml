@@ -12,14 +12,15 @@
     damage:
       types:
         Blunt: 5
+        Structural: 1
     soundSwing:
       collection: N14LargeSwing
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 30
-        Structural: 25
+        Blunt: 22
+        Structural: 20
   - type: Item
     size: Ginormous
   - type: Clothing
@@ -47,14 +48,15 @@
     damage:
       types:
         Blunt: 5
+        Structural: 2
     soundSwing:
       collection: N14LargeSwing
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 35
-        Structural: 20
+        Blunt: 32
+        Structural: 15
   - type: Clothing
     sprite: _Nuclear14/Objects/Weapons/Melee/supersledge.rsi
     quickEquip: false
@@ -74,15 +76,15 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 5
+        Blunt: 6
     soundSwing:
       collection: N14LargeSwing
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 30
-        Structural: 10
+        Blunt: 26
+        Structural: 8
   - type: Clothing
     sprite: _Nuclear14/Objects/Weapons/Melee/tribalbigclub.rsi
     quickEquip: false
@@ -103,16 +105,17 @@
     damage:
       types:
         Blunt: 5
+        Piercing: 1
     soundSwing:
       collection: N14LargeSwing
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 25
-        Pierce: 5
+        Blunt: 20
+        Piercing: 5
         Slash: 10
-        Structural: 10
+        Structural: 8
   - type: Clothing
     sprite: _Nuclear14/Objects/Weapons/Melee/tribaljaggedbigclub.rsi
     quickEquip: false

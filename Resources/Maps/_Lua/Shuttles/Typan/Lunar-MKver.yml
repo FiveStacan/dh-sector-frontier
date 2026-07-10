@@ -1276,7 +1276,7 @@ entities:
     - type: Transform
       pos: 1.5,11.5
       parent: 1
-- proto: ComputerShuttleWithNordfallDisk
+- proto: ComputerShuttleWithTypanDisk
   entities:
   - uid: 169
     components:
@@ -1780,7 +1780,7 @@ entities:
     - type: Transform
       pos: 2.5,6.5
       parent: 1
-- proto: LockerSyndicateNordfall
+- proto: LockerSyndicateTypan
   entities:
   - uid: 230
     components:

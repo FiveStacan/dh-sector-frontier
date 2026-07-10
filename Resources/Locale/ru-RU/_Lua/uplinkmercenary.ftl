@@ -1,6 +1,3 @@
-ent-MercyShipComputer = консоль верфи наёмников
-    .desc = Используется в основном на материнских кораблях для покупки и продажи кораблей без возвращения на станцию.
-
 ent-BaseMercenaryUplinkRadioMercenary = аплинк наёмника
     .desc = Старое радио в стиле ретро...
     .suffix = Наёмник
@@ -71,9 +68,9 @@ store-merc-category-ammo = патроны
 
 uplink-merc-rocketempammo-name = реактивная граната ПГ-7ВЛ ЭМИ
 uplink-merc-rocketempammo-desc = Реактивная граната мощностью 1,5 эми, предназначенная для установки РПГ-7.
-uplink-merc-lightrifle-name = магазин 
+uplink-merc-lightrifle-name = магазин
 uplink-merc-lightrifle-desc = .30 винтовочные
-uplink-merc-magazineoistol-name = пистолетный магазин 
+uplink-merc-magazineoistol-name = пистолетный магазин
 uplink-merc-magazineoistol-desc = .35 авто
 
 store-merc-category-nocat = разное

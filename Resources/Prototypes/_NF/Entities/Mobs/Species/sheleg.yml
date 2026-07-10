@@ -153,11 +153,11 @@
   - type: InventorySlotFriction
   - type: AutoToggleableOuterClothing
   - type: LuaSprint # Lua
-    maxSprint: 136
-    drainPerSecond: 4.7
-    regenPerSecond: 5.5
-    regenDelay: 0.40
-    recoverThresholdFraction: 0.35
+    maxSprint: 38
+    drainPerSecond: 4.8
+    regenPerSecond: 5.4
+    regenDelay: 0.42
+    recoverThresholdFraction: 0.4
 
 - type: entity
   save: false

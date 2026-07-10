@@ -514,3 +514,14 @@
   - type: Sprite
     sprite: _NF/Guidebook/shuttle_maps/128x96.rsi
     state: nook
+
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapRiman
+  name: "GF Riman"
+  description: "Detailed map of a Riman shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Guidebook/shuttle_maps/128x96.rsi
+    state: riman

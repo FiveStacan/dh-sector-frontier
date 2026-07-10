@@ -1,12 +1,25 @@
 # region Machines
 
 - type: latheRecipe
+  id: SalvageTechFabCircuitboardNF
+  parent: [BaseCircuitboardRecipe, BaseSupplyMachineRecipeCategory]
+  result: SalvageTechFabCircuitboardNF
+  materials:
+    Steel: 800
+    Glass: 900
+    Plastic: 150 #DH
+    Silver: 100 #DH
+
+- type: latheRecipe
   id: BlueprintLithographMachineCircuitboard
   parent: [BaseCircuitboardRecipe, BaseResearchMachineRecipeCategory]
   result: BlueprintLithographMachineCircuitboard
   materials:
     Steel: 800
     Glass: 900
+    Plastic: 600 #DH
+    Silver: 200 #DH
+    Gold: 150 #DH
 
 - type: latheRecipe
   id: MaterialSiloMachineCircuitboard
@@ -200,3 +213,4 @@
   materials:
     Steel: 800
     Glass: 900
+    Silver: 50

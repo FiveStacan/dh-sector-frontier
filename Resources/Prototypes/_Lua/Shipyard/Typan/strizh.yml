@@ -1,0 +1,39 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+# Author: germanreutt (discord)
+
+- type: vessel
+  parent: BaseVessel
+  id: GFStrizh
+  name: Strizh
+  description: Гибрид, способный одинаково хорошо уничтожать врага на любом расстоянии. Бронирован средне.
+  limit: 3
+  price: 350614 # DH-Tweak
+  category: Medium
+  group: Typan
+  whitelist:
+  - Frontier
+  - Luna
+  class:
+  - Syndicate
+  - Fighter # Lua
+  - Medical # Lua
+  engine:
+  - Uranium # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/strizh.yml
+
+- type: gameMap
+  id: GFStrizh
+  mapName: 'Strizh'
+  mapPath: /Maps/_Lua/Shuttles/Typan/strizh.yml
+  minPlayers: 0
+  stations:
+    GFStrizh:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Strizh {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

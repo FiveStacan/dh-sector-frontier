@@ -1,0 +1,136 @@
+- type: loadout
+  id: SecurityBodycam
+  startingGear: SecurityBodycam
+
+- type: startingGear
+  id: SecurityBodycam
+  storage:
+    back:
+    - HandheldCamera
+
+- type: loadout
+  id: SecurityWhistle
+  startingGear: SecurityWhistle
+
+- type: startingGear
+  id: SecurityWhistle
+  storage:
+    back:
+    - SecurityWhistle
+
+- type: loadout
+  id: SecurityRadioHandheld
+  startingGear: SecurityRadioHandheld
+
+- type: startingGear
+  id: SecurityRadioHandheld
+  storage:
+    back:
+    - RadioHandheldSecurity
+
+- type: loadout
+  id: SecurityTourniquet
+  startingGear: SecurityTourniquet
+
+- type: startingGear
+  id: SecurityTourniquet
+  storage:
+    back:
+    - Tourniquet
+
+- type: loadout
+  id: SecurityWeaponMeleeNeedle
+  startingGear: SecurityWeaponMeleeNeedle
+
+- type: startingGear
+  id: SecurityWeaponMeleeNeedle
+  storage:
+    back:
+    - WeaponMeleeNeedle
+
+- type: loadout
+  id: SecurityHoloprojector
+  startingGear: SecurityHoloprojector
+
+- type: startingGear
+  id: SecurityHoloprojector
+  storage:
+    back:
+    - HoloprojectorSecurity
+
+- type: loadout
+  id: ClothingMaskBreathMedical
+  equipment:
+    mask: ClothingMaskBreathMedical
+
+- type: loadout
+  id: ClothingMaskBreathMedicalSecurity
+  price: 200
+  equipment:
+    mask: ClothingMaskBreathMedicalSecurity
+
+- type: loadout
+  id: ClothingEyesGlassesSecurity
+  price: 0
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+
+- type: loadout
+  id: ClothingEyesGlassesNfsd
+  price: 0
+  equipment:
+    eyes: ClothingEyesGlassesNfsd
+
+- type: loadout
+  id: ClothingEyesHudSecurity
+  price: 0
+  equipment:
+    eyes: ClothingEyesHudSecurity
+
+- type: loadout
+  id: ClothingEyesHudNfsd
+  price: 0
+  equipment:
+    eyes: ClothingEyesHudNfsd
+
+- type: loadout
+  id: ClothingEyesEyepatchHudSecurity
+  price: 0
+  equipment:
+    eyes: ClothingEyesEyepatchHudSecurity
+
+- type: loadout
+  id: ClothingEyesEyepatchHudSecurityFlipped
+  price: 0
+  equipment:
+    eyes: ClothingEyesEyepatchHudSecurityFlipped
+
+- type: loadout
+  id: ClothingEyesHudNfsdPatch
+  price: 0
+  equipment:
+    eyes: ClothingEyesHudNfsdPatch
+
+- type: loadout
+  id: ClothingEyesHudMedSec
+  price: 2000
+  equipment:
+    eyes: ClothingEyesHudMedSec
+
+- type: loadout
+  id: ClothingShoesBootsCombatFilled
+  price: 1200
+  equipment:
+    shoes: ClothingShoesBootsCombatFilled
+
+- type: loadout
+  id: ClothingShoesBootsJackFilled
+  price: 0
+  equipment:
+    shoes: ClothingShoesBootsJackFilled
+
+- type: loadout
+  id: DHClothingHandsGlovesCombat
+  price: 0
+  equipment:
+    gloves: ClothingHandsGlovesCombat

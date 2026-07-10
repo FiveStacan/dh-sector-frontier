@@ -44,6 +44,52 @@
   id: Magazine762x39mmHP
   result: Magazine762x39mmHP
 
+#Magazines low capacity #DH
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityFMJ
+  result: Magazine762x39mmLowCapacityFMJ
+
+- type: latheRecipe
+  parent: BaseAmmoRubberIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityRubber
+  result: Magazine762x39mmLowCapacityRubber
+
+- type: latheRecipe
+  parent: BaseAmmoIncendiaryIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityIncendiary
+  result: Magazine762x39mmLowCapacityIncendiary
+
+- type: latheRecipe
+  parent: BaseAmmoPracticeIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityPractice
+  result: Magazine762x39mmLowCapacityPractice
+
+- type: latheRecipe
+  parent: BaseAmmoEmptyIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityEmpty
+  result: Magazine762x39mmLowCapacityEmpty
+
+- type: latheRecipe
+  parent: BaseAmmoUraniumIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityUranium
+  result: Magazine762x39mmLowCapacityUranium
+
+- type: latheRecipe
+  parent: BaseAmmoEMPIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityEMP
+  result: Magazine762x39mmLowCapacityEMP
+
+- type: latheRecipe
+  parent: BaseAmmoCausticIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityCaustic
+  result: Magazine762x39mmLowCapacityCaustic
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateMagazineRecipe
+  id: Magazine762x39mmLowCapacityHP
+  result: Magazine762x39mmLowCapacityHP
+
 #Speedloaders
 
 - type: latheRecipe

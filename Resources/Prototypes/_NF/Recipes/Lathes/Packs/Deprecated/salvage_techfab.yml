@@ -1,0 +1,131 @@
+# The salvage techfab made into packs.
+# TODO: Reorganize these into common packs.
+
+- type: latheRecipePack
+  id: NFSalvageTechfabDeprecatedStatic
+  recipes:
+  # Shared lathe recipes
+  ## Basic tools
+    - Wirecutter
+    - Screwdriver
+    - Welder
+    - Wrench
+    - CrowbarGreen
+    - Multitool
+    - FlashlightLantern
+    - AppraisalTool
+    - HandLabeler
+    - Signaller
+    - ClothingMaskWeldingGas
+    #- SprayPainter
+    #- SprayPainterAmmo
+  ## Basic storage
+    - ToolboxArtisticNF
+    - ToolboxElectricalNF
+    - ToolboxMechanicalNF
+    - ToolboxEmergencyNF
+  ## Basic parts
+    - CableStack
+    - LightTube
+    - LedLightTube
+    - SodiumLightTube
+    - ExteriorLightTube
+    - LightBulb
+    - LedLightBulb
+    - SodiumLightBulb
+    - ExteriorLightBulb
+    # - ConveyorBeltAssembly
+    - PowerCellSmall
+    # - PowerCellMedium
+  ## Basic electronics
+    - SignalTimerElectronics
+    # - BorgChargerCircuitboard
+    # - WeaponCapacitorRechargerCircuitboard
+    - AirTank
+    - NFScrapProcessorCircuitboard
+    - MaterialReclaimerMachineCircuitboard
+    - OreProcessorMachineCircuitboard
+  # Salvage techfab
+    - ClothingOuterEVASuitCargo
+    - ClothingOuterEVASuitSalvage
+    - ClothingBeltSalvageWebbing
+    - Pickaxe
+    - RadioHandheldNF
+    - Floodlight
+    - FlareLathe
+    - BoxDispenserFlare
+    - GlowstickBlue
+    - GlowstickBase
+    - GlowstickPurple
+    - GlowstickRedLathe
+    - GlowstickYellow
+    - OldOreBag
+    #- ConstructionBag
+    - MiningDrill
+    - NFWeaponPkaSawn
+    - NFWeaponPka
+    - NFWeaponPkaCannon
+    - ClothingNeckIFFNeutral
+    - ClothingNeckIFFGreen
+    - ClothingNeckIFFRed
+    - ClothingNeckIFFBlue
+    - ClothingNeckIFFOrange
+    - ClothingNeckIFFPurple
+    - LanternNF
+    - CableHVStack
+    - CableMVStack
+    - WeaponGrapplingGun
+    - SurvivalKnife
+    - NFWeaponHoloflareGun
+    - NFMetalShield
+  # Parts
+    - Beaker
+    - MicroManipulatorStockPart
+    - MatterBinStockPart
+    - CapacitorStockPart
+
+- type: latheRecipePack
+  id: NFSalvageTechfabDeprecatedEmag
+  recipes:
+    - NFAmmunitionBoxShellShotgunTranquilizer
+    - NFAmmunitionBoxPistol35
+    - NFAmmunitionBoxPistol45
+    - NFAmmunitionBoxRifle20
+    - NFAmmunitionBoxRifle30
+#       - GrenadeBlast
+    - ClothingHeadHelmetCosmonaut
+
+- type: latheRecipePack
+  id: NFSalvageTechfabDeprecatedDynamic
+  recipes:
+  - MineralScannerEmpty
+  - WeaponCrusher
+  - WeaponCrusherDagger
+  - MiningDrillDiamond
+  - AdvancedMineralScannerEmpty
+  - WeaponPlasmaCutter
+  - WeaponCrusherGlaive
+  - OreBagOfHolding
+  - ClothingShoesBootsMag
+  - ClothingShoesBootsJetBoots
+  - ClothingOuterHardsuitSpatio
+  - ClothingOuterHardsuitSalvage
+  - ClothingOuterHardsuitLuxury
+  - JetpackBlue
+  - JetpackMining
+  - JetpackMini
+  - BluespaceAirTank
+  - SmallBluespaceAirTank
+  - OreBag
+  - GemsBag
+  - ConstructionBag
+ #DH
+  - ADTClothingOuterArmorMinerLight
+  - ADTClothingOuterArmorMiner
+  - ADTClothingOuterArmorMinerHeavy
+  - WeaponBasePlasmaCutter
+  - ClothingShoesBootsJump
+  - PowerCellMedium #DH
+  - PKAUpgradeDamage #DH
+  - PKAUpgradeRange #DH
+  - PKAUpgradeFireRate #DH

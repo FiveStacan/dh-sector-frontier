@@ -165,9 +165,20 @@
   materials:
     Steel: 2000
     Plastic: 1000
-    Silver: 1000
+    Silver: 950 #DH
     Gold: 400
     Bluespace: 200 #DeltaV
+    Diamond: 30 #DH
+
+- type: latheRecipe
+  id: ClothingShoesBootsJump
+  result: ClothingShoesBootsJump
+  completetime: 2
+  materials:
+    Steel: 1400
+    Plastic: 600
+    Silver: 200
+    Plasma: 200
 
 - type: latheRecipe
   id: ModularReceiver

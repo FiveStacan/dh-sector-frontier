@@ -548,7 +548,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
-  
+
 - type: tile
   id: ADTFloorSepia
   name: adt-tiles-sepia-floor

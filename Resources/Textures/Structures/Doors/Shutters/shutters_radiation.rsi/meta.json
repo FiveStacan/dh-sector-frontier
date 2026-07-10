@@ -8,6 +8,10 @@
     },
     "states": [
         {
+            "name": "state0",
+            "directions": 1
+        },
+        {
             "name": "open",
             "directions": 1
         },

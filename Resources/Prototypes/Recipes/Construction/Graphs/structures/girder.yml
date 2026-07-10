@@ -317,6 +317,22 @@
               amount: 2
               doAfter: 1
 
+#DH
+    - node: Girder
+      entity: Girder
+      edges:
+        - to: BathroomWall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - material: Steel
+              amount: 6
+              doAfter: 2
+#DH -
+
 # _Lua Start
         - to: plastitaniumwall
           conditions:
@@ -549,6 +565,60 @@
                   data: 0
             - tool: Cutting
               doAfter: 1
+
+#DH
+    - node: BathroomWall
+      entity: WallBathroom
+      edges:
+        - to: Girder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+          steps:
+            - tool: Screwing #Cutting
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 5
+            - tool: Screwing
+              doAfter: 1
+            - tool: Prying
+              doAfter: 5
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 4
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 3
+            - tool: Prying
+              doAfter: 10
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 2
+            - tool: Prying
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 1
+            - tool: Screwing
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 0
+            - tool: Screwing
+              doAfter: 1
+#DH -
 
     - node: reinforcedWallChitin
       entity: WallReinforcedChitin
@@ -856,7 +926,7 @@
             - tool: Cutting
               doAfter: 2
 
-              
+
 #Astrolite
     - node: astrolitewall
       entity: WallAstrolit

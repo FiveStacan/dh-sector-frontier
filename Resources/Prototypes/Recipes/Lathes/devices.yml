@@ -131,8 +131,9 @@
     Steel: 2000
     Silver: 750
     Plasma: 1250 #Higher Plasma due to it needing less bluespace
-    Uranium: 150
-    Bluespace: 300 #DeltaV: Bluespace Exists
+    Uranium: 250
+    Bluespace: 700 #DeltaV: Bluespace Exists
+    Diamond: 150
 
 - type: latheRecipe
   parent: ClothingBackpackHolding
@@ -168,20 +169,24 @@
   result: WeaponForceGun
   categories:
   - Tools
-  completetime: 5
+  completetime: 23
   materials:
-    Steel: 500
+    Steel: 100
     Glass: 400
     Silver: 200
+    Bluespace: 250 #DH
+    Magmite: 350 #DH
 
 - type: latheRecipe
   id: DeviceQuantumSpinInverter
   result: DeviceQuantumSpinInverter
-  completetime: 5
-  materials:
-    Steel: 700
-    Glass: 100
-    Uranium: 100
+  completetime: 32 #DH
+  materials: #DH
+    Silver: 750
+    Bluespace: 1200
+    Uranium: 600
+    Magmite: 600
+    Glass: 350
 
 - type: latheRecipe
   id: DeviceDesynchronizer
@@ -192,31 +197,31 @@
     Glass: 100
     Uranium: 200
 
-# Frontier: abstracted result, remove definition
-
-# - type: latheRecipe
-#   id: WeaponProtoKineticAccelerator
-#   result: WeaponProtoKineticAccelerator
-#   categories:
-#   - Weapons
-#   completetime: 5
-#   materials:
-#     Steel: 1000
-#     Glass: 500
-#     Silver: 100
-
-# End Frontier: abstracted result, remove definition
+ #DH
+- type: latheRecipe
+  id: WeaponProtoKineticAccelerator
+  result: WeaponProtoKineticAccelerator
+  categories:
+  - Weapons
+  completetime: 5
+  materials:
+     Steel: 1000
+     Glass: 500
+     Silver: 100
 
 - type: latheRecipe
   id: WeaponTetherGun
   result: WeaponTetherGun
   categories:
   - Tools
-  completetime: 5
+  completetime: 18
   materials:
     Steel: 500
     Glass: 400
     Silver: 100
+    Bluespace: 150 #DH
+    Uranium: 200 #DH
+    Magmite: 150 #DH
 
 - type: latheRecipe
   id: WeaponGrapplingGun
@@ -228,6 +233,9 @@
     Steel: 500
     Glass: 400
     Gold: 100
+    Bluespace: 50 #DH
+    Uranium: 200 #DH
+    Magmite: 150 #DH
 
 - type: latheRecipe
   id: BotanistBagOfHolding
@@ -238,21 +246,4 @@
     Silver: 750
     Plasma: 1500
     Uranium: 150
-
-- type: latheRecipe
-  id: FloorTileItemBluespace
-  result: FloorTileItemBluespace
-  completetime: 1
-  materials:
-    Steel: 100
-    Plastic: 100
-    Bluespace: 60
-
-- type: latheRecipe
-  id: FloorTileItemSepia
-  result: FloorTileItemSepia
-  completetime: 1
-  materials:
-    Steel: 100
-    Plastic: 100
-    Bluespace: 60
+    Bluespace: 50 #DH

@@ -1,0 +1,17 @@
+- type: playTimeTracker
+  id: JobPrisonGuardDH
+
+- type: playTimeTracker
+  id: JobHeadOfPrison
+
+- type: playTimeTracker
+  id: JobPrisonDoctor
+
+- type: playTimeTracker
+  id: JobPermaPrisoner
+
+- type: playTimeTracker
+  id: JobPrisonDoctorTest
+
+- type: playTimeTracker
+  id: JobPermaPrisonerT

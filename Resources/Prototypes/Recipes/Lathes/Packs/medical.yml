@@ -81,25 +81,29 @@
   recipes:
   - ElectrolysisUnitMachineCircuitboard
   - CentrifugeMachineCircuitboard
-  - ChemDispenserMachineCircuitboard
-  - ChemMasterMachineCircuitboard
-  - CondenserMachineCircuitBoard
   - HotplateMachineCircuitboard
 
 ## Dynamic
 
 # Shared with protolathe
 - type: latheRecipePack
-  id: Chemistry
+  id: ChemistryDynamic
   recipes:
   - ChemicalPayload
   - CryostasisBeaker
   - SyringeCryostasis
   - BluespaceBeaker
+  - BluespacePillCanister #DH
   - SyringeBluespace
   - LauncherSyringe
   - MiniSyringe
+  - ChemBag
   #- AdvancedJetInjector
+
+- type: latheRecipePack
+  id: MedicalDynamic
+  recipes:
+  - MedicalBag
 
 - type: latheRecipePack
   id: MedicalBoards
@@ -107,3 +111,7 @@
   - StasisBedMachineCircuitboard
   - CryoPodMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
+  - MedicalTechFabCircuitboard #DH
+  - MedipenTechFabCircuitboard #DH
+  - ChemDispenserMachineCircuitboard #DH
+  - ChemMasterMachineCircuitboard #DH

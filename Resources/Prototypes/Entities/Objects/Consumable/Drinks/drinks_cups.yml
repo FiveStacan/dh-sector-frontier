@@ -13,6 +13,9 @@
   - type: EmitSoundOnDrop
     sound:
       path: /Audio/_Goobstation/Items/other/Cup/drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Goobstation/Items/other/Cup/drop.ogg
   # Goobstation edit end
   - type: SolutionContainerManager
     solutions:

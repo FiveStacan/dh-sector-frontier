@@ -17,6 +17,8 @@
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic
       - EncryptionKeyGreeting
+      - EncryptionKeyPrison #DH
+      - EncryptionKeyPrisoners #DH
 
 - type: entity
   parent: TelecomServer

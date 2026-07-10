@@ -82,8 +82,10 @@ ent-DHRocketConcussiveRkt = фугасная ракета
 
 # --- навигационные огни ---
 ent-FlyingCraftNavLightPort = навигационный огонь
+    .desc = навигационный огонь
     .suffix = левый борт, зелёный
 ent-FlyingCraftNavLightStarboard = навигационный огонь
+    .desc = навигационный огонь
     .suffix = правый борт, красный
 
 # --- действия ---

@@ -1,0 +1,69 @@
+{
+    "version": 1,
+    "license":"CC-BY-SA-4.0",
+    "copyright":"Make for Dark Haven, by discord: FiveStacan",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "id_overlay"
+        },
+        {
+            "name": "equipped-BELT",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "insert_overlay"
+        },
+        {
+            "name": "light_overlay"
+        },
+        {
+            "name": "equipped-IDCARD",
+            "directions": 4
+        },
+        {
+            "name": "pda"
+        },
+        {
+            "name": "pda-adj"
+        },
+        {
+            "name": "pda-blueshield"
+        },
+        {
+            "name": "pda-patologoanatom"
+        },
+        {
+            "name": "pda-space-prison-boss"
+        },
+        {
+            "name": "pda-space-prison-guardian"
+        },
+        {
+            "name": "pda-space-prison-pilot"
+        },
+        {
+            "name": "pda-isn-operator"
+        },
+        {
+            "name": "pda-space-prison-prisoner"
+        },
+        {
+            "name": "pda-ussp"
+        },
+        {
+            "name": "pda-prisoner"
+        }
+    ]
+}

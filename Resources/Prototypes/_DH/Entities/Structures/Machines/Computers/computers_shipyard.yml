@@ -1,0 +1,158 @@
+- type: entity
+  id: ComputerShipyardClown
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: Хонк-Верфь
+  description: Особая верфь для настоящих космо-клоунов!
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Honk
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Honk:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _DH/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_clown
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+
+- type: entity
+  id: ComputerShipyardClownMed
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: Хонк-Верфь
+  description: Особая верфь для настоящих космо-клоунов!
+  suffix: Мед
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.HonkMED
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.HonkMED:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _DH/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_clown
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: shipyard
+      color: "#17bcda"
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+
+- type: entity
+  id: ComputerShipyardClownNFSD
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: Хонк-Верфь
+  description: Особая верфь для настоящих космо-клоунов!
+  suffix: НФСД
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.HonkNFSD
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.HonkNFSD:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _DH/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_clown
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: shipyard
+      color: "#21a328"
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+
+- type: entity
+  id: ComputerShipyardClownExp
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: Хонк-Верфь
+  description: Особая верфь для настоящих космо-клоунов!
+  suffix: Экспидиционный
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.HonkExped
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.HonkExped:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _DH/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_clown
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: shipyard
+      color: "#7b1b88"
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+
+- type: entity
+  id: ComputerShipyardClownSyn
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: Хонк-Верфь
+  description: Особая верфь для настоящих космо-клоунов!
+  suffix: Синдикат
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.HonkSynd
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.HonkSynd:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _DH/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_clown
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: shipyard
+      color: "#ec1d1d"
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+
+- type: entity
+  id: ScienceMothershipComputer
+  parent: BaseMothershipComputer
+  name: science shipyard console
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_medical
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_clean
+    - map: ["computerLayerScreen"]
+      state: contraband
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ShipyardConsole
+    newAccessLevels: [Captain, Research]
+  - type: ShipyardListing
+    shuttles:
+    - Investigator
+    - GFSYRiman
+    - Lyrae
+    - Pulsar
+    - Victoria
+    - Phoenix
+    - Spectre
+    - MonoKestrel
+    - Sakuratsu
+    - Iapetus

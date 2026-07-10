@@ -3,8 +3,13 @@
   id: ClothingBackpackDuffel
   name: duffel bag
   description: A large duffel bag for holding extra things.
-  categories: [ HideSpawnMenu ] # Frontier
   components:
+  - type: Clothing #DH
+    equipDelay: 2
+    unequipDelay: 1
+    quickEquip: false
+    slots:
+    - back
   - type: Sprite
     sprite: Clothing/Back/Duffels/duffel.rsi
   - type: Storage
@@ -13,8 +18,10 @@
     - 0,0,7,4
   - type: ClothingSpeedModifier
     walkModifier: 1
-    sprintModifier: 0.9
+    sprintModifier: 0.89 #DH
   - type: HeldSpeedModifier
+  - type: StaticPrice #DH
+    price: 60
 
 - type: entity
   parent: NFClothingDuffel # Frontier: ClothingBackpackDuffelNFClothingDuffel
@@ -259,9 +266,9 @@
   - type: Storage
     maxItemSize: Huge
     grid:
-    - 0,0,7,7 # Frontier: Was 0,0,19,9
-  - type: ClothingSpeedModifier
-    sprintModifier: 1 # makes its stats identical to other variants of bag of holding
+    - 0,0,13,8 # Frontier: Was 0,0,19,9 #DH > 0,0,13,8
+  - type: ClothingSpeedModifier #DH
+    sprintModifier: 0.91
   - type: HeldSpeedModifier
   - type: Clothing # Frontier
     sprite: _NF/Clothing/Back/Duffels/holding.rsi # Frontier

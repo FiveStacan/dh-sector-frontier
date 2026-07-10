@@ -148,16 +148,20 @@
   - type: HarpyVisuals
   - type: UltraVision
   - type: LuaSprint # Lua
-    maxSprint: 86
-    drainPerSecond: 8.5
-    regenPerSecond: 8.6
-    regenDelay: 0.17
-    recoverThresholdFraction: 0.20
+    maxSprint: 26
+    drainPerSecond: 8.6
+    regenPerSecond: 8.8
+    regenDelay: 0.20
+    recoverThresholdFraction: 0.32
 #  - type: Tag # Frontier
 #    tags: # Frontier
 #    - CanPilot # Frontier
 #    - FootstepSound # Frontier
 #    - DoorBumpOpener # Frontier
+  - type: LuaJumpAbility
+    jumpDistance: 6.5 #DH
+    jumpThrowSpeed: 2.5
+    sprintCostFraction: 0.85
 
 - type: entity
   save: false

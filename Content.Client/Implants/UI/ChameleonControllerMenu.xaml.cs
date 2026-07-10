@@ -11,6 +11,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Client.Implants.UI;
 
@@ -103,7 +104,7 @@ public sealed partial class ChameleonControllerMenu : FancyWindow
         };
         departmentContainer.AddChild(new Label
         {
-            Text = Loc.GetString(name),
+            Text = FormattedMessage.RemoveMarkupPermissive(Loc.GetString(name)),
         });
 
         return departmentContainer;

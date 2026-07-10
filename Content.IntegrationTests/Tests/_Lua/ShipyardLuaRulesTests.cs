@@ -214,7 +214,7 @@ public sealed class ShipyardLuaRulesTests
         { VesselClass.Expedition, new[] { "ComputerShuttleWithFrontierDisk", "ComputerTabletopShuttleWithFrontierDisk" } },
         { VesselClass.Nfsd, new[] { "ComputerShuttleWithFrontierDisk", "ComputerTabletopShuttleWithFrontierDisk" } },
         { VesselClass.Mercenary, new[] { "ComputerShuttleWithMercenaryDisk", "ComputerTabletopShuttleWithMercenaryDisk" } },
-        { VesselClass.Syndicate, new[] { "ComputerShuttleWithNordfallDisk", "ComputerTabletopShuttleWithNordfallDisk" } },
+        { VesselClass.Syndicate, new[] { "ComputerShuttleWithTypanDisk", "ComputerTabletopShuttleWithTypanDisk" } },
         { VesselClass.Pirate, new[] { "ComputerShuttleWithPirateDisk", "ComputerTabletopShuttleWithPirateDisk" } },
         { VesselClass.Prison, new[] { "ComputerShuttleWithMercenaryDisk", "ComputerTabletopShuttleWithMercenaryDisk" } },
     };
@@ -225,7 +225,7 @@ public sealed class ShipyardLuaRulesTests
         { VesselClass.Expedition, new[] { "CoordinatesDiskFrontier" } },
         { VesselClass.Nfsd, new[] { "CoordinatesDiskFrontier" } },
         { VesselClass.Mercenary, new[] { "CoordinatesDiskMercenary" } },
-        { VesselClass.Syndicate, new[] { "CoordinatesDiskNordfall" } },
+        { VesselClass.Syndicate, new[] { "CoordinatesDiskTypan" } },
         { VesselClass.Pirate, new[] { "CoordinatesDiskPirate" } },
         { VesselClass.Prison, new[] { "CoordinatesDiskPrison" } },
     };

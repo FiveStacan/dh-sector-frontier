@@ -378,3 +378,29 @@
   components:
   - type: BallisticAmmoProvider
     proto: null
+
+- type: entity
+  id: Magazine9x19mmSubMachineGunTopMountedIncendiary
+  name: top-mounted magazine (9x19mm top-mounted Incendiary)
+  parent: Magazine9x19mmSubMachineGunTopMountedFMJ
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: Cartridge9x19mmIncendiary
+    whitelist:
+      tags:
+      - Cartridge9x19mmIncendiary
+    capacity: 30
+
+- type: entity
+  id: Magazine9x19mmSubMachineGunTopMountedUranium
+  name: top-mounted magazine (9x19mm top-mounted Uranium)
+  parent: Magazine9x19mmSubMachineGunTopMountedFMJ
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: Cartridge9x19mmUranium
+    whitelist:
+      tags:
+      - Cartridge9x19mmUranium
+    capacity: 30

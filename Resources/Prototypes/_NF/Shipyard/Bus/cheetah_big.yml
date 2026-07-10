@@ -1,0 +1,32 @@
+# Author Info
+# GitHub: Cheackraze?
+# Discord: Checkraze?
+
+# Maintainer Info
+# GitHub: dvir001
+# Discord: dvir001
+
+# Shuttle Notes:
+# Minimal definition, should not be an actual shipyard entry.
+- type: vessel
+  id: CheetahBig
+  parent: BaseVesselBus
+  shuttlePath: /Maps/_NF/Shuttles/Bus/cheetah_big.yml
+  addComponents:
+
+    - type: IFF
+      color: "#ffffff"
+- type: gameMap
+  id: CheetahBig
+  mapName: 'CheetahBig'
+  mapPath: /Maps/_NF/Shuttles/Bus/cheetah_big.yml
+  minPlayers: 0
+  stations:
+    CheetahBig:
+      stationProto: StandardFrontierBusVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Bus {1}' # Will be overwritten
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

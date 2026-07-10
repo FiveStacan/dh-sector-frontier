@@ -273,9 +273,9 @@
   description: Feels good being the king.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Head/Hats/captain.rsi # Lua
+    sprite: Clothing/Head/Hats/captain.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Head/Hats/captain.rsi # Lua
+    sprite: Clothing/Head/Hats/captain.rsi
   - type: Tag
     tags:
     - PetWearable
@@ -1164,11 +1164,11 @@
   description: A grand, stylish cap worn by the Captain. Shows the station who's in charge.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Head/Hats/capcap.rsi # Lua
+    sprite: Clothing/Head/Hats/capcap.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Head/Hats/capcap.rsi # Lua
+    sprite: Clothing/Head/Hats/capcap.rsi
   - type: Item
-    sprite: _ADT/Clothing/Head/Hats/capcap.rsi # Lua
+    sprite: Clothing/Head/Hats/capcap.rsi
   - type: Tag
     tags:
     - PetWearable

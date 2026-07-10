@@ -27,6 +27,7 @@ public sealed class ParkingConsoleBoundUserInterface : BoundUserInterface
         _menu = this.CreateWindow<ParkingConsoleMenu>();
         _menu.OnPark += _ => SendMessage(new ShipyardConsoleSellMessage());
         _menu.OnRecall += _ => SendMessage(new ShipyardConsolePurchaseMessage(string.Empty));
+        _menu.OnExtendParking += _ => SendMessage(new ExtendParkingTimeMessage());
         _menu.OnDockPortSelected += port => SendMessage(new SelectDockPortMessage(port));
         _menu.TargetIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent("ShipyardConsole-targetId"));
     }

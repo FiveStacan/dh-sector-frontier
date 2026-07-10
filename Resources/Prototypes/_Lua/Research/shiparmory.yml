@@ -1,33 +1,7 @@
-- type: technology
-  id: MachineGCSMediumCircuitboardTech
-  name: research-technology-machine-gcs-medium
-  entityIcon: GunneryServerMedium
-  discipline: Shiparmory
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 3500
-  recipeUnlocks:
-  - MachineGCSMediumCircuitboard
-  position: 14.241, 12.074
-  technologyPrerequisites:
-  - ShuttleGunDuster
-- type: technology
-  id: MachineGCSHighCircuitboardTech
-  name: research-technology-machine-gcs-high
-  entityIcon: GunneryServerHigh
-  discipline: Shiparmory
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - MachineGCSHighCircuitboard
-  position: 19.636, 18.985
-  technologyPrerequisites:
-  - ShiparmoryEnergyTurrets
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
 - type: technology
   id: BasicShuttleWeaponPad
   name: research-technology-basic-weaponpad
@@ -37,13 +11,16 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 10500
+  cost: 16600
+  hiddenTechnologyPrerequisites: #DH
+  - NFSuperParts
   recipeUnlocks:
   - GunneryControlComputerCircuitboard
   - MachineGCSLowCircuitboard
-  position: 2.288, 3.312
-  technologyPrerequisites:
-  - NFSuperParts
+  #- MachineGCSMediumCircuitboard
+  #- MachineGCSHighCircuitboard
+  position: 0, 46
+
 - type: technology
   id: BasicShuttleWeapon
   name: research-technology-basic-weapon
@@ -53,13 +30,14 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 12500
+  cost: 19500
   recipeUnlocks:
   - ShuttleGunKineticCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
   technologyPrerequisites:
   - BasicShuttleWeaponPad
-  position: 3.884, 4.303
+  position: 0, 47
+
 - type: technology
   id: ShuttlePowerCage
   name: research-technology-shuttle-powercage
@@ -69,15 +47,32 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 13500
+  cost: 18000
   recipeUnlocks:
   - PowerCageSmallEmpty
   - PowerCageMediumEmpty
-  - PowerCageHighEmpty
+  #- PowerCageHighEmpty
   - PowerCageRechargerCircuitboard
   technologyPrerequisites:
   - BasicShuttleWeapon
-  position: 4.945, 5.245
+  position: 1, 47
+
+- type: technology
+  id: ShuttlePowerCageHigh
+  name: research-technology-shuttle-powercage-high
+  entityIcon: PowerCageHighEmpty
+  discipline: Shiparmory
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PowerCageHighEmpty
+  technologyPrerequisites:
+  - ShuttlePowerCage
+  position: 1, 48
+
 - type: technology
   id: ShuttleShuttleGunPerforator
   name: research-technology-shuttle-perforator
@@ -87,12 +82,13 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 14800
+  cost: 23800
   recipeUnlocks:
   - ShuttleGunPerforatorCircuitboard
   technologyPrerequisites:
   - ShuttlePowerCage
-  position: 5.927, 6.074
+  position: 1, 46
+
 - type: technology
   id: ShuttleGrenade
   name: research-technology-shuttle-grenade
@@ -102,7 +98,7 @@
   - Nanotrasen
   - Syndicate
   tier: 1
-  cost: 12100
+  cost: 21100
   recipeUnlocks:
   - NFGrenadeBlast
   - NFCannonBall
@@ -110,7 +106,8 @@
   - NFGrenadeFlash
   technologyPrerequisites:
   - ShuttleShuttleGunPerforator
-  position: 7.037, 7.05
+  position: 2, 46
+
 - type: technology
   id: ShuttleFriendshipPirate
   name: research-technology-shuttle-friendshippirate
@@ -120,13 +117,14 @@
   - Nanotrasen
   - Syndicate
   tier: 2
-  cost: 18200
+  cost: 28800
   recipeUnlocks:
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPirateCannonCircuitboard
   technologyPrerequisites:
   - ShuttleGrenade
-  position: 8.419, 8.114
+  position: 2, 47
+
 - type: technology
   id: ShuttleCannonBall
   name: research-technology-shuttle-cannonball
@@ -136,13 +134,14 @@
   - Nanotrasen
   - Syndicate
   tier: 2
-  cost: 16900
+  cost: 30200
   recipeUnlocks:
   - NFCannonBallGrapeshot
   - NFCannonBallGlassshot
   technologyPrerequisites:
   - ShuttleFriendshipPirate
-  position: 9.891, 9.103
+  position: 3, 47
+
 - type: technology
   id: ShuttleGrenadeEMP
   name: research-technology-shuttle-grenadeemp
@@ -152,13 +151,14 @@
   - Nanotrasen
   - Syndicate
   tier: 2
-  cost: 14800
+  cost: 27800
   recipeUnlocks:
   - NFGrenadeEMP
   - NFGrenadeBaton
   technologyPrerequisites:
   - ShuttleCannonBall
-  position: 11.408, 9.971
+  position: 3, 46
+
 - type: technology
   id: ShuttleGunDuster
   name: research-technology-shuttle-gunduster
@@ -168,11 +168,43 @@
   - Nanotrasen
   - Syndicate
   tier: 2
-  cost: 21100
+  cost: 38400
   recipeUnlocks:
   - NFMagazineGrenadeEmpty
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - ShuttleGrenadeEMP
-  position: 12.929, 10.948
-...
+  position: 4, 46
+
+#Lua
+- type: technology
+  id: MachineGCSMediumCircuitboardTech
+  name: research-technology-machine-gcs-medium
+  entityIcon: GunneryServerMedium
+  discipline: Shiparmory
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - MachineGCSMediumCircuitboard
+  position: 5, 46
+  technologyPrerequisites:
+  - ShuttleGunDuster
+
+- type: technology
+  id: MachineGCSHighCircuitboardTech
+  name: research-technology-machine-gcs-high
+  entityIcon: GunneryServerHigh
+  discipline: Shiparmory
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - MachineGCSHighCircuitboard
+  position: 19.636, 18.985
+  technologyPrerequisites:
+  - ShiparmoryEnergyTurrets

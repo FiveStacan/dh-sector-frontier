@@ -14,6 +14,8 @@ public sealed class FireControlConsoleBoundUserInterface : BoundUserInterface
     [ViewVariables]
     private FireControlWindow? _window;
 
+    private readonly List<HashSet<NetEntity>> _weaponPresets = new();
+
     public FireControlConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
     }
@@ -22,6 +24,7 @@ public sealed class FireControlConsoleBoundUserInterface : BoundUserInterface
     {
         base.Open();
         _window = this.CreateWindow<FireControlWindow>();
+        _window.SetPresetStorage(_weaponPresets);
 
         _window.OnServerRefresh += OnRefreshServer;
 

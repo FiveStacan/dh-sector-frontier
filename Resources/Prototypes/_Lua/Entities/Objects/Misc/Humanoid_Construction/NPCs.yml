@@ -417,7 +417,7 @@
   components:
   - type: NpcFactionMember
     factions:
-    - LuaNordFoll
+    - LuaTypan
   - type: AutoWakeUp
 #монтаж и демонтаж
   - type: Construction

@@ -18,3 +18,10 @@
   keycode: 'л' # Lua
   frequency: 1024
   color: "#ff4fdf"
+
+- type: radioChannel
+  id: Pirate
+  name: chat-radio-pirate
+  keycode: 'з' # Lua
+  frequency: 6571
+  color: "#7a6a47"

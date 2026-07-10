@@ -703,7 +703,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         if (component.ParkingConsole)
         {
-            RefreshParkingState(uid, deed != null ? GetFullName(deed) : null, targetId);
+            RefreshParkingState(uid, player, deed != null ? GetFullName(deed) : null, targetId);
             return;
         }
 
@@ -820,7 +820,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
             if (component.ParkingConsole)
             {
-                RefreshParkingState(uid, deed != null ? GetFullName(deed) : null, targetId);
+                RefreshParkingState(uid, player, deed != null ? GetFullName(deed) : null, targetId);
                 continue;
             }
 

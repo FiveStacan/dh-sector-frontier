@@ -132,3 +132,65 @@
   parent: BaseAmmoCausticIntermediateAmmoBoxRecipe
   id: AmmoBox556x45mmCaustic
   result: AmmoBox556x45mmCaustic
+
+#Big Boxes
+
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigFMJ
+  result: AmmoBox556x45mmBigFMJ
+  materials:
+    Steel: 4500
+
+- type: latheRecipe
+  parent: BaseAmmoRubberIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigRubber
+  result: AmmoBox556x45mmBigRubber
+  materials:
+    Plastic: 2000
+    Steel: 2500
+
+- type: latheRecipe
+  parent: BaseAmmoIncendiaryIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigIncendiary
+  result: AmmoBox556x45mmBigIncendiary
+  materials:
+    Plastic: 4500
+
+- type: latheRecipe
+  parent: BaseAmmoPracticeIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigPractice
+  result: AmmoBox556x45mmBigPractice
+  materials:
+    Steel: 4500
+
+- type: latheRecipe
+  parent: BaseAmmoUraniumIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigUranium
+  result: AmmoBox556x45mmBigUranium
+  materials:
+    Plastic: 2500
+    Uranium: 2000
+
+- type: latheRecipe
+  parent: BaseAmmoHPIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigHP
+  result: AmmoBox556x45mmBigHP
+  materials:
+    Steel: 6500
+
+- type: latheRecipe
+  parent: BaseAmmoEMPIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigEMP
+  result: AmmoBox556x45mmBigEMP
+  materials:
+    Steel: 2500
+    Gold: 2000
+
+- type: latheRecipe
+  parent: BaseAmmoCausticIntermediateAmmoBoxRecipe
+  id: AmmoBox556x45mmBigCaustic
+  result: AmmoBox556x45mmBigCaustic
+  materials:
+    Steel: 2500
+    Brass: 2000

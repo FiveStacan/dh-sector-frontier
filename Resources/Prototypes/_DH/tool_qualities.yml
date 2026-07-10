@@ -1,0 +1,6 @@
+- type: tool
+  id: MedievalBlacksmithing
+  name: tool-quality-medieval-blacksmithing-name
+  toolName: tool-quality-medieval-blacksmithing-tool-name
+  spawn: Welder
+  icon: { sprite: Objects/Tools/welder.rsi, state: icon }

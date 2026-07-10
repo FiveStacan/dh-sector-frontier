@@ -49,7 +49,7 @@
     - state: fire-effect
       map: ["effect"]
   - type: Gun
-    fireRate: 0.25
+    fireRate: 0.24
     soundGunshot:
       path: /Audio/Magic/fireball.ogg
   - type: BasicEntityAmmoProvider

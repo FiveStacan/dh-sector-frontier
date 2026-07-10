@@ -1,0 +1,15 @@
+- type: construction
+  id: PrisonerGreyArmored
+  graph: PrisonerGreyArmored
+  startNode: start
+  targetNode: PrisonerArmored
+  category: construction-category-clothing
+  objectType: Item
+
+- type: construction
+  id: ChargedBluecrystal
+  graph: ChargedBluecrystal
+  startNode: start
+  targetNode: icon
+  category: construction-category-misc
+  objectType: Item

@@ -124,11 +124,11 @@
   - type: ProtectedFromStepTriggers # Frontier
   - type: FTLKnockdownImmune # Frontier
   - type: LuaSprint # Lua
-    maxSprint: 138
-    drainPerSecond: 4.6
-    regenPerSecond: 5.6
-    regenDelay: 0.42
-    recoverThresholdFraction: 0.36
+    maxSprint: 41
+    drainPerSecond: 4.8
+    regenPerSecond: 5.2
+    regenDelay: 0.50
+    recoverThresholdFraction: 0.45
 
 - type: entity
   parent: BaseSpeciesDummy

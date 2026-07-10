@@ -87,17 +87,17 @@ CircularShieldBase: ShieldGeneratorSmall
 CircularShieldConsole: ComputerFrame
 
 # 2025-11-07
-BusSchedule: null
-BusScheduleRoute1: null
-BusScheduleRoute2: null
-BusScheduleRoute3: null
-CargoTechFabNF: null
-McServiceTechFab: null
-PirateTechFab: null
-SalvageTechfabNF: null
-ServiceTechFab: null
-EngineeringTechFab: null
-MercenaryTechFabHacked: null
+#BusSchedule: null
+#BusScheduleRoute1: null
+#BusScheduleRoute2: null
+#BusScheduleRoute3: null
+#CargoTechFabNF: null
+#McServiceTechFab: null
+#PirateTechFab: null
+#SalvageTechfabNF: null
+#ServiceTechFab: null
+#EngineeringTechFab: null
+#MercenaryTechFabHacked: null
 RMCAmmoTechFab: null
 
 # 2026-01-02
@@ -222,11 +222,16 @@ MagazineBoxRiflePractice: AmmoBox556x45mmPractice
 MagazineBoxRifleRubber: AmmoBox556x45mmRubber
 MagazineBoxRifleUranium: AmmoBox556x45mmUranium
 
-# NFAmmunitionBoxBigRifle20: AmmoBox556x45mmBigFMJ
-# NFAmmunitionBoxBigRifle20Rubber: AmmoBox556x45mmBigRubber
+NFAmmunitionBoxBigRifle20: AmmoBox556x45mmBigFMJ
+NFAmmunitionBoxBigRifle20Rubber: AmmoBox556x45mmBigRubber
+NFAmmunitionBoxBigRifle20Overpressure: AmmoBox556x45mmBigHP
+NFAmmunitionBoxBigRifle20Incendiary: AmmoBox556x45mmBigIncendiary
+NFAmmunitionBoxBigRifle20Uranium: AmmoBox556x45mmBigUranium
+NFAmmunitionBoxBigRifle20Practice: AmmoBox556x45mmBigPractice
 
-# MagazineBoxRifleBig: AmmoBox556x45mmBigFMJ
-# MagazineBoxRifleBigRubber: AmmoBox556x45mmBigRubber
+
+MagazineBoxRifleBig: AmmoBox556x45mmBigFMJ
+MagazineBoxRifleBigRubber: AmmoBox556x45mmBigRubber
 
 # MagazineLightRifleBox: NFMagazineBoxRifle556x45
 
@@ -305,17 +310,20 @@ MagazineLightRifleUranium: Magazine762x39mmUranium
 
 # Low capacity
 
-# NFMagazineLowCapacityRifle30: Magazine762x39mmLowCapacityFMJ
-# NFMagazineLowCapacityRifle30Empty: Magazine762x39mmLowCapacityEmpty
-# NFMagazineLowCapacityRifle30Practice: Magazine762x39mmLowCapacityPractice
-# NFMagazineLowCapacityRifle30Rubber: Magazine762x39mmLowCapacityRubber
-# NFMagazineLowCapacityRifle30Uranium: Magazine762x39mmLowCapacityUranium
+NFMagazineLowCapacityRifle30: Magazine762x39mmLowCapacityFMJ
+NFMagazineLowCapacityRifle30Empty: Magazine762x39mmLowCapacityEmpty
+NFMagazineLowCapacityRifle30Practice: Magazine762x39mmLowCapacityPractice
+NFMagazineLowCapacityRifle30Rubber: Magazine762x39mmLowCapacityRubber
+NFMagazineLowCapacityRifle30Uranium: Magazine762x39mmLowCapacityUranium
+NFMagazineLowCapacityRifle30Incendiary: Magazine762x39mmLowCapacityIncendiary
+NFMagazineLowCapacityRifle30Overpressure: Magazine762x39mmLowCapacityHP
 
-# MagazineLightRifleLowCapacity: Magazine762x39mmLowCapacityFMJ
-# MagazineLightRifleLowCapacityEmpty: Magazine762x39mmLowCapacityEmpty
-# MagazineLightRifleLowCapacityPractice: Magazine762x39mmLowCapacityPractice
-# MagazineLightRifleLowCapacityRubber: Magazine762x39mmLowCapacityRubber
-# MagazineLightRifleLowCapacityUranium: Magazine762x39mmLowCapacityUranium
+MagazineLightRifleLowCapacity: Magazine762x39mmLowCapacityFMJ
+MagazineLightRifleLowCapacityEmpty: Magazine762x39mmLowCapacityEmpty
+MagazineLightRifleLowCapacityPractice: Magazine762x39mmLowCapacityPractice
+MagazineLightRifleLowCapacityRubber: Magazine762x39mmLowCapacityRubber
+MagazineLightRifleLowCapacityUranium: Magazine762x39mmLowCapacityUranium
+MagazineLightRifleLowCapacityIncendiary: Magazine762x39mmLowCapacityIncendiary
 
 # Cartrige
 

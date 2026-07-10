@@ -1,0 +1,24 @@
+- type: entity
+  id: StorePresetNTUplink
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-ntuplink
+    categories:
+    - NTAutoGun
+    - NTLasers
+    - NTPistols
+    - NTAmmo
+    - NTMedicine
+    - NTAdditional
+    - NTexplosive
+    - NTMechs
+    - NTSanitary
+    - NTEngineering
+    #- NTCBURN
+    - NTEquipment
+    currencyWhitelist:
+    - Bluecrystal
+    - Crystallite
+    balance:
+      Telecrystal: 0

@@ -113,6 +113,15 @@
     id: ClothingNeckAmuletBloodCult
 
 - type: pirateBounty
+  id: PirateBountyStaminaNecklace
+  reward: 6
+  description: pirate-bounty-description-generic
+  entries:
+  - name: pirate-bounty-item-amuletStamina
+    amount: 1
+    id: ClothingNeckAmuletStamina
+
+- type: pirateBounty
   id: PirateBountyNfsdCampaign
   reward: 4
   description: pirate-bounty-description-generic

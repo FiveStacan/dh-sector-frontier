@@ -32,7 +32,7 @@
 # Bee Station tiles
 
 - type: latheRecipe
-  parent: BaseSteelTileRecipe 
+  parent: BaseSteelTileRecipe
   id: FloorTileItemSteelGreyMonoCommercial
   result: FloorTileItemSteelGreyMonoCommercial
 
@@ -61,19 +61,33 @@
   id: FloorTileItemSteelCommercial
   result: FloorTileItemSteelCommercial
 
-# LuaWorld
+# LuaWorld #DH
 
 - type: latheRecipe
   parent: BaseWoodTileRecipe
-  id: FloorTileItemRedWood
-  result: FloorTileItemRedWood
+  id: FloorTileItemWoodRedOLD
+  result: FloorTileItemWoodRedOLD
 
 - type: latheRecipe
   parent: BaseWoodTileRecipe
-  id: FloorTileItemDarkWood
-  result: FloorTileItemDarkWood
+  id: FloorTileItemWoodDarkOLD
+  result: FloorTileItemWoodDarkOLD
 
 - type: latheRecipe
   parent: BaseWoodTileRecipe
   id: FloorTileItemSoft
   result: FloorTileItemSoft
+
+
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: FloorTileItemBluespace
+  result: FloorTileItemBluespace
+  materials:
+    Steel: 20
+    Bluespace: 10
+
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: FloorTileItemSepia
+  result: FloorTileItemSepia

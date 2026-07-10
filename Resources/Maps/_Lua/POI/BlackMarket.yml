@@ -17351,13 +17351,13 @@ entities:
     - type: Transform
       pos: 40.5,-9.5
       parent: 1
-- proto: MercenaryTechFabStation
-  entities:
-  - uid: 1749
-    components:
-    - type: Transform
-      pos: 37.5,-18.5
-      parent: 1
+#- proto: MercenaryTechFabStation
+#  entities:
+#  - uid: 1749
+#    components:
+#    - type: Transform
+#      pos: 37.5,-18.5
+#      parent: 1
 - proto: NitrogenCanister
   entities:
   - uid: 1427

@@ -19,7 +19,7 @@
   heatCapacity: 10000
 
 - type: tile
-  id: FloorWoodRed
+  id: FloorWoodRedOLD #DH
   name: tiles-woodred
   sprite: /Textures/_Lua/Tiles/wood_red.png
   variants: 4
@@ -35,11 +35,11 @@
     collection: FootstepWood
   barestepSounds:
     collection: BarestepWood
-  itemDrop: FloorTileItemRedWood
+  itemDrop: FloorTileItemWoodRedOLD #DH
   heatCapacity: 10000
 
 - type: tile
-  id: FloorWoodDark
+  id: FloorWoodDarkOLD
   name: tiles-woodblack
   sprite: /Textures/_Lua/Tiles/wood_black.png
   variants: 4
@@ -55,7 +55,7 @@
     collection: FootstepWood
   barestepSounds:
     collection: BarestepWood
-  itemDrop: FloorTileItemDarkWood
+  itemDrop: FloorTileItemWoodDarkOLD
   heatCapacity: 10000
 
   # Hull Reinforced Corners

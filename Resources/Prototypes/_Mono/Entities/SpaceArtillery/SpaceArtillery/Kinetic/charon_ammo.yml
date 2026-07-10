@@ -8,8 +8,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 90000
-        Blunt: 5000
+        Structural: 3000
+        Blunt: 600
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -23,7 +23,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 1.7
+    lifetime: 1.6
   - type: PointLight
     color: "#19AFFF"
   - type: ExplodeOnTrigger

@@ -1,0 +1,9 @@
+- type: entity
+  parent: SeedBase
+  name: packet of apple seeds
+  id: RedAppleSeeds
+  components:
+    - type: Seed
+      seedId: redApple
+    - type: Sprite
+      sprite: _DH/Objects/Specific/Hydroponics/red_apple.rsi

@@ -21,13 +21,13 @@
 
 - type: entity
   parent: [CoordinatesDisk, BaseC3SyndicateContraband]
-  id: CoordinatesDiskNordfall
-  name: coordinates disk (Nordfall)
+  id: CoordinatesDiskTypan
+  name: coordinates disk (Typan)
   components:
   - type: StarMapCoordinatesDisk
     allowedSectors:
-    - Nordfall Sector
-    - Asteroid Field
+    - Typan Sector
+    - Typan Field
     allowedSectorIds:
     - TypanSector
     - AsteroidSectorDefault
@@ -131,7 +131,7 @@
   - type: StarMapCoordinatesDisk
     allowedSectors:
     - Frontier Sector
-    - Nordfall Sector
+    - Typan Sector
     - LuaTech Sector
     - Pirate Sector
     - Mercenary Sector

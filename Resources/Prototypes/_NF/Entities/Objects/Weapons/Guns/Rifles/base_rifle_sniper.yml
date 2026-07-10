@@ -38,6 +38,22 @@
     pvsIncrease: 1
   - type: NFWeaponDetails
     class: weapon-details-class-sniper
+  - type: MeleeWeapon
+    attackRate: 0.85
+    damage:
+      types:
+        Blunt: 4
+        Structural: 4
+    angle: 30
+    wideAnimationRotation: 90
+    animation: WeaponArcThrust
+    soundHit:
+      collection: MetalThud
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 3
+        Structural: 2
 
 #region manufacturer
 - type: entity

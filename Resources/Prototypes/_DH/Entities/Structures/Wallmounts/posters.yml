@@ -1,0 +1,35 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitWalkPrison
+  name: Ходи! Зек
+  description: Плакат, призывающий заключенным ходить пешком, а не бегать. "Помни, охранники считают бег подозрительным!"
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _DH/Structures/Wallmounts/posters.rsi
+    snapCardinals: true
+    state: poster1
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitPrisonSecWatch
+  name: охранники видят
+  description: Охранники следят за каждым вашим шагом.
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _DH/Structures/Wallmounts/posters.rsi
+    snapCardinals: true
+    state: poster2
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitPrisonPrisonRules
+  name: запреты тюрьмы
+  description: zz
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _DH/Structures/Wallmounts/posters.rsi
+    snapCardinals: true
+    state: poster3

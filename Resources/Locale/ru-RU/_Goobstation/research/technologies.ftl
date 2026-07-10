@@ -3,4 +3,5 @@ research-technology-clarke = Кларк
 research-technology-gygax = Гигакс
 research-technology-durand = Дюранд
 research-technology-explosive-mech-ammunition = Ракетная установка для мехов
+research-technology-explosive-mech-ammunition-2 = Ракетная установка для мехов II
 research-technology-honk-weapons = Бананиумное вооружение

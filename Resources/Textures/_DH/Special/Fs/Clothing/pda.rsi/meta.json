@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "license": "CC-BY-SA-4.0",
-    "copyright": "Created by hq._.dishka (discord) for Space Station 14 server Dead Space",
+    "license":"CC-BY-SA-4.0",
+    "copyright":"Make for Dark Haven, by discord: FiveStacan",
     "size": {
       "x": 32,
       "y": 32
@@ -15,7 +15,7 @@
 			0.2,
 			0.3,
 			0.2
-		  ]	
+		  ]
 		]
       },
       {
@@ -48,7 +48,7 @@
 			0.6,
 			0.7,
 			0.6
-		  ]	
+		  ]
 		]
       }
     ]

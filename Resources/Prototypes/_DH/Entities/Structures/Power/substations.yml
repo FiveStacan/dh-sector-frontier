@@ -1,0 +1,37 @@
+- type: entity
+  id: OldSubstation
+  parent: BaseSubstation
+  name: старая подстанция
+  description: Понижает напряжение подаваемого в него электричества.
+  suffix: 2,2 МдЖ
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Power/substation_old.rsi
+    snapCardinals: true
+    layers:
+    - state: substation
+    - state: screen
+      shader: unshaded
+    - state: full
+      shader: unshaded
+  - type: UpgradeBattery
+    maxChargeMultiplier: 2
+    baseMaxCharge: 2200000
+
+- type: entity
+  id: OldSubstationWall
+  parent: BaseSubstationWall
+  name: старая настенная подстанция
+  description: Понижает напряжение подаваемого в него электричества.
+  suffix: 1,5 МдЖ
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _DH/Structures/Power/substation_old.rsi
+    layers:
+    - state: substation_wall
+    - state: substation_wall_static
+      shader: unshaded
+  - type: Battery
+    maxCharge: 1500000
+    startingCharge: 0

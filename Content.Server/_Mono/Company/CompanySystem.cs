@@ -27,8 +27,8 @@ public sealed class CompanySystem : EntitySystem
         "SeniorOfficer", // Sergeant
         "Deputy",
         "Brigmedic",
-        "NFDetective" // Lua ,< 
-        //"PublicAffairsLiaison", // Lua off
+        "NFDetective", // Lua ,<
+        "PublicAffairsLiaison" // Lua off
         // "DirectorOfCare" // Lua off
     };
 
@@ -127,17 +127,17 @@ public sealed class CompanySystem : EntitySystem
         if (_prototypeManager.TryIndex<CompanyPrototype>(component.CompanyName, out var prototype) && component.CompanyName != "None")
         {
             // Use the color from the prototype with gender-appropriate pronoun
-            args.PushMarkup(Loc.GetString("examine-company", 
-                ("entity", uid), 
-                ("company", $"[color={prototype.Color.ToHex()}]{prototype.Name}[/color]")), 
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color={prototype.Color.ToHex()}]{prototype.Name}[/color]")),
                 priority: 100); // Much higher priority (100) will ensure it's at the top
         }
         else if (component.CompanyName != "None")
         {
             // Fallback for companies without prototypes
-            args.PushMarkup(Loc.GetString("examine-company", 
-                ("entity", uid), 
-                ("company", $"[color=yellow]{component.CompanyName}[/color]")), 
+            args.PushMarkup(Loc.GetString("examine-company",
+                ("entity", uid),
+                ("company", $"[color=yellow]{component.CompanyName}[/color]")),
                 priority: 100);
         }
         // Don't show anything for "None" company

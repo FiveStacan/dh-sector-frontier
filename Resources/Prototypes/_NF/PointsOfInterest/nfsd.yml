@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'Аванпост СРБС'
+  name: 'Аванпост ДСБФ'
   minimumDistance: 2000 #750 Lua
   maximumDistance: 3000 #1000 Lua
   spawnGroup: Required
@@ -23,10 +23,13 @@
     allowWhenHidden: true
   - type: IFF
     color: "#ae7d57"
+  - type: StationTransit
+    routes:
+      SpawnPoints: 10
 
 - type: gameMap
   id: Nfsd
-  mapName: 'Аванпост СРБС'
+  mapName: 'Аванпост ДСБФ'
   mapPath: /Maps/_Lua/POI/DSNfsd.yml
   minPlayers: 0
   stations:
@@ -34,7 +37,7 @@
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Аванпост СРБС'
+          mapNameTemplate: 'Аванпост ДСБФ'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
           stationSubtext: 'frontier-lobby-nfsd-subtext'
@@ -47,12 +50,12 @@
             SeniorOfficer: [ 2, 2 ]
             Brigmedic: [ 2, 2 ]
             SDEngineer: [ 2, 2 ]
-#            NFDetective: [ 1, 1 ]
+            NFDetective: [ 1, 1 ]
             Deputy: [ 4, 4 ]
             Cadet: [ 8, 8 ]
             # Others:
-#            PublicAffairsLiaison: [ 1, 1 ]
-#            Prisoner: [ 0, 0 ]
+            PublicAffairsLiaison: [ 1, 1 ]
+            Prisoner: [ 0, 0 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity

@@ -790,6 +790,8 @@
         color: "#aeb7bd"
       - state: equipped-decor-epaulets
         color: "#ffce5b"
+  - type: StaticPrice #DH
+    price: 40
 
 - type: entity
   parent: ClothingUniformJumpsuitHoP

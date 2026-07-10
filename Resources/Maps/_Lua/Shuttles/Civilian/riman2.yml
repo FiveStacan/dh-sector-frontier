@@ -4345,7 +4345,7 @@ entities:
       parent: 1
 - proto: WarpPoint
   entities:
-  - uid: 566
+  - uid: 579
     components:
     - type: Transform
       rot: 3.141592653589793 rad

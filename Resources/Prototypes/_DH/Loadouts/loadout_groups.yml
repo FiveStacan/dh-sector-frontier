@@ -1,0 +1,109 @@
+
+- type: loadoutGroup
+  id: SecurityTrinkets
+  name: loadout-group-security-trinkets
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - SecurityBodycam
+#  - SecurityPepperspray
+  - SecurityWhistle
+  - SecurityRadioHandheld
+  - SecurityTourniquet
+  - SecurityWeaponMeleeNeedle
+  - SecurityHoloprojector
+
+- type: loadoutGroup
+  id: PrisonGuardEars
+  name: loadout-group-prison-guard-Ears
+  loadouts:
+  - ClothingHeadsetPrison
+
+- type: loadoutGroup
+  id: PrisonGuardJumpsuit
+  name: loadout-group-prison-guard-jumpsuit
+  loadouts:
+  - PrisonGuardJumpsuit
+  - PrisonGuardJumpskirt
+  - PrisonGuardJumpsuitOld
+
+- type: loadoutGroup
+  id: PermaPrisonerJumpsuit
+  name: loadout-group-prisoner-jumpsuit
+  loadouts:
+  - PermaPrisonerJumpsuit
+  - PermaPrisonerJumpskirt
+  fallbacks:
+  - PermaPrisonerJumpsuit
+  - PermaPrisonerJumpskirt
+
+- type: loadoutGroup
+  id: PrisonGuardBackpack
+  name: loadout-group-prison-guard-backpack
+  loadouts:
+  - PrisonGuardBackpack
+  - PrisonGuardSatchel
+  - PrisonGuardDuffel
+
+- type: loadoutGroup
+  id: PrisonGuardHead
+  name: loadout-group-prison-guard-head
+  minLimit: 0
+  loadouts:
+  - HeadHatBeretPrisonGuard
+  - HeadPrisonGuard
+  - HeadCapPrisonGuard
+
+- type: loadoutGroup
+  id: PrisonMedicalMask
+  name: loadout-group-medical-mask
+  minLimit: 0
+  loadouts:
+  - SterileMask
+  - ClothingMaskBreathMedical
+  - ClothingMaskBreathMedicalSecurity
+
+- type: loadoutGroup
+  id: PrisonGuardGlasses
+  name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ClothingEyesGlassesSecurity
+  - ClothingEyesGlassesNfsd
+  - ClothingEyesHudSecurity
+  - NfsdClothingEyesGlasses
+  - ClothingEyesHudNfsd
+  - ClothingEyesEyepatchHudSecurity
+  - ClothingEyesEyepatchHudSecurityFlipped
+  - ClothingEyesHudNfsdPatch
+  - ClothingEyesHudMedSec
+  fallbacks:
+  - ClothingEyesGlassesSecurity
+
+- type: loadoutGroup
+  id: PrisonGuardShoes
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - ClothingShoesBootsJackFilled
+  - ClothingShoesBootsCombatFilled
+  - NfsdClothingShoesBootsBrown
+  - NfsdClothingShoesBootsCream
+  fallbacks:
+  - ClothingShoesBootsJackFilled
+
+- type: loadoutGroup
+  id: PrisonGuardGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - NfsdClothingHandsGlovesCombatNfsdBrown
+  - NfsdClothingHandsGlovesCombatNfsdCream
+  fallbacks:
+  - DHClothingHandsGlovesCombat
+
+- type: loadoutGroup
+  id: PrisonGuardPDA
+  name: loadout-group-prison-guard-pda
+  loadouts:
+  - PrisonGuardPDA

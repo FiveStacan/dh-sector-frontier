@@ -74,6 +74,16 @@ public sealed partial class TechnologyPrototype : IPrototype
     public List<ProtoId<TechnologyPrototype>> TechnologyPrerequisites = new();
 
     /// <summary>
+    /// A list of <see cref="TechnologyPrototype"/>s that need to be unlocked in order to unlock this technology,
+    /// but should not draw prerequisite connection lines in the research console.
+    /// </summary>
+    [DataField("hiddenTechnologyPrerequisites")]
+    public List<ProtoId<TechnologyPrototype>> HiddenTechnologyPrerequisites = new();
+
+    [DataField("HiddenTechnologyPrerequisites")]
+    public List<ProtoId<TechnologyPrototype>> HiddenTechnologyPrerequisitesUpper = new();
+
+    /// <summary>
     /// A list of <see cref="LatheRecipePrototype"/>s that are unlocked by this technology
     /// </summary>
     [DataField]
@@ -137,6 +147,12 @@ public sealed partial class TechnologyFactionOverride
 
     [DataField]
     public List<ProtoId<TechnologyPrototype>>? TechnologyPrerequisites;
+
+    [DataField("hiddenTechnologyPrerequisites")]
+    public List<ProtoId<TechnologyPrototype>>? HiddenTechnologyPrerequisites;
+
+    [DataField("HiddenTechnologyPrerequisites")]
+    public List<ProtoId<TechnologyPrototype>>? HiddenTechnologyPrerequisitesUpper;
 }
 
 [DataDefinition]

@@ -4,21 +4,21 @@
   id: N14PoliceBaton
   components:
   - type: StaminaDamageOnHit
-    damage: 20
+    damage: 25
   - type: StaminaDamageOnCollide
-    damage: 20
+    damage: 14
   - type: MeleeWeapon
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 8
+        Blunt: 7
     soundSwing:
       collection: N14BaseballBatSwing
   - type: Sprite
     sprite: _Nuclear14/Objects/Weapons/Melee/policebaton.rsi
     state: icon
   - type: Item
-    size: Normal 
+    size: Normal
   - type: Clothing
     sprite: _Nuclear14/Objects/Weapons/Melee/policebaton.rsi
     quickEquip: false
@@ -35,7 +35,7 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 24
+        Blunt: 18
     soundSwing:
       collection: N14LargeSwing
   - type: Sprite

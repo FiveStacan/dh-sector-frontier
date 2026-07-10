@@ -5,24 +5,33 @@
     <BoxContainer Orientation="Horizontal"
                   HorizontalExpand="True">
         <!-- Lua start -->
-        <TextureRect Name="ClassIcon"
-                     SetSize="16 16"
-                     Stretch="KeepAspectCentered"
-                     Access="Public"
-                     Margin="6"/>
+        <BoxContainer Name="ClassIcons"
+                      Orientation="Horizontal"
+                      Access="Public"
+                      Margin="6 0"
+                      MinWidth="28"
+                      VerticalAlignment="Center"/>
         <!-- Lua end -->
         <Label Name="VesselName"
-            Access="Public"
-            HorizontalExpand="True" />
+               Access="Public"
+               HorizontalExpand="True"
+               VerticalAlignment="Center" />
         <!-- Lua start -->
-        <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" HorizontalExpand="True">
-            <TextureRect Name="EngineIcon"
-                         SetSize="28 28"
-                         Stretch="KeepAspectCentered"
-                         Access="Public"
-                         TextureScale="2 2"
-                         Margin="6 0"/>
-            <Label Name="CategoryLabel" Access="Public"/>
+        <BoxContainer Orientation="Horizontal"
+                      HorizontalAlignment="Left"
+                      HorizontalExpand="True"
+                      VerticalAlignment="Center">
+            <BoxContainer Name="EngineIcons"
+                          Orientation="Horizontal"
+                          Access="Public"
+                          Margin="6 0"
+                          MinWidth="42"
+                          VerticalAlignment="Center"/>
+            <Label Name="CategoryLabel"
+                   Access="Public"
+                   MinWidth="88"
+                   MaxWidth="88"
+                   VerticalAlignment="Center"/>
         </BoxContainer>
         <!-- Lua end -->
         <Label Name="Price"

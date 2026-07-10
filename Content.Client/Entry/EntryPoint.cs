@@ -138,6 +138,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("stationGoal");
             _prototypeManager.RegisterIgnore("codewordGenerator");
             _prototypeManager.RegisterIgnore("codewordFaction");
+            _prototypeManager.RegisterIgnore("publicTransitRoute"); // Frontier: worldgen-related, server-only
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();

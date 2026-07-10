@@ -11,7 +11,7 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
-  id: CraftChemBag
+  id: ChemBag
   result: ChemBag
   categories:
   - Tools
@@ -22,7 +22,7 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
-  id: CraftMedicalBag
+  id: MedicalBag
   result: MedicalBag
   categories:
   - Tools

@@ -174,17 +174,17 @@
   # .30 Rifle
     Magazine762x39mmEmpty: 4294967295 #Lua 30 -> 762x39
     Magazine762x39mmFMJ: 4294967295 #Lua 30 -> 762x39
-    #NFMagazineRifle30Overpressure: 4294967295 Lua ignored
+    Magazine762x39mmHP: 4294967295 #Lua 30 -> 762x39
     Magazine762x39mmIncendiary: 4294967295 #Lua 30 -> 762x39
     Magazine762x39mmUranium: 4294967295 #Lua 30 -> 762x39
     Magazine762x39mmPractice: 4294967295 #Lua 30 -> 762x39
     Magazine762x39mmRubber: 4294967295 #Lua 30 -> 762x39
-    #Magazine762x39mmLowCapacityEmpty: 4294967295 #Lua 30 -> 762x39
-    #NFMagazineLowCapacityRifle30Overpressure: 4294967295 Lua ignored
-    #Magazine762x39mmLowCapacityIncendiary: 4294967295 #Lua 30 -> 762x39
-    #Magazine762x39mmLowCapacityUranium: 4294967295 #Lua 30 -> 762x39
-    #Magazine762x39mmLowCapacityPractice: 4294967295 #Lua 30 -> 762x39
-    #Magazine762x39mmLowCapacityRubber: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityEmpty: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityHP: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityIncendiary: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityUranium: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityPractice: 4294967295 #Lua 30 -> 762x39
+    Magazine762x39mmLowCapacityRubber: 4294967295 #Lua 30 -> 762x39
   # ASMGT turret
     MagazineAsmgtUniversalEmpty: 4294967295
     MagazineAsmgtUniversalPistol: 4294967295
@@ -243,7 +243,7 @@
     NFAmmunitionBoxBigRifle10Rubber: 4294967295
   # .20 Rifle
     AmmoBox556x45mmFMJ: 4294967295 #Lua 20 -> 556x45
-    #AmmoBox556x45mmBigFMJ: 4294967295 #Lua -> 556x45
+    AmmoBox556x45mmBigFMJ: 4294967295 #Lua -> 556x45
     #NFAmmunitionBoxRifle20Overpressure: 4294967295 Lua ignored
     #NFAmmunitionBoxBigRifle20Overpressure: 4294967295 Lua ignored
     AmmoBox556x45mmIncendiary: 4294967295 #Lua 20 -> 556x45
@@ -253,7 +253,7 @@
     AmmoBox556x45mmPractice: 4294967295 #Lua 20 -> 556x45
     #NFAmmunitionBoxBigRifle20Practice: 4294967295 Lua ignored
     AmmoBox556x45mmRubber: 4294967295 #Lua 20 -> 556x45
-    #AmmoBox556x45mmBigRubber: 4294967295 #Lua 20 -> 556x45
+    AmmoBox556x45mmBigRubber: 4294967295 #Lua 20 -> 556x45
   # .25 Rifle
     NFAmmunitionBoxRifle25: 4294967295
     NFAmmunitionBoxBigRifle25: 4294967295

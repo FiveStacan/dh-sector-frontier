@@ -1,7 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Administration.Logs;
+using Content.Server.DeviceLinking.Systems;
 using Content.Server.Radio.EntitySystems;
+using Content.Shared.DeviceLinking;
 using Content.Shared.Access.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Research.Components;
@@ -10,6 +12,7 @@ using Content.Server.GameTicking.Events; // Dark Haven - persistence re-link at 
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Research.Systems
 {
@@ -22,7 +25,12 @@ namespace Content.Server.Research.Systems
         [Dependency] private readonly EntityLookupSystem _lookup = default!;
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
+        [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly DeviceLinkSystem _deviceLink = default!;
         // [Dependency] private readonly RadioSystem _radio = default!; // Frontier
+
+        private const string ResearchServerLinkPort = "ResearchServerSender";
+        private const string ResearchConsoleLinkPort = "ResearchConsoleReceiver";
 
         private readonly HashSet<Entity<ResearchServerComponent>> ClientLookup = new(); // Frontier: not static
 
@@ -126,16 +134,74 @@ namespace Content.Server.Research.Systems
         {
             ClientLookup.Clear();
 
-            var clientXform = Transform(client);
-            if (clientXform.GridUid is not { } grid)
-                return ClientLookup;
-
-            _lookup.GetGridEntities(grid, ClientLookup);
-
             if (!TryComp(client, out ResearchClientComponent? clientComponent))
                 return ClientLookup;
-            ClientLookup.RemoveWhere(server => !IsClientServerTypeCompatible(clientComponent, server.Comp));
+
+            var clientXform = Transform(client);
+            if (clientXform.GridUid is { } grid)
+            {
+                _lookup.GetGridEntities(grid, ClientLookup);
+                ClientLookup.RemoveWhere(server =>
+                    server.Comp.GridLocked || !IsClientServerTypeCompatible(clientComponent, server.Comp));
+            }
+
+            if (HasComp<DeviceLinkSinkComponent>(client))
+            {
+                var query = AllEntityQuery<ResearchServerComponent>();
+                while (query.MoveNext(out var serverUid, out var serverComponent))
+                {
+                    if (!IsClientServerTypeCompatible(clientComponent, serverComponent)
+                        || !IsNetworkLinkedServerAvailable(client, serverUid, serverComponent))
+                        continue;
+
+                    ClientLookup.Add((serverUid, serverComponent));
+                }
+            }
+
             return ClientLookup;
+        }
+
+        private bool CanClientAccessServer(EntityUid client, EntityUid server, ResearchClientComponent clientComponent,
+            ResearchServerComponent serverComponent)
+        {
+            if (!IsClientServerTypeCompatible(clientComponent, serverComponent))
+                return false;
+
+            if (IsSameGridServerAvailable(client, server, serverComponent))
+                return true;
+
+            return IsNetworkLinkedServerAvailable(client, server, serverComponent);
+        }
+
+        private bool IsSameGridServerAvailable(EntityUid client, EntityUid server, ResearchServerComponent serverComponent)
+        {
+            if (serverComponent.GridLocked)
+                return false;
+
+            if (!TryComp(client, out TransformComponent? clientXform)
+                || !TryComp(server, out TransformComponent? serverXform)
+                || clientXform.GridUid == null)
+                return false;
+
+            return clientXform.GridUid == serverXform.GridUid;
+        }
+
+        private bool IsNetworkLinkedServerAvailable(EntityUid client, EntityUid server, ResearchServerComponent serverComponent)
+        {
+            if (!CanRun(server))
+                return false;
+
+            if (!TryComp(server, out DeviceLinkSourceComponent? source)
+                || !HasComp<DeviceLinkSinkComponent>(client))
+            {
+                return false;
+            }
+
+            var links = _deviceLink.GetLinks(server, client, source);
+            if (!links.Contains((ResearchServerLinkPort, ResearchConsoleLinkPort)))
+                return false;
+
+            return _transform.GetMapCoordinates(server).InRange(_transform.GetMapCoordinates(client), serverComponent.NetworkLinkRange);
         }
 
         private static bool IsClientServerTypeCompatible(ResearchClientComponent client, ResearchServerComponent server)
@@ -156,6 +222,7 @@ namespace Content.Server.Research.Systems
                 server.NextUpdateTime = _timing.CurTime + server.ResearchConsoleUpdateTime;
 
                 UpdateServer(uid, (int) server.ResearchConsoleUpdateTime.TotalSeconds, server);
+                ValidateServerClients(uid, server);
             }
         }
     }

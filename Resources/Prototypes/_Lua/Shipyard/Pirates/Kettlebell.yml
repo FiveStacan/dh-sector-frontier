@@ -1,0 +1,35 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: Kettlebell
+  name: Kettlebell
+  description: Небольшой штурмовик с легкими орудиями и неплохой броней
+  price: 721841 # DH-Tweak
+  category: Medium
+  group: BlackMarket
+  whitelist:
+  - Luna
+  - Frontier #DH
+  class:
+  - Pirate
+  engine:
+  - Singularity
+  shuttlePath: /Maps/_Lua/Shuttles/Pirates/Kettlebell.yml
+
+- type: gameMap
+  id: Kettlebell
+  mapName: 'Kettlebell'
+  mapPath: /Maps/_Lua/Shuttles/Pirates/Kettlebell.yml
+  minPlayers: 0
+  stations:
+    Kettlebell:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Kettlebell {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

@@ -15,13 +15,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1500 #300 - Lua
+        damage: 1700 #300 - Lua
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 750 #150 - Lua
+        damage: 960 #150 - Lua
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -85,13 +85,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 700 #150 - Lua
+        damage: 700 #150 - Lua #DH
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 350 #75 - Lua
+        damage: 550 #75 - Lua #DH
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -158,3 +158,28 @@
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedUraniumWindowDiagonal
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500 #300 - Lua #DH
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000 #150 - Lua #DH
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassUranium:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

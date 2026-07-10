@@ -104,17 +104,23 @@
   - PortableScrubberMachineCircuitBoard
   - HolofanProjector
   # AdvancedToolsTechnology
+  - Welder #DH
   - WelderExperimental
+  - WelderIndustrial #DH
+  - WelderIndustrialAdvanced #DH
   - PowerDrill
   - JawsOfLife
   - ClothingBeltChiefEngineer
+  - ClothingMaskGasCE #DH
   - BorgModuleAdvancedTool
   # PortableFission
   - PortableGeneratorDKJrMachineCircuitboard
   # RapidConstruction
   - ShipyardRCD
   - ShipyardRCDAmmo
-  # ConstructionBags
+  - RCD
+  - RCDAmmo
+  - ConstructionBag
   - ConstructionBagOfHolding
   # HardsuitsSpecialized
   - ClothingOuterHardsuitAtmos
@@ -132,7 +138,17 @@
   - ClothingShoesBootsMag
   # PersonalPropulsion
   - JetpackBlue
+  - JetpackMining
+  - JetpackMini
   - JetpackCaptain
+  #DH
+  - BaseAmeJar
+  - AmeJar
+  - ExtendedAmeJar
+  - BluespaceAmeJar
+  - BorgModuleJetpack
+  - BorgModuleConstruction
+  - HandheldRoboAnalyzer
 
 # region Medical
 - type: latheRecipePack
@@ -147,6 +163,8 @@
   - SyringeCryostasis
   # MechanizedTreatment
   - BorgModuleAdvancedParamedic
+  - BorgModuleDiagnosis #DH
+  - BorgModuleChemical #DH
   # RoboticCleanliness
   - PortablePumpMachineCircuitBoard
   # AdvancedCleaning
@@ -221,6 +239,10 @@
   - JetpackVoid
   # HardsuitsExperimentalIndustrial
   - ClothingOuterHardsuitMaximPrototype
+  #DH
+  - Binoculars
+  - BinocularsMagmite
+  - NFDartTracking
 
 # region NFSD
 - type: latheRecipePack
@@ -235,6 +257,11 @@
   - NFGrenadeEMP
   # PersonalPropulsion
   - JetpackNfsd
+  #DH
+  - NFDartTracking
+  - BorgModulEnergySecurity
+  - BorgModuleSecurity
+  - BorgModuleArrestSecurity
 
 # region Salvage
 - type: latheRecipePack
@@ -275,6 +302,9 @@
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
   - BorgModuleAdvancedMining
+  - BorgModuleMining #DH
+  - BorgModuleAppraisal #DH
+  - BorgModuleTraversal #DH
   ## Frontier
   # HardsuitsSpecialized
   - ClothingOuterHardsuitSpatio
@@ -332,6 +362,8 @@
   - BorgModuleAdvancedTool
   - FloorTileItemSepia
   - FloorTileItemBluespace
+  #DH
+  - DeviceQuantumSpinInverter
 
 # region Service
 - type: latheRecipePack
@@ -417,7 +449,17 @@
   # HardsuitsSpecialized
   - ClothingOuterHardsuitClown
   - ClothingOuterHardsuitMime
+  - ClothingOuterHardsuitSanta #DH
   - ClothingOuterHardsuitPilot
+  - BorgModuleClowning #DH
+  - BorgModuleMusique #DH
+  - BorgModuleCleaning #DH
+  - BorgModuleBureaucracy #DH
+  - BorgModuleChef #DH
+  - BorgModuleNFService #DH
+  - BorgModuleCustodial #DH
+  - BorgModuleGardening #DH
+  - BorgModuleHarvesting #DH
 
 #################
 #               #
@@ -472,6 +514,7 @@
   - NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
+  #- NFMagazineExtendedRifle30Empty
   - NFMagazineDrumRifle556x45Empty #Lua 20 -> 556x45
   - MagazineAsmgtUniversalEmpty
   # BulkRifleAmmo
@@ -504,6 +547,7 @@
   recipes:
   # AdvancedPowercells
   - PowerCellHigh
+  - PowerCellMedium
   - TurboItemRechargerCircuitboard
   # BluespaceStorage
   - ClothingBackpackHolding

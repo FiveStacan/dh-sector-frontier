@@ -6,6 +6,11 @@ gunnery-select-all = Select All
 gunnery-unselect-all = Unselect All
 gunnery-guns = Guns
 gunnery-show-iff = Show IFF labels
+gunnery-auto-deselect-empty = Auto deselect empty
+gunnery-presets = Presets
+gunnery-preset-save = Save
+gunnery-preset-delete = Delete
+gunnery-preset-name = Preset-{$number}
 
 # Gunnery Server Examine
 gunnery-server-examine-detail = The server is using [color={$valueColor}]{$usedProcessingPower}/{$processingPower}[/color] of its processing power.

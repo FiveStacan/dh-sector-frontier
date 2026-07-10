@@ -5,9 +5,11 @@
   description: Cold pillow, guaranteed.
   suffix: station
   components:
+  - type: Rotatable
   - type: Sprite
+    enableOverrideDir: true
     # sprite: _NF/Structures/Machines/cryopod.rsi
-    noRot: true
+    noRot: false
     sprite: _Lua/Structures/cryopod.rsi # Lua
     #snapCardinals: true # Frontier Чтобы это пофиксить я потратил 19 часов....
     layers:
@@ -46,7 +48,7 @@
   suffix: player
   components:
   - type: Sprite
-    noRot: true
+    #noRot: true
     sprite: _Lua/Structures/cryopod.rsi
     layers:
     # - state: opened

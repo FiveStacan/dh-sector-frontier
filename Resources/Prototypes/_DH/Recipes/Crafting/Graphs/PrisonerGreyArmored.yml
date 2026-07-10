@@ -1,0 +1,20 @@
+- type: constructionGraph
+  id: PrisonerGreyArmored
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: PrisonerArmored
+          steps:
+            - tag: SpacePrisonerGreyUniform
+              name: construction-step-prisoner-grey-uniform
+              icon:
+                sprite: _DH/Clothing/Uniforms/Jumpsuit/prisoner.rsi
+                state: icon
+            - material: Steel
+              amount: 2
+            - material: Cable
+              amount: 4
+              doAfter: 2
+    - node: PrisonerArmored
+      entity: ClothingUniformJumpsuitPrisonerGreyArmored

@@ -103,9 +103,9 @@
   description: Ultra-robust table made from reinforced plasma glass.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/r_plasma.rsi
+    sprite: _DH/Structures/Furniture/Tables/r_plasma.rsi #DH
   - type: Icon
-    sprite: Structures/Furniture/Tables/r_plasma.rsi
+    sprite: _DH/Structures/Furniture/Tables/r_plasma.rsi #DH
   - type: GlassTable
     climberDamage:
       types:
@@ -124,7 +124,7 @@
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 70
       behaviors:
       - !type:PlaySoundBehavior
         sound:

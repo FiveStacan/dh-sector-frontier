@@ -3,6 +3,7 @@ using Content.Shared.StatusIcon;
 using Robust.Client.GameObjects;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using System.Numerics;
 using Content.Shared.Roles;
 
@@ -22,7 +23,7 @@ public sealed class CrewManifestSection : BoxContainer
         AddChild(new Label()
         {
             StyleClasses = { "LabelBig" },
-            Text = Loc.GetString(section.Name)
+            Text = FormattedMessage.RemoveMarkupPermissive(Loc.GetString(section.Name))
         });
 
         var gridContainer = new GridContainer()

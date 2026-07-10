@@ -35,8 +35,8 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
-  - type: StaticPrice
-    price: 50
+  - type: StaticPrice #DH
+    price: 60
 
 - type: entity
   parent: ClothingOuterWinterCoat

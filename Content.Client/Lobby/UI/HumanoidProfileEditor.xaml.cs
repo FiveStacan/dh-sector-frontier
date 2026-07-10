@@ -1176,7 +1176,7 @@ namespace Content.Client.Lobby.UI
 
             foreach (var department in departments)
             {
-                var departmentName = Loc.GetString(department.Name);
+                var departmentName = FormattedMessage.RemoveMarkupPermissive(Loc.GetString(department.Name));
 
                 if (!_jobCategories.TryGetValue(department.ID, out var category))
                 {

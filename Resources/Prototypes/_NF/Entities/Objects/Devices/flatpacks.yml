@@ -37,6 +37,17 @@
 
 - type: entity
   parent: BaseNFFlatpack
+  id: EngineeringTechFabFlatpack
+  name: engineering techfab flatpack
+  description: A flatpack used for constructing an engineering techfab.
+  components:
+  - type: Flatpack
+    entity: EngineeringTechFab
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: BaseNFFlatpack
   id: GasThermoMachineFreezerFlatpack
   name: freezer flatpack
   description: A flatpack used for constructing a freezer.
@@ -320,6 +331,17 @@
 
 - type: entity
   parent: UniformPrinterFlatpack
+  id: ServiceTechFabFlatpack
+  name: service techfab flatpack
+  description: A flatpack used for constructing a service techfab.
+  components:
+  - type: Flatpack
+    entity: ServiceTechFab
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: UniformPrinterFlatpack
   id: MaterialReclaimerFlatpack
   name: material reclaimer flatpack
   description: A flatpack used for constructing a material reclaimer.
@@ -550,6 +572,15 @@
   - type: Sprite
     layers:
     - state: supply_gun
+
+- type: entity
+  parent: OreProcessorFlatpack
+  id: SalvageTechfabNFFlatpack
+  name: salvage techfab flatpack
+  description: A flatpack used for constructing a salvage techfab.
+  components:
+  - type: Flatpack
+    entity: SalvageTechfabNF
 
 - type: entity
   parent: OreProcessorFlatpack

@@ -145,7 +145,7 @@
       - id: ClothingHeadsetNfsdBrown
 
 - type: entity
-  id: LockerSyndicateNordfall
+  id: LockerSyndicateTypan
   parent: LockerBaseSecure
   name: syndicate locker
   components:

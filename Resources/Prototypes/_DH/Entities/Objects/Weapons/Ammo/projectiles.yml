@@ -11,6 +11,44 @@
         Piercing: 6
         #Holy: 6
 
+- type: entity
+  parent: BaseBullet
+  id: RadiationBullet
+  name: radiation particle
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    enabled: true
+    color: "#32CD32"
+    radius: 2.0
+    energy: 7.0
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: magicm_green
+        shader: unshaded
+  - type: Ammo
+    muzzleFlash: null
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 10
+  - type: TimedDespawn
+    lifetime: 2
+  - type: Reflective
+    reflective:
+    - Energy
+
 #region PKA
 
 - type: entity
@@ -25,7 +63,7 @@
       types:
         Blunt: 20
         Structural: 20
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticRepeater
@@ -39,7 +77,7 @@
       types:
         Blunt: 15
         Structural: 20
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticRailgun
@@ -56,7 +94,7 @@
         Structural: 38
   - type: GatheringProjectile
     amount: 40
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticShotgunSpread
@@ -68,7 +106,7 @@
     proto: ADTBulletKineticShotgunPellet
     count: 6
     spread: 35
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticShotgunPellet
@@ -82,7 +120,7 @@
       types:
         Blunt: 14
         Structural: 24
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticRifleSpread
@@ -96,7 +134,7 @@
     spread: 4
   - type: TimedDespawn
     lifetime: 0.27
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft
 
 - type: entity
   id: ADTBulletKineticRifePellet
@@ -112,4 +150,4 @@
         Structural: 16
   - type: TimedDespawn
     lifetime: 0.27
-#  - type: MiningGatheringSoft
+  #- type: MiningGatheringSoft

@@ -41,10 +41,10 @@ public sealed partial class ShipyardSystem
                     RefreshState(uid, baseOnly.Balance, baseOnly.AccessGranted, baseOnly.ShipDeedTitle, baseOnly.ShipSellValue, component.TargetIdSlot.ContainerSlot?.ContainedEntity, uiKey, baseOnly.FreeListings);
                     break;
                 case ParkingConsoleLuaDockSelectState parkingLua:
-                    RefreshParkingState(uid, parkingLua.BaseState.ShipDeedTitle, component.TargetIdSlot.ContainerSlot?.ContainedEntity);
+                    RefreshParkingState(uid, args.Actor, parkingLua.BaseState.ShipDeedTitle, component.TargetIdSlot.ContainerSlot?.ContainedEntity);
                     break;
                 case ParkingConsoleInterfaceState parkingBase:
-                    RefreshParkingState(uid, parkingBase.ShipDeedTitle, component.TargetIdSlot.ContainerSlot?.ContainedEntity);
+                    RefreshParkingState(uid, args.Actor, parkingBase.ShipDeedTitle, component.TargetIdSlot.ContainerSlot?.ContainedEntity);
                     break;
             }
         }

@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Maintainer Info
+# GitHub: erhardsteinhauer
+# Discord: erhardsteinhauer
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Stringer
+  parent: BaseVessel
+  name: Stringer
+  description: stringer
+  price: 67
+  category: Small
+  group: Custom
+  shuttlePath: /Maps/_NF/Shuttles/Stringer.yml
+  guidebookPage: ShipyardStringer
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+
+- type: gameMap
+  id: Stringer
+  mapName: 'Stringer'
+  mapPath: /Maps/_NF/Shuttles/Stringer.yml
+  minPlayers: 0
+  stations:
+    Stringer:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Stringer {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        # - type: StationJobs
+        #   availableJobs:
+        #     ContractorInterview: [ 0, 0 ]
+        #     PilotInterview: [ 0, 0 ]
+        #     MercenaryInterview: [ 0, 0 ]

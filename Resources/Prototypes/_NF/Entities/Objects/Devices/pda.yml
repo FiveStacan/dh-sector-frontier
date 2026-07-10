@@ -349,7 +349,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: SDEngineerPDA
-  name: КПК Инженера СРБС
+  name: КПК Инженера ДСБФ
   description: За многие годы эксплуатации он покрылся слоем пластитановой пыли.
   components:
   - type: Pda

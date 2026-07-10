@@ -38,6 +38,13 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
+  id: WelderMini
+  result: WelderMiniEmpty
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  parent: BaseToolRecipe
   id: Welder
   result: WelderEmpty # Frontier Welder<WelderEmpty
   materials:
@@ -153,6 +160,25 @@
 
 - type: latheRecipe
   parent: BaseToolRecipe
+  id: SprayPainterAdvanced
+  result: SprayPainterAdvanced
+  materials:
+    Steel: 400
+    Plastic: 300
+    Silver: 150
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: SprayPainterExperemental
+  result: SprayPainterExperemental
+  materials:
+    Steel: 300
+    Plastic: 150
+    Silver: 200
+    Bluespace: 100
+
+- type: latheRecipe
+  parent: BaseToolRecipe
   id: SprayPainter
   result: SprayPainterEmpty
   materials:
@@ -166,6 +192,15 @@
   materials:
     Steel: 150
     Plastic: 50
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: SprayPainterAdvancedAmmo
+  result: SprayPainterAdvancedAmmo
+  materials:
+    Steel: 350
+    Plastic: 250
+    Silver: 50
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -189,11 +224,12 @@
   parent: BaseToolRecipe
   id: WelderExperimental
   result: WelderExperimentalEmpty # Frontier - WelderExperimental<WelderExperimentalEmpty
-  completetime: 6
+  completetime: 9
   materials:
     Steel: 2000
     Plasma: 1000
     Silver: 900
+    Bluespace: 120
 
 - type: latheRecipe
   parent: BaseToolRecipe
@@ -224,4 +260,5 @@
   materials:
     Steel: 750
     Plasma: 150
-    Uranium: 150
+    Uranium: 250 #DH
+    Gold: 100 #DH

@@ -39,6 +39,26 @@
   heatCapacity: 10000
 
 - type: tile
+  id: FloorWoodDark
+  name: tiles-wood-dark
+  sprite: /Textures/_Corvax/Tiles/wood_dark.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodDark
+  heatCapacity: 10000
+
+- type: tile
   id: FloorWoodBlack
   name: tiles wood black
   sprite: /Textures/_Corvax/Tiles/wood_black.png

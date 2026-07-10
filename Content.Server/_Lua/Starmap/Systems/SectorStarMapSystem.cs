@@ -211,10 +211,10 @@ public sealed class SectorStarMapSystem : EntitySystem
         try
         {
             var typanMapId = _sectorSystem.TryGetMapId("TypanSector", out var typanMap) ? typanMap : MapId.Nullspace;
-            info.AppendLine($"  Nordfall Sector: {typanMapId}");
+            info.AppendLine($"  Typan Sector: {typanMapId}");
         }
         catch (Exception ex)
-        { info.AppendLine($"  Nordfall Sector: ERROR - {ex.Message}"); }
+        { info.AppendLine($"  Typan Sector: ERROR - {ex.Message}"); }
         try
         {
             var luaTechMapId = _sectorSystem.TryGetMapId("LuaTechSector", out var luaTechMap) ? luaTechMap : MapId.Nullspace;

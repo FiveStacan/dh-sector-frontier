@@ -1,0 +1,39 @@
+- type: cargoProduct
+  id: CrateFunPistolAirsoftCrate
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+    state: base
+  product: ADTPistolAirsoftCrate
+  cost: 1990
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: CrateFunWeaponAirsoftCrate
+  icon:
+    sprite: _DH/Objects/Weapons/Guns/StrikeBall/Bolt-Snipers/heavy_sniper.rsi
+    state: base
+  product: ADTWeaponAirsoftCrate
+  cost: 18000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: CrateFunArmorAirsoftCrate
+  icon:
+    sprite: _DH/Clothing/OuterClothing/Armor/airsoft_red_armor.rsi
+    state: icon
+  product: ADTArmorAirsoftCrate
+  cost: 5500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: CrateFunTetoCrate
+  icon:
+    sprite: _DH/Clothing/Head/Misc/teto-wig.rsi
+    state: icon
+  product: ADTTetoCrate
+  cost: 20000
+  category: cargoproduct-category-name-fun
+  group: market

@@ -118,12 +118,12 @@
     damageContainer: Biological
   - type: Destructible
     thresholds:
-#    - trigger:
-#        !type:DamageTypeTrigger
-#        damageType: Blunt
-#        damage: 400
-#      behaviors:
-#      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 600 #DH 500<600
+      behaviors:
+      - !type:GibBehavior { }
     - trigger: # _Lua
         !type:DamageTypeTrigger
         damageType: Cold # _Lua

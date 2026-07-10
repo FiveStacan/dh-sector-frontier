@@ -14,13 +14,13 @@
   - type: Appearance
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 20000 # 40000
+    startingCharge: 20000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.5
+    fireRate: 0.47 # 0.5
     projectileSpeed: 90
     shootThermalSignature: 4000000 # ~2.8km with continuous fire
     soundGunshot:
@@ -29,27 +29,29 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 48 #350
+    autoRechargePause: true
+    autoRechargePauseTime: 5
   - type: SpaceArtillery
-    powerChargeRate: 350
-    powerUsePassive: 500
-    powerUseActive: 0
+    powerChargeRate: 48 #350
+    powerUsePassive: 700 # 500
+    powerUseActive: 200
   - type: FireControlRotate
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMediumPlasmaProjectile
-    fireCost: 500
+    fireCost: 1000 #500
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 15000
+        damage: 3500 # 15000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 12500
+        damage: 3000 # 12500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -367,8 +369,15 @@
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 16
-    projectileSpeed: 145
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+    fireRate: 15 # 16
+    projectileSpeed: 140 # 140
+    burstCooldown: 0.6
+    burstFireRate: 16
+    shotsPerBurst: 4
     shootThermalSignature: 500000 # ~5.6km with continuous fire
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/autopulse_laser_fire_01.ogg
@@ -376,10 +385,10 @@
       path: /Audio/Weapons/click.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 300
+    autoRechargeRate: 105 # 300
   - type: SpaceArtillery
-    powerChargeRate: 700
-    powerUsePassive: 100
+    powerChargeRate: 105 # 700
+    powerUsePassive: 505 # 100
     powerUseActive: 0
   - type: FireControlRotate
   - type: Actions
@@ -390,13 +399,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 15000
+        damage: 3100 #15000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 11500
+        damage: 2500 #11500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

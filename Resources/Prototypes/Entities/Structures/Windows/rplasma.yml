@@ -90,13 +90,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 700 #150 - Lua
+        damage: 550 #150 - Lua
       behaviors: #excess damage, don't spawn entities.
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 350 #75 - Lua
+        damage: 300 #75 - Lua
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -162,3 +162,31 @@
   - type: Construction
     graph: WindowDiagonal
     node: reinforcedPlasmaWindowDiagonal
+  - type: Destructible #DH
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassPlasma:
+            min: 1
+            max: 2
+          PartRodMetal:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

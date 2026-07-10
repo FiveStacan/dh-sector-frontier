@@ -25,7 +25,7 @@ ent-WallMountReclaimer = настенный переработчик матер�
 
 turnstile-component-popup-resist = {CAPITALIZE($turnstile)} сводит на нет ваши усилия!
 ent-Turnstile = турникет
-    .desc = Механическая дверь, обеспечивающая односторонний доступ и способствующая соблюдению дистанции.
+    .desc = Механический турникет, обеспечивающий односторонний доступ и способствующая соблюдению дистанции.
 ent-TurnstileGenpopEnter = { ent-Turnstile }
     .suffix = Вход
     .desc = { ent-Turnstile.desc }
@@ -36,14 +36,14 @@ ent-TurnstileSec = { ent-Turnstile }
     .suffix = Служба безопасности, Закрыт
     .desc = { ent-Turnstile.desc }
 ent-TurnstileGenpopKarcer = турникет карцера
+    .suffix = карцер, Вход, Закрыт
+    .desc = { ent-Turnstile.desc }
+TurnstileGenpopKarcerLeave= турникет карцера
     .suffix = карцер, Выход, Закрыт
     .desc = { ent-Turnstile.desc }
 
 ent-TurnstileElectronics = микросхема турникета
     .desc = { ent-BaseItem.desc }
-
-id-card-access-level-genpop-enter = Тюрьма вход
-id-card-access-level-genpop-leave = Тюрьма выход
 
 ent-LockerPrisoner = тюремный шкаф
     .desc = Это защищенный шкафчик для личных вещей заключенного, которые запрещенно хранить во время пребывания в тюрьме.
@@ -84,10 +84,7 @@ ent-WallmountIDReclaimer = настенный переработчик тюре�
 ent-SignGenpop = знак "генпоп"
     .desc = Знак, указывающий на генпоп-тюрьму.
 
-id-card-access-level-basic-xenoborg = Ксеноборг
-id-card-access-level-wizard = Маг
-id-card-access-level-sheriff = Шериф
-id-card-access-level-headofprison = Глава КТ
+id-card-access-level-headofprison = [color=#bb4100]Глава КТ[/color]
 
 JobPrisonDoctor = врач КТ
 job-name-perma-prisoner = Заключенный КТ
@@ -105,7 +102,7 @@ ent-CounterRedFrame = каркас красной стойки
     .desc = Деревянные детали, составляющие каркас стола.
 ent-TableReinforcedPlasmaGlass = стол из плазменного бронестекла
     .desc = Квадратный лист плазменного бронестекла, стоящий на четырёх металлических ножках. Очень прочный.
-ent-ChairOfficeGray = серое офисное кресло
+ent-ChairOfficeGrey = серое офисное кресло
     .desc = { ent-OfficeChairBase.desc }
 ent-ComfyBrownChair = бурое удобное кресло
     .desc = Выглядит удобным.
@@ -146,11 +143,12 @@ ent-PrisonResearchAndDevelopmentServer = тюремный сервер РнД
     .desc = Содержит коллективные знания учёных тюрьмы. Имеет специально ограниченный функционал.
 ent-SyndicateResearchAndDevelopmentServer = сервер РнД синдиката
     .desc = Содержит коллективные знания учёных синдиката. Имеет доступ к сетям Горлекса для изучения особых технологий.
-
+ent-ShiparmoryResearchAndDevelopmentServer = корабельный сервер РнД
+    .desc = Содержит коллективные знания учёных станции. Заточен под корабельное вооружение.
+PirateResearchAndDevelopmentServer = пиратский сервер РнД
+    .desc = Содержит коллективные знания пиратских учёных. Если они не пошли пить ром...
 ent-ResearchDisk10000Present = диск исследовательских очков (10000)
     .desc = { ent-ResearchDisk10000.desc }
-
-ent-BSsinkmodule = блюспейс модуль раковины
 
 nf-research-technology-industrial-medicine-2 = Индустриальная Медицина II
 
@@ -168,15 +166,14 @@ ent-MechEquipmentFork = усиленные приводы
 ent-BaseCrateStorageRack = стеллаж для хранения ящиков
     .desc = Как полка, только больше!
 
+ent-CrateStorageRack = стеллаж для хранения ящиков
+    .desc = Как полка, только больше!
 ent-CrateStorageRackBase = основание стеллажа для хранения ящиков
     .desc = Все стеллажи начинаются со скромного начала.
 ent-CrateStorageRackFrameEmpty = { ent-BaseCrateStorageRack }
     .desc = { ent-BaseCrateStorageRack.desc }
 ent-CrateStorageRackFrame = { ent-BaseCrateStorageRack }
     .desc = { ent-BaseCrateStorageRack.desc }
-
-ent-MachineMaterialSilo = силос для ресурсов
-ent-MaterialSiloMachineCircuitboard = силос для ресурсов (машинная плата)
 
 ent-PresentResearch = { ent-PresentBase }
     .suffix = Заполненный, Научный
@@ -238,10 +235,31 @@ ent-PermaPrisonerIDCard = ID карта заключенного пермы
     .desc = Карта, для тяжелых случаев... Необходимая для доступа в различные области вашей тюрьмы, и то если охрана сегодня в настроении.
 ent-PrisonerIDCard = ID карта заключенного
     .desc = Карта, необходимая для доступа в различные области тюрьмы. Похоже, ваш срок не больше нескольких дней. Везение?
+    .suffix = Временная, Переробатываемая
 ent-ClothingUniformJumpsuitPrisoner = комбинезон заключённого
     .desc = Арестован. Форма для срочника в тюрьме? Надейтесь на благосклонность не только охранников, но и "серых" зеков.
 ent-ClothingUniformJumpskirtPrisoner = юбка-комбинезон заключённого
     .desc = Потрачено. Форма для срочника в тюрьме? Надейтесь на благосклонность не только охранников, но и "серых" зеков.
+
+ent-BookshelfSmoothRight = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Право
+ent-BookshelfSmoothCenter = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Центр
+ent-BookshelfSmoothLeft = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Лево
+
+ent-BookshelfSmoothRightFilled = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Право, Заполненный, СЛучайный
+ent-BookshelfSmoothCenterFilled = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Центр Заполненный, СЛучайный
+ent-BookshelfSmoothLeftFilled = книжный шкаф
+    .desc = Преимущественно, наполнен книгами.
+    .suffix = Лево Заполненный, СЛучайный
 
 ent-KvassTank = бочка кваса
     .suffix = Пустой
@@ -405,12 +423,13 @@ ent-SprayPainterAdvanced = улучшенный краскопульт
 ent-SprayPainterExperemental = экспериментальный краскопульт
     .desc = { ent-SprayPainter.desc }
     .suffix = автоперезарядка
-
+SprayPainterAdvancedAmmo = улучшенная сжатая краска
+    .desc = Картридж улучшенной сжатой краски для пополнения зарядов краскопульта.
 
 department-prison = Космическая Тюрьма
+department-prison-description = Персонал тюрьмы и заключённые.
 
 weapon-details-manufacturer-nanotrasen-technologies = NanoTrasen Technologies
-gun-examine-particle-stream = поток частиц высокой энергии
 
 paper_stamp-nf-plant-manager = Менеджер Электростанции
 
@@ -418,7 +437,7 @@ ent-BLES = БМЭС
     .desc = Блюспейс Магнитная Энергонакопительная Станция (БМЭС).
 
 ent-HandheldSecurityMonitor = портативный монитор камер
-    .desc = Портативная консоль, которая имеет доступ к сети станционных камер.
+    .desc = Монитор камер наблюдения. Вы наблюдаете за ними. Возможно.
 
 ent-AirAlarmFreezer = { ent-AirAlarm }
     .desc = { ent-AirAlarm.desc }
@@ -439,11 +458,17 @@ ent-ADTClothingShoesBootsMagERT = { ent-ClothingShoesBootsMag }
     .desc = { ent-ClothingShoesBootsMag.desc }
 
 ent-WeaponEnergyTurretStationControlPanelBase = панель управления энерготурелями
-    .desc = Ту ре ль
+    .desc = Настенный интерфейс для удаленной настройки рабочих параметров подключенных охранных турелей.
     .suffix = Без доступов
-ent-WeaponEnergyTurretStationControlPanel = панель управления энерготурелями службы безопасности
+ent-WeaponEnergyTurretStationControlPanel = панель управления энерготурелями
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+    .suffix = Без доступов
+ent-WeaponEnergyTurretSecurityControlPanel = панель управления энерготурелями службы безопасности
     .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
     .suffix = Служба Безопасности, Закрыт
+ent-WeaponEnergyTurretCommandControlPanel = панель управления энерготурелями командования
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+    .suffix = Командование, Закрыт
 ent-WeaponEnergyTurretAIControlPanel = панель управления энерготурелями ИИ
     .suffix = ИИ, Закрыт
     .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
@@ -452,14 +477,17 @@ ent-WeaponEnergyTurretFrontierControlPanel = панель управления �
     .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
 
 ent-WeaponEnergyTurretBase = энерготурель
-    .desc = Ту ре ль
+    .desc = Высокотехнологичная автономная система вооружения, предназначенная для предотвращения доступа посторонних лиц на охраняемые объекты.
     .suffix = Без доступов
-ent-WeaponEnergyTurretStation = энерготурель безопасности
+ent-WeaponEnergyTurretSecurity = энерготурель
     .desc = { ent-WeaponEnergyTurretBase.desc }
     .suffix = Служба Безопасности, Закрыт
-ent-WeaponEnergyTurretAI = энерготурель ИИ
+ent-WeaponEnergyTurretCommand = энерготурель
     .desc = { ent-WeaponEnergyTurretBase.desc }
-    .suffix = ИИ
+    .suffix = Командование, Закрыт
+ent-WeaponEnergyTurretAI = энерготурель
+    .desc = { ent-WeaponEnergyTurretBase.desc }
+    .suffix = ИИ, Закрыт
 ent-WeaponEnergyTurretFrontier = энерготурель Фронтира
     .suffix = Фронтир Командование, Закрыт
     .desc = { ent-WeaponEnergyTurretBase.desc }
@@ -558,6 +586,8 @@ ent-WeaponPistolDeagle = пустотнный орёл
     .desc = "Использует патрон "магнум" 45-го калибра, который наносит серьёзный удар. Выгравировано: Мир благодаря превосходящей огневой мощи".
 
 ent-MagazineGlock22 = магазин Glock22
+    .desc = { ent-BaseItem.desc }
+ent-MagazineGlock22Empty = магазин Glock22
     .desc = { ent-BaseItem.desc }
 ent-MagazineDeagle = магазин пустынного орла
     .desc = Использует патроны калибра .45 магнум.
@@ -776,7 +806,7 @@ ent-BaseUplinkNTERT200BC = { ent-BaseUplinkNTERT }
 ent-BaseUplinkNTERTDebug = { ent-BaseUplinkNTERT }
     .suffix = 999, ДЕБАГ
     .desc = { ent-BaseUplinkNTERT.desc }
-ent-Bluecrystal = блюспейс кристалл
+ent-ChargedBluecrystal = заряженный блюспейс кристалл
     .desc = Похоже, он переливается манящей энергией.
     .suffix = 20 БК
 ent-Bluecrystal1 = { ent-Telecrystal }
@@ -1123,6 +1153,7 @@ ent-RespironCanister = канистра респирона
 changelog-tab-title-DH = DarkHaven
 ent-NFMailBag = почтовый мешок
     .desc = Почта никогда не ошибается...
+    .suffix = Фронтир
 ent-MaterialBag = сумка для материалов
     .desc = Хранит разные строительные ресурсы.
 ent-GemsBag = сумка для самоцветов
@@ -1175,14 +1206,14 @@ ent-ChairCarp = кресло из карпа
     .desc = Роскошное кресло, множество фиолетовых чешуек отражают свет самым приятным образом.
 ent-ADTDeckChair = шезлонг
     .desc = Шезлонг для приобретения ровного загара под светом ближайшей звезды.
-ent-beachBed = светлый шезлонг
+ent-WhiteTDeckChair = светлый шезлонг
     .desc = { ent-ADTDeckChair.desc }
 
 ent-AirGrenade = воздушная граната
     .desc = Специальная твёрдотельная химическая граната, используемая для быстрого выпуска воздуха в определённое пространство. Заполняет площадь до 30 метров вокруг!
 
-ent-VisitorPDA = { ent-ClearPDA }
-    .desc = { ent-ClearPDA.desc }
+#ent-VisitorPDA = { ent-ClearPDA }
+#    .desc = { ent-ClearPDA.desc }
 
 ent-MobCatCurie = Кюри
     .desc = Слайм? Кот? Кто ты?
@@ -1199,13 +1230,13 @@ ent-ClothingBeltPrisonGuardianFilled = { ent-ClothingBeltSecurity }
     .suffix = Заполнен
     .desc = { ent-ClothingBeltSecurity.desc }
 
-ent-ADTBookPrinter = книжный книг
-    .desc = Рассадник пропаганды, унижчтожитель демократии. Позволяет копировать книги, а также заносить их в базу данных.
-ent-ADTBookPrinterFilled = { ent-ADTBookPrinter }
-    .desc = { ent-ADTBookPrinter.desc }
-    .suffix = Заполненный
-ent-ADTBookPrinterInkCartridge = книжно-принтерный картридж
-    .desc = Черный короб, содержащий в себе странное черное вещество. Кажется, оно зовётся чернилами...
+#ent-ADTBookPrinter = книжный книг
+#    .desc = Рассадник пропаганды, унижчтожитель демократии. Позволяет копировать книги, а также заносить их в базу данных.
+#ent-ADTBookPrinterFilled = { ent-ADTBookPrinter }
+#    .desc = { ent-ADTBookPrinter.desc }
+#    .suffix = Заполненный
+#ent-ADTBookPrinterInkCartridge = книжно-принтерный картридж
+#    .desc = Черный короб, содержащий в себе странное черное вещество. Кажется, оно зовётся чернилами...
 tiles-lattice-left-upper = угловая решётка, лево-верх
 tiles-lattice-left-lower = угловая решётка, лево-низ
 tiles-lattice-right-upper = угловая решётка, право-верх
@@ -1218,8 +1249,6 @@ adt-tiles-digital-blue-floor = синий цифровой пол
 ent-FloorTileItemWoodParquet = деревянный паркет
     .desc = { ent-FloorTileItemBase.desc }
 ent-FloorTileItemWoodBlack = деревянный чёрный пол
-    .desc = { ent-FloorTileItemBase.desc }
-ent-FloorTileItemWoodDark = деревянный тёмный пол
     .desc = { ent-FloorTileItemBase.desc }
 ent-FloorTileItemWoodLight = деревянный светлый пол
     .desc = { ent-FloorTileItemBase.desc }
@@ -1424,10 +1453,10 @@ ent-GasPipeManifold = коллектор газовой трубы
 strip-all-verb-get-data-text = Снять все
 
 anomaly-generator-refund-message = Обнаружены ингибиторы аномалий. Сгенерируйте в другой области.
+ent-VendingMachinePickNPack = Пик-Н-Пак
+    .desc = Вкладываем оружие в ваши руки с 2549 года.
 ent-VendingMachinePickNPackPOI = Пик-Н-Пак
     .desc = Вкладываем оружие в ваши руки с 2549 года.
-ent-CardBoxNanotrasen = коробка с картами NanoTrasen
-    .desc = Картонная коробка для хранения вещей.
 
 ent-PoweredDimSmallLight = { ent-PoweredSmallLightEmpty }
     .suffix = тёмный
@@ -1451,93 +1480,93 @@ ent-ADTHoloCigar = голографическая сигара
 holo-cigar-verb-text = Переключить
 holo-cigar-verb-desc = Продайте мир или же смиритесь с ним.
 
-ent-ADTRPD = РУТ
-    .desc = Ручной укладчик труб используется для быстрого строительства конструкциий, используемых при эксплуатации атмосферных и утилизационных системах.
-ent-ADTRPDEmpty = { ent-ADTRPD }
-    .desc = { ent-ADTRPD.desc }
-    .suffix = Пустой
-ent-ADTRPDRecharging = экспериментальный РУТ
-    .desc = Блюспейс-улучшенный РУТ, пассивно регенерирующий заряды.
-    .suffix = Автозарядка
+#ent-ADTRPD = РУТ
+#    .desc = Ручной укладчик труб используется для быстрого строительства конструкциий, используемых при эксплуатации атмосферных и утилизационных системах.
+#ent-ADTRPDEmpty = { ent-ADTRPD }
+#    .desc = { ent-ADTRPD.desc }
+#    .suffix = Пустой
+#ent-ADTRPDRecharging = экспериментальный РУТ
+#    .desc = Блюспейс-улучшенный РУТ, пассивно регенерирующий заряды.
+#    .suffix = Автозарядка
 
 ### Интерфейс
 
-rpd-component-examine-mode-details = Выбран режим: '{ $mode }'.
-rpd-component-examine-build-details = Выбран режим строительства: { $name }.
+#rpd-component-examine-mode-details = Выбран режим: '{ $mode }'.
+#rpd-component-examine-build-details = Выбран режим строительства: { $name }.
 ### Interaction Messages
 
 # Смена мода
-rpd-component-change-mode = РУТ переключён в режим '{ $mode }'.
-rpd-component-change-build-mode = РУТ переключён в режим строительства. Строится { $name }.
+#rpd-component-change-mode = РУТ переключён в режим '{ $mode }'.
+#rpd-component-change-build-mode = РУТ переключён в режим строительства. Строится { $name }.
 # Кол-во материи
-rpd-component-no-ammo-message = В РУТ закончились заряды!
-rpd-component-insufficient-ammo-message = В РУТ не хватает зарядов!
+#rpd-component-no-ammo-message = В РУТ закончились заряды!
+#rpd-component-insufficient-ammo-message = В РУТ не хватает зарядов!
 # Разборка
-rpd-component-deconstruct-target-not-on-whitelist-message = Вы не можете демонтировать это!
-rpd-component-nothing-to-deconstruct-message = Здесь нечего демонтировать!
+#rpd-component-deconstruct-target-not-on-whitelist-message = Вы не можете демонтировать это!
+#rpd-component-nothing-to-deconstruct-message = Здесь нечего демонтировать!
 # Строительство
-rpd-component-cannot-build-on-empty-tile-message = Это не может быть построено без фундамента.
-rpd-component-must-build-on-subfloor-message = Это может быть построено только на покрытии!
-rpd-component-cannot-build-on-occupied-tile-message = Здесь нельзя строить, место уже занято!
+#rpd-component-cannot-build-on-empty-tile-message = Это не может быть построено без фундамента.
+#rpd-component-must-build-on-subfloor-message = Это может быть построено только на покрытии!
+#rpd-component-cannot-build-on-occupied-tile-message = Здесь нельзя строить, место уже занято!
 
 ### Имя категориий
 
-rpd-component-DisposalPipe = Утилизационные трубы
-rpd-component-Gaspipes = Газовые трубы
-rpd-component-Devices = Девайсы
+#rpd-component-DisposalPipe = Утилизационные трубы
+#rpd-component-Gaspipes = Газовые трубы
+#rpd-component-Devices = Девайсы
 
 ### Дополнительная информация
 
-rpd-component-deconstruct = Демонтаж
-rpd-ammo-component-on-examine =
-    Содержит { $charges } { $charges ->
-        [one] заряд
-        [few] заряда
-       *[other] зарядов
-    }.
-rpd-ammo-component-after-interact-full = РУТ полон!
-rpd-ammo-component-after-interact-refilled = Вы пополняете РУТ.
+#rpd-component-deconstruct = Демонтаж
+#rpd-ammo-component-on-examine =
+#    Содержит { $charges } { $charges ->
+#        [one] заряд
+#        [few] заряда
+#       *[other] зарядов
+#    }.
+#rpd-ammo-component-after-interact-full = РУТ полон!
+#rpd-ammo-component-after-interact-refilled = Вы пополняете РУТ.
 
-rpd-component-FireAlarm = { ent-FireAlarm }
-rpd-component-GasPipeBend = { ent-GasPipeBend }
-rpd-component-GasPipeStraight = { ent-GasPipeStraight }
-rpd-component-GasPipeHalf = { ent-GasPipeHalf }
-rpd-component-GasPipeFourway = { ent-GasPipeFourway }
-rpd-component-GasPipeTJunction = { ent-GasPipeTJunction }
-rpd-component-GasPressurePump = { ent-GasPressurePump }
-rpd-component-GasMixer = { ent-GasMixer }
-rpd-component-GasMixerFlipped = { ent-GasMixerFlipped }
-rpd-component-GasFilter = { ent-GasFilter }
-rpd-component-GasFilterFlipped = { ent-GasFilterFlipped }
-rpd-component-GasVolumePump = { ent-GasVolumePump }
-rpd-component-GasPassiveVent = { ent-GasPassiveVent }
-rpd-component-GasOutletInjector = { ent-GasOutletInjector }
-rpd-component-GasVentPump = { ent-GasVentPump }
-rpd-component-GasValve = { ent-GasValve }
-rpd-component-GasVentScrubber = { ent-GasVentScrubber }
-rpd-component-AtmosDeviceFanTiny = { ent-AtmosDeviceFanTiny }
-rpd-component-GasPassiveGate = { ent-GasPassiveGate }
-rpd-component-GasDualPortVentPump = { ent-GasDualPortVentPump }
-rpd-component-PressureControlledValve = { ent-PressureControlledValve }
-rpd-component-DisposalUnit = { ent-DisposalUnit }
-rpd-component-MailingUnit = { ent-MailingUnit }
-rpd-component-GasPort = { ent-GasPort }
-rpd-component-DisposalJunctionFlipped = { ent-DisposalJunctionFlipped }
-rpd-component-DisposalJunction = { ent-DisposalJunction }
-rpd-component-DisposalRouterFlipped = { ent-DisposalRouterFlipped }
-rpd-component-DisposalRouter = { ent-DisposalRouter }
-rpd-component-DisposalTagger = { ent-DisposalTagger }
-rpd-component-DisposalBend = { ent-DisposalBend }
-rpd-component-DisposalYJunction = { ent-DisposalYJunction }
-rpd-component-DisposalSignalRouter = { ent-DisposalSignalRouter }
-rpd-component-DisposalSignalRouterFlipped = { ent-DisposalSignalRouterFlipped }
-rpd-component-DisposalTrunk = { ent-DisposalTrunk }
-rpd-component-DisposalPipes = { ent-DisposalPipe }
-rpd-component-AirSensor = { ent-AirSensor }
-rpd-component-FloorDrain = { ent-FloorDrain }
-rpd-component-AirAlarm = { ent-AirAlarm }
-rpd-component-SignalControlledValve = { ent-SignalControlledValve }
-rpd-component-Radiator = { ent-HeatExchanger }
+#rpd-component-FireAlarm = { ent-FireAlarm }
+#rpd-component-GasPipeBend = { ent-GasPipeBend }
+#rpd-component-GasPipeStraight = { ent-GasPipeStraight }
+#rpd-component-GasPipeHalf = { ent-GasPipeHalf }
+#rpd-component-GasPipeFourway = { ent-GasPipeFourway }
+#rpd-component-GasPipeTJunction = { ent-GasPipeTJunction }
+#rpd-component-GasPressurePump = { ent-GasPressurePump }
+#rpd-component-GasMixer = { ent-GasMixer }
+#rpd-component-GasMixerFlipped = { ent-GasMixerFlipped }
+#rpd-component-GasFilter = { ent-GasFilter }
+#rpd-component-GasFilterFlipped = { ent-GasFilterFlipped }
+#rpd-component-GasVolumePump = { ent-GasVolumePump }
+#rpd-component-GasPassiveVent = { ent-GasPassiveVent }
+#rpd-component-GasOutletInjector = { ent-GasOutletInjector }
+#rpd-component-GasVentPump = { ent-GasVentPump }
+#rpd-component-GasValve = { ent-GasValve }
+#rpd-component-GasVentScrubber = { ent-GasVentScrubber }
+#rpd-component-AtmosDeviceFanTiny = { ent-AtmosDeviceFanTiny }
+#rpd-component-GasPassiveGate = { ent-GasPassiveGate }
+#rpd-component-GasDualPortVentPump = { ent-GasDualPortVentPump }
+#rpd-component-PressureControlledValve = { ent-PressureControlledValve }
+#rpd-component-DisposalUnit = { ent-DisposalUnit }
+#rpd-component-MailingUnit = { ent-MailingUnit }
+#rpd-component-GasPort = { ent-GasPort }
+#rpd-component-DisposalJunctionFlipped = { ent-DisposalJunctionFlipped }
+#rpd-component-DisposalJunction = { ent-DisposalJunction }
+#rpd-component-DisposalRouterFlipped = { ent-DisposalRouterFlipped }
+#rpd-component-DisposalRouter = { ent-DisposalRouter }
+#rpd-component-DisposalTagger = { ent-DisposalTagger }
+#rpd-component-DisposalBend = { ent-DisposalBend }
+#rpd-component-DisposalYJunction = { ent-DisposalYJunction }
+#rpd-component-DisposalSignalRouter = { ent-DisposalSignalRouter }
+#rpd-component-DisposalSignalRouterFlipped = { ent-DisposalSignalRouterFlipped }
+#rpd-component-DisposalTrunk = { ent-DisposalTrunk }
+#rpd-component-DisposalPipes = { ent-DisposalPipe }
+#rpd-component-AirSensor = { ent-AirSensor }
+#rpd-component-FloorDrain = { ent-FloorDrain }
+#rpd-component-AirAlarm = { ent-AirAlarm }
+#rpd-component-SignalControlledValve = { ent-SignalControlledValve }
+#rpd-component-Radiator = { ent-HeatExchanger }
 
 ent-ADTAtmosDeviceFanRPD = маленький вентилятор
     .desc = Маленький вентилятор, создающий лёгкий поток воздуха.
@@ -1610,13 +1639,13 @@ ent-ADTPatchHonk = хонк пластырь
     .desc = Чудо клоунской медицины, повышает уровень веселья в крови.
     .suffix = { "" }
 
-ent-CrateEngineeringSingularityContainmentBulk = ящик с генераторами сдерживающего поля
+ent-CrateEngineeringSingularityContainmentBulk = ящик с генераторами сдерживающего поля (6 шт.)
     .desc = Генераторы сдерживающего поля, удерживает сингулярность под контролем.
-ent-CrateEngineeringSingularityCollectorBulk = ящик с коллекторами радиации
+ent-CrateEngineeringSingularityCollectorBulk = ящик с коллекторами радиации (6 шт.)
     .desc = Коллекторы для радиации, использующиеся в сингулярном двигателе. Плазма входит в комплект.
-ent-CrateEngineeringTeslaCoilBulk = ящик с катушками Теслы
+ent-CrateEngineeringTeslaCoilBulk = ящик с катушкамами Теслы (6 шт.)
     .desc = Катушки Теслы. Притягивают молнии и вырабатывают из них энергию.
-ent-CrateEngineeringTeslaGroundingRodBulk = упаковка заземляющих стержней
+ent-CrateEngineeringTeslaGroundingRodBulk = ящик с заземляющими стержнями (6 шт.)
     .desc = Универсально-сборные упаковки, используемые для сборки заземляющих стержней Теслы.
 ent-CrateFoodGetMore = ящик Getmore Bakemore
     .desc = Фирменные закуски и принадлежности для выпечки Getmore для креативного шеф-повара — и все это без необходимости опустошать аппараты Getmore на вашей станции!
@@ -1740,7 +1769,7 @@ ent-ADTClothingUniformJumpsuitHawaiiShirt = гавайская рубашка
     .desc = Идеальный вариант для тех, кто должен выглядеть серьезно, но при этом не хочет скрывать свою жизнерадостную натуру. Производство компании "Modeling Agency Dar-Vaxed".
     .suffix = { "" }
 
-NFWeaponRifleSniperHristov = { ent-WeaponSniperHristov }
+ent-NFWeaponRifleSniperHristov = { ent-WeaponSniperHristov }
     .desc = { ent-WeaponSniperHristov.desc }
 
 custom-objective-button-text = Напишите свою историю
@@ -1788,3 +1817,1044 @@ ent-MagazineM16A4 = магазин M16A4
     .desc = Использует патроны калибра .20 винтовочные.
 ent-MagazineM16A4Extended = расширенный магазин M16A4
     .desc = { ent-MagazineM16A4.desc }
+
+dh-research-technology-amejar = Антиматериальное топливо
+dh-research-technology-extendedamejar = Расширенные топливные баки
+dh-research-technology-BaseAmeJar = Базовое антиматериальное топливо
+dh-research-technology-bluespaceamejar = Бездонное антиматериальное топливо
+
+lathe-category-computers = Компьютеры
+lathe-category-engineering = Инженерия
+lathe-category-general = Общее
+lathe-category-medical = Медицина
+lathe-category-research = Наука
+lathe-category-security = Безопасность
+lathe-category-service = Сервис
+lathe-category-supply = Снабжение
+
+ent-RadiationBullet = поток радиоактивных частиц
+    .desc = { ent-BaseBullet.desc }
+ent-RadiationEmitter = излучатель радиации
+    .desc = Пистолет, спроектированный на основе всеми известного М.А.Р.Т.Ы.Х. При выстреле испускает медленный поток радиоактивных частиц.
+
+ent-LockerWallBasePrisoner = настенный тюремный шкаф
+    .desc = Это настенный защищенный шкафчик для личных вещей заключенного, которые запрещенно хранить во время пребывания в тюрьме.
+ent-LockerWallPrisoner2 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 2
+ent-LockerWallPrisoner3 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 3
+ent-LockerWallPrisoner4 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 4
+ent-LockerWallPrisoner5 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 5
+ent-LockerWallPrisoner6 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 6
+ent-LockerWallPrisoner7 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 7
+ent-LockerWallPrisoner8 = настенный тюремный шкаф
+    .desc = { ent-LockerPrisoner.desc }
+    .suffix = 8
+
+prison-lobby-outpost-subtext = Космическая Тюрьма.
+prison-lobby-outpost-description = Это Космическая Тюрьма для заключенных. Здесь вы можете:
+   - Мотать срок за заключенного
+   - Работать уборщиком, шахтером, ученым или повором
+   - Пытаться сбежать
+   - Наблюдать за заключенными и устраивать их на работу
+
+ent-YupiTransferCartridge = картридж YUPI переводов
+    .desc = Программа для осуществления банковских переводов между пользователями.
+ent-NanoTaskCartridge = картридж NanoTask
+    .desc = Программа, позволяющая вести список задач, которые нужно выполнить.
+ent-GaslockFrameMachineCircuitboard = портативный газовый шлюз (машинная плата)
+    .desc = Машинная плата для портативного газового шлюза.
+
+ent-ClothingWalletLeatherGreen = { ent-ClothingWalletLeatherBrown }
+ .desc = Удивительно толстый. Будьте осторожны, чтобы не потерять его, и не садитесь на него. Теперь в зелёной расцветке!
+ent-ClothingWalletLeatherPink = { ent-ClothingWalletLeatherBrown }
+ .desc = Удивительно толстый. Будьте осторожны, чтобы не потерять его, и не садитесь на него. Теперь в малиновой расцветке!
+ent-ClothingWalletLeatherWhite = { ent-ClothingWalletLeatherBrown }
+ .desc = Удивительно толстый. Будьте осторожны, чтобы не потерять его, и не садитесь на него. Теперь в белой расцветке!
+ent-ClothingWalletLeatherPurple = { ent-ClothingWalletLeatherBrown }
+ .desc = Удивительно толстый. Будьте осторожны, чтобы не потерять его, и не садитесь на него. Теперь в фиолтеовой расцветке!
+
+PointingArrow = указывающая стрелка
+
+ent-CondimentCupDispenser = диспенсер для приправ
+ .desc = В нём хранятся маленькие стаканчики для приправ. Производитель утверждает, что они изготовлены из переработанных материалов.
+ .suffix = Пустой
+ent-CondimentCupDispenser10 = диспенсер для приправ
+ .desc = В нём хранятся маленькие стаканчики для приправ. Производитель утверждает, что они изготовлены из переработанных материалов.
+ent-CondimentCup = стаканчик для приправ
+    .desc = Хлипкий стаканчик для приправ. Гарантия аннулируется, если в нём окажется что-то кроме приправы.
+ent-CondimentDispenser = раздатчик приправ
+ .desc = Дозатор для приправ с одним отделением для стаканчика с приправой.
+ent-CondimentDispenserEmpty = раздатчик приправ
+ .desc = Дозатор для приправ с одним отделением для стаканчика с приправой.
+ent-CondimentDispenserCircuitboard = раздатчик приправ (машинная плата)
+    .desc = Машинная плата для раздатчика приправ.
+
+ent-DangerTether = Точка привязки опасностей
+    .desc = Опасные объекты на этой карте (сингулярности, теслы) должны находиться в пределах 500 м от одного из этих объектов.
+
+ent-NFInflatableDoor = надувная дверь
+    .desc = Дверь, куда она ведёт?
+ent-NFInflatableDoorWindow = надувная оконная дверь
+    .desc = Дверь, куда она ведёт?
+ent-NFInflatableDoorStack1 = надувная дверь
+    .desc = { ent-NFInflatableDoor.desc }
+    .suffix = 1
+ent-NFInflatableDoorStack = надувная дверь
+    .desc = { ent-NFInflatableDoor.desc }
+    .suffix = Полный
+ent-NFInflatableDoorWindowStack = надувная оконная дверь
+    .desc = { ent-NFInflatableDoorWindow.desc }
+    .suffix = Полный
+ent-NFInflatableDoorWindowStack1 = надувная оконная дверь
+    .desc = { ent-NFInflatableDoorWindow.desc }
+    .suffix = 1
+ent-NFInflatableDock = надувной внешний шлюз
+    .desc = Надувной шлюз с усиленными точками крепления, способная к стыковке. Активируйте для спуска воздуха. Не прокалывайте.
+ent-NFInflatableDockStack = надувной внешний шлюз
+    .desc = { ent-NFInflatableDoor.desc }
+    .suffix = Полный
+ent-NFInflatableDockStack1 = надувной внешний шлюз
+    .desc = { ent-NFInflatableDoor.desc }
+    .suffix = 1
+ent-NFInflatableWall = надувная стена
+    .desc = Надутая стена. Активируйте, чтобы спустить воздух. Не прокалывайте.
+ent-NFInflatableWallStack1 = надувная стена
+    .desc = { ent-NFInflatableWall.desc }
+    .suffix = 1
+ent-NFInflatableWallStack5 = надувная стена
+    .desc = { ent-NFInflatableWall.desc }
+    .suffix = 5
+ent-NFInflatableWallStack = надувная стена
+    .desc = { ent-NFInflatableWall.desc }
+    .suffix = Полный
+ent-NFInflatableWindow = надувное окно
+    .desc = Надутое окно. Активируйте, чтобы спустить воздух. Не прокалывайте.
+ent-NFInflatableWindowStack1 = надувное окно
+    .desc = { ent-NFInflatableWindow.desc }
+    .suffix = 1
+ent-NFInflatableWindowStack5 = надувное окно
+    .desc = { ent-NFInflatableWindow.desc }
+    .suffix = 5
+ent-NFInflatableWindowStack = надувное окно
+    .desc = { ent-NFInflatableWindow.desc }
+    .suffix = Полный
+ent-NFInflatableCrate = надувной ящик
+    .desc = Одноразовый надувной контейнер для хранения. Не сдувается. Не прокалывать.
+ent-NFInflatableCrateStack = надувной ящик
+    .desc = { ent-NFInflatableCrate.desc }
+    .suffix = Полный
+ent-NFInflatableCrateStack1 = надувной ящик
+    .desc = { ent-NFInflatableCrate.desc }
+    .suffix = 1
+
+ent-BorgChassisSelectable = Киборг
+    .desc = Гибрид человека и машины, помогающий в работе станции. Им нравится, когда их снова и снова просят повторять свои законы.
+
+ent-NFDetectiveIDCard = ID карта детектива дсбф
+    .desc = { ent-IDCardStandard.desc }
+ent-NFDetectivePDA = КПК детектива
+    .desc = Пахнет дождем... льет с крыш...
+
+ent-PlushieDave = плюшевый Дэйв
+    .desc = Уважаемый человек!
+
+ent-ThrusterLuaBuildMachineCircuitboard = двигатель LuaTech (машинная плата)
+    .desc = Машинная плата для двигателя LuaTech.
+ent-RustedThruster = ржавый двигатель
+    .desc = Не подлежащий ремонту двигатель, вышедший из строя из-за износа. Пригоден только для утилизации.
+
+ent-SmallBluespaceAirTank = карманный блюспейс газовый баллон
+    .desc = Компактный газовый блюспейс баллон. Вмещает 10 литров газа.
+ent-BluespaceAirTank = блюспейс газовый баллон
+    .desc = Расширенный топливный блюспейс баллон. Вмещает 20 литров газа.
+ent-DoubleEmergencyTankO2N2Equal = двойной аварийный O2/N2 баллон
+    .desc = Высококачественный двухбаллонный контейнер для оказания экстренной медицинской помощи: в одном баллоне находится азот (N2), в другом — кислород (O2). Несмотря на свои небольшие размеры, он вмещает достаточное количество газа — 2,5 л.
+ent-DoubleEmergencyTankO2N2EqualFilled = двойной аварийный O2/N2 баллон
+    .desc = Высококачественный двухбаллонный контейнер для оказания экстренной медицинской помощи: в одном баллоне находится азот (N2), в другом — кислород (O2). Несмотря на свои небольшие размеры, он вмещает достаточное количество газа — 2,5 л.
+    .suffix = Заполнен
+
+ent-ShuttersWindowCentralCommand = { ent-ShuttersWindow }
+    .desc = { ent-ShuttersWindow.desc }
+    .suffix = Центральное Командование
+
+ent-WireBrush = проволочная щетка
+    .desc = Щетка из щетины стальной проволоки, идеально подходящая для удаления даже самых стойких пятен ржавчины.
+ent-IntergalacticTranslator = переводчик
+    .desc = Переводит речь.
+
+ent-WallWeaponCapacitorRechargerAssembly = каркас настенного зарядника
+    .desc = { ent-WallWeaponCapacitorRecharger.desc }
+ent-PortablePump = портативный насос
+    .desc = Сливает воду из луж вокруг устройства. Имеет слот для резервного источника питания и поддон для сбора излишков жидкости. На боковой стороне имеется наклейка с надписью «Не погружать в воду».
+ent-CockSpike= петушиный крюк
+    .desc = Для всех любителей делать >w<.
+
+ent-BoxPaperColored = коробка цветной бумаги
+    .desc = Коробка, полная цветной бумаги.
+ent-PaperColoredRed = бумага
+    .desc = «Кусок красной бумаги».
+ent-PaperColoredOrange = бумага
+    .desc = «Оранжевой красной бумаги».
+ent-PaperColoredYellow = бумага
+    .desc = «Жёлтой красной бумаги».
+ent-PaperColoredGreen = бумага
+    .desc = «Зелёной красной бумаги».
+ent-PaperColoredBlue = бумага
+    .desc = «Синей красной бумаги».
+ent-PaperColoredPurple = бумага
+    .desc = «Фиолетовой красной бумаги».
+
+comms-console-menu-announcement-button-tooltip = Отправьте свое сообщение в виде общесекторального радиообращения.
+comms-console-menu-alert-level-button-tooltip = Изменить уровень угрозы по сектору. Применяется немедленно после выбора.
+comms-console-menu-broadcast-button-tooltip = Транслируйте ваше сообщение на настенные экраны по всему сектору. Примечание: на них помещается только десять символов!
+comms-console-menu-emergency-shuttle-button-tooltip = Вызывает или отзывает аварийный транспорт. Вы можете отозвать его только тогда, когда останется достаточно времени.
+
+ent-ScienceMothershipComputer = консоль научной верфи
+    .desc = Используется для покупки и продажи шаттлов научных.
+guide-entry-startinggear = Стартовое снаряжение
+guide-entry-frontier-definitions = Определения
+guide-entry-sector-topology = Топология сектора
+guide-entry-cargo-hauling = Грузоперевозки
+guide-entry-preflightchecklist = Предолетный чек-лист
+
+grid-claimer-verb-claim = Захватить грид
+grid-claimer-verb-unclaim = Распустить грид
+grid-claimer-claim-already = Грид уже захвачен
+grid-claimer-claim = Захвачено
+grid-claimer-unclaim = Не захвачено
+grid-claimer-unclaim-fail = Провал захвата
+construction-category-flags = Флаги
+
+ent-PoweredWarmSmallLight = { ent-PoweredSmallLight }
+    .desc = { ent-PoweredSmallLight.desc }
+    .suffix = Тёплый
+
+ent-ParcelWrap = обёрточная бумага
+    .desc = Бумага используется для упаковки товаров, предназначенных для транспортировки.
+ent-CrateCargoParcelWrap = ящик обёрточной бумаги
+    .desc = Все необходимое для упаковки посылок в одном ящике: три рулона упаковочной бумани.
+ent-WrappedParcel = завернутая посылка
+    .desc = Что-то завернутое в бумагу. Интересно, что внутри...
+ent-ParcelWrapTrash = обёрточная бумага
+    .desc = Неутешительные остатки неупакованной посылки.
+ent-ParcelDropoff = почтовый ящик
+    .desc = Здесь хранятся посылки и конверты, которые затем забирает почтальон. Не забудьте указать, кому адресовано отправление!
+ent-ParcelDropoffPOI = { ent-ParcelDropoff }
+    .desc = { ent-ParcelDropoff.desc }
+    .suffix = POI
+ent-ParcelWrap1 = { ent-ParcelWrap }
+    .desc = { ent-ParcelWrap.desc }
+    .suffix = Один
+
+ent-WaterfallOnsen = водопад
+.desc = Водопад. Водо-пад. Это лишь падающая откуда-то сверху вода, так почему же она так прекрасна?
+.suffix = {"Онсен"}
+ent-MedievalFloraTreeLarge01 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeLarge02 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeLarge03 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeLarge04 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeLarge05 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeLarge06 = большое проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree01 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree02 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree03 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree04 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree05 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTree06 = проклятое дерево
+    .desc = Проклято
+ent-MedievalFloraTreeAutumnLarge01 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumnLarge02 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumnLarge03 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumnLarge04 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumnLarge05 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumnLarge06 = большое осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn01 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn02 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn03 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn04 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn05 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+ent-MedievalFloraTreeAutumn06 = осеннее дерево
+    .desc = В этих краях уже наступила оcень
+
+ent-MedievalStoneBrickWall = каменная стена
+    .desc = Выглядит как стена средневекового замка
+ent-MedievalWallStoneAncient = древняя каменная стена
+    .desc = Выглядит как стена древнего храма
+    .suffix = { "Средневековье, декор" }
+ent-MedievalWallStoneDark = темная каменная стена
+    .desc = Выглядит как стена древнего храма
+    .suffix = { "Средневековье, декор" }
+ent-MedievalWallStoneUnholy = проклятая каменная стена
+    .desc = Выглядит как стена проклятого храма
+    .suffix = { "Средневековье, декор" }
+ent-WallTentCloth = стена палатки
+    .desc = Простенькое тканевое укрытие
+ent-DoorTentCloth = дверь палатки
+    .desc = Дверь в простенькое тканевое укрытие
+ent-MedievalStoneBrickWallLoopHole = каменная бойница
+    .desc = Из нее можно удобно стрелять, не опасаясь что тебе перережут глотку
+
+ent-MedievalChest = деревянный сундук с бронзовой оправой
+    .desc = В него можно складывать различные предметы
+ent-MedievalChest2 = железный сундук
+    .desc = В него можно складывать различные предметы
+ent-MedievalChest3 = железный сундук с золотой оправой
+    .desc = В него можно складывать различные предметы
+ent-MedievalChest4 = деревянный сундук
+    .desc = В него можно складывать различные предметы
+
+ent-MedievalBlastDoor = тяжёлые старинные ворота
+    .desc = Открывайте! Хм. Никогда не открывают.
+    .suffix = закрытые
+ent-MedievalBlastDoorOpen = тяжёлые старинные ворота
+    .desc = Открывайте! Хм. Никогда не открывают.
+    .suffix = открытые
+ent-MedievalAirlock = дверь
+    .desc = Для нее не нужен ключ
+ent-MedievalAirlockGrille = решетчатая дверь
+    .desc = Для нее не нужен ключ
+ent-MedievalAirlockReinforced = оббитая железом дверь
+    .desc = Для нее не нужен ключ
+ent-MedievalPrisonGrille = железная тюремная решётка
+    .desc = На ум приходят известные строки "Сижу за решеткой в темнице сырой, вскормленный в неволе орел молодой."
+ent-MedievalPrisonGrilleCraft = заготовка тюремной решетки
+    .desc = Кликните с заготовкой в активной руке по месту, куда вы хотите разместить объект, чтобы смастерить тюремную решетку.
+
+ent-FloorWaterEntityMedieval = вода
+    .desc = Настоящий утолитель жажды.
+tiles-grass-planet-floor1 = тёмная трава
+tiles-grass-planet-floor2 = осенняя трава
+tiles-grass-planet-floor3 = проклятая трава
+tiles-grass-planet-floor4 = тёмная проклятая трава
+tiles-grass-planet-floor5 = мертвая трава
+tiles-grass-planet-floor6 = тёмная мертвая трава
+
+
+tiles-bedrock-floor = коренная порода
+tiles-gold-floor-mono = золотые моно плиты
+tiles-silver-floor-mono = серебрянные моно плиты
+tiles-green-floor-mono = зелёные моно плиты
+tiles-light-blue-floor-mono = голубые моно плиты
+tiles-light-green-floor-mono = светло-зелёные моно плиты
+tiles-light-pink-floor-mono = светло-розовые моно плиты
+tiles-light-yellow-floor-mono = светло-жёлтые моно плиты
+tiles-orange-floor-mono = оранжевые моно плиты
+tiles-light-red-floor-mono = светло-красные моно плиты
+tiles-red-floor-mono = красные моно плиты
+tiles-sus-floor = сус пол
+tiles-wood-checkerboard-floor = шахматный деревянный пол
+tiles-wood-light-mosaic-floor = светлый мозаичный пол из дерева
+tiles-wood-fancy-floor = необычный деревянный пол
+tiles-wood-versailles-floor = Версальский деревянный пол
+tiles-cheese-floor = сырный пол
+tiles-plasma-glass-floor = плазменный стеклянный пол
+tiles-reinforced-plasma-glass-floor = плазменный бронестеклянный стеклянный пол
+tiles-uranium-glass-floor = урановый стеклянный пол
+tiles-reinforced-uranium-glass-floor = урановый ронестеклянный стеклянный пол
+tiles-inflatable-plating = надувной пол
+
+# Upstream renames
+tiles-dirt-floor-undiggable = грязь (невскапываемый)
+
+tiles-dark-squiggly = темная стальная волнистая плитка
+tiles-white-marble = белая мраморная плитка
+tiles-dark-marble = темная мраморная плитка
+tiles-plasma-marble = плазменно-мраморная плитка
+tiles-uranium-marble = ураново-мраморная плитка
+
+dh-research-technology-hyper-powercells = Батареи гипер ёмкости
+dh-research-technology-Armor-basic = Базовая броня
+dh-research-technology-Armor = Улучшенные бронепластины
+dh-research-technology-Armor-adw = Комплесные бронекостюмы
+dh-research-technology-Armor-salvage = Костюмы исследования
+dh-research-technology-hardsuits-luxury = Элитные утилизаторские экзокостюмы
+dh-research-technology-hardsuits-salvage = Утилизаторские экзокостюмы
+dh-research-technology-evahardsuits = Базовые экзокостюмы
+dh-research-technology-evahardsuits-basic = Базовые аварийные экзокостюмы
+dh-research-technology-outercloth-basic = Базовое защитное снаряжение
+dh-research-technology-magnets-tech-jump = Прыжковые ботинки
+dh-research-technology-industrial-speed-engineering = Скроростная промышленная инженерия
+dh-research-technology-research-disks = Печать исследовательских дисков
+dh-research-technology-basic-research-blueprints = Печать чертежей технологий
+dh-research-technology-rapid-construction = Массовое строительство
+dh-research-technology-basic-research-borg-modules = Исследовательские модули боргов
+dh-research-technology-experimental-wender = Экспериментальная сварка
+research-technology-night-vision = Ночное зрение
+research-technology-thermal-vision = Термальное зрение
+nf-research-technology-magnets-tech-jet = Реактивные ботинки
+
+ent-ShiparmoryResearchAndDevelopmentServerFlatpack = упакованный корабельный сервер РНД
+    .desc = Упаковка, при помощи которой можно создать корабельный сервер РНД
+ent-NFSDResearchAndDevelopmentServerFlatpack = упакованный сервер РНД ДСБФ
+    .desc = Упаковка, при помощи которой можно создать сервер РНД ДСБФ
+nf-research-technology-portable-smes = Портативный крупный накопитель энергии
+
+reagent-name-antiseptic = антисептическая жидкость
+reagent-desc-antiseptic = Мягкое антибактериальное мыло, используемое для очистки сточных вод, непригодное для употребления в пищу в качестве органических продуктов.
+
+ent-NFWeaponPkaSawn = укороченный протокинетический ускоритель
+    .desc = Границы и правила созданы для того, чтобы их нарушать; иначе не будет прогресса, но этот случай — веский аргумент против этого утверждения.
+ent-NFWeaponPka = протокинетический ускоритель
+   .desc = Стреляет кинетическими снарядами с низким уроном на короткой дистанции.
+
+ent-MaterialAnomalite = аномалит
+    .desc = Слегка переливающийся розово-фиолетовый кристалл. Он тихонько гудит.
+ent-MaterialAnomalite3 = { ent-MaterialAnomalite }
+    .desc = { ent-MaterialAnomalite.desc }
+ent-MaterialAnomalite1 = { ent-MaterialAnomalite }
+    .desc = { ent-MaterialAnomalite.desc }
+ent-MachineMiniAnomalyGenerator = мини-генератор аномалий
+    .desc = Вершина псевдонаучных технологий.
+
+ent-BoxGrenadeBarrier = коробка барьерных гранат
+    .desc = Полная коробка барьерных гранат.
+ent-CrateSecurityGrenadeBarrier = ящик барьерных гранат
+    .desc = Содержит четыре барьерных гранаты. Чтобы открыть необходим уровень доступа Служба безопасности.
+ent-GrenadeBarrier = барьерная граната
+    .desc = Мгновенное покрытие на несколько минут.
+
+ent-ClusterSyndyFlashGrenade = Поцелуй Бога
+    .desc = Вероятность того, что вас забанят за использование этой гранаты, составляет 99,9%.
+ent-SyndyClusterGrenade = кластерная граната синдиката
+    .desc = Если вам не важна точность, то этот выбор для вас.
+
+ent-WeaponEarthGovLaserPistol = лазерный пистолет землянина
+    .desc = Лазерный пистолет стандартного выпуска правительства Земли, используемый армией и полицией.
+ent-WeaponEarthGovLaserRifle = лазерный автомат землянина
+    .desc = Лазерный автомат стандартного выпуска правительства Земли, используемая армией и полицией.
+ent-WeaponEarthGovLaserCarbine = лазерный карабин землянина
+    .desc = Лазерный карабин стандартного выпуска правительства Земли, используемый армией и полицией. Благодаря короткому стволу он обладает лучшей маневренностью в узких пространствах.
+ent-WeaponEarthGovLaserMG = лазерный пулемёт землянина
+    .desc = Лазерный пулемёт стандартного выпуска правительства Земли, используемый армией. Тяжёлый и смертоносный.
+ent-WeaponEarthGovXRay = экспериментальный рентгеновский снимок правительства Земли
+    .desc = Экспериментальное рентгеновское оружие правительства Земли, похоже, оно испускает радиацию.
+    .suffix = САНРАЙЗ14СМ
+ent-WeaponEarthGovLaserSniper = Тяжелая лазерная винтовка землянина
+    .desc = Тяжелая снайперская винтовка правительства Земли для длительных боевых действий.
+ent-WeaponPlasmaCutter = плазменный резак
+    .desc = Стреляет плазменными зарядами с малым уроном на близком расстоянии.
+ent-WeaponGunLaserCarbineSemi = лазерный карабин ИК-30
+    .desc = Лазерный полуавтоматический карабин используемый батарейки как источник питания.
+ent-CrateArmoryIK30 = ящик ИК-30
+    .desc = Содержит три батарейных лазера ИК-30. Чтобы открыть необходим доступ уровня Оружейной.
+
+ent-ADTClothingOuterArmorMiner = костюм исследователя
+    .desc = Не спасёт от давления, но хорошо защищает от фауны.
+ent-ADTClothingOuterArmorMinerHeavy = тяжёлый костюм исследователя
+    .desc = Улучшенная версия шахтёрской брони, укреплённая шкурой ксеносов. Двигаться тяжелее, но защищает куда лучше!
+ent-ADTClothingOuterArmorMinerLight = лёгкий костюм исследователя
+    .desc = Облегчённая версия костюма исследователя, изготовленная из сухожильев дракона. Благодаря ихору вы не чувствуете своего веса.
+ent-ADTClothingOuterArmorMinerReinforced = пластинчатый костюм исследователя
+    .desc = Этот исследовательский костюм укреплён шкурами голиафов. Вершина шахтёрской мысли и безумности самого Лавалэнда в области защиты.
+ent-ADTClothingOuterArmorMinerReinforcedOne = частично усиленный костюм исследователя
+    .desc = Этот исследовательский костюм усилен шкурами голиафов. Малый шаг к вершине шахтёрской мысли и безумности самого Лаваленда в области защиты.
+ent-ADTClothingOuterArmorMinerReinforcedTwo = усиленный костюм исследователя
+    .desc = Этот исследовательский костюм усилен шкурами голиафов. Всё ближе и ближе к вершине...
+ent-ADTClothingOuterArmorMinerReinforcedFull = пластинчатый костюм исследователя
+    .desc = Этот исследовательский костюм укреплён шкурами голиафов. Вершина шахтёрской мысли и безумности самого Лавалэнда в области защиты.
+
+construction-graph-tag-miner-armor = костюм исследователя
+construction-graph-tag-reinforced-explorer-suit = частично усиленный костюм исследователя
+construction-graph-tag-reinforced-explorer-suit-two = усиленный костюм исследователя
+
+attach-to-armor = Нацепить на броню
+unattach-to-armor = Отцепить от брони
+#badgeable-badge-cannot-be-seen-text = На броне закреплён какой-то значок
+#badgeable-badge-can-be-seen-text = На броне закреплён значок №{$badgeNumber}
+#badge-cannot-be-seen-text = Номер значка не видно
+#badge-can-be-seen-text = Значок №{$badgeNumber}
+
+#ent-ADTClothingNeckSecBadgeBronze = бронзовый жетон Службы Безопасности
+#    .desc = Бронзовый жетон с символикой Службы Безопасности. Выдается каждому новому сотруднику.
+#ent-ADTClothingNeckSecBadgeSilver = серебряный жетон Службы Безопасности
+#    .desc = Серебряный жетон с символикой Службы Безопасности. Выдается вместо бронзового жетона офицерам за выслугу лет и успешное прохождение квалификационных экзаменов.
+#ent-ADTClothingNeckSecBadgeGold = золотой жетон Службы Безопасности
+#    .desc = Золотой жетон с символикой Службы Безопасности. Предмет особой гордости офицера - его выдают только тем, кто смог достаточно долго и без серьезных нареканий прослужить в СБ и пройти через огонь, воду и совместную работу с Юридическим Департаментом.
+
+ent-CrateSuitCargo = ящик грузовых костюмов
+    .desc = Ящик с парой грузовых костюмов.
+
+ent-ADTClothingHeadHelmetMiner = шахтёрский капюшон
+    .desc = Пропитан отчаянием и безнадежностью.
+ent-ADTClothingHeadHelmetMinerReinforcedOne = частично усиленный капюшон исследователя
+    .desc = Пропитан отчаянием и безнадежностью, но малая часть надежды теперь чуствуется в нём.
+ent-ADTClothingHeadHelmetMinerReinforcedTwo = усиленный капюшон исследователя
+    .desc = Пропитан отчаянием и безнадежностью, а теперь к надежде прибавилось безумие... Безумие самого Лаваленда.
+ent-ADTClothingHeadHelmetMinerReinforcedFull = пластинчатый капюшон исследователя
+    .desc = Такой же безумный способ укрыть голову от опасностей, как и рассудок придумавшего это.
+energy-gun-lethal = летал
+energy-gun-disable = обезоруживание
+energy-gun-special = специальный
+energy-gun-shotgun-spread = широкий лазерный обстрел
+energy-gun-shotgun-spread-narrow = узкий лазерный залп
+
+ent-ClothingBeltAssaultFilled = штурмовой пояс
+    .desc = Тактический штурмовой пояс.
+    .suffix = Заполеннный
+
+BluespacePillCanister = блюспейс баночка для таблеток
+    .desc = Вмещает огромное количество таблеток.
+
+gun-examine-caliber = Оно расчитано на [color={$color}]{$caliber}[/color].
+reflect-component-examine = Оно имеет [color=lightblue]{$value}%[/color] шанс [color=cyan]отразить[/color] {$type}.
+reflect-component-nonenergy = пули
+reflect-component-energy = энергетические болты
+
+gun-examine-caliber-35 = пистолетные патроны .35
+gun-examine-caliber-45 = пистолетные патроны .45
+gun-examine-caliber-45-cap = патроны с капсюлем .45
+gun-examine-caliber-10 = винтовочные патроны .10
+gun-examine-caliber-25 = винтовочные патроны .25
+gun-examine-caliber-20 = винтовочные патроны .20
+gun-examine-caliber-30 = винтовочные патроны .30
+gun-examine-caliber-50 = дробь .50
+gun-examine-caliber-60 = винтовочные патроны .60
+gun-examine-caliber-asmgt = пистолетные .35 / винтовочные .20 / винтовочные .25 / винтовочные .30 патроны
+gun-examine-caliber-foam = пенопластовые дротики
+gun-examine-hitscan-low = энергетический луч 750Дж
+gun-examine-energybolt-medium = энергетический луч 1100Дж
+gun-examine-hitscan-high = энергетический луч 1400Дж
+gun-examine-hitscan-high-p = энергетический луч 1900Дж
+gun-examine-hitscan-xray = рентгеновский луч 1900Дж
+gun-examine-energybolt-low = энергетический болт 750Дж
+gun-examine-energybolt-low-disabler-pistol = энергетический/станнящий болт 750Дж
+gun-examine-energybolt-high = энергетический болт 1400Дж
+gun-examine-energybolt-disabler-pistol = энергетический болт 750Дж
+gun-examine-energybolt-disabler-practice = энергетический болт 25Дж
+gun-examine-energybolt-holoflare = голографическая вспышка
+gun-examine-pulse-low = энергетический импульс 1750Дж
+gun-examine-particle-stream = поток высокоэнергетических частиц
+gun-examine-energybolt-emp = ЭМИ болт
+gun-examine-energybolt-kinetic-high = кинетический болт 1600Дж
+gun-examine-energybolt-kinetic-medium = кинетический болт 1100Дж
+gun-examine-energybolt-kinetic-low = кинетический болт 850Дж
+gun-examine-caliber-40mm-grenade = 40-мм гранаты
+gun-examine-caliber-40mm-grenade-dart = 40-мм гранаты / дротик-трекер
+gun-examine-caliber-rocket = реактивные гранаты
+gun-examine-caliber-cannon-ball = пушечные ядра
+gun-examine-caliber-mail-capsule = почтовые капсулы
+
+examine-gun-spread-modifier-reduction = Разброс уменьшен на [color=yellow]{$percentage}%[/color].
+examine-gun-spread-modifier-increase = Разброс увеличен на [color=yellow]{$percentage}%[/color].
+
+ent-NFWeaponRifleFoam = Астро-Ас Сила Пенопласта
+    .desc = Первоклассная пенопластовая винтовка высочайшего качества. Её пластик прочен на ощупь, а механизмы надёжены.
+ent-NFMagazineBoxFoam = коробка боеприпасов (пенопласт)
+    .desc = { ent-MagazineLightRifleBox.desc }
+ent-NFBulletFoam = поролоновый дротик
+    .desc = Надеюсь, вы носите защиту для глаз.
+ent-NFBoxDonkSoftBase = коробка поролоновых дротиков
+    .desc = { ent-BaseItem.desc }
+ent-NFBoxDonkSoftBox = коробка поролоновых дротиков
+    .desc = { ent-BoxDonkSoftBase.desc }
+ent-NFBoxCartridgeCap = коробка пистонов
+    .desc = { ent-BaseMagazineBoxMagnum.desc }
+ent-NFRevolverCapGun = игрушечный пистолет
+    .desc = Выглядит почти как настоящий! От 8 лет и старше.
+ent-NFRevolverCapGunFake = { ent-RevolverCapGun }
+    .desc = { ent-RevolverCapGun.desc }
+    .suffix = Боевой
+ent-NFSpeedLoaderCap = зарядник пистонов
+    .desc = { ent-BaseSpeedLoaderCap.desc }
+ent-NFCartridgeCap = пистон
+    .desc = { ent-BaseCartridgeCap.desc }
+ent-NFMailBagCapsulePrimed = почтовый мешок
+    .desc = Почта никогда не ошибается...
+    .suffix = Фронтир, Капсулы
+
+ent-NFWeaponPistolMk58ExpeditionWorn = { ent-NFWeaponPistolMk58 }
+    .desc = { ent-NFWeaponPistolMk58.desc }
+ent-NFWeaponPistolPollockExpeditionWorn = { ent-NFWeaponPistolPollock }
+    .desc = { ent-NFWeaponPistolPollock.desc }
+ent-NFWeaponSubMachineGunDrozdExpeditionWorn = { ent-NFWeaponSubMachineGunDrozd }
+    .desc = { ent-NFWeaponSubMachineGunDrozd.desc }
+ent-NFWeaponSubMachineGunAtreidesExpeditionWorn = { ent-NFWeaponSubMachineGunAtreides }
+    .desc = { ent-NFWeaponSubMachineGunAtreides.desc }
+ent-NFWeaponSubMachineGunTypewriterExpeditionWorn = { ent-NFWeaponSubMachineGunTypewriter }
+    .desc = { ent-NFWeaponSubMachineGunTypewriter.desc }
+ent-NFWeaponEnergyPistolLaserSvalinnExpeditionWorn = { ent-NFWeaponEnergyPistolLaserSvalinn }
+    .desc = { ent-NFWeaponEnergyPistolLaserSvalinn.desc }
+ent-NFWeaponShotgunEnforcerExpeditionWorn = { ent-NFWeaponShotgunEnforcer }
+    .desc = { ent-NFWeaponShotgunEnforcer.desc }
+ent-NFWeaponShotgunBulldogExpeditionWorn = { ent-NFWeaponShotgunBulldog }
+    .desc = { ent-NFWeaponShotgunBulldog.desc }
+ent-NFWeaponRifleAssaultSmExpeditionWorn = { ent-NFWeaponRifleAssaultSm }
+    .desc = { ent-NFWeaponRifleAssaultSm.desc }
+ent-NFWeaponRifleAssaultVulcanExpeditionWorn = { ent-NFWeaponRifleAssaultVulcan }
+    .desc = { ent-NFWeaponRifleAssaultVulcan.desc }
+ent-NFWeaponEnergyRifleCarbineExpeditionWorn = { ent-NFWeaponEnergyRifleCarbine }
+    .desc = { ent-NFWeaponEnergyRifleCarbine.desc }
+ent-NFWeaponEnergyPistolLaserAdvancedExpeditionWorn = { ent-NFWeaponEnergyPistolLaserAdvanced }
+    .desc = { ent-NFWeaponEnergyPistolLaserAdvanced.desc }
+ent-NFWeaponEnergyPistolLaserAntiqueExpeditionWorn = { ent-NFWeaponEnergyPistolLaserAntique }
+    .desc = { ent-NFWeaponEnergyPistolLaserAntique.desc }
+ent-NFWeaponLauncherRocketExpeditionWorn = { ent-NFWeaponLauncherRocket }
+    .desc = { ent-NFWeaponLauncherRocket.desc }
+ent-NFWeaponLauncherChinaLakeExpeditionWorn = { ent-NFWeaponLauncherChinaLake }
+    .desc = { ent-NFWeaponLauncherChinaLake.desc }
+ent-NFWeaponLightMachineGunL6ExpeditionWorn = { ent-NFWeaponLightMachineGunL6 }
+    .desc = { ent-NFWeaponLightMachineGunL6.desc }
+ent-NFWeaponEnergySubMachineGunDeltaVExpeditionWorn = { ent-NFWeaponEnergySubMachineGunDeltaV }
+    .desc = { ent-NFWeaponEnergySubMachineGunDeltaV.desc }
+ent-NFWeaponEnergyRifleSniperXrayCannonExpeditionWorn = { ent-NFWeaponEnergyRifleSniperXrayCannon }
+    .desc = { ent-NFWeaponEnergyRifleSniperXrayCannon.desc }
+ent-NFWeaponEnergyRifleSniperCannonExpeditionWorn = { ent-NFWeaponEnergyRifleSniperCannon }
+    .desc = { ent-NFWeaponEnergyRifleSniperCannon.desc }
+ent-NFWeaponEnergyRifleTemperatureExpeditionWorn = { ent-NFWeaponEnergyRifleTemperature }
+    .desc = { ent-NFWeaponEnergyRifleTemperature.desc }
+
+ent-NFWeaponPistolMk58Expedition = { ent-NFWeaponPistolMk58 }
+    .desc = { ent-NFWeaponPistolMk58.desc }
+ent-NFWeaponPistolPollockExpedition = { ent-NFWeaponPistolPollock }
+    .desc = { ent-NFWeaponPistolPollock.desc }
+ent-NFWeaponSubMachineGunDrozdExpedition = { ent-NFWeaponSubMachineGunDrozd }
+    .desc = { ent-NFWeaponSubMachineGunDrozd.desc }
+ent-NFWeaponSubMachineGunAtreidesExpedition = { ent-NFWeaponSubMachineGunAtreides }
+    .desc = { ent-NFWeaponSubMachineGunAtreides.desc }
+ent-NFWeaponSubMachineGunTypewriterExpedition = { ent-NFWeaponSubMachineGunTypewriter }
+    .desc = { ent-NFWeaponSubMachineGunTypewriter.desc }
+ent-NFWeaponEnergyPistolLaserSvalinnExpedition = { ent-NFWeaponEnergyPistolLaserSvalinn }
+    .desc = { ent-NFWeaponEnergyPistolLaserSvalinn.desc }
+ent-NFWeaponShotgunEnforcerExpedition = { ent-NFWeaponShotgunEnforcer }
+    .desc = { ent-NFWeaponShotgunEnforcer.desc }
+ent-NFWeaponShotgunBulldogExpedition = { ent-NFWeaponShotgunBulldog }
+    .desc = { ent-NFWeaponShotgunBulldog.desc }
+ent-NFWeaponRifleAssaultSmExpedition = { ent-NFWeaponRifleAssaultSm }
+    .desc = { ent-NFWeaponRifleAssaultSm.desc }
+ent-NFWeaponRifleAssaultVulcanExpedition = { ent-NFWeaponRifleAssaultVulcan }
+    .desc = { ent-NFWeaponRifleAssaultVulcan.desc }
+ent-NFWeaponEnergyRifleCarbineExpedition = { ent-NFWeaponEnergyRifleCarbine }
+    .desc = { ent-NFWeaponEnergyRifleCarbine.desc }
+ent-NFWeaponEnergyPistolLaserAdvancedExpedition = { ent-NFWeaponEnergyPistolLaserAdvanced }
+    .desc = { ent-NFWeaponEnergyPistolLaserAdvanced.desc }
+ent-NFWeaponEnergyPistolLaserAntiqueExpedition = { ent-NFWeaponEnergyPistolLaserAntique }
+    .desc = { ent-NFWeaponEnergyPistolLaserAntique.desc }
+ent-NFWeaponLauncherRocketExpedition = { ent-NFWeaponLauncherRocket }
+    .desc = { ent-NFWeaponLauncherRocket.desc }
+ent-NFWeaponLauncherChinaLakeExpedition = { ent-NFWeaponLauncherChinaLake }
+    .desc = { ent-NFWeaponLauncherChinaLake.desc }
+ent-NFWeaponLightMachineGunL6Expedition = { ent-NFWeaponLightMachineGunL6 }
+    .desc = { ent-NFWeaponLightMachineGunL6.desc }
+ent-NFWeaponEnergySubMachineGunDeltaVExpedition = { ent-NFWeaponEnergySubMachineGunDeltaV }
+    .desc = { ent-NFWeaponEnergySubMachineGunDeltaV.desc }
+ent-NFWeaponEnergyRifleSniperXrayCannonExpedition = { ent-NFWeaponEnergyRifleSniperXrayCannon }
+    .desc = { ent-NFWeaponEnergyRifleSniperXrayCannon.desc }
+ent-NFWeaponEnergyRifleSniperCannonExpedition = { ent-NFWeaponEnergyRifleSniperCannon }
+    .desc = { ent-NFWeaponEnergyRifleSniperCannon.desc }
+ent-NFWeaponEnergyRifleTemperatureExpedition = { ent-NFWeaponEnergyRifleTemperature }
+    .desc = { ent-NFWeaponEnergyRifleTemperature.desc }
+
+ent-NFShieldBallistic = пуленепробиваемый щит
+    .desc = Щит, предназначенный для защиты от баллистических угроз, но не более того.
+ent-NFMetalShield = металлический щит
+    .desc = Прочный металлический щит. В нём есть окошко, чтобы вы могли подмигнуть тому, что в вас попадает.
+ent-NFShieldReflective = отражающий щит
+    .desc = Щит, созданный для противостояния лазерам, но не более того.
+ent-NFPoweredlightShieldedEmpty = экранированный светильник
+    .desc = Осветительный прибор. Потребляет энергию и излучает свет, если оснащён лампой-трубкой. Усилен пластиковой сталью для защиты от солнечных вспышек.
+ent-NFPoweredSmallLightShieldedEmpty = экранированный маленький светильник
+    .desc = Осветительный прибор. Потребляет энергию и излучает свет, если оснащён лампой-трубкой. Усилен пластиковой сталью для защиты от солнечных вспышек.
+ent-NFClothingOuterArmorReflective = базовый отражающий жилет
+    .desc = Жилет, обеспечивающий умеренную защиту от энергетического оружия.
+
+flash-protection = Оно обеспечивает защиту от [color=lightblue]ярких вспышек[/color].
+
+ent-PoweredStrobeLightEpsilonFull = { ent-PoweredStrobeLightEmpty }
+    .suffix = Эпсилон
+    .desc = { ent-PoweredStrobeLightEmpty.desc }
+ent-PoweredStrobeLightEpsilonFullSound = { ent-PoweredStrobeLightEmpty }
+    .suffix = Эпсилон, Звук
+    .desc = { ent-PoweredStrobeLightEmpty.desc }
+ent-PoweredStrobeSodiumSiren = { ent-PoweredStrobeLightEmpty }
+    .suffix = Натриевый
+    .desc = { ent-PoweredStrobeLightEmpty.desc }
+ent-ClothingOuterEVASuitStc = скафандр EVA диспетчера
+    .desc = { ent-ClothingOuterEVASuitContractor.desc }
+ent-ClothingOuterEVASuitValet = скафандр EVA камердинера
+    .desc = { ent-ClothingOuterEVASuitContractor.desc }
+
+ent-ClothingHandsKnuckleDusters = кастеты
+    .desc = Холодные пластиковые кастеты делают ваши удары намного сильнее.
+ent-ClothingHandsKnuckleDustersBrass = латунные кастеты
+    .desc = Кастеты, точно такие же, как делали раньше, и по-прежнему бьют так же сильно.
+ent-ClothingHandsKnuckleDustersSyndicate = кастеты синдиката
+    .desc = Кастеты из пластитана с кроваво-красной буквой S. Настоящий мужчина забивает ими кого-нибудь до смерти.
+ent-ClothingHandsKnuckleDustersQM = Золотые кастеты
+    .desc = 24-каратное золото, внедренное в пласталь, с логотипом НаноТрайзен. Истинный символ могущества интенданта.
+ent-ClothingHandsKnuckleDustersStun = электрошоковые кастеты
+    .desc = Сочетание кастетов и шоковой дубинки значительно упрощает борьбу с оппозиционными движениями.
+
+ent-FoodBoxDonkpocketMoth = коробка моль-покетов
+    .desc = Инструкция: Разогрейте в микроволновой печи. Продукт остынет, если не будет съеден в течение семи минут.
+ent-FoodDonkpocketMoth = моль-покет
+    .desc = Шумная версия «донк-покета», созданная во время массовых протестов против… Да кому это вообще интересно? Просто донк-покет для мотыльков.
+ent-FoodDonkpocketMothWarm = тёплый моль-покет
+    .desc = { ent-FoodDonkpocketMoth.desc }
+ent-FoodBakedWaffleCone = вафельный рожок
+    .desc = Вафельный рожок с сахаром. Сверху — мороженое!
+ent-FoodBoxWaffleCone = коробка вафельных рожков
+    .desc = Коробка вафельных рожков марки Waffle Co. На коробке изображено несколько отталкивающее фото улыбающегося ребенка.
+
+ent-McServiceTechFab = сервисный ТехФаб МакКарго
+    .desc = Печатает оборудование для персонала компании МакКарго.
+ent-McServiceTechFabCircuitboard = сервисный ТехФаб МакКарго (машинная плата)
+    .desc = Плата для создания сервисного техфаба МакКарго.
+
+ent-N14PoliceBaton = полицейская дубинка
+
+ent-FoodEveryspice = стручки душистого перца
+    .desc = Длинные, светлые стручки растения душистого перца. В молотом виде придают блюдам насыщенный вкус.
+ent-FoodEveryspiceRoasted = жареные стручки душистого перца
+    .desc = Ароматные, обугленные стручки душистого перца. В измельченном виде — пикантная добавка к блюдам.
+ent-FoodPizzaWorldpeas = мировая пицца
+    .desc = Современная дипломатия в форме диска.
+ent-FoodPizzaWorldpeasSlice = кусочек мировой пиццы
+    .desc = Разделение мира — это небольшая цена за гармонию.
+ent-FoodMeatWholePenguinCooked = целиком приготовленный пингвин
+    .desc = Целый приготовленный пингвин. Нет никакого морального оправдания тому, что вы здесь сделали.
+ent-FoodMeatWholeDuckCooked = целиком приготовленная утка
+    .desc = Целая приготовленная утка. Можете представить, как она печально смотрит на вас.
+ent-FoodMeatWholeChickenCooked = целиком приготовленная курица
+    .desc = Целая вареная курица. Вероятно, она полностью прожарена.
+ent-FoodSausageCasing = колбасная оболочка
+    .desc = Кишечник или что-то подобное у какого-то несчастного существа...
+ent-FoodRiceDough = рисовое тесто
+    .desc = Вы почти уверены, что это просто рис и вода. Вы понятия не имеете, как это всё держится вместе.
+ent-FoodRiceDoughSlice = кусочек рисового теста
+    .desc = Кусочек рисового теста.
+ent-FoodRiceNoodles = рисовая лапша
+    .desc = Гнездо из нежной рисовой лапши. Вероятно, лучше приготовить заранее.
+ent-FoodRiceNoodlesSheet = лист рисовой лапши
+    .desc = Лист риса, готовый к нарезке на лапшу. Вероятно, лучше его приготовить.
+ent-FoodPiePumpkin = тыквенный пирог
+    .desc = Кто-нибудь должен превратить это в латте!
+ent-FoodMeatSausage = приготовленная колбаска
+    .desc = Обычная сосиска. Кто знает, что в ней внутри?
+ent-FoodSausageRaw = сырая колбаска
+    .desc = Обычная сосиска. Кто знает, что в ней внутри?
+ent-FoodPelmeniBowl = пельмени
+    .desc = Много мяса, мало теста.
+ent-FoodMealHotdog = хот-дог
+    .desc = Вот это да!
+ent-FoodBakedGrilledCheeseSandwich = сэндвич с сыром на гриле
+    .desc = Поджаренный с маслом хлеб с сыром — идеальное лакомство для прохладного дня в космосе.
+ent-FoodBreadTexasToast = техасский тост
+    .desc = Толстый кусок тоста, покрытый чесноком и маслом. А если это не сработает — добавьте больше чеснока.
+ent-FoodBreadGarlicBaguetteSlice = ломтик французского чесночного хлеба
+    .desc = Кусок французского чесночного хлеба, щедро посыпанный поджаренным сыром и с недостаточным количеством чеснока.
+ent-FoodBreadGarlicBaguette = французский чесночный хлеб
+    .desc = Чеснок? Расплавленный сыр на багете?! Не хватает только более равномерного количества чеснока.
+ent-FoodTartPearCheeseSlice = ломтик грушево-сырного пирога
+    .desc = Сладкий и пикантный кусочек грушево-сырного пирога.
+ent-FoodCakeCottonSlice = кусок хлопкового пирога
+    .desc = Кусочек бисквитного торта. Можно просто облизать глазурь, это нормально.
+ent-FoodCakeCotton = хлопковый пирог
+    .desc = Торт с глазурью из волокна и комочком ваты сверху.
+ent-FoodMealTonkotsuNoodles = лапша тонкацу
+    .desc = Бульон из свиных костей с чесноком и свининой. Насыщенный!
+ent-FoodDoughFlatPastry = тесто для печенья
+    .desc = Раскатанное маслянистое тесто для выпечки.
+ent-FoodSnackSwirlLollipop = леденец с закрученным узором
+    .desc = Закрученный круг из чистого концентрированного сахара. Кто теперь самый большой ребенок на детской площадке?
+ent-FoodFrozenPopsicleLicorice = лакричный кремовый леденец
+    .desc = Ванильное мороженое на палочке, покрытое тягучей лакричной оболочкой.
+ent-FoodFrozenMochiBungo = бунго моти
+    .desc = Вкусная тягучая масса из клейкого риса, внутри которой находится мороженое. Со вкусом бунго!
+ent-FoodFrozenMochiUbe = убе моти
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. Вы не уверены, действительно ли это убэ (фиолетовый батат).
+ent-FoodFrozenMochiTea = чай моти
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. С добавлением чая!
+ent-FoodFrozenMochiSpice = моти с корицей
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. Острое! Это корица?
+ent-FoodFrozenMochiChocolate = шоколадный моти
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. С шоколадным вкусом!
+ent-FoodFrozenMochiCherry = вишневый моти
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. Вишневый вкус!
+ent-FoodFrozenMochiMoth = мотыльковый моти
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится мороженое. Почти слишком мило, чтобы это есть! Почти.
+ent-FoodBakedCinnamonRoll = булочка с корицей
+    .desc = Интересно, сколько еще глазури можно было бы добавить к этому?
+ent-FoodMeatPatty = мясная котлета
+    .desc = Плоский кусок фарша. Готов к жарке на гриле.
+ent-FoodMeatPattyCooked = приготовленная мясная котлета
+    .desc = Приготовленная мясная котлета.
+ent-FoodPieAppleHoney = медовый яблочный штрейзельный пирог
+    .desc = Пирог с яблоками, пропитанными медом, запеченный под рассыпчатой ​​овсяной посыпкой.
+ent-FoodTofuSliceBattered = ломтик тофу в кляре
+    .desc = Ломтик тофу, обваленный в липкой смеси муки и яиц. В таком виде, пожалуй, даже вкуснее.
+ent-FoodSlicedTofuFried = жареный тофу
+    .desc = Этот некогда полезный ломтик тофу был обжарен до хрустящей корочки.
+ent-FoodEggLaid = яйцо
+    .desc = Свежие фермерские продукты, еще теплые!
+ent-FoodMeatDragonCooked = драконий стейк
+    .desc = На большинстве станций поливать это кетчупом считается преступлением, караемым смертной казнью.
+ent-FoodMeatDragonCutletCooked = дракония котлета
+    .desc = Это королевский обед!
+ent-FoodOnionRingsBattered = луковые кольца в кляре
+    .desc = Луковые кольца, обваленные в густой смеси муки и яиц.
+ent-FoodMonkanana = монканана
+    .desc = Выглядит как банан, превращенный в обезьяну.
+ent-FoodFrozenMochiFiber = моти из волокна
+    .desc = Вкусная комочка тягучего клейкого риса, внутри которой находится начинка из мороженого. Она сплетена из волокон!
+ent-FoodMealPearsBelleHelene = груши красавица Хелен
+    .desc = Нежный вкус безупречной груши, пропитанной шоколадом.
+ent-FoodSaladGreek = греческий салат
+    .desc = Это тот самый салат, который все едят в тех рекламных роликах.
+ent-FoodMealMisoNoodles = лапша мисо
+    .desc = Мисо, или бульон из ферментированной бобовой пасты с зеленым луком и яйцом. Насыщенный!
+ent-FoodBreakfastEnglish = полный английский завтрак
+    .desc = Огромная тарелка белка и углеводов, которая, скорее всего, вернет вас в постель, чем вытащит из нее. И про войну и говорить не нужно!
+ent-FoodBreakfastAmerican = полный американский завтрак
+    .desc = Огромная тарелка белка и углеводов, которая, скорее всего, вернет вас в постель, чем вытащит из нее. О, что это за новый ад?
+ent-FoodMealChickenParmesan = курица с пармезаном
+    .desc = Самый эффективный способ приручить австралийца. Только не забудьте назвать это "курицей пармезан"...
+
+ent-ClothingBeltSheathFilledNavyOfficer = { ent-ClothingBeltSheathFilled }
+    .desc = { ent-ClothingBeltSheathFilled.desc }
+    .suffix = Заполненный, Морской офицер
+ent-ClothingBeltSheathFilledOrd = ножны Красного Ордена
+    .desc = Специальные ножны, созданные исключительно для сабель Красного Ордена.
+    .suffix = Заполненный
+
+health-examinable-carbon-Slash-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } поверхностный порез.[/color]
+health-examinable-carbon-Slash-15 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько небольших порезов.[/color]
+health-examinable-carbon-Slash-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько довольно крупных ран.[/color]
+health-examinable-carbon-Slash-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело выглядит окровавленным и изувеченным.[/color]
+health-examinable-carbon-Slash-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью разорвано на куски![/color]
+
+health-examinable-carbon-Blunt-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } легкий синяк.[/color]
+health-examinable-carbon-Blunt-15 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } немного синяков.[/color]
+health-examinable-carbon-Blunt-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-BE($target) } избитый.[/color]
+health-examinable-carbon-Blunt-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело изуродовано и сильно избито.[/color]
+health-examinable-carbon-Blunt-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью раздавлено в кашу![/color]
+
+health-examinable-carbon-Piercing-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } небольшая колотая рана.[/color]
+health-examinable-carbon-Piercing-15 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько колотых ран.[/color]
+health-examinable-carbon-Piercing-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } множественные глубокие колотые раны.[/color]
+health-examinable-carbon-Piercing-75 = [color=red]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } обширные, глубокие, рваные разрывы по всей поверхности { POSS-ADJ($target) } тела.[/color]
+health-examinable-carbon-Piercing-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью покрыто огромными зияющими дырами.[/color]
+health-examinable-carbon-Piercing-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело выглядит так, будто его разорвало на части![/color]
+
+health-examinable-carbon-Asphyxiation-30 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } губы синеют.[/color]
+health-examinable-carbon-Asphyxiation-75 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } лицо синеет.[/color]
+
+health-examinable-carbon-Heat-8 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } поверхностный ожог.[/color]
+health-examinable-carbon-Heat-15 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько ожогов первой степени.[/color]
+health-examinable-carbon-Heat-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько ожогов второй степени.[/color]
+health-examinable-carbon-Heat-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } Тело обширно покрыто ожогами четвертой степени.[/color]
+health-examinable-carbon-Heat-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } Тело полностью сгорело дотла![/color]
+
+health-examinable-carbon-Shock-15 = [color=lightgoldenrodyellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } легкое обугливание на { POSS-ADJ($target) } коже.[/color]
+health-examinable-carbon-Shock-30 = [color=lightgoldenrodyellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } обугливание по всему { POSS-ADJ($target) } тела.[/color]
+health-examinable-carbon-Shock-100 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } на теле обнаружены сильные электрические ожоги![/color]
+health-examinable-carbon-Shock-200 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью обгорело![/color]
+
+health-examinable-carbon-Cold-8 = [color=lightblue]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } легкое обморожение кончиков { POSS-ADJ($target) } пальцев.[/color]
+health-examinable-carbon-Cold-15 = [color=lightblue]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } обморожение первой степени на концах { POSS-ADJ($target) } конечностей.[/color]
+health-examinable-carbon-Cold-30 = [color=lightblue]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } обморожение второй степени на { POSS-ADJ($target) } конечностей.[/color]
+health-examinable-carbon-Cold-100 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } Тело покрыто обширным обморожением четвертой степени.[/color]
+health-examinable-carbon-Cold-200 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } Тело замерзло намертво![/color]
+
+health-examinable-carbon-Caustic-8 = [color=yellowgreen]{ CAPITALIZE(POSS-ADJ($target)) } Кожа выглядит слегка обесцвеченной.[/color]
+health-examinable-carbon-Caustic-15 = [color=yellowgreen]{ CAPITALIZE(POSS-ADJ($target)) } Кожа выглядит раздраженной и обесцвеченной..[/color]
+health-examinable-carbon-Caustic-30 = [color=yellowgreen]{ CAPITALIZE(POSS-ADJ($target)) } Кожа воспалена и начинает отслаиваться.[/color]
+health-examinable-carbon-Caustic-100 = [color=yellowgreen]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } сильные химические ожоги по всей территории { POSS-ADJ($target) } тела.[/color]
+health-examinable-carbon-Caustic-200 = [color=yellowgreen]Большая часть { POSS-ADJ($target) } тела полностью расплавлена.![/color]
+
+health-examinable-carbon-Radiation-50 = [color=orange]{ CAPITALIZE(POSS-ADJ($target)) } на коже образовались большие волдыри.[/color]
+health-examinable-carbon-Radiation-100 = [color=orange]{ CAPITALIZE(POSS-ADJ($target)) } кожа покрыта язвами и отслаивается кусками.[/color]
+
+bloodstream-component-slight-bleeding = [color=#ffa8a8]{CAPITALIZE(SUBJECT($target))} {CONJUGATE-BE($target)} капающая кровь.[/color]
+bloodstream-component-massive-bleeding = [color=#d4003c]Кровь хлещет из { POSS-ADJ($target) } тела![/color]
+bloodstream-component-strong-bleeding = [color=#d10a0a]{CAPITALIZE(SUBJECT($target))} {CONJUGATE-BE($target)} обильное кровотечение.[/color]
+
+nf-salvage-faction-xenos = Ксеносы
+nf-salvage-faction-carps = Карпы
+nf-salvage-faction-syndicate = Синдикат
+nf-salvage-faction-cultists = Культисты
+nf-salvage-faction-flesh = Flesh
+nf-salvage-faction-argocytes = Argocytes
+nf-salvage-faction-dinosaurs = Динозавры
+nf-salvage-faction-mercenaries = Наёмники
+nf-salvage-faction-explorers = Исследователи
+nf-salvage-faction-silicons = Rogue Silicon
+nf-salvage-faction-punks = Панки
+
+shipyard-console-menu-sorting-label = Cортировка:
+shipyard-console-sorting-all-label = Название
+shipyard-console-sorting-price-label = Цена
+shipyard-console-sorting-size-label = Размер
+shipyard-console-sorting-class-label = Класс
+shipyard-console-sorting-engine-label = Питание
+
+ent-WallWoodTight = плотная деревянная стена
+    .desc = { ent-BaseWall.desc }
+ent-WoodGirder = деревянный каркас
+    .desc = { ent-WoodGirder.desc }
+
+ent-RailingOld = старомодные перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+ent-RailingCornerOld = старомодные перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+ent-RailingCornerSmallOld = старомодные перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+ent-RailingRoundOld = старомодные перила
+    .desc = Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+
+materials-charged-bluecrystal = заряженный блюспейс кристалл
+
+construction-medieval-stockade = деревянный частокол
+construction-medieval-stockade-desc = На случай, если на стену из дерева не хватает.
+construction-medieval-stockade-high = деревянная стена
+construction-medieval-stockade-high-desc = Прочная стена из дерева.
+construction-wall-tent-cloth = стена палатки
+construction-wall-tent-cloth-desc = Дешевое укрытие
+construction-door-tent-cloth = дверь палатки
+construction-door-tent-cloth-desc = Простая тканевая шторка для палатки
+construction-medieval-airlock = деревянная дверь
+construction-medieval-airlock-desc = Простая деревянная дверь.
+construction-double-bed = двуспальная кровать
+construction-double-bed-desc = Используется, чтобы лежать, спать или пристегивать. Отдых здесь обеспечивает крайне медленное лечение.
+
+construction-step-crystallite = кристаллит
+construction-step-prisoner-grey-uniform = комбинезон заключённого
+
+reagent-name-nanite-fuel = нанитовое топливо
+reagent-desc-nanite-fuel = Суспензия активных нанитов в плотной несущей жидкости.
+
+stack-rough-pyro = необработанный пиро
+stack-pyro = пиро
+stack-bp_paper = чертёжная бумага
+stack-wood-floor-herringbone = деревянный пол ёлочкой
+stack-wood-floor-herringbonealt = альтернативный деревянный пол ёлочкой
+stack-wood-floor-diagonal = диагональный деревянный пол
+stack-wood-floor-diagonalmini = малый диагональный деревянный пол
+
+tool-quality-medieval-blacksmithing-name = Кузнечное дело
+tool-quality-medieval-blacksmithing-tool-name = кузнечный инструмент
+
+dh-research-technology-tracking = Слежка
+dh-research-technology-painting = Покраска
+dh-research-technology-advanced-painting = Улучшенная покраска
+dh-research-technology-experimental-painting = Экспериментальная покраска
+salvage-dungeon-mod-murino = Мурино
+speso = Спесо
+SpacePrison = Космическая тюрьма
+loadout-group-security-trinkets = Безделушки службы безопасности
+loadout-group-prison-guard-Ears = Уши тюремного охранника
+loadout-group-prison-guard-pda = ПДА тТюремщика
+chat-radio-pirate = Пиратский
+nf-research-technology-industrial-sheetifier = Промышленный листоформирователь
+research-technology-security-borg-modules = Модули боргов службы безопасности
+research-technology-shields = Щиты
+store-category-clothing = Одежда
+
+gunnery-Ballistics = Балистические
+gunnery-Energy = Энергетические
+gunnery-Missiles = Ракетные
+gunnery-Mining = Добывающие
+gunnery-Misc = Разное
+guide-entry-shipyard-riman = Riman
+
+ship-gun-class-component-examine-detail = Орудие потребляет [color=yellow]{$processingPower}[/color] вычеслительной мощности.
+
+ent-FrontierEngineerIDCard = ID карта инженера фронтира
+    .desc = { ent-IDCardStandard.desc }
+
+action-toggle-approval = Переключить одобрение
+action-toggle-approval-description = Переключает, одобряете ли вы работу с этим экипажем.
+action-cancel-application = Отменить заявку
+action-cancel-application-description = Отменить вашу заявку и вернуться в лобби.
+
+ent-NFVehicleSkeletonMotorcycle = скелетонский мотоцикл
+    .desc = Отъявленный негодяй
+
+research-technology-basic-weaponpad = Базовое управление вооружением
+research-technology-basic-weaponpad-high = Высокомощные сервреа
+research-technology-basic-weapon = Базовое корабельное вооружение
+research-technology-shuttle-powercage = Корабельные силовые ячейки
+research-technology-shuttle-powercage-high = Высокомощные силовые ячейки
+research-technology-shuttle-perforator = Корабельное орудие "Перфоратор"
+research-technology-shuttle-grenade = Корабельные гранаты
+research-technology-shuttle-friendshippirate = "Дружба" & Пиратские Пушки
+research-technology-shuttle-cannonball = Пушечные ядра
+research-technology-shuttle-grenadeemp = ЭМИ/Нелетальные гранаты
+research-technology-shuttle-gunduster = Система гранат "Дастер"
+research-technology-construction-bags = Бездонный строительные сумки
+nf-research-technology-tools-base = Базовые инструменты
+
+ent-OldOreBag = древняя сумка для руды
+    .desc = { ent-OreBag.desc }
+ent-BorgOreBag = интегрированная сумка для руды
+    .desc = Большая сумка для руды, встроенный в каркас горнодобывающего киборга.
+    .suffix = Борг
+
+job-name-Chef-interview = Кандидат в Шеф-Повара
+job-name-mercenary-interview = Кандидат в Наемники
+job-name-contractor-interview = Кандидат в Авантюристы
+job-name-pilot-interview = Кандидат в Пилоты
+
+
+ent-ComputerBankATMHolo = банкомат
+    .desc = Используется для ввода и вывода средств с личного банковского счета. Имеет голографическую надпись.
+    .suffix = Голографический
+ent-ComputerWallmountBankATMHolo = { ent-ComputerBankATMDeposit }
+    .suffix = Настенный, Голографический
+    .desc = { ent-ComputerBankATMDeposit.desc }
+
+ent-ComputerWithdrawBankATMHolo = банкомат для снятия
+    .desc = Используется для вывода средств с личного банковского счета. Имеет голографическую надпись.
+    .suffix = Голографический
+ent-ComputerWallmountWithdrawBankATMHolo = банкомат для снятия
+    .suffix = Настенный, Голографический
+    .desc = Используется для вывода средств с личного банковского счета. Имеет голографическую надпись.
+
+ent-ComputerBlackMarketBankATMHolo = { ent-ComputerBankATMDeposit }
+    .desc = Явно модифицированный банкомат, на котором краской криво написано "НАЛОГ С ПРОДАЖ 30%". Имеет голографическую надпись.
+    .suffix = Чёрный рынок, Голографический
+ent-ComputerWallmountBlackMarketBankATMHolo = { ent-ComputerBankATMDeposit }
+    .desc = Явно модифицированный банкомат, на котором краской криво написано "НАЛОГ С ПРОДАЖ 30%". Имеет голографическую надпись.
+    .suffix = Настенный, Чёрный рынок, Голографический
+
+ent-ComputerBankATMTypan = { ent-ComputerBankATMDeposit }
+    .desc = Огромный, брутальный банкомат. Выглядит круто и одновременно внушительно.
+    .suffix = Тайпан
+ent-ComputerBankATMHoloTypan = { ent-ComputerBankATMDeposit }
+    .desc = Огромный, брутальный банкомат. Выглядит круто и одновременно внушительно. Имеет голографическую надпись.
+    .suffix = Тайпан, Голографический
+ent-ComputerWallmountBankATMTypan = { ent-ComputerBankATMDeposit }
+    .desc = Брутальный банкомат на стене. Выглядит круто и одновременно угрожающе. Имеет голографическую надпись.
+    .suffix = Настенный, Тайпан, Голографический

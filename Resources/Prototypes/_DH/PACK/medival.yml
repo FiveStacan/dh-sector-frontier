@@ -1,0 +1,1940 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: MedievalClothingHeadHelmetBib
+  name: шляпа мерцания
+  description: Магическая шляпа из лунного шёлка с вкраплениями ярких металлов на полях.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/bib_hat.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/bib_hat.rsi
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: MedievalClothingHandsGlovesBib
+  name: сверкающая перчатка
+  description: Украшена изящными извилистыми узорами, что постоянно играют на свету.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Hands/Gloves/bib_gloves.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: _DH/Clothing/Hands/Gloves/bib_gloves.rsi
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskBib
+  name: звёздная маска
+  description: Гладкая литая маска, испускающая слабое свечение.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Mask/bib_mask.rsi
+    layers:
+      - state: icon
+  - type: Clothing
+    sprite: _DH/Clothing/Mask/bib_mask.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-MASK
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakBib
+  name: лунный шёлк
+  description: Полотно позолоченного у кромок лунного шёлка, что принято обвязывать у шеи.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Neck/Cloaks/bib_neck.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakSpookyVendigo
+  name: мрачная накидка
+  description: Мрачная накидка из шкуры вендиго.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Neck/Cloaks/spookyvendigo.rsi
+  - type: Insulated
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  id: MedievalClothingOuterBlackArmorLeather
+  name: тёмный костюм
+  description: Удобный костюм с крепкими кожаными вставками, практически не замедлит ваше движение.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Coats/blacksuit.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Coats/blacksuit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.58
+        Cold: 0.44
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.78
+
+- type: entity
+  parent: MedievalClothingOuterBlackArmorLeather
+  id: MedievalClothingOuterArmorCharmerBib
+  name: полуночная мантия
+  description: Украшенная яркими металлами магическая мантия, что будто поглощает свет под собой.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Coats/bib_outer.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Coats/bib_outer.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.74
+        Slash: 0.65
+        Piercing: 0.62
+        Heat: 0.64
+        Cold: 0.6
+
+- type: entity
+  parent: ClothingShoesBase
+  id: MedievalClothingBootsBib
+  name: грубые сапоги
+  description: Покоцанная пара толстых сапог, протоптавшая не один десяток руин.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Shoes/Boots/bib_boots.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Shoes/Boots/bib_boots.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MedievalClothingUniformJumpsuitShitCloth78
+  name: роба полумесяца
+  description: Грубо сшитая, но инкрустированная яркими металлами роба из лунного шёлка.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Uniforms/Costume/shit_cloth_78.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Uniforms/Costume/shit_cloth_78.rsi
+
+- type: entity
+  id: MedievalBaseTree
+  description: Yep, it's a tree.
+  abstract: true
+  components:
+  # - type: CP14WaveShader
+  #   speed: 1
+  #   dis: 6.5
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _DH/Structures/Decoration/flora/flora_trees.rsi
+    drawdepth: Overdoors
+    offset: 0,0.9
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.4,0.35,0.4"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalBaseTreeLarge
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Decoration/flora/flora_treeslarge.rsi
+    offset: 0,1.55
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.35,0.18,0.35"
+        density: 2000
+        layer:
+        - WallLayer
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree01
+  name: tree
+  components:
+  - type: Sprite
+    state: tree01
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree02
+  name: tree
+  components:
+  - type: Sprite
+    state: tree02
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree03
+  name: tree
+  components:
+  - type: Sprite
+    state: tree03
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree04
+  name: tree
+  components:
+  - type: Sprite
+    state: tree04
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree05
+  name: tree
+  components:
+  - type: Sprite
+    state: tree05
+
+- type: entity
+  parent: MedievalBaseTree
+  id: MedievalFloraTree06
+  name: tree
+  components:
+  - type: Sprite
+    state: tree06
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge01
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge01
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge02
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge02
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge03
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge03
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge04
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge04
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge05
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge05
+
+- type: entity
+  parent: MedievalBaseTreeLarge
+  id: MedievalFloraTreeLarge06
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge06
+
+- type: entity
+  id: MedievalBaseTreeAutumn
+  description: Yep, it's a tree.
+  abstract: true
+  components:
+  # - type: CP14WaveShader
+  #   speed: 1
+  #   dis: 6.5
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _DH/Structures/Decoration/flora/flora_trees_autumn.rsi
+    drawdepth: Overdoors
+    offset: 0,0.9
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.4,0.35,0.4"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalBaseTreeAutumnLarge
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Decoration/flora/flora_treeslarge_autumn.rsi
+    offset: 0,1.55
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.18,-0.35,0.18,0.35"
+        density: 2000
+        layer:
+        - WallLayer
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn01
+  name: tree
+  components:
+  - type: Sprite
+    state: tree01
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn02
+  name: tree
+  components:
+  - type: Sprite
+    state: tree02
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn03
+  name: tree
+  components:
+  - type: Sprite
+    state: tree03
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn04
+  name: tree
+  components:
+  - type: Sprite
+    state: tree04
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn05
+  name: tree
+  components:
+  - type: Sprite
+    state: tree05
+
+- type: entity
+  parent: MedievalBaseTreeAutumn
+  id: MedievalFloraTreeAutumn06
+  name: tree
+  components:
+  - type: Sprite
+    state: tree06
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge01
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge01
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge02
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge02
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge03
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge03
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge04
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge04
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge05
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge05
+
+- type: entity
+  parent: MedievalBaseTreeAutumnLarge
+  id: MedievalFloraTreeAutumnLarge06
+  name: large tree
+  components:
+  - type: Sprite
+    state: treelarge06
+
+#region Walls
+
+- type: entity
+  parent: BaseWall
+  id: MedievalStoneBrickWall
+  name: stone wall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      #- RCDDeconstructWhitelist
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/stone_brick.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/stone_brick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: brick
+  - type: ExplosionResistance
+    damageCoefficient: 19
+
+- type: entity
+  id: BaseBarricadeMedieval
+  description: A barricade made out of wood planks. It looks like it can take a few solid hits.
+  name: wooden barricade
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  #- type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/barricades.rsi
+    state: barricade_full
+    drawdepth: BlastDoors
+    noRot: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageModifierSet: Wood
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank1:
+            min: 3
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: AtmosExposed
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Pullable
+  - type: Tag
+    tags:
+      - Structure
+
+- type: entity
+  id: BarricadeMedieval
+  parent: BaseBarricadeMedieval
+  components:
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3 #per second, scales with number of fire 'stacks'
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: 1
+
+- type: entity
+  parent: BarricadeMedieval
+  id: MedievalStockade
+  name: MedievalStockade
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      #- RCDDeconstructWhitelist
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/wood_wall_light.rsi
+    state: wall0
+    drawdepth: Walls
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 195
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound: /Audio/_DH/Medieval/ES_Wood_Break_8_-_SFX_Producer.ogg
+  - type: ExplosionResistance
+    damageCoefficient: 3
+  - type: Appearance
+  - type: CableVis
+    node: power
+  - type: NodeContainer
+    nodes:
+      power:
+        !type:CableNode
+        nodeGroupID: MVPower
+  - type: CableVisualizer
+    statePrefix: wall
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Climbable
+    delay: 22
+  - type: Construction
+    graph: MedievalStockade
+    node: medievalstockade
+
+- type: construction
+  id: MedievalStockade
+  name: construction-medieval-stockade
+  description: construction-medieval-stockade-desc
+  graph: MedievalStockade
+  startNode: start
+  targetNode: medievalstockade
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MedievalStockade
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: medievalstockade
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 6
+              doAfter: 6
+    - node: medievalstockade
+      entity: MedievalStockade
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 6
+          steps:
+            - tool: Prying
+              doAfter: 500
+
+- type: entity
+  id: MedievalStockadeHigh
+  name: MedievalStockadeHigh
+  parent: BaseWall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/wood_wall_new.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/wood_wall_new.rsi
+  - type: IconSmooth
+    key: walls
+    base: wood
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 445
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound: /Audio/_DH/Medieval/ES_Wood_Break_8_-_SFX_Producer.ogg
+          - !type:SpawnEntitiesBehavior
+            offset: 0.3
+            spawn:
+              MaterialWoodPlank1:
+                min: 3
+                max: 6
+  - type: ExplosionResistance
+    damageCoefficient: 2
+  - type: Construction
+    graph: MedievalStockadeHigh
+    node: medievalstockadeHigh
+
+- type: construction
+  id: MedievalStockadeHigh
+  name: construction-medieval-stockade-high
+  description: construction-medieval-stockade-high-desc
+  graph: MedievalStockadeHigh
+  startNode: start
+  targetNode: medievalstockadeHigh
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MedievalStockadeHigh
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: medievalstockadeHigh
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 12
+              doAfter: 16
+    - node: medievalstockadeHigh
+      entity: MedievalStockadeHigh
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 12
+          steps:
+            - tool: Prying
+              doAfter: 1500
+
+- type: entity
+  id: MedievalWallStoneAncient
+  name: MedievalStockadeHigh
+  parent: BaseWall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_ancient.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_ancient.rsi
+  - type: IconSmooth
+    key: walls
+    base: stone
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 2245
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  id: MedievalWallStoneDark
+  name: MedievalStockadeHigh
+  parent: BaseWall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_dark.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_dark.rsi
+  - type: IconSmooth
+    key: walls
+    base: stone
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 3245
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  id: MedievalWallStoneUnholy
+  name: MedievalStockadeHigh
+  parent: BaseWall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_unholy.rsi
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/stone_wall_unholy.rsi
+  - type: IconSmooth
+    key: walls
+    base: stone
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 3245
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  parent: BarricadeMedieval
+  id: WallTentCloth
+  name: Cloth tent
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/cloth_tent.rsi
+    state: p0
+  - type: CableVisualizer
+    statePrefix: p
+  - type: Physics
+    bodyType: Static
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Inflatable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Occluder
+  - type: Appearance
+  - type: CableVis
+    node: power
+  - type: NodeContainer
+    nodes:
+      power:
+        !type:CableNode
+        nodeGroupID: MVPower
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: ExplosionResistance
+    damageCoefficient: 2
+  - type: Tag
+    tags:
+      - Wall
+  - type: Construction
+    graph: WallTentCloth
+    node: WallTentCloth
+
+- type: construction
+  id: WallTentCloth
+  name: construction-wall-tent-cloth
+  description: construction-wall-tent-cloth-desc
+  graph: WallTentCloth
+  startNode: start
+  targetNode: WallTentCloth
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: WallTentCloth
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: WallTentCloth
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Cloth
+              amount: 5
+              doAfter: 8
+    - node: WallTentCloth
+      entity: WallTentCloth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 500
+
+#region DOOR
+
+- type: entity
+  id: MedievalBlastDoor
+  parent: BaseStructure
+  name: blast door
+  description: This one says 'BLAST DONGER'.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/gates.rsi
+    drawdepth: BlastDoors
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.49,-0.49,1.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: NavMapDoor
+  - type: Door
+    openDrawDepth: BlastDoors
+    closedDrawDepth: BlastDoors
+    closeTimeOne: 0.8
+    closeTimeTwo: 0.8
+    openTimeOne: 0.8
+    openTimeTwo: 0.8
+    openingAnimationTime: 1.5
+    closingAnimationTime: 1.5
+    canPry: false
+    crushDamage:
+      types:
+        Blunt: 115 # yowch
+    doorStunTime: 4.5
+    bumpOpen: false
+    clickOpen: false
+    openSound:
+      path: /Audio/_DH/Medieval/gates_open.ogg
+    closeSound:
+      path: /Audio/_DH/Medieval/gates_close.ogg
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 4200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: DoorSignalControl
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200000
+  - type: DeviceLinkSink
+    ports:
+      - Open
+      - Close
+      - Toggle
+  - type: DeviceLinkSource
+    ports:
+    - DoorStatus
+    lastSignals:
+      DoorStatus: false
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/_DH/Medieval/gate_knock.ogg
+  - type: BlockWeather
+  - type: AccessReader
+  - type: RadiationBlocker
+    resistance: 8
+  #- type: DamageCheckable
+  - type: ExplosionResistance
+    damageCoefficient: 3
+
+- type: entity
+  parent: MedievalAirlock
+  id: DoorTentCloth
+  name: Cloth tent door
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/cloth_tent.rsi
+    state: closed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        density: 15
+        layer:
+        - WallLayer
+  - type: Physics
+    bodyType: Static
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Inflatable
+  - type: Door
+    occludes: false
+    openSound:
+      path: /Audio/Misc/zip.ogg
+    closeSound:
+      path: /Audio/Misc/zip.ogg
+  #- type: Occluder
+  #  enabled: false
+  - type: InteractionOutline
+  - type: Construction
+    graph: DoorTentCloth
+    node: DoorTentCloth
+
+- type: construction
+  id: DoorTentCloth
+  name: construction-door-tent-cloth
+  description: construction-door-tent-cloth-desc
+  graph: DoorTentCloth
+  startNode: start
+  targetNode: DoorTentCloth
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: DoorTentCloth
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: DoorTentCloth
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Cloth
+              amount: 8
+              doAfter: 12
+    - node: DoorTentCloth
+      entity: DoorTentCloth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 599
+
+- type: entity
+  id: MedievalAirlock
+  parent: BaseStructure
+  placement:
+    mode: SnapgridCenter
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: DoorBolt
+    #boltsDown: True
+    boltUpSound:
+      path: /Audio/_DH/Medieval/door_lock1.ogg
+    boltDownSound:
+      path: /Audio/_DH/Medieval/door_lock2.ogg
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: _DH/Structures/Walls/Medieval/medieval_door.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: ExplosionResistance
+    damageCoefficient: 3
+  - type: Door
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/_DH/Medieval/derevyannuyu-dver-zakryili.ogg
+    closeSound:
+      path: /Audio/_DH/Medieval/otkryili-steklyannuyu-dver.ogg
+    denySound:
+      path: /Audio/_DH/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/_DH/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Occluder
+  - type: Construction
+    graph: MedievalAirlock
+    node: medievalairlock
+
+- type: construction
+  id: MedievalAirlock
+  name: construction-medieval-airlock
+  description: construction-medieval-airlock-desc
+  graph: MedievalAirlock
+  startNode: start
+  targetNode: medievalairlock
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MedievalAirlock
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: medievalairlock
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 24
+              doAfter: 25
+    - node: medievalairlock
+      entity: MedievalAirlock
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 10
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 150
+
+- type: entity
+  id: MedievalAirlockGrille
+  parent: BaseStructure
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: DoorBolt
+    #boltsDown: True
+    # boltUpSound:
+    #   path: /Audio/_DH/Medieval/metal_door_lock2.ogg
+    # boltDownSound:
+    #   path: /Audio/_DH/Medieval/metal_door_lock1.ogg
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: _DH/Structures/Walls/Medieval/medieval_door_grille.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    pryTime: 4
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    denySound:
+      path: /Audio/_DH/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/_DH/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  #- type: Occluder
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  id: MedievalAirlockReinforced
+  parent: BaseStructure
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: DoorBolt
+    #boltsDown: True
+    boltUpSound:
+      path: /Audio/_DH/Medieval/door_lock1.ogg
+    boltDownSound:
+      path: /Audio/_DH/Medieval/door_lock2.ogg
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: _DH/Structures/Walls/Medieval/medieval_reinforced_door.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    pryTime: 11
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/_DH/Medieval/derevyannuyu-dver-zakryili.ogg
+    closeSound:
+      path: /Audio/_DH/Medieval/otkryili-steklyannuyu-dver.ogg
+    denySound:
+      path: /Audio/_DH/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/_DH/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Occluder
+
+- type: entity
+  parent: Grille
+  id: MedievalPrisonGrille
+  name: MedievalPrisonGrille
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/prison_grille.rsi
+    state: icon
+  - type: Icon
+    sprite: _DH/Structures/Walls/Medieval/prison_grille.rsi
+    state: icon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+#region Other
+
+- type: entity
+  name: MedievalPrisonGrilleCraft
+  description: MedievalPrisonGrilleCraft
+  id: MedievalPrisonGrilleCraft
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Large
+  - type: SpawnAfterInteract
+    prototype: MedievalPrisonGrille
+    doAfter: 5
+  - type: Sprite
+    sprite: _DH/Structures/Walls/Medieval/stone_wall.rsi
+    state: icon
+
+#region Tiles
+
+- type: tile
+  id: FloorCaveMedieval
+  name: tiles-cave
+  sprite: /Textures/_DH/Tiles/Planet/Cave/cave.png
+  variants: 7
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/Cave/single-stoneedge-A.png
+    NorthEast: /Textures/_DH/Tiles/Planet/Cave/single-stoneedge-B.png
+    NorthWest: /Textures/_DH/Tiles/Planet/Cave/single-stoneedge-C.png
+    SouthWest: /Textures/_DH/Tiles/Planet/Cave/single-stoneedge-D.png
+    South: /Textures/_DH/Tiles/Planet/Cave/double-stoneedge-A.png
+    East: /Textures/_DH/Tiles/Planet/Cave/double-stoneedge-B.png
+    North: /Textures/_DH/Tiles/Planet/Cave/double-stoneedge-C.png
+    West: /Textures/_DH/Tiles/Planet/Cave/double-stoneedge-D.png
+  baseTurf: Space
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 99910000
+
+
+- type: tile
+  id: FloorPlanetDirtMedieval
+  name: грязь (переход)
+  sprite: /Textures/_DH/Tiles/Planet/DirtCP/cavedrought.png
+  variants: 16
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/DirtCP/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/DirtCP/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/DirtCP/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/DirtCP/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/DirtCP/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/DirtCP/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/DirtCP/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/DirtCP/double_edge_W.png
+  baseTurf: FloorBedrock
+  deconstructTools: [ Digging ]
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 999100000
+  weather: true
+
+- type: tile
+  id: FloorDirtMedieval
+  name: грязь (переход)
+  sprite: /Textures/_DH/Tiles/Planet/Dirt/dirt.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/Dirt/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/Dirt/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/Dirt/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/Dirt/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/Dirt/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/Dirt/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/Dirt/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/Dirt/double_edge_W.png
+  baseTurf: FloorBedrock
+  deconstructTools: [ Digging ]
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 999100000
+  weather: true
+
+- type: tile
+  id: FloorDesertMedieval
+  name: песок (переход)
+  sprite: /Textures/_DH/Tiles/Planet/Sand/sand.png
+  variants: 5
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 2
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/Sand/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/Sand/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/Sand/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/Sand/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/Sand/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/Sand/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/Sand/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/Sand/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepSnow #TODO
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: FloorAstroGrassMedieval
+  name: трава (переход)
+  sprite: /Textures/_DH/Tiles/Planet/GrassCP/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassCP/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassCP/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassCP/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassCP/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassCP/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassCP/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassCP/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassCP/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass2
+  name: трава светлая (переход)
+  sprite: /Textures/_DH/Tiles/Planet/GrassLightCP/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassLightCP/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassLightCP/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassLightCP/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassLightCP/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassLightCP/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassLightCP/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassLightCP/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassLightCP/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  #isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass1
+  name: трава кислотная (переход)
+  sprite: /Textures/_DH/Tiles/Planet/GrassTallCP/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassTallCP/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassTallCP/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassTallCP/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassTallCP/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassTallCP/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassTallCP/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassTallCP/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassTallCP/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  #isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: FloorPlanetGrassAutumn
+  name: трава (переход) осень
+  sprite: /Textures/_DH/Tiles/Planet/GrassCPAutumn/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 3
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassCPAutumn/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassCPAutumn/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassCPAutumn/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassCPAutumn/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassCPAutumn/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassCPAutumn/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassCPAutumn/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassCPAutumn/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass2Autumn
+  name: трава светлая (переход) осень
+  sprite: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 4
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassLightCPAutumn/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  #isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass1Autumn
+  name: трава кислотная (переход) осень
+  sprite: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/grass.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/GrassTallCPAutumn/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ] # Frontier
+  #isSubfloor: false
+  footstepSounds:
+    collection: FootstepGrass
+  heatCapacity: 99910000
+  weather: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass3
+  name: tiles-grass-planet-floor3
+  sprite: /Textures/_DH/Tiles/Planet/MdvGrass3/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 5
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/MdvGrass3/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/MdvGrass3/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/MdvGrass3/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/MdvGrass3/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/MdvGrass3/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/MdvGrass3/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/MdvGrass3/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/MdvGrass3/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ]
+  #baseTurf: FloorPlanetDirt
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepGrass
+  itemDrop: FloorTileItemGrass
+  heatCapacity: 99910000
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass4
+  name: tiles-grass-planet-floor4
+  sprite: /Textures/_DH/Tiles/Planet/MdvGrass4/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 6
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/MdvGrass4/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/MdvGrass4/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/MdvGrass4/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/MdvGrass4/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/MdvGrass4/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/MdvGrass4/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/MdvGrass4/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/MdvGrass4/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ]
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepGrass
+  itemDrop: FloorTileItemGrass
+  heatCapacity: 99910000
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass5
+  name: tiles-grass-planet-floor5
+  sprite: /Textures/_DH/Tiles/Planet/MdvGrass5/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 7
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/MdvGrass5/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/MdvGrass5/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/MdvGrass5/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/MdvGrass5/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/MdvGrass5/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/MdvGrass5/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/MdvGrass5/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/MdvGrass5/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ]
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepGrass
+  itemDrop: FloorTileItemGrass
+  heatCapacity: 99910000
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: MedievalFloorPlanetGrass6
+  name: tiles-grass-planet-floor6
+  sprite: /Textures/_DH/Tiles/Planet/MdvGrass6/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 8
+  edgeSprites:
+    SouthEast: /Textures/_DH/Tiles/Planet/MdvGrass6/single_edge_SE.png
+    NorthEast: /Textures/_DH/Tiles/Planet/MdvGrass6/single_edge_NE.png
+    NorthWest: /Textures/_DH/Tiles/Planet/MdvGrass6/single_edge_NW.png
+    SouthWest: /Textures/_DH/Tiles/Planet/MdvGrass6/single_edge_SW.png
+    South: /Textures/_DH/Tiles/Planet/MdvGrass6/double_edge_S.png
+    East: /Textures/_DH/Tiles/Planet/MdvGrass6/double_edge_E.png
+    North: /Textures/_DH/Tiles/Planet/MdvGrass6/double_edge_N.png
+    West: /Textures/_DH/Tiles/Planet/MdvGrass6/double_edge_W.png
+  baseTurf: FloorDirt
+  deconstructTools: [ Digging ]
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepGrass
+  itemDrop: FloorTileItemGrass
+  heatCapacity: 99910000
+  weather: true
+  indestructible: true
+
+#Water
+
+- type: entity
+  id: FloorWaterEntityMedieval
+  name: water
+  description: A real thirst quencher.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder
+  - type: Transform
+    anchored: true
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: _DH/Tiles/Planet/water_new.rsi
+    drawdepth: BelowFloor
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable.
+        reagents:
+        - ReagentId: Water
+          Quantity: 9999999
+  - type: SolutionRegeneration
+    solution: tank
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 1000
+  - type: DrainableSolution
+    solution: pool
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWater
+      params:
+        volume: 8
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+        - Catwalk
+  - type: TileEntityEffect
+    effects:
+    - !type:ExtinguishReaction
+  - type: IconSmooth
+    key: water
+    base: water
+  - type: AmbientSound
+    volume: -13
+    range: 2
+    sound:
+      path: /Audio/_DH/Medieval/water.ogg
+
+- type: entity
+  id: MedievalWaterDeepDarkEntity
+  name: water
+  description: A real thirst quencher.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  #- type: MedievalNotAllowDash
+  - type: IconSmooth
+    key: waterdeep
+    base: water
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Sprite
+    sprite: _DH/Tiles/Planet/water_new.rsi
+    drawdepth: Overdoors
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.25
+    sprintSpeedModifier: 0.25
+    ignoreWhitelist:
+      tags:
+      - Lamian
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.24,-0.24,0.24,0.24"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWater
+      params:
+        volume: 12

@@ -15,6 +15,26 @@
   weather: true
   indestructible: true
 
+#DH
+- type: tile
+  id: FloorPlanetDirtDiggable
+  name: tiles-dirt-floor # Frontier: add undiggable
+  sprite: /Textures/Tiles/Planet/dirt.rsi/dirt.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: FloorBedrock # Delta V
+  #canCrowbar: false # Come back
+  deconstructTools: [ Digging ] # Frontier
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemDirt # Delta V
+  heatCapacity: 10000
+  weather: true
+
 # Desert
 - type: tile
   id: FloorDesert

@@ -1,0 +1,39 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+# Author: germanreutt (discord)
+
+- type: vessel
+  parent: BaseVessel
+  id: GFSkif
+  name: Skif
+  description: Резкий, как удар серпом по пальцам и сильный, как удар молотом, этот шаттл обладает убойной огневой мощью и исчерпывающей броней.
+  limit: 3
+  price: 379500 #DH Shuttle price balance #165000
+  category: Medium
+  group: Typan
+  whitelist:
+  - Frontier
+  - Luna
+  class:
+  - Syndicate
+  - Fighter # Lua
+  - Medical # Lua
+  engine:
+  - Uranium # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/skif-2.yml
+
+- type: gameMap
+  id: GFSkif
+  mapName: 'Skif'
+  mapPath: /Maps/_Lua/Shuttles/Typan/skif-2.yml
+  minPlayers: 0
+  stations:
+    GFSkif:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Skif {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

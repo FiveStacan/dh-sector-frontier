@@ -65,3 +65,8 @@
   parent: BaseAmmoHPFullyPoweredAmmoBoxRecipe
   id: AmmoBox127x99mmHP
   result: AmmoBox127x99mmHP
+
+- type: latheRecipe
+  parent: BaseAmmoExplosiveFullyPoweredAmmoBoxRecipe
+  id: AmmoBox127x99mmExplosive
+  result: AmmoBox127x99mmExplosive

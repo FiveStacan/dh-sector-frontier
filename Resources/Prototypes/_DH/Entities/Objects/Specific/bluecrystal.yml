@@ -1,0 +1,115 @@
+- type: entity
+  name: Charged Bluespace crystal
+  parent: BaseItem
+  id: ChargedBluecrystal
+  # suffix: 100 BC
+  description: It seems to shimmer with a attractive energy.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Specific/bluecrystal.rsi
+    state: bluecrystal
+  - type: Item
+    sprite: _DH/Objects/Specific/bluecrystal.rsi
+    size: Tiny
+  - type: Stack
+    count: 1
+    stackType: ChargedBluecrystal
+  - type: StaticPrice
+    price: 600
+  # - type: StackPrice
+  #   price: 200
+  # - type: Currency
+  #   price:
+  #     Bluecrystal: 1
+  - type: Construction
+    graph: ChargedBluecrystal
+    node: icon
+  - type: Tag
+    tags:
+      - ChargedBluespaceFuel
+# - type: entity
+#   parent: Bluecrystal
+#   id: Bluecrystal1
+#   suffix: 1 BC
+#   name: Bluespace crystal
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 1
+
+# - type: entity
+#   parent: Bluecrystal
+#   id: Bluecrystal25
+#   suffix: 25 BC
+#   name: Bluespace crystal
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 10
+
+# - type: entity
+#   parent: Bluecrystal
+#   id: Bluecrystal50
+#   suffix: 50 BC
+#   name: Bluespace crystal
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 25
+
+
+- type: entity
+  name: crystallite
+  parent: BaseItem
+  id: Crystallite
+  description: It seems to shimmer with a attractive energy.
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Specific/crystallite.rsi
+    state: crystallite
+  - type: Item
+    sprite: _DH/Objects/Specific/crystallite.rsi
+    size: Tiny
+  # - type: Stack
+  #   count: 100
+  #   stackType: Crystallite
+  - type: StaticPrice
+    price: 200
+  - type: Tag
+    tags:
+      - Crystallite
+  # - type: StackPrice
+  #   price: 200
+  # - type: Currency
+  #   price:
+  #     Crystallite: 1
+
+# - type: entity
+#   parent: Crystallite
+#   id: Crystallite1
+#   suffix: 1 C
+#   name: crystallite
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 1
+
+# - type: entity
+#   parent: Crystallite
+#   id: Crystallite25
+#   suffix: 25 C
+#   name: crystallite
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 25
+
+# - type: entity
+#   parent: Crystallite
+#   id: Crystallite50
+#   suffix: 50 C
+#   name: crystallite
+#   description: It seems to shimmer with a attractive energy.
+#   components:
+#   - type: Stack
+#     count: 50

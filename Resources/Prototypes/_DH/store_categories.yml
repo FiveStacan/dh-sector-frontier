@@ -1,0 +1,4 @@
+- type: storeCategory
+  id: UplinkClothing
+  name: store-category-clothing
+  priority: 0

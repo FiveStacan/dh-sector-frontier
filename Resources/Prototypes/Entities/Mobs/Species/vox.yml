@@ -178,11 +178,11 @@
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
   - type: LuaSprint # Lua
-    maxSprint: 96
-    drainPerSecond: 8.0
-    regenPerSecond: 8.3
-    regenDelay: 0.19
-    recoverThresholdFraction: 0.23
+    maxSprint: 29
+    drainPerSecond: 7
+    regenPerSecond: 7.1
+    regenDelay: 0.38
+    recoverThresholdFraction: 0.4
   - type: Hands
     leftHandDisplacement:
       sizeMaps:

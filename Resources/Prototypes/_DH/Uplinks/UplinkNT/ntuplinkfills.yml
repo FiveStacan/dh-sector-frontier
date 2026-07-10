@@ -1,0 +1,11 @@
+- type: entity
+  id: ClothingBackpackDuffelWeaponSubMachineGunMP5Filled
+  parent: ClothingBackpackDuffelMilitary
+  name: Bundle MP5
+  description: MP5 with 5 raspy magazines.
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSMGMP5
+    - id: CMMagazineSMGMP5
+      amount: 5

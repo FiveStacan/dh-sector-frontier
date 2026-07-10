@@ -49,10 +49,10 @@
     factions:
     - NanoTrasen
   - type: LuaSprint # Lua
-    maxSprint: 132
-    drainPerSecond: 4.8
-    regenPerSecond: 5.8
-    regenDelay: 0.38
+    maxSprint: 34
+    drainPerSecond: 4.9
+    regenPerSecond: 5.2
+    regenDelay: 0.35
     recoverThresholdFraction: 0.34
 
 - type: entity

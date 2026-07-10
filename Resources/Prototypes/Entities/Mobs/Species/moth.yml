@@ -61,9 +61,9 @@
     baseWeightlessFriction: 1
     baseWeightlessModifier: 1
   - type: LuaSprint # Lua
-    maxSprint: 90
-    drainPerSecond: 7.9
-    regenPerSecond: 8.2
+    maxSprint: 28
+    drainPerSecond: 7.2
+    regenPerSecond: 7.8
     regenDelay: 0.21
     recoverThresholdFraction: 0.24
   - type: Flammable

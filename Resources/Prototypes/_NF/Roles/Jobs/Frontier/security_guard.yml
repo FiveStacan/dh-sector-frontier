@@ -8,7 +8,10 @@
       time: 18000 # Frontier - 5 hrs
     - !type:DepartmentTimeRequirement #Lua
       department: Frontier
-      time: 18000
+      time: 12000 # 3.5 hrs
+    - !type:DepartmentTimeRequirement #DH
+      department: Security
+      time: 9000 # 2.5 hrs
   startingGear: SecurityGuardGear
   alwaysUseSpawner: true
   icon: "JobIconSecurityGuard"

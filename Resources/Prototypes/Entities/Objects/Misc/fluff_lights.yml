@@ -53,6 +53,7 @@
     canCollide: false
   - type: StealTarget
     stealGroup: LAMP
+  - type: Rotatable #DH
 
 - type: entity
   name: lamp
@@ -106,7 +107,7 @@
   - type: Anchorable # Frontier: Add Anchorable
   - type: Sprite
     sprite: Objects/Misc/Lights/lampgreen.rsi
-    offset: "0.0,0.4" # Frontier: Add sprite offset so it anchors somewhere sensible
+    #offset: "0.0,0.4" # Frontier: Add sprite offset so it anchors somewhere sensible #DH
     layers:
       - state: lampgreen
         map: [ "base" ]

@@ -5,16 +5,85 @@
 - type: soundCollection
   id: LuaLobbyMusic
   files:
-     - /Audio/Lobby/atomicamnesiammx.ogg
-     - /Audio/Lobby/absconditus.ogg
-     - /Audio/Lobby/comet_haley.ogg
-     - /Audio/Lobby/endless_space.ogg
-     - /Audio/Lobby/singuloose.ogg
-     - /Audio/_DV/Jukebox/aggravated.it-MONO.ogg
-     - /Audio/_DV/Jukebox/Caravan_Palace_Lone_Digger-MONO.ogg
-     - /Audio/_DV/Jukebox/marhaba-MONO.ogg
-     - /Audio/_DV/Jukebox/superposition-MONO.ogg
-     - /Audio/_Lua/Lobby/Andromeda.ogg
-     - /Audio/_Lua/Lobby/skyfall_beats-silent_anthem_execution.ogg
-     - /Audio/_Lua/Lobby/Elevn-Unknow13Golem.ogg
-     - /Audio/_Lua/Lobby/GeekMusic-TheExpanse-MainTheme.ogg
+    #  - /Audio/Lobby/atomicamnesiammx.ogg
+    #  - /Audio/Lobby/atomicamnesiammx.ogg
+    #  - /Audio/Lobby/absconditus.ogg
+
+#     - /Audio/_NF/Lobby/victory.ogg
+#     - /Audio/Corvax/Lobby/title2.ogg
+#     - /Audio/_Lua/Lobby/1.ogg
+#     - /Audio/_Lua/Lobby/4.ogg
+#     - /Audio/_Lua/Lobby/5.ogg
+#     - /Audio/_Lua/Lobby/Hacknet_Labyrinths_OST_HOME_Resonance.ogg
+#     - /Audio/Lobby/space_asshole_r.ogg
+#     - /Audio/Lobby/thunderdome.ogg
+#     - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
+
+    #  - /Audio/Lobby/comet_haley.ogg
+    #  - /Audio/Lobby/endless_space.ogg
+    #  - /Audio/Lobby/singuloose.ogg
+    #  - /Audio/_DV/Jukebox/aggravated.it-MONO.ogg
+    #  - /Audio/_DV/Jukebox/aggravated.it-MONO.ogg
+    #  - /Audio/_DV/Jukebox/Caravan_Palace_Lone_Digger-MONO.ogg
+    #  - /Audio/_DV/Jukebox/marhaba-MONO.ogg
+    #  - /Audio/_DV/Jukebox/marhaba-MONO.ogg
+    #  - /Audio/_DV/Jukebox/superposition-MONO.ogg
+    #  - /Audio/_Lua/Lobby/Andromeda.ogg
+    #  - /Audio/_Lua/Lobby/skyfall_beats-silent_anthem_execution.ogg
+    #  - /Audio/_Lua/Lobby/Elevn-Unknow13Golem.ogg
+    #  - /Audio/_Lua/Lobby/GeekMusic-TheExpanse-MainTheme.ogg
+
+     #DH
+     - /Audio/Lobby/thunderdome.ogg
+
+     - /Audio/Lobby/space_asshole.ogg
+
+     - /Audio/Lobby/the_wizard.ogg
+
+    #  - /Audio/Lobby/title2.ogg
+    #  - /Audio/Lobby/title3.ogg
+    #  - /Audio/Lobby/mod.flip-flap.ogg
+    #  - /Audio/Lobby/mod.flip-flap.ogg
+    #  - /Audio/Lobby/mod.flip-flap.ogg
+    #  - /Audio/Lobby/Spac_Stac.ogg
+    #  - /Audio/Lobby/pwmur.ogg
+    #  - /Audio/Lobby/pwmur.ogg
+    #  - /Audio/Lobby/pwmur.ogg
+    #  - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
+    #  - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+    #  - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
+    #  - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+    #DH
+    #  - /Audio/_DH/Lobby/AUD-20240921-WA0008.ogg
+    #  - /Audio/_DH/Lobby/beat-machine.ogg
+    #  - /Audio/_DH/Lobby/End_of_shift.ogg
+    #  - /Audio/_DH/Lobby/Good-mood.ogg
+    #  - /Audio/_DH/Lobby/Hello_and_goodbye.ogg
+    #  - /Audio/_DH/Lobby/Memories.ogg
+    #  - /Audio/_DH/Lobby/Space_Citadel.ogg
+    #  - /Audio/_DH/Lobby/Sunrise.ogg
+     - /Audio/_DH/Lobby/Demetori_-_Natsukashiki_Touhou_no_Chi_~_Sic_World.ogg
+     #GameServerX
+     - /Audio/_DH/Lobby/GameServerX/29.ogg
+     - /Audio/_DH/Lobby/GameServerX/Angry cats.ogg
+     - /Audio/_DH/Lobby/GameServerX/beat machine.save.ogg
+     - /Audio/_DH/Lobby/GameServerX/Chorus of grasshoppers.ogg
+     - /Audio/_DH/Lobby/GameServerX/Dark English.ogg
+     - /Audio/_DH/Lobby/GameServerX/Dark.ogg
+     - /Audio/_DH/Lobby/GameServerX/Invasion from outside.ogg
+     - /Audio/_DH/Lobby/GameServerX/Lemon - 17сент 06-55.save.ogg
+     - /Audio/_DH/Lobby/GameServerX/Memories.ogg
+     - /Audio/_DH/Lobby/GameServerX/Night City.ogg
+     - /Audio/_DH/Lobby/GameServerX/Nostalgia.ogg
+     - /Audio/_DH/Lobby/GameServerX/Prison-screeching.ogg
+     - /Audio/_DH/Lobby/GameServerX/Space_Citadel.ogg
+     - /Audio/_DH/Lobby/GameServerX/The-clock-is-ticking.ogg
+     - /Audio/_DH/Lobby/GameServerX/The-New-Federation.ogg
+     #krectonocez20
+     - /Audio/_DH/Lobby/krectonocez20/Cries of the soul.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/Last efforts.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/the inevitable.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/The Silent March.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/The tension of emptiness.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/Time only goes forward.mp3--online-audio-convert.com.ogg
+     - /Audio/_DH/Lobby/krectonocez20/unsuccessful experiment.mp3--online-audio-convert.com.ogg

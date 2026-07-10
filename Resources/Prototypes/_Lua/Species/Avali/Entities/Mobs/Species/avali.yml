@@ -35,10 +35,10 @@
     baseSprintSpeed: 6.5
     weightlessAcceleration: 2.5
   - type: LuaSprint # Lua
-    maxSprint: 88
-    drainPerSecond: 8.7
-    regenPerSecond: 9.6
-    regenDelay: 0.16
+    maxSprint: 28
+    drainPerSecond: 6.8
+    regenPerSecond: 7.5
+    regenDelay: 0.18
     recoverThresholdFraction: 0.20
   - type: PseudoItem
     storedOffset: 0,17

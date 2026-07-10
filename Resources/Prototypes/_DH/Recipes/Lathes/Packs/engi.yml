@@ -1,0 +1,35 @@
+- type: latheRecipePack
+  id: DHEngineeringMech
+  recipes:
+  - MechThruster
+  - MechAirTank
+  - RipleyUpgradeKit
+
+- type: latheRecipePack
+  id: DHEngineering
+  recipes:
+  - BluespaceAmeJar
+  - ExtendedAmeJar
+  - AmeJar
+  - BaseAmeJar
+
+- type: latheRecipePack
+  id: DHTools # используется в сервисном техфабе тоже
+  recipes:
+  - SprayPainter
+  - SprayPainterAdvanced
+  - SprayPainterExperemental
+  - SprayPainterAmmo
+  - SprayPainterAdvancedAmmo
+  - SheetBlueprintPaper
+
+- type: latheRecipePack
+  id: NFEngineeringTechfabDeprecatedDynamic
+  recipes:
+  - ClothingOuterHardsuitAtmos
+  - ClothingOuterHardsuitEngineering
+  - ClothingOuterSuitRad
+  - ClothingOuterSuitFire
+  - ClothingHeadHelmetFire
+  - ClothingOuterSuitAtmosFire
+  - ClothingHeadHelmetAtmosFire

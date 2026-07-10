@@ -34,10 +34,16 @@
           True: {state: icon-on}
           False: {state: icon}
   - type: StaticPrice
-    price: 100 # Frontier 200<100
+    price: 210 # Frontier 200<100
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.97
+        Slash: 0.98
+        Piercing: 0.99
 
 - type: entity
   parent: [ClothingShoesBootsMagBase]
@@ -99,8 +105,8 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 0.88
+    sprintModifier: 0.88
   - type: GasTank
     outputPressure: 42.6
     air:
@@ -116,7 +122,13 @@
     shape: # Lua
       - 0,0,1,1 # Lua
   - type: StaticPrice
-    price: 1500
+    price: 1600
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.97
+        Slash: 0.98
+        Piercing: 0.98
 
 - type: entity
   parent: BaseAction

@@ -1,7 +1,10 @@
-id-card-access-level-frontier = Фронтир
-id-card-access-level-pilot = исследователь
-id-card-access-level-mail = Почта
-id-card-access-level-mercenary = Наёмник
-id-card-access-level-stc = Диспетчер
-id-card-access-level-sergeant = Лейтенант
-id-card-access-level-bailiff = Смотритель
+id-card-access-level-frontier = [color=#437bbb]Фронтир[/color]
+id-card-access-level-pilot = [color=#437bbb]Пилот[/color]
+id-card-access-level-mail = [color=#437bbb]Почта[/color]
+id-card-access-level-mercenary = [color=#8eac5c]Наёмник[/color]
+id-card-access-level-stc = [color=#437bbb]Диспетчер[/color]
+id-card-access-level-sergeant = [color=#7fac5b]Лейтенант[/color]
+id-card-access-level-bailiff = [color=#7fac5b]Смотритель[/color]
+id-card-access-level-pirate = Пират
+id-card-access-level-telecom-officer = [color=#DE3A3A]Офицер Телекоммуникаций Синдиката[/color]
+id-card-access-level-research-director-typan = [color=#DE3A3A]Директор Исследований Синдиката[/color]

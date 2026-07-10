@@ -7960,14 +7960,14 @@ entities:
     - type: Transform
       pos: -8.4360895,9.877812
       parent: 1
-- proto: MagazineBoxRifleBig
+- proto: AmmoBox556x45mmFMJ
   entities:
   - uid: 1193
     components:
     - type: Transform
       pos: -14.385674,21.644907
       parent: 1
-- proto: MagazineBoxRifleBigRubber
+- proto: AmmoBox556x45mmRubber
   entities:
   - uid: 2077
     components:

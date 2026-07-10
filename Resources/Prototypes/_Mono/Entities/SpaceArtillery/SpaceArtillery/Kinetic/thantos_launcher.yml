@@ -16,34 +16,36 @@
   - type: FireControlRotate
   - type: AmmoCounter
   - type: Battery
-    maxCharge: 40000
-    startingCharge: 40000
+    maxCharge: 10000
+    startingCharge: 10000
   - type: ExaminableBattery
   - type: WirelessNetworkConnection
     range: 500
   - type: Gun
-    fireRate: 0.1
-    burstCooldown: 20
+    fireRate: 0.3
+    burstCooldown: 26
     burstFireRate: 2
     shotsPerBurst: 2
     selectedMode: Burst
     availableModes: Burst
-    projectileSpeed: 900
+    projectileSpeed: 700
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/leviathan_fire.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 17
+    autoRechargePause: true
+    autoRechargePauseTime: 6
   - type: SpaceArtillery
-    powerChargeRate: 350
-    powerUsePassive: 1000
+    powerChargeRate: 17
+    powerUsePassive: 2200
     powerUseActive: 7500
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRailgunProjectile
-    fireCost: 1500
+    fireCost: 10000
   - type: Fixtures
     fixtures:
       fix1:

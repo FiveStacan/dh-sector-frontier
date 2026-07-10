@@ -12,9 +12,19 @@ using Robust.Client.GameObjects; // Lua
 using Robust.Shared.Utility; // Lua
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
+using System.Numerics;
 using static Robust.Client.UserInterface.Controls.BaseButton;
 
 namespace Content.Client._NF.Shipyard.UI;
+
+public enum VesselSortType //DH
+{
+    Name,
+    Price,
+    Size,
+    Class,
+    Engine,
+}
 
 [GenerateTypedNameReferences]
 public sealed partial class ShipyardConsoleMenu : FancyWindow
@@ -30,14 +40,17 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     private readonly List<VesselSize> _categoryStrings = new();
     private readonly List<VesselClass> _classStrings = new();
     private readonly List<VesselEngine> _engineStrings = new();
+    private readonly List<VesselSortType> _sortTypes = new(); //DH
     private VesselSize? _category;
     private VesselClass? _class;
     private VesselEngine? _engine;
+    private VesselSortType? _sortBy = VesselSortType.Name; //DH
 
     private List<string> _lastAvailableProtos = new();
     private List<string> _lastUnavailableProtos = new();
     private bool _freeListings = false;
     private bool _validId = false;
+    private bool _repopulatingFilters = false;
     private ConfirmButton? _currentlyConfirmingButton = null;
 
     // Lua start
@@ -102,6 +115,14 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     };
 
     private static readonly EntProtoId VesselEngineDefaultProtoId = "MobCat";
+    private const float PrimaryClassIconSize = 16f;
+    private const float SecondaryClassIconSize = 12f;
+    private const float PrimaryEngineIconSize = 28f;
+    private const float SecondaryEngineIconSize = 21f;
+    private const float IconSpacing = 2f;
+    private const float SecondaryEngineIconSpacing = 3f;
+    private static readonly Vector2 PrimaryEngineIconScale = new(2f, 2f);
+    private static readonly Vector2 SecondaryEngineIconScale = new(1.5f, 1.5f);
 
     // Lua end
 
@@ -112,9 +133,13 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         _xform = _entManager.System<SharedTransformSystem>(); // Lua
         _sprite = _entManager.System<SpriteSystem>(); // Lua
         Title = Loc.GetString("shipyard-console-menu-title");
+
+        PopulateSortings(); //DH
+
         SearchBar.OnTextChanged += OnSearchBarTextChanged;
         Categories.OnItemSelected += OnCategoryItemSelected;
         Classes.OnItemSelected += OnClassItemSelected;
+        Sorting.OnItemSelected += OnSortingItemSelected; //DH
         Engines.OnItemSelected += OnEngineItemSelected;
         SellShipButton.OnPressed += (args) => { OnSellShip?.Invoke(args); };
         UnassignDeedButton.OnPressed += (args) => { OnUnassignDeed?.Invoke(args); };
@@ -184,18 +209,37 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
     private void OnCategoryItemSelected(OptionButton.ItemSelectedEventArgs args)
     {
+        if (_repopulatingFilters)
+            return;
+
         SetCategoryText(args.Id);
         PopulateProducts(_lastAvailableProtos, _lastUnavailableProtos, _freeListings, _validId);
     }
 
     private void OnClassItemSelected(OptionButton.ItemSelectedEventArgs args)
     {
+        if (_repopulatingFilters)
+            return;
+
         SetClassText(args.Id);
         PopulateProducts(_lastAvailableProtos, _lastUnavailableProtos, _freeListings, _validId);
     }
+    //DH
+    private void OnSortingItemSelected(OptionButton.ItemSelectedEventArgs args)
+    {
+        if (_repopulatingFilters)
+            return;
+
+        SetSortingText(args.Id);
+        PopulateProducts(_lastAvailableProtos, _lastUnavailableProtos, _freeListings, _validId);
+    }
+    //DH -
 
     private void OnEngineItemSelected(OptionButton.ItemSelectedEventArgs args)
     {
+        if (_repopulatingFilters)
+            return;
+
         SetEngineText(args.Id);
         PopulateProducts(_lastAvailableProtos, _lastUnavailableProtos, _freeListings, _validId);
     }
@@ -231,6 +275,13 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         _class = id == 0 ? null : _classStrings[id];
         Classes.SelectId(id);
     }
+    //DH
+    private void SetSortingText(int id)
+    {
+        _sortBy = id >= 0 && id < _sortTypes.Count ? _sortTypes[id] : VesselSortType.Name;
+        Sorting.SelectId(id);
+    }
+
     private void SetEngineText(int id)
     {
         _engine = id == 0 ? null : _engineStrings[id];
@@ -245,18 +296,21 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
         var search = SearchBar.Text.Trim().ToLowerInvariant();
 
-        var newVessels = GetVesselPrototypesFromIds(availablePrototypes);
-        AddVesselsToControls(newVessels, search, free, canPurchase);
+        var newVessels = FilterVessels(GetVesselPrototypesFromIds(availablePrototypes), search).ToList();
+        var newUnavailableVessels = FilterVessels(GetVesselPrototypesFromIds(unavailablePrototypes), search).ToList();
+        var visibleVessels = newVessels.Concat(newUnavailableVessels).ToList();
+        var classColumnWidth = GetClassColumnWidth(visibleVessels);
+        var engineColumnWidth = GetEngineColumnWidth(visibleVessels);
 
-        var newUnavailableVessels = GetVesselPrototypesFromIds(unavailablePrototypes);
-        AddVesselsToControls(newUnavailableVessels, search, free, false);
+        AddVesselsToControls(newVessels, free, canPurchase, classColumnWidth, engineColumnWidth);
+        AddVesselsToControls(newUnavailableVessels, free, false, classColumnWidth, engineColumnWidth);
 
         _lastAvailableProtos = availablePrototypes;
         _lastUnavailableProtos = unavailablePrototypes;
     }
 
     /// <summary>
-    /// Given a set of prototype IDs, returns a corresponding set of prototypes, ordered by name.
+    /// Given a set of prototype IDs, returns a corresponding set of prototypes, sorted based on _sortBy.
     /// </summary>
     private List<VesselPrototype?> GetVesselPrototypesFromIds(IEnumerable<string> protoIds)
     {
@@ -264,59 +318,48 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
             .Where(it => it != null)
             .ToList();
 
-        vesselList.Sort((x, y) =>
-            string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase));
+        //DH
+        switch (_sortBy)
+        {
+            case VesselSortType.Price:
+                vesselList.Sort((x, y) => x!.Price.CompareTo(y!.Price));
+                break;
+            case VesselSortType.Size:
+                vesselList.Sort(CompareBySize);
+                break;
+            case VesselSortType.Class:
+                vesselList.Sort(CompareBySelectedClass);
+                break;
+            case VesselSortType.Engine:
+                vesselList.Sort(CompareBySelectedEngine);
+                break;
+            case VesselSortType.Name:
+            default:
+                vesselList.Sort((x, y) =>
+                    string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase));
+                break;
+        }
+
         return vesselList;
     }
 
     /// <summary>
     /// Adds all vessels in a given list of prototypes as VesselRows in the UI.
     /// </summary>
-    private void AddVesselsToControls(IEnumerable<VesselPrototype?> vessels, string search, bool free, bool canPurchase)
+    private void AddVesselsToControls(
+        IEnumerable<VesselPrototype> vessels,
+        bool free,
+        bool canPurchase,
+        float classColumnWidth,
+        float engineColumnWidth)
     {
         foreach (var prototype in vessels)
         {
-            // Lua start
-            if (prototype == null)
-            {
-                continue;
-            }
-            // Lua end
-
-            // Filter any ships
-            if (_category != null && !prototype.Category.Equals(_category)) // Lua
-                continue;
-            if (_class != null && !prototype.Classes.Contains(_class.Value)) // Lua
-                continue;
-            if (_engine != null && !prototype.Engines.Contains(_engine.Value)) // Lua
-                continue;
-            if (search.Length > 0 && !prototype.Name.ToLowerInvariant().Contains(search)) // Lua
-                continue;
-
             string priceText;
             if (free)
                 priceText = Loc.GetString("shipyard-console-menu-listing-free");
             else
                 priceText = BankSystemExtensions.ToSpesoString(prototype.Price); // Lua
-
-            // Lua start
-            var classRsi = VesselClassDefaultRsi;
-
-            for (var classId = prototype.Classes.Count - 1; classId >= 0; classId--)
-            {
-                if (VesselClassRsis.TryGetValue(prototype.Classes[classId], out var vesselClassRsi))
-                {
-                    classRsi = vesselClassRsi;
-                    break;
-                }
-            }
-
-            if (!prototype.Engines.TryGetValue(0, out var vesselEngine)
-                || !VesselEngineProtoIds.TryGetValue(vesselEngine, out var engineProtoId))
-            {
-                engineProtoId = VesselEngineDefaultProtoId;
-            }
-            // Lua end
 
             var vesselEntry = new VesselRow
             {
@@ -324,13 +367,17 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
                 // Lua start
                 VesselName = { Text = prototype.Name },
                 CategoryLabel = { Text = Loc.GetString($"shipyard-console-category-{prototype.Category}") },
-                ClassIcon = { Texture = _sprite.GetState(classRsi).Frame0 },
-                EngineIcon = { Texture = _sprite.Frame0(_protoManager.Index(engineProtoId)) },
                 // Lua end
                 Purchase = { Text = Loc.GetString("shipyard-console-purchase-available"), Disabled = !canPurchase },
                 Guidebook = { Disabled = prototype.GuidebookPage is null, TooltipDelay = 0.2f, ToolTip = prototype.Description },
                 Price = { Text = priceText },
             };
+            vesselEntry.ClassIcons.MinWidth = classColumnWidth;
+            vesselEntry.ClassIcons.MaxWidth = classColumnWidth;
+            vesselEntry.EngineIcons.MinWidth = engineColumnWidth;
+            vesselEntry.EngineIcons.MaxWidth = engineColumnWidth;
+            PopulateClassIcons(vesselEntry, prototype);
+            PopulateEngineIcons(vesselEntry, prototype);
             vesselEntry.Purchase.OnConfirming += OnStartConfirmingPurchase;
             vesselEntry.Purchase.OnPressed += (args) => { _currentlyConfirmingButton = null; OnOrderApproved?.Invoke(args); };
             Vessels.AddChild(vesselEntry);
@@ -355,6 +402,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     /// </summary>
     public void PopulateCategories(List<string> availablePrototypes, List<string> unavailablePrototypes)
     {
+        var previousCategory = _category;
+        _repopulatingFilters = true;
+
         _categoryStrings.Clear();
         Categories.Clear();
 
@@ -370,6 +420,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         {
             Categories.AddItem(Loc.GetString($"shipyard-console-category-{str}"));
         }
+
+        RestoreCategorySelection(previousCategory);
+        _repopulatingFilters = false;
     }
 
     /// <summary>
@@ -394,6 +447,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     /// </summary>
     public void PopulateClasses(List<string> availablePrototypes, List<string> unavailablePrototypes)
     {
+        var previousClass = _class;
+        _repopulatingFilters = true;
+
         _classStrings.Clear();
         Classes.Clear();
 
@@ -409,6 +465,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         {
             Classes.AddItem(Loc.GetString($"shipyard-console-class-{str}"));
         }
+
+        RestoreClassSelection(previousClass);
+        _repopulatingFilters = false;
     }
 
     /// <summary>
@@ -436,6 +495,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     /// </summary>
     public void PopulateEngines(List<string> availablePrototypes, List<string> unavailablePrototypes)
     {
+        var previousEngine = _engine;
+        _repopulatingFilters = true;
+
         _engineStrings.Clear();
         Engines.Clear();
 
@@ -451,6 +513,9 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         {
             Engines.AddItem(Loc.GetString($"shipyard-console-engine-{str}"));
         }
+
+        RestoreEngineSelection(previousEngine);
+        _repopulatingFilters = false;
     }
 
     /// <summary>
@@ -471,6 +536,198 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
                 }
             }
         }
+    }
+    /// <summary>
+    ///     Populates the list of sorting options that will be shown.
+    ///     Uses localization keys like shipyard-console-sorting-all-label and shipyard-console-sorting-price-label.
+    /// </summary>
+    public void PopulateSortings()
+    {
+        var previousSorting = _sortBy;
+        _repopulatingFilters = true;
+
+        _sortTypes.Clear();
+        Sorting.Clear();
+
+        _sortTypes.Add(VesselSortType.Name);
+        _sortTypes.Add(VesselSortType.Price);
+        _sortTypes.Add(VesselSortType.Size);
+        _sortTypes.Add(VesselSortType.Class);
+        _sortTypes.Add(VesselSortType.Engine);
+
+        Sorting.AddItem(Loc.GetString("shipyard-console-sorting-all-label"));
+        Sorting.AddItem(Loc.GetString("shipyard-console-sorting-price-label"));
+        Sorting.AddItem(Loc.GetString("shipyard-console-sorting-size-label"));
+        Sorting.AddItem(Loc.GetString("shipyard-console-sorting-class-label"));
+        Sorting.AddItem(Loc.GetString("shipyard-console-sorting-engine-label"));
+
+        RestoreSortingSelection(previousSorting);
+        _repopulatingFilters = false;
+    }
+
+    private void RestoreCategorySelection(VesselSize? previousCategory)
+    {
+        var id = previousCategory == null ? 0 : _categoryStrings.IndexOf(previousCategory.Value);
+        SetCategoryText(id < 0 ? 0 : id);
+    }
+
+    private void RestoreClassSelection(VesselClass? previousClass)
+    {
+        var id = previousClass == null ? 0 : _classStrings.IndexOf(previousClass.Value);
+        SetClassText(id < 0 ? 0 : id);
+    }
+
+    private void RestoreEngineSelection(VesselEngine? previousEngine)
+    {
+        var id = previousEngine == null ? 0 : _engineStrings.IndexOf(previousEngine.Value);
+        SetEngineText(id < 0 ? 0 : id);
+    }
+
+    private void RestoreSortingSelection(VesselSortType? previousSorting)
+    {
+        var id = previousSorting == null ? 0 : _sortTypes.IndexOf(previousSorting.Value);
+        SetSortingText(id < 0 ? 0 : id);
+    }
+
+    private int CompareBySize(VesselPrototype? x, VesselPrototype? y)
+    {
+        var sizeComparison = x!.Category.CompareTo(y!.Category);
+        if (sizeComparison != 0)
+            return sizeComparison;
+
+        return CompareByName(x, y);
+    }
+
+    private int CompareBySelectedClass(VesselPrototype? x, VesselPrototype? y)
+    {
+        var rankComparison = GetSelectedClassRank(x).CompareTo(GetSelectedClassRank(y));
+        if (rankComparison != 0)
+            return rankComparison;
+
+        return CompareByName(x, y);
+    }
+
+    private int CompareBySelectedEngine(VesselPrototype? x, VesselPrototype? y)
+    {
+        var rankComparison = GetSelectedEngineRank(x).CompareTo(GetSelectedEngineRank(y));
+        if (rankComparison != 0)
+            return rankComparison;
+
+        return CompareByName(x, y);
+    }
+
+    private int GetSelectedClassRank(VesselPrototype? vessel)
+    {
+        if (vessel == null || _class == null)
+            return 0;
+
+        var index = vessel.Classes.IndexOf(_class.Value);
+        return index < 0 ? int.MaxValue : index;
+    }
+
+    private int GetSelectedEngineRank(VesselPrototype? vessel)
+    {
+        if (vessel == null || _engine == null)
+            return 0;
+
+        var index = vessel.Engines.IndexOf(_engine.Value);
+        return index < 0 ? int.MaxValue : index;
+    }
+
+    private static int CompareByName(VesselPrototype? x, VesselPrototype? y)
+    {
+        return string.Compare(x!.Name, y!.Name, StringComparison.CurrentCultureIgnoreCase);
+    }
+
+    private IEnumerable<VesselPrototype> FilterVessels(IEnumerable<VesselPrototype?> vessels, string search)
+    {
+        foreach (var prototype in vessels)
+        {
+            if (prototype == null)
+                continue;
+
+            if (_category != null && !prototype.Category.Equals(_category))
+                continue;
+            if (_class != null && !prototype.Classes.Contains(_class.Value))
+                continue;
+            if (_engine != null && !prototype.Engines.Contains(_engine.Value))
+                continue;
+            if (search.Length > 0 && !prototype.Name.ToLowerInvariant().Contains(search))
+                continue;
+
+            yield return prototype;
+        }
+    }
+
+    private static float GetClassColumnWidth(IEnumerable<VesselPrototype> vessels)
+    {
+        var maxCount = Math.Max(1, vessels.Select(vessel => vessel.Classes.Count).DefaultIfEmpty(1).Max());
+        return PrimaryClassIconSize + IconSpacing + (maxCount - 1) * (SecondaryClassIconSize + IconSpacing);
+    }
+
+    private static float GetEngineColumnWidth(IEnumerable<VesselPrototype> vessels)
+    {
+        var maxCount = Math.Max(1, vessels.Select(vessel => vessel.Engines.Count).DefaultIfEmpty(1).Max());
+        return PrimaryEngineIconSize + IconSpacing + (maxCount - 1) * (SecondaryEngineIconSize + SecondaryEngineIconSpacing);
+    }
+
+    private void PopulateClassIcons(VesselRow vesselEntry, VesselPrototype prototype)
+    {
+        vesselEntry.ClassIcons.RemoveAllChildren();
+
+        if (prototype.Classes.Count == 0)
+        {
+            AddClassIcon(vesselEntry, VesselClassDefaultRsi, false);
+            return;
+        }
+
+        for (var i = 0; i < prototype.Classes.Count; i++)
+        {
+            var classRsi = VesselClassRsis.GetValueOrDefault(prototype.Classes[i], VesselClassDefaultRsi);
+            AddClassIcon(vesselEntry, classRsi, i > 0);
+        }
+    }
+
+    private void AddClassIcon(VesselRow vesselEntry, SpriteSpecifier.Rsi classRsi, bool secondary)
+    {
+        var iconSize = secondary ? SecondaryClassIconSize : PrimaryClassIconSize;
+        vesselEntry.ClassIcons.AddChild(new TextureRect
+        {
+            Texture = _sprite.GetState(classRsi).Frame0,
+            SetSize = new Vector2(iconSize, iconSize),
+            Stretch = TextureRect.StretchMode.KeepAspectCentered,
+            Margin = new Thickness(secondary ? 1 : 0, 0, 1, 0),
+        });
+    }
+
+    private void PopulateEngineIcons(VesselRow vesselEntry, VesselPrototype prototype)
+    {
+        vesselEntry.EngineIcons.RemoveAllChildren();
+
+        if (prototype.Engines.Count == 0)
+        {
+            AddEngineIcon(vesselEntry, VesselEngineDefaultProtoId, false);
+            return;
+        }
+
+        for (var i = 0; i < prototype.Engines.Count; i++)
+        {
+            var engineProtoId = VesselEngineProtoIds.GetValueOrDefault(prototype.Engines[i], VesselEngineDefaultProtoId);
+            AddEngineIcon(vesselEntry, engineProtoId, i > 0);
+        }
+    }
+
+    private void AddEngineIcon(VesselRow vesselEntry, EntProtoId engineProtoId, bool secondary)
+    {
+        var iconSize = secondary ? SecondaryEngineIconSize : PrimaryEngineIconSize;
+        vesselEntry.EngineIcons.AddChild(new TextureRect
+        {
+            Texture = _sprite.Frame0(_protoManager.Index(engineProtoId)),
+            SetSize = new Vector2(iconSize, iconSize),
+            Stretch = TextureRect.StretchMode.KeepAspectCentered,
+            TextureScale = secondary ? SecondaryEngineIconScale : PrimaryEngineIconScale,
+            Margin = new Thickness(secondary ? 1 : 0, 0, 2, 0),
+        });
     }
 
     public void UpdateState(ShipyardConsoleInterfaceState state)

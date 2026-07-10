@@ -1,0 +1,18 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatDEBUG
+  name: DEBUG helmet
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/gladiator.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/gladiator.rsi
+  - type: HideLayerClothing
+   # layers:
+   # - LLeg
+   # - RLeg
+   #   LLeg: SOCK
+   #   RLeg: SOCK
+   # slots:
+   # - LLeg
+   # - RLeg

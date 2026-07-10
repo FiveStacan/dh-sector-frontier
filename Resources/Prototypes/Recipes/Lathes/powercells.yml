@@ -60,8 +60,9 @@
   materials:
     Steel: 500
     Glass: 400
-    Uranium: 200
-    Gold: 100
+    Uranium: 250
+    Gold: 150
+    Silver: 150
 
 # Power cages
 - type: latheRecipe

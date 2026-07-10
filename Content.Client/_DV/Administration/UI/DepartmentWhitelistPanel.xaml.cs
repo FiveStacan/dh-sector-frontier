@@ -5,6 +5,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using System.Linq;
 
 namespace Content.Client._DV.Administration.UI;
@@ -40,7 +41,7 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
         if (!anyValid) // Frontier: hide checkbox set if no valid events
             Visible = false;  // Frontier
 
-        Department.Text = Loc.GetString(department.Name);
+        Department.Text = FormattedMessage.RemoveMarkupPermissive(Loc.GetString(department.Name));
         Department.Modulate = department.Color;
         Department.Pressed = allWhitelisted;
         Department.OnPressed += args => OnDepartmentPressed(department, proto, whitelists, globalWhitelist); // Frontier: check global whitelist

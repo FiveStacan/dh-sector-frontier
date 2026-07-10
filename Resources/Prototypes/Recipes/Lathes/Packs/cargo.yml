@@ -21,11 +21,14 @@
   - MiningDrillDiamond
   - MineralScannerEmpty
   - AdvancedMineralScannerEmpty
+  - OreBag
+  - GemsBag
   - OreBagOfHolding
 
 - type: latheRecipePack
   id: CargoBoards
   recipes:
   - OreProcessorIndustrialMachineCircuitboard
+  - SalvageTechFabCircuitboardNF #DH
   # - CargoTelepadMachineCircuitboard # Frontier
   # - ShuttleGunKineticCircuitboard # Frontier

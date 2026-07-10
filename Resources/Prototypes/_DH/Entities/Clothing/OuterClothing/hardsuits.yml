@@ -1,0 +1,111 @@
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseC2Contraband]
+  id: ClothingOuterHardsuitOmni
+  name: experimental omni hardsuit
+  description: A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/omni.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/omni.rsi
+    equipDelay: 5
+    unequipDelay: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.35
+  - type: FireProtection
+    reduction: 0.75
+  - type: StaminaResistance
+    damageCoefficient: 0.15
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.16
+        Slash: 0.25
+        Piercing: 0.38
+        Heat: 0.04
+        Radiation: 0.05
+        Caustic: 0.15
+  - type: ClothingSpeedModifier
+    walkModifier: 0.90
+    sprintModifier: 0.84
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,5,5
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - HighRiskItem
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitOmni
+  - type: StaticPrice
+    price: 9500
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: BarestepHard
+      params:
+        variation: 0.09
+        volume: -6
+
+- type: entity
+  parent: ClothingOuterHardsuitBlueShield
+  id: ClothingOuterHardsuitNTRG
+  name: NTR Guard's hardsuit
+  description: Tough and reliable, just like its owner.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/ntrguard_spacesuit.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/ntrguard_spacesuit.rsi
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,4
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitNTRG
+
+- type: entity
+  parent: ClothingOuterHardsuitSecurity
+  id: ClothingOuterHardsuitSecuritySunrise
+  suffix: SUNRISE
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/secoff.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Hardsuits/secoff.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitSecuritySunrise
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, ClothingOuterStorageBase]
+  id: ClothingOuterSuitCargo
+  name: cargo suit
+  description: A special suit for cargo workers, somewhat reminiscent of an old suit from another universe.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,7,5
+    whitelist:
+      tags:
+        - BluespaceBox
+        - BoxCardboard
+        - Sheet
+        - Ingot
+        - RawMaterial
+        - Ore
+        - NAMEFuel
+  - type: Sprite
+    sprite: _DH/Clothing/OuterClothing/Suits/cargo-suit.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/OuterClothing/Suits/cargo-suit.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.88
+    sprintModifier: 0.88
+  - type: HeldSpeedModifier

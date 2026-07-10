@@ -11,44 +11,39 @@
   - type: Clothing
     sprite: Clothing/Belt/utility.rsi
   - type: Storage
-    # maxItemSize: Normal # Frontier
-    # Don't add more than absolutely needed to this whitelist!
-    # Utility belts shouldn't just be free extra storage.
-    # This is only intended for basic engineering equipment.
-    # Frontier: Commented out whitelist
- #   whitelist:
- #      tags:
- #        - Powerdrill
- #        - Wirecutter
- #        - Crowbar
- #        - Screwdriver
- #        - Flashlight
- #        - Wrench
- #        - GeigerCounter
- #        - Flare
- #        - CableCoil
- #        - CigPack
- #        - Radio
- #        - HolofanProjector
- #        - Multitool
- #        - AppraisalTool
- #        - JawsOfLife
- #        - GPS
- #        - WeldingMask
- #        - RemoteSignaller
- #      components:
- #        - StationMap
- #        - SprayPainter
- #        - SprayPainterAmmo
- #        - NetworkConfigurator
- #        - RCD
- #        - RCDAmmo
- #        - Welder
- #        - PowerCell
- #        - Geiger
- #        - TrayScanner
- #        - GasAnalyzer
- #        - HandLabeler
+    maxItemSize: Normal # Frontier
+    whitelist: #DH
+      tags:
+         - Powerdrill
+         - Wirecutter
+         - Crowbar
+         - Screwdriver
+         - Flashlight
+         - Wrench
+         - GeigerCounter
+         - Flare
+         - CableCoil
+         - CigPack
+         - Radio
+         - HolofanProjector
+         - Multitool
+         - AppraisalTool
+         - JawsOfLife
+         - GPS
+         - WeldingMask
+      components:
+         - StationMap
+         - SprayPainter
+         - SprayPainterAmmo # upstream#37341
+         - NetworkConfigurator
+         - RCD
+         - RCDAmmo
+         - Welder
+         - PowerCell
+         - Geiger
+         - TrayScanner
+         - GasAnalyzer
+         - HandLabeler
   - type: ItemMapper
     mapLayers:
       drill:
@@ -100,42 +95,41 @@
     sprite: Clothing/Belt/ce.rsi
   - type: Clothing
     sprite: Clothing/Belt/ce.rsi
-  #- type: Storage # Frontier
-    #grid: # Frontier
-    #- 0,0,9,1 # Frontier
-    # TODO: Fill this out more.
-    # Frontier: Commented out whitelist
- #   whitelist:
- #      tags:
- #        - Wirecutter
- #        - Crowbar
- #        - Screwdriver
- #        - Flashlight
- #        - Wrench
- #        - GeigerCounter
- #        - Flare
- #        - CableCoil
- #        - Powerdrill
- #        - JawsOfLife
- #        - CigPack
- #        - Radio
- #        - HolofanProjector
- #        - Multitool
- #        - AppraisalTool
- #      components:
- #        - StationMap
- #        - SprayPainter
- #        - SprayPainterAmmo
- #        - NetworkConfigurator
- #        - RCD
- #        - RCDAmmo
- #        - Welder
- #        - Flash
- #        - Handcuff
- #        - PowerCell
- #        - Geiger
- #        - TrayScanner
- #        - GasAnalyzer
+  - type: Storage
+    grid:
+    - 0,0,8,1
+    whitelist:
+      tags:
+         - Wirecutter
+         - Crowbar
+         - Screwdriver
+         - Flashlight
+         - Wrench
+         - GeigerCounter
+         - Flare
+         - CableCoil
+         - Powerdrill
+         - JawsOfLife
+         - CigPack
+         - Radio
+         - HolofanProjector
+         - Multitool
+         - AppraisalTool
+      components:
+         - HolosignProjector #DH
+         - StationMap
+         - SprayPainter
+         - SprayPainterAmmo # upstream#37341
+         - NetworkConfigurator
+         - RCD
+         - RCDAmmo
+         - Welder
+         - Flash
+         - Handcuff
+         - PowerCell
+         - Geiger
+         - TrayScanner
+         - GasAnalyzer
   - type: ItemMapper
     mapLayers:
       drill:
@@ -183,19 +177,20 @@
     sprite: Clothing/Belt/assault.rsi
   - type: Clothing
     sprite: Clothing/Belt/assault.rsi
-  # - type: Storage # Frontier: commented out whitelist
-    # whitelist:
-      # tags:
-        # - CigPack
-        # - Taser
-      # components:
-        # - Stunbaton
-        # - FlashOnTrigger
-        # - SmokeOnTrigger
-        # - Flash
-        # - Handcuff
-        # - BallisticAmmoProvider
-        # - Ammo
+  - type: Storage #DH
+    whitelist:
+      tags:
+        - CigPack
+        - Taser
+        - AppraisalTool #DH
+      components:
+        - Stunbaton
+        - FlashOnTrigger
+        - SmokeOnTrigger
+        - Flash
+        - Handcuff
+        - BallisticAmmoProvider
+        - Ammo
   - type: ItemMapper
     mapLayers:
       flashbang:
@@ -212,6 +207,39 @@
           - SmokeOnTrigger
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+#DH
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DH/Items/Handling/toolbelt_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DH/Items/Handling/toolbelt_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DH/Items/Handling/toolbelt_drop.ogg
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+        Piercing: 0.99
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  parent: ClothingBeltAssault
+  id: ClothingBeltAssaultFilled
+  name: assault belt
+  description: A tactical assault belt.
+  components:
+  - type: StorageFill
+    contents:
+    - id: GrenadeFlashBang
+    - id: TearGasGrenade
+    - id: Stunbaton
+    - id: Handcuffs
+    - id: Handcuffs
+#DH -
 
 - type: entity
   parent: NFClothingBeltStorageBase
@@ -223,26 +251,26 @@
     sprite: Clothing/Belt/janitor.rsi
   - type: Clothing
     sprite: Clothing/Belt/janitor.rsi
-    # Frontier: comment out storage restrictions
- # - type: Storage
- #    whitelist:
- #      tags:
- #        - Wrench
- #        - Bottle
- #        - Spray
- #        - Soap
- #        - Flashlight
- #        - CigPack
- #        - TrashBag
- #        - WetFloorSign
- #        - HolosignProjector
- #        - Plunger
- #        - GoldenPlunger
- #        - WireBrush
- #      components:
- #        - LightReplacer
- #        - SmokeOnTrigger
- #    maxItemSize: Large
+  - type: Storage #DH
+    whitelist:
+      tags:
+         - WireBrush #DH
+         - Wrench
+         - Bottle
+         - Spray
+         - Soap
+         - Flashlight
+         - CigPack
+         - TrashBag
+         - WetFloorSign
+         - HolosignProjector
+         - Plunger
+         - LightReplacer
+         - JanicartKeys
+      components:
+         - LightReplacer
+         - SmokeOnTrigger
+    maxItemSize: Large
   - type: ItemMapper
     mapLayers:
       bottle:
@@ -270,27 +298,28 @@
     sprite: Clothing/Belt/medical.rsi
   - type: Clothing
     sprite: Clothing/Belt/medical.rsi
-  # - type: Storage # Frontier: commented out whitelist
-  #   whitelist:
-  #     tags:
-  #       - Wrench
-  #       - Bottle
-  #       - Spray
-  #       - Brutepack
-  #       - Bloodpack
-  #       - Gauze
-  #       - Ointment
-  #       - CigPack
-  #       - PillCanister
-  #       - Radio
-  #       - DiscreteHealthAnalyzer
-  #       - SurgeryTool
-  #       - Dropper
-  #     components:
-  #       - Hypospray
-  #       - Injector
-  #       - Pill
-  #       - HandLabeler
+  - type: Storage #DH
+    whitelist:
+      tags:
+         - Wrench
+         - Bottle
+         - Spray
+         - Brutepack
+         - Bloodpack
+         - Gauze
+         - Ointment
+         - CigPack
+         - PillCanister
+         - Radio
+         - DiscreteHealthAnalyzer
+         - SurgeryTool
+         - Dropper
+         - AppraisalTool #DH
+      components:
+         #- Hypospray
+         - Injector
+         - Pill
+         - HandLabeler
   - type: ItemMapper
     mapLayers:
       bottle:
@@ -301,6 +330,7 @@
         whitelist:
           components:
           - Injector
+          #- Hypospray #DH
       pill:
         whitelist:
           components:
@@ -336,6 +366,30 @@
     sprite: Clothing/Belt/emt.rsi
   - type: Clothing
     sprite: Clothing/Belt/emt.rsi
+  - type: Storage #DH
+    whitelist:
+      tags:
+         - Wrench
+         - Bottle
+         - Spray
+         - Brutepack
+         - Bloodpack
+         - Gauze
+         - Ointment
+         - CigPack
+         - PillCanister
+         - Radio
+         - DiscreteHealthAnalyzer
+         - SurgeryTool
+         - Dropper
+         - AppraisalTool
+      components:
+         #- Hypospray
+         - Injector
+         - Pill
+         - HandLabeler
+         - Defibrillator
+         - Implanter
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -347,24 +401,24 @@
     sprite: Clothing/Belt/plant.rsi
   - type: Clothing
     sprite: Clothing/Belt/plant.rsi
-  # - type: Storage # Frontier: commented out whitelist
-  #   whitelist:
-  #     tags:
-  #       # - PlantAnalyzer
-  #       - PlantSampleTaker
-  #       - BotanyShovel
-  #       - BotanyHoe
-  #       - BotanyHatchet
-  #       - PlantSampleTaker
-  #       - PlantBGone
-  #       - Bottle
-  #       - Syringe
-  #       - CigPack
-  #       - Dropper
-  #     components:
-  #       - Seed
-  #       - Smokable
-  #       - HandLabeler
+  - type: Storage # Frontier: commented out whitelist
+    whitelist:
+       tags: #DH
+         - PlantAnalyzer
+         - PlantSampleTaker
+         - BotanyShovel
+         - BotanyHoe
+         - BotanyHatchet
+         - PlantSampleTaker
+         - PlantBGone
+         - Bottle
+         - Syringe
+         - CigPack
+         - Dropper
+       components:
+         - Seed
+         - Smokable
+         - HandLabeler
   - type: ItemMapper
     mapLayers:
       hatchet:
@@ -404,28 +458,28 @@
     sprite: Clothing/Belt/chef.rsi
   - type: Clothing
     sprite: Clothing/Belt/chef.rsi
-  # - type: Storage # Frontier: commented out whitelist
-    # whitelist:
-      # tags:
-        # - KitchenKnife
-        # - Cleaver
-        # - RollingPin
-        # - Coldsauce
-        # - Enzyme
-        # - Hotsauce
-        # - Ketchup
-        # - BBQsauce
-        # - SaltShaker
-        # - PepperShaker
-        # - CigPack
-        # - Packet
-        # - Skewer
-        # - MonkeyCube
-        # - Mayo
-      # components:
-        # - Mousetrap
-        # - Smokable
-        # - Utensil
+  - type: Storage # Frontier: commented out whitelist
+    whitelist: #DH
+      tags:
+         - KitchenKnife
+         - Cleaver
+         - RollingPin
+         - Coldsauce
+         - Enzyme
+         - Hotsauce
+         - Ketchup
+         - BBQsauce
+         - SaltShaker
+         - PepperShaker
+         - CigPack
+         - Packet
+         - Skewer
+         - MonkeyCube
+         - Mayo
+      components:
+         - Mousetrap
+         - Smokable
+         - Utensil
   - type: ItemMapper
     mapLayers:
       kitchenknife:
@@ -484,31 +538,31 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
   # Frontier: commented out whitelist
-  # - type: Storage
-  #   whitelist:
-  #     tags:
-  #       - CigPack
-  #       - Taser
-  #       - SecBeltEquip
-  #       - Radio
-  #       - Sidearm
-  #       - MagazinePistol
-  #       - MagazineMagnum
-  #       - CombatKnife
-  #       - Truncheon
-  #       - HandGrenade
-  #     components:
-  #       - Stunbaton
-  #       - FlashOnTrigger
-  #       - SmokeOnTrigger
-  #       - Flash
-  #       - Handcuff
-  #       - BallisticAmmoProvider
-  #       - CartridgeAmmo
-  #       - DoorRemote
-  #       - Whistle
-  #       - BalloonPopper
-  # End Frontier: commented out whitelist
+  - type: Storage
+    whitelist: #DH
+      tags:
+         - CigPack
+         - Taser
+         - SecBeltEquip
+         - Radio
+         - Sidearm
+         - MagazinePistol
+         - MagazineMagnum
+         - CombatKnife
+         - Truncheon
+         - HandGrenade
+         - Vial
+      components:
+         - Stunbaton
+         - FlashOnTrigger
+         - SmokeOnTrigger
+         - Flash
+         - Handcuff
+         - BallisticAmmoProvider
+         - CartridgeAmmo
+         - DoorRemote
+         - Whistle
+         - BalloonPopper
   - type: ItemMapper
     mapLayers:
       flashbang:
@@ -525,6 +579,11 @@
           - SmokeOnTrigger
     sprite: Clothing/Belt/belt_overlay.rsi
   - type: Appearance
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
 
 - type: entity
   parent: [ClothingBeltBase, ClothingSlotBase] # Frontier: BaseCommandContraband<BaseC1Contraband # Lua-changes: deleted BaseC1Contraband
@@ -577,6 +636,11 @@
       tags:
         - ShellShotgun
     capacity: 14
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Slash: 0.99
+        Piercing: 0.99
 
 - type: entity
   parent: ClothingBeltBase
@@ -592,6 +656,10 @@
   - type: Tag
     tags:
     - Kangaroo
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Piercing: 0.99
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -612,6 +680,10 @@
      - Gun
      - BallisticAmmoProvider
      - CartridgeAmmo
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Slash: 0.99
 
 - type: entity
   parent: [NFClothingBeltStorageBase, BaseC1SyndicateContraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent # Lua-changes: BaseC3SyndicateContraband > BaseC1SyndicateContraband, removed ContrabandClothing
@@ -637,6 +709,10 @@
      - Gun # _Lua
      - BallisticAmmoProvider # _Lua
      - CartridgeAmmo # _Lua
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Slash: 0.99
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -648,6 +724,14 @@
     sprite: Clothing/Belt/securitywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/securitywebbing.rsi
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.99
+        Piercing: 0.99
+  - type: StaticPrice
+    price: 250
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, remove BaseSecurityCargoContraband
@@ -659,6 +743,12 @@
     sprite: Clothing/Belt/mercwebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/mercwebbing.rsi
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.99
+        Piercing: 0.99
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -670,6 +760,11 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/salvagewebbing.rsi
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.98
 
 - type: entity
   parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC1Contraband
@@ -685,6 +780,12 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.99
+        Piercing: 0.99
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing
@@ -700,6 +801,12 @@
     #size: Huge # Frontier
   - type: ExplosionResistance
     damageCoefficient: 0.1
+  - type: Armor #DH
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+        Piercing: 0.99
 
 - type: entity
   parent: NFClothingBeltStorageBase # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase

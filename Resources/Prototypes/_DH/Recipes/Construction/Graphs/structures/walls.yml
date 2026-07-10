@@ -1,0 +1,49 @@
+# - type: constructionGraph
+#   id: DHWalls
+#   start: start
+#   graph:
+#     - node: start
+#       edges:
+#         - to: woodgirder
+#           steps:
+#             - material: WoodPlank
+#               amount: 5
+#               doAfter: 4
+
+#     - node: woodgirder
+#       entity: Barricade
+#       edges:
+#         - to: start
+#           completed:
+#             - !type:SpawnPrototype
+#               prototype: MaterialWoodPlank1
+#               amount: 3
+#             - !type:DeleteEntity {}
+#           conditions:
+#             - !type:EntityAnchored
+#               anchored: true
+#           steps:
+#             - tool: Prying
+#               doAfter: 5
+#         - to: tightwoodWall
+#           completed:
+#             - !type:SnapToGrid
+#               southRotation: true
+#           conditions:
+#             - !type:EntityAnchored {}
+#           steps:
+#             - material: WoodPlank
+#               amount: 3
+#               doAfter: 2
+
+#     - node: tightwoodWall
+#       entity: WallWoodTight
+#       edges:
+#         - to: woodgirder
+#           completed:
+#           - !type:GivePrototype
+#             prototype: MaterialWoodPlank1
+#             amount: 4
+#           steps:
+#           - tool: Screwing
+#             doAfter: 10

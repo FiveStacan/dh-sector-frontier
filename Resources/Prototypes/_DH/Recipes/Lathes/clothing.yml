@@ -1,0 +1,60 @@
+- type: latheRecipe
+  id: ClothingShoesBootsPrisonerGrey
+  parent: NFBaseBootRecipe
+  result: ClothingShoesBootsPrisonerGrey
+  materials:
+    Cloth: 160
+    Durathread: 80
+
+- type: latheRecipe
+  id: ClothingWalletLeatherPrisoner
+  result: ClothingWalletLeatherPrisoner
+  parent: NFBaseJumpsuitRecipe
+  materials:
+    Cloth: 280
+
+- type: latheRecipe
+  id: ClothingHeadPrisonGuard
+  parent: BaseHatRecipe
+  result: ClothingHeadPrisonGuard
+  materials:
+    Cloth: 90
+    Durathread: 10
+  applyMaterialDiscount: false
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitPrisonGuardSunrise
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingUniformJumpsuitPrisonGuardSunrise
+  materials:
+    Cloth: 280
+    Durathread: 20
+
+- type: latheRecipe
+  id: ClothingUniformJumpskirtGuard
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingUniformJumpskirtGuard
+  materials:
+    Cloth: 280
+    Durathread: 20
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitPrisonGuard
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingUniformJumpsuitPrisonGuard
+
+- type: latheRecipe
+  id: ClothingUniformJumpskirtPrisonerGrey
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingUniformJumpskirtPrisonerGrey
+  materials:
+    Cloth: 270
+    Durathread: 20
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitPrisonerGrey
+  parent: NFBaseJumpsuitRecipe
+  result: ClothingUniformJumpsuitPrisonerGrey
+  materials:
+    Cloth: 270
+    Durathread: 20

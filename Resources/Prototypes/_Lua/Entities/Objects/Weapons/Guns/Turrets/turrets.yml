@@ -5,11 +5,11 @@
 
 - type: entity
   parent: [BaseWeaponBallisticTurret, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  id: WeaponTurretNordFoll
+  id: WeaponTurretTypan
   name: баллистическая турель
   description: Автоматическая турель с баллистическим пулемётом.
-  suffix: Нордфолл
+  suffix: Тайпан
   components:
   - type: NpcFactionMember
     factions:
-    - LuaNordFoll
+    - LuaTypan

@@ -8,6 +8,10 @@
     },
     "states": [
         {
+            "name": "state0",
+            "directions": 1
+        },
+        {
             "name": "frame",
             "directions": 1
         },

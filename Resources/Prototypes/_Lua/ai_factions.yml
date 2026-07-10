@@ -27,7 +27,7 @@
     - IndependentShip
 
 - type: npcFaction
-  id: LuaNordFoll
+  id: LuaTypan
   friendly: # Frontier
   - NFSyndicate # Frontier
   - Syndicate # Lua
@@ -97,7 +97,7 @@
   - ContrabandDetection
   - HostileUniversally
   # Lua
-  - LuaNordFoll
+  - LuaTypan
   # Ship factions
   - Missile
   - PointDefenseGun

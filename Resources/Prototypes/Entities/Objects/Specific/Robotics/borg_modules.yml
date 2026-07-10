@@ -1448,7 +1448,7 @@
   - type: ItemBorgModule
     moduleId: XenoborgBasic # Frontier
     items:
-    - MaterialBag
+    - ConstructionBag #MaterialBag
     - PinpointerMothership
     - HandheldGPSBasic
   - type: BorgModuleIcon

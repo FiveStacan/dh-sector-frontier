@@ -1,0 +1,49 @@
+- type: entity
+  name: XM1014
+  parent: BaseWeaponShotgun
+  id: WeaponXM1014
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/XM1014/big.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,1
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/XM1014/tiny.rsi
+  - type: Clothing
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/XM1014/tiny.rsi
+  - type: BallisticAmmoProvider
+    capacity: 7
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.5
+  - type: GunRequiresWield
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/_DH/Weapons/Guns/Shotguns/XM1014/xm1014_shot.ogg
+
+- type: entity
+  name: Nova
+  parent: BaseWeaponShotgun
+  id: WeaponNova
+  components:
+  - type: Sprite
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/nova/nova.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,4,1
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/nova/nova_inhands_64x.rsi
+  - type: Clothing
+    sprite: _DH/Objects/Weapons/Guns/Shotguns/nova/nova.rsi
+  - type: BallisticAmmoProvider
+    capacity: 8
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.4
+  - type: GunRequiresWield
+  - type: Gun
+    fireRate: 2.2
+    soundGunshot:
+      path: /Audio/_DH/Weapons/Guns/Shotguns/Nova/nova.ogg

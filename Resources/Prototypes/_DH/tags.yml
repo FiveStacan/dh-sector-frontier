@@ -76,3 +76,72 @@
 
 - type: Tag
   id: MagazineSTG44
+
+- type: Tag
+  id: DHMaintInterior
+
+- type: Tag
+  id: SheetBlueprintPaper
+
+- type: Tag
+  id: ADTMinerArmor
+
+- type: Tag
+  id: ADTPatch
+
+# - type: Tag
+#   id: ADTBadge
+
+# - type: Tag
+#   id: ADTBadgeBronze
+
+# - type: Tag
+#   id: ADTBadgeSilver
+
+# - type: Tag
+#   id: ADTBadgeGolden
+
+- type: Tag
+  id: AIWearable
+
+- type: Tag
+  id: DHMurino
+
+- type: Tag
+  id: Vial
+
+- type: Tag
+  id: ChargedBluespaceFuel
+
+- type: Tag
+  id: ADTMinerArmorOne
+
+- type: Tag
+  id: ADTMinerArmorTwo
+
+- type: Tag
+  id: BluespaceBox
+
+- type: Tag
+  id: Crystallite
+
+- type: Tag
+  id: SpacePrisonerGreyUniform
+
+- type: Tag
+  id: Cartridge9x19mmIncendiary
+
+- type: Tag
+  id: Cartridge9x19mmUranium
+
+- type: Tag
+  id: NFBlueprintServiceTechfab
+
+- type: Tag
+  id: NFBlueprintEngineeringTechfab
+
+- type: Tag
+  id: ClothingUplink
+
+- type: Tag
+  id: Lamian

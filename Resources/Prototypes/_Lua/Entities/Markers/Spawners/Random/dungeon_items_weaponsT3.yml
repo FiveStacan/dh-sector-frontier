@@ -239,12 +239,12 @@
       state: diamond
   - type: RandomSpawner
     prototypes:
-#    - AmmoTechFabCircuitboard
+    - AmmoTechFabCircuitboard
     - MercenaryTechFabCircuitboardNF
     - MedicalTechFabCircuitboard
     - ComputerIFFCircuitboard
     chance: 0.5
     offset: 0.0
-#    rarePrototypes:
-#    - SecurityTechFabCircuitboard
-#    rareChance: 0.01
+    rarePrototypes:
+    - SecurityTechFabCircuitboard
+    rareChance: 0.01

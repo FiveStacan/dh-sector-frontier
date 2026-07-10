@@ -1,0 +1,37 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: TYPioneer
+  name: Pioneer
+  description: Корабль для секретных заданий и конспирации
+  price: 102646 # DH-Tweak
+  category: Small
+  group: Typan
+  access: SyndicateAgent
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Syndicate
+  - Expedition # Lua
+  engine:
+  - Uranium # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/pioneer.yml
+
+- type: gameMap
+  id: TYPioneer
+  mapName: 'Pioneer'
+  mapPath: /Maps/_Lua/Shuttles/Typan/pioneer.yml
+  minPlayers: 0
+  stations:
+    TYPioneer:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Pioneer {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

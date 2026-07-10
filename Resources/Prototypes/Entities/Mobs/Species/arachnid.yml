@@ -130,11 +130,11 @@
     speciesId: arachnid
   - type: Carriable # Frontier: Carrying system from nyanotrasen.
   - type: LuaSprint # Lua
-    maxSprint: 99
-    drainPerSecond: 7.4
-    regenPerSecond: 7.8
+    maxSprint: 29
+    drainPerSecond: 7
+    regenPerSecond: 7.4
     regenDelay: 0.24
-    recoverThresholdFraction: 0.25
+    recoverThresholdFraction: 0.28
 
 
 - type: entity

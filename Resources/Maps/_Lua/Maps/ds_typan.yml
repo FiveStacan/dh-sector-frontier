@@ -62872,7 +62872,7 @@ entities:
     - type: Transform
       pos: -12.6316,4.50949
       parent: 1
-- proto: WeaponTurretNordFoll
+- proto: WeaponTurretTypan
   entities:
   - uid: 9374
     components:

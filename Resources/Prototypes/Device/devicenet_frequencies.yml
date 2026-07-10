@@ -98,7 +98,7 @@
   id: Turret
   name: device-frequency-prototype-name-turret
   frequency: 2152
-  
+
 # AI turret controllers send data to their turrets on this frequency
 - type: deviceFrequency
   id: TurretControlAI
@@ -110,6 +110,18 @@
   id: TurretAI
   name: device-frequency-prototype-name-turret
   frequency: 2154
+
+# Frontier turret controllers send data to their turrets on this frequency
+- type: deviceFrequency
+  id: TurretControlFrontier
+  name: device-frequency-prototype-name-turret-control
+  frequency: 2155
+
+# Frontier turrets send data to their controllers on this frequency
+- type: deviceFrequency
+  id: TurretFrontier
+  name: device-frequency-prototype-name-turret
+  frequency: 2156
 
 # This frequency will likely have a LARGE number of listening entities. Please don't broadcast on this frequency.
 - type: deviceFrequency

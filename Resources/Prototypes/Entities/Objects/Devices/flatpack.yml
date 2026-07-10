@@ -222,6 +222,8 @@
   components:
   - type: Flatpack
     entity: SpaceHeaterAnchored
+  - type: StaticPrice
+    price: 200
 
 - type: entity
   parent: BaseFlatpack

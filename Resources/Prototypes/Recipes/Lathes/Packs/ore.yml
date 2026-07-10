@@ -11,7 +11,7 @@
   - IngotSilver1
   - MaterialBananium1
   - MaterialDiamond
-  - BluespaceCrystal # Frontier
+  #- BluespaceCrystal # Frontier #DH
 
 - type: latheRecipePack
   id: OreMagmiteSmelting
@@ -32,3 +32,4 @@
   - SheetUGlass1
   - SheetRUGlass1
   - SheetMagmite30 # Lua
+  - BluespaceCrystal #DH

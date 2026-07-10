@@ -4,16 +4,22 @@
 
 #region Shipyards
 - type: entity
-  id: MercyShipComputer # TODO: Создать нормальную консоль верфи наёмников, а не консоль верфи случайного материнского корабля
-  parent: BaseMothershipComputer
+  id: ComputerShipyardMercenary
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
   name: mercy shipyard console
   components:
-  - type: ShipyardListing
-    shuttles:
-    - EagleMercenary
-    - Caretaker
-    - Hedgehog
-    # - MCXeno # Kideo
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Mercenary
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Mercenary:
+        type: ShipyardConsoleBoundUserInterface
+  # - type: ShipyardListing
+  #   shuttles:
+  #   - EagleMercenary
+  #   - Caretaker
+  #   - Hedgehog
+  #   - MercXeno # Kideo
 
 - type: entity
   id: ComputerShipyardBASBlackMarket
@@ -34,7 +40,7 @@
     - map: ["computerLayerBody"]
       state: computer_blackmarket
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
@@ -141,7 +147,7 @@
     - map: ["computerLayerBody"]
       state: computer_blackmarket
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
@@ -152,7 +158,7 @@
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
   name: консоль кораблей синдиката
   description: Консоль покупки кораблей синдиката
-  suffix: Нордфолл
+  suffix: Тайпан
   components:
   - type: ActivatableUI
     key: enum.ShipyardConsoleUiKey.Typan
@@ -166,11 +172,18 @@
     - map: ["computerLayerBody"]
       state: computer_blackmarket
     - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
+      state: generic_keyboard_clean #DH
     - map: ["computerLayerScreen"]
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
       state: blackmarket_key
+  - type: ShipyardConsole
+    shipyardChannel: Syndicate
+    secretShipyardChannel: Nfsd #Find out via communicating with other players #DH
+    taxAccounts:
+      Invalid: 0.30
+    ignoreBaseSaleRate: true # Fixed 70% sale rate.
+    canTransferDeed: false
 
 - type: entity
   id: ComputerShipyardLuatech
@@ -474,7 +487,7 @@
     - SecurityUplink
 
 - type: entity
-  name: стационарный аплинк Нордфолла
+  name: стационарный аплинк Тайпана
   parent: [BaseStructureDisableToolUse, ComputerUplinkBase, StorePresetUplink, BaseStructureIndestructible, BaseStructureComputer]
   id: ComputerUplinkTypan
   description: Покупайте снаряжение за телекристалы.
@@ -625,13 +638,13 @@
 
 - type: entity
   parent: [ComputerShuttleLuaTech, ComputerShuttle, BaseComputerShuttle, BaseShuttleIntercom]
-  id: ComputerShuttleLuaTechNordfall
-  suffix: Lua, Диск Нордфолл
+  id: ComputerShuttleLuaTechTypan
+  suffix: Lua, Диск Тайпан
   components:
   - type: ContainerFill
     containers:
       disk_slot:
-      - CoordinatesDiskNordfall
+      - CoordinatesDiskTypan
 
 - type: entity
   parent: [ComputerShuttleLuaTech, ComputerShuttle, BaseComputerShuttle, BaseShuttleIntercom]
@@ -685,13 +698,13 @@
 
 - type: entity
   parent: [ComputerShuttleTabletopLuaTech, ComputerShuttleLuaTech, ComputerShuttle, BaseComputerShuttle, BaseShuttleIntercom]
-  id: ComputerShuttleTabletopLuaTechNordfall
-  suffix: Lua, Tabletop, Диск Нордфолл
+  id: ComputerShuttleTabletopLuaTechTypan
+  suffix: Lua, Tabletop, Диск Тайпан
   components:
   - type: ContainerFill
     containers:
       disk_slot:
-      - CoordinatesDiskNordfall
+      - CoordinatesDiskTypan
 
 - type: entity
   parent: [ComputerShuttleTabletopLuaTech, ComputerShuttleLuaTech, ComputerShuttle, BaseComputerShuttle, BaseShuttleIntercom]

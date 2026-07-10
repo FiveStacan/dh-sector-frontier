@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "made by EmoGarbage, ammo state made by AjexRose and modified by Emo garbage, sec state resprite by inspector_jeleshka (discord) for Space Station 14 server Мёртвый Космос",
+  "license":"CC-BY-SA-4.0",
+  "copyright":"Make for Dark Haven, by discord: FiveStacan",
   "size": {
     "x": 32,
     "y": 32
@@ -33,6 +33,9 @@
     },
     {
       "name": "ammo"
+    },
+    {
+      "name": "pirate"
     },
     {
       "name": "panel"

@@ -20,6 +20,9 @@
     icon: /Textures/_Lua/Interface/Radar/space-outpost.png
     scale: 1.2
     allowWhenHidden: true
+  - type: StationTransit #DH
+    routes:
+      MinorPointsOfInterest: 20
 
 - type: gameMap
   id: CaseysCasino

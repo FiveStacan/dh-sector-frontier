@@ -469,27 +469,28 @@
     requirePower: true
     highVoltageNode: input
     mediumVoltageNode: ame
-  
 #region Expandet AME
 
 - type: entity
   parent: BaseItem
-  id: ExpandetAmeJar
-  name: топливный ДАМ
-  description: Герметичный блюспейс-сосуд с антивеществом использующийся в ядерном реакторе антиматерии.
+  id: BaseAmeJar
+  name: базовый топливный бак ДАМ
+  description: Простой герметичный сосуд с антивеществом использующийся в реакторе антиматерии.
   components:
   - type: Item
     size: Normal
-    sprite: _DH/Structures/Power/Generation/ame_jar.rsi
+    sprite: Objects/Power/AME/ame_jar.rsi
+    #color: "#835ee7"
   - type: Sprite
-    sprite: _DH/Structures/Power/Generation/ame_jar.rsi
-    state: jar_expandet
+    sprite: Objects/Power/AME/ame_jar.rsi
+    state: jar
+    #color: "#835ee7"
   - type: AmeFuelContainer
-    fuelAmount: 2000
-    fuelCapacity: 2000
+    fuelAmount: 195
+    fuelCapacity: 195
   - type: StaticPrice
-    price: 400
-    vendPrice: 6000 # Frontier: FuelVend price
+    price: 100
+    vendPrice: 1200 # Frontier: FuelVend price
   - type: GuideHelp
     guides: [ AME, Power ]
   - type: Tag # Frontier
@@ -497,6 +498,32 @@
     - Recyclable # Frontier
     - NAMEFuel
   - type: NFFuel # Frontier
+
+- type: entity
+  parent: BaseItem
+  id: ExtendedAmeJar
+  name: расширенный топливный бак ДАМ
+  description: Герметичный сосуд с антивеществом использующийся в реакторе антиматерии.
+  components:
+  - type: Item
+    size: Normal
+    sprite: _DH/Structures/Power/Generation/ame_jar.rsi
+  - type: Sprite
+    sprite: _DH/Structures/Power/Generation/ame_jar.rsi
+    state: jar_extended
+  - type: AmeFuelContainer
+    fuelAmount: 1800
+    fuelCapacity: 1800
+  - type: StaticPrice
+    price: 900
+    vendPrice: 8200
+  - type: GuideHelp
+    guides: [ AME, Power ]
+  - type: Tag
+    tags:
+    - Recyclable
+    - NAMEFuel
+  - type: NFFuel
 
 - type: entity
   parent: BaseItem
@@ -511,15 +538,15 @@
     sprite: _DH/Structures/Power/Generation/ame_jar.rsi
     state: jar_bluespace
   - type: AmeFuelContainer
-    fuelAmount: 4700
-    fuelCapacity: 4700
+    fuelAmount: 5200
+    fuelCapacity: 5200
   - type: StaticPrice
-    price: 780
-    vendPrice: 9700 # Frontier: FuelVend price
+    price: 2000
+    vendPrice: 19750
   - type: GuideHelp
     guides: [ AME, Power ]
-  - type: Tag # Frontier
-    tags: # Frontier
-    - Recyclable # Frontier
+  - type: Tag
+    tags:
+    - Recyclable
     - NAMEFuel
-  - type: NFFuel # Frontier
+  - type: NFFuel

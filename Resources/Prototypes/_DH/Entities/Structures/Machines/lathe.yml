@@ -1,0 +1,496 @@
+
+- type: entity
+  id: ExperimentalAmmoTechFab
+  parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
+  name: экспериментальный ТехФаб патронов
+  description: Печатает тот минимум боеприпасов, который может понадобиться бюджетной армии или арсеналу. Так же может подключаться к РнД серверам для печати особых патронов.
+  components:
+  - type: MaterialStorage
+    whitelist: # Frontier
+      tags: # Frontier
+        - Sheet # Frontier
+        - RawMaterial # Frontier
+        - Ingot # Frontier
+        - DHMaterials
+  - type: Sprite
+    sprite: _DH/Structures/Machines/techfab.rsi
+    snapCardinals: true # Frontier
+    layers:
+      - state: icon
+        map: ["enum.LatheVisualLayers.IsRunning"]
+      - state: ammo
+      - state: unlit
+        shader: unshaded
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+      - state: inserting
+        map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ExperimentalAmmoTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    #- GoobWeaponAmmo
+    - N14AmmoPack
+    - RMCAmmoPack
+    - NfsdAmmoStatic
+    - RMCAmmoPack
+    dynamicPacks:
+    - DHIncendiaryUraniumAmmoBig
+    - DHIncendiaryUraniumAmmo
+    - DHReseachedAmmo
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintNfsdTechfab
+      - NFBlueprintMercenaryTechfab
+  - type: OreSiloClient
+
+- type: entity
+  id: PirateTechFab
+  parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
+  name: Пиратский ТехФаб
+  description: Печатает все необходимое пиратское снаряжение.
+  components:
+  - type: MaterialStorage
+    whitelist: # Frontier
+      tags: # Frontier
+        - Sheet # Frontier
+        - RawMaterial # Frontier
+        - Ingot # Frontier
+        - DHMaterials
+  - type: Sprite
+    sprite: _DH/Structures/Machines/techfab.rsi
+    snapCardinals: true # Frontier
+    layers:
+      - state: icon
+        map: ["enum.LatheVisualLayers.IsRunning"]
+      - state: pirate
+      - state: unlit
+        shader: unshaded
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+      - state: inserting
+        map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: PirateTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticPacks:
+    #- GoobWeaponAmmo
+    - N14AmmoPack
+    - RMCAmmoPack
+    - NfsdAmmoStatic
+    - RMCAmmoPack
+    #dynamicPacks:
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintNfsdTechfab
+      - NFBlueprintMercenaryTechfab
+  - type: OreSiloClient
+
+- type: entity
+  id: ResearchPointsDiskGenerator
+  parent: [ NFBlueprintReceiverBase, SecurityTechFab ]
+  name: фабрикатор исследовательских дисков
+  description: Печатает исследовательские диски.
+  components:
+  #- type: StationAiWhitelist
+  - type: SpriteFade
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - RawMaterial
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - DHMaterials
+  - type: Sprite
+    sprite: _DH/Structures/Machines/points_generator.rsi
+    offset: 0,1
+    drawdepth: Mobs
+    layers:
+      - state: icon
+        map: ["enum.LatheVisualLayers.IsRunning"]
+      - state: unshaded
+        shader: unshaded
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+      - state: inserting
+        map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Transform
+    anchored: true
+  - type: ExtensionCableReceiver
+  - type: ApcPowerReceiver
+    powerLoad: 2000
+  - type: AmbientSound
+    range: 5
+    volume: -6
+    sound:
+      path: /Audio/Ambience/Objects/anomaly_generator.ogg
+  #- type: Machine
+  #  board: Circuitboard
+  - type: Physics
+    bodyType: Static
+  - type: Lathe
+    idleState: icon
+    runningState: generating
+    unlitRunningState: generating_unshaded
+    staticPacks:
+    - ResearchDisks
+    dynamicPacks:
+    - ResearchDisksAdw
+ # - type: BlueprintReceiver
+ #   whitelist:
+ #     tags:
+ #     - NFBlueprintNfsdTechfab
+ #     - NFBlueprintMercenaryTechfab
+  - type: OreSiloClient
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.5,-0.5,1.5,0.6"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Repairable
+    fuelCost: 10
+    doAfterDelay: 5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Appearance
+  - type: StaticPrice
+    price: 10000
+  - type: GuideHelp
+    guides:
+    - AnomalousResearch
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.2
+
+- type: entity
+  id: ProtolatheSyndicate
+  parent: Protolathe
+  name: кроваво-красный протолат
+  description: Экспериментальный протолат, использующий технологии Горлекса.
+  components:
+  - type: MaterialStorage
+    whitelist: # Frontier
+      tags: # Frontier
+        - Sheet # Frontier
+        - RawMaterial # Frontier
+        - Ingot # Frontier
+        - DHMaterials
+  - type: Sprite
+    sprite: _DH/Structures/Machines/protolathe_syndicate.rsi
+  - type: Machine
+    board: ProtolatheSyndicateCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
+    staticPacks:
+    - ChemistryStatic
+    - SurgeryStatic
+    dynamicPacks:
+    - AdvancedTools
+    - ScienceEquipment
+    - ScienceExplosives
+    - ScienceClothing
+    - PowerCells
+    - ScienceWeapons
+    - Mining
+    - AtmosTools
+    # - EngineeringWeapons # Frontier
+    - ChemistryDynamic #DH
+    - Janitor
+    - Instruments
+    - Equipment
+    - FauxTiles
+    - NFMedical # Frontier
+    - NFEngineering # Frontier
+    - NFHardsuits # Frontier
+    - NFService # Frontier
+    - NFScience # Frontier
+    - NFPouches # Frontier
+    - DHSyndicate
+    # WD EDIT START
+    - VisionGoggles
+    # WD EDIT END
+    - SyringeGuns
+    - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
+    - SecurityExplosives
+    - SecurityEquipment
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintProtolathe
+      - NFBlueprintNfsdTechfab
+      - NFBlueprintMercenaryTechfab
+ #     - BlueprintSyndicateProtolathe
+  - type: OreSiloClient
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ExperimentalAmmoTechFabFlatpack
+  name: experimental ammo techfab flatpack
+  description: A flatpack used for constructing an experimental ammo techfab.
+  components:
+  - type: Flatpack
+    entity: ExperimentalAmmoTechFab
+  - type: Sprite
+    layers:
+    - state: mercenary
+
+- type: entity
+  id: ExosuitFabricatorHyperConvection
+  parent: [ExosuitFabricator, BaseHyperlathe]
+  name: гиперконвекционный фабрикатор экзокостюмов
+  description: Экспериментальный фабрикатор экзокостюмов, использующий технологию экстремального нагрева для замедленного, но гораздо более экономичного создания предметов.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/hyper_exosuit_fabricator.rsi
+  - type: Machine
+    board: ExosuitFabricatorHyperConvectionMachineCircuitboard
+
+- type: entity
+  id: UniformPrinterHyperConvection
+  parent: UniformPrinter
+  name: гиперконвекционный принтер униформы
+  description: Экспериментальный принтер униформы, использующий технологию экстремального нагрева для замедленного, но гораздо более экономичного создания предметов.
+  components:
+  - type: Lathe
+    materialUseMultiplier: 0.5
+    timeMultiplier: 1.6
+  - type: Sprite
+    sprite: _DH/Structures/Machines/hyper_uniform_printer.rsi
+  - type: Machine
+    board: UniformPrinterHyperConvectionMachineCircuitboard
+
+- type: entity
+  abstract: true
+  id: BaseSpeedlathe
+  components:
+  - type: Lathe
+    materialUseMultiplier: 2.2
+    timeMultiplier: 0.58
+  - type: LatheHeatProducing
+  - type: ReagentSpeed
+    modifiers:
+      SpaceLube: 0.5
+      SpaceGlue: 5
+
+- type: entity
+  id: AutolatheHyperSpeed
+  parent: [Autolathe, BaseSpeedlathe]
+  name: гиперскоростной автолат
+  description: Экспериментальный автолат, использующий технологию экстремального сжатия материи для ускоренного, но гораздо менее экономичного создания предметов.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/autolathe_speed.rsi
+  - type: Machine
+    board: AutolatheHyperSpeedMachineCircuitboard
+
+- type: entity
+  id: ProtolatheHyperSpeed
+  parent: [Protolathe, BaseSpeedlathe]
+  name: гиперскоростной протолат
+  description: Экспериментальный протолат, использующий технологию экстремального сжатия материи для ускоренного, но гораздо менее экономичного создания предметов.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/protolathe_speed.rsi
+  - type: Machine
+    board: ProtolatheHyperSpeedMachineCircuitboard
+
+- type: entity
+  id: CircuitImprinterHyperSpeed
+  parent: [CircuitImprinter, BaseSpeedlathe]
+  name: гиперскоростной принтер схем
+  description: Экспериментальный принтер схем, использующий технологию экстремального сжатия материи для ускоренного, но гораздо менее экономичного создания предметов.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/circuit_imprinter_speed.rsi
+  - type: Machine
+    board: CircuitImprinterHyperSpeedMachineCircuitboard
+
+- type: entity
+  id: ExosuitFabricatorHyperSpeed
+  parent: [ExosuitFabricator, BaseSpeedlathe]
+  name: гиперскоростной фабрикатор экзокостюмов
+  description: Экспериментальный фабрикатор экзокостюмов, использующий технологию экстремального сжатия материи для ускоренного, но гораздо менее экономичного создания предметов.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/speed_exosuit_fabricator.rsi
+  - type: Machine
+    board: ExosuitFabricatorHyperSpeedMachineCircuitboard
+
+- type: entity
+  id: UniformPrinterHyperSpeed
+  parent: UniformPrinter
+  name: гиперскоростной принтер униформы
+  description: Экспериментальный принтер униформы, использующий технологию экстремального сжатия материи для ускоренного, но гораздо менее экономичного создания предметов.
+  components:
+  - type: Lathe
+    materialUseMultiplier: 2.2
+    timeMultiplier: 0.58
+  - type: Sprite
+    sprite: _DH/Structures/Machines/speed_uniform_printer.rsi
+  - type: Machine
+    board: UniformPrinterHyperSpeedMachineCircuitboard
+
+- type: entity
+  id: ProtolatheCash
+  parent: BaseLathe
+  name: принтер фальшивых кредитов
+  description: Распечатывает "фальшивые", неофициальные кредиты, в обход систем и бюррократии, за счет бумаги и некоторых связных материалов. Открывает путь в мир фальшивомонетчиков!
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/protoprint.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ProtolatheCashMachineCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Document
+        - RawMaterial
+        - SheetPaper
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - BackmenCash
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - BackmenCashEmag
+
+- type: entity
+  id: ProtolatheCashCentComm
+  parent: BaseLathe
+  name: Принтер кредитов ЦК
+  description: Распечатывает официальные, пригодные для использования кредиты, за счет бумаги и некоторых связных материалов
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/protoprint_centcomm.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ProtolatheCashMachineCircuitboardCentComm
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Document
+        - RawMaterial
+        - SheetPaper
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - BackmenCashCentComm
+
+- type: entity
+  id: ProtolatheCashHack
+  parent: BaseLathe
+  name: хакерский принтер кредитов
+  description: Не законно подключается к сетям НТ и печатает настоящие купюры за счет бумаги и некоторых связных материалов. Для печати настоящих кредитов требуется прошить устройство при помощи EMAG'а.
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/protoprint_hack.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: ProtolatheCashMachineCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Document
+        - RawMaterial
+        - SheetPaper
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - BackmenCash
+    - BackmenCashEmag
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - BackmenCashHack
+
+- type: entity
+  id: ADTUniversalPipeDispenser
+  parent: BaseLatheLube
+  name: universal pipe dispenser
+  description: Prints pipes for all kinds of situations. However, the kit does not include advanced atmospheric technologies.
+  components:
+    - type: Sprite
+      sprite: _DH/Structures/Machines/pipedispenser.rsi
+      layers:
+      - state: icon
+        map: ["enum.LatheVisualLayers.IsRunning"]
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: ADTUniversalPipeDispenserCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: printing
+      staticPacks:
+      - ADTDisposalPack
+    - type: MaterialStorage
+      whitelist:
+        tags:
+          #- Steel
+          - Sheet

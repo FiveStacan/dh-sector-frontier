@@ -227,3 +227,45 @@
       interfaces:
         enum.StoreUiKey.Key:
           type: StoreBoundUserInterface
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  id: VendingMachineArmVend
+  name: БронеВенд
+  description: Вкладываем броню в ваши руки с 2570 года.
+  components:
+  - type: VendingMachine
+    pack: ArmVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: DatasetVocalizer
+    dataset: VandalizedBountyVendAds
+  - type: Sprite
+    sprite: _DH/Structures/Machines/VendingMachines/armvend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.4
+    energy: 1.7
+    softness: 0.9
+    offset: "0, -0.6"
+    color: "#eefff4"
+
+- type: entity
+  parent: VendingMachineArmVend
+  id: VendingMachineArmVendPOI
+  suffix: POI
+  name: БронеВенд
+  description: Вкладываем броню в ваши руки с 2570 года.
+  components:
+  - type: VendingMachine
+    pack: ArmVendPOIInventory

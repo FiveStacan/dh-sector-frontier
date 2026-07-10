@@ -57,6 +57,9 @@
     },
     {
       "name": "empty"
+    },
+    {
+      "name": "omnilaser_greyscale"
     }
   ]
 }

@@ -1,0 +1,39 @@
+- type: entity
+  id: MagazineBoxLightRiflePracticeBibis
+  parent: AmmoBox762x39mmPractice
+  name: ammunition box (Bibis Reinforced)
+  suffix: ADT
+  components:
+  - type: BallisticAmmoProvider
+    proto: ADTCartridgeStrikeballBibisReinforced
+    capacity: 60
+
+- type: entity
+  id: MagazineBoxRiflePracticeBibis
+  parent: AmmoBox556x45mmPractice
+  name: ammunition box (Bibis)
+  suffix: ADT
+  components:
+  - type: BallisticAmmoProvider
+    proto: ADTCartridgeStrikeballBibis
+    capacity: 150
+
+- type: entity
+  id: MagazineBoxPistolPracticeBibis
+  parent: AmmoBox9x19mmPractice
+  name: ammunition box (Bibis soft)
+  suffix: ADT
+  components:
+  - type: BallisticAmmoProvider
+    proto: ADTCartridgeStrikeballBibisSoft
+    capacity: 300
+
+- type: entity
+  id: BoxShotgunPracticeBibis
+  parent: NFAmmunitionBoxShellShotgunPractice
+  name: shell box (Bibis)
+  suffix: ADT
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgunBibis
+    capacity: 50

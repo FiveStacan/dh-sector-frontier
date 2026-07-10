@@ -1,4 +1,4 @@
-#SOFTSUITS
+#region SOFTSUITS
 #Basic EVA
 - type: entity
   id: SuitStorageEVA
@@ -145,7 +145,19 @@
     - id: NFTankO2N2EqualFilled # Frontier
     - id: JetpackMiniFilled # Frontier
 
-#HARDSUITS
+#region HARDSUITS
+
+#Basic hardsuit
+- type: entity
+  id: SuitStorageBasic
+  parent: SuitStorageBase
+  suffix: Basic Hardsuit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillBasicHardsuit
+
 #Engineering hardsuit
 - type: entity
   id: SuitStorageEngi

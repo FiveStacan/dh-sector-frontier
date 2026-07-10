@@ -4,20 +4,20 @@
   id: BasePartRecipe
   categories:
   - Parts
-  completetime: 2
+  completetime: 3
   materials:
-    Steel: 300
-    Plastic: 200
+    Steel: 350
+    Plastic: 250
 
 # Stackable part with no function
 - type: latheRecipe
   abstract: true
   parent: BasePartRecipe
   id: BaseStockPartRecipe
-  completetime: 1
+  completetime: 2
   materials:
     Steel: 50
-    Plastic: 50
+    Plastic: 100
 
 - type: latheRecipe
   parent: BaseStockPartRecipe

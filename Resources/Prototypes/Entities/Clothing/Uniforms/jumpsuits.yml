@@ -70,6 +70,8 @@
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/captain.rsi # Lua
   - type: Clothing
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/captain.rsi # Lua
+  - type: StaticPrice #DH
+    price: 40
 
 - type: entity
   parent: ClothingUniformBase
@@ -843,6 +845,8 @@
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/capformal.rsi # Lua
   - type: Clothing
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/capformal.rsi # Lua
+  - type: StaticPrice #DH
+    price: 45
 
 - type: entity
   parent: [ClothingUniformBase, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable

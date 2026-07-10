@@ -78,7 +78,7 @@
 
 - type: entity
   id: WeaponRifleAkBibis
-  parent: NFWeaponRifleAssaultSm #WeaponRifleAk
+  parent: WeaponRifleAk
   name: AKMS Strikeball
   suffix: ADT
   components:

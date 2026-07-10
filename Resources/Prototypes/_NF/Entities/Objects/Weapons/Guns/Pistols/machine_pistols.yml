@@ -80,3 +80,8 @@
         whitelist:
           tags:
             - Cartridge635x40mmCaseless
+
+- type: entity
+  id: NFWeaponPistolPollockHighCapacityMag
+  parent: [ NFBaseWeaponPistolChamber9x19HighCapacity, NFWeaponPistolPollock ]
+  suffix: Frontier, High capacity mag

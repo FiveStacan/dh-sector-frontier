@@ -211,6 +211,15 @@
     - id: ClothingBeltUtilityEngineering # Frontier
 
 - type: entityTable
+  id: FillBasicHardsuit
+  table: !type:AllSelector
+    children:
+    - id: NFTankO2N2EqualFilled # Frontier
+    - id: ClothingOuterHardsuitBasic
+    - id: ClothingMaskBreath
+    - id: JetpackMiniFilled # Frontier
+
+- type: entityTable
   id: FillEngineerHardsuit
   table: !type:AllSelector
     children:

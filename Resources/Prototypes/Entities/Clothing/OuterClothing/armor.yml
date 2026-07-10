@@ -14,31 +14,22 @@
     sprite: Clothing/OuterClothing/Armor/security.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/security.rsi
-  - type: Armor #Lua; # 45/45/45//30/30//30/30//50
+  - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.55
-        Heat: 0.7
-        Radiation: 0.7
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.62
+        Slash: 0.62
+        Piercing: 0.62 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
+        Heat: 0.80
+        Radiation: 0.9
+        Shock: 0.9
+        Caustic: 0.9
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.8
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.5
-  # comment from _Lua
-  # - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
-  #   modifiers:
-  #     coefficients:
-  #       Blunt: 0.70
-  #       Slash: 0.70
-  #       Piercing: 0.70 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
-  #       Heat: 0.80
-  #       Caustic: 0.9
-  # - type: ExplosionResistance
-  #   damageCoefficient: 0.90
+    damageCoefficient: 0.82
+  - type: StaticPrice
+    price: 125
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
@@ -58,24 +49,26 @@
   suffix: T1 Armor, Medium, Standart
   description: A slim Type I armored vest that provides decent protection against most types of damage.
   components:
-  - type: Armor #Lua; # 45/45/45//30/30//30/30//50
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.55
-        Heat: 0.7
-        Radiation: 0.7
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.8
+        Radiation: 0.95
+        Shock: 0.8
+        Caustic: 0.8
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.8
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.78
   - type: Sprite
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+  - type: StaticPrice
+    price: 44
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -88,20 +81,21 @@
     sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
-  - type: Armor #Lua; # 30/30/45//45/45//30/30//70
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.7
-        Piercing: 0.55
-        Heat: 0.55
-        Radiation: 0.55
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.45
+        Heat: 0.9
+        Shock: 0.85
+        Caustic: 0.9
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.65
   - type: ExplosionResistance
-    damageCoefficient: 0.3 #Lua 0.7<0.3
+    damageCoefficient: 0.80
+  - type: StaticPrice
+    price: 235
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -124,6 +118,8 @@
     reflectProb: 0.7 # Frontier: 1<0.7
     reflects:
       - Energy
+  - type: StaticPrice
+    price: 510
 
 #Detective's vest
 - type: entity
@@ -142,36 +138,27 @@
   id: ClothingOuterArmorBaseCarapace
   abstract: true
   components:
-  - type: Armor #Lua; # 45/45/45//30/30//30/30//50
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.55
-        Heat: 0.7
-        Radiation: 0.7
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.6 # Frontier 0.5<0.7
+        Slash: 0.6 # Frontier 0.5<0.7
+        Piercing: 0.6 # Frontier 0.6<0.7
+        Heat: 0.75 # Frontier 0.5<0.8
+        Radiation: 0.85
+        Shock: 0.88
+        Caustic: 0.9
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.62
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.5
-  # comment from _Lua
-  # - type: Armor
-  #   modifiers:
-  #     coefficients:
-  #       Blunt: 0.7 # Frontier 0.5<0.7
-  #       Slash: 0.7 # Frontier 0.5<0.7
-  #       Piercing: 0.7 # Frontier 0.6<0.7
-  #       Heat: 0.8 # Frontier 0.5<0.8
-  #       Caustic: 0.9
-  # - type: ExplosionResistance
-  #   damageCoefficient: 0.9 # Frontier 0.65<0.9
+    damageCoefficient: 0.65
   - type: ClothingSpeedModifier
     walkModifier: 1.0
-    sprintModifier: 1.0
+    sprintModifier: 0.98
   - type: HeldSpeedModifier
   - type: GroupExamine
+  - type: StaticPrice
+    price: 150
 
 - type: entity
   parent: [ClothingOuterArmorBaseCarapace] # Frontier: removed BaseCommandContraband
@@ -180,13 +167,15 @@
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/OuterClothing/Armor/captain_carapace.rsi # Lua
+    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/OuterClothing/Armor/captain_carapace.rsi # Lua
+    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Tag
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  - type: StaticPrice
+    price: 195
 
 - type: entity
   parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
@@ -198,6 +187,11 @@
     sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+  - type: StaticPrice
+    price: 200
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
 
 #Web vest
 - type: entity
@@ -211,20 +205,19 @@
     sprite: Clothing/OuterClothing/Vests/webvest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/webvest.rsi
-  - type: Armor #Lua; # 40/40/60//60/60//40/40//70
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
+        Blunt: 0.6 #ballistic plates = better protection
         Slash: 0.6
-        Piercing: 0.4
-        Heat: 0.4
-        Radiation: 0.4
-        Shock: 0.6
-        Caustic: 0.6
+        Piercing: 0.34
+        Heat: 0.75
+        Caustic: 0.78
+        Shock: 0.8
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.45
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.85
   - type: StaticPrice
     price: 1500
 
@@ -242,20 +235,19 @@
   - type: TemperatureProtection
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1
-  - type: Armor #Lua; # 60/60/40//60/60//40/40//30
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.4
+        Blunt: 0.5
+        Slash: 0.5
         Piercing: 0.6
-        Heat: 0.4
-        Radiation: 0.4
-        Shock: 0.6
+        Heat: 0.55
+        Radiation: 0.5
         Caustic: 0.6
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.7
+    damageCoefficient: 0.72
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.7
+    damageCoefficient: 0.5
   - type: FireProtection
     reduction: 0.85
   - type: StaticPrice
@@ -263,7 +255,7 @@
 
 #Mercenary web vest
 - type: entity
-  parent: [ BaseC1Contraband, ClothingOuterStorageBase, AllowSuitStorageClothing] #web vest so it should have some pockets for ammo # Frontier: ClothingOuterVestWeb < "ClothingOuterStorageBase, AllowSuitStorageClothing" 
+  parent: [ BaseC1Contraband, ClothingOuterStorageBase, AllowSuitStorageClothing] #web vest so it should have some pockets for ammo # Frontier: ClothingOuterVestWeb < "ClothingOuterStorageBase, AllowSuitStorageClothing"
   id: ClothingOuterVestWebMercenary # Frontier: Merc<Mercenary
   name: mercenary web vest
   description: A high-quality armored vest made from a hard synthetic material. It's surprisingly flexible and light, despite formidable armor plating.
@@ -272,20 +264,19 @@
     sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
-  - type: Armor #Lua; # 30/30/45//45/45//30/30//70
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
+        Blunt: 0.7 #slightly better overall protection but slightly worse than bulletproof armor against bullets seems sensible
         Slash: 0.7
         Piercing: 0.55
-        Heat: 0.55
-        Radiation: 0.55
-        Shock: 0.7
-        Caustic: 0.7
+        Heat: 0.8 # Frontier: 0.9<0.8
+        Shock: 0.85
+        Caustic: 0.9 # Frontier
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.3
+    damageCoefficient: 0.45
   - type: ExplosionResistance
-    damageCoefficient: 0.3 #Lua 0.7<0.3
+    damageCoefficient: 0.85
 
 
 # Armor covering multiple body parts including limbs
@@ -380,21 +371,22 @@
     sprite: Clothing/OuterClothing/Armor/riot.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/riot.rsi
-  - type: Armor #Lua; # 45/45/30//45/45//30/30//30
+  - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.55
-        Slash: 0.55
-        Piercing: 0.7
-        Heat: 0.55
-        Radiation: 0.55
-        Shock: 0.7
-        Caustic: 0.7
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.72
+        Heat: 0.85
+        Caustic: 0.85
+        Shock: 0.90
   - type: StaminaResistance #Lua
-    damageCoefficient: 0.7
+    damageCoefficient: 0.8
   - type: ExplosionResistance
-    damageCoefficient: 0.7
+    damageCoefficient: 0.9
   - type: GroupExamine
+  - type: StaticPrice
+    price: 440
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC1CultContraband, AllowSuitStorageClothing, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3CultContraband, added ContrabandClothing as parent # Lua-changes: BaseC3CultContraband > BaseC1CultContraband
@@ -439,10 +431,12 @@
   - type: StaminaResistance #Lua
     damageCoefficient: 0.5
   - type: ExplosionResistance #Lua
-    damageCoefficient: 0.5
+    damageCoefficient: 0.62
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: StaticPrice
+    price: 700
 
 - type: entity
   parent: ClothingOuterArmorHeavy

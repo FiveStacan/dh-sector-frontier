@@ -9,6 +9,29 @@
     "states": [
         {
             "name": "nfsd"
+        },
+        {
+            "name": "syndicate"
+        },
+        {
+            "name": "mercenary"
+        },
+        {
+            "name": "general"
+        },
+        {
+            "name": "pirate"
+        },
+        {
+            "name": "experemental",
+            "delays": [
+            [
+             5,
+             0.25,
+             0.2,
+             0.2
+            ]
+		  ]
         }
     ]
 }

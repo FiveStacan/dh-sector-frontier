@@ -263,8 +263,8 @@
     attackRate: 0.95
     damage:
       types:
-        Blunt: 8
-        Structural: 6
+        Blunt: 6
+        Structural: 5
     angle: 30
     wideAnimationRotation: 90
     animation: WeaponArcThrust
@@ -273,8 +273,8 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 4
-        Structural: 4
+        Blunt: 3
+        Structural: 3
 
 # melee attack for weapons with bayonets
 - type: entity

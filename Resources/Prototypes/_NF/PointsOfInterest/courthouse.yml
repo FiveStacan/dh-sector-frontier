@@ -23,6 +23,9 @@
     allowWhenHidden: true
   - type: IFF
     color: "#ae7d57"
+  - type: StationTransit
+    routes:
+      MinorPointsOfInterest: 30
 
 - type: gameMap
   id: Courthouse

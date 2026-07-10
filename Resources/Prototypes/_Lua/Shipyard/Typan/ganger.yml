@@ -1,0 +1,36 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  parent: BaseVessel
+  id: Ganger
+  name: Ganger
+  price: 56900 #DH Shuttle price balance #19420
+  category: Micro
+  group: Typan
+  access: SyndicateAgent
+  whitelist:
+  - Luna
+  - Frontier
+  class:
+  - Syndicate
+  - Patrol # Lua
+  engine:
+  - Plasma # Lua
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/ganger.yml
+
+- type: gameMap
+  id: Ganger
+  mapName: 'Ganger'
+  mapPath: /Maps/_Lua/Shuttles/Typan/ganger.yml
+  minPlayers: 0
+  stations:
+    Ganger:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Ganger {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

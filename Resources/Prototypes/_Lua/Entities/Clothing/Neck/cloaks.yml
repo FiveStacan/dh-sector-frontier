@@ -12,7 +12,8 @@
     sprite: _Lua/Clothing/Neck/Cloaks/capcloakformal.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/capcloakformal.rsi
-
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -24,6 +25,8 @@
     sprite: _Lua/Clothing/Neck/Cloaks/hoscloakformal.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/hoscloakformal.rsi
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -35,6 +38,8 @@
     sprite: _Lua/Clothing/Neck/Cloaks/centcomcloakformal.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/centcomcloakformal.rsi
+  - type: StaticPrice
+    price: 45 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -46,6 +51,8 @@
     sprite: _Lua/Clothing/Neck/Cloaks/ce.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/ce.rsi
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -57,12 +64,14 @@
     sprite: _Lua/Clothing/Neck/Cloaks/le.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/le.rsi
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCloakYesod
   name: woolen black cape
-  categories: [ HideSpawnMenu ]
+  #categories: [ HideSpawnMenu ]
   description: A good cape that is made of wool. Clearly contains gold.
   components:
     - type: Sprite
@@ -72,6 +81,8 @@
     - type: Tag
       tags:
       - ClothMade
+    - type: StaticPrice
+      price: 40 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -83,6 +94,8 @@
     sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi
+  - type: StaticPrice
+    price: 35 #DH
 
 - type: entity
   parent: ClothingNeckBase

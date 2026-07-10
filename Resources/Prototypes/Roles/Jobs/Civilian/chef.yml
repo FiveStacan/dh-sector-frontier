@@ -29,6 +29,30 @@
     #back:
     #- Stuff
 
+# Interview variant
+- type: job
+  id: ChefInterview
+  name: job-name-Chef-interview
+  description: job-description-chef
+  playTimeTracker: JobChefInterview
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 600
+  setPreference: false
+  startingGear: ChefHologramGear
+  icon: "JobIconChef"
+  supervisors: job-supervisors-hire
+  accessGroups:
+  - GeneralAccess
+  jobEntity: InterviewHologramChef
+  newPlayerMessage: false
+
+- type: startingGear
+  id: ChefHologramGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    shoes: ClothingShoesBootsMercenary
+
 - type: chameleonOutfit
   id: ChefChameleonOutfit
   job: Chef

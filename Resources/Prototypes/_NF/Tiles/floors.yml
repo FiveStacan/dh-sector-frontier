@@ -1,9 +1,12 @@
 - type: tile
   id: FloorBedrock
   name: tiles-bedrock-floor
-  sprite: /Textures/_NF/Tiles/bedrock.png
-  variants: 4
+  sprite: /Textures/_NF/Tiles/bedrock.png #DH
+  variants: 7 #DH
   placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
   - 1.0
   - 1.0
   - 1.0

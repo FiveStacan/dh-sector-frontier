@@ -7,6 +7,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 using System.Linq;
 using System.Numerics;
 
@@ -108,7 +109,7 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
             return false;
 
         // Reorder the access groups alphabetically
-        var orderedAccessGroups = _groupedAccessLevels.Keys.OrderBy(x => x.GetAccessGroupName()).ToList();
+        var orderedAccessGroups = _groupedAccessLevels.Keys.OrderBy(GetPlainAccessGroupName).ToList();
 
         // Add group access buttons to the UI
         foreach (var accessGroup in orderedAccessGroups)
@@ -142,7 +143,7 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
             var text = Loc.GetString(
                 "turret-controls-window-access-group-label",
                 ("prefix", prefix),
-                ("label", accessGroup.GetAccessGroupName())
+                ("label", GetPlainAccessGroupName(accessGroup))
             );
 
             accessGroupButton.Text = text;
@@ -174,12 +175,12 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
             return;
 
         // Reorder the access groups alphabetically
-        var orderedAccessGroups = _groupedAccessLevels.Keys.OrderBy(x => x.GetAccessGroupName()).ToList();
+        var orderedAccessGroups = _groupedAccessLevels.Keys.OrderBy(GetPlainAccessGroupName).ToList();
 
         // Get the access levels associated with the current tab
         var selectedAccessGroupTabProto = orderedAccessGroups[_accessGroupTabIndex];
         _accessLevelsForTab = _groupedAccessLevels[selectedAccessGroupTabProto];
-        _accessLevelsForTab = _accessLevelsForTab.OrderBy(x => x.GetAccessLevelName()).ToList();
+        _accessLevelsForTab = _accessLevelsForTab.OrderBy(GetPlainAccessLevelName).ToList();
 
         // Add an 'all' checkbox as the first child of the list if it has more than one access level
         // Toggling this checkbox on will mark all other boxes below it on/off
@@ -219,7 +220,7 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
             var accessLevelEntry = new AccessLevelEntry(_isMonotone);
 
             accessLevelEntry.AccessLevel = accessLevel;
-            accessLevelEntry.CheckBox.Text = accessLevel.GetAccessLevelName();
+            accessLevelEntry.CheckBox.Text = GetPlainAccessLevelName(accessLevel);
             accessLevelEntry.CheckBox.Pressed = _activeAccessLevels.Contains(accessLevel);
             accessLevelEntry.CheckBox.Disabled = !_canInteract;
 
@@ -355,6 +356,16 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
 
         if (TryRebuildAccessGroupControls())
             RebuildAccessLevelsControls();
+    }
+
+    private static string GetPlainAccessGroupName(AccessGroupPrototype accessGroup)
+    {
+        return FormattedMessage.RemoveMarkupPermissive(accessGroup.GetAccessGroupName());
+    }
+
+    private static string GetPlainAccessLevelName(AccessLevelPrototype accessLevel)
+    {
+        return FormattedMessage.RemoveMarkupPermissive(accessLevel.GetAccessLevelName());
     }
 
     private Button CreateAccessGroupButton()

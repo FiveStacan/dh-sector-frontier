@@ -80,6 +80,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     private const float MinZoom = 0.25f;
     private const float MaxZoom = 2.0f;
     private const float ZoomStep = 1.1f;
+    private const float HomeZoom = 0.65f;
     private const int TreePadding = 20;
     private Vector2 _offset = Vector2.Zero;
     private float _zoom = 1f;
@@ -99,7 +100,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     /// </summary>
     private const int CardSize = 64;
 
-    private static readonly Vector2 DefaultCenterPosition = Vector2.Zero;
+    private static readonly Vector2 DefaultCenterPosition = new(-2, 15);
     private bool _pendingCenter;
     private Vector2 _pendingCenterWorldPos;
     private bool _pendingCenterResetZoom;
@@ -208,7 +209,7 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
             if (!_research.IsTechnologyFactionAllowed(_researchFaction, proto))
                 continue;
 
-            var effectivePrerequisites = _research.GetTechnologyPrerequisites(_researchFaction, proto);
+            var effectivePrerequisites = _research.GetVisibleTechnologyPrerequisites(_researchFaction, proto);
             var control = new FancyResearchConsoleItem(proto, effectivePrerequisites, _sprite, tech.Value);
 
             DragContainer.AddChild(control);
@@ -336,9 +337,23 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
         }
 
         // Create and add info panel
-        var control = new FancyTechnologyInfoPanel(proto, _researchFaction, _accessReader.IsAllowed(_player.LocalEntity.Value, Entity), availability, _sprite);
+        var control = new FancyTechnologyInfoPanel(
+            proto,
+            _researchFaction,
+            _accessReader.IsAllowed(_player.LocalEntity.Value, Entity),
+            availability,
+            _sprite,
+            SelectPrerequisiteTech);
         control.BuyAction += args => OnTechnologyCardPressed?.Invoke(args.ID);
         InfoContainer.AddChild(control);
+    }
+
+    private void SelectPrerequisiteTech(TechnologyPrototype proto)
+    {
+        if (!List.TryGetValue(proto.ID, out var availability))
+            availability = ResearchAvailability.Unavailable;
+
+        SelectTech(proto, availability);
     }
 
     public void Recenter()
@@ -412,7 +427,9 @@ public sealed partial class FancyResearchConsoleMenu : FancyWindow
     private bool CenterOnPosition(Vector2 position, bool resetZoom)
     {
         if (resetZoom)
-            _zoom = 1f;
+            _zoom = HomeZoom;
+        if (TechViewport.PixelWidth <= 0 || TechViewport.PixelHeight <= 0)
+            return false;
         var viewportCenter = new Vector2(TechViewport.PixelWidth, TechViewport.PixelHeight) / 2f;
         _offset = viewportCenter - position * _zoom;
         ApplyCamera();

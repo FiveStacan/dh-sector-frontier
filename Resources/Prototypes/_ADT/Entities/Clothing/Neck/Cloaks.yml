@@ -24,6 +24,8 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Neck/Cloaks/HoP_alt_cloak.rsi
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -79,6 +81,8 @@
   components:
   - type: Sprite
     sprite: _ADT/Clothing/Neck/Cloaks/captain_admiral.rsi
+  - type: StaticPrice
+    price: 42 #DH
 
 - type: entity
   parent: ClothingNeckBase
@@ -88,3 +92,5 @@
   components:
   - type: Sprite
     sprite: _ADT/Clothing/Neck/Cloaks/captain_neck.rsi
+  - type: StaticPrice
+    price: 38 #DH

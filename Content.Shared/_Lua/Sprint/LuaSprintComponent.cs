@@ -11,22 +11,22 @@ namespace Content.Shared._Lua.Sprint;
 public sealed partial class LuaSprintComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public float MaxSprint = 100f;
+    public float MaxSprint = 30f; //DH 100f
 
     [DataField, AutoNetworkedField]
-    public float CurrentSprint = 100f;
+    public float CurrentSprint = 30f; //DH 100f
 
     [DataField]
-    public float DrainPerSecond = 6f;
+    public float DrainPerSecond = 6.2f; //DH 6f
 
     [DataField]
-    public float RegenPerSecond = 7f;
+    public float RegenPerSecond = 5.8f; //DH 7f
 
     [DataField]
-    public float RegenDelay = 0.3f;
+    public float RegenDelay = 0.35f; //DH 0.3f
 
     [DataField]
-    public float RecoverThresholdFraction = 0.3f;
+    public float RecoverThresholdFraction = 0.6f; //DH 0.3f
 
     [DataField, AutoNetworkedField]
     public bool Depleted;

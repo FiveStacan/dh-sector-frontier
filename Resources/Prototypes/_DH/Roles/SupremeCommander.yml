@@ -1,0 +1,29 @@
+- type: startingGear
+  id: SupremeCommander
+  equipment:
+    head: ClothingHeadCapSupremeCommander
+    jumpsuit: ADTClothingUniformSupremeCommanderJumpsuit
+    shoes: ADTClothingHandsSupremeCommanderBoots
+    gloves: ADTClothingHandsSupremeCommanderGloves
+    eyes: ADTClothingEyesSupremeCommanderGlass
+    belt: ADTClothingBeltSupremeCommanderSheath
+    neck: ADTClothingNeckSupremeCommanderCloak
+    id: UniversalIDCard
+    ears: ClothingHeadsetAltCentCom
+#    mask: ClothingMaskNeckGaiter
+    underwearb: ClothingUnderwearBottomBoxersDeathSquad
+    outerClothing: ADTClothingOuterClothingSupreneCommanderArmor
+    back: ClothingDeathSquadronBackpack
+  inhand:
+   - PonderingOrb
+   - SupremeCommanderSabre
+  storage:
+    back:
+    - WeaponDisablerIdan
+    - BoxFolderCentComClipboard
+    - N14WeaponMinigun
+    - PenCentcom
+    - BaseWeaponMinigun
+    - AccessConfiguratorUniversal
+    - EmagUnlimited
+    - DemagUnlimited

@@ -7,6 +7,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsEngineering ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Standard/frontier_command.rsi
 
 - type: entity
   parent: AirlockCommandLocked
@@ -25,6 +27,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontier ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Standard/frontier_command.rsi
 
 - type: entity
   parent: AirlockCommandLocked
@@ -52,6 +56,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontierCommand ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Standard/frontier_command.rsi
 
 - type: entity
   parent: [ AirlockEngineering, AirlockFrontierCommandLocked]
@@ -70,6 +76,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontierCommand ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/highsec/frontier_highsec.rsi
 
 - type: entity
   parent: AirlockServiceLocked
@@ -179,6 +187,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontier ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Glass/frontier_command.rsi
 
 - type: entity
   parent: AirlockCommandGlassLocked
@@ -188,6 +198,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontierBridge ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Glass/frontier_command.rsi
 
 - type: entity
   parent: AirlockCommandGlassLocked
@@ -197,6 +209,8 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsFrontierCommand ]
+  - type: Sprite #DH
+    sprite: _DH/Structures/Doors/Airlocks/Glass/frontier_command.rsi
 
 - type: entity
   parent: [ AirlockEngineeringGlass, AirlockFrontierCommandGlassLocked]

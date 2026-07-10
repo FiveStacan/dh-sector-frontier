@@ -1,0 +1,49 @@
+- type: techDiscipline
+  id: NFGeneral
+  name: nf-research-discipline-general
+  color: "#def6ff"
+  icon:
+    sprite: _NF/Interface/Misc/research_disciplines.rsi
+    state: general
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+- type: techDiscipline
+  id: NFExperemental
+  name: nf-research-discipline-experemental
+  color: "#ff80d5"
+  icon:
+    sprite: _NF/Interface/Misc/research_disciplines.rsi
+    state: experemental
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+- type: techDiscipline
+  id: NFArsenal
+  name: nf-research-discipline-arsenal
+  color: "#dc373b"
+  icon:
+    sprite: Interface/Misc/research_disciplines.rsi
+    state: arsenal
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+- type: techDiscipline
+  id: NFSyndicate
+  name: nf-research-discipline-syndicate
+  color: "#8b121d"
+  icon:
+    sprite: _NF/Interface/Misc/research_disciplines.rsi
+    state: syndicate
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75
+
+

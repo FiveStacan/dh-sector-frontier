@@ -1,0 +1,13 @@
+- type: radioChannel
+  id: SpacePrison
+  name: chat-radio-space-prison
+  keycode: 'ч'
+  frequency: 1025
+  color: "#bb4100"
+
+- type: radioChannel
+  id: SpacePrisoners
+  name: chat-radio-space-prisoners
+  keycode: 'ь'
+  frequency: 1024
+  color: "#6e6661"

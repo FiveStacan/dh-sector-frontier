@@ -1,0 +1,228 @@
+- type: entity
+  id: NFSDResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: NFSD R&D server
+  suffix: NFSD
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server
+      - state: variant-nfsd
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - NFMedical
+    - NFSalvage
+    - NFScience
+    - NFService
+    - Shiparmory
+    - NFArsenal
+    - NFArsenalMercenary
+    - NFArsenalNfsd
+
+- type: entity
+  id: PirateResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Pirate R&D server
+  suffix: NFSD
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server
+      - state: variant-pirate
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - NFMedical
+    - NFSalvage
+    - NFScience
+    - NFService
+    - Shiparmory
+    - NFArsenal
+    - NFArsenalMercenary
+    - NFArsenalPirate
+
+- type: entity
+  id: MercenaryResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Mercenary R&D server
+  suffix: Mercenary
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true # Frontier
+    layers:
+      - state: server
+      - state: variant-mercenary
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - NFSalvage
+    - NFScience
+    - NFService
+    - Shiparmory
+    - NFArsenal
+    - NFArsenalMercenary
+    - NFArsenalNfsd
+
+- type: entity
+  id: SyndicateResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Syndicate R&D server
+  suffix: Syndicate
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true # Frontier
+    layers:
+      - state: server
+      - state: variant-syndicate
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ResearchServer
+    faction: Syndicate
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - NFMedical
+    - NFSalvage
+    - NFScience
+    - NFService
+    #- Shiparmory
+    - NFArsenal
+    - NFArsenalMercenary
+    - NFSyndicate
+
+- type: entity
+  id: DebugResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Debug R&D server
+  suffix: Debug
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true # Frontier
+    layers:
+      - state: server
+      - state: variant-debug
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - NFGeneral
+    - NFEngineering
+    - NFMedical
+    - NFSalvage
+    - NFScience
+    - NFService
+    - Shiparmory
+    - NFArsenal
+    - NFArsenalMercenary
+    - NFArsenalNfsd
+    - NFExperemental
+    - NFSyndicate
+
+- type: entity
+  id: EngineeringResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Engineering R&D server
+  suffix: Engineering
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server
+      - state: variant-eng
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - Shiparmory
+    - NFService
+    - NFSalvage
+
+- type: entity
+  id: PrisonResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Prison R&D server
+  suffix: Prison
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server
+      - state: variant-prison
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    #- NFGeneral
+    - NFEngineering
+    - NFMedical
+    - NFScience
+    - NFService
+    - NFArsenalNfsd
+
+- type: entity
+  id: ShiparmoryResearchAndDevelopmentServer
+  parent: ResearchAndDevelopmentServer
+  name: Shiparmory R&D server
+  suffix: Shiparmory
+  components:
+  - type: Sprite
+    sprite: _DH/Structures/Machines/server.rsi
+    snapCardinals: true
+    layers:
+      - state: server
+      - state: variant-shiparmory
+      - state: server_o
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: TechnologyDatabase
+    supportedDisciplines:
+    - Shiparmory
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ShiparmoryResearchAndDevelopmentServerFlatpack
+  name: shiparmory research and development server flatpack
+  description: A flatpack used for constructing a shiparmory research and development server.
+  components:
+  - type: Flatpack
+    entity: ShiparmoryResearchAndDevelopmentServer
+  - type: StaticPrice
+    price: 300
+  - type: Sprite
+    layers:
+    - state: science_server
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: NFSDResearchAndDevelopmentServerFlatpack
+  name: NFSD research and development server flatpack
+  description: A flatpack used for constructing a NFSD research and development server.
+  components:
+  - type: Flatpack
+    entity: NFSDResearchAndDevelopmentServer
+  - type: StaticPrice
+    price: 260
+  - type: Sprite
+    layers:
+    - state: science_server

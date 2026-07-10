@@ -112,7 +112,7 @@
   name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
-  weight: -94
+  weight: 70
   primary: false
   roles:
   # - AtmosphericTechnician # Frontier
@@ -121,6 +121,7 @@
   # - TechnicalAssistant # Frontier
   - PlantManager # Frontier
   - PlantTechnician # Frontier
+  - FrontierEngineer #DH
 
 - type: department
   id: Medical
@@ -131,6 +132,7 @@
   roles:
   - DirectorOfCare #Lua
   - Chemist
+  - Brigmedic #DH
   - MedicalDoctor
   - Paramedic
 
@@ -138,8 +140,8 @@
   id: Security
   name: department-Security
   description: department-NFSecurity-description # Frontier
-  color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
-  weight: 70 # Frontier: 20<1 - accounted for in jobs
+  color: "#DE3A3A" #DH # Frontier: DE3A3A<5C7D4D
+  weight: -25 # Frontier: 20<1 - accounted for in jobs
   roles:
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier
@@ -148,8 +150,8 @@
 #  - Warden # Frontier
 #  - PrisonGuard ##nyano
 #  - SecurityGuard # Frontier
-#  - NFDetective # Frontier #comment from _Lua
-#  - PublicAffairsLiaison # Frontier #comment from _Lua
+   - NFDetective # Frontier #comment from _Lua
+   - PublicAffairsLiaison # Frontier #comment from _Lua
    - Sheriff
    - Bailiff
    - SeniorOfficer
@@ -157,6 +159,9 @@
    - SDEngineer
    - Deputy
    - Cadet
+   - SecurityGuard #DH
+   - PrisonGuard #DH
+   - BlueShieldOfficer #DH
 
 - type: department
   id: Science
