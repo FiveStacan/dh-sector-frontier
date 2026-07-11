@@ -95,13 +95,13 @@
     materialComposition:
       BlueprintPaper: 100
   - type: Sprite
-    sprite: _DH/Objects/Materials/Sheets/Other.rsi
+    sprite: _DH/Objects/Materials/Sheets/other.rsi
     state: bp_paper_3
     layers:
     - state: bp_paper_3
       map: ["base"]
   - type: Item
-    sprite: _DH/Objects/Materials/Sheets/Other.rsi
+    sprite: _DH/Objects/Materials/Sheets/other.rsi
     heldPrefix: bp_paper
   - type: Appearance
   - type: Extractable

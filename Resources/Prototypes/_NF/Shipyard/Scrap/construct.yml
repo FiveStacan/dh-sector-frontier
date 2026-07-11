@@ -9,8 +9,8 @@
   shuttlePath: /Maps/_NF/Shuttles/Scrap/construct.yml
   guidebookPage: ShipyardConstruct
   class:
-  - Scrapyard
   - Engineering
+  - Scrapyard
   engine:
   - Plasma
   addComponents:

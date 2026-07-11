@@ -124,7 +124,7 @@
   - SheetifierMachineCircuitboard
   technologyPrerequisites:
   - NFIndustrialEngineering
-  position: 3, 2
+  position: 5, 1
 
 # region RCD, BS Bags
 # note: depends on Engineering cluster
@@ -3525,15 +3525,15 @@
   cost: 3500
   recipeUnlocks:
   - StarGateShuttleLandingBeaconCircuitboard
-  factionOverrides:
-    Syndicate:
-      position: 2, 31
-      technologyPrerequisites:
-      - NFShuttlecraft
-    Nanotrasen:
-      position: 2, 31
-      technologyPrerequisites:
-      - NFShuttlecraft
+  # factionOverrides:
+  #   Syndicate:
+  #     position: 2, 31
+  #     technologyPrerequisites:
+  #     - NFShuttlecraft
+  #   Nanotrasen:
+  #     position: 2, 31
+  #     technologyPrerequisites:
+  #     - NFShuttlecraft
 
 - type: technology
   id: LuaBluespaceTiles

@@ -40,6 +40,16 @@
     },
     {
       "name": "zero"
+    },
+    {
+      "name": "rent"
+    },
+    {
+      "name": "genpop"
+    },
+    {
+    "name": "direction_bar",
+    "directions": 4
     }
   ]
 }

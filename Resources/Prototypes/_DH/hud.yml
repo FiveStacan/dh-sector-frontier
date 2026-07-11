@@ -1,5 +1,5 @@
 - type: hudTheme
   id: SS14OperativeTheme
   name: ui-options-hud-theme-operative
-  path: /Textures/_DH/Interface/Operative/
+  path: /Textures/_DH/interface/Operative/
   order: 7

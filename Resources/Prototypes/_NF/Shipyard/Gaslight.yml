@@ -13,10 +13,10 @@
   parent: BaseVessel
   name: Gaslight
   description: Gaslight
-  price: 67
+  price: 172000
   category: Small
   group: Custom
-  shuttlePath: /Maps/_NF/Shuttles/Gaslight.yml
+  shuttlePath: /Maps/_NF/Shuttles/gaslight.yml
   guidebookPage: ShipyardGaslight
   class:
   - Civilian
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Gaslight
   mapName: 'Gaslight'
-  mapPath: /Maps/_NF/Shuttles/Gaslight.yml
+  mapPath: /Maps/_NF/Shuttles/gaslight.yml
   minPlayers: 0
   stations:
     Gaslight:

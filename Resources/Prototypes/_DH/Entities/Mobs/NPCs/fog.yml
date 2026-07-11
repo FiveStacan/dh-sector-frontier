@@ -31,7 +31,7 @@
       - state: spookysmoke
         sprite: _Lua/admem/horror.rsi
       - map: ["enum.DamageStateVisualLayers.Base"]
-        sprite: _DH/Mobs/Mell/fog.rsi
+        sprite: _DH/Mobs/Mell/Fog.rsi
         state: icon
         shader: unshaded
   - type: HTN

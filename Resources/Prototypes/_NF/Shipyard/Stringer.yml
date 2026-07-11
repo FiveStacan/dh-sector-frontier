@@ -16,7 +16,7 @@
   price: 67
   category: Small
   group: Custom
-  shuttlePath: /Maps/_NF/Shuttles/Stringer.yml
+  shuttlePath: /Maps/_NF/Shuttles/stringer.yml
   guidebookPage: ShipyardStringer
   class:
   - Civilian
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Stringer
   mapName: 'Stringer'
-  mapPath: /Maps/_NF/Shuttles/Stringer.yml
+  mapPath: /Maps/_NF/Shuttles/stringer.yml
   minPlayers: 0
   stations:
     Stringer:

@@ -71,6 +71,14 @@
         [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ],
         [ 0.7 ]
       ]
+    },
+    {
+      "name": "holding-equipped-SUITSTORAGE-unlit",
+      "directions": 4
+    },
+    {
+      "name": "holding-equipped-SUITSTORAGE",
+      "directions": 4
     }
   ]
 }

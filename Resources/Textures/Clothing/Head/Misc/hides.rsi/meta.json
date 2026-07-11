@@ -60,6 +60,10 @@
     {
       "name": "corgi2-equipped-HELMET-vox",
       "directions": 4
+    },
+    {
+      "name": "bear-equipped-NECK",
+      "directions": 4
     }
   ]
 }
