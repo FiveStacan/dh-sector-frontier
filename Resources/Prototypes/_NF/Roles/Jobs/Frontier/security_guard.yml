@@ -5,7 +5,7 @@
   playTimeTracker: JobSecurityGuard
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 18000 # Frontier - 5 hrs
+      time: 28800 # Frontier - 8 hrs
     - !type:DepartmentTimeRequirement #Lua
       department: Frontier
       time: 12000 # 3.5 hrs
@@ -17,7 +17,7 @@
   icon: "JobIconSecurityGuard"
   supervisors: job-supervisors-sr
   weight: 80
-  displayWeight: 70 # Second from the bottom
+  displayWeight: 50 # Second from the bottom
   canBeAntag: false
   access:
   - Security

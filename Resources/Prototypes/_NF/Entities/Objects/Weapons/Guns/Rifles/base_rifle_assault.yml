@@ -58,7 +58,7 @@
       collection: RiflesDrop
   # Goobstation edit end
   - type: Gun
-    projectileSpeed: 55 #Lua
+    projectileSpeed: 48 #Lua
     minAngle: 2
     maxAngle: 10
     angleIncrease: 0.5
@@ -120,8 +120,8 @@
   id: NFBaseWeaponFrameRifleAssaultCybersunUnwieldable
   components:
   - type: Gun
-    angleIncrease: 0.2 #Lua 0.6<0.2
-    angleDecay: 1 #Lua 4.2<1
+    angleIncrease: 0.25 #Lua 0.6<0.2
+    angleDecay: 2 #Lua 4.2<1
     fireRate: 5 #Lua 3.2<5
   - type: NFWeaponDetails
     class: weapon-details-manufacturer-cybersun-industries
@@ -282,6 +282,8 @@
           tags:
             - Magazine762x39mmFMJ #Lua 30 -> 762x39
             - Magazine762x39mmFMJ #Lua 30 -> 762x39
+            - MagazineLightRifle #DH
+            - NFMagazineRifle30 #DH
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber: &chamber30Standard
         name: Chamber
@@ -290,6 +292,8 @@
         whitelist: &chamber30Whitelist
           tags:
             - Cartridge762x39mmFMJ #Lua 30 -> 762x39
+            - CartridgeLightRifle #DH
+            - NFCartridgeRifle30 #DH
 
 - type: entity
   abstract: true

@@ -1,0 +1,44 @@
+# Гарнизон
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGarrisonRecruit # комбинезон рекрута гарнизона
+  name: garrison recruit jumpsuit
+  description: The most unremarkable jumpsuit for beginners.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_recruit.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_recruit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGarrisonSolder # комбинезон солдата гарнизона
+  name: garrison solder jumpsuit
+  description: Red jumpsuit with black collar and protection, nothing special for a consumable.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_solder.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_solder.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGarrisonOfficer # комбинезон офицера гарнизона
+  name: garrison officer jumpsuit
+  description: A more attractive variation of the jumpsuit for officers.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_officer.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_officer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGarrisonCommand # комбинезон начальника гарнизона
+  name: garrison command jumpsuit
+  description: The best version of yourself with a gold chain for the most confident bosses.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_command.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Uniforms/Jumpsuit/Garrison/garrison_command.rsi

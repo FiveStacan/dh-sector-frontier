@@ -86,7 +86,7 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Item # Mono
     shape: #Lua
-    - 0,0,3,2
+    - 0,0,4,2
     sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr_inhands_32x.rsi
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr_inhands_32x.rsi # Mono
@@ -94,18 +94,20 @@
     unwieldOnUse: false
   - type: GunRequiresWield
   - type: GunWieldBonus #Set to 0 because GunRequiresWield
-    minAngle: -0 #Lua -14 -> -0
-    maxAngle: -0 #Lua -41 -> -0
+    minAngle: -1 #Lua -14 -> -0
+    maxAngle: -2.6 #Lua -41 -> -0
+    angleIncrease: -2.5
+    angleDecay: 0.1
   - type: Gun
     examineCaliber: gun-examine-caliber-76239 #Lua
 #    minAngle: 1 # comment from _Lua
 #    maxAngle: 3
 #    angleDecay: 5
 #    angleIncrease: 0.2
-    minAngle: 1 #Lua
-    maxAngle: 3.5 #Lua
-    angleIncrease: 0.2 #Lua
-    angleDecay: 1 #Lua
+    minAngle: 3.2 #Lua
+    maxAngle: 8.5 #Lua
+    angleIncrease: 3.6 #Lua
+    angleDecay: 0.8 #Lua
     availableModes:
 #    - Burst #comment from _Lua
     - FullAuto
@@ -113,8 +115,8 @@
     shotsPerBurst: 4 #Lua 5 -> 4
     burstFireRate: 20 # Mono
     burstCooldown: 0.5 # Lua 0.4 -> 0.5
-    projectileSpeed: 45
-    fireRate: 6 #Lua 5<6
+    projectileSpeed: 40
+    fireRate: 5.6 #Lua 5<6
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/wspr_fire.ogg # Mono change - Changed audio path
   - type: ItemSlots

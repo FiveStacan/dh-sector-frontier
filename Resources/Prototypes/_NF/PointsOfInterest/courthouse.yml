@@ -39,3 +39,7 @@
         - type: StationNameSetup
           mapNameTemplate: "Courthouse"
         - type: StationDeadDropHintExempt
+        - type: StationJobs
+          availableJobs:
+            PublicAffairsLiaison: [ 1, 1 ]
+            Lawyer: [ 0, 0 ]

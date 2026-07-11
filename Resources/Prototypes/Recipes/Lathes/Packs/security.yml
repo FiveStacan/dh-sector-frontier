@@ -83,7 +83,7 @@
 
 - type: latheRecipePack
   id: SecurityBoards
-  abstract: true # Frontier: finally, spammable shuttle guns
+  #abstract: true # Frontier: finally, spammable shuttle guns
   recipes:
   - ShuttleGunDusterCircuitboard
   - ShuttleGunFriendshipCircuitboard

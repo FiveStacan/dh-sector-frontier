@@ -30,7 +30,7 @@
   icon: JobIconSergeant
   supervisors: job-supervisors-bailiff
   weight: 140
-  displayWeight: 50
+  displayWeight: 55
   canBeAntag: false
   access:
   - Sergeant

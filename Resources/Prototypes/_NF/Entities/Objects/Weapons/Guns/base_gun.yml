@@ -236,11 +236,11 @@
   - type: AltFireMelee
     attackType: Heavy # Swing
   - type: MeleeWeapon
-    attackRate: 1
+    attackRate: 0.9
     damage:
       types:
-        Blunt: 6
-        Structural: 4
+        Blunt: 5
+        Structural: 3
     angle: 30
     wideAnimationRotation: 90
     animation: WeaponArcThrust

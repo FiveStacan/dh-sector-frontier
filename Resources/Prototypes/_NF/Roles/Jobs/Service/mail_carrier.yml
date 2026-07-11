@@ -12,7 +12,7 @@
   icon: "JobIconMailCarrier"
   supervisors: job-supervisors-sr
   weight: 90 # Frontier
-  displayWeight: 50 # Frontier
+  displayWeight: 35 # Frontier
   canBeAntag: false
   access:
   - External # Frontier

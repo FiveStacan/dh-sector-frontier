@@ -13,6 +13,7 @@
   supervisors: job-supervisors-typan-syndicate
   canBeAntag: false
   hideConsoleVisibility: true
+  displayWeight: 80
   requirements:
   - !type:RoleTimeRequirement
     role: JobHeadOfPersonnel

@@ -17,13 +17,29 @@
 #region hardsuits
 
 - type: listing
+  id: UplinkPirateHardsuitPirateCap
+  name: uplink-pirate-combat-hardsuit-name
+  description: uplink-pirate-combat-hardsuit-desc
+  productEntity: ClothingOuterHardsuitPirateCap
+  icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi, state: icon }
+  cost:
+    Doubloon: 8
+  categories:
+  - UplinkPirateEquipment
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateCombatHardsuit
   name: uplink-pirate-combat-hardsuit-name
   description: uplink-pirate-combat-hardsuit-desc
   productEntity: ClothingOuterHardsuitPirateScaf
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/scaf_pirate.rsi, state: icon }
   cost:
-    Doubloon: 5 #Lua 2<5
+    Doubloon: 10
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -39,7 +55,7 @@
   productEntity: ClothingOuterHardsuitViperGroupStandard
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_standard.rsi, state: icon }
   cost:
-    Doubloon: 5 #Lua 10<5
+    Doubloon: 14
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -55,7 +71,7 @@
   productEntity: ClothingOuterHardsuitViperGroupMedic
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/viper_group_medic.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 14
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -71,7 +87,7 @@
   productEntity: LuaClothingOuterHardsuitPirateEVA
   icon: { sprite: _Lua/Clothing/OuterClothing/Hardsuits/pirateva.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 14
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -87,7 +103,7 @@
   productEntity: ClothingOuterHardsuitBloodRedPirate
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 14
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -103,7 +119,7 @@
   productEntity: ClothingOuterHardsuitBloodRedElitePirate
   icon: { sprite: _Mono/Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 14
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -119,7 +135,7 @@
   productEntity: ClothingOuterVestWeb
   icon: { sprite: Clothing/OuterClothing/Vests/webvest.rsi, state: icon }
   cost:
-    Doubloon: 2
+    Doubloon: 3
   categories:
   - UplinkPirateEquipment
   conditions:
@@ -180,12 +196,27 @@
   - UplinkPirateUtility
 
 - type: listing
+  id: UplinkPirateMagboots
+  name: uplink-pirate-magboots-name
+  description: uplink-pirate-magboots-desc
+  productEntity: ClothingShoesBootsMagPirate
+  cost:
+    Doubloon: 1
+  categories:
+  - UplinkPirateUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
   id: UplinkPirateSyndicateMagboots
   name: uplink-pirate-syndicate-magboots-name
   description: uplink-pirate-syndicate-magboots-desc
   productEntity: ClothingShoesBootsMagSyndie
   cost:
-    Doubloon: 1
+    Doubloon: 6
   categories:
   - UplinkPirateUtility
   conditions:
@@ -200,7 +231,7 @@
   description: uplink-pirate-syndicate-jetpack-desc
   productEntity: JetpackBlackFilled
   cost:
-    Doubloon: 1
+    Doubloon: 2
   categories:
   - UplinkPirateUtility
   conditions:
@@ -259,12 +290,42 @@
 #region weapons
 
 - type: listing
-  id: UplinkPirateEnergySword # энергетический меч
-  name: uplink-pirate-energy-sword-name
-  description: uplink-pirate-energy-sword-desc
-  productEntity: EnergySword
+  id: UplinkPirateCutlass
+  name: uplink-pirate-sword-name
+  description: uplink-pirate-sword-desc
+  productEntity: Cutlass
   cost:
     Doubloon: 2
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateEnergyCutlass # энергетический меч
+  name: uplink-pirate-energy-sword-name
+  description: uplink-pirate-energy-sword-desc
+  productEntity: EnergyCutlass
+  cost:
+    Doubloon: 5
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateN14ripper
+  name: uplink-pirate-ripper-name
+  description: uplink-pirate-ripper-desc
+  productEntity: N14ripper
+  cost:
+    Doubloon: 5
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -280,7 +341,7 @@
   productEntity: WeaponCaseLongAK220Bundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/SMGs/ak220.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 17
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -296,7 +357,7 @@
   productEntity: WeaponCaseHeavyRatelBundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/LMGs/ratel/Ratel-icon.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 20
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -312,7 +373,7 @@
   productEntity: WeaponCaseLongN14WeaponAntiMateriel
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Snipers/antimateriel.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 22
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -328,7 +389,7 @@
   productEntity: WeaponCaseLongPrometheusBundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/Rifles/prometheus.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 19
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -344,7 +405,7 @@
   productEntity: WeaponCaseLongKnallstockBundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/SMGs/knallstock.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 16
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -360,7 +421,7 @@
   productEntity: WeaponCaseShortRMCWeaponPistolMK45
   icon: { sprite: _RMC14/Objects/Weapons/Guns/Pistols/mk45.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 4
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -376,7 +437,7 @@
   productEntity: WeaponCaseLongMla73Bundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/SMGs/mla73.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 6
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -392,7 +453,7 @@
   productEntity: WeaponCaseShortRMCWeaponPistolHoldout
   icon: { sprite: _RMC14/Objects/Weapons/Guns/Pistols/holdout.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 6
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -408,7 +469,7 @@
   productEntity: WeaponCaseLongBigLeadyBundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/Shotguns/BigLeady.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 9
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -440,7 +501,7 @@
   productEntity: WeaponCaseShortRitlandBundle
   icon: { sprite: Objects/Weapons/Guns/Revolvers/python.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 5
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -456,7 +517,7 @@
   productEntity: WeaponCaseShortViperBundle
   icon: { sprite: Objects/Weapons/Guns/Pistols/viper.rsi, state: icon }
   cost:
-    Doubloon: 3
+    Doubloon: 7
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -470,9 +531,9 @@
   name: uplink-pirate-AssaultSmBundle-name
   description: uplink-pirate-AssaultSmBundle-desc
   productEntity: WeaponCaseLongAssaultSmBundle
-  icon: { sprite: _Mono/Objects/Weapons/Guns/Rifles/akm.rsi, state: icon }
+  icon: { sprite: _NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi, state: icon }
   cost:
-    Doubloon: 5
+    Doubloon: 22
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -481,37 +542,37 @@
       tags:
       - PirateUplink
 
-#- type: listing
-#  id: UplinkPirateAnaconda # Anaconda
-#  name: uplink-pirate-anaconda-name
-#  description: uplink-pirate-anaconda-desc
-#  productEntity: WeaponPistolAnaconda
-#  icon: { sprite: _Goobstation/Objects/Weapons/Guns/Pistols/anaconda.rsi, state: icon }
-#  cost:
-#    Doubloon: 10
-#  categories:
-#  - UplinkPirateWeapons
-#  conditions:
-#  - !type:StoreWhitelistCondition
-#    whitelist:
-#      tags:
-#      - PirateUplink
+- type: listing
+  id: UplinkPirateAnaconda # Anaconda
+  name: uplink-pirate-anaconda-name
+  description: uplink-pirate-anaconda-desc
+  productEntity: WeaponPistolAnaconda
+  icon: { sprite: _Goobstation/Objects/Weapons/Guns/Pistols/anaconda.rsi, state: icon }
+  cost:
+    Doubloon: 16
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
-#- type: listing
-#  id: UplinkPirateWSPRBundle # WSPR
-#  name: uplink-pirate-WSPRBundle-name
-#  description: uplink-pirate-WSPRBundle-desc
-#  productEntity: WeaponCaseLongWSPRBundle
-#  icon: { sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
-#  cost:
-#    Doubloon: 20 #Lua 15 -> 20
-#  categories:
-#  - UplinkPirateWeapons
-#  conditions:
-#  - !type:StoreWhitelistCondition
-#    whitelist:
-#      tags:
-#      - PirateUplink
+- type: listing
+  id: UplinkPirateWSPRBundle # WSPR
+  name: uplink-pirate-WSPRBundle-name
+  description: uplink-pirate-WSPRBundle-desc
+  productEntity: WeaponCaseLongWSPRBundle
+  icon: { sprite: _Mono/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
+  cost:
+    Doubloon: 28 #Lua 15 -> 20
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 - type: listing
   id: UplinkPirateHammerBundle # NCI AK-150 HAMMER
@@ -520,7 +581,7 @@
   icon: { sprite: _Mono/Objects/Weapons/Guns/LMGs/HAMMER/hammer-icon.rsi, state: icon }
   productEntity: WeaponCaseLongHammerBundle
   cost:
-    Doubloon: 7
+    Doubloon: 17
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -536,7 +597,7 @@
   icon: { sprite: _Mono/Objects/Weapons/Guns/Snipers/ak410.rsi, state: icon }
   productEntity: WeaponCaseLongAK410Bundle
   cost:
-    Doubloon: 5
+    Doubloon: 18
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -552,7 +613,23 @@
   icon: { sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi, state: icon }
   productEntity: WeaponCaseLongAK502Bundle
   cost:
-    Doubloon: 5
+    Doubloon: 18
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+
+- type: listing
+  id: UplinkPirateCannon
+  name: uplink-pirate-cannon-name
+  description: uplink-pirate-cannon-desc
+  icon: { sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi, state: icon }
+  productEntity: NFWeaponLauncherPirateCannon
+  cost:
+    Doubloon: 18
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -569,7 +646,7 @@
   productEntity: WeaponCaseLongN14WeaponLaserGatling
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_gatling.rsi, state: icon }
   cost:
-    Doubloon: 10
+    Doubloon: 20
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -585,7 +662,7 @@
   productEntity: WeaponCaseShortN14WeaponLaserProtoRifle
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_rifle_proto.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 25
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -601,7 +678,7 @@
   productEntity: WeaponCaseShortN14WeaponPlasmaAutoRifle
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/plasma_autorifle.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 20
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -617,7 +694,7 @@
   productEntity: WeaponCaseShortN14WeaponWattz3000
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/wattz3000.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 20
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -633,7 +710,7 @@
   productEntity: WeaponCaseShortN14WeaponLaserPistol
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_pistol.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 15
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -649,7 +726,7 @@
   productEntity: WeaponCaseShortN14WeaponPlasmaDefender
   icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/plasma_pistol.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 15
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -665,7 +742,7 @@
   productEntity: WeaponCaseLongEGFrostBundle
   icon: { sprite: _Mono/Objects/Weapons/Guns/Battery/frost.rsi, state: icon }
   cost:
-    Doubloon: 7
+    Doubloon: 17
   categories:
   - UplinkPirateWeapons
   conditions:
@@ -675,6 +752,22 @@
       - PirateUplink
 
 #region ammo
+
+- type: listing
+  id: PirateUplinkCannonBall
+  name: Cannon Ball
+  description:
+  productEntity: NFCannonBall
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: ball }
+  cost:
+    Speso: 5000
+  categories:
+  - UplinkPirateAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
 
 # 6.8x52mm
 

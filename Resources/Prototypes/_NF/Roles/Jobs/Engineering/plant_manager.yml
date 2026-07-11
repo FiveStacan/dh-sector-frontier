@@ -6,14 +6,17 @@
   salary: 40000
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 720000 # Frontier - 200 hrs Lua
+      time: 324000 #720000 # Frontier - 200 hrs Lua #DH 90 hrs
+    - !type:DepartmentTimeRequirement #Lua
+      department: Engineering
+      time: 108000 #DH 30 hrs #12000 # 3.5 hrs
   startingGear: PlantManagerGear
   alwaysUseSpawner: true
   icon: "JobIconPlantManager"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
   weight: 160
-  displayWeight: 10
+  displayWeight: 80
   canBeAntag: false
   accessGroups:
   - AllAccess

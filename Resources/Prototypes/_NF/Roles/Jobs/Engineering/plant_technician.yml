@@ -6,13 +6,13 @@
   salary: 30000
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 432000 # Frontier - 120 hrs Lua
+      time: 126000 #432000 # Frontier - 120 hrs Lua #DH 35 hrs
   startingGear: PlantTechnicianGear
   alwaysUseSpawner: true
   icon: "JobIconPlantTechnician"
   supervisors: job-supervisors-plant-manager
   weight: 80
-  displayWeight: 0
+  displayWeight: 40
   access:
   - Engineering
   - Atmospherics

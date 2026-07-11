@@ -127,8 +127,6 @@
   # - Magazine8x65mmSKR # mono
   # - Magazine8x65mmEmpty # mono
   - AmmoBox8x65mmSKR # mono
-  ## Cyborg Modules
-  - BorgModuleMercenary # mono
 
 - type: latheRecipePack
   id: NFMercenaryMagazineStatic
@@ -240,6 +238,8 @@
  # - NFMagazineSubMachineGunTopMounted35Empty
  # - NFMagazineDrumRifle20Empty
  # - MagazineAsmgtUniversalEmpty
+  ## Cyborg Modules
+  - BorgModuleMercenary # mono
   #DH
   - ClothingHeadHelmetJustice
   - ClothingShoesBootsMagArmy

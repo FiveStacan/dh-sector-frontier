@@ -103,6 +103,21 @@
   - ContractorEars
 
 - type: loadoutGroup
+  id: MercenaryEncryptionKey
+  name: loadout-group-contractor-encryption-key
+  minLimit: 0
+  maxLimit: 5
+  loadouts:
+  - ContractorEncryptionKeyMercenary
+  - ContractorEncryptionKeyTraffic
+  - ContractorEncryptionKeyMedical
+  - ContractorEncryptionKeyCargo
+  - ContractorEncryptionKeyEngineering
+  - ContractorEncryptionKeyScience
+  fallbacks:
+  - ContractorEncryptionKeyMercenary
+
+- type: loadoutGroup
   id: MercenaryGloves
   name: loadout-group-contractor-gloves
   minLimit: 0

@@ -76,24 +76,24 @@
    - PrisonGuardJumpsuit
    - PrisonGuardHead
 #   - PrisonGuardNeck
-#   - PrisonGuardGloves
-#   - PrisonGuardBackpack
+   - PrisonGuardGloves
+   - PrisonGuardBackpack
 #   - PrisonGuardOuterClothing
    - NfsdForcedOuterClothing
-#   - PrisonGuardShoes
+   - PrisonGuardShoes
    - NfsdFace
-#   - PrisonGuardGlasses
-#   - PrisonGuardEars
+   - PrisonGuardGlasses
+   - PrisonGuardEars
    - NfsdBoxSurvival
    - ContractorWallet
    - ContractorCartridge
    - ContractorImplanter
-   #- ContractorEncryptionKey
+   - ContractorEncryptionKey
    - ContractorBackpackItems
    #- ContractorHandItems
-#   - NfsdSpeciesSpecific
-#   - Trinkets
-#   - SecurityTrinkets
+   - NfsdSpeciesSpecific
+   - Trinkets
+   - SecurityTrinkets
    - TopUnderwear
    - PantsUnderwear
    - SocksUnderwear
@@ -151,7 +151,7 @@
   - MedicalBackpack
   - MedicalDoctorOuterClothing
   - MedicalShoes
-  - MedicalDoctorPDA
+  #- PrisonDoctorPDA
   - MedicalEyewear
   - NFSpeciesSpecific
   - ContractorWallet

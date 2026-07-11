@@ -12,7 +12,7 @@
   icon: JobIconSDEngineerNF
   supervisors: job-supervisors-bailiff
   weight: 125
-  displayWeight: 35
+  displayWeight: 10
   canBeAntag: false
   accessGroups:
   - GeneralNfsdAccess

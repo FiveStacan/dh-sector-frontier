@@ -3,7 +3,6 @@
   name: job-name-headofprison
   description: job-description-headofprison
   playTimeTracker: JobHeadOfPrison
-  setPreference: false # Frontier - Restore this ones we have a jail
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -13,6 +12,7 @@
   startingGear: HeadOfPrisonGear
   icon: "JobIconHeadOfPrison"
   supervisors: job-supervisors-sr
+  displayWeight: 70
   canBeAntag: false
   access:
   - Frontier

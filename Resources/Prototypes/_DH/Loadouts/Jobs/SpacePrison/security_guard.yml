@@ -52,4 +52,10 @@
   id: PrisonGuardPDA
   price: 0
   equipment:
-    eyes: PrisonGuardPDA
+    id: PrisonGuardPDA
+
+- type: loadout
+  id: PrisonDoctorPDA
+  price: 0
+  equipment:
+    id: PrisonDoctorPDA

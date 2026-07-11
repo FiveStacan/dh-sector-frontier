@@ -1799,9 +1799,9 @@ ent-CoordinatesDiskDEBUG = диск координат
 
 
 ent-WeaponRifleAKM = АКM
-    .desc = Культовое оружие войны. Заряжается патронами калибра .30 винтовочный.
+    .desc = Культовое оружие войны. Заряжается патронами калибра 7.62x54mm.
 ent-WeaponRifleAKMU = АКМ-У
-    .desc = Укороченый вариант культового оружия войны. Заряжается патронами калибра .30 винтовочный.
+    .desc = Укороченый вариант культового оружия войны. Заряжается патронами калибра 7.62x54mm.
 ent-WeaponRifleM16A4 = M16A4
     .desc = Легкая, универсальная штурмовая винтовка. До сих пор сохраняет актуальность среди наемников и ополченцев. Заряжается патронами калибра .20 винтовочный.
 ent-WeaponSTG44 = STG 44
@@ -2333,16 +2333,6 @@ reflect-component-examine = Оно имеет [color=lightblue]{$value}%[/color]
 reflect-component-nonenergy = пули
 reflect-component-energy = энергетические болты
 
-gun-examine-caliber-35 = пистолетные патроны .35
-gun-examine-caliber-45 = пистолетные патроны .45
-gun-examine-caliber-45-cap = патроны с капсюлем .45
-gun-examine-caliber-10 = винтовочные патроны .10
-gun-examine-caliber-25 = винтовочные патроны .25
-gun-examine-caliber-20 = винтовочные патроны .20
-gun-examine-caliber-30 = винтовочные патроны .30
-gun-examine-caliber-50 = дробь .50
-gun-examine-caliber-60 = винтовочные патроны .60
-gun-examine-caliber-asmgt = пистолетные .35 / винтовочные .20 / винтовочные .25 / винтовочные .30 патроны
 gun-examine-caliber-foam = пенопластовые дротики
 gun-examine-hitscan-low = энергетический луч 750Дж
 gun-examine-energybolt-medium = энергетический луч 1100Дж

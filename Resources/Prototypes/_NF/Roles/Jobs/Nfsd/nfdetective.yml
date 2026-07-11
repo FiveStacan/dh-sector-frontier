@@ -21,7 +21,7 @@
   icon: JobIconNFDetective
   supervisors: job-supervisors-bailiff
   weight: 110
-  displayWeight: 20
+  displayWeight: 30
   canBeAntag: false
   access:
   - Detective

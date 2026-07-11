@@ -1117,8 +1117,8 @@
   - type: Explosive
     explosionType: StructuralDemolition
     maxIntensity: 9
-    intensitySlope: 6
-    totalIntensity: 60
+    intensitySlope: 7
+    totalIntensity: 50
     maxTileBreak: 0
   - type: PointLight
     radius: 1

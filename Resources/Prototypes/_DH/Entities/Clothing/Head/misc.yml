@@ -11,3 +11,24 @@
   - type: HideLayerClothing
     slots:
     - Hair
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMiscRedBandage # красная повязка
+  name: red bandage
+  description: Feel like a real warrior in the jungle.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Misc/red_bandage.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Misc/red_bandage.rsi
+  - type: Item
+    sprite: _DH/Clothing/Head/Misc/red_bandage.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - HamsterWearable

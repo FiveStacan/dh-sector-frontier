@@ -650,7 +650,7 @@
   id: UplinkMercenaryMagazineLightRifleBox
   name:  короб патронов L6 SAW (5.56x45mm) #Lua 20 -> 556x45
   description: короб патронов L6 SAW (5.56x45mm) #Lua 20 -> 556x45
-  productEntity: NFBaseMagazineBoxRifle556x45 #Lua 20 -> 556x45
+  productEntity: NFMagazineBoxRifle556x45 #NFBaseMagazineBoxRifle556x45 #Lua 20 -> 556x45
   cost:
     Speso: 20000 #Lua 3k<20k
   categories:

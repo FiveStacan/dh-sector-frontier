@@ -34,11 +34,28 @@ public sealed class ContainerSpawnPointSystem : EntitySystem
         if (args.DesiredSpawnPointType is SpawnPointType.Observer or SpawnPointType.LateJoin)
             return;
 
-        // If it's just a spawn pref check if it's for cryo (silly).
-        if (args.HumanoidCharacterProfile?.SpawnPriority != SpawnPriorityPreference.Cryosleep &&
-            (!_proto.TryIndex(args.Job, out var jobProto) || jobProto.JobEntity == null))
+        // If the player does not prefer a container (and the job does not require one),
+        // leave spawning to a regular late-join point when one is available. A late-join
+        // container remains the fallback when the station has no regular late-join point.
+        var prefersContainer = args.HumanoidCharacterProfile?.SpawnPriority == SpawnPriorityPreference.Cryosleep ||
+            _proto.TryIndex(args.Job, out var jobProto) && jobProto.JobEntity != null;
+
+        if (!prefersContainer && _gameTicker.RunLevel != GameRunLevel.InRound)
         {
             return;
+        }
+
+        if (!prefersContainer)
+        {
+            var pointQuery = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
+            while (pointQuery.MoveNext(out var uid, out var point, out var xform))
+            {
+                if (point.SpawnType == SpawnPointType.LateJoin &&
+                    (args.Station == null || _station.GetOwningStation(uid, xform) == args.Station))
+                {
+                    return;
+                }
+            }
         }
 
         var query = EntityQueryEnumerator<ContainerSpawnPointComponent, ContainerManagerComponent, TransformComponent>();

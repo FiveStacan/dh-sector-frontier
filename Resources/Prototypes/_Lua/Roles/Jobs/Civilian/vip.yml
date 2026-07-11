@@ -13,7 +13,7 @@
   canBeAntag: true
   icon: "JobIconVip"
   supervisors: job-supervisors-hire
-  displayWeight: 35
+  displayWeight: 20
   setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier

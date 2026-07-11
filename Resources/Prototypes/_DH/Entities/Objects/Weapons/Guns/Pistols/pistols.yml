@@ -31,15 +31,17 @@
         priority: 2
         whitelist:
           tags:
+          - Magazine45_ACPPistolFMJ
           - NFMagazinePistol45
           - MagazineMagnum
           - MagazineDeagle
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol45
+        startingItem: Cartridge45_magnumFMJ
         priority: 1
         whitelist:
           tags:
+          - Cartridge45_magnumFMJ
           - NFCartridgePistol45
   - type: MagazineVisuals
     magState: mag
@@ -80,16 +82,18 @@
         priority: 2
         whitelist:
           tags:
+          - Magazine9x19mmPistolFMJ
           - NFMagazinePistol35
           - MagazinePistol
           - MagazinePistolHighCapacity
           - MagazineACP14
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: Cartridge9x19mmFMJ
         priority: 1
         whitelist:
           tags:
+          - Cartridge9x19mmFMJ
           - NFCartridgePistol35
   - type: MagazineVisuals
     magState: mag
@@ -135,16 +139,18 @@
         priority: 2
         whitelist:
           tags:
+          - Magazine9x19mmPistolFMJ
           - NFMagazinePistol35
           - MagazinePistol
           - MagazinePistolHighCapacity
           - MagazineGlock22
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: Cartridge9x19mmFMJ
         priority: 1
         whitelist:
           tags:
+          - Cartridge9x19mmFMJ
           - NFCartridgePistol35
   - type: MagazineVisuals
     magState: mag
@@ -190,16 +196,18 @@
         priority: 2
         whitelist:
           tags:
+          - Magazine9x19mmPistolFMJ
           - NFMagazinePistol35
           - MagazinePistol
           - MagazinePistolHighCapacity
           - MagazineHIBrowning
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgePistol35
+        startingItem: Cartridge9x19mmFMJ
         priority: 1
         whitelist:
           tags:
+          - Cartridge9x19mmFMJ
           - NFCartridgePistol35
   - type: MagazineVisuals
     magState: mag

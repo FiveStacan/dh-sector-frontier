@@ -288,13 +288,32 @@
         - MercenaryBase
 
 - type: listing
+  id: UplinkStationMercenaryGunRifleSM
+  name:  uplink-merc-sm-name
+  description: uplink-merc-sm-desc
+  productEntity: NFWeaponRifleAssaultSm
+  icon: { sprite: _NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi, state: icon }
+  cost:
+    Speso: 19500
+  categories:
+    - UplinkStationMercenaryGun
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - StationMercenaryUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - MercenaryBase
+
+- type: listing
   id: UplinkStationMercenaryGunRifleAk
   name:  uplink-merc-rifleak-name
   description: uplink-merc-rifleak-desc
-  productEntity: NFWeaponRifleAssaultSm
+  productEntity: WeaponRifleAk
   icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
-    Speso: 19400
+    Speso: 22500
   categories:
     - UplinkStationMercenaryGun
   conditions:
@@ -310,7 +329,7 @@
   id: UplinkStationMercenaryAmmoLightRifle
   name:  uplink-merc-lightrifle-name
   description: uplink-merc-lightrifle-desc
-  productEntity: NFMagazineRifle30
+  productEntity: Magazine762x39mmFMJ
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi, state: base }
   cost:
     Speso: 1000
@@ -851,24 +870,6 @@
     Speso: 49500
   categories:
     - UplinkStationMercenaryGun
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - StationMercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
-
-- type: listing
-  id: UplinkStationMercenaryNFMagazineRifle30
-  name:  магазин (.30 винтовочные)
-  description: магазин (.30 винтовочные)
-  productEntity: NFMagazineRifle30
-  cost:
-    Speso: 1300
-  categories:
-    - UplinkStationMercenaryAmmo
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

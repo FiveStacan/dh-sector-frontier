@@ -33,3 +33,8 @@
   price: 20
   encryptionKeys:
   - EncryptionKeyScience
+
+- type: loadout
+  id: ContractorEncryptionKeyMercenary
+  encryptionKeys:
+  - EncryptionKeyMercenary

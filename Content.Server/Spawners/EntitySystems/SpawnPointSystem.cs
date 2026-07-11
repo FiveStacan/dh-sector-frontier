@@ -26,11 +26,20 @@ public sealed class SpawnPointSystem : EntitySystem
         // TODO: Cache all this if it ends up important.
         var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
         var possiblePositions = new List<EntityCoordinates>();
+        var jobPositions = new List<EntityCoordinates>();
 
         while ( points.MoveNext(out var uid, out var spawnPoint, out var xform))
         {
             if (args.Station != null && _stationSystem.GetOwningStation(uid, xform) != args.Station)
                 continue;
+
+            // Keep matching job points as a late-join fallback when neither regular
+            // late-join points nor late-join containers exist on the station.
+            if (spawnPoint.SpawnType == SpawnPointType.Job &&
+                (args.Job == null || spawnPoint.Job == args.Job))
+            {
+                jobPositions.Add(xform.Coordinates);
+            }
 
             // Delta-V: Allow setting a desired SpawnPointType
             if (args.DesiredSpawnPointType != SpawnPointType.Unset)
@@ -62,6 +71,9 @@ public sealed class SpawnPointSystem : EntitySystem
                 possiblePositions.Add(xform.Coordinates);
             }
         }
+
+        if (possiblePositions.Count == 0 && _gameTicker.RunLevel == GameRunLevel.InRound)
+            possiblePositions.AddRange(jobPositions);
 
         if (possiblePositions.Count == 0)
         {

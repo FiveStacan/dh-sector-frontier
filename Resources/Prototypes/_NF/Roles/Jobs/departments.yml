@@ -6,6 +6,7 @@
   weight: 90
   roles:
   - Contractor
+  - Pilot
   - Mercenary
   - Lawyer #DH
 
@@ -25,7 +26,6 @@
   - MailCarrier
   - Valet # nyano
   - Vip # Акционер (донат-роль)
-  - Pilot
   - Borg
 
 - type: department
@@ -40,6 +40,7 @@
   - SeniorOfficer
   - Brigmedic
   - NFDetective #DH
+  - Magistrat
   - Deputy
   - Cadet
   - SDEngineer

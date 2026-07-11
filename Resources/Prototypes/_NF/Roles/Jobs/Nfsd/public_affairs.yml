@@ -10,10 +10,16 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 36000 # 10 hours
+    - !type:RoleTimeRequirement #Lua
+      role: JobLawyer
+      time: 18000
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement
       time: 300000 # 83 hours
+    - !type:RoleTimeRequirement #Lua
+       role: JobLawyer
+       time: 18000
   startingGear: PublicAffairGear
   icon: "JobIconPublicAffairsLiaison"
   supervisors: job-supervisors-cadet

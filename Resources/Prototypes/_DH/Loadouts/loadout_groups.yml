@@ -107,3 +107,9 @@
   name: loadout-group-prison-guard-pda
   loadouts:
   - PrisonGuardPDA
+
+- type: loadoutGroup
+  id: PrisonDoctorPDA
+  name: loadout-group-medical-doctor-id
+  loadouts:
+  - PrisonDoctorPDA

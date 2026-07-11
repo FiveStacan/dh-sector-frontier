@@ -138,7 +138,7 @@
 
 - type: entity
   name: AKMS
-  parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  parent: [NFBaseWeaponRifleAssaultChamber762x39, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   id: WeaponRifleAk
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
   components:
@@ -163,27 +163,27 @@
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
-  - type: ItemSlots #DH
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: NFMagazineRifle30
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist: &mag30Whitelist
-          tags:
-            - NFMagazineRifle30
-            - NFMagazineLowCapacityRifle30
-            #- NFMagazineExtendedCapacityRifle30
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber: &chamber30Standard
-        name: Chamber
-        startingItem: NFCartridgeRifle30
-        priority: 1
-        whitelist: &chamber30Whitelist
-          tags:
-            - NFCartridgeRifle30
+  # - type: ItemSlots #DH
+  #   slots:
+  #     gun_magazine:
+  #       name: Magazine
+  #       startingItem: NFMagazineRifle30
+  #       insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+  #       ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+  #       priority: 2
+  #       whitelist: &mag30Whitelist
+  #         tags:
+  #           - NFMagazineRifle30
+  #           - NFMagazineLowCapacityRifle30
+  #           #- NFMagazineExtendedCapacityRifle30
+  #       whitelistFailPopup: gun-magazine-whitelist-fail
+  #     gun_chamber: &chamber30Standard
+  #       name: Chamber
+  #       startingItem: NFCartridgeRifle30
+  #       priority: 1
+  #       whitelist: &chamber30Whitelist
+  #         tags:
+  #           - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

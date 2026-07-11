@@ -80,3 +80,134 @@
   - type: Tag
     tags:
     - HamsterWearable
+
+#region Гарнизон
+# Фуражки
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatGarrisonCommandcap # фуражка начальника гарнизона
+  name: garrison command cap
+  description: A luxurious hat for the garrison command.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/garrison_command_cap.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/garrison_command_cap.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatGarrisonOfficercap # фуражка офицера гарнизона
+  name: garrison officer cap
+  description: A cap to confirm your officer in garrison.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/garrison_officer_cap.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/garrison_officer_cap.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+    - HamsterWearable
+
+# Береты
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGarrisonCommand # берет начальника гарнизона
+  name: beret command garrison
+  description: A luxurious beret for the garrison commander.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_command.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_command.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGarrisonEngeneer # берет боевого инженера гарнизона
+  name: beret engeneer garrison
+  description: It demonstrates your ability to assemble a thermonuclear reactor from improvised means on the battlefield.
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_engeneer.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_engeneer.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGarrisonMedic # берет полевого медика гарнизона
+  name: beret medic garrison
+  description:
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_medic.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_medic.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGarrisonOfficer # берет офицера гарнизона
+  name: beret officer garrison
+  description:
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_officer.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_officer.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretGarrisonSolder # берет солдата гарнизона
+  name: beret solder garrison
+  description:
+  components:
+  - type: Sprite
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_solder.rsi
+  - type: Clothing
+    sprite: _DH/Clothing/Head/Hats/Garrison/beret_garrison_solder.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon

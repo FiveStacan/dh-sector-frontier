@@ -1675,7 +1675,7 @@
   id: NFAudioVisualCommunication
   name: nf-research-technology-audio-visual-communication
   entityIcon: SurveillanceCameraRouterConstructed
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
   factions:
   - Nanotrasen
   - Syndicate
@@ -1686,7 +1686,6 @@
   - SurveillanceCameraMonitorCircuitboard
   technologyPrerequisites:
   - NFAdvancedParts
-  - NFAdvancedEntertainment
   position: 0, 19
 
 - type: technology
@@ -2246,6 +2245,22 @@
   position: 1, 30
 
 - type: technology
+  id: DHPowerCellHyper
+  name: dh-research-technology-hyper-powercells
+  entityIcon: PowerCellHyper
+  discipline: NFEngineering
+  factions:
+  - Nanotrasen
+  - Syndicate
+  tier: 1
+  cost: 15900
+  recipeUnlocks:
+  - PowerCellHyper
+  technologyPrerequisites:
+  - NFAdvancedSMES
+  position: 2, 26
+
+- type: technology
   id: NFFission
   name: nf-research-technology-fission-powercells
   entityIcon: PowerCellMicroreactor
@@ -2780,7 +2795,7 @@
   technologyPrerequisites:
   - NFImprovedSalvageWeapons #DH
   - NFAdvancedSalvageCyborg #DH
-  position: 4, 35
+  position: 4, 39
 
 - type: technology
   id: NFBluespaceGasTanks
@@ -2807,7 +2822,7 @@
   id: NFBasicAmmunitionProduction
   name: nf-research-technology-basic-ammunition
   entityIcon: NFAmmunitionBoxPistol45
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
   factions:
   - Nanotrasen
   - Syndicate
@@ -2835,7 +2850,8 @@
   id: NFBountyHunting
   name: nf-research-technology-bounty-hunting
   entityIcon: Handcuffs
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -2858,7 +2874,8 @@
   id: NFAdvancedRiotControl
   name: nf-research-technology-advanced-riot-control
   entityIcon: Truncheon
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
+  secondaryDiscipline: NFArsenalNfsd
   factions:
   - Nanotrasen
   - Syndicate
@@ -2879,6 +2896,7 @@
   name: research-technology-security-borg-modules
   entityIcon: BorgModuleSecurity
   discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -2930,7 +2948,7 @@
   id: NFImprovedPistolAmmo
   name: nf-research-technology-pistol-ammo-improved
   entityIcon: NFAmmunitionBoxPistol35Overpressure
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
   factions:
   - Nanotrasen
   - Syndicate
@@ -2952,7 +2970,7 @@
   id: NFNonlethalAmmunition
   name: nf-research-technology-nonlethal-ammunition
   entityIcon: NFAmmunitionBoxShellShotgunBeanbag
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
   factions:
   - Nanotrasen
   - Syndicate
@@ -2974,6 +2992,7 @@
   name: nf-research-technology-rifle-ammo-improved
   entityIcon: NFAmmunitionBoxRifle30Overpressure
   discipline: NFArsenalMercenary
+  secondaryDiscipline: NFArsenalNfsd
   factions:
   - Nanotrasen
   - Syndicate
@@ -2999,7 +3018,7 @@
   id: NFExplosiveTechnology
   name: nf-research-technology-explosive-technology
   entityIcon: ChemicalPayload
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
   factions:
   - Nanotrasen
   - Syndicate
@@ -3020,7 +3039,8 @@
   id: NFDeterrenceTechnologies
   name: nf-research-technology-deterrence
   entityIcon: HoloprojectorField
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3054,6 +3074,7 @@
   name: nf-research-technology-rifle-ammo-bulk
   entityIcon: NFAmmunitionBoxBigRifle20
   discipline: NFArsenalMercenary
+  secondaryDiscipline: NFArsenalNfsd
   factions:
   - Nanotrasen
   - Syndicate
@@ -3072,7 +3093,8 @@
   id: DraconicMunitions
   name: research-technology-draconic-munitions
   entityIcon: AmmoBox762x39mmIncendiary
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3094,14 +3116,13 @@
    - AmmoBox556x45mmIncendiary #NFAmmunitionBoxRifle20Incendiary # Frontier
   technologyPrerequisites:
   - NFBulkRifleAmmo
-  position: 4, 43
+  position: 5, 43
 
 - type: technology
-  # DH: added from techtree_dh.txt; factions defaulted from current techtree style.
-  #DH Codex Do not touch
   id: MaterialUranium
   name: research-technology-uranium-munitions
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3123,13 +3144,14 @@
   - NFAmmunitionBoxShellShotgunUranium # Frontier
   technologyPrerequisites:
   - NFBulkRifleAmmo
-  position: 4, 45
+  position: 5, 45
 
 - type: technology
   id: WeaponizedLaserManipulation
   name: research-technology-weaponized-laser-manipulation
   entityIcon: NFWeaponEnergyRifleCarbine
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3147,7 +3169,8 @@
   id: ConcentratedLaserWeaponry
   name: research-technology-concentrated-laser-weaponry
   entityIcon: NFWeaponEnergyRifleSniperCannon
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3164,7 +3187,8 @@
   id: ThermalWeaponry
   name: research-technology-thermal-weaponry
   entityIcon: NFWeaponEnergyRifleTemperature
-  discipline: NFArsenalMercenary
+  discipline: NFArsenalNfsd
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -3191,7 +3215,7 @@
    - NFWeaponEnergyRifleSniperXrayCannon # Frontier
   technologyPrerequisites:
   - ConcentratedLaserWeaponry
-  position: 6, 44
+  position: 7, 44
 
 # - type: technology
 #   id: NFBasicShuttleArmament

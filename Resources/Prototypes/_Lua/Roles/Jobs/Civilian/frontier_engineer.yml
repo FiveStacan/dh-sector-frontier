@@ -10,13 +10,16 @@
   salary: 30000
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 72000 # 20 часов
+      time: 57600 # 16 hrs
+    - !type:DepartmentTimeRequirement #Lua
+      department: Frontier
+      time: 36000 #10 hrs
   startingGear: StationEngineerGear
   alwaysUseSpawner: true
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-sr
   weight: 80
-  displayWeight: 60
+  displayWeight: 35
   access:
   - Engineering
   - Atmospherics

@@ -8,9 +8,10 @@
         - MagazineDeagle
     - type: BallisticAmmoProvider
       mayTransfer: true
-      proto: NFCartridgePistol45  # 050
+      proto: Cartridge45_magnumFMJ  # 050
       whitelist:
         tags:
+          - Cartridge45_magnumFMJ
           - NFCartridgePistol45  # 050
       capacity: 7
     - type: Item
@@ -48,9 +49,10 @@
     - MagazineACP14
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgePistol35  # 57x28
+    proto: Cartridge9x19mmFMJ #NFCartridgePistol35  # 57x28
     whitelist:
       tags:
+      - Cartridge9x19mmFMJ
       - NFCartridgePistol35  # 57x28
     capacity: 15
   - type: Item
@@ -81,9 +83,10 @@
     - MagazineHIBrowning
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgePistol35  # 57x28
+    proto: Cartridge9x19mmFMJ  # 57x28
     whitelist:
       tags:
+      - Cartridge9x19mmFMJ
       - NFCartridgePistol35  # 57x28
     capacity: 15
   - type: Item
@@ -114,9 +117,10 @@
     - MagazineGlock22
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgePistol35  # 57x28
+    proto: Cartridge9x19mmFMJ  # 57x28
     whitelist:
       tags:
+      - Cartridge9x19mmFMJ
       - NFCartridgePistol35  # 57x28
     capacity: 15
   - type: Item
@@ -144,9 +148,10 @@
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgePistol35
+    proto: Cartridge9x19mmFMJ
     whitelist:
       tags:
+      - Cartridge9x19mmFMJ
       - NFCartridgePistol35
     capacity: 0
 
@@ -160,9 +165,10 @@
     - MagazineScorpion
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgeRifle30  # 57x28
+    proto: Cartridge762x39mmFMJ  # 57x28
     whitelist:
       tags:
+      - Cartridge762x39mmFMJ
       - NFCartridgeRifle30  # 57x28
     capacity: 45
   - type: Item
@@ -190,9 +196,10 @@
   components:
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgeRifle30  # 57x28
+    proto: Cartridge762x39mmFMJ  # 57x28
     whitelist:
       tags:
+      - Cartridge762x39mmFMJ
       - NFCartridgeRifle30  # 57x28
     capacity: 0
 
@@ -208,9 +215,10 @@
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgeRifle20
+    proto: Cartridge556x45mmFMJ
     whitelist:
       tags:
+      - Cartridge556x45mmFMJ
       - NFCartridgeRifle20
       - CartridgeRifle
     capacity: 25
@@ -242,9 +250,10 @@
     mayTransfer: true
     whitelist:
       tags:
+      - Cartridge762x39mmFMJ
       - NFCartridgeRifle30
       - CartridgeLightRifle  # 762x39
-    proto: NFCartridgeRifle30  # 762x39
+    proto: Cartridge762x39mmFMJ  # 762x39
     capacity: 30
   - type: Item
     size: Small
@@ -276,9 +285,10 @@
     size: Small
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgeRifle20  # 556
+    proto: Cartridge556x45mmFMJ  # 556
     whitelist:
       tags:
+      - Cartridge556x45mmFMJ
       - NFCartridgeRifle20
       - CartridgeRifle  # 556
     capacity: 30
@@ -321,9 +331,10 @@
     - MagazineP90
   - type: BallisticAmmoProvider
     mayTransfer: true
-    proto: NFCartridgePistol35
+    proto: Cartridge9x19mmFMJ
     whitelist:
       tags:
+      - Cartridge9x19mmFMJ
       - NFCartridgePistol35
     capacity: 50
   - type: Item

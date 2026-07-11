@@ -9,14 +9,20 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 72000 # 20 hrs
+    - !type:DepartmentTimeRequirement #Lua
+      department: Frontier
+      time: 36000
     - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 10800 # 3 hrs as security guard
+      role: JobSecurityGuard #JobSecurityGuard
+      time: 5400 # 3 hrs as security guard
+    - !type:RoleTimeRequirement
+      role: JobValet
+      time: 5400
   canBeAntag: false
   icon: "JobIconStc"
   supervisors: job-supervisors-sr
   weight: 160
-  displayWeight: 50 # Second from the top
+  displayWeight: 70 # Second from the top
   setPreference: true
   access:
   - Service

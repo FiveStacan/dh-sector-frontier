@@ -93,3 +93,11 @@
   - type: Icon
     sprite: _DH/Objects/Devices/pda.rsi
     state: pda-space-prison-boss
+
+- type: entity
+  parent: MedicalPDA
+  id: PrisonDoctorPDA
+  name: prison doctor PDA
+  components:
+  - type: Pda
+    id: PrisonDoctorIDCard

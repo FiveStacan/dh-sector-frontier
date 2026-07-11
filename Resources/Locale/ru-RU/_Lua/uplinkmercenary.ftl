@@ -59,8 +59,10 @@ uplink-merc-mk58-name = МК 58
 uplink-merc-mk58-desc = Дешевый и распространённый пистолет, производимый дочерней компанией Nanotrasen. Использует патроны калибра .35 авто.
 uplink-merc-energygun-name = лазерная импульсная винтовка
 uplink-merc-energygun-desc = Базовая лазерная импульсная винтовка с двумя настройками: обезвредить и убить.
+uplink-merc-sm-name = Соланд-Мосс
+uplink-merc-sm-desc = Культовое оружие. Использует патроны калибра 7.62x39mm.
 uplink-merc-rifleak-name = АКМС
-uplink-merc-rifleak-desc = Культовое оружие всех войн. Использует патроны калибра .30 винтовочный.
+uplink-merc-rifleak-desc = Культовое оружие всех войн. Использует патроны калибра 7.62x39mm.
 uplink-merc-rocketemp-name = РПГ-7 (ЭМИ)
 uplink-merc-rocketemp-desc = Древний ручной реактивный гранатомёт.
 
@@ -69,7 +71,7 @@ store-merc-category-ammo = патроны
 uplink-merc-rocketempammo-name = реактивная граната ПГ-7ВЛ ЭМИ
 uplink-merc-rocketempammo-desc = Реактивная граната мощностью 1,5 эми, предназначенная для установки РПГ-7.
 uplink-merc-lightrifle-name = магазин
-uplink-merc-lightrifle-desc = .30 винтовочные
+uplink-merc-lightrifle-desc = 7.62x39mm винтовочные
 uplink-merc-magazineoistol-name = пистолетный магазин
 uplink-merc-magazineoistol-desc = .35 авто
 

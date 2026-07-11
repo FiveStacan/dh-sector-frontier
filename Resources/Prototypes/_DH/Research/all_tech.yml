@@ -2,7 +2,8 @@
   id: tracking
   name: dh-research-technology-tracking
   entityIcon: Binoculars
-  discipline: NFArsenalMercenary
+  discipline: NFArsenal
+  secondaryDiscipline: NFArsenalMercenary
   factions:
   - Nanotrasen
   - Syndicate
@@ -194,22 +195,6 @@
   - DHExtendedAmeJarTechnology
   - NFBluespaceStorage
   position: 6, 3
-
-- type: technology
-  id: DHPowerCellHyper
-  name: dh-research-technology-hyper-powercells
-  entityIcon: PowerCellMicroreactor
-  discipline: NFEngineering
-  factions:
-  - Nanotrasen
-  - Syndicate
-  tier: 1
-  cost: 15900
-  recipeUnlocks:
-  - PowerCellHyper
-  technologyPrerequisites:
-  - NFAdvancedSMES
-  position: 2, 26
 
 #region Science
 

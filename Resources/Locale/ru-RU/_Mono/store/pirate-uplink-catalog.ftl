@@ -89,6 +89,8 @@ uplink-pirate-comms-computer-circuitboard-desc = Плата компьютера
 uplink-pirate-security-cyborg-module-name = Модуль безопасности Киборга
 uplink-pirate-security-cyborg-module-desc = Мачете, энергетический пистолет и дубинка-шокер, сделанные специально для боргов. Подождите, разве в СБ нет того же самого?
 
+uplink-pirate-syndicate-magboots-name = Пиратские магнитные сапоги
+uplink-pirate-syndicate-magboots-desc = Магнитные сапоги, используемые во время работы вне корабля, чтобы оставаться надёжно прикреплённым к поверхности.
 uplink-pirate-syndicate-magboots-name = Кроваво-красные магнитные сапоги
 uplink-pirate-syndicate-magboots-desc = Магнитные сапоги, созданные методом реверс инжиниринга, с мощным магнитным притяжением и встроенными двигателями. Вмещают 0,75 л газа.
 
@@ -151,8 +153,13 @@ uplink-pirate-wspr-desc = Создано против Энни от ДСБФ. И
 uplink-pirate-burner-name = Тяжелая винтовка Burner
 uplink-pirate-burner-desc = Разрушительная винтовка калибра 12.7x99mm. Поддерживает боеприпасы HE. Ужасно разрушительна.
 
-uplink-pirate-energy-sword-name = Энергетический меч
+uplink-pirate-sword-name = Сабля
+uplink-pirate-sword-desc = Хитро изогнутый клинок, который часто можно увидеть в руках и крюках космических пиратов.
+uplink-pirate-energy-sword-name = Абордажная Энергосабля
 uplink-pirate-energy-sword-desc = Очень громкий и опасный меч с лучом чистой, концентрированной плазмы. Разрезает небронированные обьекты как масло.
+
+uplink-pirate-ripper-name = Потрошитель
+uplink-pirate-ripper-desc = Легкая одноручная бензопила, первоначально разработанная довоенными армейскими саперами для расчистки лесных тропинок, но она также может быть использован для разделки мяса или нанесения урона противнику.
 
 # ammo
 

@@ -22,11 +22,11 @@
     zeroVisible: true
   - type: Gun
     examineCaliber: gun-examine-caliber-76239 #Lua
-    minAngle: 1 #Lua
-    maxAngle: 3.5 #Lua
-    angleIncrease: 0.2 #Lua
+    minAngle: 2.5 #Lua
+    maxAngle: 6.2 #Lua
+    angleIncrease: 0.6 #Lua
     angleDecay: 1 #Lua
-    fireRate: 5 #Lua
+    fireRate: 4.8 #Lua
 
 - type: entity # TODO: switch to .25 rifle (caseless)
   id: NFWeaponRifleAssaultM90GrenadeLauncher

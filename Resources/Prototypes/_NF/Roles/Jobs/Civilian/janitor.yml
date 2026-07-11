@@ -12,7 +12,7 @@
   icon: "JobIconJanitor"
   supervisors: job-supervisors-sr
   weight: 100
-  displayWeight: 40
+  displayWeight: 25
   canBeAntag: false
   access:
   - Service

@@ -15,12 +15,12 @@
   canBeAntag: false
   icon: "JobIconPermaPrisoner"
   supervisors: job-supervisors-prisoner
-  displayWeight: 10 # Frontier
+  displayWeight: 10
   special:
   - !type:AddImplantSpecial
-    implants: [ TrackingImplant ] # Frontier
-  - !type:GiveItemOnHolidaySpecial # Frontier: even prisoners get a piece of cake (with no file inside).
-    holiday: FrontierBirthday # Frontier
+    implants: [ TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
     prototype: PresentRandomCoal #DH
 
 - type: startingGear

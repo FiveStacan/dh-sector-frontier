@@ -3,7 +3,6 @@
   name: job-name-prison-guard
   description: job-description-prison-guard
   playTimeTracker: JobPrisonGuardDH
-  setPreference: false # Frontier - Restore this ones we have a jail
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -13,6 +12,7 @@
   startingGear: DHPrisonGuardGear
   icon: "JobIconPrisonGuardDH"
   supervisors: job-supervisors-headofprison # Frontier
+  displayWeight: 45
   canBeAntag: false
   access:
   - Chemistry

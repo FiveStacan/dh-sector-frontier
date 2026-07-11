@@ -6,13 +6,19 @@
   salary: 80000
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 72000 # 10 hrs
+      time: 86400 # 24 hrs
     - !type:DepartmentTimeRequirement #Lua
       department: Frontier
-      time: 36000
+      time: 43200 #12 hrs
+    - !type:RoleTimeRequirement
+      role: JobStc
+      time: 14400 #4 hrs
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 36000 #Lua 10h
+      time: 14400 #4 hrs
+    - !type:RoleTimeRequirement
+      role: JobMailCarrier
+      time: 14400 #4
   whitelisted: false
   startingGear: SrGear
   alwaysUseSpawner: true

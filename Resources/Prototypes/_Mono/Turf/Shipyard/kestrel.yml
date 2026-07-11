@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: kyres1
+# Discord: kyres1
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: MonoKestrel
+  parent: BaseVessel
+  name: SKR Kestrel
+  description: Небольшой научно-исследовательский корабль с возможностью прыжков, предназначенный для длительных миссий. Оснащён жилым модулем и неплохим для своих размеров оборонительным вооружением, хотя и не отличается высокой маневренностью.
+  price: 176400
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/kestrel.yml
+  guidebookPage: null
+  class:
+  - Science
+  - Civilian
+  engine:
+  - Uranium
+  addComponents:
+    - type: IFF
+      color: "#ffffff"
+- type: gameMap
+  id: MonoKestrel
+  mapName: 'SKR Kestrel'
+  mapPath: /Maps/_Mono/Shuttles/kestrel.yml
+  minPlayers: 0
+  stations:
+    MonoKestrel:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Kestrel CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

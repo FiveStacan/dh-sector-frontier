@@ -280,10 +280,11 @@ namespace Content.Server.GameTicking
             _playTimeTrackings.PlayerRolesChanged(player);
 
             // Delta-V: Add AlwaysUseSpawner.
+            // Late joins must use late-join spawn points (including cryosleep containers),
+            // even when the job normally requires its dedicated round-start spawner.
             var spawnPointType = SpawnPointType.Unset;
-            if (jobPrototype.AlwaysUseSpawner)
+            if (jobPrototype.AlwaysUseSpawner && !lateJoin)
             {
-                lateJoin = false;
                 spawnPointType = SpawnPointType.Job;
             }
 

@@ -154,14 +154,15 @@
    - PublicAffairsLiaison # Frontier #comment from _Lua
    - Sheriff
    - Bailiff
+   - BlueShieldOfficer #DH
    - SeniorOfficer
    - Brigmedic
    - SDEngineer
    - Deputy
    - Cadet
+   - HeadOfPrison #DH
    - SecurityGuard #DH
    - PrisonGuard #DH
-   - BlueShieldOfficer #DH
 
 - type: department
   id: Science

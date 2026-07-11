@@ -43,7 +43,8 @@
 #    - CivilianServices
      - NFEngineering
      - NFMedical
-     - NFArsenalMercenary
+     - NFArsenal #DH
+     #- NFArsenalMercenary
      #- NFArsenalNfsd #DH
      - NFSalvage
      - NFScience
