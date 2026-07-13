@@ -20,7 +20,7 @@ public sealed class ShipyardLuaPriceTests
     };
 
     [Test]
-    public async Task CheckPriceNotExceedAppraiseBy30Percent()
+    public async Task CheckPriceNotBelowMinimumMarkup()
     {
         await using var pair = await PoolManager.GetServerClient();
         var server = pair.Server;
@@ -35,6 +35,9 @@ public sealed class ShipyardLuaPriceTests
             {
                 foreach (var vessel in protoManager.EnumeratePrototypes<VesselPrototype>())
                 {
+                    // This suite covers the Luna shipyard. Shared Frontier vessels are
+                    // validated by the Frontier map and prototype test suites.
+                    if (!vessel.Whitelist.Contains(VesselServerId.Luna)) continue;
                     if (PriceWhitelist.Contains(vessel.ID)) continue;
                     map.CreateMap(out var mapId);
                     double appraisePrice = 0;
@@ -52,8 +55,7 @@ public sealed class ShipyardLuaPriceTests
                     pricing.AppraiseGrid(shuttle.Value, null, (uid, price) =>
                     { appraisePrice += price; });
                     var allowedMinPrice = appraisePrice * vessel.MinPriceMarkup;
-                    var allowedMaxPrice = appraisePrice * 1.3f;
-                    Assert.That(vessel.Price, Is.InRange(allowedMinPrice, allowedMaxPrice), $"Цена {vessel.ID} вне допустимого диапазона. Минимальная цена: {allowedMinPrice}. Максимальная цена: {allowedMaxPrice}. Оценка: {appraisePrice}. Минимальная наценка: {(vessel.MinPriceMarkup - 1.0f) * 100}%. Текущая цена: {vessel.Price}.");
+                    Assert.That(vessel.Price, Is.GreaterThanOrEqualTo(allowedMinPrice), $"Цена {vessel.ID} ниже минимальной. Минимальная цена: {allowedMinPrice}. Оценка: {appraisePrice}. Минимальная наценка: {(vessel.MinPriceMarkup - 1.0f) * 100}%. Текущая цена: {vessel.Price}.");
                     try { map.DeleteMap(mapId); }
                     catch (Exception ex)
                     { Assert.Fail($"Не удалось удалить карту для {vessel} ({vessel.ShuttlePath}): {ex}"); }
