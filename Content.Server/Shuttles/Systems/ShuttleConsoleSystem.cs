@@ -129,6 +129,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
     }
 
+    /// <summary>Refreshes interserver destinations and republishes this console's state.</summary>
     private void OnInterserverRefresh(EntityUid uid, ShuttleConsoleComponent component, InterserverRefreshDestinationsMessage args)
     {
         _interserverTransfers.RequestCatalogRefresh();
@@ -136,6 +137,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         UpdateState(uid, ref dockState);
     }
 
+    /// <summary>Starts an interserver shuttle transfer requested through this console.</summary>
     private void OnInterserverStart(EntityUid uid, ShuttleConsoleComponent component, InterserverStartTransferMessage args)
     {
         if (args.Actor is not { Valid: true } actor)

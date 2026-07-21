@@ -156,6 +156,7 @@ public sealed partial class InterserverTransferSystem : EntitySystem
 
     [Dependency] private readonly IGameTiming _timing = default!;
 
+    /// <summary>Builds the current long-range BSS state for a shuttle console.</summary>
     public InterserverConsoleState GetConsoleState(EntityUid console)
     {
         var servers = _catalog.Values
@@ -190,6 +191,7 @@ public sealed partial class InterserverTransferSystem : EntitySystem
         return new InterserverConsoleState(servers);
     }
 
+    /// <summary>Refreshes the destination catalogs of all approved peers.</summary>
     public void RefreshCatalogs()
     {
         if (!_cfg.GetCVar(CLVars.InterserverEnabled))
@@ -211,6 +213,7 @@ public sealed partial class InterserverTransferSystem : EntitySystem
             _ = RefreshCatalogAsync(peer);
     }
 
+    /// <summary>Requests a rate-limited manual refresh of destination catalogs.</summary>
     public void RequestCatalogRefresh()
     {
         if (_timing.RealTime < _nextManualCatalogRefresh)
@@ -253,16 +256,19 @@ public sealed partial class InterserverTransferSystem : EntitySystem
             SaveInbox();
     }
 
+    /// <summary>Checks whether a connecting user belongs to a committed incoming transfer.</summary>
     public bool HasPendingIncomingCharacter(NetUserId userId)
     {
         return _pendingIncomingUsers.ContainsKey(userId);
     }
 
+    /// <summary>Checks whether a user must be redirected to the latest committed destination.</summary>
     public bool HasCommittedOutgoingRoute(NetUserId userId)
     {
         return TryGetCommittedOutgoingRoute(userId, out _);
     }
 
+    /// <summary>Returns incoming transfer IDs that completed arrival for persistence checkpointing.</summary>
     public IEnumerable<string> GetCompletedIncomingTransferIds()
     {
         return _inbox.Transfers
@@ -271,6 +277,7 @@ public sealed partial class InterserverTransferSystem : EntitySystem
             .ToList();
     }
 
+    /// <summary>Marks an incoming user as attached to their transferred character.</summary>
     public void MarkIncomingCharacterAttached(NetUserId userId)
     {
         _pendingIncomingUsers.Remove(userId);

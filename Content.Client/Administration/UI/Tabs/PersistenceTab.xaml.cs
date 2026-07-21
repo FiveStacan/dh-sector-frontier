@@ -6,6 +6,9 @@ using Robust.Client.UserInterface.XAML;
 
 namespace Content.Client.Administration.UI.Tabs;
 
+/// <summary>
+/// Administrative menu tab for viewing and changing persistence settings and triggering saves.
+/// </summary>
 [GenerateTypedNameReferences]
 public sealed partial class PersistenceTab : Control
 {
@@ -31,6 +34,9 @@ public sealed partial class PersistenceTab : Control
             SavePath.Text.Trim());
         RefreshButton.OnPressed += _ => RequestState();
         SaveNowButton.OnPressed += _ => _system.SaveNow();
+
+        if (_system.LastState is { } state)
+            UpdateState(state);
     }
 
     public void RequestState()

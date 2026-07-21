@@ -23,7 +23,7 @@ public sealed partial class InterserverTransferSystem
                 {
                     _catalog[peer.Id] = new InterserverServerInfo(peer.Id, peer.DisplayName,
                         peer.PublicAddress, new List<InterserverMapInfo>(), false,
-                        response?.Error ?? "Недоступен");
+                        response?.Error ?? Loc.GetString("interserver-catalog-unavailable"));
                 }
                 else
                 {

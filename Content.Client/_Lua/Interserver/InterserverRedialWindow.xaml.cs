@@ -5,6 +5,9 @@ using Robust.Client.UserInterface.XAML;
 
 namespace Content.Client._Lua.Interserver;
 
+/// <summary>
+/// Shows the destination address during an interserver transfer and allows manual copying or a redial retry.
+/// </summary>
 [GenerateTypedNameReferences]
 public sealed partial class InterserverRedialWindow : DefaultWindow
 {

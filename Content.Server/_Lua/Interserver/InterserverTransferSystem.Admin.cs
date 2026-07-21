@@ -73,13 +73,23 @@ public sealed partial class InterserverTransferSystem
             SendAdminState(args.SenderSession, "Список содержит неизвестную локальную карту");
             return;
         }
+        var peerId = ev.Id.Trim();
+        var sharedSecret = ev.SharedSecret.Trim();
+        if (string.IsNullOrEmpty(sharedSecret))
+        {
+            lock (_registryLock)
+            {
+                sharedSecret = _registry.Peers.FirstOrDefault(x =>
+                    string.Equals(x.Id, peerId, StringComparison.OrdinalIgnoreCase))?.SharedSecret ?? string.Empty;
+            }
+        }
         var peer = new InterserverPeerRecord
         {
-            Id = ev.Id.Trim(),
+            Id = peerId,
             DisplayName = ev.DisplayName.Trim(),
             ApiUrl = ev.ApiUrl.Trim().TrimEnd('/'),
             PublicAddress = ev.PublicAddress.Trim(),
-            SharedSecret = ev.SharedSecret.Trim(),
+            SharedSecret = sharedSecret,
             Approved = ev.Approved,
             AllowedMapIds = allowed,
         };
@@ -152,7 +162,7 @@ public sealed partial class InterserverTransferSystem
         {
             peers = _registry.Peers.OrderBy(x => x.Id, StringComparer.OrdinalIgnoreCase).Select(x =>
                 new InterserverAdminPeerInfo(x.Id, x.DisplayName, x.ApiUrl, x.PublicAddress,
-                    x.SharedSecret, x.Approved, string.Join(',', x.AllowedMapIds))).ToList();
+                    !string.IsNullOrEmpty(x.SharedSecret), x.Approved, string.Join(',', x.AllowedMapIds))).ToList();
         }
         RaiseNetworkEvent(new InterserverAdminStateEvent(
             _cfg.GetCVar(CLVars.InterserverEnabled),

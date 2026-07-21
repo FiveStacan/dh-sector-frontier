@@ -11,3 +11,4 @@ admin-ui-interserver-test-peer = Проверить связь
 admin-ui-interserver-remove-peer = Удалить
 admin-ui-interserver-refresh = Обновить
 admin-ui-interserver-local-maps = Доступные ID локальных карт: { $maps }
+admin-ui-interserver-secret-configured = Секрет уже настроен; оставьте поле пустым, чтобы сохранить его

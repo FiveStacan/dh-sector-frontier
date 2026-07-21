@@ -75,7 +75,10 @@ public sealed partial class InterserverTab : Control
         PeerName.Text = peer.DisplayName;
         ApiUrl.Text = peer.ApiUrl;
         PeerPublicAddress.Text = peer.PublicAddress;
-        SharedSecret.Text = peer.SharedSecret;
+        SharedSecret.Text = string.Empty;
+        SharedSecret.PlaceHolder = peer.SecretConfigured
+            ? Loc.GetString("admin-ui-interserver-secret-configured")
+            : string.Empty;
         AllowedMaps.Text = peer.AllowedMaps;
         Approved.Pressed = peer.Approved;
     }
@@ -87,6 +90,7 @@ public sealed partial class InterserverTab : Control
         ApiUrl.Text = string.Empty;
         PeerPublicAddress.Text = string.Empty;
         SharedSecret.Text = string.Empty;
+        SharedSecret.PlaceHolder = string.Empty;
         AllowedMaps.Text = string.Empty;
         Approved.Pressed = false;
     }

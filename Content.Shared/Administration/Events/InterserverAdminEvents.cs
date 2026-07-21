@@ -56,7 +56,7 @@ public sealed class InterserverAdminPeerInfo
     public string DisplayName { get; }
     public string ApiUrl { get; }
     public string PublicAddress { get; }
-    public string SharedSecret { get; }
+    public bool SecretConfigured { get; }
     public bool Approved { get; }
     public string AllowedMaps { get; }
 
@@ -65,7 +65,7 @@ public sealed class InterserverAdminPeerInfo
         string displayName,
         string apiUrl,
         string publicAddress,
-        string sharedSecret,
+        bool secretConfigured,
         bool approved,
         string allowedMaps)
     {
@@ -73,7 +73,7 @@ public sealed class InterserverAdminPeerInfo
         DisplayName = displayName;
         ApiUrl = apiUrl;
         PublicAddress = publicAddress;
-        SharedSecret = sharedSecret;
+        SecretConfigured = secretConfigured;
         Approved = approved;
         AllowedMaps = allowedMaps;
     }

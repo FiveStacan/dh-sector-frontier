@@ -5,6 +5,7 @@ namespace Content.Server._Lua.Interserver;
 /// <summary>Protocol invariants shared by HTTP handling, recovery code and tests.</summary>
 public static class InterserverTransferProtocol
 {
+    /// <summary>Checks that a repeated reservation matches the original authenticated transfer identity.</summary>
     public static bool MatchesReservation(
         InterserverTransferRecord record,
         InterserverReserveRequest request,
@@ -47,6 +48,9 @@ public static class InterserverTransferProtocol
     public static bool IsStaleOwnershipEpoch(long incomingEpoch, IEnumerable<long> existingEpochs) =>
         existingEpochs.Any(x => x > incomingEpoch);
 
+    /// <summary>
+    /// Finds the newest committed passenger redirect unless a newer incoming transfer has superseded it.
+    /// </summary>
     public static InterserverTransferRecord? FindCurrentOutgoingRoute(
         string passengerUserId,
         IEnumerable<InterserverTransferRecord> outbox,
@@ -69,6 +73,7 @@ public static class InterserverTransferProtocol
             : outgoing;
     }
 
+    /// <summary>Checks whether a journal stage transition preserves the ownership protocol invariants.</summary>
     public static bool CanTransition(InterserverJournalStage from, InterserverJournalStage to)
     {
         if (from == to)

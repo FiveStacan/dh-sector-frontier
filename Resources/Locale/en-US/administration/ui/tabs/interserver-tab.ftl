@@ -11,3 +11,4 @@ admin-ui-interserver-test-peer = Test connection
 admin-ui-interserver-remove-peer = Remove
 admin-ui-interserver-refresh = Refresh
 admin-ui-interserver-local-maps = Available local map IDs: { $maps }
+admin-ui-interserver-secret-configured = A secret is already configured; leave blank to keep it

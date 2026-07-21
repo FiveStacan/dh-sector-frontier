@@ -47,7 +47,9 @@ public sealed partial class LongRangeBssScreen : BoxContainer
         for (var i = 0; i < _servers.Count; i++)
         {
             var server = _servers[i];
-            ServerSelector.AddItem(server.Online ? server.Name : $"{server.Name} (offline)", i);
+            ServerSelector.AddItem(server.Online
+                ? server.Name
+                : Loc.GetString("long-range-bss-server-offline", ("server", server.Name)), i);
         }
 
         var serverIndex = selectedServerId == null
@@ -93,7 +95,7 @@ public sealed partial class LongRangeBssScreen : BoxContainer
         var mapIndex = selectedMapId == null ? 0 : _selectedServer.Maps.FindIndex(x => x.Id == selectedMapId);
         if (mapIndex < 0 && _selectedServer.Maps.Count > 0)
             mapIndex = 0;
-        if (mapIndex >= 0)
+        if (mapIndex >= 0 && _selectedServer.Maps.Count > 0)
         {
             MapSelector.SelectId(mapIndex);
             _selectedMap = _selectedServer.Maps[mapIndex];

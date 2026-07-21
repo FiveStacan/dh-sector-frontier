@@ -2,6 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace Content.Server._Lua.Interserver;
 
+/// <summary>Persistent stages of an incoming or outgoing interserver transfer.</summary>
 public enum InterserverJournalStage
 {
     Reserved,
@@ -14,12 +15,14 @@ public enum InterserverJournalStage
     Failed,
 }
 
+/// <summary>Persistent registry of configured interserver peers.</summary>
 public sealed class InterserverRegistryFile
 {
     public int Version { get; set; } = 1;
     public List<InterserverPeerRecord> Peers { get; set; } = new();
 }
 
+/// <summary>Configuration and authentication data for a trusted interserver peer.</summary>
 public sealed class InterserverPeerRecord
 {
     public string Id { get; set; } = string.Empty;
@@ -32,12 +35,14 @@ public sealed class InterserverPeerRecord
     public List<string> AllowedMapIds { get; set; } = new();
 }
 
+/// <summary>Persistent journal containing recoverable interserver transfer records.</summary>
 public sealed class InterserverJournalFile
 {
     public int Version { get; set; } = 1;
     public List<InterserverTransferRecord> Transfers { get; set; } = new();
 }
 
+/// <summary>Durable ownership, routing, snapshot, and reservation data for one transfer.</summary>
 public sealed class InterserverTransferRecord
 {
     public string TransferId { get; set; } = string.Empty;
@@ -62,7 +67,10 @@ public sealed class InterserverTransferRecord
     public string Error { get; set; } = string.Empty;
 }
 
+/// <summary>Requests the destination catalog exposed to an authenticated source server.</summary>
 public sealed record InterserverCatalogRequest(int ProtocolVersion, string SourceServerId);
+
+/// <summary>Returns the destination server identity, address, and allowed map catalog.</summary>
 public sealed record InterserverCatalogResponse(
     bool Success,
     string ServerId,
@@ -70,8 +78,11 @@ public sealed record InterserverCatalogResponse(
     string PublicAddress,
     List<InterserverCatalogMap> Maps,
     string? Error = null);
+
+/// <summary>Identifies a logical destination map published in an interserver catalog.</summary>
 public sealed record InterserverCatalogMap(string Id, string Name);
 
+/// <summary>Requests collision-free arrival space for a shuttle ownership epoch.</summary>
 public sealed record InterserverReserveRequest(
     int ProtocolVersion,
     string TransferId,
@@ -82,6 +93,7 @@ public sealed record InterserverReserveRequest(
     float Width,
     float Height);
 
+/// <summary>Uploads a verified shuttle snapshot and its passenger identities.</summary>
 public sealed record InterserverUploadRequest(
     int ProtocolVersion,
     string TransferId,
@@ -92,11 +104,13 @@ public sealed record InterserverUploadRequest(
     string SnapshotBase64,
     List<string> PassengerUserIds);
 
+/// <summary>Identifies a transfer for commit, status, or abort operations.</summary>
 public sealed record InterserverTransferRequest(
     int ProtocolVersion,
     string TransferId,
     string SourceServerId);
 
+/// <summary>Reports the durable destination stage and optional arrival or routing information.</summary>
 public sealed record InterserverTransferResponse(
     bool Success,
     string Stage,

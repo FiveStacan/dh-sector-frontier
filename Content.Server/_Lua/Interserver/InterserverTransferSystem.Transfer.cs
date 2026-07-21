@@ -36,46 +36,47 @@ public sealed partial class InterserverTransferSystem
 
         if (!_cfg.GetCVar(CLVars.InterserverEnabled))
         {
-            SetConsoleError(primary.Value, "Межсерверные перелёты отключены");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-disabled"));
             return;
         }
         if (!TryGetPeer(serverId, out var peer) || !IsValidIdentifier(destinationMapId))
         {
-            SetConsoleError(primary.Value, "Сервер или карта назначения не разрешены");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-destination-not-allowed"));
             return;
         }
         if (!_catalog.TryGetValue(peer.Id, out var catalog) || !catalog.Online ||
             !catalog.Maps.Any(x => string.Equals(x.Id, destinationMapId, StringComparison.OrdinalIgnoreCase)))
         {
-            SetConsoleError(primary.Value, "Сервер назначения недоступен или больше не публикует эту карту");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-destination-unavailable"));
             return;
         }
 
         if (Transform(actor).GridUid != primary || !TryComp<ShuttleComponent>(primary, out var shuttle))
         {
-            SetConsoleError(primary.Value, "Управлять дальним БСС можно только с шаттла");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-not-on-shuttle"));
             return;
         }
         if (!TryComp<PilotComponent>(actor, out var pilot) || pilot.Console != console)
         {
-            SetConsoleError(primary.Value, "Для запуска необходимо занять место пилота у этой консоли");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-not-piloting"));
             return;
         }
         if (!_shuttle.CanFTL(primary.Value, out var reason))
         {
-            SetConsoleError(primary.Value, reason ?? "БСС недоступен");
+            SetConsoleError(primary.Value, reason ?? Loc.GetString("interserver-transfer-error-ftl-unavailable"));
             return;
         }
         if (_active.Values.Any(x => x.Grids.Contains(primary.Value)))
         {
-            SetConsoleError(primary.Value, "Для этого шаттла уже выполняется межсерверный перелёт");
+            SetConsoleError(primary.Value, Loc.GetString("interserver-transfer-error-already-active"));
             return;
         }
 
         var grids = new HashSet<EntityUid>();
         if (!_shuttle.GetAllFTLShuttles(primary.Value, grids, out var groupReason))
         {
-            SetConsoleError(primary.Value, groupReason ?? "Не удалось определить сцепленную группу шаттлов");
+            SetConsoleError(primary.Value,
+                groupReason ?? Loc.GetString("interserver-transfer-error-group-unavailable"));
             return;
         }
 
@@ -188,13 +189,15 @@ public sealed partial class InterserverTransferSystem
             transfer.OperationInFlight = false;
             if (!StillOwnsSourceGrid(transfer))
             {
-                FailOutgoing(transfer, "Исходный шаттл исчез во время резервирования");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-source-lost-reserving"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
             if (response is not { Success: true })
             {
-                FailOutgoing(transfer, response?.Error ?? failure?.Message ?? "Сервер назначения не ответил");
+                FailOutgoing(transfer,
+                    response?.Error ?? failure?.Message ??
+                    Loc.GetString("interserver-transfer-error-destination-no-response"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
@@ -206,7 +209,7 @@ public sealed partial class InterserverTransferSystem
             SaveOutbox();
             if (!TryComp<ShuttleComponent>(transfer.PrimaryGrid, out var shuttle))
             {
-                FailOutgoing(transfer, "Шаттл исчез до начала FTL");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-source-lost-before-ftl"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
@@ -215,20 +218,22 @@ public sealed partial class InterserverTransferSystem
             if (!_shuttle.GetAllFTLShuttles(transfer.PrimaryGrid, currentGroup, out var groupReason) ||
                 !currentGroup.SetEquals(transfer.Grids))
             {
-                FailOutgoing(transfer, groupReason ?? "Состав сцепленной группы изменился; запустите перелёт повторно");
+                FailOutgoing(transfer,
+                    groupReason ?? Loc.GetString("interserver-transfer-error-group-changed"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
             var currentSize = GetTransferBounds(currentGroup).Size;
             if (Math.Max(currentSize.X, currentSize.Y) > transfer.Record.Width + 0.1f)
             {
-                FailOutgoing(transfer, "Габариты сцепленной группы изменились; запустите перелёт повторно");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-size-changed"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
             if (!_shuttle.CanFTL(transfer.PrimaryGrid, out var ftlReason))
             {
-                FailOutgoing(transfer, ftlReason ?? "БСС перестал быть доступен до начала перелёта");
+                FailOutgoing(transfer,
+                    ftlReason ?? Loc.GetString("interserver-transfer-error-ftl-became-unavailable"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
@@ -239,7 +244,7 @@ public sealed partial class InterserverTransferSystem
                 startupTime: 5f, hyperspaceTime: 120f);
             if (!HasComp<FTLComponent>(transfer.PrimaryGrid))
             {
-                FailOutgoing(transfer, "Не удалось запустить исходный шаттл в FTL");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-ftl-start-failed"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
@@ -273,7 +278,8 @@ public sealed partial class InterserverTransferSystem
         }
         catch (Exception e)
         {
-            FailOutgoing(transfer, $"Не удалось записать снимок шаттла: {e.Message}");
+            FailOutgoing(transfer,
+                Loc.GetString("interserver-transfer-error-snapshot-write", ("error", e.Message)));
             _ = AbortRemoteAsync(transfer);
             return;
         }
@@ -321,7 +327,7 @@ public sealed partial class InterserverTransferSystem
         using var writer = new StringWriter();
         if (!_loader.TrySaveGeneric(roots, writer, out _, options))
         {
-            error = "Не удалось сериализовать шаттл";
+            error = Loc.GetString("interserver-transfer-error-snapshot-serialize");
             return false;
         }
 
@@ -329,14 +335,15 @@ public sealed partial class InterserverTransferSystem
         var limit = Math.Clamp(_cfg.GetCVar(CLVars.InterserverMaxSnapshotMiB), 1, 512) * 1024L * 1024L;
         if (bytes.LongLength > limit)
         {
-            error = $"Снимок шаттла превышает лимит ({bytes.LongLength / 1024 / 1024} МиБ)";
+            error = Loc.GetString("interserver-transfer-error-snapshot-too-large",
+                ("size", bytes.LongLength / 1024 / 1024));
             bytes = Array.Empty<byte>();
             return false;
         }
         passengerIds = passengerIds.Distinct().ToList();
         if (passengerIds.Count > 256)
         {
-            error = "На сцепленной группе слишком много пассажиров (максимум 256)";
+            error = Loc.GetString("interserver-transfer-error-too-many-passengers", ("limit", 256));
             bytes = Array.Empty<byte>();
             passengerIds.Clear();
             return false;
@@ -375,13 +382,14 @@ public sealed partial class InterserverTransferSystem
             transfer.OperationInFlight = false;
             if (!StillOwnsSourceGrid(transfer))
             {
-                FailOutgoing(transfer, "Исходный шаттл исчез во время загрузки снимка");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-source-lost-uploading"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
             if (response is not { Success: true })
             {
-                FailOutgoing(transfer, response?.Error ?? failure?.Message ?? "Ошибка загрузки шаттла");
+                FailOutgoing(transfer,
+                    response?.Error ?? failure?.Message ?? Loc.GetString("interserver-transfer-error-upload"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
@@ -424,7 +432,8 @@ public sealed partial class InterserverTransferSystem
 
             // A timed-out commit is ambiguous and must never be treated as a failure. Repeat the idempotent commit;
             // only a proven non-commit is safe to abort and retain locally.
-            transfer.Record.Error = failure?.Message ?? response?.Error ?? "Проверка результата commit";
+            transfer.Record.Error = failure?.Message ?? response?.Error ??
+                Loc.GetString("interserver-transfer-error-checking-commit");
             SaveOutbox();
             HoldAmbiguousSourceInFtl(transfer.PrimaryGrid);
             transfer.OperationInFlight = true;
@@ -460,12 +469,12 @@ public sealed partial class InterserverTransferSystem
             }
             if (InterserverTransferProtocol.ProvesDestinationDidNotCommit(response))
             {
-                FailOutgoing(transfer, "Назначение не подтвердило commit; шаттл возвращается");
+                FailOutgoing(transfer, Loc.GetString("interserver-transfer-error-commit-not-confirmed"));
                 _ = AbortRemoteAsync(transfer);
                 return;
             }
 
-            transfer.Record.Error = "Связь потеряна после commit; владение будет проверено повторно";
+            transfer.Record.Error = Loc.GetString("interserver-transfer-error-commit-connection-lost");
             transfer.NextRetry = _timing.RealTime + TimeSpan.FromSeconds(10);
             HoldAmbiguousSourceInFtl(transfer.PrimaryGrid);
             SaveOutbox();
