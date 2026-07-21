@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared.CriminalRecords;
 using Content.Shared.StationRecords;
 using Robust.Shared.Utility;
 
@@ -31,10 +32,30 @@ public sealed partial class StationRecordSet
     private HashSet<uint> _recentlyAccessed = new();
 
     /// <summary>
-    /// Dictionary between a record's type and then each record indexed by id.
+    /// Persisted record tables. The old implementation stored these as
+    /// Dictionary&lt;Type, Dictionary&lt;uint, object&gt;&gt;, which cannot be represented by the YAML serializer
+    /// (System.Type has no data definition). Keep every supported record type strongly typed instead.
     /// </summary>
-    [DataField]
-    private Dictionary<Type, Dictionary<uint, object>> _tables = new();
+    [DataField("generalRecords")]
+    private Dictionary<uint, GeneralStationRecord> _generalRecords = new();
+
+    [DataField("criminalRecords")]
+    private Dictionary<uint, CriminalRecord> _criminalRecords = new();
+
+    // Preserve the generic API for downstream record types. Unknown tables continue to work for the current
+    // process, but must be promoted to an explicit typed DataField above before they can be persisted safely.
+    private Dictionary<Type, Dictionary<uint, object>> _runtimeOnlyTables = new();
+
+    private Dictionary<uint, T>? GetPersistedTable<T>()
+    {
+        if (typeof(T) == typeof(GeneralStationRecord))
+            return (Dictionary<uint, T>) (object) _generalRecords;
+
+        if (typeof(T) == typeof(CriminalRecord))
+            return (Dictionary<uint, T>) (object) _criminalRecords;
+
+        return null;
+    }
 
     /// <summary>
     ///     Gets all records of a specific type stored in the record set.
@@ -43,12 +64,21 @@ public sealed partial class StationRecordSet
     /// <returns>An enumerable object that contains a pair of both a station key, and the record associated with it.</returns>
     public IEnumerable<(uint, T)> GetRecordsOfType<T>()
     {
-        if (!_tables.ContainsKey(typeof(T)))
+        if (GetPersistedTable<T>() is { } persisted)
         {
+            foreach (var (key, entry) in persisted)
+            {
+                _recentlyAccessed.Add(key);
+                yield return (key, entry);
+            }
+
             yield break;
         }
 
-        foreach (var (key, entry) in _tables[typeof(T)])
+        if (!_runtimeOnlyTables.TryGetValue(typeof(T), out var runtimeTable))
+            yield break;
+
+        foreach (var (key, entry) in runtimeTable)
         {
             if (entry is not T cast)
             {
@@ -89,7 +119,10 @@ public sealed partial class StationRecordSet
             return;
 
         Keys.Add(key);
-        _tables.GetOrNew(typeof(T))[key] = entry;
+        if (GetPersistedTable<T>() is { } persisted)
+            persisted[key] = entry;
+        else
+            _runtimeOnlyTables.GetOrNew(typeof(T))[key] = entry;
     }
 
     /// <summary>
@@ -103,14 +136,30 @@ public sealed partial class StationRecordSet
     {
         entry = default;
 
-        if (!Keys.Contains(key)
-            || !_tables.TryGetValue(typeof(T), out var table)
-            || !table.TryGetValue(key, out var entryObject))
+        if (!Keys.Contains(key))
         {
             return false;
         }
 
-        entry = (T) entryObject;
+        if (GetPersistedTable<T>() is { } persisted)
+        {
+            if (!persisted.TryGetValue(key, out entry))
+                return false;
+        }
+        else
+        {
+            if (!_runtimeOnlyTables.TryGetValue(typeof(T), out var runtimeTable)
+                || !runtimeTable.TryGetValue(key, out var entryObject))
+            {
+                return false;
+            }
+
+            entry = (T) entryObject;
+        }
+
+        if (entry is null)
+            return false;
+
         _recentlyAccessed.Add(key);
 
         return true;
@@ -124,9 +173,14 @@ public sealed partial class StationRecordSet
     /// <returns>True if the entry exists, false otherwise.</returns>
     public bool HasRecordEntry<T>(uint key)
     {
-        return Keys.Contains(key)
-               && _tables.TryGetValue(typeof(T), out var table)
-               && table.ContainsKey(key);
+        if (!Keys.Contains(key))
+            return false;
+
+        if (GetPersistedTable<T>() is { } persisted)
+            return persisted.ContainsKey(key);
+
+        return _runtimeOnlyTables.TryGetValue(typeof(T), out var runtimeTable)
+               && runtimeTable.ContainsKey(key);
     }
 
     /// <summary>
@@ -164,7 +218,9 @@ public sealed partial class StationRecordSet
         if (!Keys.Remove(key))
             return false;
 
-        foreach (var table in _tables.Values)
+        _generalRecords.Remove(key);
+        _criminalRecords.Remove(key);
+        foreach (var table in _runtimeOnlyTables.Values)
         {
             table.Remove(key);
         }
@@ -172,5 +228,3 @@ public sealed partial class StationRecordSet
         return true;
     }
 }
-
-

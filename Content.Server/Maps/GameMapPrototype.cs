@@ -45,6 +45,11 @@ public sealed partial class GameMapPrototype : IPrototype
     [DataField(required: true)]
     public ResPath MapPath { get; private set; } = default!;
 
+    /// <summary>
+    /// True for the runtime-only clone whose map path points at a persistence save in UserData.
+    /// </summary>
+    public bool IsPersistence { get; private set; }
+
     [DataField("stations", required: true)]
     private Dictionary<string, StationConfig> _stations = new();
 
@@ -63,7 +68,15 @@ public sealed partial class GameMapPrototype : IPrototype
             ID = ID,
             MapName = MapName,
             MapPath = mapPath,
-            _stations = _stations
+            _stations = _stations,
+            IsPersistence = true,
+            IsGrid = false,
+            MaxRandomOffset = 0f,
+            RandomRotation = false,
+            Fallback = Fallback,
+            MinPlayers = MinPlayers,
+            MaxPlayers = MaxPlayers,
+            _conditions = _conditions,
         };
     }
 }

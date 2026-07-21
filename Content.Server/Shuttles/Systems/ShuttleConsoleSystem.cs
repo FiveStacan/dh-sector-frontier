@@ -8,6 +8,8 @@ using Content.Server.Station.Systems;
 using Content.Server._Lua.Shuttles.Systems; // Lua
 using Content.Shared._Lua.Shuttles.Components; // Lua
 using Content.Shared._Lua.Starmap;
+using Content.Shared._Lua.Interserver;
+using Content.Server._Lua.Interserver;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.Shuttles.Events; // Frontier
 using Content.Shared.Access.Systems; // Frontier
@@ -57,6 +59,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     [Dependency] private readonly ILogManager _log = default!;
     [Dependency] private readonly FireControlSystem _fireControl = default!; // Lua
     [Dependency] private readonly ShuttleTabletSystem _tablet = default!; // Lua
+    [Dependency] private readonly InterserverTransferSystem _interserverTransfers = default!; // Dark Haven
 
     private ISawmill _sawmill = default!;
 
@@ -95,6 +98,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             subs.Event<ToggleFTLLockRequestMessage>(OnToggleFTLLock);
             subs.Event<WarpToStarMessage>(OnWarpToStarMessage); // Lua
             subs.Event<ShuttleConsoleStarMapVisibilityMessage>(OnStarMapVisibilityMessage); // Lua
+            subs.Event<InterserverRefreshDestinationsMessage>(OnInterserverRefresh); // Dark Haven
+            subs.Event<InterserverStartTransferMessage>(OnInterserverStart); // Dark Haven
             subs.Event<ShuttleConsoleFireMessage>(OnShuttleConsoleFire); // Lua
             subs.Event<ShuttleConsoleRefreshFireControlMessage>(OnShuttleConsoleRefreshFireControl); // Lua
             subs.Event<BoundUIClosedEvent>(OnConsoleUIClose);
@@ -122,6 +127,20 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
         InitializeNFDrone(); // Frontier: add our drone subscriptions
 
+    }
+
+    private void OnInterserverRefresh(EntityUid uid, ShuttleConsoleComponent component, InterserverRefreshDestinationsMessage args)
+    {
+        _interserverTransfers.RequestCatalogRefresh();
+        DockingInterfaceState? dockState = null;
+        UpdateState(uid, ref dockState);
+    }
+
+    private void OnInterserverStart(EntityUid uid, ShuttleConsoleComponent component, InterserverStartTransferMessage args)
+    {
+        if (args.Actor is not { Valid: true } actor)
+            return;
+        _interserverTransfers.StartTransfer(uid, actor, args.ServerId, args.MapId);
     }
 
     private void OnStarMapVisibilityMessage(EntityUid uid, ShuttleConsoleComponent component, ShuttleConsoleStarMapVisibilityMessage args)

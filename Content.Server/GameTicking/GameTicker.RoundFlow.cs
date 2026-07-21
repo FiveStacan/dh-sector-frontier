@@ -7,8 +7,10 @@ using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
+using Content.Server.Persistence.Components;
 using Content.Server.Roles;
 using Content.Server.Shuttles.Systems; // Dark Haven - persistence: wait out in-flight FTL before autosaving
+using Content.Server._Lua.Interserver;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
@@ -107,6 +109,11 @@ namespace Content.Server.GameTicking
             if (_map.MapExists(DefaultMap))
                 return;
 
+            LoadedPersistenceSave = false;
+            _loadedPersistenceFromBackup = false;
+            _persistencePrimaryLoadFailed = false;
+            ResetPersistenceSaveMetadata();
+
             AddGamePresetRules();
 
             var maps = new List<GameMapPrototype>();
@@ -155,8 +162,61 @@ namespace Content.Server.GameTicking
 
             for (var i = 0; i < maps.Count; i++)
             {
-                LoadGameMap(maps[i], out var mapId);
-                DebugTools.Assert(!_map.IsInitialized(mapId));
+                var gameMap = maps[i];
+                var mapId = MapId.Nullspace;
+                try
+                {
+                    LoadGameMap(gameMap, out mapId);
+                    if (i == 0 && gameMap.IsPersistence)
+                    {
+                        LoadedPersistenceSave = true;
+                        _loadedPersistenceFromBackup = IsPersistenceBackupPath(gameMap.MapPath);
+                        _persistencePrimaryLoadFailed = _loadedPersistenceFromBackup;
+                    }
+                }
+                catch (Exception error) when (i == 0 && gameMap.IsPersistence)
+                {
+                    // A serialization failure in older builds could leave the configured save truncated. Do not
+                    // make that prevent the server from booting: try the rollback, then the configured start map.
+                    _persistencePrimaryLoadFailed = true;
+                    Log.Error($"[Persistence] Failed to load primary save {gameMap.MapPath}:\n{error}");
+
+                    var startMap = GetPersistenceStartMap();
+                    var backupPath = PersistenceBackupPath(
+                        new ResPath(_cfg.GetCVar(CCVars.GameMap)).ToRootedPath());
+                    var loadedBackup = false;
+
+                    if (!IsPersistenceBackupPath(gameMap.MapPath) &&
+                        _resourceManager.UserData.Exists(backupPath))
+                    {
+                        try
+                        {
+                            LoadGameMap(startMap.Persistence(backupPath), out mapId);
+                            LoadedPersistenceSave = true;
+                            _loadedPersistenceFromBackup = true;
+                            loadedBackup = true;
+                            Log.Warning($"[Persistence] Restored the world from rollback save {backupPath}.");
+                        }
+                        catch (Exception backupError)
+                        {
+                            Log.Error($"[Persistence] Rollback save {backupPath} also failed to load:\n{backupError}");
+                        }
+                    }
+
+                    if (!loadedBackup)
+                    {
+                        LoadGameMap(startMap, out mapId);
+                        Log.Warning($"[Persistence] Starting from map prototype {startMap.ID}; " +
+                                    "the damaged save was left in place for diagnosis.");
+                    }
+                }
+
+                // Runtime persistence saves preserve the post-MapInit lifecycle of every entity. Re-running
+                // MapInit would duplicate actions and other one-time setup, so an initialized map is the expected
+                // state here. Fresh prototype maps still have to remain pre-init until StartRound below.
+                DebugTools.Assert(i == 0 && LoadedPersistenceSave
+                    ? _map.IsInitialized(mapId)
+                    : !_map.IsInitialized(mapId));
 
                 if (i == 0)
                     DefaultMap = mapId;
@@ -164,7 +224,32 @@ namespace Content.Server.GameTicking
 
             // Lua persistence: additively restore secondary Lua sector maps from the sibling save (if any),
             // before RoundStartingEvent triggers SectorSystem to generate fresh ones.
-            RestoreSectors();
+            if (LoadedPersistenceSave)
+            {
+                RestorePersistenceSaveTimestamp();
+                RestoreSectors();
+            }
+        }
+
+        private GameMapPrototype GetPersistenceStartMap()
+        {
+            var startMapId = _cfg.GetCVar(CCVars.PersistenceMap);
+            if (startMapId == "Empty" ||
+                !_prototypeManager.TryIndex<GameMapPrototype>(startMapId, out var startMap))
+            {
+                startMap = _prototypeManager.Index<GameMapPrototype>(GameMapManager.DefaultPersistenceStartMap);
+            }
+
+            return startMap;
+        }
+
+        private bool IsPersistenceBackupPath(ResPath path)
+        {
+            var savePath = _cfg.GetCVar(CCVars.GameMap);
+            if (string.IsNullOrWhiteSpace(savePath))
+                return false;
+
+            return path.ToRootedPath() == PersistenceBackupPath(new ResPath(savePath).ToRootedPath());
         }
 
         // Frontier persistence (session-save): writes the current sector map (DefaultMap) to the
@@ -172,35 +257,82 @@ namespace Content.Server.GameTicking
         // game.usepersistence is enabled. This is the automatic counterpart to the `persistencesave`
         // admin command — together with the existing load-on-start path it makes the world survive a
         // server restart.
-        private void SaveMaps()
+        private bool SaveMaps()
         {
             var savePath = _cfg.GetCVar(CCVars.GameMap);
             if (string.IsNullOrWhiteSpace(savePath))
             {
                 _adminLogger.Add(LogType.EventRan, LogImpact.Medium,
                     $"Persistence autosave skipped: the game.map save path is empty.");
-                return;
+                return false;
             }
 
+            var targetMapPath = new ResPath(savePath).ToRootedPath();
+            var temporaryMapPath = PersistenceTempPath(targetMapPath);
+            var targetSectorPath = SectorSavePath(targetMapPath.ToString()).ToRootedPath();
+            var temporarySectorPath = SectorSavePath(temporaryMapPath.ToString()).ToRootedPath();
+            DeletePersistenceFileIfExists(temporaryMapPath);
+            DeletePersistenceFileIfExists(temporarySectorPath);
+
+            var mainMapSaved = false;
+            var saveUnixTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            var persistenceMetadata = EnsureComp<PersistenceSaveMetadataComponent>(_map.GetMap(DefaultMap));
+            persistenceMetadata.SaveUnixTime = saveUnixTime;
+            persistenceMetadata.CompletedInterserverTransfers = EntityManager
+                .SystemOrNull<InterserverTransferSystem>()?.GetCompletedIncomingTransferIds()
+                .ToHashSet(StringComparer.OrdinalIgnoreCase) ?? new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             _map.SetPaused(DefaultMap, true);
             // Dark Haven - persistence: unpause in finally so a serialization exception can't leave the main
             // station map frozen (no physics/atmos/timers) for the rest of the round.
             try
             {
                 var start = _gameTiming.CurTime;
-                var saveStat = _loader.TrySaveMap(DefaultMap, new ResPath(savePath));
+                mainMapSaved = _loader.TrySaveMap(DefaultMap, temporaryMapPath);
                 var end = _gameTiming.CurTime;
                 _adminLogger.Add(LogType.EventRan, LogImpact.Extreme,
-                    $"MAP SAVE STATUS: {saveStat} TIME TAKEN: {(end - start).TotalSeconds}");
+                    $"MAP SAVE STATUS: {mainMapSaved} TIME TAKEN: {(end - start).TotalSeconds}");
             }
             finally
             {
                 _map.SetPaused(DefaultMap, false);
             }
 
+            if (!mainMapSaved)
+            {
+                DeletePersistenceFileIfExists(temporaryMapPath);
+                DeletePersistenceFileIfExists(temporarySectorPath);
+                return false;
+            }
+
             // Lua persistence: also persist secondary Lua sector maps (and the shuttles/stations on them)
             // to a sibling file, so player ships left in other sectors survive a restart too.
-            SaveSectorMaps(savePath);
+            var sectorsSaved = SaveSectorMaps(temporaryMapPath.ToString(), out var wroteSectorFile);
+            if (!sectorsSaved)
+            {
+                DeletePersistenceFileIfExists(temporaryMapPath);
+                DeletePersistenceFileIfExists(temporarySectorPath);
+                return false;
+            }
+
+            try
+            {
+                PromotePersistenceFile(temporaryMapPath, targetMapPath, _persistencePrimaryLoadFailed);
+                if (wroteSectorFile)
+                    PromotePersistenceFile(temporarySectorPath, targetSectorPath, _persistencePrimaryLoadFailed);
+
+                _persistencePrimaryLoadFailed = false;
+                _loadedPersistenceFromBackup = false;
+                LoadedPersistenceSave = true;
+                _lastPersistenceSaveUnixTime = saveUnixTime;
+                return true;
+            }
+            catch (Exception error)
+            {
+                Log.Error($"[Persistence] Failed to publish completed save files:\n{error}");
+                DeletePersistenceFileIfExists(temporaryMapPath);
+                DeletePersistenceFileIfExists(temporarySectorPath);
+                return false;
+            }
         }
 
         public PreGameMapLoad RaisePreLoad(
@@ -478,7 +610,10 @@ namespace Content.Server.GameTicking
             }
 
             // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
-            _map.InitializeMap(DefaultMap);
+            if (_map.IsInitialized(DefaultMap))
+                _map.SetPaused(DefaultMap, false);
+            else
+                _map.InitializeMap(DefaultMap);
 
             SpawnPlayers(readyPlayers, readyPlayerProfiles, force);
 
@@ -873,8 +1008,10 @@ namespace Content.Server.GameTicking
                         {
                             _timeToNextSave = TimeSpan.Zero;
                             _warnings = 3;
-                            SaveMaps();
-                            SendServerMessage(Loc.GetString("persistence-autosave-saved"));
+                            var saved = SaveMaps();
+                            SendServerMessage(Loc.GetString(saved
+                                ? "persistence-autosave-saved"
+                                : "persistence-autosave-failed"));
                         }
                     }
                 }

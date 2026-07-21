@@ -1,0 +1,25 @@
+long-range-bss-tab = LONG-RANGE BSS
+long-range-bss-title = Long-range BSS
+long-range-bss-description = Travel to a sector hosted by another server. A free arrival location is selected automatically.
+long-range-bss-server = Destination server
+long-range-bss-map = Destination map
+long-range-bss-refresh = Refresh
+long-range-bss-start = Begin long-range jump
+long-range-bss-warning = Once committed, the shuttle enters FTL. Keep the client open until the reconnect prompt appears.
+long-range-bss-no-servers = No approved servers are currently available.
+long-range-bss-stage = Status: { $stage } { $status }
+long-range-bss-stage-Idle = ready
+long-range-bss-stage-Reserving = reserving arrival
+long-range-bss-stage-Charging = charging BSS
+long-range-bss-stage-Uploading = transferring shuttle
+long-range-bss-stage-Committing = committing ownership
+long-range-bss-stage-Redirecting = redirecting crew
+long-range-bss-stage-Arriving = arriving
+long-range-bss-stage-Completed = completed
+long-range-bss-stage-Failed = failed
+
+interserver-redial-title = Inter-sector transfer
+interserver-redial-text = The shuttle was accepted by “{ $server }”. Reconnecting now.
+interserver-redial-failed = If the launcher does not reconnect automatically, copy the address and connect manually; your character is waiting inside the shuttle.
+interserver-redial-copy = Copy address
+interserver-redial-retry = Retry redial

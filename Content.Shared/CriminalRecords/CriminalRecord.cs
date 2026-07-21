@@ -7,7 +7,7 @@ namespace Content.Shared.CriminalRecords;
 /// Criminal record for a crewmember.
 /// Can be viewed and edited in a criminal records console by security.
 /// </summary>
-[Serializable, NetSerializable, DataRecord]
+[Serializable, NetSerializable, DataRecord, DataDefinition]
 public sealed partial record CriminalRecord
 {
     /// <summary>
@@ -40,5 +40,22 @@ public sealed partial record CriminalRecord
 /// <summary>
 /// A line of criminal activity and the time it was added at.
 /// </summary>
-[Serializable, NetSerializable]
-public record struct CrimeHistory(TimeSpan AddTime, string Crime, string? InitiatorName);
+[Serializable, NetSerializable, DataDefinition]
+public partial record struct CrimeHistory
+{
+    [DataField]
+    public TimeSpan AddTime;
+
+    [DataField]
+    public string Crime;
+
+    [DataField]
+    public string? InitiatorName;
+
+    public CrimeHistory(TimeSpan addTime, string crime, string? initiatorName)
+    {
+        AddTime = addTime;
+        Crime = crime;
+        InitiatorName = initiatorName;
+    }
+}

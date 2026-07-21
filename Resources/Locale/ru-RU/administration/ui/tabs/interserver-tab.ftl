@@ -1,0 +1,13 @@
+admin-ui-interserver-local-title = Локальный сервер
+admin-ui-interserver-enabled = Включить межсерверные перелёты
+admin-ui-interserver-name = Отображаемое имя
+admin-ui-interserver-apply-local = Сохранить локальные настройки
+admin-ui-interserver-peer-title = Доверенные серверы и разрешения карт
+admin-ui-interserver-new-peer = Новый пир
+admin-ui-interserver-allowed-maps = Разрешённые карты (через запятую)
+admin-ui-interserver-approved = Подключение одобрено
+admin-ui-interserver-save-peer = Сохранить пир
+admin-ui-interserver-test-peer = Проверить связь
+admin-ui-interserver-remove-peer = Удалить
+admin-ui-interserver-refresh = Обновить
+admin-ui-interserver-local-maps = Доступные ID локальных карт: { $maps }

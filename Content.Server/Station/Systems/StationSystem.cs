@@ -134,6 +134,22 @@ public sealed partial class StationSystem : SharedStationSystem
 
     private void OnPostGameMapLoad(PostGameMapLoad ev)
     {
+        if (ev.GameMap.IsPersistence)
+        {
+            // Runtime saves contain the station entity itself and preserve each grid's StationMember link to it.
+            // Creating another station from the map prototype would duplicate job slots and leave one of the two
+            // stations without the correct spawn-point ownership, causing late joins to fail nondeterministically.
+            foreach (var grid in ev.Grids)
+            {
+                if (TryComp<StationMemberComponent>(grid, out var member) &&
+                    HasComp<StationDataComponent>(member.Station))
+                {
+                    _sawmill.Info($"Using restored station {ToPrettyString(member.Station)} for persistence map {ev.GameMap.ID}.");
+                    return;
+                }
+            }
+        }
+
         var dict = new Dictionary<string, List<EntityUid>>();
 
         // Iterate over all BecomesStation
@@ -653,4 +669,3 @@ public sealed class StationRenamedEvent : EntityEventArgs
         NewName = newName;
     }
 }
-

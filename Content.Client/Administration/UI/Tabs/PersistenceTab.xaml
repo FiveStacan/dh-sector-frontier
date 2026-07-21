@@ -1,0 +1,41 @@
+<Control
+    xmlns="https://spacestation14.io"
+    Margin="8"
+    MinSize="50 50">
+    <ScrollContainer VerticalExpand="True">
+        <BoxContainer Orientation="Vertical" SeparationOverride="8">
+            <Label Name="StatusLabel" Text="{Loc admin-ui-persistence-status-loading}" />
+            <Label Name="SaveFileLabel" />
+            <Label Name="NextSaveLabel" />
+            <Label Name="LastSaveLabel" />
+
+            <PanelContainer StyleClasses="BackgroundOpenBoth" Margin="0 4 0 0">
+                <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+                    <CheckBox Name="PersistenceEnabled"
+                              Text="{Loc admin-ui-persistence-enabled}" />
+                    <CheckBox Name="AutosaveEnabled"
+                              Text="{Loc admin-ui-persistence-autosave-enabled}" />
+
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="{Loc admin-ui-persistence-interval}" MinWidth="210" />
+                        <SpinBox Name="AutosaveInterval" MinWidth="120" HorizontalExpand="True" />
+                    </BoxContainer>
+
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="{Loc admin-ui-persistence-save-path}" MinWidth="210" />
+                        <LineEdit Name="SavePath" HorizontalExpand="True"
+                                  PlaceHolder="{Loc admin-ui-persistence-save-path-placeholder}" />
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Button Name="ApplyButton" Text="{Loc admin-ui-persistence-apply}" />
+                <Button Name="RefreshButton" Text="{Loc admin-ui-persistence-refresh}" />
+                <Button Name="SaveNowButton" Text="{Loc admin-ui-persistence-save-now}" />
+            </BoxContainer>
+
+            <Label Name="FeedbackLabel" />
+        </BoxContainer>
+    </ScrollContainer>
+</Control>

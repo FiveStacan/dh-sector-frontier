@@ -1,0 +1,25 @@
+long-range-bss-tab = ДАЛЬНИЙ БСС
+long-range-bss-title = Дальний БСС
+long-range-bss-description = Перелёт в сектор на другом сервере. Точка прибытия выбирается автоматически в свободном пространстве.
+long-range-bss-server = Сервер назначения
+long-range-bss-map = Карта назначения
+long-range-bss-refresh = Обновить
+long-range-bss-start = Начать дальний перелёт
+long-range-bss-warning = После подтверждения шаттл уйдёт в FTL. Не закрывайте клиент до появления окна переподключения.
+long-range-bss-no-servers = Нет доступных одобренных серверов.
+long-range-bss-stage = Состояние: { $stage } { $status }
+long-range-bss-stage-Idle = готово
+long-range-bss-stage-Reserving = резервирование места
+long-range-bss-stage-Charging = зарядка БСС
+long-range-bss-stage-Uploading = передача шаттла
+long-range-bss-stage-Committing = подтверждение владения
+long-range-bss-stage-Redirecting = переподключение экипажа
+long-range-bss-stage-Arriving = прибытие
+long-range-bss-stage-Completed = завершено
+long-range-bss-stage-Failed = ошибка
+
+interserver-redial-title = Межсекторный перелёт
+interserver-redial-text = Шаттл уже принят сервером «{ $server }». Выполняется переподключение.
+interserver-redial-failed = Если лаунчер не переподключит вас автоматически, скопируйте адрес и подключитесь вручную; ваш персонаж ожидает внутри шаттла.
+interserver-redial-copy = Скопировать адрес
+interserver-redial-retry = Повторить переподключение

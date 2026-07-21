@@ -1,0 +1,13 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc interserver-redial-title}"
+               SetSize="560 240">
+    <BoxContainer Orientation="Vertical" Margin="12" SeparationOverride="10">
+        <Label Name="InfoLabel" />
+        <Label Name="FailureLabel" Text="{Loc interserver-redial-failed}" ModulateSelfOverride="#E85D5D" />
+        <LineEdit Name="AddressLine" Editable="False" HorizontalExpand="True" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+            <Button Name="CopyButton" Text="{Loc interserver-redial-copy}" />
+            <Button Name="RetryButton" Text="{Loc interserver-redial-retry}" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>
