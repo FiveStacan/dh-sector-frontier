@@ -91,8 +91,6 @@ uplink-pirate-security-cyborg-module-desc = Мачете, энергетичес
 
 uplink-pirate-syndicate-magboots-name = Кроваво-красные магнитные сапоги
 uplink-pirate-syndicate-magboots-desc = Магнитные сапоги, созданные методом реверс инжиниринга, с мощным магнитным притяжением и встроенными двигателями. Вмещают 0,75 л газа.
-uplink-pirate-magboots-name = Пиратские магнитные сапоги
-uplink-pirate-magboots-desc = Магнитные сапоги, созданные методом реверс инжиниринга, с мощным магнитным притяжением и встроенными двигателями.
 
 uplink-pirate-syndicate-jetpack-name = Джетпак
 uplink-pirate-syndicate-jetpack-desc = Это реакктивный ранец - джетпак.
