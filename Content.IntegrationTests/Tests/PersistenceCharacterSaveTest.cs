@@ -224,9 +224,9 @@ public sealed class PersistenceCharacterSaveTest
             var restoredKey = new StationRecordKey(key.Id, loadedMap.Value.Owner);
             Assert.Multiple(() =>
             {
-                Assert.That(recordsSystem.TryGetRecord(restoredKey, out GeneralStationRecord? general, restored), Is.True);
+                Assert.That(recordsSystem.TryGetRecord(restoredKey, out GeneralStationRecord general, restored), Is.True);
                 Assert.That(general!.Name, Is.EqualTo("Persistence Test"));
-                Assert.That(recordsSystem.TryGetRecord(restoredKey, out CriminalRecord? criminal, restored), Is.True);
+                Assert.That(recordsSystem.TryGetRecord(restoredKey, out CriminalRecord criminal, restored), Is.True);
                 Assert.That(criminal!.Status, Is.EqualTo(SecurityStatus.Wanted));
                 Assert.That(criminal.Reason, Is.EqualTo("Persistence testing"));
             });
@@ -320,7 +320,7 @@ public sealed class PersistenceCharacterSaveTest
             minds.TransferTo(mind, character);
 
             Assert.That(loader.TrySaveMap(testMap.MapId, savePath), Is.True);
-            Assert.That(entities.TryGetComponent(character, out PersistentPlayerCharacterComponent? marker), Is.True);
+            Assert.That(entities.TryGetComponent(character, out PersistentPlayerCharacterComponent marker), Is.True);
             Assert.That(marker!.UserId, Is.EqualTo(session.UserId));
         });
 
