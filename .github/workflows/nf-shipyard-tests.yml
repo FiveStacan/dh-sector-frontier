@@ -10,6 +10,8 @@ on:
       - "Resources/Maps/_Lua/Shuttles/**/*.yml" # Lua
       - "Resources/Maps/_NF/Shuttles/**/*.yml" # Ship grids
       - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Shipyard prototypes
+      - "Resources/Maps/_DH/Shuttles/**/*.yml" # DH ship grids
+      - "Resources/Prototypes/_DH/Shipyard/**/*.yml" # DH shipyard prototypes
       - "Content.IntegrationTests/Tests/_NF/ShipyardTests.cs" # Shipyard tests
 
 jobs:

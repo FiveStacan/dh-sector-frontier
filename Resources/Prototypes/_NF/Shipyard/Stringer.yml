@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: Stringer
   description: stringer
-  price: 67
+  price: 27100
   category: Small
   group: Custom
   shuttlePath: /Maps/_NF/Shuttles/stringer.yml
