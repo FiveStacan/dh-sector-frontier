@@ -13,6 +13,8 @@
         <atmosTab:AtmosTab />
         <tabs:RoundTab />
         <tabs:ServerTab />
+        <tabs:PersistenceTab Name="PersistenceTabControl" Access="Public" />
+        <tabs:InterserverTab Name="InterserverTabControl" Access="Public" />
         <panic:PanicBunkerTab Name="PanicBunkerControl" Access="Public" />
         <playerTab:PlayerTab Name="PlayerTabControl" Access="Public" />
         <objectsTab:ObjectsTab Name="ObjectsTabControl" Access="Public" />

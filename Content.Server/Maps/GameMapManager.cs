@@ -14,6 +14,10 @@ namespace Content.Server.Maps;
 
 public sealed class GameMapManager : IGameMapManager
 {
+    public const string DefaultPersistenceStartMap = "Frontier";
+    private const string LegacyPersistenceStartMap = "Empty";
+    public const string PersistenceBackupSuffix = ".previous";
+
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
@@ -55,13 +59,40 @@ public sealed class GameMapManager : IGameMapManager
             if (_configurationManager.GetCVar<bool>(CCVars.UsePersistence))
             {
                 var startMap = _configurationManager.GetCVar<string>(CCVars.PersistenceMap);
-                _configSelectedMap = _prototypeManager.Index<GameMapPrototype>(startMap);
+                // Empty used to be the upstream persistence bootstrap, but its format-6 test map is not a
+                // loadable game map in this fork. Transparently migrate old configs instead of crashing before
+                // the first persistence save can be created.
+                if (startMap == LegacyPersistenceStartMap)
+                {
+                    _log.Warning($"Persistence start map '{LegacyPersistenceStartMap}' is obsolete; " +
+                                 $"using '{DefaultPersistenceStartMap}'.");
+                    startMap = DefaultPersistenceStartMap;
+                    _configurationManager.SetCVar(CCVars.PersistenceMap, startMap);
+                }
+
+                if (!_prototypeManager.TryIndex<GameMapPrototype>(startMap, out var persistenceStartMap))
+                {
+                    _log.Error($"Unknown persistence start map '{startMap}'; using '{DefaultPersistenceStartMap}'.");
+                    persistenceStartMap = _prototypeManager.Index<GameMapPrototype>(DefaultPersistenceStartMap);
+                    startMap = DefaultPersistenceStartMap;
+                    _configurationManager.SetCVar(CCVars.PersistenceMap, startMap);
+                }
+
+                _configSelectedMap = persistenceStartMap;
 
                 var mapPath = new ResPath(value);
                 if (_resMan.UserData.Exists(mapPath))
                 {
                     _configSelectedMap = _configSelectedMap.Persistence(mapPath);
                     _log.Info($"Using persistence map from {value}");
+                    return;
+                }
+
+                var backupPath = new ResPath(value + PersistenceBackupSuffix);
+                if (_resMan.UserData.Exists(backupPath))
+                {
+                    _configSelectedMap = _configSelectedMap.Persistence(backupPath);
+                    _log.Warning($"Primary persistence map {value} is missing; using backup {backupPath}.");
                     return;
                 }
 

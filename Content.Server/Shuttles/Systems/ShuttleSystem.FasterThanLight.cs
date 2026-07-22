@@ -491,6 +491,16 @@ public sealed partial class ShuttleSystem
         return GetAllMagnetLatchedShuttles(shuttleUid, dockedShuttles, out _);
     }
 
+    /// <summary>
+    /// Collects the complete group that the FTL implementation moves, including FTLLocked docked shuttles and
+    /// magnet-latched shuttles. External serializers must use this instead of collecting only docking links.
+    /// </summary>
+    public bool GetAllFTLShuttles(EntityUid shuttleUid, HashSet<EntityUid> shuttles, [NotNullWhen(false)] out string? reason)
+    {
+        GetAllDockedShuttles(shuttleUid, shuttles);
+        return GetAllMagnetLatchedShuttles(shuttleUid, shuttles, out reason);
+    }
+
     private bool GetAllMagnetLatchedShuttles(EntityUid shuttleUid, HashSet<EntityUid> dockedShuttles, [NotNullWhen(false)] out string? reason)
     {
         reason = null;

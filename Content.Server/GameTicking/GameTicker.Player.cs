@@ -13,6 +13,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Corvax.CCCVars;
+using Content.Server._Lua.Interserver;
 
 namespace Content.Server.GameTicking
 {
@@ -55,6 +56,14 @@ namespace Content.Server.GameTicking
                         session.Data.ContentDataUncast = data;
                     }
 
+                    // A committed shuttle transfer owns this character on another server. Keep the connection out
+                    // of this server's lobby while InterserverTransferSystem supplies auto-redial/manual fallback.
+                    if (EntityManager.SystemOrNull<InterserverTransferSystem>()?.HasCommittedOutgoingRoute(session.UserId) == true)
+                    {
+                        RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
+                        break;
+                    }
+
                     // Make the player actually join the game.
                     // timer time must be > tick length
                     if (!_cfg.GetCVar(CCCVars.QueueEnabled))
@@ -92,6 +101,14 @@ namespace Content.Server.GameTicking
 
                     if (mind == null)
                     {
+                        // Dark Haven persistence: when an in-progress saved world is already loaded, bypass the
+                        // lobby/late-join spawn and reattach the account to the exact character from the save.
+                        if (RunLevel == GameRunLevel.InRound && TryRestorePersistentCharacter(session, out _))
+                        {
+                            PlayerJoinGame(session);
+                            break;
+                        }
+
                         if (LobbyEnabled)
                             PlayerJoinLobby(session);
                         else

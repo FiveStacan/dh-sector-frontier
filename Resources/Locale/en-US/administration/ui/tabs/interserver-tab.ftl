@@ -1,0 +1,14 @@
+admin-ui-interserver-local-title = Local server
+admin-ui-interserver-enabled = Enable inter-server transfers
+admin-ui-interserver-name = Display name
+admin-ui-interserver-apply-local = Save local settings
+admin-ui-interserver-peer-title = Trusted servers and map permissions
+admin-ui-interserver-new-peer = New peer
+admin-ui-interserver-allowed-maps = Allowed maps (comma-separated)
+admin-ui-interserver-approved = Connection approved
+admin-ui-interserver-save-peer = Save peer
+admin-ui-interserver-test-peer = Test connection
+admin-ui-interserver-remove-peer = Remove
+admin-ui-interserver-refresh = Refresh
+admin-ui-interserver-local-maps = Available local map IDs: { $maps }
+admin-ui-interserver-secret-configured = A secret is already configured; leave blank to keep it

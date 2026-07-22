@@ -263,7 +263,10 @@ public sealed partial class ShuttleConsoleSystem
         catch { }
         List<MapId> capturing = new();
         try { capturing = _ownership.GetCapturingMaps().ToList(); } catch { }
-        return new StarmapConsoleBoundUserInterfaceState(stars, 100f, edges, capturing, cooldown, cooldownTotal, ftlState, ftlTime, visibleSectorMaps, sectorIdByMap, ownerByMap, colorOverrides);
+        var interserver = consoleUid != null
+            ? _interserverTransfers.GetConsoleState(consoleUid.Value)
+            : new Content.Shared._Lua.Interserver.InterserverConsoleState();
+        return new StarmapConsoleBoundUserInterfaceState(stars, 100f, edges, capturing, cooldown, cooldownTotal, ftlState, ftlTime, visibleSectorMaps, sectorIdByMap, ownerByMap, colorOverrides, interserver);
     }
 
     private void OnWarpToStarMessage(EntityUid uid, ShuttleConsoleComponent component, WarpToStarMessage args) // Lua

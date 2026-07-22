@@ -1,0 +1,68 @@
+<Control xmlns="https://spacestation14.io" Margin="8" MinSize="50 50">
+    <ScrollContainer VerticalExpand="True">
+        <BoxContainer Orientation="Vertical" SeparationOverride="10">
+            <Label Text="{Loc admin-ui-interserver-local-title}" StyleClasses="LabelHeading" />
+            <PanelContainer StyleClasses="BackgroundOpenBoth">
+                <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+                    <CheckBox Name="Enabled" Text="{Loc admin-ui-interserver-enabled}" />
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="Server ID" MinWidth="180" />
+                        <LineEdit Name="ServerId" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="{Loc admin-ui-interserver-name}" MinWidth="180" />
+                        <LineEdit Name="DisplayName" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="Public ss14://" MinWidth="180" />
+                        <LineEdit Name="PublicAddress" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <Button Name="ApplyLocalButton" Text="{Loc admin-ui-interserver-apply-local}" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <Label Text="{Loc admin-ui-interserver-peer-title}" StyleClasses="LabelHeading" />
+            <Label Name="LocalMapsLabel" />
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <OptionButton Name="PeerSelector" HorizontalExpand="True" Filterable="True" />
+                <Button Name="NewPeerButton" Text="{Loc admin-ui-interserver-new-peer}" />
+            </BoxContainer>
+            <PanelContainer StyleClasses="BackgroundOpenBoth">
+                <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="Peer ID" MinWidth="180" />
+                        <LineEdit Name="PeerId" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="{Loc admin-ui-interserver-name}" MinWidth="180" />
+                        <LineEdit Name="PeerName" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="API URL" MinWidth="180" />
+                        <LineEdit Name="ApiUrl" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="Public ss14://" MinWidth="180" />
+                        <LineEdit Name="PeerPublicAddress" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="Shared secret" MinWidth="180" />
+                        <LineEdit Name="SharedSecret" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                        <Label Text="{Loc admin-ui-interserver-allowed-maps}" MinWidth="180" />
+                        <LineEdit Name="AllowedMaps" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <CheckBox Name="Approved" Text="{Loc admin-ui-interserver-approved}" />
+                </BoxContainer>
+            </PanelContainer>
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Button Name="SavePeerButton" Text="{Loc admin-ui-interserver-save-peer}" />
+                <Button Name="TestPeerButton" Text="{Loc admin-ui-interserver-test-peer}" />
+                <Button Name="RemovePeerButton" Text="{Loc admin-ui-interserver-remove-peer}" StyleClasses="Caution" />
+                <Button Name="RefreshButton" Text="{Loc admin-ui-interserver-refresh}" />
+            </BoxContainer>
+            <Label Name="FeedbackLabel" />
+        </BoxContainer>
+    </ScrollContainer>
+</Control>

@@ -38,11 +38,11 @@ public sealed class SectorServiceSystem : EntitySystem
             // Dark Haven - persistence: a save loaded AFTER the singleton was set (e.g. the .sectors file, loaded
             // after the main map) can bring in a DUPLICATE service entity via this host's persisted SectorUid.
             // Drop it so systems that iterate service components (bank/mail/bounties) don't double-process.
-            if (component.SectorUid != EntityUid.Invalid
-                && component.SectorUid != _entity
-                && EntityManager.EntityExists(component.SectorUid))
+            if (component.SectorUid is { } sectorUid
+                && sectorUid != _entity
+                && EntityManager.EntityExists(sectorUid))
             {
-                QueueDel(component.SectorUid);
+                QueueDel(sectorUid);
             }
             component.SectorUid = _entity;
             return;
@@ -52,8 +52,8 @@ public sealed class SectorServiceSystem : EntitySystem
         // (and thus SectorBank balances, records, etc.) are already deserialized, so we keep them rather than
         // spawning a fresh default. removeExisting:false below still adds any service component introduced after
         // the save was written, without clobbering restored data.
-        if (component.SectorUid != EntityUid.Invalid && EntityManager.EntityExists(component.SectorUid))
-            _entity = component.SectorUid;
+        if (component.SectorUid is { } savedSector && EntityManager.EntityExists(savedSector))
+            _entity = savedSector;
         else
             _entity = Spawn();
 

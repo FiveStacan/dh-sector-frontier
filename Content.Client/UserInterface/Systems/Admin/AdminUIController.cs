@@ -8,6 +8,7 @@ using Content.Client.Gameplay;
 using Content.Client.Lobby;
 using Content.Client.UserInterface.Controls;
 using Content.Client.Verbs.UI;
+using Content.Shared.Administration;
 using Content.Shared.Administration.Events;
 using Content.Shared.Input;
 using JetBrains.Annotations;
@@ -97,6 +98,8 @@ public sealed class AdminUIController : UIController,
 
         _window = UIManager.CreateWindow<AdminMenuWindow>();
         LayoutContainer.SetAnchorPreset(_window, LayoutContainer.LayoutPreset.Center);
+        _window.SetPersistenceTabVisible(_admin.HasFlag(AdminFlags.Host));
+        _window.SetInterserverTabVisible(_admin.HasFlag(AdminFlags.Host));
 
         if (_panicBunker != null)
             _window.PanicBunkerControl.UpdateStatus(_panicBunker);
@@ -131,6 +134,12 @@ public sealed class AdminUIController : UIController,
     private void OnWindowOpen()
     {
         AdminButton?.SetClickPressed(true);
+
+        if (_admin.HasFlag(AdminFlags.Host))
+        {
+            _window?.PersistenceTabControl.RequestState();
+            _window?.InterserverTabControl.RequestState();
+        }
     }
 
     private void OnWindowClosed()
@@ -158,6 +167,9 @@ public sealed class AdminUIController : UIController,
     {
         if (AdminButton != null)
             AdminButton.Visible = _conGroups.CanAdminMenu();
+
+        _window?.SetPersistenceTabVisible(_admin.HasFlag(AdminFlags.Host));
+        _window?.SetInterserverTabVisible(_admin.HasFlag(AdminFlags.Host));
     }
 
     private void AdminButtonPressed(ButtonEventArgs args)

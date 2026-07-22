@@ -21,6 +21,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Content.Server._NF.Auth; // Frontier
+using Content.Server._Lua.Interserver;
 
 /*
  * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
@@ -245,6 +246,14 @@ namespace Content.Server.Connection
             if (HasTemporaryBypass(userId))
             {
                 _sawmill.Verbose("User {UserId} has temporary bypass, skipping further connection checks", userId);
+                return null;
+            }
+
+            // A committed interserver passenger must be able to reach the destination even when launcher redial
+            // was disabled and the short temporary bypass elapsed. Bans above are deliberately never bypassed.
+            if (_entityManager.SystemOrNull<InterserverTransferSystem>()?.HasPendingIncomingCharacter(userId) == true)
+            {
+                _sawmill.Verbose("User {UserId} has a pending interserver character, skipping further connection checks", userId);
                 return null;
             }
 

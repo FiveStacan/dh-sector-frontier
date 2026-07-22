@@ -154,6 +154,12 @@ public sealed class SectorSystem : EntitySystem
         return false;
     }
 
+    /// <summary>Stable logical sector IDs available to inter-server routing and host configuration.</summary>
+    public IReadOnlyList<string> GetSectorMapIds()
+    {
+        return _instances.Keys.Order(StringComparer.OrdinalIgnoreCase).ToList();
+    }
+
     public bool TryGetSectorConfig(MapId mapId, out StarDefinition config)
     {
         foreach (var inst in _instances.Values)

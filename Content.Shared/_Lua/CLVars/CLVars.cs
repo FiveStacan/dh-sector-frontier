@@ -19,6 +19,27 @@ namespace Content.Shared.Lua.CLVar
 
         public static readonly CVarDef<string> TransferApiSecret = CVarDef.Create("transfer.api.secret", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
+        public static readonly CVarDef<bool> InterserverEnabled =
+            CVarDef.Create("interserver.enabled", false, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> InterserverServerId =
+            CVarDef.Create("interserver.server_id", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> InterserverDisplayName =
+            CVarDef.Create("interserver.display_name", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> InterserverPublicAddress =
+            CVarDef.Create("interserver.public_address", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> InterserverRegistryPath =
+            CVarDef.Create("interserver.registry_path", "/interserver/peers.json", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<int> InterserverMaxSnapshotMiB =
+            CVarDef.Create("interserver.max_snapshot_mib", 64, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> InterserverArrivalMinRadius =
+            CVarDef.Create("interserver.arrival_min_radius", 1500f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> InterserverArrivalMaxRadius =
+            CVarDef.Create("interserver.arrival_max_radius", 9000f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> InterserverArrivalTravelSeconds =
+            CVarDef.Create("interserver.arrival_travel_seconds", 25f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<int> InterserverReservationSeconds =
+            CVarDef.Create("interserver.reservation_seconds", 300, CVar.SERVERONLY | CVar.ARCHIVE);
+
         public static readonly CVarDef<bool> NetDynamicTick =
             CVarDef.Create("net.dynamictick.enabled", false, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
         public static readonly CVarDef<int> NetDynamicTickMinTickrate =

@@ -4306,6 +4306,8 @@ entities:
     components:
     - type: Transform
       parent: 5
+    - type: Action
+      container: 5
 - proto: AirAlarm
   entities:
   - uid: 7

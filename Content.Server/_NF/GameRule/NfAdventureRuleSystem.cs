@@ -24,8 +24,6 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.ContentPack; // Dark Haven - persistence: detect a loaded save
-using Robust.Shared.Utility; // Dark Haven - ResPath
 
 namespace Content.Server._NF.GameRule;
 
@@ -43,7 +41,6 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
     [Dependency] private readonly IBaseServer _baseServer = default!;
     [Dependency] private readonly IEntitySystemManager _entSys = default!;
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
-    [Dependency] private readonly IResourceManager _resMan = default!; // Dark Haven - persistence: detect a loaded save
 
     private readonly HttpClient _httpClient = new();
 
@@ -247,9 +244,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         // are already present on the restored DefaultMap. Re-generating them here duplicates every market/POI
         // on each restart. Skip generation only when we actually loaded a save (mirrors GameMapManager: it
         // uses the start map when persistence is on but the save file doesn't exist yet, e.g. first boot).
-        var loadedFromSave = _cfg.GetCVar(Content.Shared.CCVar.CCVars.UsePersistence)
-            && !string.IsNullOrWhiteSpace(_cfg.GetCVar(Content.Shared.CCVar.CCVars.GameMap))
-            && _resMan.UserData.Exists(new ResPath(_cfg.GetCVar(Content.Shared.CCVar.CCVars.GameMap)));
+        var loadedFromSave = _ticker.LoadedPersistenceSave;
         if (!loadedFromSave)
         {
             _poi.GenerateMarkets(mapUid, marketProtos, out component.MarketStations);

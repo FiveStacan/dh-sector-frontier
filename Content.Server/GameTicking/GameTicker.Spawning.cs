@@ -68,6 +68,18 @@ namespace Content.Server.GameTicking
             Dictionary<NetUserId, HumanoidCharacterProfile> profiles,
             bool force)
         {
+            // Dark Haven persistence: restored players already have a complete character at its saved position.
+            // Remove them before gamerules and job assignment process the normal round-start spawn pool.
+            foreach (var player in readyPlayers.ToArray())
+            {
+                if (!TryRestorePersistentCharacter(player, out _))
+                    continue;
+
+                PlayerJoinGame(player);
+                readyPlayers.Remove(player);
+                profiles.Remove(player.UserId);
+            }
+
             // Allow game rules to spawn players by themselves if needed. (For example, nuke ops or wizard)
             RaiseLocalEvent(new RulePlayerSpawningEvent(readyPlayers, profiles, force));
 
@@ -142,6 +154,14 @@ namespace Content.Server.GameTicking
             bool lateJoin = true,
             bool silent = false)
         {
+            // Dark Haven persistence: a player joining after the save was loaded returns to the saved character
+            // instead of creating a duplicate at arrivals.
+            if (TryRestorePersistentCharacter(player, out _))
+            {
+                PlayerJoinGame(player, silent);
+                return;
+            }
+
             var character = GetPlayerProfile(player);
 
             var jobBans = _banManager.GetJobBans(player.UserId);

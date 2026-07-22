@@ -106,6 +106,17 @@ public sealed class ActionContainerSystem : EntitySystem
             action = ent.Comp;
             DebugTools.Assert(Transform(ent).ParentUid == uid);
             DebugTools.Assert(_container.IsEntityInContainer(ent));
+
+            // A mapped or persistence-loaded action can already be physically present in the correct container
+            // before EntInsertedIntoContainerMessage has rebuilt ActionComponent.Container. The container and
+            // transform checks above are authoritative, so repair the cached reference instead of crashing during
+            // MapInit (for example, the mapped LampGold on Frontier).
+            if (ent.Comp.Container != uid)
+            {
+                ent.Comp.Container = uid;
+                DirtyField(ent, ent.Comp, nameof(ActionComponent.Container));
+            }
+
             DebugTools.Assert(ent.Comp.Container == uid);
             return true;
         }
