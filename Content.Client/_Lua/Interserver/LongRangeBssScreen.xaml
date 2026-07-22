@@ -1,0 +1,29 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              Orientation="Vertical"
+              HorizontalExpand="True"
+              VerticalExpand="True"
+              Margin="12"
+              SeparationOverride="10">
+    <Label Text="{Loc long-range-bss-title}" StyleClasses="LabelHeading" />
+    <Label Text="{Loc long-range-bss-description}" />
+
+    <PanelContainer StyleClasses="BackgroundOpenBoth">
+        <BoxContainer Orientation="Vertical" Margin="12" SeparationOverride="8">
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Label Text="{Loc long-range-bss-server}" MinWidth="220" />
+                <OptionButton Name="ServerSelector" HorizontalExpand="True" Filterable="True" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Label Text="{Loc long-range-bss-map}" MinWidth="220" />
+                <OptionButton Name="MapSelector" HorizontalExpand="True" Filterable="True" />
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+
+    <Label Name="StatusLabel" />
+    <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+        <Button Name="RefreshButton" Text="{Loc long-range-bss-refresh}" />
+        <Button Name="TransferButton" Text="{Loc long-range-bss-start}" Disabled="True" />
+    </BoxContainer>
+    <Label Text="{Loc long-range-bss-warning}" ModulateSelfOverride="#E8B44F" />
+</BoxContainer>

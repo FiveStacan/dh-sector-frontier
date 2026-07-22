@@ -12,5 +12,5 @@ public sealed partial class StationSectorServiceHostComponent : Component
     // balances, ShuttleRecords, sector StationRecords, bounties, mail) into the map save and remap the link on
     // load — sector-wide economy/records survive a restart instead of resetting to prototype defaults.
     [DataField, ViewVariables(VVAccess.ReadOnly)]
-    public EntityUid SectorUid = EntityUid.Invalid;
+    public EntityUid? SectorUid;
 }

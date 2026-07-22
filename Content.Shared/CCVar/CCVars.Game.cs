@@ -87,7 +87,7 @@ public sealed partial class CCVars
     ///     Controls the game map prototype to load. SS14 stores these prototypes in Prototypes/Maps.
     /// </summary>
     public static readonly CVarDef<string>
-        GameMap = CVarDef.Create("game.map", "Frontier", CVar.SERVERONLY); // Frontier: string.Empty<Frontier
+        GameMap = CVarDef.Create("game.map", "Frontier", CVar.SERVERONLY | CVar.ARCHIVE); // Frontier: string.Empty<Frontier
 
     /// <summary>
     ///     Controls whether to use world persistence or not.
@@ -100,7 +100,7 @@ public sealed partial class CCVars
     ///     If the save file exists, it replaces MapPath but everything else stays the same (station name and such).
     /// </summary>
     public static readonly CVarDef<string>
-        PersistenceMap = CVarDef.Create("game.persistencemap", "Empty", CVar.ARCHIVE);
+        PersistenceMap = CVarDef.Create("game.persistencemap", "Frontier", CVar.ARCHIVE);
 
     /// <summary>
     ///     Frontier persistence (session-save): controls whether the world is periodically autosaved

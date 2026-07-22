@@ -1,5 +1,6 @@
 using Content.Client.Shuttles.UI;
 using Content.Shared._Lua.Starmap;
+using Content.Shared._Lua.Interserver;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Events;
 using JetBrains.Annotations;
@@ -27,6 +28,8 @@ public sealed partial class ShuttleConsoleBoundUserInterface : BoundUserInterfac
         _window.RequestFTL += OnFTLRequest;
         _window.RequestBeaconFTL += OnFTLBeaconRequest;
         _window.OnWarpToStarRequest += OnWarpToStar; // Lua StarMap
+        _window.OnInterserverRefresh += () => SendMessage(new InterserverRefreshDestinationsMessage());
+        _window.OnInterserverTransfer += (server, map) => SendMessage(new InterserverStartTransferMessage(server, map));
         _window.DockRequest += OnDockRequest;
         _window.UndockRequest += OnUndockRequest;
         _window.UndockAllRequest += OnUndockAllRequest;
