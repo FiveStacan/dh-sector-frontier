@@ -48,3 +48,18 @@
   # satchel: ClothingBackpackSatchelSecurityFilled
   # duffelbag: ClothingBackpackDuffelSecurityFilled
   # messenger: ClothingBackpackSecurityFilled
+
+- type: chameleonOutfit
+  id: PrisonGuardChameleonOutfit
+  job: PrisonGuard
+  hasMindShield: true
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisonGuard
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadPrisonGuard
+    outerClothing: ClothingOuterArmorBasic
+    id: PrisonGuardPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    gloves: ClothingHandsGlovesCombat

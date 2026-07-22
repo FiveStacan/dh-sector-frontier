@@ -23,7 +23,7 @@ using System.Text;
 namespace Content.IntegrationTests.Tests._Lua;
 
 [TestFixture]
-public sealed class ShipyardLuaRulesTests
+public sealed class ShipyardTestsLuaRules
 {
     private static readonly Dictionary<ShipGunClass, string> WeaponClassRu = new()
     {

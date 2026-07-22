@@ -50,8 +50,11 @@
 #    duffelbag: ClothingBackpackDuffelMedical
 #    messenger: ClothingBackpackMessengerMedical
 
-#- type: chameleonOutfit
-#  id: PrisonDoctorChameleonOutfit
-#  job: PrisonDoctor
-#  hasMindShield: true
+- type: chameleonOutfit
+  id: PrisonDoctorChameleonOutfit
+  job: PrisonDoctor
+  hasMindShield: true
+  equipment:
+    id: PrisonDoctorPDA
+    belt: ClothingBeltMedicalFilled
 

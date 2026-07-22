@@ -127,17 +127,6 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitNTRG
-  name: NTRG's uniform
-  description: On style.
-  components:
-  - type: Sprite
-    sprite: _DH/Clothing/Uniforms/Jumpsuit/ntrg_suit.rsi
-  - type: Clothing
-    sprite: _DH/Clothing/Uniforms/Jumpsuit/ntrg_suit.rsi
-
-- type: entity
-  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNtrepFormal
   name: nt representive formal suit
   description: That suit that is better not to see.
@@ -157,17 +146,6 @@
     sprite: _DH/Clothing/Uniforms/Jumpsuit/magistratebel.rsi
   - type: Clothing
     sprite: _DH/Clothing/Uniforms/Jumpsuit/magistratebel.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitBlueShieldSunrise
-  name: blueshield's uniform
-  description: On style.
-  components:
-  - type: Sprite
-    sprite: _DH/Clothing/Uniforms/Jumpsuit/blueshield.rsi
-  - type: Clothing
-    sprite: _DH/Clothing/Uniforms/Jumpsuit/blueshield.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -328,17 +306,6 @@
     sprite: _DH/Clothing/Uniforms/Jumpskirt/barber.rsi
   - type: Clothing
     sprite: _DH/Clothing/Uniforms/Jumpskirt/barber.rsi
-
-- type: entity
-  parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtBlueShield
-  name: blueshield's jumpskirt
-  description: Baby...
-  components:
-  - type: Sprite
-    sprite: _DH/Clothing/Uniforms/Jumpskirt/blueshield.rsi
-  - type: Clothing
-    sprite: _DH/Clothing/Uniforms/Jumpskirt/blueshield.rsi
 
 - type: entity
   parent: ClothingUniformJumpskirtCaptain

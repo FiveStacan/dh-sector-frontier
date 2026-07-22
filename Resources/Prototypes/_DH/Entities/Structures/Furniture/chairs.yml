@@ -44,4 +44,4 @@
     state: dark-comfy
   - type: Construction
     graph: Seat
-    node: chairDarkComfy
+    node: chairComfy

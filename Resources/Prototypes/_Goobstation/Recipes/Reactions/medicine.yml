@@ -41,6 +41,7 @@
 
 - type: reaction
   id: StypticCrystalCatalyst
+  priority: -10
   reactants:
     Aluminium:
       amount: 1

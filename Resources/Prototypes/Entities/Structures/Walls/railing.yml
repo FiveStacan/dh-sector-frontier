@@ -311,7 +311,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    node: railingOld
+    node: railing
 
 - type: entity
   parent: BaseRailingOld
@@ -367,7 +367,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    node: railingCornerOld
+    node: railingCorner
 
 - type: entity
   parent: BaseRailingOld
@@ -413,7 +413,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    node: railingCornerSmallOld
+    node: railingCornerSmall
 
 - type: entity
   parent: BaseRailingOld
@@ -477,5 +477,5 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Construction
-    node: railingRoundOld
+    node: railingRound
 #DH

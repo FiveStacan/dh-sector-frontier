@@ -62,7 +62,10 @@
 #    duffelbag: ClothingBackpackDuffelPrisonGuard
 #    messenger: ClothingBackpackSecurityFilled
 
-# - type: chameleonOutfit
-#   id: DHPrisonGuardChameleonOutfit
-#   job: DHPrisonGuard
-#   hasMindShield: true
+- type: chameleonOutfit
+  id: DHPrisonGuardChameleonOutfit
+  job: DHPrisonGuard
+  hasMindShield: true
+  equipment:
+    id: PrisonGuardPDA
+    pocket1: WeaponSubMachineGunSkorpion

@@ -29,16 +29,6 @@
   group: market
 
 - type: cargoProduct
-  id: ArmoryLaserik30
-  icon:
-    sprite: _DH/Objects/Weapons/Guns/Battery/batterylaser_carbine.rsi
-    state: icon
-  product: CrateArmoryIK30
-  cost: 15100
-  category: cargoproduct-category-name-armory
-  group: market
-
-- type: cargoProduct
   id: CargoSuitCargo
   icon:
     sprite: _DH/Clothing/OuterClothing/Suits/cargo-suit.rsi

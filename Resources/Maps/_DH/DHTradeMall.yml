@@ -46501,13 +46501,6 @@ entities:
     - type: Transform
       pos: -28.5,-12.5
       parent: 1
-- proto: ShelfStoreKitchen
-  entities:
-  - uid: 6472
-    components:
-    - type: Transform
-      pos: -26.5,-4.5
-      parent: 1
 - proto: ShelfWallFreezerDark
   entities:
   - uid: 1963

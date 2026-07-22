@@ -3525,15 +3525,15 @@
   cost: 3500
   recipeUnlocks:
   - StarGateShuttleLandingBeaconCircuitboard
-  # factionOverrides:
-  #   Syndicate:
-  #     position: 2, 31
-  #     technologyPrerequisites:
-  #     - NFShuttlecraft
-  #   Nanotrasen:
-  #     position: 2, 31
-  #     technologyPrerequisites:
-  #     - NFShuttlecraft
+  factionOverrides:
+    Syndicate:
+      position: -14.255, 1
+      technologyPrerequisites:
+      - NFShuttlecraft
+    Nanotrasen:
+      position: -14.152, 1.013
+      technologyPrerequisites:
+      - NFShuttlecraft
 
 - type: technology
   id: LuaBluespaceTiles

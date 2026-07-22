@@ -40,6 +40,42 @@
               amount: 2
               doAfter: 2
 
+        - to: WallMining
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 4
+              doAfter: 4
+
+        - to: WallKrissSolid
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 2
+
+        - to: WallKrissSolidDiagonal
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 2
+
+        # Compatibility bridge for legacy Lua/DH wall edges stored on the
+        # case-sensitive "Girder" node below.
+        - to: Girder
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Screwing
+              doAfter: 1
+
         - to: reinforcedGirder
           completed:
             - !type:SnapToGrid
@@ -306,6 +342,54 @@
     - node: reinforcedGirder
       entity: ReinforcedGirder
       edges:
+        - to: WallKrissReinforced
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 2
+              doAfter: 2
+
+        - to: WallKrissReinforcedDiagonal
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 2
+              doAfter: 2
+
+        - to: astrolitewall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 4
+              doAfter: 4
+
+        - to: diagonalastrolitewall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 3
+              doAfter: 3
+
+        - to: plastitaniumwall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 4
+              doAfter: 4
+
+        - to: diagonalplastitaniumwall
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 3
+              doAfter: 3
+
         - to: reinforcedWall
           completed:
             - !type:SnapToGrid

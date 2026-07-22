@@ -3,7 +3,6 @@
   table: !type:AllSelector
     children:
     - id: CableApcExtension
-    - id: MedievalAirlockGrille
 
 - type: dungeonConfig
   id: DHMurino

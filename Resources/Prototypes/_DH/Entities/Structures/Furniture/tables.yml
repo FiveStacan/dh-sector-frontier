@@ -98,7 +98,7 @@
         acts: [ "Destruction" ]
   - type: Construction
     graph: Table
-    node: CounterRedFrame
+    node: CounterWoodFrame
   - type: RequireProjectileTarget # Goobstation - Crawling
     ignoreThrow: true
 

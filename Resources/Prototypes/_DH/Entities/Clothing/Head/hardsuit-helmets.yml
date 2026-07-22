@@ -29,24 +29,3 @@
   - type: NightVision
     flashDurationMultiplier: 2
     isEquipment: true
-
-- type: entity
-  parent: ClothingHeadHelmetHardsuitSecurity
-  id: ClothingHeadHelmetHardsuitSecuritySunrise
-  components:
-  - type: Sprite
-    sprite: _DH/Clothing/Head/Hardsuits/secoff.rsi
-  - type: Clothing
-    sprite: _DH/Clothing/Head/Hardsuits/secoff.rsi
-
-- type: entity
-  parent: ClothingHeadHelmetHardsuitSecurity
-  id: ClothingHeadHelmetHardsuitNTRG
-  categories: [ HideSpawnMenu ]
-  name: NTRG's hardsuit helmet
-  description: Blue.
-  components:
-  - type: Sprite
-    sprite: _DH/Clothing/Head/Hardsuits/ntrguard_head.rsi
-  - type: Clothing
-    sprite: _DH/Clothing/Head/Hardsuits/ntrguard_head.rsi
