@@ -60,7 +60,7 @@
         showEnts: False
         occludes: False
         ent: null
-      glowes: !type:ContainerSlot
+      gloves: !type:ContainerSlot
         showEnts: False
         occludes: False
         ent: null

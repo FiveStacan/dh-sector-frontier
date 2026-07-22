@@ -413,7 +413,7 @@
             - !type:EntityAnchored { }
           steps:
             - material: Steel
-              amount: 6
+              amount: 16
               doAfter: 2
 #DH -
 
@@ -655,10 +655,6 @@
       entity: WallBathroom
       edges:
         - to: Girder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 2
           steps:
             - tool: Screwing #Cutting
               doAfter: 1

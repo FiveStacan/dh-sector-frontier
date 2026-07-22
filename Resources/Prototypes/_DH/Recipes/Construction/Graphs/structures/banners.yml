@@ -56,7 +56,7 @@
               amount: 2
             - !type:SpawnPrototype
               prototype: MaterialCloth1
-              amount: 4
+              amount: 2
             - !type:SpawnPrototype
               prototype: MaterialBluespace1
               amount: 1

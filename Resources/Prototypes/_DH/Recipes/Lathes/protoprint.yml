@@ -14,7 +14,7 @@
   - type: StaticPrice
     price: 0
   - type: Stack
-    stackType: Credit
+    stackType: FakeCredit
     count: 1
     baseLayer: base
     layerStates:

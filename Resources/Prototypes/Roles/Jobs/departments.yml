@@ -130,9 +130,7 @@
   color: "#52B4E9"
   weight: 75
   roles:
-  - DirectorOfCare #Lua
   - Chemist
-  - Brigmedic #DH
   - MedicalDoctor
   - Paramedic
 
@@ -150,18 +148,7 @@
 #  - Warden # Frontier
 #  - PrisonGuard ##nyano
 #  - SecurityGuard # Frontier
-   - NFDetective # Frontier #comment from _Lua
    - PublicAffairsLiaison # Frontier #comment from _Lua
-   - Sheriff
-   - Bailiff
-   - BlueShieldOfficer #DH
-   - SeniorOfficer
-   - Brigmedic
-   - SDEngineer
-   - Deputy
-   - Cadet
-   - HeadOfPrison #DH
-   - SecurityGuard #DH
    - PrisonGuard #DH
 
 - type: department

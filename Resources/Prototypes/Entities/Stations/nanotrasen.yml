@@ -33,6 +33,7 @@
 
 - type: entity
   id: NanotrasenCentralCommand
+  suffix: DEBUG # Runtime sector service UID is assigned on spawn.
   parent:
     - BaseStation
     - BaseStationCargo

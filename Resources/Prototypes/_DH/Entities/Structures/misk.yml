@@ -32,6 +32,7 @@
     damageModifierSet: StructuralMetallic
   - type: Physics
     bodyType: Static
+    canCollide: false
 #  - type: Reflect # Frontier
 #    reflectProb: 1 # Frontier
   - type: Pullable

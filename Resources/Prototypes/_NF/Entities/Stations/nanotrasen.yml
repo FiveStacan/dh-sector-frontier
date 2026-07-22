@@ -21,6 +21,7 @@
 
 - type: entity
   id: StandardTypanVessel
+  suffix: DEBUG # Runtime sector service UID is assigned on spawn.
   parent:
     - BaseStation
     - BaseStationCargoMarket
@@ -36,6 +37,7 @@
 
 - type: entity
   id: StandardLuaTechVessel
+  suffix: DEBUG # Runtime sector service UID is assigned on spawn.
   parent:
     - BaseStation
     - BaseStationCargoMarket

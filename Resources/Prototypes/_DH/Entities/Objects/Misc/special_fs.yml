@@ -581,7 +581,7 @@
       Steel: 600
       Plastic: 300
   - type: StaticPrice
-    price: 40
+    price: 66
 
 - type: entity
   parent: [ WelderIndustrialAdvanced, Welder ]

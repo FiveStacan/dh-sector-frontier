@@ -167,6 +167,11 @@
             tags:
               - Rapier
     - type: Appearance
+    - type: ContainerContainer
+      containers:
+        item: !type:ContainerSlot {}
+        storagebase: !type:Container
+          ents: []
 
 - type: entity
   id: ClothingBeltSheathFilledRapier
@@ -189,9 +194,9 @@
   - type: Clothing
     sprite: _DH/Clothing/Belt/katanasheath.rsi
   - type: Storage
-    maxItemSize: Normal
+    maxItemSize: Ginormous
     grid:
-    - 0,0,4,1
+    - 0,0,7,1
     whitelist:
       tags:
         - Katana
@@ -323,6 +328,11 @@
   - type: Storage # Sunrise
     storageInsertSound: /Audio/_DH/Items/Equip/sabre_equip.ogg
     storageRemoveSound: /Audio/_DH/Items/Equip/sabre_hide.ogg
+  - type: ContainerContainer
+    containers:
+      item: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 - type: entity
   id: ClothingBeltSheathSyndicateFilled

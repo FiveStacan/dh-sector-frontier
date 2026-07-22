@@ -451,7 +451,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
-    board: ProtolatheCashMachineCircuitboard
+    board: ProtolatheCashMachineCircuitboardHack
   - type: MaterialStorage
     whitelist:
       tags:

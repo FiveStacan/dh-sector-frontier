@@ -26,6 +26,9 @@
         Caustic: 0.70
   - type: ToggleableClothing
     clothingPrototype: ClothingBeltOmniUnremoveable
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
   - type: NightVision
     flashDurationMultiplier: 2
     isEquipment: true

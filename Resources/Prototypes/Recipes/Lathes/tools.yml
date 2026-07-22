@@ -41,7 +41,7 @@
   id: WelderMini
   result: WelderMiniEmpty
   materials:
-    Steel: 200
+    Steel: 400
 
 - type: latheRecipe
   parent: BaseToolRecipe

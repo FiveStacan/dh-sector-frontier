@@ -56,7 +56,8 @@ jobs:
     name: Build & Test Debug
     needs:
       - build
+    if: always()
     runs-on: ubuntu-latest
     steps:
-      - name: CI succeeded
-        run: exit 0
+      - name: Verify build result
+        run: test "${{ needs.build.result }}" = "success"

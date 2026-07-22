@@ -98,7 +98,7 @@
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
-              amount: 24
+              amount: 20
           steps:
             - tool: Anchoring
               doAfter: 15

@@ -611,6 +611,7 @@
         ents: []
       disk_slot: !type:ContainerSlot {}
       key_slots: !type:Container
+      autopilot_slot: !type:ContainerSlot {}
   - type: ContainerFill
     containers:
       key_slots:

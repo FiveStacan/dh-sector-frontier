@@ -106,8 +106,8 @@
 - type: entity
   id: ActionInterviewToggleApproval
   parent: BaseAction
-  name: action-toggle-approval
-  description: action-toggle-approval-description
+  name: toggle application approval
+  description: Approve or reject the applicant.
   components:
   - type: Action
     icon: _NF/Interface/Actions/acceptOff.png
@@ -121,8 +121,8 @@
 - type: entity
   id: ActionInterviewCancel
   parent: BaseAction
-  name: action-cancel-application
-  description: action-cancel-application-description
+  name: cancel application
+  description: Cancel the current application.
   components:
   - type: Action
     icon: _NF/Interface/Actions/paperFire.png

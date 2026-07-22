@@ -43,7 +43,7 @@
     modifier: 0.52
   - type: ApcPowerReceiver
     needsPower: false
-    powerLoad: 0
+    powerLoad: 1
   - type: Charger
     slotId: charger_slot
     portable: true
@@ -61,6 +61,10 @@
           tags:
           - Knife
           - Holdout
+  - type: ContainerContainer
+    containers:
+      charger_slot: !type:ContainerSlot {}
+      item: !type:ContainerSlot {}
   - type: ClothingSpeedModifier
     sprintModifier: 1.10
   - type: Matchbox
@@ -82,7 +86,7 @@
     sprite: _DH/Clothing/Shoes/magboots-atmos.rsi
   - type: ApcPowerReceiver
     needsPower: false
-    powerLoad: 0
+    powerLoad: 1
 #  - type: Item
 #    size: Huge
   - type: Charger
@@ -96,6 +100,9 @@
         whitelist:
           components:
           - PowerCell
+  - type: ContainerContainer
+    containers:
+      charger_slot: !type:ContainerSlot {}
   - type: ClothingSpeedModifier
     walkModifier: 0.86
     sprintModifier: 0.84

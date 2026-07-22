@@ -202,7 +202,6 @@
   parent: BaseWall
   id: WallBathroom
   name: стена ванной
-  suffix: Мытищи
   components:
   - type: Sprite
     sprite: _DH/Structures/Walls/bathroom.rsi
@@ -256,7 +255,7 @@
           5: { state: bathroom_construct-5, visible: true}
   - type: ReinforcedWallReplacementMarker
   - type: StaticPrice
-    price: 25
+    price: 65
   - type: RadiationBlocker
     resistance: 1
   - type: Fixtures

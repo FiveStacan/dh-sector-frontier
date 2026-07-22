@@ -240,7 +240,7 @@
   components:
     - type: MachineBoard
       prototype: ProtolatheCash
-      stackRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 2
       tagRequirements:
@@ -256,7 +256,7 @@
   components:
     - type: MachineBoard
       prototype: ProtolatheCashCentComm
-      stackRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 1
       tagRequirements:
@@ -272,7 +272,7 @@
   components:
     - type: MachineBoard
       prototype: ProtolatheCashHack
-      stackRequirements:
+      requirements:
         MatterBin: 4
         Manipulator: 1
       tagRequirements:
@@ -309,9 +309,10 @@
   components:
   - type: MachineBoard
     prototype: Reflector
-    stackRequirements:
+    requirements:
       Manipulator: 2
       MatterBin: 1
+    stackRequirements:
       Steel: 1
 
 - type: entity
@@ -324,7 +325,7 @@
       state: engineering
     - type: MachineBoard
       prototype: ADTUniversalPipeDispenser
-      stackRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 2
       tagRequirements:

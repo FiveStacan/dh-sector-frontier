@@ -9,11 +9,11 @@
     - type: Clothing
       sprite: Backmen/Clothing/Belt/centcom_security_belt.rsi
     - type: Storage
+      maxItemSize: Ginormous
       grid:
-      - 0,0,5,4
+      - 0,0,7,4 # DH: enlarged to fit the X-01 pistol from StorageFill.
     - type: StorageFill
       contents:
-        - id: ADTWeaponPistolX01
         - id: Stunbaton
         - id: GrenadeFlashBang
         - id: GrenadeFlashBang
