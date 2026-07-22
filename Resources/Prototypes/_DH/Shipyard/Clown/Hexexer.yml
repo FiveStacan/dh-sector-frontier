@@ -3,7 +3,7 @@
   parent: BaseVessel
   name: HM Hexexer
   description: HONK HONK HONK HONK HONK HONK
-  price: 32000
+  price: 50000
   category: Small
   group: HonkExped #DH
   shuttlePath: /Maps/_DH/Shuttles/Clown/Hexexer.yml

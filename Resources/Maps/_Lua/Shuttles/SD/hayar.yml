@@ -5388,7 +5388,7 @@ entities:
     - type: Transform
       pos: 0.5,13.5
       parent: 1
-- proto: SubstationWallBasic
+- proto: MachineFrame
   entities:
   - uid: 879
     components:
@@ -7652,7 +7652,7 @@ entities:
     - type: Transform
       pos: 2.5,28.5
       parent: 1
-- proto: WeaponMissileLauncherCerber
+- proto: MachineFrame
   entities:
   - uid: 1275
     components:

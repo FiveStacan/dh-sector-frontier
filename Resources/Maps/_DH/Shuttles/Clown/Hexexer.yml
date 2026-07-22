@@ -1578,7 +1578,7 @@ entities:
     - type: Transform
       pos: 5.5,9.5
       parent: 2
-- proto: MachineFTLDrive600
+- proto: MachineFrame
   entities:
   - uid: 225
     components:

@@ -2318,7 +2318,7 @@ entities:
     - type: Transform
       pos: 1.2781949,-19.459543
       parent: 1
-- proto: AirAlarm
+- proto: AirSensor
   entities:
   - uid: 3
     components:

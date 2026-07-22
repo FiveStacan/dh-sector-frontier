@@ -2823,7 +2823,7 @@ entities:
     - type: Transform
       pos: -4.5,5.5
       parent: 1
-- proto: MachineFTLDrive600
+- proto: MachineFrame
   entities:
   - uid: 334
     components:

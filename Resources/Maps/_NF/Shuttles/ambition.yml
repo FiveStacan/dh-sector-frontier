@@ -3072,7 +3072,7 @@ entities:
     - type: RadiationGridResistance
     - type: ImplicitRoof
     - type: NavMap
-- proto: AirAlarm
+- proto: AirSensor
   entities:
   - uid: 2
     components:

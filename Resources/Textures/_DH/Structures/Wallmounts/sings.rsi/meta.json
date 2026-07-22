@@ -46,10 +46,6 @@
     },
     {
       "name": "genpop"
-    },
-    {
-    "name": "direction_bar",
-    "directions": 4
     }
   ]
 }

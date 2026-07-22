@@ -1194,7 +1194,7 @@ entities:
     - type: Transform
       pos: 1.5,0.5
       parent: 1
-- proto: ComputerIFF
+- proto: ComputerShuttle
   entities:
   - uid: 169
     components:
@@ -1707,7 +1707,7 @@ entities:
     - type: Transform
       pos: -1.5,-8.5
       parent: 1
-- proto: MachineFTLDrive600
+- proto: MachineFrame
   entities:
   - uid: 180
     components:

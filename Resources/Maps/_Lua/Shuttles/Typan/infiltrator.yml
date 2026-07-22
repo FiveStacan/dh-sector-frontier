@@ -2552,7 +2552,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,-5.5
       parent: 1
-- proto: ComputerIFF
+- proto: ComputerShuttle
   entities:
   - uid: 34
     components:
@@ -3767,14 +3767,14 @@ entities:
     - type: Transform
       pos: 4.5,-5.5
       parent: 1
-- proto: MachineFTLDrive600
+- proto: MachineFrame
   entities:
   - uid: 36
     components:
     - type: Transform
       pos: -3.5,-23.5
       parent: 1
-- proto: MachineWarpDrive
+- proto: MachineFrame
   entities:
   - uid: 467
     components:

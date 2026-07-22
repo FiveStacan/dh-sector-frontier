@@ -595,7 +595,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ComputerIFF
+- proto: ComputerShuttle
   entities:
   - uid: 59
     components:
@@ -858,7 +858,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-- proto: MachineWarpDrive
+- proto: MachineFrame
   entities:
   - uid: 86
     components:

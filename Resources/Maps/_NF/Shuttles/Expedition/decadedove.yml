@@ -578,7 +578,7 @@ entities:
     - type: BecomesStation
       id: DecadeDove
     - type: ImplicitRoof
-- proto: AirAlarm
+- proto: AirSensor
   entities:
   - uid: 2
     components:

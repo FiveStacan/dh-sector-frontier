@@ -1681,7 +1681,7 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#A200FFFF'
-- proto: AirAlarm
+- proto: AirSensor
   entities:
   - uid: 14
     components:
@@ -20426,7 +20426,7 @@ entities:
     - type: Transform
       pos: 1.5,29.5
       parent: 1
-- proto: SMESBasic
+- proto: MachineFrame
   entities:
   - uid: 3249
     components:
@@ -20615,7 +20615,7 @@ entities:
     - type: Transform
       pos: 2.5,-3.5
       parent: 1
-- proto: SubstationBasic
+- proto: MachineFrame
   entities:
   - uid: 3274
     components:
@@ -28134,7 +28134,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.5,81.5
       parent: 1
-- proto: Weapon140mm
+- proto: MachineFrame
   entities:
   - uid: 4606
     components:
@@ -28220,7 +28220,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 15.5,-8.5
       parent: 1
-- proto: Weapon80mm
+- proto: MachineFrame
   entities:
   - uid: 4620
     components:
@@ -28258,7 +28258,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,43.5
       parent: 1
-- proto: WeaponMissileLauncherCerber
+- proto: MachineFrame
   entities:
   - uid: 4626
     components:
@@ -28292,7 +28292,7 @@ entities:
       parent: 3270
     - type: Physics
       canCollide: False
-- proto: WeaponTurretCharon
+- proto: MachineFrame
   entities:
   - uid: 4628
     components:

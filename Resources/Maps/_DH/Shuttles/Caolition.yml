@@ -9925,7 +9925,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.5,39.5
       parent: 2
-- proto: ComputerTabletopIFFPOI
+- proto: ComputerTabletopShuttle
   entities:
   - uid: 210
     components:
@@ -14732,7 +14732,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,27.5
       parent: 2
-- proto: MachineFTLDrive600
+- proto: MachineFrame
   entities:
   - uid: 1413
     components:
@@ -23576,7 +23576,7 @@ entities:
     - type: Transform
       pos: -6.5,9.5
       parent: 2
-- proto: WeaponTurretBofors
+- proto: MachineFrame
   entities:
   - uid: 318
     components:
@@ -23627,7 +23627,7 @@ entities:
     - type: Transform
       pos: 0.5,-10.5
       parent: 2
-- proto: WeaponTurretType35
+- proto: MachineFrame
   entities:
   - uid: 3285
     components:
