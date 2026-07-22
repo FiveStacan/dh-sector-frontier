@@ -130,7 +130,9 @@
   color: "#52B4E9"
   weight: 75
   roles:
+  - DirectorOfCare #Lua
   - Chemist
+  - Brigmedic #DH
   - MedicalDoctor
   - Paramedic
 
@@ -140,6 +142,7 @@
   description: department-NFSecurity-description # Frontier
   color: "#DE3A3A" #DH # Frontier: DE3A3A<5C7D4D
   weight: -25 # Frontier: 20<1 - accounted for in jobs
+  primary: false #DH
   roles:
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier
@@ -148,7 +151,18 @@
 #  - Warden # Frontier
 #  - PrisonGuard ##nyano
 #  - SecurityGuard # Frontier
+   - NFDetective # Frontier #comment from _Lua
    - PublicAffairsLiaison # Frontier #comment from _Lua
+   - Sheriff
+   - Bailiff
+   - BlueShieldOfficer #DH
+   - SeniorOfficer
+   - Brigmedic
+   - SDEngineer
+   - Deputy
+   - Cadet
+   - HeadOfPrison #DH
+   - SecurityGuard #DH
    - PrisonGuard #DH
 
 - type: department

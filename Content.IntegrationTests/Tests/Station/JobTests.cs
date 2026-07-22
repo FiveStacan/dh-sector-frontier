@@ -1,6 +1,7 @@
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Prototypes;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Content.IntegrationTests.Tests.Station;
@@ -9,8 +10,24 @@ namespace Content.IntegrationTests.Tests.Station;
 [TestOf(typeof(SharedJobSystem))]
 public sealed class JobTest
 {
+    private static readonly HashSet<ProtoId<JobPrototype>> MultiDepartmentJobs =
+    [
+        "DirectorOfCare",
+        "Brigmedic",
+        "NFDetective",
+        "Sheriff",
+        "Bailiff",
+        "BlueShieldOfficer",
+        "SeniorOfficer",
+        "SDEngineer",
+        "Deputy",
+        "Cadet",
+        "HeadOfPrison",
+        "SecurityGuard",
+    ];
+
     /// <summary>
-    /// Ensures that every job belongs to at most 1 primary department.
+    /// Ensures that jobs belong to at most one primary department unless the overlap is intentional.
     /// Having no primary department is ok.
     /// </summary>
     [Test]
@@ -39,7 +56,11 @@ public sealed class JobTest
                         continue;
 
                     primaries++;
-                    Assert.That(primaries, Is.EqualTo(1), $"The job {job.ID} has more than 1 primary department!");
+                    if (primaries > 1)
+                    {
+                        Assert.That(MultiDepartmentJobs, Does.Contain(job.ID),
+                            $"The job {job.ID} has more than 1 primary department without being explicitly allowed!");
+                    }
                 }
             }
         });
